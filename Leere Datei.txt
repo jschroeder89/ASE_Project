@@ -1,4 +1,5 @@
-
+Achtung: Diese Datei lügt. Sie ist gar nicht leer!
+Sie enthält diesen und den folgenden Text:
 
 Datenübertragung mit CAN:
 
