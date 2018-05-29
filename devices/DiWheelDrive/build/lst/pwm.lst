@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccb8AQY7.s 			page 1
+ARM GAS  /tmp/ccAdoS3T.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccb8AQY7.s 			page 1
   52              	pwmStart:
   53              		@ args = 0, pretend = 0, frame = 0
   54              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccb8AQY7.s 			page 2
+ARM GAS  /tmp/ccAdoS3T.s 			page 2
 
 
   55 0000 38B5     		push	{r3, r4, r5, lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccb8AQY7.s 			page 1
  109 0002 0446     		mov	r4, r0
  110 0004 B0B1     		cbz	r0, .L16
  111              	.L14:
-ARM GAS  /tmp/ccb8AQY7.s 			page 3
+ARM GAS  /tmp/ccAdoS3T.s 			page 3
 
 
  112 0006 2023     		movs	r3, #32
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccb8AQY7.s 			page 1
  164              	@ 0 "" 2
  165              		.thumb
  166 000e FFF7FEFF 		bl	dbg_check_lock
-ARM GAS  /tmp/ccb8AQY7.s 			page 4
+ARM GAS  /tmp/ccAdoS3T.s 			page 4
 
 
  167 0012 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccb8AQY7.s 			page 1
  221 001c 02D0     		beq	.L31
  222 001e 0948     		ldr	r0, .L38
  223 0020 FFF7FEFF 		bl	chDbgPanic
-ARM GAS  /tmp/ccb8AQY7.s 			page 5
+ARM GAS  /tmp/ccAdoS3T.s 			page 5
 
 
  224              	.L31:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccb8AQY7.s 			page 1
  278 002a FFF7FEFF 		bl	dbg_check_unlock
  279 002e 0023     		movs	r3, #0
  280              	@ 209 "../../../ChibiOS/os/hal/src/pwm.c" 1
-ARM GAS  /tmp/ccb8AQY7.s 			page 6
+ARM GAS  /tmp/ccAdoS3T.s 			page 6
 
 
  281 0030 83F31188 		msr     BASEPRI, r3
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccb8AQY7.s 			page 1
  314      456E6162 
  314      6C654368 
  314      616E6E65 
-ARM GAS  /tmp/ccb8AQY7.s 			page 7
+ARM GAS  /tmp/ccAdoS3T.s 			page 7
 
 
  314      6C222829 
@@ -377,35 +377,35 @@ ARM GAS  /tmp/ccb8AQY7.s 			page 1
  320      616E6E65 
  320      6C28292C 
  321              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccb8AQY7.s 			page 8
+ARM GAS  /tmp/ccAdoS3T.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 pwm.c
-     /tmp/ccb8AQY7.s:16     .text.pwmInit:00000000 $t
-     /tmp/ccb8AQY7.s:22     .text.pwmInit:00000000 pwmInit
-     /tmp/ccb8AQY7.s:29     .text.pwmObjectInit:00000000 $t
-     /tmp/ccb8AQY7.s:35     .text.pwmObjectInit:00000000 pwmObjectInit
-     /tmp/ccb8AQY7.s:46     .text.pwmStart:00000000 $t
-     /tmp/ccb8AQY7.s:52     .text.pwmStart:00000000 pwmStart
-     /tmp/ccb8AQY7.s:95     .text.pwmStart:00000048 $d
-     /tmp/ccb8AQY7.s:99     .text.pwmStop:00000000 $t
-     /tmp/ccb8AQY7.s:105    .text.pwmStop:00000000 pwmStop
-     /tmp/ccb8AQY7.s:143    .text.pwmStop:0000003c $d
-     /tmp/ccb8AQY7.s:147    .text.pwmChangePeriod:00000000 $t
-     /tmp/ccb8AQY7.s:153    .text.pwmChangePeriod:00000000 pwmChangePeriod
-     /tmp/ccb8AQY7.s:192    .text.pwmChangePeriod:0000003c $d
-     /tmp/ccb8AQY7.s:196    .text.pwmEnableChannel:00000000 $t
-     /tmp/ccb8AQY7.s:202    .text.pwmEnableChannel:00000000 pwmEnableChannel
-     /tmp/ccb8AQY7.s:243    .text.pwmEnableChannel:00000044 $d
-     /tmp/ccb8AQY7.s:247    .text.pwmDisableChannel:00000000 $t
-     /tmp/ccb8AQY7.s:253    .text.pwmDisableChannel:00000000 pwmDisableChannel
-     /tmp/ccb8AQY7.s:292    .text.pwmDisableChannel:00000040 $d
-     /tmp/ccb8AQY7.s:296    .rodata.str1.4:00000000 $d
-     /tmp/ccb8AQY7.s:146    .text.pwmStop:00000044 $t
-     /tmp/ccb8AQY7.s:321    .text.pwmChangePeriod:00000044 $t
-     /tmp/ccb8AQY7.s:246    .text.pwmEnableChannel:0000004c $t
-     /tmp/ccb8AQY7.s:295    .text.pwmDisableChannel:00000048 $t
+     /tmp/ccAdoS3T.s:16     .text.pwmInit:00000000 $t
+     /tmp/ccAdoS3T.s:22     .text.pwmInit:00000000 pwmInit
+     /tmp/ccAdoS3T.s:29     .text.pwmObjectInit:00000000 $t
+     /tmp/ccAdoS3T.s:35     .text.pwmObjectInit:00000000 pwmObjectInit
+     /tmp/ccAdoS3T.s:46     .text.pwmStart:00000000 $t
+     /tmp/ccAdoS3T.s:52     .text.pwmStart:00000000 pwmStart
+     /tmp/ccAdoS3T.s:95     .text.pwmStart:00000048 $d
+     /tmp/ccAdoS3T.s:99     .text.pwmStop:00000000 $t
+     /tmp/ccAdoS3T.s:105    .text.pwmStop:00000000 pwmStop
+     /tmp/ccAdoS3T.s:143    .text.pwmStop:0000003c $d
+     /tmp/ccAdoS3T.s:147    .text.pwmChangePeriod:00000000 $t
+     /tmp/ccAdoS3T.s:153    .text.pwmChangePeriod:00000000 pwmChangePeriod
+     /tmp/ccAdoS3T.s:192    .text.pwmChangePeriod:0000003c $d
+     /tmp/ccAdoS3T.s:196    .text.pwmEnableChannel:00000000 $t
+     /tmp/ccAdoS3T.s:202    .text.pwmEnableChannel:00000000 pwmEnableChannel
+     /tmp/ccAdoS3T.s:243    .text.pwmEnableChannel:00000044 $d
+     /tmp/ccAdoS3T.s:247    .text.pwmDisableChannel:00000000 $t
+     /tmp/ccAdoS3T.s:253    .text.pwmDisableChannel:00000000 pwmDisableChannel
+     /tmp/ccAdoS3T.s:292    .text.pwmDisableChannel:00000040 $d
+     /tmp/ccAdoS3T.s:296    .rodata.str1.4:00000000 $d
+     /tmp/ccAdoS3T.s:146    .text.pwmStop:00000044 $t
+     /tmp/ccAdoS3T.s:321    .text.pwmChangePeriod:00000044 $t
+     /tmp/ccAdoS3T.s:246    .text.pwmEnableChannel:0000004c $t
+     /tmp/ccAdoS3T.s:295    .text.pwmDisableChannel:00000048 $t
 
 UNDEFINED SYMBOLS
 pwm_lld_init

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccxS1qsU.s 			page 1
+ARM GAS  /tmp/ccOllPTQ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
   53              		.type	spiStart, %function
   54              	spiStart:
   55              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccxS1qsU.s 			page 2
+ARM GAS  /tmp/ccOllPTQ.s 			page 2
 
 
   56              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  110 0004 C8B1     		cbz	r0, .L16
  111              	.L14:
  112 0006 2023     		movs	r3, #32
-ARM GAS  /tmp/ccxS1qsU.s 			page 3
+ARM GAS  /tmp/ccOllPTQ.s 			page 3
 
 
  113              	@ 133 "../../../ChibiOS/os/hal/src/spi.c" 1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  167 000c FFF7FEFF 		bl	dbg_check_lock
  168 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
  169 0012 022B     		cmp	r3, #2
-ARM GAS  /tmp/ccxS1qsU.s 			page 4
+ARM GAS  /tmp/ccOllPTQ.s 			page 4
 
 
  170 0014 02D0     		beq	.L21
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  224 0028 83F31188 		msr     BASEPRI, r3
  225              	@ 0 "" 2
  226              		.thumb
-ARM GAS  /tmp/ccxS1qsU.s 			page 5
+ARM GAS  /tmp/ccOllPTQ.s 			page 5
 
 
  227 002c 10BD     		pop	{r4, pc}
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  281 003e E4E7     		b	.L39
  282              	.L48:
  283              		.align	2
-ARM GAS  /tmp/ccxS1qsU.s 			page 6
+ARM GAS  /tmp/ccOllPTQ.s 			page 6
 
 
  284              	.L47:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  338 004a 002A     		cmp	r2, #0
  339 004c E2D1     		bne	.L51
  340 004e DEE7     		b	.L50
-ARM GAS  /tmp/ccxS1qsU.s 			page 7
+ARM GAS  /tmp/ccOllPTQ.s 			page 7
 
 
  341              	.L67:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  394 0044 E5D1     		bne	.L70
  395 0046 E1E7     		b	.L69
  396              	.L83:
-ARM GAS  /tmp/ccxS1qsU.s 			page 8
+ARM GAS  /tmp/ccOllPTQ.s 			page 8
 
 
  397              		.align	2
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  451              	.L99:
  452              		.align	2
  453              	.L98:
-ARM GAS  /tmp/ccxS1qsU.s 			page 9
+ARM GAS  /tmp/ccOllPTQ.s 			page 9
 
 
  454 0048 04010000 		.word	.LC14
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  508              	@ 305 "../../../ChibiOS/os/hal/src/spi.c" 1
  509 0054 83F31188 		msr     BASEPRI, r3
  510              	@ 0 "" 2
-ARM GAS  /tmp/ccxS1qsU.s 			page 10
+ARM GAS  /tmp/ccOllPTQ.s 			page 10
 
 
  511              		.thumb
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  564              	.L124:
  565 0036 0320     		movs	r0, #3
  566 0038 3346     		mov	r3, r6
-ARM GAS  /tmp/ccxS1qsU.s 			page 11
+ARM GAS  /tmp/ccOllPTQ.s 			page 11
 
 
  567 003a 2070     		strb	r0, [r4]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  620              	.L148:
  621 000c 1748     		ldr	r0, .L169
  622 000e FFF7FEFF 		bl	chDbgPanic
-ARM GAS  /tmp/ccxS1qsU.s 			page 12
+ARM GAS  /tmp/ccOllPTQ.s 			page 12
 
 
  623              	.L149:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  677              		.size	spiSend, .-spiSend
  678              		.section	.text.spiReceive,"ax",%progbits
  679              		.align	2
-ARM GAS  /tmp/ccxS1qsU.s 			page 13
+ARM GAS  /tmp/ccOllPTQ.s 			page 13
 
 
  680              		.p2align 4,,15
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  734              	@ 396 "../../../ChibiOS/os/hal/src/spi.c" 1
  735 005e 83F31188 		msr     BASEPRI, r3
  736              	@ 0 "" 2
-ARM GAS  /tmp/ccxS1qsU.s 			page 14
+ARM GAS  /tmp/ccOllPTQ.s 			page 14
 
 
  737              		.thumb
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  790 0002 18B1     		cbz	r0, .L202
  791 0004 BDE80840 		pop	{r3, lr}
  792 0008 FFF7FEBF 		b	chMtxUnlock
-ARM GAS  /tmp/ccxS1qsU.s 			page 15
+ARM GAS  /tmp/ccOllPTQ.s 			page 15
 
 
  793              	.L202:
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  824      292C2023 
  824      3100
  825 007e 0000     		.space	2
-ARM GAS  /tmp/ccxS1qsU.s 			page 16
+ARM GAS  /tmp/ccOllPTQ.s 			page 16
 
 
  826              	.LC8:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  848 012e 0000     		.space	2
  849              	.LC16:
  850 0130 22737069 		.ascii	"\"spiIgnoreWait\"()\000"
-ARM GAS  /tmp/ccxS1qsU.s 			page 17
+ARM GAS  /tmp/ccOllPTQ.s 			page 17
 
 
  850      49676E6F 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  873 01d6 0000     		.space	2
  874              	.LC26:
  875 01d8 22737069 		.ascii	"\"spiReceive\"()\000"
-ARM GAS  /tmp/ccxS1qsU.s 			page 18
+ARM GAS  /tmp/ccOllPTQ.s 			page 18
 
 
  875      52656365 
@@ -1053,67 +1053,67 @@ ARM GAS  /tmp/ccxS1qsU.s 			page 1
  887      75732228 
  887      2900
  888 0236 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccxS1qsU.s 			page 19
+ARM GAS  /tmp/ccOllPTQ.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 spi.c
-     /tmp/ccxS1qsU.s:16     .text.spiInit:00000000 $t
-     /tmp/ccxS1qsU.s:22     .text.spiInit:00000000 spiInit
-     /tmp/ccxS1qsU.s:29     .text.spiObjectInit:00000000 $t
-     /tmp/ccxS1qsU.s:35     .text.spiObjectInit:00000000 spiObjectInit
-     /tmp/ccxS1qsU.s:48     .text.spiStart:00000000 $t
-     /tmp/ccxS1qsU.s:54     .text.spiStart:00000000 spiStart
-     /tmp/ccxS1qsU.s:95     .text.spiStart:00000044 $d
-     /tmp/ccxS1qsU.s:99     .text.spiStop:00000000 $t
-     /tmp/ccxS1qsU.s:105    .text.spiStop:00000000 spiStop
-     /tmp/ccxS1qsU.s:145    .text.spiStop:00000044 $d
-     /tmp/ccxS1qsU.s:149    .text.spiSelect:00000000 $t
-     /tmp/ccxS1qsU.s:155    .text.spiSelect:00000000 spiSelect
-     /tmp/ccxS1qsU.s:190    .text.spiSelect:00000038 $d
-     /tmp/ccxS1qsU.s:194    .text.spiUnselect:00000000 $t
-     /tmp/ccxS1qsU.s:200    .text.spiUnselect:00000000 spiUnselect
-     /tmp/ccxS1qsU.s:235    .text.spiUnselect:00000038 $d
-     /tmp/ccxS1qsU.s:239    .text.spiStartIgnore:00000000 $t
-     /tmp/ccxS1qsU.s:245    .text.spiStartIgnore:00000000 spiStartIgnore
-     /tmp/ccxS1qsU.s:285    .text.spiStartIgnore:00000040 $d
-     /tmp/ccxS1qsU.s:289    .text.spiStartExchange:00000000 $t
-     /tmp/ccxS1qsU.s:295    .text.spiStartExchange:00000000 spiStartExchange
-     /tmp/ccxS1qsU.s:344    .text.spiStartExchange:00000050 $d
-     /tmp/ccxS1qsU.s:348    .text.spiStartSend:00000000 $t
-     /tmp/ccxS1qsU.s:354    .text.spiStartSend:00000000 spiStartSend
-     /tmp/ccxS1qsU.s:399    .text.spiStartSend:00000048 $d
-     /tmp/ccxS1qsU.s:403    .text.spiStartReceive:00000000 $t
-     /tmp/ccxS1qsU.s:409    .text.spiStartReceive:00000000 spiStartReceive
-     /tmp/ccxS1qsU.s:454    .text.spiStartReceive:00000048 $d
-     /tmp/ccxS1qsU.s:458    .text.spiIgnore:00000000 $t
-     /tmp/ccxS1qsU.s:464    .text.spiIgnore:00000000 spiIgnore
-     /tmp/ccxS1qsU.s:520    .text.spiIgnore:00000064 $d
-     /tmp/ccxS1qsU.s:527    .text.spiExchange:00000000 $t
-     /tmp/ccxS1qsU.s:533    .text.spiExchange:00000000 spiExchange
-     /tmp/ccxS1qsU.s:598    .text.spiExchange:00000074 $d
-     /tmp/ccxS1qsU.s:605    .text.spiSend:00000000 $t
-     /tmp/ccxS1qsU.s:611    .text.spiSend:00000000 spiSend
-     /tmp/ccxS1qsU.s:672    .text.spiSend:0000006c $d
-     /tmp/ccxS1qsU.s:679    .text.spiReceive:00000000 $t
-     /tmp/ccxS1qsU.s:685    .text.spiReceive:00000000 spiReceive
-     /tmp/ccxS1qsU.s:746    .text.spiReceive:0000006c $d
-     /tmp/ccxS1qsU.s:753    .text.spiAcquireBus:00000000 $t
-     /tmp/ccxS1qsU.s:759    .text.spiAcquireBus:00000000 spiAcquireBus
-     /tmp/ccxS1qsU.s:777    .text.spiAcquireBus:00000024 $d
-     /tmp/ccxS1qsU.s:780    .text.spiReleaseBus:00000000 $t
-     /tmp/ccxS1qsU.s:786    .text.spiReleaseBus:00000000 spiReleaseBus
-     /tmp/ccxS1qsU.s:801    .text.spiReleaseBus:0000001c $d
-     /tmp/ccxS1qsU.s:804    .rodata.str1.4:00000000 $d
-     /tmp/ccxS1qsU.s:98     .text.spiStart:0000004c $t
-     /tmp/ccxS1qsU.s:148    .text.spiStop:0000004c $t
-     /tmp/ccxS1qsU.s:888    .text.spiStartIgnore:00000048 $t
-     /tmp/ccxS1qsU.s:347    .text.spiStartExchange:00000058 $t
-     /tmp/ccxS1qsU.s:526    .text.spiIgnore:00000078 $t
-     /tmp/ccxS1qsU.s:604    .text.spiExchange:00000088 $t
-     /tmp/ccxS1qsU.s:779    .text.spiAcquireBus:00000028 $t
+     /tmp/ccOllPTQ.s:16     .text.spiInit:00000000 $t
+     /tmp/ccOllPTQ.s:22     .text.spiInit:00000000 spiInit
+     /tmp/ccOllPTQ.s:29     .text.spiObjectInit:00000000 $t
+     /tmp/ccOllPTQ.s:35     .text.spiObjectInit:00000000 spiObjectInit
+     /tmp/ccOllPTQ.s:48     .text.spiStart:00000000 $t
+     /tmp/ccOllPTQ.s:54     .text.spiStart:00000000 spiStart
+     /tmp/ccOllPTQ.s:95     .text.spiStart:00000044 $d
+     /tmp/ccOllPTQ.s:99     .text.spiStop:00000000 $t
+     /tmp/ccOllPTQ.s:105    .text.spiStop:00000000 spiStop
+     /tmp/ccOllPTQ.s:145    .text.spiStop:00000044 $d
+     /tmp/ccOllPTQ.s:149    .text.spiSelect:00000000 $t
+     /tmp/ccOllPTQ.s:155    .text.spiSelect:00000000 spiSelect
+     /tmp/ccOllPTQ.s:190    .text.spiSelect:00000038 $d
+     /tmp/ccOllPTQ.s:194    .text.spiUnselect:00000000 $t
+     /tmp/ccOllPTQ.s:200    .text.spiUnselect:00000000 spiUnselect
+     /tmp/ccOllPTQ.s:235    .text.spiUnselect:00000038 $d
+     /tmp/ccOllPTQ.s:239    .text.spiStartIgnore:00000000 $t
+     /tmp/ccOllPTQ.s:245    .text.spiStartIgnore:00000000 spiStartIgnore
+     /tmp/ccOllPTQ.s:285    .text.spiStartIgnore:00000040 $d
+     /tmp/ccOllPTQ.s:289    .text.spiStartExchange:00000000 $t
+     /tmp/ccOllPTQ.s:295    .text.spiStartExchange:00000000 spiStartExchange
+     /tmp/ccOllPTQ.s:344    .text.spiStartExchange:00000050 $d
+     /tmp/ccOllPTQ.s:348    .text.spiStartSend:00000000 $t
+     /tmp/ccOllPTQ.s:354    .text.spiStartSend:00000000 spiStartSend
+     /tmp/ccOllPTQ.s:399    .text.spiStartSend:00000048 $d
+     /tmp/ccOllPTQ.s:403    .text.spiStartReceive:00000000 $t
+     /tmp/ccOllPTQ.s:409    .text.spiStartReceive:00000000 spiStartReceive
+     /tmp/ccOllPTQ.s:454    .text.spiStartReceive:00000048 $d
+     /tmp/ccOllPTQ.s:458    .text.spiIgnore:00000000 $t
+     /tmp/ccOllPTQ.s:464    .text.spiIgnore:00000000 spiIgnore
+     /tmp/ccOllPTQ.s:520    .text.spiIgnore:00000064 $d
+     /tmp/ccOllPTQ.s:527    .text.spiExchange:00000000 $t
+     /tmp/ccOllPTQ.s:533    .text.spiExchange:00000000 spiExchange
+     /tmp/ccOllPTQ.s:598    .text.spiExchange:00000074 $d
+     /tmp/ccOllPTQ.s:605    .text.spiSend:00000000 $t
+     /tmp/ccOllPTQ.s:611    .text.spiSend:00000000 spiSend
+     /tmp/ccOllPTQ.s:672    .text.spiSend:0000006c $d
+     /tmp/ccOllPTQ.s:679    .text.spiReceive:00000000 $t
+     /tmp/ccOllPTQ.s:685    .text.spiReceive:00000000 spiReceive
+     /tmp/ccOllPTQ.s:746    .text.spiReceive:0000006c $d
+     /tmp/ccOllPTQ.s:753    .text.spiAcquireBus:00000000 $t
+     /tmp/ccOllPTQ.s:759    .text.spiAcquireBus:00000000 spiAcquireBus
+     /tmp/ccOllPTQ.s:777    .text.spiAcquireBus:00000024 $d
+     /tmp/ccOllPTQ.s:780    .text.spiReleaseBus:00000000 $t
+     /tmp/ccOllPTQ.s:786    .text.spiReleaseBus:00000000 spiReleaseBus
+     /tmp/ccOllPTQ.s:801    .text.spiReleaseBus:0000001c $d
+     /tmp/ccOllPTQ.s:804    .rodata.str1.4:00000000 $d
+     /tmp/ccOllPTQ.s:98     .text.spiStart:0000004c $t
+     /tmp/ccOllPTQ.s:148    .text.spiStop:0000004c $t
+     /tmp/ccOllPTQ.s:888    .text.spiStartIgnore:00000048 $t
+     /tmp/ccOllPTQ.s:347    .text.spiStartExchange:00000058 $t
+     /tmp/ccOllPTQ.s:526    .text.spiIgnore:00000078 $t
+     /tmp/ccOllPTQ.s:604    .text.spiExchange:00000088 $t
+     /tmp/ccOllPTQ.s:779    .text.spiAcquireBus:00000028 $t
 
-ARM GAS  /tmp/ccxS1qsU.s 			page 20
+ARM GAS  /tmp/ccOllPTQ.s 			page 20
 
 
 UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccc1QvPH.s 			page 1
+ARM GAS  /tmp/cckHWmYP.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
   55              		.thumb_func
   56              		.type	_ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE, %function
   57              	_ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:
-ARM GAS  /tmp/ccc1QvPH.s 			page 2
+ARM GAS  /tmp/cckHWmYP.s 			page 2
 
 
   58              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  112              		.size	_ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE, .-_ZN5amiro11DistControl
  113              		.global	_ZN5amiro11DistControlC1EPNS_12MotorControlEPNS_15MotorIncrementsE
  114              		.thumb_set _ZN5amiro11DistControlC1EPNS_12MotorControlEPNS_15MotorIncrementsE,_ZN5amiro11DistContr
-ARM GAS  /tmp/ccc1QvPH.s 			page 3
+ARM GAS  /tmp/cckHWmYP.s 			page 3
 
 
  115              		.global	__aeabi_i2d
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  165              		.size	_ZN5amiro11DistControl21getCurrentTargetAngleEv, .-_ZN5amiro11DistControl21getCurrentTargetA
  166              		.global	__aeabi_d2uiz
  167              		.section	.text._ZN5amiro11DistControl17setTargetPositionEllt,"ax",%progbits
-ARM GAS  /tmp/ccc1QvPH.s 			page 4
+ARM GAS  /tmp/cckHWmYP.s 			page 4
 
 
  168              		.align	2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  222              		.thumb
  223 006a C4F80032 		str	r3, [r4, #512]
  224 006e C4F80432 		str	r3, [r4, #516]
-ARM GAS  /tmp/ccc1QvPH.s 			page 5
+ARM GAS  /tmp/cckHWmYP.s 			page 5
 
 
  225 0072 D4F8DC01 		ldr	r0, [r4, #476]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  277 0032 C4F8E851 		str	r5, [r4, #488]
  278 0036 C4F80052 		str	r5, [r4, #512]
  279 003a C4F8EC51 		str	r5, [r4, #492]
-ARM GAS  /tmp/ccc1QvPH.s 			page 6
+ARM GAS  /tmp/cckHWmYP.s 			page 6
 
 
  280 003e C4F80452 		str	r5, [r4, #516]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  334 0056 49DC     		bgt	.L22
  335 0058 4846     		mov	r0, r9
  336 005a FFF7FEFF 		bl	__aeabi_i2d
-ARM GAS  /tmp/ccc1QvPH.s 			page 7
+ARM GAS  /tmp/cckHWmYP.s 			page 7
 
 
  337 005e 34A3     		adr	r3, .L33
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  391 00e0 C6F85002 		str	r0, [r6, #592]
  392 00e4 86F8E321 		strb	r2, [r6, #483]
  393              	.L21:
-ARM GAS  /tmp/ccc1QvPH.s 			page 8
+ARM GAS  /tmp/cckHWmYP.s 			page 8
 
 
  394 00e8 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  447 000e FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread7setNameEPKc
  448 0012 5046     		mov	r0, r10
  449 0014 FFF7FEFF 		bl	_ZN5amiro11DistControl20deactivateControllerEv
-ARM GAS  /tmp/ccc1QvPH.s 			page 9
+ARM GAS  /tmp/cckHWmYP.s 			page 9
 
 
  450 0018 4FF47A78 		mov	r8, #1000
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  504 00c8 CAF80802 		str	r0, [r10, #520]
  505 00cc 13B9     		cbnz	r3, .L39
  506 00ce 4442     		negs	r4, r0
-ARM GAS  /tmp/ccc1QvPH.s 			page 10
+ARM GAS  /tmp/cckHWmYP.s 			page 10
 
 
  507 00d0 CAF80842 		str	r4, [r10, #520]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  561 016c DAF81C32 		ldr	r3, [r10, #540]
  562 0170 002B     		cmp	r3, #0
  563 0172 7FF457AF 		bne	.L38
-ARM GAS  /tmp/ccc1QvPH.s 			page 11
+ARM GAS  /tmp/cckHWmYP.s 			page 11
 
 
  564 0176 5046     		mov	r0, r10
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  616              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE
  617              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
  618              		.align	3
-ARM GAS  /tmp/ccc1QvPH.s 			page 12
+ARM GAS  /tmp/cckHWmYP.s 			page 12
 
 
  619              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, %object
@@ -696,55 +696,55 @@ ARM GAS  /tmp/ccc1QvPH.s 			page 1
  649      436F6E74 
  649      726F6C00 
  650              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccc1QvPH.s 			page 13
+ARM GAS  /tmp/cckHWmYP.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 DistControl.cpp
-     /tmp/ccc1QvPH.s:16     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
-     /tmp/ccc1QvPH.s:22     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
-     /tmp/ccc1QvPH.s:45     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
-     /tmp/ccc1QvPH.s:51     .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 $t
-     /tmp/ccc1QvPH.s:57     .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 _ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE
-     /tmp/ccc1QvPH.s:107    .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000094 $d
-     /tmp/ccc1QvPH.s:57     .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 _ZN5amiro11DistControlC1EPNS_12MotorControlEPNS_15MotorIncrementsE
-     /tmp/ccc1QvPH.s:119    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000000 $t
-     /tmp/ccc1QvPH.s:125    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000000 _ZN5amiro11DistControl20getCurrentTargetDistEv
-     /tmp/ccc1QvPH.s:139    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000020 $d
-     /tmp/ccc1QvPH.s:143    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000000 $t
-     /tmp/ccc1QvPH.s:149    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000000 _ZN5amiro11DistControl21getCurrentTargetAngleEv
-     /tmp/ccc1QvPH.s:163    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000020 $d
-     /tmp/ccc1QvPH.s:168    .text._ZN5amiro11DistControl17setTargetPositionEllt:00000000 $t
-     /tmp/ccc1QvPH.s:174    .text._ZN5amiro11DistControl17setTargetPositionEllt:00000000 _ZN5amiro11DistControl17setTargetPositionEllt
-     /tmp/ccc1QvPH.s:233    .text._ZN5amiro11DistControl17setTargetPositionEllt:00000088 $d
-     /tmp/ccc1QvPH.s:236    .text._ZN5amiro11DistControl8isActiveEv:00000000 $t
-     /tmp/ccc1QvPH.s:242    .text._ZN5amiro11DistControl8isActiveEv:00000000 _ZN5amiro11DistControl8isActiveEv
-     /tmp/ccc1QvPH.s:250    .text._ZN5amiro11DistControl20deactivateControllerEv:00000000 $t
-     /tmp/ccc1QvPH.s:256    .text._ZN5amiro11DistControl20deactivateControllerEv:00000000 _ZN5amiro11DistControl20deactivateControllerEv
-     /tmp/ccc1QvPH.s:295    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000000 $t
-     /tmp/ccc1QvPH.s:301    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000000 _ZN5amiro11DistControl14calcVelocitiesEv
-     /tmp/ccc1QvPH.s:427    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000130 $d
-     /tmp/ccc1QvPH.s:433    .text.startup._ZN5amiro11DistControl4mainEv:00000000 $t
-     /tmp/ccc1QvPH.s:439    .text.startup._ZN5amiro11DistControl4mainEv:00000000 _ZN5amiro11DistControl4mainEv
-     /tmp/ccc1QvPH.s:584    .text.startup._ZN5amiro11DistControl4mainEv:000001a0 $d
-     /tmp/ccc1QvPH.s:593    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 $t
-     /tmp/ccc1QvPH.s:598    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 _GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE
-     /tmp/ccc1QvPH.s:610    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:0000000c $d
-     /tmp/ccc1QvPH.s:614    .init_array:00000000 $d
-     /tmp/ccc1QvPH.s:621    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
-     /tmp/ccc1QvPH.s:618    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
-     /tmp/ccc1QvPH.s:640    .rodata._ZTVN5amiro11DistControlE:00000000 _ZTVN5amiro11DistControlE
-     /tmp/ccc1QvPH.s:629    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccc1QvPH.s:633    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccc1QvPH.s:636    .rodata._ZTVN5amiro11DistControlE:00000000 $d
-     /tmp/ccc1QvPH.s:647    .rodata.str1.4:00000000 $d
-     /tmp/ccc1QvPH.s:118    .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:000000a8 $t
-     /tmp/ccc1QvPH.s:142    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000028 $t
-     /tmp/ccc1QvPH.s:650    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000028 $t
-     /tmp/ccc1QvPH.s:235    .text._ZN5amiro11DistControl17setTargetPositionEllt:0000008c $t
-     /tmp/ccc1QvPH.s:432    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000138 $t
-     /tmp/ccc1QvPH.s:592    .text.startup._ZN5amiro11DistControl4mainEv:000001bc $t
-     /tmp/ccc1QvPH.s:613    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000014 $t
+     /tmp/cckHWmYP.s:16     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/cckHWmYP.s:22     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/cckHWmYP.s:45     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/cckHWmYP.s:51     .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 $t
+     /tmp/cckHWmYP.s:57     .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 _ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE
+     /tmp/cckHWmYP.s:107    .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000094 $d
+     /tmp/cckHWmYP.s:57     .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 _ZN5amiro11DistControlC1EPNS_12MotorControlEPNS_15MotorIncrementsE
+     /tmp/cckHWmYP.s:119    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000000 $t
+     /tmp/cckHWmYP.s:125    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000000 _ZN5amiro11DistControl20getCurrentTargetDistEv
+     /tmp/cckHWmYP.s:139    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000020 $d
+     /tmp/cckHWmYP.s:143    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000000 $t
+     /tmp/cckHWmYP.s:149    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000000 _ZN5amiro11DistControl21getCurrentTargetAngleEv
+     /tmp/cckHWmYP.s:163    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000020 $d
+     /tmp/cckHWmYP.s:168    .text._ZN5amiro11DistControl17setTargetPositionEllt:00000000 $t
+     /tmp/cckHWmYP.s:174    .text._ZN5amiro11DistControl17setTargetPositionEllt:00000000 _ZN5amiro11DistControl17setTargetPositionEllt
+     /tmp/cckHWmYP.s:233    .text._ZN5amiro11DistControl17setTargetPositionEllt:00000088 $d
+     /tmp/cckHWmYP.s:236    .text._ZN5amiro11DistControl8isActiveEv:00000000 $t
+     /tmp/cckHWmYP.s:242    .text._ZN5amiro11DistControl8isActiveEv:00000000 _ZN5amiro11DistControl8isActiveEv
+     /tmp/cckHWmYP.s:250    .text._ZN5amiro11DistControl20deactivateControllerEv:00000000 $t
+     /tmp/cckHWmYP.s:256    .text._ZN5amiro11DistControl20deactivateControllerEv:00000000 _ZN5amiro11DistControl20deactivateControllerEv
+     /tmp/cckHWmYP.s:295    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000000 $t
+     /tmp/cckHWmYP.s:301    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000000 _ZN5amiro11DistControl14calcVelocitiesEv
+     /tmp/cckHWmYP.s:427    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000130 $d
+     /tmp/cckHWmYP.s:433    .text.startup._ZN5amiro11DistControl4mainEv:00000000 $t
+     /tmp/cckHWmYP.s:439    .text.startup._ZN5amiro11DistControl4mainEv:00000000 _ZN5amiro11DistControl4mainEv
+     /tmp/cckHWmYP.s:584    .text.startup._ZN5amiro11DistControl4mainEv:000001a0 $d
+     /tmp/cckHWmYP.s:593    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 $t
+     /tmp/cckHWmYP.s:598    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 _GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE
+     /tmp/cckHWmYP.s:610    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:0000000c $d
+     /tmp/cckHWmYP.s:614    .init_array:00000000 $d
+     /tmp/cckHWmYP.s:621    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/cckHWmYP.s:618    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/cckHWmYP.s:640    .rodata._ZTVN5amiro11DistControlE:00000000 _ZTVN5amiro11DistControlE
+     /tmp/cckHWmYP.s:629    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/cckHWmYP.s:633    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/cckHWmYP.s:636    .rodata._ZTVN5amiro11DistControlE:00000000 $d
+     /tmp/cckHWmYP.s:647    .rodata.str1.4:00000000 $d
+     /tmp/cckHWmYP.s:118    .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:000000a8 $t
+     /tmp/cckHWmYP.s:142    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000028 $t
+     /tmp/cckHWmYP.s:650    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000028 $t
+     /tmp/cckHWmYP.s:235    .text._ZN5amiro11DistControl17setTargetPositionEllt:0000008c $t
+     /tmp/cckHWmYP.s:432    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000138 $t
+     /tmp/cckHWmYP.s:592    .text.startup._ZN5amiro11DistControl4mainEv:000001bc $t
+     /tmp/cckHWmYP.s:613    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000014 $t
 
 UNDEFINED SYMBOLS
 chThdCreateStatic
@@ -756,7 +756,7 @@ _ZN10chibios_rt10BaseThreadC2Ev
 _ZN5amiro12MotorControl25actualWheelBaseDistanceSIE
 __aeabi_i2d
 __aeabi_dmul
-ARM GAS  /tmp/ccc1QvPH.s 			page 14
+ARM GAS  /tmp/cckHWmYP.s 			page 14
 
 
 __aeabi_d2iz

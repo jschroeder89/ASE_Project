@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccsRu3ae.s 			page 1
+ARM GAS  /tmp/ccsWMJye.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccsRu3ae.s 			page 1
   54 0002 0446     		mov	r4, r0
   55 0004 FFF7FEFF 		bl	chDbgCheckClassI
   56 0008 074A     		ldr	r2, .L7
-ARM GAS  /tmp/ccsRu3ae.s 			page 2
+ARM GAS  /tmp/ccsWMJye.s 			page 2
 
 
   57 000a 0849     		ldr	r1, .L7+4
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccsRu3ae.s 			page 1
  109              		.global	chCoreStatus
  110              		.thumb
  111              		.thumb_func
-ARM GAS  /tmp/ccsRu3ae.s 			page 3
+ARM GAS  /tmp/ccsWMJye.s 			page 3
 
 
  112              		.type	chCoreStatus, %function
@@ -155,28 +155,28 @@ ARM GAS  /tmp/ccsRu3ae.s 			page 1
  141              	nextmem:
  142 0000 00000000 		.space	4
  143              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccsRu3ae.s 			page 4
+ARM GAS  /tmp/ccsWMJye.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmemcore.c
-     /tmp/ccsRu3ae.s:16     .text._core_init:00000000 $t
-     /tmp/ccsRu3ae.s:22     .text._core_init:00000000 _core_init
-     /tmp/ccsRu3ae.s:38     .text._core_init:00000018 $d
-     /tmp/ccsRu3ae.s:44     .text.chCoreAllocI:00000000 $t
-     /tmp/ccsRu3ae.s:50     .text.chCoreAllocI:00000000 chCoreAllocI
-     /tmp/ccsRu3ae.s:73     .text.chCoreAllocI:00000028 $d
-     /tmp/ccsRu3ae.s:77     .text.chCoreAlloc:00000000 $t
-     /tmp/ccsRu3ae.s:83     .text.chCoreAlloc:00000000 chCoreAlloc
-     /tmp/ccsRu3ae.s:107    .text.chCoreStatus:00000000 $t
-     /tmp/ccsRu3ae.s:113    .text.chCoreStatus:00000000 chCoreStatus
-     /tmp/ccsRu3ae.s:126    .text.chCoreStatus:0000000c $d
-     /tmp/ccsRu3ae.s:130    .bss.endmem:00000000 $d
-     /tmp/ccsRu3ae.s:134    .bss.endmem:00000000 endmem
-     /tmp/ccsRu3ae.s:137    .bss.nextmem:00000000 $d
-     /tmp/ccsRu3ae.s:141    .bss.nextmem:00000000 nextmem
-     /tmp/ccsRu3ae.s:43     .text._core_init:00000028 $t
-     /tmp/ccsRu3ae.s:129    .text.chCoreStatus:00000014 $t
+     /tmp/ccsWMJye.s:16     .text._core_init:00000000 $t
+     /tmp/ccsWMJye.s:22     .text._core_init:00000000 _core_init
+     /tmp/ccsWMJye.s:38     .text._core_init:00000018 $d
+     /tmp/ccsWMJye.s:44     .text.chCoreAllocI:00000000 $t
+     /tmp/ccsWMJye.s:50     .text.chCoreAllocI:00000000 chCoreAllocI
+     /tmp/ccsWMJye.s:73     .text.chCoreAllocI:00000028 $d
+     /tmp/ccsWMJye.s:77     .text.chCoreAlloc:00000000 $t
+     /tmp/ccsWMJye.s:83     .text.chCoreAlloc:00000000 chCoreAlloc
+     /tmp/ccsWMJye.s:107    .text.chCoreStatus:00000000 $t
+     /tmp/ccsWMJye.s:113    .text.chCoreStatus:00000000 chCoreStatus
+     /tmp/ccsWMJye.s:126    .text.chCoreStatus:0000000c $d
+     /tmp/ccsWMJye.s:130    .bss.endmem:00000000 $d
+     /tmp/ccsWMJye.s:134    .bss.endmem:00000000 endmem
+     /tmp/ccsWMJye.s:137    .bss.nextmem:00000000 $d
+     /tmp/ccsWMJye.s:141    .bss.nextmem:00000000 nextmem
+     /tmp/ccsWMJye.s:43     .text._core_init:00000028 $t
+     /tmp/ccsWMJye.s:129    .text.chCoreStatus:00000014 $t
 
 UNDEFINED SYMBOLS
 __heap_base__

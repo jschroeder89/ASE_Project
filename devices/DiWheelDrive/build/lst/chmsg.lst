@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccsLEuAv.s 			page 1
+ARM GAS  /tmp/ccH4yXEs.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccsLEuAv.s 			page 1
   55 003e 83F31188 		msr     BASEPRI, r3
   56              	@ 0 "" 2
   57              		.thumb
-ARM GAS  /tmp/ccsLEuAv.s 			page 2
+ARM GAS  /tmp/ccH4yXEs.s 			page 2
 
 
   58 0042 2046     		mov	r0, r4
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccsLEuAv.s 			page 1
  112 0034 0C20     		movs	r0, #12
  113 0036 FFF7FEFF 		bl	chSchGoSleepS
  114 003a AA69     		ldr	r2, [r5, #24]
-ARM GAS  /tmp/ccsLEuAv.s 			page 3
+ARM GAS  /tmp/ccH4yXEs.s 			page 3
 
 
  115 003c 146B     		ldr	r4, [r2, #48]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccsLEuAv.s 			page 1
  166      73675365 
  166      6E642228 
  166      2900
-ARM GAS  /tmp/ccsLEuAv.s 			page 4
+ARM GAS  /tmp/ccH4yXEs.s 			page 4
 
 
  167 000e 0000     		.space	2
@@ -189,23 +189,23 @@ ARM GAS  /tmp/ccsLEuAv.s 			page 1
  169      28292C20 
  169      233100
  170 0023 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccsLEuAv.s 			page 5
+ARM GAS  /tmp/ccH4yXEs.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmsg.c
-     /tmp/ccsLEuAv.s:16     .text.chMsgSend:00000000 $t
-     /tmp/ccsLEuAv.s:22     .text.chMsgSend:00000000 chMsgSend
-     /tmp/ccsLEuAv.s:71     .text.chMsgSend:00000058 $d
-     /tmp/ccsLEuAv.s:75     .text.chMsgWait:00000000 $t
-     /tmp/ccsLEuAv.s:81     .text.chMsgWait:00000000 chMsgWait
-     /tmp/ccsLEuAv.s:121    .text.chMsgWait:00000044 $d
-     /tmp/ccsLEuAv.s:124    .text.chMsgRelease:00000000 $t
-     /tmp/ccsLEuAv.s:130    .text.chMsgRelease:00000000 chMsgRelease
-     /tmp/ccsLEuAv.s:161    .text.chMsgRelease:00000034 $d
-     /tmp/ccsLEuAv.s:164    .rodata.str1.4:00000000 $d
-     /tmp/ccsLEuAv.s:123    .text.chMsgWait:00000048 $t
-     /tmp/ccsLEuAv.s:163    .text.chMsgRelease:00000038 $t
+     /tmp/ccH4yXEs.s:16     .text.chMsgSend:00000000 $t
+     /tmp/ccH4yXEs.s:22     .text.chMsgSend:00000000 chMsgSend
+     /tmp/ccH4yXEs.s:71     .text.chMsgSend:00000058 $d
+     /tmp/ccH4yXEs.s:75     .text.chMsgWait:00000000 $t
+     /tmp/ccH4yXEs.s:81     .text.chMsgWait:00000000 chMsgWait
+     /tmp/ccH4yXEs.s:121    .text.chMsgWait:00000044 $d
+     /tmp/ccH4yXEs.s:124    .text.chMsgRelease:00000000 $t
+     /tmp/ccH4yXEs.s:130    .text.chMsgRelease:00000000 chMsgRelease
+     /tmp/ccH4yXEs.s:161    .text.chMsgRelease:00000034 $d
+     /tmp/ccH4yXEs.s:164    .rodata.str1.4:00000000 $d
+     /tmp/ccH4yXEs.s:123    .text.chMsgWait:00000048 $t
+     /tmp/ccH4yXEs.s:163    .text.chMsgRelease:00000038 $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock

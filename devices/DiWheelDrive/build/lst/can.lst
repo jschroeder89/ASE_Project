@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccmtAG3I.s 			page 1
+ARM GAS  /tmp/ccANUsMO.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
   53 002a 04F12C02 		add	r2, r4, #44
   54 002e 04F13003 		add	r3, r4, #48
   55 0032 2562     		str	r5, [r4, #32]
-ARM GAS  /tmp/ccmtAG3I.s 			page 2
+ARM GAS  /tmp/ccANUsMO.s 			page 2
 
 
   56 0034 6062     		str	r0, [r4, #36]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
  110              	.L13:
  111 0044 2046     		mov	r0, r4
  112 0046 6560     		str	r5, [r4, #4]
-ARM GAS  /tmp/ccmtAG3I.s 			page 3
+ARM GAS  /tmp/ccANUsMO.s 			page 3
 
 
  113 0048 FFF7FEFF 		bl	can_lld_start
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
  167 0034 04F10800 		add	r0, r4, #8
  168 0038 0021     		movs	r1, #0
  169 003a FFF7FEFF 		bl	chSemResetI
-ARM GAS  /tmp/ccmtAG3I.s 			page 4
+ARM GAS  /tmp/ccANUsMO.s 			page 4
 
 
  170 003e FFF7FEFF 		bl	chSchRescheduleS
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
  224 0034 00E0     		b	.L31
  225              	.L47:
  226 0036 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
-ARM GAS  /tmp/ccmtAG3I.s 			page 5
+ARM GAS  /tmp/ccANUsMO.s 			page 5
 
 
  227              	.L31:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
  279              		.global	canReceive
  280              		.thumb
  281              		.thumb_func
-ARM GAS  /tmp/ccmtAG3I.s 			page 6
+ARM GAS  /tmp/ccANUsMO.s 			page 6
 
 
  282              		.type	canReceive, %function
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
  336              	@ 0 "" 2
  337              		.thumb
  338 0064 0198     		ldr	r0, [sp, #4]
-ARM GAS  /tmp/ccmtAG3I.s 			page 7
+ARM GAS  /tmp/ccANUsMO.s 			page 7
 
 
  339 0066 03B0     		add	sp, sp, #12
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
  393 0024 FFF7FEFF 		bl	dbg_check_unlock
  394 0028 0023     		movs	r3, #0
  395              	@ 263 "../../../ChibiOS/os/hal/src/can.c" 1
-ARM GAS  /tmp/ccmtAG3I.s 			page 8
+ARM GAS  /tmp/ccANUsMO.s 			page 8
 
 
  396 002a 83F31188 		msr     BASEPRI, r3
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
  448 0014 012A     		cmp	r2, #1
  449 0016 03D9     		bls	.L84
  450 0018 1048     		ldr	r0, .L88
-ARM GAS  /tmp/ccmtAG3I.s 			page 9
+ARM GAS  /tmp/ccANUsMO.s 			page 9
 
 
  451 001a FFF7FEFF 		bl	chDbgPanic
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
  497              	.LC2:
  498 0020 2263616E 		.ascii	"\"canStop\"()\000"
  498      53746F70 
-ARM GAS  /tmp/ccmtAG3I.s 			page 10
+ARM GAS  /tmp/ccANUsMO.s 			page 10
 
 
  498      22282900 
@@ -597,38 +597,38 @@ ARM GAS  /tmp/ccmtAG3I.s 			page 1
  523      7028292C 
  523      20233100 
  524              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccmtAG3I.s 			page 11
+ARM GAS  /tmp/ccANUsMO.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 can.c
-     /tmp/ccmtAG3I.s:16     .text.canInit:00000000 $t
-     /tmp/ccmtAG3I.s:22     .text.canInit:00000000 canInit
-     /tmp/ccmtAG3I.s:29     .text.canObjectInit:00000000 $t
-     /tmp/ccmtAG3I.s:35     .text.canObjectInit:00000000 canObjectInit
-     /tmp/ccmtAG3I.s:63     .text.canStart:00000000 $t
-     /tmp/ccmtAG3I.s:69     .text.canStart:00000000 canStart
-     /tmp/ccmtAG3I.s:130    .text.canStart:00000064 $d
-     /tmp/ccmtAG3I.s:134    .text.canStop:00000000 $t
-     /tmp/ccmtAG3I.s:140    .text.canStop:00000000 canStop
-     /tmp/ccmtAG3I.s:185    .text.canStop:00000058 $d
-     /tmp/ccmtAG3I.s:189    .text.canTransmit:00000000 $t
-     /tmp/ccmtAG3I.s:195    .text.canTransmit:00000000 canTransmit
-     /tmp/ccmtAG3I.s:273    .text.canTransmit:0000008c $d
-     /tmp/ccmtAG3I.s:277    .text.canReceive:00000000 $t
-     /tmp/ccmtAG3I.s:283    .text.canReceive:00000000 canReceive
-     /tmp/ccmtAG3I.s:360    .text.canReceive:00000088 $d
-     /tmp/ccmtAG3I.s:364    .text.canSleep:00000000 $t
-     /tmp/ccmtAG3I.s:370    .text.canSleep:00000000 canSleep
-     /tmp/ccmtAG3I.s:423    .text.canSleep:0000005c $d
-     /tmp/ccmtAG3I.s:427    .text.canWakeup:00000000 $t
-     /tmp/ccmtAG3I.s:433    .text.canWakeup:00000000 canWakeup
-     /tmp/ccmtAG3I.s:486    .text.canWakeup:0000005c $d
-     /tmp/ccmtAG3I.s:490    .rodata.str1.4:00000000 $d
-     /tmp/ccmtAG3I.s:133    .text.canStart:0000006c $t
-     /tmp/ccmtAG3I.s:276    .text.canTransmit:00000094 $t
-     /tmp/ccmtAG3I.s:426    .text.canSleep:00000064 $t
-     /tmp/ccmtAG3I.s:489    .text.canWakeup:00000064 $t
+     /tmp/ccANUsMO.s:16     .text.canInit:00000000 $t
+     /tmp/ccANUsMO.s:22     .text.canInit:00000000 canInit
+     /tmp/ccANUsMO.s:29     .text.canObjectInit:00000000 $t
+     /tmp/ccANUsMO.s:35     .text.canObjectInit:00000000 canObjectInit
+     /tmp/ccANUsMO.s:63     .text.canStart:00000000 $t
+     /tmp/ccANUsMO.s:69     .text.canStart:00000000 canStart
+     /tmp/ccANUsMO.s:130    .text.canStart:00000064 $d
+     /tmp/ccANUsMO.s:134    .text.canStop:00000000 $t
+     /tmp/ccANUsMO.s:140    .text.canStop:00000000 canStop
+     /tmp/ccANUsMO.s:185    .text.canStop:00000058 $d
+     /tmp/ccANUsMO.s:189    .text.canTransmit:00000000 $t
+     /tmp/ccANUsMO.s:195    .text.canTransmit:00000000 canTransmit
+     /tmp/ccANUsMO.s:273    .text.canTransmit:0000008c $d
+     /tmp/ccANUsMO.s:277    .text.canReceive:00000000 $t
+     /tmp/ccANUsMO.s:283    .text.canReceive:00000000 canReceive
+     /tmp/ccANUsMO.s:360    .text.canReceive:00000088 $d
+     /tmp/ccANUsMO.s:364    .text.canSleep:00000000 $t
+     /tmp/ccANUsMO.s:370    .text.canSleep:00000000 canSleep
+     /tmp/ccANUsMO.s:423    .text.canSleep:0000005c $d
+     /tmp/ccANUsMO.s:427    .text.canWakeup:00000000 $t
+     /tmp/ccANUsMO.s:433    .text.canWakeup:00000000 canWakeup
+     /tmp/ccANUsMO.s:486    .text.canWakeup:0000005c $d
+     /tmp/ccANUsMO.s:490    .rodata.str1.4:00000000 $d
+     /tmp/ccANUsMO.s:133    .text.canStart:0000006c $t
+     /tmp/ccANUsMO.s:276    .text.canTransmit:00000094 $t
+     /tmp/ccANUsMO.s:426    .text.canSleep:00000064 $t
+     /tmp/ccANUsMO.s:489    .text.canWakeup:00000064 $t
 
 UNDEFINED SYMBOLS
 can_lld_init

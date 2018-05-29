@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cco18EWT.s 			page 1
+ARM GAS  /tmp/ccJjRZfk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
   54              		.size	_ZN5amiro5ColorC2ERKS0_, .-_ZN5amiro5ColorC2ERKS0_
   55              		.global	_ZN5amiro5ColorC1ERKS0_
   56              		.thumb_set _ZN5amiro5ColorC1ERKS0_,_ZN5amiro5ColorC2ERKS0_
-ARM GAS  /tmp/cco18EWT.s 			page 2
+ARM GAS  /tmp/ccJjRZfk.s 			page 2
 
 
   57 0012 00BFAFF3 		.section	.text._ZN5amiro5ColorC2Eiii,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  108              		.align	2
  109              		.p2align 4,,15
  110              		.global	_ZN5amiro5Color15getRedGreenBlueEPiS1_S1_
-ARM GAS  /tmp/cco18EWT.s 			page 3
+ARM GAS  /tmp/ccJjRZfk.s 			page 3
 
 
  111              		.thumb
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  159              		.global	_ZN5amiro5Color7getBlueEv
  160              		.thumb
  161              		.thumb_func
-ARM GAS  /tmp/cco18EWT.s 			page 4
+ARM GAS  /tmp/ccJjRZfk.s 			page 4
 
 
  162              		.type	_ZN5amiro5Color7getBlueEv, %function
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  214 005a 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
  215 005c 0170     		strb	r1, [r0]
  216 005e 4270     		strb	r2, [r0, #1]
-ARM GAS  /tmp/cco18EWT.s 			page 5
+ARM GAS  /tmp/ccJjRZfk.s 			page 5
 
 
  217 0060 8370     		strb	r3, [r0, #2]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  271 0046 38BD     		pop	{r3, r4, r5, pc}
  272              	.L25:
  273 0048 42F21073 		movw	r3, #10000
-ARM GAS  /tmp/cco18EWT.s 			page 6
+ARM GAS  /tmp/ccJjRZfk.s 			page 6
 
 
  274 004c 93FBF2F2 		sdiv	r2, r3, r2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  325              		.type	_ZN5amiro5ColoraSENS0_11GlobalColorE, %function
  326              	_ZN5amiro5ColoraSENS0_11GlobalColorE:
  327              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cco18EWT.s 			page 7
+ARM GAS  /tmp/ccJjRZfk.s 			page 7
 
 
  328              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  382 001d FF       		.byte	-1
  383 001e 8A       		.byte	-118
  384 001f 2B       		.byte	43
-ARM GAS  /tmp/cco18EWT.s 			page 8
+ARM GAS  /tmp/ccJjRZfk.s 			page 8
 
 
  385 0020 E2       		.byte	-30
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  439 0056 8B       		.byte	-117
  440 0057 55       		.byte	85
  441 0058 6B       		.byte	107
-ARM GAS  /tmp/cco18EWT.s 			page 9
+ARM GAS  /tmp/ccJjRZfk.s 			page 9
 
 
  442 0059 2F       		.byte	47
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  496 008f 22       		.byte	34
  497 0090 FF       		.byte	-1
  498 0091 00       		.byte	0
-ARM GAS  /tmp/cco18EWT.s 			page 10
+ARM GAS  /tmp/ccJjRZfk.s 			page 10
 
 
  499 0092 FF       		.byte	-1
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  553 00c8 CD       		.byte	-51
  554 00c9 AD       		.byte	-83
  555 00ca D8       		.byte	-40
-ARM GAS  /tmp/cco18EWT.s 			page 11
+ARM GAS  /tmp/ccJjRZfk.s 			page 11
 
 
  556 00cb E6       		.byte	-26
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  610 0101 FF       		.byte	-1
  611 0102 80       		.byte	-128
  612 0103 00       		.byte	0
-ARM GAS  /tmp/cco18EWT.s 			page 12
+ARM GAS  /tmp/ccJjRZfk.s 			page 12
 
 
  613 0104 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  667 013a 23       		.byte	35
  668 013b FF       		.byte	-1
  669 013c A5       		.byte	-91
-ARM GAS  /tmp/cco18EWT.s 			page 13
+ARM GAS  /tmp/ccJjRZfk.s 			page 13
 
 
  670 013d 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  724 0173 72       		.byte	114
  725 0174 F4       		.byte	-12
  726 0175 A4       		.byte	-92
-ARM GAS  /tmp/cco18EWT.s 			page 14
+ARM GAS  /tmp/ccJjRZfk.s 			page 14
 
 
  727 0176 60       		.byte	96
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  781 01ac B3       		.byte	-77
  782 01ad FF       		.byte	-1
  783 01ae FF       		.byte	-1
-ARM GAS  /tmp/cco18EWT.s 			page 15
+ARM GAS  /tmp/ccJjRZfk.s 			page 15
 
 
  784 01af FF       		.byte	-1
@@ -852,46 +852,46 @@ ARM GAS  /tmp/cco18EWT.s 			page 1
  792 01b7 CD       		.byte	-51
  793 01b8 32       		.byte	50
  794 01b9 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cco18EWT.s 			page 16
+ARM GAS  /tmp/ccJjRZfk.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Color.cpp
-     /tmp/cco18EWT.s:16     .text._ZN5amiro5ColorC2Ev:00000000 $t
-     /tmp/cco18EWT.s:22     .text._ZN5amiro5ColorC2Ev:00000000 _ZN5amiro5ColorC2Ev
-     /tmp/cco18EWT.s:22     .text._ZN5amiro5ColorC2Ev:00000000 _ZN5amiro5ColorC1Ev
-     /tmp/cco18EWT.s:35     .text._ZN5amiro5ColorC2ERKS0_:00000000 $t
-     /tmp/cco18EWT.s:41     .text._ZN5amiro5ColorC2ERKS0_:00000000 _ZN5amiro5ColorC2ERKS0_
-     /tmp/cco18EWT.s:41     .text._ZN5amiro5ColorC2ERKS0_:00000000 _ZN5amiro5ColorC1ERKS0_
-     /tmp/cco18EWT.s:58     .text._ZN5amiro5ColorC2Eiii:00000000 $t
-     /tmp/cco18EWT.s:64     .text._ZN5amiro5ColorC2Eiii:00000000 _ZN5amiro5ColorC2Eiii
-     /tmp/cco18EWT.s:64     .text._ZN5amiro5ColorC2Eiii:00000000 _ZN5amiro5ColorC1Eiii
-     /tmp/cco18EWT.s:78     .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:00000000 $t
-     /tmp/cco18EWT.s:84     .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:00000000 _ZN5amiro5ColorC2ENS0_11GlobalColorE
-     /tmp/cco18EWT.s:103    .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:0000001c $d
-     /tmp/cco18EWT.s:84     .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:00000000 _ZN5amiro5ColorC1ENS0_11GlobalColorE
-     /tmp/cco18EWT.s:108    .text._ZN5amiro5Color15getRedGreenBlueEPiS1_S1_:00000000 $t
-     /tmp/cco18EWT.s:114    .text._ZN5amiro5Color15getRedGreenBlueEPiS1_S1_:00000000 _ZN5amiro5Color15getRedGreenBlueEPiS1_S1_
-     /tmp/cco18EWT.s:129    .text._ZN5amiro5Color6getRedEv:00000000 $t
-     /tmp/cco18EWT.s:135    .text._ZN5amiro5Color6getRedEv:00000000 _ZN5amiro5Color6getRedEv
-     /tmp/cco18EWT.s:143    .text._ZN5amiro5Color8getGreenEv:00000000 $t
-     /tmp/cco18EWT.s:149    .text._ZN5amiro5Color8getGreenEv:00000000 _ZN5amiro5Color8getGreenEv
-     /tmp/cco18EWT.s:157    .text._ZN5amiro5Color7getBlueEv:00000000 $t
-     /tmp/cco18EWT.s:163    .text._ZN5amiro5Color7getBlueEv:00000000 _ZN5amiro5Color7getBlueEv
-     /tmp/cco18EWT.s:171    .text._ZN5amiro5Color7lighterEi:00000000 $t
-     /tmp/cco18EWT.s:177    .text._ZN5amiro5Color7lighterEi:00000000 _ZN5amiro5Color7lighterEi
-     /tmp/cco18EWT.s:238    .text._ZN5amiro5Color6darkerEi:00000000 _ZN5amiro5Color6darkerEi
-     /tmp/cco18EWT.s:229    .text._ZN5amiro5Color7lighterEi:00000078 $d
-     /tmp/cco18EWT.s:232    .text._ZN5amiro5Color6darkerEi:00000000 $t
-     /tmp/cco18EWT.s:280    .text._ZN5amiro5Color15setRedGreenBlueEiii:00000000 $t
-     /tmp/cco18EWT.s:286    .text._ZN5amiro5Color15setRedGreenBlueEiii:00000000 _ZN5amiro5Color15setRedGreenBlueEiii
-     /tmp/cco18EWT.s:296    .text._ZN5amiro5ColoraSERKS0_:00000000 $t
-     /tmp/cco18EWT.s:302    .text._ZN5amiro5ColoraSERKS0_:00000000 _ZN5amiro5ColoraSERKS0_
-     /tmp/cco18EWT.s:320    .text._ZN5amiro5ColoraSENS0_11GlobalColorE:00000000 $t
-     /tmp/cco18EWT.s:326    .text._ZN5amiro5ColoraSENS0_11GlobalColorE:00000000 _ZN5amiro5ColoraSENS0_11GlobalColorE
-     /tmp/cco18EWT.s:345    .text._ZN5amiro5ColoraSENS0_11GlobalColorE:0000001c $d
-     /tmp/cco18EWT.s:348    .rodata._ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors:00000000 $d
-     /tmp/cco18EWT.s:352    .rodata._ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors:00000000 _ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors
-     /tmp/cco18EWT.s:231    .text._ZN5amiro5Color7lighterEi:0000007c $t
+     /tmp/ccJjRZfk.s:16     .text._ZN5amiro5ColorC2Ev:00000000 $t
+     /tmp/ccJjRZfk.s:22     .text._ZN5amiro5ColorC2Ev:00000000 _ZN5amiro5ColorC2Ev
+     /tmp/ccJjRZfk.s:22     .text._ZN5amiro5ColorC2Ev:00000000 _ZN5amiro5ColorC1Ev
+     /tmp/ccJjRZfk.s:35     .text._ZN5amiro5ColorC2ERKS0_:00000000 $t
+     /tmp/ccJjRZfk.s:41     .text._ZN5amiro5ColorC2ERKS0_:00000000 _ZN5amiro5ColorC2ERKS0_
+     /tmp/ccJjRZfk.s:41     .text._ZN5amiro5ColorC2ERKS0_:00000000 _ZN5amiro5ColorC1ERKS0_
+     /tmp/ccJjRZfk.s:58     .text._ZN5amiro5ColorC2Eiii:00000000 $t
+     /tmp/ccJjRZfk.s:64     .text._ZN5amiro5ColorC2Eiii:00000000 _ZN5amiro5ColorC2Eiii
+     /tmp/ccJjRZfk.s:64     .text._ZN5amiro5ColorC2Eiii:00000000 _ZN5amiro5ColorC1Eiii
+     /tmp/ccJjRZfk.s:78     .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:00000000 $t
+     /tmp/ccJjRZfk.s:84     .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:00000000 _ZN5amiro5ColorC2ENS0_11GlobalColorE
+     /tmp/ccJjRZfk.s:103    .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:0000001c $d
+     /tmp/ccJjRZfk.s:84     .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:00000000 _ZN5amiro5ColorC1ENS0_11GlobalColorE
+     /tmp/ccJjRZfk.s:108    .text._ZN5amiro5Color15getRedGreenBlueEPiS1_S1_:00000000 $t
+     /tmp/ccJjRZfk.s:114    .text._ZN5amiro5Color15getRedGreenBlueEPiS1_S1_:00000000 _ZN5amiro5Color15getRedGreenBlueEPiS1_S1_
+     /tmp/ccJjRZfk.s:129    .text._ZN5amiro5Color6getRedEv:00000000 $t
+     /tmp/ccJjRZfk.s:135    .text._ZN5amiro5Color6getRedEv:00000000 _ZN5amiro5Color6getRedEv
+     /tmp/ccJjRZfk.s:143    .text._ZN5amiro5Color8getGreenEv:00000000 $t
+     /tmp/ccJjRZfk.s:149    .text._ZN5amiro5Color8getGreenEv:00000000 _ZN5amiro5Color8getGreenEv
+     /tmp/ccJjRZfk.s:157    .text._ZN5amiro5Color7getBlueEv:00000000 $t
+     /tmp/ccJjRZfk.s:163    .text._ZN5amiro5Color7getBlueEv:00000000 _ZN5amiro5Color7getBlueEv
+     /tmp/ccJjRZfk.s:171    .text._ZN5amiro5Color7lighterEi:00000000 $t
+     /tmp/ccJjRZfk.s:177    .text._ZN5amiro5Color7lighterEi:00000000 _ZN5amiro5Color7lighterEi
+     /tmp/ccJjRZfk.s:238    .text._ZN5amiro5Color6darkerEi:00000000 _ZN5amiro5Color6darkerEi
+     /tmp/ccJjRZfk.s:229    .text._ZN5amiro5Color7lighterEi:00000078 $d
+     /tmp/ccJjRZfk.s:232    .text._ZN5amiro5Color6darkerEi:00000000 $t
+     /tmp/ccJjRZfk.s:280    .text._ZN5amiro5Color15setRedGreenBlueEiii:00000000 $t
+     /tmp/ccJjRZfk.s:286    .text._ZN5amiro5Color15setRedGreenBlueEiii:00000000 _ZN5amiro5Color15setRedGreenBlueEiii
+     /tmp/ccJjRZfk.s:296    .text._ZN5amiro5ColoraSERKS0_:00000000 $t
+     /tmp/ccJjRZfk.s:302    .text._ZN5amiro5ColoraSERKS0_:00000000 _ZN5amiro5ColoraSERKS0_
+     /tmp/ccJjRZfk.s:320    .text._ZN5amiro5ColoraSENS0_11GlobalColorE:00000000 $t
+     /tmp/ccJjRZfk.s:326    .text._ZN5amiro5ColoraSENS0_11GlobalColorE:00000000 _ZN5amiro5ColoraSENS0_11GlobalColorE
+     /tmp/ccJjRZfk.s:345    .text._ZN5amiro5ColoraSENS0_11GlobalColorE:0000001c $d
+     /tmp/ccJjRZfk.s:348    .rodata._ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors:00000000 $d
+     /tmp/ccJjRZfk.s:352    .rodata._ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors:00000000 _ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors
+     /tmp/ccJjRZfk.s:231    .text._ZN5amiro5Color7lighterEi:0000007c $t
 
 NO UNDEFINED SYMBOLS

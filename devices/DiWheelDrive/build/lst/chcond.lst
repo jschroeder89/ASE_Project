@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccP7ehI8.s 			page 1
+ARM GAS  /tmp/cc6BPpJW.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccP7ehI8.s 			page 1
   55              	.L8:
   56 0006 2023     		movs	r3, #32
   57              	@ 77 "../../../ChibiOS/os/kernel/src/chcond.c" 1
-ARM GAS  /tmp/ccP7ehI8.s 			page 2
+ARM GAS  /tmp/cc6BPpJW.s 			page 2
 
 
   58 0008 83F31188 		msr     BASEPRI, r3
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccP7ehI8.s 			page 1
  112 001e 10BD     		pop	{r4, pc}
  113              	.L16:
  114 0020 0148     		ldr	r0, .L17
-ARM GAS  /tmp/ccP7ehI8.s 			page 3
+ARM GAS  /tmp/cc6BPpJW.s 			page 3
 
 
  115 0022 FFF7FEFF 		bl	chDbgPanic
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccP7ehI8.s 			page 1
  167              		.type	chCondBroadcast, %function
  168              	chCondBroadcast:
  169              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccP7ehI8.s 			page 4
+ARM GAS  /tmp/cc6BPpJW.s 			page 4
 
 
  170              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccP7ehI8.s 			page 1
  222 0028 9D42     		cmp	r5, r3
  223 002a F8D1     		bne	.L37
  224              	.L32:
-ARM GAS  /tmp/ccP7ehI8.s 			page 5
+ARM GAS  /tmp/cc6BPpJW.s 			page 5
 
 
  225 002c 5A68     		ldr	r2, [r3, #4]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccP7ehI8.s 			page 1
  277              	@ 0 "" 2
  278              		.thumb
  279 0020 2046     		mov	r0, r4
-ARM GAS  /tmp/ccP7ehI8.s 			page 6
+ARM GAS  /tmp/cc6BPpJW.s 			page 6
 
 
  280 0022 10BD     		pop	{r4, pc}
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccP7ehI8.s 			page 1
  332 0050 3846     		mov	r0, r7
  333 0052 FFF7FEFF 		bl	chMtxLockS
  334              	.L47:
-ARM GAS  /tmp/ccP7ehI8.s 			page 7
+ARM GAS  /tmp/cc6BPpJW.s 			page 7
 
 
  335 0056 2046     		mov	r0, r4
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccP7ehI8.s 			page 1
  387 0000 22636843 		.ascii	"\"chCondInit\"()\000"
  387      6F6E6449 
  387      6E697422 
-ARM GAS  /tmp/ccP7ehI8.s 			page 8
+ARM GAS  /tmp/cc6BPpJW.s 			page 8
 
 
  387      282900
@@ -470,42 +470,42 @@ ARM GAS  /tmp/ccP7ehI8.s 			page 1
  407      6D656F75 
  407      74532829 
  408 00a5 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccP7ehI8.s 			page 9
+ARM GAS  /tmp/cc6BPpJW.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chcond.c
-     /tmp/ccP7ehI8.s:16     .text.chCondInit:00000000 $t
-     /tmp/ccP7ehI8.s:22     .text.chCondInit:00000000 chCondInit
-     /tmp/ccP7ehI8.s:40     .text.chCondInit:00000018 $d
-     /tmp/ccP7ehI8.s:43     .text.chCondSignal:00000000 $t
-     /tmp/ccP7ehI8.s:49     .text.chCondSignal:00000000 chCondSignal
-     /tmp/ccP7ehI8.s:85     .text.chCondSignal:00000038 $d
-     /tmp/ccP7ehI8.s:88     .text.chCondSignalI:00000000 $t
-     /tmp/ccP7ehI8.s:94     .text.chCondSignalI:00000000 chCondSignalI
-     /tmp/ccP7ehI8.s:120    .text.chCondSignalI:00000028 $d
-     /tmp/ccP7ehI8.s:123    .text.chCondBroadcastI:00000000 $t
-     /tmp/ccP7ehI8.s:129    .text.chCondBroadcastI:00000000 chCondBroadcastI
-     /tmp/ccP7ehI8.s:159    .text.chCondBroadcastI:00000030 $d
-     /tmp/ccP7ehI8.s:162    .text.chCondBroadcast:00000000 $t
-     /tmp/ccP7ehI8.s:168    .text.chCondBroadcast:00000000 chCondBroadcast
-     /tmp/ccP7ehI8.s:191    .text.chCondWaitS:00000000 $t
-     /tmp/ccP7ehI8.s:197    .text.chCondWaitS:00000000 chCondWaitS
-     /tmp/ccP7ehI8.s:248    .text.chCondWaitS:00000058 $d
-     /tmp/ccP7ehI8.s:253    .text.chCondWait:00000000 $t
-     /tmp/ccP7ehI8.s:259    .text.chCondWait:00000000 chCondWait
-     /tmp/ccP7ehI8.s:283    .text.chCondWaitTimeoutS:00000000 $t
-     /tmp/ccP7ehI8.s:289    .text.chCondWaitTimeoutS:00000000 chCondWaitTimeoutS
-     /tmp/ccP7ehI8.s:348    .text.chCondWaitTimeoutS:0000006c $d
-     /tmp/ccP7ehI8.s:353    .text.chCondWaitTimeout:00000000 $t
-     /tmp/ccP7ehI8.s:359    .text.chCondWaitTimeout:00000000 chCondWaitTimeout
-     /tmp/ccP7ehI8.s:385    .rodata.str1.4:00000000 $d
-     /tmp/ccP7ehI8.s:42     .text.chCondInit:0000001c $t
-     /tmp/ccP7ehI8.s:87     .text.chCondSignal:0000003c $t
-     /tmp/ccP7ehI8.s:122    .text.chCondSignalI:0000002c $t
-     /tmp/ccP7ehI8.s:161    .text.chCondBroadcastI:00000034 $t
-     /tmp/ccP7ehI8.s:252    .text.chCondWaitS:00000064 $t
-     /tmp/ccP7ehI8.s:352    .text.chCondWaitTimeoutS:00000078 $t
+     /tmp/cc6BPpJW.s:16     .text.chCondInit:00000000 $t
+     /tmp/cc6BPpJW.s:22     .text.chCondInit:00000000 chCondInit
+     /tmp/cc6BPpJW.s:40     .text.chCondInit:00000018 $d
+     /tmp/cc6BPpJW.s:43     .text.chCondSignal:00000000 $t
+     /tmp/cc6BPpJW.s:49     .text.chCondSignal:00000000 chCondSignal
+     /tmp/cc6BPpJW.s:85     .text.chCondSignal:00000038 $d
+     /tmp/cc6BPpJW.s:88     .text.chCondSignalI:00000000 $t
+     /tmp/cc6BPpJW.s:94     .text.chCondSignalI:00000000 chCondSignalI
+     /tmp/cc6BPpJW.s:120    .text.chCondSignalI:00000028 $d
+     /tmp/cc6BPpJW.s:123    .text.chCondBroadcastI:00000000 $t
+     /tmp/cc6BPpJW.s:129    .text.chCondBroadcastI:00000000 chCondBroadcastI
+     /tmp/cc6BPpJW.s:159    .text.chCondBroadcastI:00000030 $d
+     /tmp/cc6BPpJW.s:162    .text.chCondBroadcast:00000000 $t
+     /tmp/cc6BPpJW.s:168    .text.chCondBroadcast:00000000 chCondBroadcast
+     /tmp/cc6BPpJW.s:191    .text.chCondWaitS:00000000 $t
+     /tmp/cc6BPpJW.s:197    .text.chCondWaitS:00000000 chCondWaitS
+     /tmp/cc6BPpJW.s:248    .text.chCondWaitS:00000058 $d
+     /tmp/cc6BPpJW.s:253    .text.chCondWait:00000000 $t
+     /tmp/cc6BPpJW.s:259    .text.chCondWait:00000000 chCondWait
+     /tmp/cc6BPpJW.s:283    .text.chCondWaitTimeoutS:00000000 $t
+     /tmp/cc6BPpJW.s:289    .text.chCondWaitTimeoutS:00000000 chCondWaitTimeoutS
+     /tmp/cc6BPpJW.s:348    .text.chCondWaitTimeoutS:0000006c $d
+     /tmp/cc6BPpJW.s:353    .text.chCondWaitTimeout:00000000 $t
+     /tmp/cc6BPpJW.s:359    .text.chCondWaitTimeout:00000000 chCondWaitTimeout
+     /tmp/cc6BPpJW.s:385    .rodata.str1.4:00000000 $d
+     /tmp/cc6BPpJW.s:42     .text.chCondInit:0000001c $t
+     /tmp/cc6BPpJW.s:87     .text.chCondSignal:0000003c $t
+     /tmp/cc6BPpJW.s:122    .text.chCondSignalI:0000002c $t
+     /tmp/cc6BPpJW.s:161    .text.chCondBroadcastI:00000034 $t
+     /tmp/cc6BPpJW.s:252    .text.chCondWaitS:00000064 $t
+     /tmp/cc6BPpJW.s:352    .text.chCondWaitTimeoutS:00000078 $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

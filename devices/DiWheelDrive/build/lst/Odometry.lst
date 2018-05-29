@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccXcoiKL.s 			page 1
+ARM GAS  /tmp/ccnollBK.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
   55              		@ args = 4, pretend = 12, frame = 8
   56              		@ frame_needed = 0, uses_anonymous_args = 1
   57 0000 0EB4     		push	{r1, r2, r3}
-ARM GAS  /tmp/ccXcoiKL.s 			page 2
+ARM GAS  /tmp/ccnollBK.s 			page 2
 
 
   58 0002 00B5     		push	{lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  111 0038 4846     		mov	r0, r9
  112 003a FFF7FEFF 		bl	__aeabi_fadd
  113 003e 0BF1040B 		add	fp, fp, #4
-ARM GAS  /tmp/ccXcoiKL.s 			page 3
+ARM GAS  /tmp/ccnollBK.s 			page 3
 
 
  114 0042 C345     		cmp	fp, r8
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  167 0030 039B     		ldr	r3, [sp, #12]
  168 0032 B3B1     		cbz	r3, .L23
  169 0034 049E     		ldr	r6, [sp, #16]
-ARM GAS  /tmp/ccXcoiKL.s 			page 4
+ARM GAS  /tmp/ccnollBK.s 			page 4
 
 
  170 0036 55F80490 		ldr	r9, [r5, r4]	@ float
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  224              		@ frame_needed = 0, uses_anonymous_args = 0
  225 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
  226 0002 0446     		mov	r4, r0
-ARM GAS  /tmp/ccXcoiKL.s 			page 5
+ARM GAS  /tmp/ccnollBK.s 			page 5
 
 
  227 0004 0D46     		mov	r5, r1
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  281 0090 00000000 		.word	0
  282 0094 80842E41 		.word	1093567616
  283 0098 03177255 		.word	1433540355
-ARM GAS  /tmp/ccXcoiKL.s 			page 6
+ARM GAS  /tmp/ccnollBK.s 			page 6
 
 
  284 009c B1DF5F00 		.word	6283185
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  338 0014 C4F80C33 		str	r3, [r4, #780]	@ float
  339 0018 C4F81033 		str	r3, [r4, #784]	@ float
  340 001c FFF7FEFF 		bl	dbg_check_unlock
-ARM GAS  /tmp/ccXcoiKL.s 			page 7
+ARM GAS  /tmp/ccnollBK.s 			page 7
 
 
  341 0020 0023     		movs	r3, #0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  394 006e 43F8041B 		str	r1, [r3], #4	@ float
  395 0072 9A42     		cmp	r2, r3
  396 0074 FBD1     		bne	.L47
-ARM GAS  /tmp/ccXcoiKL.s 			page 8
+ARM GAS  /tmp/ccnollBK.s 			page 8
 
 
  397              	.L48:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  449              		@ frame_needed = 0, uses_anonymous_args = 0
  450              		@ link register save eliminated.
  451 0000 00F54573 		add	r3, r0, #788
-ARM GAS  /tmp/ccXcoiKL.s 			page 9
+ARM GAS  /tmp/ccnollBK.s 			page 9
 
 
  452 0004 00F54E70 		add	r0, r0, #824
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  503 0018 0A93     		str	r3, [sp, #40]	@ float
  504 001a 05F54573 		add	r3, r5, #788
  505 001e D5F808B3 		ldr	fp, [r5, #776]	@ float
-ARM GAS  /tmp/ccXcoiKL.s 			page 10
+ARM GAS  /tmp/ccnollBK.s 			page 10
 
 
  506 0022 D5F81083 		ldr	r8, [r5, #784]	@ float
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  560 00b4 0890     		str	r0, [sp, #32]	@ float
  561 00b6 4846     		mov	r0, r9
  562 00b8 FFF7FEFF 		bl	__aeabi_fmul
-ARM GAS  /tmp/ccXcoiKL.s 			page 11
+ARM GAS  /tmp/ccnollBK.s 			page 11
 
 
  563 00bc 0899     		ldr	r1, [sp, #32]	@ float
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  617 0150 FFF7FEFF 		bl	__aeabi_fmul
  618 0154 3146     		mov	r1, r6
  619 0156 1190     		str	r0, [sp, #68]	@ float
-ARM GAS  /tmp/ccXcoiKL.s 			page 12
+ARM GAS  /tmp/ccnollBK.s 			page 12
 
 
  620 0158 0898     		ldr	r0, [sp, #32]	@ float
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  674 01e4 3E97     		str	r7, [sp, #248]
  675 01e6 3F97     		str	r7, [sp, #252]
  676 01e8 4097     		str	r7, [sp, #256]
-ARM GAS  /tmp/ccXcoiKL.s 			page 13
+ARM GAS  /tmp/ccnollBK.s 			page 13
 
 
  677 01ea FFF7FEFF 		bl	_ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  731 0266 069A     		ldr	r2, [sp, #24]	@ float
  732 0268 C5F80833 		str	r3, [r5, #776]	@ float
  733 026c C5F80CB3 		str	fp, [r5, #780]	@ float
-ARM GAS  /tmp/ccXcoiKL.s 			page 14
+ARM GAS  /tmp/ccnollBK.s 			page 14
 
 
  734 0270 C5F81023 		str	r2, [r5, #784]	@ float
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  788 0002 1B68     		ldr	r3, [r3]	@ float
  789 0004 C0F8F432 		str	r3, [r0, #756]	@ float
  790 0008 7047     		bx	lr
-ARM GAS  /tmp/ccXcoiKL.s 			page 15
+ARM GAS  /tmp/ccnollBK.s 			page 15
 
 
  791              	.L73:
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  843 0024 03FB02F3 		mul	r3, r3, r2
  844 0028 013B     		subs	r3, r3, #1
  845 002a A7FB0323 		umull	r2, r3, r7, r3
-ARM GAS  /tmp/ccXcoiKL.s 			page 16
+ARM GAS  /tmp/ccnollBK.s 			page 16
 
 
  846 002e C4F8F412 		str	r1, [r4, #756]	@ float
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  900 0014 AFF30080 		.section	.init_array,"aw",%init_array
  900      AFF30080 
  900      AFF30080 
-ARM GAS  /tmp/ccXcoiKL.s 			page 17
+ARM GAS  /tmp/ccnollBK.s 			page 17
 
 
  901              		.align	2
@@ -1008,67 +1008,67 @@ ARM GAS  /tmp/ccXcoiKL.s 			page 1
  939      65747279 
  939      00
  940 0035 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccXcoiKL.s 			page 18
+ARM GAS  /tmp/ccnollBK.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Odometry.cpp
-     /tmp/ccXcoiKL.s:16     .text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:00000000 $t
-     /tmp/ccXcoiKL.s:22     .text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi512EE5startEm
-     /tmp/ccXcoiKL.s:45     .text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:00000028 $d
-     /tmp/ccXcoiKL.s:49     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000000 $t
-     /tmp/ccXcoiKL.s:54     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6
-     /tmp/ccXcoiKL.s:74     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000020 $d
-     /tmp/ccXcoiKL.s:80     .text._ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7:00000000 $t
-     /tmp/ccXcoiKL.s:85     .text._ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7:00000000 _ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7
-     /tmp/ccXcoiKL.s:135    .text._ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8:00000000 $t
-     /tmp/ccXcoiKL.s:140    .text._ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8:00000000 _ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8
-     /tmp/ccXcoiKL.s:216    .text._ZN5amiro8Odometry11getPositionEv:00000000 $t
-     /tmp/ccXcoiKL.s:222    .text._ZN5amiro8Odometry11getPositionEv:00000000 _ZN5amiro8Odometry11getPositionEv
-     /tmp/ccXcoiKL.s:281    .text._ZN5amiro8Odometry11getPositionEv:00000090 $d
-     /tmp/ccXcoiKL.s:287    .text._ZN5amiro8Odometry11setPositionEfff:00000000 $t
-     /tmp/ccXcoiKL.s:293    .text._ZN5amiro8Odometry11setPositionEfff:00000000 _ZN5amiro8Odometry11setPositionEfff
-     /tmp/ccXcoiKL.s:319    .text._ZN5amiro8Odometry13resetPositionEv:00000000 $t
-     /tmp/ccXcoiKL.s:325    .text._ZN5amiro8Odometry13resetPositionEv:00000000 _ZN5amiro8Odometry13resetPositionEv
-     /tmp/ccXcoiKL.s:349    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 $t
-     /tmp/ccXcoiKL.s:355    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 _ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE
-     /tmp/ccXcoiKL.s:403    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:0000007c $d
-     /tmp/ccXcoiKL.s:355    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 _ZN5amiro8OdometryC1EPNS_15MotorIncrementsEPNS_8L3G4200DE
-     /tmp/ccXcoiKL.s:410    .text._ZN5amiro8Odometry8setErrorEPf:00000000 $t
-     /tmp/ccXcoiKL.s:416    .text._ZN5amiro8Odometry8setErrorEPf:00000000 _ZN5amiro8Odometry8setErrorEPf
-     /tmp/ccXcoiKL.s:441    .text._ZN5amiro8Odometry10resetErrorEv:00000000 $t
-     /tmp/ccXcoiKL.s:447    .text._ZN5amiro8Odometry10resetErrorEv:00000000 _ZN5amiro8Odometry10resetErrorEv
-     /tmp/ccXcoiKL.s:464    .text._ZN5amiro8Odometry14getEventSourceEv:00000000 $t
-     /tmp/ccXcoiKL.s:470    .text._ZN5amiro8Odometry14getEventSourceEv:00000000 _ZN5amiro8Odometry14getEventSourceEv
-     /tmp/ccXcoiKL.s:483    .text._ZN5amiro8Odometry14updateOdometryEv:00000000 $t
-     /tmp/ccXcoiKL.s:489    .text._ZN5amiro8Odometry14updateOdometryEv:00000000 _ZN5amiro8Odometry14updateOdometryEv
-     /tmp/ccXcoiKL.s:774    .text._ZN5amiro8Odometry14updateOdometryEv:000002b8 $d
-     /tmp/ccXcoiKL.s:777    .text._ZN5amiro8Odometry23updateWheelBaseDistanceEv:00000000 $t
-     /tmp/ccXcoiKL.s:783    .text._ZN5amiro8Odometry23updateWheelBaseDistanceEv:00000000 _ZN5amiro8Odometry23updateWheelBaseDistanceEv
-     /tmp/ccXcoiKL.s:794    .text._ZN5amiro8Odometry23updateWheelBaseDistanceEv:0000000c $d
-     /tmp/ccXcoiKL.s:797    .text._ZN5amiro8Odometry14updateDistanceEv:00000000 $t
-     /tmp/ccXcoiKL.s:803    .text._ZN5amiro8Odometry14updateDistanceEv:00000000 _ZN5amiro8Odometry14updateDistanceEv
-     /tmp/ccXcoiKL.s:819    .text.startup._ZN5amiro8Odometry4mainEv:00000000 $t
-     /tmp/ccXcoiKL.s:825    .text.startup._ZN5amiro8Odometry4mainEv:00000000 _ZN5amiro8Odometry4mainEv
-     /tmp/ccXcoiKL.s:873    .text.startup._ZN5amiro8Odometry4mainEv:0000006c $d
-     /tmp/ccXcoiKL.s:880    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 $t
-     /tmp/ccXcoiKL.s:885    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 _GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE
-     /tmp/ccXcoiKL.s:897    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:0000000c $d
-     /tmp/ccXcoiKL.s:901    .init_array:00000000 $d
-     /tmp/ccXcoiKL.s:908    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi512EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi512EEE
-     /tmp/ccXcoiKL.s:905    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi512EEE:00000000 $d
-     /tmp/ccXcoiKL.s:927    .rodata._ZTVN5amiro8OdometryE:00000000 _ZTVN5amiro8OdometryE
-     /tmp/ccXcoiKL.s:916    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccXcoiKL.s:920    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccXcoiKL.s:923    .rodata._ZTVN5amiro8OdometryE:00000000 $d
-     /tmp/ccXcoiKL.s:934    .rodata.str1.4:00000000 $d
-     /tmp/ccXcoiKL.s:79     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000028 $t
-     /tmp/ccXcoiKL.s:409    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000088 $t
-     /tmp/ccXcoiKL.s:776    .text._ZN5amiro8Odometry14updateOdometryEv:000002bc $t
-     /tmp/ccXcoiKL.s:900    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000014 $t
+     /tmp/ccnollBK.s:16     .text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:00000000 $t
+     /tmp/ccnollBK.s:22     .text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi512EE5startEm
+     /tmp/ccnollBK.s:45     .text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:00000028 $d
+     /tmp/ccnollBK.s:49     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000000 $t
+     /tmp/ccnollBK.s:54     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6
+     /tmp/ccnollBK.s:74     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000020 $d
+     /tmp/ccnollBK.s:80     .text._ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7:00000000 $t
+     /tmp/ccnollBK.s:85     .text._ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7:00000000 _ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7
+     /tmp/ccnollBK.s:135    .text._ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8:00000000 $t
+     /tmp/ccnollBK.s:140    .text._ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8:00000000 _ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8
+     /tmp/ccnollBK.s:216    .text._ZN5amiro8Odometry11getPositionEv:00000000 $t
+     /tmp/ccnollBK.s:222    .text._ZN5amiro8Odometry11getPositionEv:00000000 _ZN5amiro8Odometry11getPositionEv
+     /tmp/ccnollBK.s:281    .text._ZN5amiro8Odometry11getPositionEv:00000090 $d
+     /tmp/ccnollBK.s:287    .text._ZN5amiro8Odometry11setPositionEfff:00000000 $t
+     /tmp/ccnollBK.s:293    .text._ZN5amiro8Odometry11setPositionEfff:00000000 _ZN5amiro8Odometry11setPositionEfff
+     /tmp/ccnollBK.s:319    .text._ZN5amiro8Odometry13resetPositionEv:00000000 $t
+     /tmp/ccnollBK.s:325    .text._ZN5amiro8Odometry13resetPositionEv:00000000 _ZN5amiro8Odometry13resetPositionEv
+     /tmp/ccnollBK.s:349    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 $t
+     /tmp/ccnollBK.s:355    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 _ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE
+     /tmp/ccnollBK.s:403    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:0000007c $d
+     /tmp/ccnollBK.s:355    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 _ZN5amiro8OdometryC1EPNS_15MotorIncrementsEPNS_8L3G4200DE
+     /tmp/ccnollBK.s:410    .text._ZN5amiro8Odometry8setErrorEPf:00000000 $t
+     /tmp/ccnollBK.s:416    .text._ZN5amiro8Odometry8setErrorEPf:00000000 _ZN5amiro8Odometry8setErrorEPf
+     /tmp/ccnollBK.s:441    .text._ZN5amiro8Odometry10resetErrorEv:00000000 $t
+     /tmp/ccnollBK.s:447    .text._ZN5amiro8Odometry10resetErrorEv:00000000 _ZN5amiro8Odometry10resetErrorEv
+     /tmp/ccnollBK.s:464    .text._ZN5amiro8Odometry14getEventSourceEv:00000000 $t
+     /tmp/ccnollBK.s:470    .text._ZN5amiro8Odometry14getEventSourceEv:00000000 _ZN5amiro8Odometry14getEventSourceEv
+     /tmp/ccnollBK.s:483    .text._ZN5amiro8Odometry14updateOdometryEv:00000000 $t
+     /tmp/ccnollBK.s:489    .text._ZN5amiro8Odometry14updateOdometryEv:00000000 _ZN5amiro8Odometry14updateOdometryEv
+     /tmp/ccnollBK.s:774    .text._ZN5amiro8Odometry14updateOdometryEv:000002b8 $d
+     /tmp/ccnollBK.s:777    .text._ZN5amiro8Odometry23updateWheelBaseDistanceEv:00000000 $t
+     /tmp/ccnollBK.s:783    .text._ZN5amiro8Odometry23updateWheelBaseDistanceEv:00000000 _ZN5amiro8Odometry23updateWheelBaseDistanceEv
+     /tmp/ccnollBK.s:794    .text._ZN5amiro8Odometry23updateWheelBaseDistanceEv:0000000c $d
+     /tmp/ccnollBK.s:797    .text._ZN5amiro8Odometry14updateDistanceEv:00000000 $t
+     /tmp/ccnollBK.s:803    .text._ZN5amiro8Odometry14updateDistanceEv:00000000 _ZN5amiro8Odometry14updateDistanceEv
+     /tmp/ccnollBK.s:819    .text.startup._ZN5amiro8Odometry4mainEv:00000000 $t
+     /tmp/ccnollBK.s:825    .text.startup._ZN5amiro8Odometry4mainEv:00000000 _ZN5amiro8Odometry4mainEv
+     /tmp/ccnollBK.s:873    .text.startup._ZN5amiro8Odometry4mainEv:0000006c $d
+     /tmp/ccnollBK.s:880    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 $t
+     /tmp/ccnollBK.s:885    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 _GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE
+     /tmp/ccnollBK.s:897    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:0000000c $d
+     /tmp/ccnollBK.s:901    .init_array:00000000 $d
+     /tmp/ccnollBK.s:908    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi512EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi512EEE
+     /tmp/ccnollBK.s:905    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi512EEE:00000000 $d
+     /tmp/ccnollBK.s:927    .rodata._ZTVN5amiro8OdometryE:00000000 _ZTVN5amiro8OdometryE
+     /tmp/ccnollBK.s:916    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccnollBK.s:920    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccnollBK.s:923    .rodata._ZTVN5amiro8OdometryE:00000000 $d
+     /tmp/ccnollBK.s:934    .rodata.str1.4:00000000 $d
+     /tmp/ccnollBK.s:79     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000028 $t
+     /tmp/ccnollBK.s:409    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000088 $t
+     /tmp/ccnollBK.s:776    .text._ZN5amiro8Odometry14updateOdometryEv:000002bc $t
+     /tmp/ccnollBK.s:900    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000014 $t
 
 UNDEFINED SYMBOLS
-ARM GAS  /tmp/ccXcoiKL.s 			page 19
+ARM GAS  /tmp/ccnollBK.s 			page 19
 
 
 chThdCreateStatic

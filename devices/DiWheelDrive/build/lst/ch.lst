@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccqPMoYJ.s 			page 1
+ARM GAS  /tmp/ccfOErtk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
   53              		.global	_ZN10chibios_rt15ThreadReference4stopEv
   54              		.thumb
   55              		.thumb_func
-ARM GAS  /tmp/ccqPMoYJ.s 			page 2
+ARM GAS  /tmp/ccfOErtk.s 			page 2
 
 
   56              		.type	_ZN10chibios_rt15ThreadReference4stopEv, %function
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  107              		@ args = 0, pretend = 0, frame = 0
  108              		@ frame_needed = 0, uses_anonymous_args = 0
  109 0000 08B5     		push	{r3, lr}
-ARM GAS  /tmp/ccqPMoYJ.s 			page 3
+ARM GAS  /tmp/ccfOErtk.s 			page 3
 
 
  110 0002 FFF7FEFF 		bl	dbg_check_unlock
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  163              		@ args = 0, pretend = 0, frame = 0
  164              		@ frame_needed = 0, uses_anonymous_args = 0
  165              		@ link register save eliminated.
-ARM GAS  /tmp/ccqPMoYJ.s 			page 4
+ARM GAS  /tmp/ccfOErtk.s 			page 4
 
 
  166 0000 014B     		ldr	r3, .L14
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  217              		.thumb_func
  218              		.type	_ZN10chibios_rt4Core6allocIEj, %function
  219              	_ZN10chibios_rt4Core6allocIEj:
-ARM GAS  /tmp/ccqPMoYJ.s 			page 5
+ARM GAS  /tmp/ccfOErtk.s 			page 5
 
 
  220              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  268 000a 00BFAFF3 		.section	.text._ZN10chibios_rt5Timer8isArmedIEv,"ax",%progbits
  268      0080
  269              		.align	2
-ARM GAS  /tmp/ccqPMoYJ.s 			page 6
+ARM GAS  /tmp/ccfOErtk.s 			page 6
 
 
  270              		.p2align 4,,15
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  323 0032 FFF7FEFF 		bl	chDbgPanic
  324 0036 ECE7     		b	.L28
  325              	.L31:
-ARM GAS  /tmp/ccqPMoYJ.s 			page 7
+ARM GAS  /tmp/ccfOErtk.s 			page 7
 
 
  326              		.align	2
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  379              		.thumb
  380 000c FFF7FEFF 		bl	dbg_check_lock
  381 0010 6068     		ldr	r0, [r4, #4]
-ARM GAS  /tmp/ccqPMoYJ.s 			page 8
+ARM GAS  /tmp/ccfOErtk.s 			page 8
 
 
  382 0012 50B1     		cbz	r0, .L45
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  436 0024 6368     		ldr	r3, [r4, #4]
  437 0026 0199     		ldr	r1, [sp, #4]
  438 0028 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccqPMoYJ.s 			page 9
+ARM GAS  /tmp/ccfOErtk.s 			page 9
 
 
  439 002a EED1     		bne	.L49
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  489 0008 FFF7FEFF 		bl	chThdWait
  490 000c 0023     		movs	r3, #0
  491 000e 6360     		str	r3, [r4, #4]
-ARM GAS  /tmp/ccqPMoYJ.s 			page 10
+ARM GAS  /tmp/ccfOErtk.s 			page 10
 
 
  492 0010 10BD     		pop	{r4, pc}
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  545              		.thumb_func
  546              		.type	_ZN10chibios_rt15ThreadReference16isPendingMessageEv, %function
  547              	_ZN10chibios_rt15ThreadReference16isPendingMessageEv:
-ARM GAS  /tmp/ccqPMoYJ.s 			page 11
+ARM GAS  /tmp/ccfOErtk.s 			page 11
 
 
  548              		@ args = 0, pretend = 0, frame = 0
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  600              		.p2align 4,,15
  601              		.global	_ZN10chibios_rt15ThreadReference14releaseMessageEl
  602              		.thumb
-ARM GAS  /tmp/ccqPMoYJ.s 			page 12
+ARM GAS  /tmp/ccfOErtk.s 			page 12
 
 
  603              		.thumb_func
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  657 0020 02B0     		add	sp, sp, #8
  658              		@ sp needed
  659 0022 BDE81040 		pop	{r4, lr}
-ARM GAS  /tmp/ccqPMoYJ.s 			page 13
+ARM GAS  /tmp/ccfOErtk.s 			page 13
 
 
  660 0026 FFF7FEBF 		b	chEvtSignal
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  714 0008 7047     		bx	lr
  715              	.L96:
  716 000a 00BF     		.align	2
-ARM GAS  /tmp/ccqPMoYJ.s 			page 14
+ARM GAS  /tmp/ccfOErtk.s 			page 14
 
 
  717              	.L95:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  770              		.size	_ZN10chibios_rt10BaseThread11setPriorityEm, .-_ZN10chibios_rt10BaseThread11setPriorityEm
  771 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread4exitEl,"ax",%progbits
  771      AFF30080 
-ARM GAS  /tmp/ccqPMoYJ.s 			page 15
+ARM GAS  /tmp/ccfOErtk.s 			page 15
 
 
  771      AFF30080 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  819              		.align	2
  820              		.p2align 4,,15
  821              		.global	_ZN10chibios_rt10BaseThread5sleepEm
-ARM GAS  /tmp/ccqPMoYJ.s 			page 16
+ARM GAS  /tmp/ccfOErtk.s 			page 16
 
 
  822              		.thumb
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  870 0008 024B     		ldr	r3, .L111
  871 000a 6060     		str	r0, [r4, #4]
  872 000c 2360     		str	r3, [r4]
-ARM GAS  /tmp/ccqPMoYJ.s 			page 17
+ARM GAS  /tmp/ccfOErtk.s 			page 17
 
 
  873 000e 2046     		mov	r0, r4
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  920              		.align	2
  921              		.p2align 4,,15
  922              		.global	_ZN10chibios_rt10BaseThread12waitAnyEventEm
-ARM GAS  /tmp/ccqPMoYJ.s 			page 18
+ARM GAS  /tmp/ccfOErtk.s 			page 18
 
 
  923              		.thumb
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  971 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm,"ax",%progbits
  971      AFF30080 
  971      AFF30080 
-ARM GAS  /tmp/ccqPMoYJ.s 			page 19
+ARM GAS  /tmp/ccfOErtk.s 			page 19
 
 
  972              		.align	2
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1020              		@ link register save eliminated.
  1021 0000 FFF7FEBF 		b	chMtxUnlockS
  1022              		.size	_ZN10chibios_rt10BaseThread12unlockMutexSEv, .-_ZN10chibios_rt10BaseThread12unlockMutexSEv
-ARM GAS  /tmp/ccqPMoYJ.s 			page 20
+ARM GAS  /tmp/ccfOErtk.s 			page 20
 
 
  1023 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread16unlockAllMutexesEv,"ax",%progbits
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1071              		.thumb
  1072              		.thumb_func
  1073              		.type	_ZN10chibios_rt16CounterSemaphore6resetIEl, %function
-ARM GAS  /tmp/ccqPMoYJ.s 			page 21
+ARM GAS  /tmp/ccfOErtk.s 			page 21
 
 
  1074              	_ZN10chibios_rt16CounterSemaphore6resetIEl:
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1120              		.align	2
  1121              		.p2align 4,,15
  1122              		.global	_ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm
-ARM GAS  /tmp/ccqPMoYJ.s 			page 22
+ARM GAS  /tmp/ccfOErtk.s 			page 22
 
 
  1123              		.thumb
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1171 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore11getCounterIEv,"ax",%progbits
  1171      AFF30080 
  1171      AFF30080 
-ARM GAS  /tmp/ccqPMoYJ.s 			page 23
+ARM GAS  /tmp/ccfOErtk.s 			page 23
 
 
  1172              		.align	2
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1222              		.thumb_func
  1223              		.type	_ZN10chibios_rt15BinarySemaphore4waitEv, %function
  1224              	_ZN10chibios_rt15BinarySemaphore4waitEv:
-ARM GAS  /tmp/ccqPMoYJ.s 			page 24
+ARM GAS  /tmp/ccfOErtk.s 			page 24
 
 
  1225              		@ args = 0, pretend = 0, frame = 0
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1271              		.p2align 4,,15
  1272              		.global	_ZN10chibios_rt15BinarySemaphore5resetEb
  1273              		.thumb
-ARM GAS  /tmp/ccqPMoYJ.s 			page 25
+ARM GAS  /tmp/ccfOErtk.s 			page 25
 
 
  1274              		.thumb_func
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1326 0022 10BD     		pop	{r4, pc}
  1327              	.L146:
  1328 0024 2046     		mov	r0, r4
-ARM GAS  /tmp/ccqPMoYJ.s 			page 26
+ARM GAS  /tmp/ccfOErtk.s 			page 26
 
 
  1329 0026 FFF7FEFF 		bl	chSemSignalI
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1383              		.size	_ZN10chibios_rt5MutexC2Ev, .-_ZN10chibios_rt5MutexC2Ev
  1384              		.global	_ZN10chibios_rt5MutexC1Ev
  1385              		.thumb_set _ZN10chibios_rt5MutexC1Ev,_ZN10chibios_rt5MutexC2Ev
-ARM GAS  /tmp/ccqPMoYJ.s 			page 27
+ARM GAS  /tmp/ccfOErtk.s 			page 27
 
 
  1386 000c AFF30080 		.section	.text._ZN10chibios_rt5Mutex7tryLockEv,"ax",%progbits
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1434              		@ frame_needed = 0, uses_anonymous_args = 0
  1435              		@ link register save eliminated.
  1436 0000 FFF7FEBF 		b	chMtxLockS
-ARM GAS  /tmp/ccqPMoYJ.s 			page 28
+ARM GAS  /tmp/ccfOErtk.s 			page 28
 
 
  1437              		.size	_ZN10chibios_rt5Mutex5lockSEv, .-_ZN10chibios_rt5Mutex5lockSEv
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1485              		.global	_ZN10chibios_rt7CondVar9broadcastEv
  1486              		.thumb
  1487              		.thumb_func
-ARM GAS  /tmp/ccqPMoYJ.s 			page 29
+ARM GAS  /tmp/ccfOErtk.s 			page 29
 
 
  1488              		.type	_ZN10chibios_rt7CondVar9broadcastEv, %function
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1534      AFF30080 
  1535              		.align	2
  1536              		.p2align 4,,15
-ARM GAS  /tmp/ccqPMoYJ.s 			page 30
+ARM GAS  /tmp/ccfOErtk.s 			page 30
 
 
  1537              		.global	_ZN10chibios_rt7CondVar11waitTimeoutEm
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1585 0002 7047     		bx	lr
  1586              		.size	_ZN10chibios_rt9EvtSourceC2Ev, .-_ZN10chibios_rt9EvtSourceC2Ev
  1587              		.global	_ZN10chibios_rt9EvtSourceC1Ev
-ARM GAS  /tmp/ccqPMoYJ.s 			page 31
+ARM GAS  /tmp/ccfOErtk.s 			page 31
 
 
  1588              		.thumb_set _ZN10chibios_rt9EvtSourceC1Ev,_ZN10chibios_rt9EvtSourceC2Ev
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1635              		.thumb_func
  1636              		.type	_ZN10chibios_rt9EvtSource14broadcastFlagsEm, %function
  1637              	_ZN10chibios_rt9EvtSource14broadcastFlagsEm:
-ARM GAS  /tmp/ccqPMoYJ.s 			page 32
+ARM GAS  /tmp/ccfOErtk.s 			page 32
 
 
  1638              		@ args = 0, pretend = 0, frame = 0
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1686              	_ZN10chibios_rt7InQueue8getFullIEv:
  1687              		@ args = 0, pretend = 0, frame = 0
  1688              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccqPMoYJ.s 			page 33
+ARM GAS  /tmp/ccfOErtk.s 			page 33
 
 
  1689              		@ link register save eliminated.
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1741 0004 9A42     		cmp	r2, r3
  1742 0006 01D0     		beq	.L179
  1743 0008 0020     		movs	r0, #0
-ARM GAS  /tmp/ccqPMoYJ.s 			page 34
+ARM GAS  /tmp/ccfOErtk.s 			page 34
 
 
  1744 000a 7047     		bx	lr
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1792 0008 AFF30080 		.section	.text._ZN10chibios_rt7InQueue10getTimeoutEm,"ax",%progbits
  1792      AFF30080 
  1793              		.align	2
-ARM GAS  /tmp/ccqPMoYJ.s 			page 35
+ARM GAS  /tmp/ccfOErtk.s 			page 35
 
 
  1794              		.p2align 4,,15
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1842              		.align	2
  1843              		.p2align 4,,15
  1844              		.global	_ZN10chibios_rt8OutQueue8getFullIEv
-ARM GAS  /tmp/ccqPMoYJ.s 			page 36
+ARM GAS  /tmp/ccfOErtk.s 			page 36
 
 
  1845              		.thumb
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1897 0016 00BFAFF3 		.section	.text._ZN10chibios_rt8OutQueue7isFullIEv,"ax",%progbits
  1897      0080AFF3 
  1897      0080
-ARM GAS  /tmp/ccqPMoYJ.s 			page 37
+ARM GAS  /tmp/ccfOErtk.s 			page 37
 
 
  1898              		.align	2
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  1949              		@ args = 0, pretend = 0, frame = 0
  1950              		@ frame_needed = 0, uses_anonymous_args = 0
  1951              		@ link register save eliminated.
-ARM GAS  /tmp/ccqPMoYJ.s 			page 38
+ARM GAS  /tmp/ccfOErtk.s 			page 38
 
 
  1952 0000 FFF7FEBF 		b	chOQPutTimeout
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  2000              		.p2align 4,,15
  2001              		.global	_ZN10chibios_rt7Mailbox5resetEv
  2002              		.thumb
-ARM GAS  /tmp/ccqPMoYJ.s 			page 39
+ARM GAS  /tmp/ccfOErtk.s 			page 39
 
 
  2003              		.thumb_func
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  2050      AFF30080 
  2050      AFF30080 
  2051              		.align	2
-ARM GAS  /tmp/ccqPMoYJ.s 			page 40
+ARM GAS  /tmp/ccfOErtk.s 			page 40
 
 
  2052              		.p2align 4,,15
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  2100 0000 FFF7FEBF 		b	chMBFetch
  2101              		.size	_ZN10chibios_rt7Mailbox5fetchEPlm, .-_ZN10chibios_rt7Mailbox5fetchEPlm
  2102 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox6fetchSEPlm,"ax",%progbits
-ARM GAS  /tmp/ccqPMoYJ.s 			page 41
+ARM GAS  /tmp/ccfOErtk.s 			page 41
 
 
  2102      AFF30080 
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  2149              	_ZN10chibios_rt7Mailbox13getUsedCountIEv:
  2150              		@ args = 0, pretend = 0, frame = 0
  2151              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccqPMoYJ.s 			page 42
+ARM GAS  /tmp/ccfOErtk.s 			page 42
 
 
  2152              		@ link register save eliminated.
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  2203              		.thumb_func
  2204              		.type	_ZN10chibios_rt10MemoryPool9loadArrayEPvj, %function
  2205              	_ZN10chibios_rt10MemoryPool9loadArrayEPvj:
-ARM GAS  /tmp/ccqPMoYJ.s 			page 43
+ARM GAS  /tmp/ccfOErtk.s 			page 43
 
 
  2206              		@ args = 0, pretend = 0, frame = 0
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  2252              		.p2align 4,,15
  2253              		.global	_ZN10chibios_rt10MemoryPool5freeIEPv
  2254              		.thumb
-ARM GAS  /tmp/ccqPMoYJ.s 			page 44
+ARM GAS  /tmp/ccfOErtk.s 			page 44
 
 
  2255              		.thumb_func
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  2287      20233400 
  2288              	.LC5:
  2289 0074 54687265 		.ascii	"ThreadReference, #5\000"
-ARM GAS  /tmp/ccqPMoYJ.s 			page 45
+ARM GAS  /tmp/ccfOErtk.s 			page 45
 
 
  2289      61645265 
@@ -2692,343 +2692,343 @@ ARM GAS  /tmp/ccqPMoYJ.s 			page 1
  2310 0004 00000000 		.word	0
  2311 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
  2312 000c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccqPMoYJ.s 			page 46
+ARM GAS  /tmp/ccfOErtk.s 			page 46
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ch.cpp
-     /tmp/ccqPMoYJ.s:16     .text.startup._ZN10chibios_rt10BaseThread4mainEv:00000000 $t
-     /tmp/ccqPMoYJ.s:22     .text.startup._ZN10chibios_rt10BaseThread4mainEv:00000000 _ZN10chibios_rt10BaseThread4mainEv
-     /tmp/ccqPMoYJ.s:30     .text._ZN10chibios_rt10BaseThread5startEm:00000000 $t
-     /tmp/ccqPMoYJ.s:36     .text._ZN10chibios_rt10BaseThread5startEm:00000000 _ZN10chibios_rt10BaseThread5startEm
-     /tmp/ccqPMoYJ.s:48     .text._ZN10chibios_rt10BaseThread5startEm:0000000c $d
-     /tmp/ccqPMoYJ.s:51     .text._ZN10chibios_rt15ThreadReference4stopEv:00000000 $t
-     /tmp/ccqPMoYJ.s:57     .text._ZN10chibios_rt15ThreadReference4stopEv:00000000 _ZN10chibios_rt15ThreadReference4stopEv
-     /tmp/ccqPMoYJ.s:66     .text._ZN10chibios_rt15ThreadReference4stopEv:00000008 $d
-     /tmp/ccqPMoYJ.s:69     .text._ZN10chibios_rt6System4initEv:00000000 $t
-     /tmp/ccqPMoYJ.s:75     .text._ZN10chibios_rt6System4initEv:00000000 _ZN10chibios_rt6System4initEv
-     /tmp/ccqPMoYJ.s:82     .text._ZN10chibios_rt6System4lockEv:00000000 $t
-     /tmp/ccqPMoYJ.s:88     .text._ZN10chibios_rt6System4lockEv:00000000 _ZN10chibios_rt6System4lockEv
-     /tmp/ccqPMoYJ.s:100    .text._ZN10chibios_rt6System6unlockEv:00000000 $t
-     /tmp/ccqPMoYJ.s:106    .text._ZN10chibios_rt6System6unlockEv:00000000 _ZN10chibios_rt6System6unlockEv
-     /tmp/ccqPMoYJ.s:119    .text._ZN10chibios_rt6System11lockFromIsrEv:00000000 $t
-     /tmp/ccqPMoYJ.s:125    .text._ZN10chibios_rt6System11lockFromIsrEv:00000000 _ZN10chibios_rt6System11lockFromIsrEv
-     /tmp/ccqPMoYJ.s:137    .text._ZN10chibios_rt6System13unlockFromIsrEv:00000000 $t
-     /tmp/ccqPMoYJ.s:143    .text._ZN10chibios_rt6System13unlockFromIsrEv:00000000 _ZN10chibios_rt6System13unlockFromIsrEv
-     /tmp/ccqPMoYJ.s:156    .text._ZN10chibios_rt6System7getTimeEv:00000000 $t
-     /tmp/ccqPMoYJ.s:162    .text._ZN10chibios_rt6System7getTimeEv:00000000 _ZN10chibios_rt6System7getTimeEv
-     /tmp/ccqPMoYJ.s:172    .text._ZN10chibios_rt6System7getTimeEv:00000008 $d
-     /tmp/ccqPMoYJ.s:175    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000000 $t
-     /tmp/ccqPMoYJ.s:181    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000000 _ZN10chibios_rt6System12isTimeWithinEmm
-     /tmp/ccqPMoYJ.s:197    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000014 $d
-     /tmp/ccqPMoYJ.s:200    .text._ZN10chibios_rt4Core5allocEj:00000000 $t
-     /tmp/ccqPMoYJ.s:206    .text._ZN10chibios_rt4Core5allocEj:00000000 _ZN10chibios_rt4Core5allocEj
-     /tmp/ccqPMoYJ.s:213    .text._ZN10chibios_rt4Core6allocIEj:00000000 $t
-     /tmp/ccqPMoYJ.s:219    .text._ZN10chibios_rt4Core6allocIEj:00000000 _ZN10chibios_rt4Core6allocIEj
-     /tmp/ccqPMoYJ.s:226    .text._ZN10chibios_rt4Core9getStatusEv:00000000 $t
-     /tmp/ccqPMoYJ.s:232    .text._ZN10chibios_rt4Core9getStatusEv:00000000 _ZN10chibios_rt4Core9getStatusEv
-     /tmp/ccqPMoYJ.s:239    .text._ZN10chibios_rt5Timer4setIEmPFvPvES1_:00000000 $t
-     /tmp/ccqPMoYJ.s:245    .text._ZN10chibios_rt5Timer4setIEmPFvPvES1_:00000000 _ZN10chibios_rt5Timer4setIEmPFvPvES1_
-     /tmp/ccqPMoYJ.s:252    .text._ZN10chibios_rt5Timer6resetIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:258    .text._ZN10chibios_rt5Timer6resetIEv:00000000 _ZN10chibios_rt5Timer6resetIEv
-     /tmp/ccqPMoYJ.s:269    .text._ZN10chibios_rt5Timer8isArmedIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:275    .text._ZN10chibios_rt5Timer8isArmedIEv:00000000 _ZN10chibios_rt5Timer8isArmedIEv
-     /tmp/ccqPMoYJ.s:286    .text._ZN10chibios_rt15ThreadReference7suspendEv:00000000 $t
-     /tmp/ccqPMoYJ.s:292    .text._ZN10chibios_rt15ThreadReference7suspendEv:00000000 _ZN10chibios_rt15ThreadReference7suspendEv
-     /tmp/ccqPMoYJ.s:328    .text._ZN10chibios_rt15ThreadReference7suspendEv:00000038 $d
-     /tmp/ccqPMoYJ.s:332    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000000 $t
-     /tmp/ccqPMoYJ.s:338    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000000 _ZN10chibios_rt15ThreadReference8suspendSEv
-     /tmp/ccqPMoYJ.s:359    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000020 $d
-     /tmp/ccqPMoYJ.s:363    .text._ZN10chibios_rt15ThreadReference6resumeEl:00000000 $t
-     /tmp/ccqPMoYJ.s:369    .text._ZN10chibios_rt15ThreadReference6resumeEl:00000000 _ZN10chibios_rt15ThreadReference6resumeEl
-     /tmp/ccqPMoYJ.s:406    .text._ZN10chibios_rt15ThreadReference6resumeEl:00000038 $d
-     /tmp/ccqPMoYJ.s:409    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000000 $t
-     /tmp/ccqPMoYJ.s:415    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000000 _ZN10chibios_rt15ThreadReference7resumeIEl
-     /tmp/ccqPMoYJ.s:446    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000030 $d
-     /tmp/ccqPMoYJ.s:449    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000000 $t
-     /tmp/ccqPMoYJ.s:455    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000000 _ZN10chibios_rt15ThreadReference16requestTerminateEv
-     /tmp/ccqPMoYJ.s:473    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000020 $d
-     /tmp/ccqPMoYJ.s:476    .text._ZN10chibios_rt15ThreadReference4waitEv:00000000 $t
-     /tmp/ccqPMoYJ.s:482    .text._ZN10chibios_rt15ThreadReference4waitEv:00000000 _ZN10chibios_rt15ThreadReference4waitEv
-     /tmp/ccqPMoYJ.s:504    .text._ZN10chibios_rt15ThreadReference4waitEv:00000024 $d
-     /tmp/ccqPMoYJ.s:507    .text._ZN10chibios_rt15ThreadReference11sendMessageEl:00000000 $t
-ARM GAS  /tmp/ccqPMoYJ.s 			page 47
+     /tmp/ccfOErtk.s:16     .text.startup._ZN10chibios_rt10BaseThread4mainEv:00000000 $t
+     /tmp/ccfOErtk.s:22     .text.startup._ZN10chibios_rt10BaseThread4mainEv:00000000 _ZN10chibios_rt10BaseThread4mainEv
+     /tmp/ccfOErtk.s:30     .text._ZN10chibios_rt10BaseThread5startEm:00000000 $t
+     /tmp/ccfOErtk.s:36     .text._ZN10chibios_rt10BaseThread5startEm:00000000 _ZN10chibios_rt10BaseThread5startEm
+     /tmp/ccfOErtk.s:48     .text._ZN10chibios_rt10BaseThread5startEm:0000000c $d
+     /tmp/ccfOErtk.s:51     .text._ZN10chibios_rt15ThreadReference4stopEv:00000000 $t
+     /tmp/ccfOErtk.s:57     .text._ZN10chibios_rt15ThreadReference4stopEv:00000000 _ZN10chibios_rt15ThreadReference4stopEv
+     /tmp/ccfOErtk.s:66     .text._ZN10chibios_rt15ThreadReference4stopEv:00000008 $d
+     /tmp/ccfOErtk.s:69     .text._ZN10chibios_rt6System4initEv:00000000 $t
+     /tmp/ccfOErtk.s:75     .text._ZN10chibios_rt6System4initEv:00000000 _ZN10chibios_rt6System4initEv
+     /tmp/ccfOErtk.s:82     .text._ZN10chibios_rt6System4lockEv:00000000 $t
+     /tmp/ccfOErtk.s:88     .text._ZN10chibios_rt6System4lockEv:00000000 _ZN10chibios_rt6System4lockEv
+     /tmp/ccfOErtk.s:100    .text._ZN10chibios_rt6System6unlockEv:00000000 $t
+     /tmp/ccfOErtk.s:106    .text._ZN10chibios_rt6System6unlockEv:00000000 _ZN10chibios_rt6System6unlockEv
+     /tmp/ccfOErtk.s:119    .text._ZN10chibios_rt6System11lockFromIsrEv:00000000 $t
+     /tmp/ccfOErtk.s:125    .text._ZN10chibios_rt6System11lockFromIsrEv:00000000 _ZN10chibios_rt6System11lockFromIsrEv
+     /tmp/ccfOErtk.s:137    .text._ZN10chibios_rt6System13unlockFromIsrEv:00000000 $t
+     /tmp/ccfOErtk.s:143    .text._ZN10chibios_rt6System13unlockFromIsrEv:00000000 _ZN10chibios_rt6System13unlockFromIsrEv
+     /tmp/ccfOErtk.s:156    .text._ZN10chibios_rt6System7getTimeEv:00000000 $t
+     /tmp/ccfOErtk.s:162    .text._ZN10chibios_rt6System7getTimeEv:00000000 _ZN10chibios_rt6System7getTimeEv
+     /tmp/ccfOErtk.s:172    .text._ZN10chibios_rt6System7getTimeEv:00000008 $d
+     /tmp/ccfOErtk.s:175    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000000 $t
+     /tmp/ccfOErtk.s:181    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000000 _ZN10chibios_rt6System12isTimeWithinEmm
+     /tmp/ccfOErtk.s:197    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000014 $d
+     /tmp/ccfOErtk.s:200    .text._ZN10chibios_rt4Core5allocEj:00000000 $t
+     /tmp/ccfOErtk.s:206    .text._ZN10chibios_rt4Core5allocEj:00000000 _ZN10chibios_rt4Core5allocEj
+     /tmp/ccfOErtk.s:213    .text._ZN10chibios_rt4Core6allocIEj:00000000 $t
+     /tmp/ccfOErtk.s:219    .text._ZN10chibios_rt4Core6allocIEj:00000000 _ZN10chibios_rt4Core6allocIEj
+     /tmp/ccfOErtk.s:226    .text._ZN10chibios_rt4Core9getStatusEv:00000000 $t
+     /tmp/ccfOErtk.s:232    .text._ZN10chibios_rt4Core9getStatusEv:00000000 _ZN10chibios_rt4Core9getStatusEv
+     /tmp/ccfOErtk.s:239    .text._ZN10chibios_rt5Timer4setIEmPFvPvES1_:00000000 $t
+     /tmp/ccfOErtk.s:245    .text._ZN10chibios_rt5Timer4setIEmPFvPvES1_:00000000 _ZN10chibios_rt5Timer4setIEmPFvPvES1_
+     /tmp/ccfOErtk.s:252    .text._ZN10chibios_rt5Timer6resetIEv:00000000 $t
+     /tmp/ccfOErtk.s:258    .text._ZN10chibios_rt5Timer6resetIEv:00000000 _ZN10chibios_rt5Timer6resetIEv
+     /tmp/ccfOErtk.s:269    .text._ZN10chibios_rt5Timer8isArmedIEv:00000000 $t
+     /tmp/ccfOErtk.s:275    .text._ZN10chibios_rt5Timer8isArmedIEv:00000000 _ZN10chibios_rt5Timer8isArmedIEv
+     /tmp/ccfOErtk.s:286    .text._ZN10chibios_rt15ThreadReference7suspendEv:00000000 $t
+     /tmp/ccfOErtk.s:292    .text._ZN10chibios_rt15ThreadReference7suspendEv:00000000 _ZN10chibios_rt15ThreadReference7suspendEv
+     /tmp/ccfOErtk.s:328    .text._ZN10chibios_rt15ThreadReference7suspendEv:00000038 $d
+     /tmp/ccfOErtk.s:332    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000000 $t
+     /tmp/ccfOErtk.s:338    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000000 _ZN10chibios_rt15ThreadReference8suspendSEv
+     /tmp/ccfOErtk.s:359    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000020 $d
+     /tmp/ccfOErtk.s:363    .text._ZN10chibios_rt15ThreadReference6resumeEl:00000000 $t
+     /tmp/ccfOErtk.s:369    .text._ZN10chibios_rt15ThreadReference6resumeEl:00000000 _ZN10chibios_rt15ThreadReference6resumeEl
+     /tmp/ccfOErtk.s:406    .text._ZN10chibios_rt15ThreadReference6resumeEl:00000038 $d
+     /tmp/ccfOErtk.s:409    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000000 $t
+     /tmp/ccfOErtk.s:415    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000000 _ZN10chibios_rt15ThreadReference7resumeIEl
+     /tmp/ccfOErtk.s:446    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000030 $d
+     /tmp/ccfOErtk.s:449    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000000 $t
+     /tmp/ccfOErtk.s:455    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000000 _ZN10chibios_rt15ThreadReference16requestTerminateEv
+     /tmp/ccfOErtk.s:473    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000020 $d
+     /tmp/ccfOErtk.s:476    .text._ZN10chibios_rt15ThreadReference4waitEv:00000000 $t
+     /tmp/ccfOErtk.s:482    .text._ZN10chibios_rt15ThreadReference4waitEv:00000000 _ZN10chibios_rt15ThreadReference4waitEv
+     /tmp/ccfOErtk.s:504    .text._ZN10chibios_rt15ThreadReference4waitEv:00000024 $d
+     /tmp/ccfOErtk.s:507    .text._ZN10chibios_rt15ThreadReference11sendMessageEl:00000000 $t
+ARM GAS  /tmp/ccfOErtk.s 			page 47
 
 
-     /tmp/ccqPMoYJ.s:513    .text._ZN10chibios_rt15ThreadReference11sendMessageEl:00000000 _ZN10chibios_rt15ThreadReference11sendMessageEl
-     /tmp/ccqPMoYJ.s:538    .text._ZN10chibios_rt15ThreadReference11sendMessageEl:0000002c $d
-     /tmp/ccqPMoYJ.s:541    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000000 $t
-     /tmp/ccqPMoYJ.s:547    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000000 _ZN10chibios_rt15ThreadReference16isPendingMessageEv
-     /tmp/ccqPMoYJ.s:569    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000020 $d
-     /tmp/ccqPMoYJ.s:572    .text._ZN10chibios_rt15ThreadReference10getMessageEv:00000000 $t
-     /tmp/ccqPMoYJ.s:578    .text._ZN10chibios_rt15ThreadReference10getMessageEv:00000000 _ZN10chibios_rt15ThreadReference10getMessageEv
-     /tmp/ccqPMoYJ.s:596    .text._ZN10chibios_rt15ThreadReference10getMessageEv:00000018 $d
-     /tmp/ccqPMoYJ.s:599    .text._ZN10chibios_rt15ThreadReference14releaseMessageEl:00000000 $t
-     /tmp/ccqPMoYJ.s:605    .text._ZN10chibios_rt15ThreadReference14releaseMessageEl:00000000 _ZN10chibios_rt15ThreadReference14releaseMessageEl
-     /tmp/ccqPMoYJ.s:630    .text._ZN10chibios_rt15ThreadReference14releaseMessageEl:0000002c $d
-     /tmp/ccqPMoYJ.s:633    .text._ZN10chibios_rt15ThreadReference12signalEventsEm:00000000 $t
-     /tmp/ccqPMoYJ.s:639    .text._ZN10chibios_rt15ThreadReference12signalEventsEm:00000000 _ZN10chibios_rt15ThreadReference12signalEventsEm
-     /tmp/ccqPMoYJ.s:664    .text._ZN10chibios_rt15ThreadReference12signalEventsEm:0000002c $d
-     /tmp/ccqPMoYJ.s:667    .text._ZN10chibios_rt15ThreadReference13signalEventsIEm:00000000 $t
-     /tmp/ccqPMoYJ.s:673    .text._ZN10chibios_rt15ThreadReference13signalEventsIEm:00000000 _ZN10chibios_rt15ThreadReference13signalEventsIEm
-     /tmp/ccqPMoYJ.s:698    .text._ZN10chibios_rt15ThreadReference13signalEventsIEm:0000002c $d
-     /tmp/ccqPMoYJ.s:701    .text._ZN10chibios_rt10BaseThreadC2Ev:00000000 $t
-     /tmp/ccqPMoYJ.s:707    .text._ZN10chibios_rt10BaseThreadC2Ev:00000000 _ZN10chibios_rt10BaseThreadC2Ev
-     /tmp/ccqPMoYJ.s:718    .text._ZN10chibios_rt10BaseThreadC2Ev:0000000c $d
-     /tmp/ccqPMoYJ.s:707    .text._ZN10chibios_rt10BaseThreadC2Ev:00000000 _ZN10chibios_rt10BaseThreadC1Ev
-     /tmp/ccqPMoYJ.s:723    .text._ZN10chibios_rt10_thd_startEPv:00000000 $t
-     /tmp/ccqPMoYJ.s:729    .text._ZN10chibios_rt10_thd_startEPv:00000000 _ZN10chibios_rt10_thd_startEPv
-     /tmp/ccqPMoYJ.s:739    .text._ZN10chibios_rt10BaseThread7setNameEPKc:00000000 $t
-     /tmp/ccqPMoYJ.s:745    .text._ZN10chibios_rt10BaseThread7setNameEPKc:00000000 _ZN10chibios_rt10BaseThread7setNameEPKc
-     /tmp/ccqPMoYJ.s:756    .text._ZN10chibios_rt10BaseThread7setNameEPKc:00000008 $d
-     /tmp/ccqPMoYJ.s:759    .text._ZN10chibios_rt10BaseThread11setPriorityEm:00000000 $t
-     /tmp/ccqPMoYJ.s:765    .text._ZN10chibios_rt10BaseThread11setPriorityEm:00000000 _ZN10chibios_rt10BaseThread11setPriorityEm
-     /tmp/ccqPMoYJ.s:772    .text._ZN10chibios_rt10BaseThread4exitEl:00000000 $t
-     /tmp/ccqPMoYJ.s:778    .text._ZN10chibios_rt10BaseThread4exitEl:00000000 _ZN10chibios_rt10BaseThread4exitEl
-     /tmp/ccqPMoYJ.s:785    .text._ZN10chibios_rt10BaseThread5exitSEl:00000000 $t
-     /tmp/ccqPMoYJ.s:791    .text._ZN10chibios_rt10BaseThread5exitSEl:00000000 _ZN10chibios_rt10BaseThread5exitSEl
-     /tmp/ccqPMoYJ.s:798    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000000 $t
-     /tmp/ccqPMoYJ.s:804    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000000 _ZN10chibios_rt10BaseThread15shouldTerminateEv
-     /tmp/ccqPMoYJ.s:816    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000010 $d
-     /tmp/ccqPMoYJ.s:819    .text._ZN10chibios_rt10BaseThread5sleepEm:00000000 $t
-     /tmp/ccqPMoYJ.s:825    .text._ZN10chibios_rt10BaseThread5sleepEm:00000000 _ZN10chibios_rt10BaseThread5sleepEm
-     /tmp/ccqPMoYJ.s:832    .text._ZN10chibios_rt10BaseThread10sleepUntilEm:00000000 $t
-     /tmp/ccqPMoYJ.s:838    .text._ZN10chibios_rt10BaseThread10sleepUntilEm:00000000 _ZN10chibios_rt10BaseThread10sleepUntilEm
-     /tmp/ccqPMoYJ.s:845    .text._ZN10chibios_rt10BaseThread5yieldEv:00000000 $t
-     /tmp/ccqPMoYJ.s:851    .text._ZN10chibios_rt10BaseThread5yieldEv:00000000 _ZN10chibios_rt10BaseThread5yieldEv
-     /tmp/ccqPMoYJ.s:858    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000000 $t
-     /tmp/ccqPMoYJ.s:864    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000000 _ZN10chibios_rt10BaseThread11waitMessageEv
-     /tmp/ccqPMoYJ.s:878    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000014 $d
-     /tmp/ccqPMoYJ.s:881    .text._ZN10chibios_rt10BaseThread17getAndClearEventsEm:00000000 $t
-     /tmp/ccqPMoYJ.s:887    .text._ZN10chibios_rt10BaseThread17getAndClearEventsEm:00000000 _ZN10chibios_rt10BaseThread17getAndClearEventsEm
-     /tmp/ccqPMoYJ.s:894    .text._ZN10chibios_rt10BaseThread9addEventsEm:00000000 $t
-     /tmp/ccqPMoYJ.s:900    .text._ZN10chibios_rt10BaseThread9addEventsEm:00000000 _ZN10chibios_rt10BaseThread9addEventsEm
-     /tmp/ccqPMoYJ.s:907    .text._ZN10chibios_rt10BaseThread12waitOneEventEm:00000000 $t
-     /tmp/ccqPMoYJ.s:913    .text._ZN10chibios_rt10BaseThread12waitOneEventEm:00000000 _ZN10chibios_rt10BaseThread12waitOneEventEm
-     /tmp/ccqPMoYJ.s:920    .text._ZN10chibios_rt10BaseThread12waitAnyEventEm:00000000 $t
-     /tmp/ccqPMoYJ.s:926    .text._ZN10chibios_rt10BaseThread12waitAnyEventEm:00000000 _ZN10chibios_rt10BaseThread12waitAnyEventEm
-     /tmp/ccqPMoYJ.s:933    .text._ZN10chibios_rt10BaseThread13waitAllEventsEm:00000000 $t
-     /tmp/ccqPMoYJ.s:939    .text._ZN10chibios_rt10BaseThread13waitAllEventsEm:00000000 _ZN10chibios_rt10BaseThread13waitAllEventsEm
-     /tmp/ccqPMoYJ.s:946    .text._ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm:00000000 $t
-     /tmp/ccqPMoYJ.s:952    .text._ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm:00000000 _ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
-     /tmp/ccqPMoYJ.s:959    .text._ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm:00000000 $t
-ARM GAS  /tmp/ccqPMoYJ.s 			page 48
+     /tmp/ccfOErtk.s:513    .text._ZN10chibios_rt15ThreadReference11sendMessageEl:00000000 _ZN10chibios_rt15ThreadReference11sendMessageEl
+     /tmp/ccfOErtk.s:538    .text._ZN10chibios_rt15ThreadReference11sendMessageEl:0000002c $d
+     /tmp/ccfOErtk.s:541    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000000 $t
+     /tmp/ccfOErtk.s:547    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000000 _ZN10chibios_rt15ThreadReference16isPendingMessageEv
+     /tmp/ccfOErtk.s:569    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000020 $d
+     /tmp/ccfOErtk.s:572    .text._ZN10chibios_rt15ThreadReference10getMessageEv:00000000 $t
+     /tmp/ccfOErtk.s:578    .text._ZN10chibios_rt15ThreadReference10getMessageEv:00000000 _ZN10chibios_rt15ThreadReference10getMessageEv
+     /tmp/ccfOErtk.s:596    .text._ZN10chibios_rt15ThreadReference10getMessageEv:00000018 $d
+     /tmp/ccfOErtk.s:599    .text._ZN10chibios_rt15ThreadReference14releaseMessageEl:00000000 $t
+     /tmp/ccfOErtk.s:605    .text._ZN10chibios_rt15ThreadReference14releaseMessageEl:00000000 _ZN10chibios_rt15ThreadReference14releaseMessageEl
+     /tmp/ccfOErtk.s:630    .text._ZN10chibios_rt15ThreadReference14releaseMessageEl:0000002c $d
+     /tmp/ccfOErtk.s:633    .text._ZN10chibios_rt15ThreadReference12signalEventsEm:00000000 $t
+     /tmp/ccfOErtk.s:639    .text._ZN10chibios_rt15ThreadReference12signalEventsEm:00000000 _ZN10chibios_rt15ThreadReference12signalEventsEm
+     /tmp/ccfOErtk.s:664    .text._ZN10chibios_rt15ThreadReference12signalEventsEm:0000002c $d
+     /tmp/ccfOErtk.s:667    .text._ZN10chibios_rt15ThreadReference13signalEventsIEm:00000000 $t
+     /tmp/ccfOErtk.s:673    .text._ZN10chibios_rt15ThreadReference13signalEventsIEm:00000000 _ZN10chibios_rt15ThreadReference13signalEventsIEm
+     /tmp/ccfOErtk.s:698    .text._ZN10chibios_rt15ThreadReference13signalEventsIEm:0000002c $d
+     /tmp/ccfOErtk.s:701    .text._ZN10chibios_rt10BaseThreadC2Ev:00000000 $t
+     /tmp/ccfOErtk.s:707    .text._ZN10chibios_rt10BaseThreadC2Ev:00000000 _ZN10chibios_rt10BaseThreadC2Ev
+     /tmp/ccfOErtk.s:718    .text._ZN10chibios_rt10BaseThreadC2Ev:0000000c $d
+     /tmp/ccfOErtk.s:707    .text._ZN10chibios_rt10BaseThreadC2Ev:00000000 _ZN10chibios_rt10BaseThreadC1Ev
+     /tmp/ccfOErtk.s:723    .text._ZN10chibios_rt10_thd_startEPv:00000000 $t
+     /tmp/ccfOErtk.s:729    .text._ZN10chibios_rt10_thd_startEPv:00000000 _ZN10chibios_rt10_thd_startEPv
+     /tmp/ccfOErtk.s:739    .text._ZN10chibios_rt10BaseThread7setNameEPKc:00000000 $t
+     /tmp/ccfOErtk.s:745    .text._ZN10chibios_rt10BaseThread7setNameEPKc:00000000 _ZN10chibios_rt10BaseThread7setNameEPKc
+     /tmp/ccfOErtk.s:756    .text._ZN10chibios_rt10BaseThread7setNameEPKc:00000008 $d
+     /tmp/ccfOErtk.s:759    .text._ZN10chibios_rt10BaseThread11setPriorityEm:00000000 $t
+     /tmp/ccfOErtk.s:765    .text._ZN10chibios_rt10BaseThread11setPriorityEm:00000000 _ZN10chibios_rt10BaseThread11setPriorityEm
+     /tmp/ccfOErtk.s:772    .text._ZN10chibios_rt10BaseThread4exitEl:00000000 $t
+     /tmp/ccfOErtk.s:778    .text._ZN10chibios_rt10BaseThread4exitEl:00000000 _ZN10chibios_rt10BaseThread4exitEl
+     /tmp/ccfOErtk.s:785    .text._ZN10chibios_rt10BaseThread5exitSEl:00000000 $t
+     /tmp/ccfOErtk.s:791    .text._ZN10chibios_rt10BaseThread5exitSEl:00000000 _ZN10chibios_rt10BaseThread5exitSEl
+     /tmp/ccfOErtk.s:798    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000000 $t
+     /tmp/ccfOErtk.s:804    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000000 _ZN10chibios_rt10BaseThread15shouldTerminateEv
+     /tmp/ccfOErtk.s:816    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000010 $d
+     /tmp/ccfOErtk.s:819    .text._ZN10chibios_rt10BaseThread5sleepEm:00000000 $t
+     /tmp/ccfOErtk.s:825    .text._ZN10chibios_rt10BaseThread5sleepEm:00000000 _ZN10chibios_rt10BaseThread5sleepEm
+     /tmp/ccfOErtk.s:832    .text._ZN10chibios_rt10BaseThread10sleepUntilEm:00000000 $t
+     /tmp/ccfOErtk.s:838    .text._ZN10chibios_rt10BaseThread10sleepUntilEm:00000000 _ZN10chibios_rt10BaseThread10sleepUntilEm
+     /tmp/ccfOErtk.s:845    .text._ZN10chibios_rt10BaseThread5yieldEv:00000000 $t
+     /tmp/ccfOErtk.s:851    .text._ZN10chibios_rt10BaseThread5yieldEv:00000000 _ZN10chibios_rt10BaseThread5yieldEv
+     /tmp/ccfOErtk.s:858    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000000 $t
+     /tmp/ccfOErtk.s:864    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000000 _ZN10chibios_rt10BaseThread11waitMessageEv
+     /tmp/ccfOErtk.s:878    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000014 $d
+     /tmp/ccfOErtk.s:881    .text._ZN10chibios_rt10BaseThread17getAndClearEventsEm:00000000 $t
+     /tmp/ccfOErtk.s:887    .text._ZN10chibios_rt10BaseThread17getAndClearEventsEm:00000000 _ZN10chibios_rt10BaseThread17getAndClearEventsEm
+     /tmp/ccfOErtk.s:894    .text._ZN10chibios_rt10BaseThread9addEventsEm:00000000 $t
+     /tmp/ccfOErtk.s:900    .text._ZN10chibios_rt10BaseThread9addEventsEm:00000000 _ZN10chibios_rt10BaseThread9addEventsEm
+     /tmp/ccfOErtk.s:907    .text._ZN10chibios_rt10BaseThread12waitOneEventEm:00000000 $t
+     /tmp/ccfOErtk.s:913    .text._ZN10chibios_rt10BaseThread12waitOneEventEm:00000000 _ZN10chibios_rt10BaseThread12waitOneEventEm
+     /tmp/ccfOErtk.s:920    .text._ZN10chibios_rt10BaseThread12waitAnyEventEm:00000000 $t
+     /tmp/ccfOErtk.s:926    .text._ZN10chibios_rt10BaseThread12waitAnyEventEm:00000000 _ZN10chibios_rt10BaseThread12waitAnyEventEm
+     /tmp/ccfOErtk.s:933    .text._ZN10chibios_rt10BaseThread13waitAllEventsEm:00000000 $t
+     /tmp/ccfOErtk.s:939    .text._ZN10chibios_rt10BaseThread13waitAllEventsEm:00000000 _ZN10chibios_rt10BaseThread13waitAllEventsEm
+     /tmp/ccfOErtk.s:946    .text._ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm:00000000 $t
+     /tmp/ccfOErtk.s:952    .text._ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm:00000000 _ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
+     /tmp/ccfOErtk.s:959    .text._ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm:00000000 $t
+ARM GAS  /tmp/ccfOErtk.s 			page 48
 
 
-     /tmp/ccqPMoYJ.s:965    .text._ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm:00000000 _ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
-     /tmp/ccqPMoYJ.s:972    .text._ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm:00000000 $t
-     /tmp/ccqPMoYJ.s:978    .text._ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm:00000000 _ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm
-     /tmp/ccqPMoYJ.s:985    .text._ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm:00000000 $t
-     /tmp/ccqPMoYJ.s:991    .text._ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm:00000000 _ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm
-     /tmp/ccqPMoYJ.s:998    .text._ZN10chibios_rt10BaseThread11unlockMutexEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1004   .text._ZN10chibios_rt10BaseThread11unlockMutexEv:00000000 _ZN10chibios_rt10BaseThread11unlockMutexEv
-     /tmp/ccqPMoYJ.s:1011   .text._ZN10chibios_rt10BaseThread12unlockMutexSEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1017   .text._ZN10chibios_rt10BaseThread12unlockMutexSEv:00000000 _ZN10chibios_rt10BaseThread12unlockMutexSEv
-     /tmp/ccqPMoYJ.s:1024   .text._ZN10chibios_rt10BaseThread16unlockAllMutexesEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1030   .text._ZN10chibios_rt10BaseThread16unlockAllMutexesEv:00000000 _ZN10chibios_rt10BaseThread16unlockAllMutexesEv
-     /tmp/ccqPMoYJ.s:1037   .text._ZN10chibios_rt16CounterSemaphoreC2El:00000000 $t
-     /tmp/ccqPMoYJ.s:1043   .text._ZN10chibios_rt16CounterSemaphoreC2El:00000000 _ZN10chibios_rt16CounterSemaphoreC2El
-     /tmp/ccqPMoYJ.s:1043   .text._ZN10chibios_rt16CounterSemaphoreC2El:00000000 _ZN10chibios_rt16CounterSemaphoreC1El
-     /tmp/ccqPMoYJ.s:1055   .text._ZN10chibios_rt16CounterSemaphore5resetEl:00000000 $t
-     /tmp/ccqPMoYJ.s:1061   .text._ZN10chibios_rt16CounterSemaphore5resetEl:00000000 _ZN10chibios_rt16CounterSemaphore5resetEl
-     /tmp/ccqPMoYJ.s:1068   .text._ZN10chibios_rt16CounterSemaphore6resetIEl:00000000 $t
-     /tmp/ccqPMoYJ.s:1074   .text._ZN10chibios_rt16CounterSemaphore6resetIEl:00000000 _ZN10chibios_rt16CounterSemaphore6resetIEl
-     /tmp/ccqPMoYJ.s:1081   .text._ZN10chibios_rt16CounterSemaphore4waitEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1087   .text._ZN10chibios_rt16CounterSemaphore4waitEv:00000000 _ZN10chibios_rt16CounterSemaphore4waitEv
-     /tmp/ccqPMoYJ.s:1094   .text._ZN10chibios_rt16CounterSemaphore5waitSEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1100   .text._ZN10chibios_rt16CounterSemaphore5waitSEv:00000000 _ZN10chibios_rt16CounterSemaphore5waitSEv
-     /tmp/ccqPMoYJ.s:1107   .text._ZN10chibios_rt16CounterSemaphore11waitTimeoutEm:00000000 $t
-     /tmp/ccqPMoYJ.s:1113   .text._ZN10chibios_rt16CounterSemaphore11waitTimeoutEm:00000000 _ZN10chibios_rt16CounterSemaphore11waitTimeoutEm
-     /tmp/ccqPMoYJ.s:1120   .text._ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm:00000000 $t
-     /tmp/ccqPMoYJ.s:1126   .text._ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm:00000000 _ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm
-     /tmp/ccqPMoYJ.s:1133   .text._ZN10chibios_rt16CounterSemaphore6signalEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1139   .text._ZN10chibios_rt16CounterSemaphore6signalEv:00000000 _ZN10chibios_rt16CounterSemaphore6signalEv
-     /tmp/ccqPMoYJ.s:1146   .text._ZN10chibios_rt16CounterSemaphore7signalIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1152   .text._ZN10chibios_rt16CounterSemaphore7signalIEv:00000000 _ZN10chibios_rt16CounterSemaphore7signalIEv
-     /tmp/ccqPMoYJ.s:1159   .text._ZN10chibios_rt16CounterSemaphore11addCounterIEl:00000000 $t
-     /tmp/ccqPMoYJ.s:1165   .text._ZN10chibios_rt16CounterSemaphore11addCounterIEl:00000000 _ZN10chibios_rt16CounterSemaphore11addCounterIEl
-     /tmp/ccqPMoYJ.s:1172   .text._ZN10chibios_rt16CounterSemaphore11getCounterIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1178   .text._ZN10chibios_rt16CounterSemaphore11getCounterIEv:00000000 _ZN10chibios_rt16CounterSemaphore11getCounterIEv
-     /tmp/ccqPMoYJ.s:1186   .text._ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_:00000000 $t
-     /tmp/ccqPMoYJ.s:1192   .text._ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_:00000000 _ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_
-     /tmp/ccqPMoYJ.s:1199   .text._ZN10chibios_rt15BinarySemaphoreC2Eb:00000000 $t
-     /tmp/ccqPMoYJ.s:1205   .text._ZN10chibios_rt15BinarySemaphoreC2Eb:00000000 _ZN10chibios_rt15BinarySemaphoreC2Eb
-     /tmp/ccqPMoYJ.s:1205   .text._ZN10chibios_rt15BinarySemaphoreC2Eb:00000000 _ZN10chibios_rt15BinarySemaphoreC1Eb
-     /tmp/ccqPMoYJ.s:1218   .text._ZN10chibios_rt15BinarySemaphore4waitEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1224   .text._ZN10chibios_rt15BinarySemaphore4waitEv:00000000 _ZN10chibios_rt15BinarySemaphore4waitEv
-     /tmp/ccqPMoYJ.s:1231   .text._ZN10chibios_rt15BinarySemaphore5waitSEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1237   .text._ZN10chibios_rt15BinarySemaphore5waitSEv:00000000 _ZN10chibios_rt15BinarySemaphore5waitSEv
-     /tmp/ccqPMoYJ.s:1244   .text._ZN10chibios_rt15BinarySemaphore11waitTimeoutEm:00000000 $t
-     /tmp/ccqPMoYJ.s:1250   .text._ZN10chibios_rt15BinarySemaphore11waitTimeoutEm:00000000 _ZN10chibios_rt15BinarySemaphore11waitTimeoutEm
-     /tmp/ccqPMoYJ.s:1257   .text._ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm:00000000 $t
-     /tmp/ccqPMoYJ.s:1263   .text._ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm:00000000 _ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm
-     /tmp/ccqPMoYJ.s:1270   .text._ZN10chibios_rt15BinarySemaphore5resetEb:00000000 $t
-     /tmp/ccqPMoYJ.s:1276   .text._ZN10chibios_rt15BinarySemaphore5resetEb:00000000 _ZN10chibios_rt15BinarySemaphore5resetEb
-     /tmp/ccqPMoYJ.s:1284   .text._ZN10chibios_rt15BinarySemaphore6resetIEb:00000000 $t
-     /tmp/ccqPMoYJ.s:1290   .text._ZN10chibios_rt15BinarySemaphore6resetIEb:00000000 _ZN10chibios_rt15BinarySemaphore6resetIEb
-     /tmp/ccqPMoYJ.s:1298   .text._ZN10chibios_rt15BinarySemaphore6signalEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1304   .text._ZN10chibios_rt15BinarySemaphore6signalEv:00000000 _ZN10chibios_rt15BinarySemaphore6signalEv
-     /tmp/ccqPMoYJ.s:1333   .text._ZN10chibios_rt15BinarySemaphore7signalIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1339   .text._ZN10chibios_rt15BinarySemaphore7signalIEv:00000000 _ZN10chibios_rt15BinarySemaphore7signalIEv
-     /tmp/ccqPMoYJ.s:1351   .text._ZN10chibios_rt15BinarySemaphore9getStateIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1357   .text._ZN10chibios_rt15BinarySemaphore9getStateIEv:00000000 _ZN10chibios_rt15BinarySemaphore9getStateIEv
-ARM GAS  /tmp/ccqPMoYJ.s 			page 49
+     /tmp/ccfOErtk.s:965    .text._ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm:00000000 _ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
+     /tmp/ccfOErtk.s:972    .text._ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm:00000000 $t
+     /tmp/ccfOErtk.s:978    .text._ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm:00000000 _ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm
+     /tmp/ccfOErtk.s:985    .text._ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm:00000000 $t
+     /tmp/ccfOErtk.s:991    .text._ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm:00000000 _ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm
+     /tmp/ccfOErtk.s:998    .text._ZN10chibios_rt10BaseThread11unlockMutexEv:00000000 $t
+     /tmp/ccfOErtk.s:1004   .text._ZN10chibios_rt10BaseThread11unlockMutexEv:00000000 _ZN10chibios_rt10BaseThread11unlockMutexEv
+     /tmp/ccfOErtk.s:1011   .text._ZN10chibios_rt10BaseThread12unlockMutexSEv:00000000 $t
+     /tmp/ccfOErtk.s:1017   .text._ZN10chibios_rt10BaseThread12unlockMutexSEv:00000000 _ZN10chibios_rt10BaseThread12unlockMutexSEv
+     /tmp/ccfOErtk.s:1024   .text._ZN10chibios_rt10BaseThread16unlockAllMutexesEv:00000000 $t
+     /tmp/ccfOErtk.s:1030   .text._ZN10chibios_rt10BaseThread16unlockAllMutexesEv:00000000 _ZN10chibios_rt10BaseThread16unlockAllMutexesEv
+     /tmp/ccfOErtk.s:1037   .text._ZN10chibios_rt16CounterSemaphoreC2El:00000000 $t
+     /tmp/ccfOErtk.s:1043   .text._ZN10chibios_rt16CounterSemaphoreC2El:00000000 _ZN10chibios_rt16CounterSemaphoreC2El
+     /tmp/ccfOErtk.s:1043   .text._ZN10chibios_rt16CounterSemaphoreC2El:00000000 _ZN10chibios_rt16CounterSemaphoreC1El
+     /tmp/ccfOErtk.s:1055   .text._ZN10chibios_rt16CounterSemaphore5resetEl:00000000 $t
+     /tmp/ccfOErtk.s:1061   .text._ZN10chibios_rt16CounterSemaphore5resetEl:00000000 _ZN10chibios_rt16CounterSemaphore5resetEl
+     /tmp/ccfOErtk.s:1068   .text._ZN10chibios_rt16CounterSemaphore6resetIEl:00000000 $t
+     /tmp/ccfOErtk.s:1074   .text._ZN10chibios_rt16CounterSemaphore6resetIEl:00000000 _ZN10chibios_rt16CounterSemaphore6resetIEl
+     /tmp/ccfOErtk.s:1081   .text._ZN10chibios_rt16CounterSemaphore4waitEv:00000000 $t
+     /tmp/ccfOErtk.s:1087   .text._ZN10chibios_rt16CounterSemaphore4waitEv:00000000 _ZN10chibios_rt16CounterSemaphore4waitEv
+     /tmp/ccfOErtk.s:1094   .text._ZN10chibios_rt16CounterSemaphore5waitSEv:00000000 $t
+     /tmp/ccfOErtk.s:1100   .text._ZN10chibios_rt16CounterSemaphore5waitSEv:00000000 _ZN10chibios_rt16CounterSemaphore5waitSEv
+     /tmp/ccfOErtk.s:1107   .text._ZN10chibios_rt16CounterSemaphore11waitTimeoutEm:00000000 $t
+     /tmp/ccfOErtk.s:1113   .text._ZN10chibios_rt16CounterSemaphore11waitTimeoutEm:00000000 _ZN10chibios_rt16CounterSemaphore11waitTimeoutEm
+     /tmp/ccfOErtk.s:1120   .text._ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm:00000000 $t
+     /tmp/ccfOErtk.s:1126   .text._ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm:00000000 _ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm
+     /tmp/ccfOErtk.s:1133   .text._ZN10chibios_rt16CounterSemaphore6signalEv:00000000 $t
+     /tmp/ccfOErtk.s:1139   .text._ZN10chibios_rt16CounterSemaphore6signalEv:00000000 _ZN10chibios_rt16CounterSemaphore6signalEv
+     /tmp/ccfOErtk.s:1146   .text._ZN10chibios_rt16CounterSemaphore7signalIEv:00000000 $t
+     /tmp/ccfOErtk.s:1152   .text._ZN10chibios_rt16CounterSemaphore7signalIEv:00000000 _ZN10chibios_rt16CounterSemaphore7signalIEv
+     /tmp/ccfOErtk.s:1159   .text._ZN10chibios_rt16CounterSemaphore11addCounterIEl:00000000 $t
+     /tmp/ccfOErtk.s:1165   .text._ZN10chibios_rt16CounterSemaphore11addCounterIEl:00000000 _ZN10chibios_rt16CounterSemaphore11addCounterIEl
+     /tmp/ccfOErtk.s:1172   .text._ZN10chibios_rt16CounterSemaphore11getCounterIEv:00000000 $t
+     /tmp/ccfOErtk.s:1178   .text._ZN10chibios_rt16CounterSemaphore11getCounterIEv:00000000 _ZN10chibios_rt16CounterSemaphore11getCounterIEv
+     /tmp/ccfOErtk.s:1186   .text._ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_:00000000 $t
+     /tmp/ccfOErtk.s:1192   .text._ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_:00000000 _ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_
+     /tmp/ccfOErtk.s:1199   .text._ZN10chibios_rt15BinarySemaphoreC2Eb:00000000 $t
+     /tmp/ccfOErtk.s:1205   .text._ZN10chibios_rt15BinarySemaphoreC2Eb:00000000 _ZN10chibios_rt15BinarySemaphoreC2Eb
+     /tmp/ccfOErtk.s:1205   .text._ZN10chibios_rt15BinarySemaphoreC2Eb:00000000 _ZN10chibios_rt15BinarySemaphoreC1Eb
+     /tmp/ccfOErtk.s:1218   .text._ZN10chibios_rt15BinarySemaphore4waitEv:00000000 $t
+     /tmp/ccfOErtk.s:1224   .text._ZN10chibios_rt15BinarySemaphore4waitEv:00000000 _ZN10chibios_rt15BinarySemaphore4waitEv
+     /tmp/ccfOErtk.s:1231   .text._ZN10chibios_rt15BinarySemaphore5waitSEv:00000000 $t
+     /tmp/ccfOErtk.s:1237   .text._ZN10chibios_rt15BinarySemaphore5waitSEv:00000000 _ZN10chibios_rt15BinarySemaphore5waitSEv
+     /tmp/ccfOErtk.s:1244   .text._ZN10chibios_rt15BinarySemaphore11waitTimeoutEm:00000000 $t
+     /tmp/ccfOErtk.s:1250   .text._ZN10chibios_rt15BinarySemaphore11waitTimeoutEm:00000000 _ZN10chibios_rt15BinarySemaphore11waitTimeoutEm
+     /tmp/ccfOErtk.s:1257   .text._ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm:00000000 $t
+     /tmp/ccfOErtk.s:1263   .text._ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm:00000000 _ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm
+     /tmp/ccfOErtk.s:1270   .text._ZN10chibios_rt15BinarySemaphore5resetEb:00000000 $t
+     /tmp/ccfOErtk.s:1276   .text._ZN10chibios_rt15BinarySemaphore5resetEb:00000000 _ZN10chibios_rt15BinarySemaphore5resetEb
+     /tmp/ccfOErtk.s:1284   .text._ZN10chibios_rt15BinarySemaphore6resetIEb:00000000 $t
+     /tmp/ccfOErtk.s:1290   .text._ZN10chibios_rt15BinarySemaphore6resetIEb:00000000 _ZN10chibios_rt15BinarySemaphore6resetIEb
+     /tmp/ccfOErtk.s:1298   .text._ZN10chibios_rt15BinarySemaphore6signalEv:00000000 $t
+     /tmp/ccfOErtk.s:1304   .text._ZN10chibios_rt15BinarySemaphore6signalEv:00000000 _ZN10chibios_rt15BinarySemaphore6signalEv
+     /tmp/ccfOErtk.s:1333   .text._ZN10chibios_rt15BinarySemaphore7signalIEv:00000000 $t
+     /tmp/ccfOErtk.s:1339   .text._ZN10chibios_rt15BinarySemaphore7signalIEv:00000000 _ZN10chibios_rt15BinarySemaphore7signalIEv
+     /tmp/ccfOErtk.s:1351   .text._ZN10chibios_rt15BinarySemaphore9getStateIEv:00000000 $t
+     /tmp/ccfOErtk.s:1357   .text._ZN10chibios_rt15BinarySemaphore9getStateIEv:00000000 _ZN10chibios_rt15BinarySemaphore9getStateIEv
+ARM GAS  /tmp/ccfOErtk.s 			page 49
 
 
-     /tmp/ccqPMoYJ.s:1369   .text._ZN10chibios_rt5MutexC2Ev:00000000 $t
-     /tmp/ccqPMoYJ.s:1375   .text._ZN10chibios_rt5MutexC2Ev:00000000 _ZN10chibios_rt5MutexC2Ev
-     /tmp/ccqPMoYJ.s:1375   .text._ZN10chibios_rt5MutexC2Ev:00000000 _ZN10chibios_rt5MutexC1Ev
-     /tmp/ccqPMoYJ.s:1387   .text._ZN10chibios_rt5Mutex7tryLockEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1393   .text._ZN10chibios_rt5Mutex7tryLockEv:00000000 _ZN10chibios_rt5Mutex7tryLockEv
-     /tmp/ccqPMoYJ.s:1400   .text._ZN10chibios_rt5Mutex8tryLockSEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1406   .text._ZN10chibios_rt5Mutex8tryLockSEv:00000000 _ZN10chibios_rt5Mutex8tryLockSEv
-     /tmp/ccqPMoYJ.s:1413   .text._ZN10chibios_rt5Mutex4lockEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1419   .text._ZN10chibios_rt5Mutex4lockEv:00000000 _ZN10chibios_rt5Mutex4lockEv
-     /tmp/ccqPMoYJ.s:1426   .text._ZN10chibios_rt5Mutex5lockSEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1432   .text._ZN10chibios_rt5Mutex5lockSEv:00000000 _ZN10chibios_rt5Mutex5lockSEv
-     /tmp/ccqPMoYJ.s:1439   .text._ZN10chibios_rt7CondVarC2Ev:00000000 $t
-     /tmp/ccqPMoYJ.s:1445   .text._ZN10chibios_rt7CondVarC2Ev:00000000 _ZN10chibios_rt7CondVarC2Ev
-     /tmp/ccqPMoYJ.s:1445   .text._ZN10chibios_rt7CondVarC2Ev:00000000 _ZN10chibios_rt7CondVarC1Ev
-     /tmp/ccqPMoYJ.s:1457   .text._ZN10chibios_rt7CondVar6signalEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1463   .text._ZN10chibios_rt7CondVar6signalEv:00000000 _ZN10chibios_rt7CondVar6signalEv
-     /tmp/ccqPMoYJ.s:1470   .text._ZN10chibios_rt7CondVar7signalIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1476   .text._ZN10chibios_rt7CondVar7signalIEv:00000000 _ZN10chibios_rt7CondVar7signalIEv
-     /tmp/ccqPMoYJ.s:1483   .text._ZN10chibios_rt7CondVar9broadcastEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1489   .text._ZN10chibios_rt7CondVar9broadcastEv:00000000 _ZN10chibios_rt7CondVar9broadcastEv
-     /tmp/ccqPMoYJ.s:1496   .text._ZN10chibios_rt7CondVar10broadcastIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1502   .text._ZN10chibios_rt7CondVar10broadcastIEv:00000000 _ZN10chibios_rt7CondVar10broadcastIEv
-     /tmp/ccqPMoYJ.s:1509   .text._ZN10chibios_rt7CondVar4waitEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1515   .text._ZN10chibios_rt7CondVar4waitEv:00000000 _ZN10chibios_rt7CondVar4waitEv
-     /tmp/ccqPMoYJ.s:1522   .text._ZN10chibios_rt7CondVar5waitSEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1528   .text._ZN10chibios_rt7CondVar5waitSEv:00000000 _ZN10chibios_rt7CondVar5waitSEv
-     /tmp/ccqPMoYJ.s:1535   .text._ZN10chibios_rt7CondVar11waitTimeoutEm:00000000 $t
-     /tmp/ccqPMoYJ.s:1541   .text._ZN10chibios_rt7CondVar11waitTimeoutEm:00000000 _ZN10chibios_rt7CondVar11waitTimeoutEm
-     /tmp/ccqPMoYJ.s:1548   .text._ZN10chibios_rt11EvtListener16getAndClearFlagsEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1554   .text._ZN10chibios_rt11EvtListener16getAndClearFlagsEv:00000000 _ZN10chibios_rt11EvtListener16getAndClearFlagsEv
-     /tmp/ccqPMoYJ.s:1561   .text._ZN10chibios_rt11EvtListener17getAndClearFlagsIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1567   .text._ZN10chibios_rt11EvtListener17getAndClearFlagsIEv:00000000 _ZN10chibios_rt11EvtListener17getAndClearFlagsIEv
-     /tmp/ccqPMoYJ.s:1574   .text._ZN10chibios_rt9EvtSourceC2Ev:00000000 $t
-     /tmp/ccqPMoYJ.s:1580   .text._ZN10chibios_rt9EvtSourceC2Ev:00000000 _ZN10chibios_rt9EvtSourceC2Ev
-     /tmp/ccqPMoYJ.s:1580   .text._ZN10chibios_rt9EvtSourceC2Ev:00000000 _ZN10chibios_rt9EvtSourceC1Ev
-     /tmp/ccqPMoYJ.s:1590   .text._ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl:00000000 $t
-     /tmp/ccqPMoYJ.s:1596   .text._ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl:00000000 _ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
-     /tmp/ccqPMoYJ.s:1605   .text._ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm:00000000 $t
-     /tmp/ccqPMoYJ.s:1611   .text._ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm:00000000 _ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm
-     /tmp/ccqPMoYJ.s:1618   .text._ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE:00000000 $t
-     /tmp/ccqPMoYJ.s:1624   .text._ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE:00000000 _ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
-     /tmp/ccqPMoYJ.s:1631   .text._ZN10chibios_rt9EvtSource14broadcastFlagsEm:00000000 $t
-     /tmp/ccqPMoYJ.s:1637   .text._ZN10chibios_rt9EvtSource14broadcastFlagsEm:00000000 _ZN10chibios_rt9EvtSource14broadcastFlagsEm
-     /tmp/ccqPMoYJ.s:1644   .text._ZN10chibios_rt9EvtSource15broadcastFlagsIEm:00000000 $t
-     /tmp/ccqPMoYJ.s:1650   .text._ZN10chibios_rt9EvtSource15broadcastFlagsIEm:00000000 _ZN10chibios_rt9EvtSource15broadcastFlagsIEm
-     /tmp/ccqPMoYJ.s:1657   .text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:00000000 $t
-     /tmp/ccqPMoYJ.s:1663   .text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv
-     /tmp/ccqPMoYJ.s:1663   .text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt7InQueueC1EPhjPFvP12GenericQueueEPv
-     /tmp/ccqPMoYJ.s:1680   .text._ZN10chibios_rt7InQueue8getFullIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1686   .text._ZN10chibios_rt7InQueue8getFullIEv:00000000 _ZN10chibios_rt7InQueue8getFullIEv
-     /tmp/ccqPMoYJ.s:1694   .text._ZN10chibios_rt7InQueue9getEmptyIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1700   .text._ZN10chibios_rt7InQueue9getEmptyIEv:00000000 _ZN10chibios_rt7InQueue9getEmptyIEv
-     /tmp/ccqPMoYJ.s:1712   .text._ZN10chibios_rt7InQueue8isEmptyIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1718   .text._ZN10chibios_rt7InQueue8isEmptyIEv:00000000 _ZN10chibios_rt7InQueue8isEmptyIEv
-     /tmp/ccqPMoYJ.s:1729   .text._ZN10chibios_rt7InQueue7isFullIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1735   .text._ZN10chibios_rt7InQueue7isFullIEv:00000000 _ZN10chibios_rt7InQueue7isFullIEv
-     /tmp/ccqPMoYJ.s:1753   .text._ZN10chibios_rt7InQueue6resetIEv:00000000 $t
-ARM GAS  /tmp/ccqPMoYJ.s 			page 50
+     /tmp/ccfOErtk.s:1369   .text._ZN10chibios_rt5MutexC2Ev:00000000 $t
+     /tmp/ccfOErtk.s:1375   .text._ZN10chibios_rt5MutexC2Ev:00000000 _ZN10chibios_rt5MutexC2Ev
+     /tmp/ccfOErtk.s:1375   .text._ZN10chibios_rt5MutexC2Ev:00000000 _ZN10chibios_rt5MutexC1Ev
+     /tmp/ccfOErtk.s:1387   .text._ZN10chibios_rt5Mutex7tryLockEv:00000000 $t
+     /tmp/ccfOErtk.s:1393   .text._ZN10chibios_rt5Mutex7tryLockEv:00000000 _ZN10chibios_rt5Mutex7tryLockEv
+     /tmp/ccfOErtk.s:1400   .text._ZN10chibios_rt5Mutex8tryLockSEv:00000000 $t
+     /tmp/ccfOErtk.s:1406   .text._ZN10chibios_rt5Mutex8tryLockSEv:00000000 _ZN10chibios_rt5Mutex8tryLockSEv
+     /tmp/ccfOErtk.s:1413   .text._ZN10chibios_rt5Mutex4lockEv:00000000 $t
+     /tmp/ccfOErtk.s:1419   .text._ZN10chibios_rt5Mutex4lockEv:00000000 _ZN10chibios_rt5Mutex4lockEv
+     /tmp/ccfOErtk.s:1426   .text._ZN10chibios_rt5Mutex5lockSEv:00000000 $t
+     /tmp/ccfOErtk.s:1432   .text._ZN10chibios_rt5Mutex5lockSEv:00000000 _ZN10chibios_rt5Mutex5lockSEv
+     /tmp/ccfOErtk.s:1439   .text._ZN10chibios_rt7CondVarC2Ev:00000000 $t
+     /tmp/ccfOErtk.s:1445   .text._ZN10chibios_rt7CondVarC2Ev:00000000 _ZN10chibios_rt7CondVarC2Ev
+     /tmp/ccfOErtk.s:1445   .text._ZN10chibios_rt7CondVarC2Ev:00000000 _ZN10chibios_rt7CondVarC1Ev
+     /tmp/ccfOErtk.s:1457   .text._ZN10chibios_rt7CondVar6signalEv:00000000 $t
+     /tmp/ccfOErtk.s:1463   .text._ZN10chibios_rt7CondVar6signalEv:00000000 _ZN10chibios_rt7CondVar6signalEv
+     /tmp/ccfOErtk.s:1470   .text._ZN10chibios_rt7CondVar7signalIEv:00000000 $t
+     /tmp/ccfOErtk.s:1476   .text._ZN10chibios_rt7CondVar7signalIEv:00000000 _ZN10chibios_rt7CondVar7signalIEv
+     /tmp/ccfOErtk.s:1483   .text._ZN10chibios_rt7CondVar9broadcastEv:00000000 $t
+     /tmp/ccfOErtk.s:1489   .text._ZN10chibios_rt7CondVar9broadcastEv:00000000 _ZN10chibios_rt7CondVar9broadcastEv
+     /tmp/ccfOErtk.s:1496   .text._ZN10chibios_rt7CondVar10broadcastIEv:00000000 $t
+     /tmp/ccfOErtk.s:1502   .text._ZN10chibios_rt7CondVar10broadcastIEv:00000000 _ZN10chibios_rt7CondVar10broadcastIEv
+     /tmp/ccfOErtk.s:1509   .text._ZN10chibios_rt7CondVar4waitEv:00000000 $t
+     /tmp/ccfOErtk.s:1515   .text._ZN10chibios_rt7CondVar4waitEv:00000000 _ZN10chibios_rt7CondVar4waitEv
+     /tmp/ccfOErtk.s:1522   .text._ZN10chibios_rt7CondVar5waitSEv:00000000 $t
+     /tmp/ccfOErtk.s:1528   .text._ZN10chibios_rt7CondVar5waitSEv:00000000 _ZN10chibios_rt7CondVar5waitSEv
+     /tmp/ccfOErtk.s:1535   .text._ZN10chibios_rt7CondVar11waitTimeoutEm:00000000 $t
+     /tmp/ccfOErtk.s:1541   .text._ZN10chibios_rt7CondVar11waitTimeoutEm:00000000 _ZN10chibios_rt7CondVar11waitTimeoutEm
+     /tmp/ccfOErtk.s:1548   .text._ZN10chibios_rt11EvtListener16getAndClearFlagsEv:00000000 $t
+     /tmp/ccfOErtk.s:1554   .text._ZN10chibios_rt11EvtListener16getAndClearFlagsEv:00000000 _ZN10chibios_rt11EvtListener16getAndClearFlagsEv
+     /tmp/ccfOErtk.s:1561   .text._ZN10chibios_rt11EvtListener17getAndClearFlagsIEv:00000000 $t
+     /tmp/ccfOErtk.s:1567   .text._ZN10chibios_rt11EvtListener17getAndClearFlagsIEv:00000000 _ZN10chibios_rt11EvtListener17getAndClearFlagsIEv
+     /tmp/ccfOErtk.s:1574   .text._ZN10chibios_rt9EvtSourceC2Ev:00000000 $t
+     /tmp/ccfOErtk.s:1580   .text._ZN10chibios_rt9EvtSourceC2Ev:00000000 _ZN10chibios_rt9EvtSourceC2Ev
+     /tmp/ccfOErtk.s:1580   .text._ZN10chibios_rt9EvtSourceC2Ev:00000000 _ZN10chibios_rt9EvtSourceC1Ev
+     /tmp/ccfOErtk.s:1590   .text._ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl:00000000 $t
+     /tmp/ccfOErtk.s:1596   .text._ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl:00000000 _ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+     /tmp/ccfOErtk.s:1605   .text._ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm:00000000 $t
+     /tmp/ccfOErtk.s:1611   .text._ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm:00000000 _ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm
+     /tmp/ccfOErtk.s:1618   .text._ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE:00000000 $t
+     /tmp/ccfOErtk.s:1624   .text._ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE:00000000 _ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
+     /tmp/ccfOErtk.s:1631   .text._ZN10chibios_rt9EvtSource14broadcastFlagsEm:00000000 $t
+     /tmp/ccfOErtk.s:1637   .text._ZN10chibios_rt9EvtSource14broadcastFlagsEm:00000000 _ZN10chibios_rt9EvtSource14broadcastFlagsEm
+     /tmp/ccfOErtk.s:1644   .text._ZN10chibios_rt9EvtSource15broadcastFlagsIEm:00000000 $t
+     /tmp/ccfOErtk.s:1650   .text._ZN10chibios_rt9EvtSource15broadcastFlagsIEm:00000000 _ZN10chibios_rt9EvtSource15broadcastFlagsIEm
+     /tmp/ccfOErtk.s:1657   .text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:00000000 $t
+     /tmp/ccfOErtk.s:1663   .text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv
+     /tmp/ccfOErtk.s:1663   .text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt7InQueueC1EPhjPFvP12GenericQueueEPv
+     /tmp/ccfOErtk.s:1680   .text._ZN10chibios_rt7InQueue8getFullIEv:00000000 $t
+     /tmp/ccfOErtk.s:1686   .text._ZN10chibios_rt7InQueue8getFullIEv:00000000 _ZN10chibios_rt7InQueue8getFullIEv
+     /tmp/ccfOErtk.s:1694   .text._ZN10chibios_rt7InQueue9getEmptyIEv:00000000 $t
+     /tmp/ccfOErtk.s:1700   .text._ZN10chibios_rt7InQueue9getEmptyIEv:00000000 _ZN10chibios_rt7InQueue9getEmptyIEv
+     /tmp/ccfOErtk.s:1712   .text._ZN10chibios_rt7InQueue8isEmptyIEv:00000000 $t
+     /tmp/ccfOErtk.s:1718   .text._ZN10chibios_rt7InQueue8isEmptyIEv:00000000 _ZN10chibios_rt7InQueue8isEmptyIEv
+     /tmp/ccfOErtk.s:1729   .text._ZN10chibios_rt7InQueue7isFullIEv:00000000 $t
+     /tmp/ccfOErtk.s:1735   .text._ZN10chibios_rt7InQueue7isFullIEv:00000000 _ZN10chibios_rt7InQueue7isFullIEv
+     /tmp/ccfOErtk.s:1753   .text._ZN10chibios_rt7InQueue6resetIEv:00000000 $t
+ARM GAS  /tmp/ccfOErtk.s 			page 50
 
 
-     /tmp/ccqPMoYJ.s:1759   .text._ZN10chibios_rt7InQueue6resetIEv:00000000 _ZN10chibios_rt7InQueue6resetIEv
-     /tmp/ccqPMoYJ.s:1766   .text._ZN10chibios_rt7InQueue4putIEh:00000000 $t
-     /tmp/ccqPMoYJ.s:1772   .text._ZN10chibios_rt7InQueue4putIEh:00000000 _ZN10chibios_rt7InQueue4putIEh
-     /tmp/ccqPMoYJ.s:1779   .text._ZN10chibios_rt7InQueue3getEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1785   .text._ZN10chibios_rt7InQueue3getEv:00000000 _ZN10chibios_rt7InQueue3getEv
-     /tmp/ccqPMoYJ.s:1793   .text._ZN10chibios_rt7InQueue10getTimeoutEm:00000000 $t
-     /tmp/ccqPMoYJ.s:1799   .text._ZN10chibios_rt7InQueue10getTimeoutEm:00000000 _ZN10chibios_rt7InQueue10getTimeoutEm
-     /tmp/ccqPMoYJ.s:1806   .text._ZN10chibios_rt7InQueue11readTimeoutEPhjm:00000000 $t
-     /tmp/ccqPMoYJ.s:1812   .text._ZN10chibios_rt7InQueue11readTimeoutEPhjm:00000000 _ZN10chibios_rt7InQueue11readTimeoutEPhjm
-     /tmp/ccqPMoYJ.s:1819   .text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:00000000 $t
-     /tmp/ccqPMoYJ.s:1825   .text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv
-     /tmp/ccqPMoYJ.s:1825   .text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt8OutQueueC1EPhjPFvP12GenericQueueEPv
-     /tmp/ccqPMoYJ.s:1842   .text._ZN10chibios_rt8OutQueue8getFullIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1848   .text._ZN10chibios_rt8OutQueue8getFullIEv:00000000 _ZN10chibios_rt8OutQueue8getFullIEv
-     /tmp/ccqPMoYJ.s:1860   .text._ZN10chibios_rt8OutQueue9getEmptyIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1866   .text._ZN10chibios_rt8OutQueue9getEmptyIEv:00000000 _ZN10chibios_rt8OutQueue9getEmptyIEv
-     /tmp/ccqPMoYJ.s:1874   .text._ZN10chibios_rt8OutQueue8isEmptyIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1880   .text._ZN10chibios_rt8OutQueue8isEmptyIEv:00000000 _ZN10chibios_rt8OutQueue8isEmptyIEv
-     /tmp/ccqPMoYJ.s:1898   .text._ZN10chibios_rt8OutQueue7isFullIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1904   .text._ZN10chibios_rt8OutQueue7isFullIEv:00000000 _ZN10chibios_rt8OutQueue7isFullIEv
-     /tmp/ccqPMoYJ.s:1915   .text._ZN10chibios_rt8OutQueue6resetIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1921   .text._ZN10chibios_rt8OutQueue6resetIEv:00000000 _ZN10chibios_rt8OutQueue6resetIEv
-     /tmp/ccqPMoYJ.s:1928   .text._ZN10chibios_rt8OutQueue3putEh:00000000 $t
-     /tmp/ccqPMoYJ.s:1934   .text._ZN10chibios_rt8OutQueue3putEh:00000000 _ZN10chibios_rt8OutQueue3putEh
-     /tmp/ccqPMoYJ.s:1942   .text._ZN10chibios_rt8OutQueue10putTimeoutEhm:00000000 $t
-     /tmp/ccqPMoYJ.s:1948   .text._ZN10chibios_rt8OutQueue10putTimeoutEhm:00000000 _ZN10chibios_rt8OutQueue10putTimeoutEhm
-     /tmp/ccqPMoYJ.s:1955   .text._ZN10chibios_rt8OutQueue4getIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:1961   .text._ZN10chibios_rt8OutQueue4getIEv:00000000 _ZN10chibios_rt8OutQueue4getIEv
-     /tmp/ccqPMoYJ.s:1968   .text._ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm:00000000 $t
-     /tmp/ccqPMoYJ.s:1974   .text._ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm:00000000 _ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm
-     /tmp/ccqPMoYJ.s:1981   .text._ZN10chibios_rt7MailboxC2EPll:00000000 $t
-     /tmp/ccqPMoYJ.s:1987   .text._ZN10chibios_rt7MailboxC2EPll:00000000 _ZN10chibios_rt7MailboxC2EPll
-     /tmp/ccqPMoYJ.s:1987   .text._ZN10chibios_rt7MailboxC2EPll:00000000 _ZN10chibios_rt7MailboxC1EPll
-     /tmp/ccqPMoYJ.s:1999   .text._ZN10chibios_rt7Mailbox5resetEv:00000000 $t
-     /tmp/ccqPMoYJ.s:2005   .text._ZN10chibios_rt7Mailbox5resetEv:00000000 _ZN10chibios_rt7Mailbox5resetEv
-     /tmp/ccqPMoYJ.s:2012   .text._ZN10chibios_rt7Mailbox4postElm:00000000 $t
-     /tmp/ccqPMoYJ.s:2018   .text._ZN10chibios_rt7Mailbox4postElm:00000000 _ZN10chibios_rt7Mailbox4postElm
-     /tmp/ccqPMoYJ.s:2025   .text._ZN10chibios_rt7Mailbox5postSElm:00000000 $t
-     /tmp/ccqPMoYJ.s:2031   .text._ZN10chibios_rt7Mailbox5postSElm:00000000 _ZN10chibios_rt7Mailbox5postSElm
-     /tmp/ccqPMoYJ.s:2038   .text._ZN10chibios_rt7Mailbox5postIEl:00000000 $t
-     /tmp/ccqPMoYJ.s:2044   .text._ZN10chibios_rt7Mailbox5postIEl:00000000 _ZN10chibios_rt7Mailbox5postIEl
-     /tmp/ccqPMoYJ.s:2051   .text._ZN10chibios_rt7Mailbox9postAheadElm:00000000 $t
-     /tmp/ccqPMoYJ.s:2057   .text._ZN10chibios_rt7Mailbox9postAheadElm:00000000 _ZN10chibios_rt7Mailbox9postAheadElm
-     /tmp/ccqPMoYJ.s:2064   .text._ZN10chibios_rt7Mailbox10postAheadSElm:00000000 $t
-     /tmp/ccqPMoYJ.s:2070   .text._ZN10chibios_rt7Mailbox10postAheadSElm:00000000 _ZN10chibios_rt7Mailbox10postAheadSElm
-     /tmp/ccqPMoYJ.s:2077   .text._ZN10chibios_rt7Mailbox10postAheadIEl:00000000 $t
-     /tmp/ccqPMoYJ.s:2083   .text._ZN10chibios_rt7Mailbox10postAheadIEl:00000000 _ZN10chibios_rt7Mailbox10postAheadIEl
-     /tmp/ccqPMoYJ.s:2090   .text._ZN10chibios_rt7Mailbox5fetchEPlm:00000000 $t
-     /tmp/ccqPMoYJ.s:2096   .text._ZN10chibios_rt7Mailbox5fetchEPlm:00000000 _ZN10chibios_rt7Mailbox5fetchEPlm
-     /tmp/ccqPMoYJ.s:2103   .text._ZN10chibios_rt7Mailbox6fetchSEPlm:00000000 $t
-     /tmp/ccqPMoYJ.s:2109   .text._ZN10chibios_rt7Mailbox6fetchSEPlm:00000000 _ZN10chibios_rt7Mailbox6fetchSEPlm
-     /tmp/ccqPMoYJ.s:2116   .text._ZN10chibios_rt7Mailbox6fetchIEPl:00000000 $t
-     /tmp/ccqPMoYJ.s:2122   .text._ZN10chibios_rt7Mailbox6fetchIEPl:00000000 _ZN10chibios_rt7Mailbox6fetchIEPl
-     /tmp/ccqPMoYJ.s:2129   .text._ZN10chibios_rt7Mailbox13getFreeCountIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:2135   .text._ZN10chibios_rt7Mailbox13getFreeCountIEv:00000000 _ZN10chibios_rt7Mailbox13getFreeCountIEv
-     /tmp/ccqPMoYJ.s:2143   .text._ZN10chibios_rt7Mailbox13getUsedCountIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:2149   .text._ZN10chibios_rt7Mailbox13getUsedCountIEv:00000000 _ZN10chibios_rt7Mailbox13getUsedCountIEv
-ARM GAS  /tmp/ccqPMoYJ.s 			page 51
+     /tmp/ccfOErtk.s:1759   .text._ZN10chibios_rt7InQueue6resetIEv:00000000 _ZN10chibios_rt7InQueue6resetIEv
+     /tmp/ccfOErtk.s:1766   .text._ZN10chibios_rt7InQueue4putIEh:00000000 $t
+     /tmp/ccfOErtk.s:1772   .text._ZN10chibios_rt7InQueue4putIEh:00000000 _ZN10chibios_rt7InQueue4putIEh
+     /tmp/ccfOErtk.s:1779   .text._ZN10chibios_rt7InQueue3getEv:00000000 $t
+     /tmp/ccfOErtk.s:1785   .text._ZN10chibios_rt7InQueue3getEv:00000000 _ZN10chibios_rt7InQueue3getEv
+     /tmp/ccfOErtk.s:1793   .text._ZN10chibios_rt7InQueue10getTimeoutEm:00000000 $t
+     /tmp/ccfOErtk.s:1799   .text._ZN10chibios_rt7InQueue10getTimeoutEm:00000000 _ZN10chibios_rt7InQueue10getTimeoutEm
+     /tmp/ccfOErtk.s:1806   .text._ZN10chibios_rt7InQueue11readTimeoutEPhjm:00000000 $t
+     /tmp/ccfOErtk.s:1812   .text._ZN10chibios_rt7InQueue11readTimeoutEPhjm:00000000 _ZN10chibios_rt7InQueue11readTimeoutEPhjm
+     /tmp/ccfOErtk.s:1819   .text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:00000000 $t
+     /tmp/ccfOErtk.s:1825   .text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv
+     /tmp/ccfOErtk.s:1825   .text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt8OutQueueC1EPhjPFvP12GenericQueueEPv
+     /tmp/ccfOErtk.s:1842   .text._ZN10chibios_rt8OutQueue8getFullIEv:00000000 $t
+     /tmp/ccfOErtk.s:1848   .text._ZN10chibios_rt8OutQueue8getFullIEv:00000000 _ZN10chibios_rt8OutQueue8getFullIEv
+     /tmp/ccfOErtk.s:1860   .text._ZN10chibios_rt8OutQueue9getEmptyIEv:00000000 $t
+     /tmp/ccfOErtk.s:1866   .text._ZN10chibios_rt8OutQueue9getEmptyIEv:00000000 _ZN10chibios_rt8OutQueue9getEmptyIEv
+     /tmp/ccfOErtk.s:1874   .text._ZN10chibios_rt8OutQueue8isEmptyIEv:00000000 $t
+     /tmp/ccfOErtk.s:1880   .text._ZN10chibios_rt8OutQueue8isEmptyIEv:00000000 _ZN10chibios_rt8OutQueue8isEmptyIEv
+     /tmp/ccfOErtk.s:1898   .text._ZN10chibios_rt8OutQueue7isFullIEv:00000000 $t
+     /tmp/ccfOErtk.s:1904   .text._ZN10chibios_rt8OutQueue7isFullIEv:00000000 _ZN10chibios_rt8OutQueue7isFullIEv
+     /tmp/ccfOErtk.s:1915   .text._ZN10chibios_rt8OutQueue6resetIEv:00000000 $t
+     /tmp/ccfOErtk.s:1921   .text._ZN10chibios_rt8OutQueue6resetIEv:00000000 _ZN10chibios_rt8OutQueue6resetIEv
+     /tmp/ccfOErtk.s:1928   .text._ZN10chibios_rt8OutQueue3putEh:00000000 $t
+     /tmp/ccfOErtk.s:1934   .text._ZN10chibios_rt8OutQueue3putEh:00000000 _ZN10chibios_rt8OutQueue3putEh
+     /tmp/ccfOErtk.s:1942   .text._ZN10chibios_rt8OutQueue10putTimeoutEhm:00000000 $t
+     /tmp/ccfOErtk.s:1948   .text._ZN10chibios_rt8OutQueue10putTimeoutEhm:00000000 _ZN10chibios_rt8OutQueue10putTimeoutEhm
+     /tmp/ccfOErtk.s:1955   .text._ZN10chibios_rt8OutQueue4getIEv:00000000 $t
+     /tmp/ccfOErtk.s:1961   .text._ZN10chibios_rt8OutQueue4getIEv:00000000 _ZN10chibios_rt8OutQueue4getIEv
+     /tmp/ccfOErtk.s:1968   .text._ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm:00000000 $t
+     /tmp/ccfOErtk.s:1974   .text._ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm:00000000 _ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm
+     /tmp/ccfOErtk.s:1981   .text._ZN10chibios_rt7MailboxC2EPll:00000000 $t
+     /tmp/ccfOErtk.s:1987   .text._ZN10chibios_rt7MailboxC2EPll:00000000 _ZN10chibios_rt7MailboxC2EPll
+     /tmp/ccfOErtk.s:1987   .text._ZN10chibios_rt7MailboxC2EPll:00000000 _ZN10chibios_rt7MailboxC1EPll
+     /tmp/ccfOErtk.s:1999   .text._ZN10chibios_rt7Mailbox5resetEv:00000000 $t
+     /tmp/ccfOErtk.s:2005   .text._ZN10chibios_rt7Mailbox5resetEv:00000000 _ZN10chibios_rt7Mailbox5resetEv
+     /tmp/ccfOErtk.s:2012   .text._ZN10chibios_rt7Mailbox4postElm:00000000 $t
+     /tmp/ccfOErtk.s:2018   .text._ZN10chibios_rt7Mailbox4postElm:00000000 _ZN10chibios_rt7Mailbox4postElm
+     /tmp/ccfOErtk.s:2025   .text._ZN10chibios_rt7Mailbox5postSElm:00000000 $t
+     /tmp/ccfOErtk.s:2031   .text._ZN10chibios_rt7Mailbox5postSElm:00000000 _ZN10chibios_rt7Mailbox5postSElm
+     /tmp/ccfOErtk.s:2038   .text._ZN10chibios_rt7Mailbox5postIEl:00000000 $t
+     /tmp/ccfOErtk.s:2044   .text._ZN10chibios_rt7Mailbox5postIEl:00000000 _ZN10chibios_rt7Mailbox5postIEl
+     /tmp/ccfOErtk.s:2051   .text._ZN10chibios_rt7Mailbox9postAheadElm:00000000 $t
+     /tmp/ccfOErtk.s:2057   .text._ZN10chibios_rt7Mailbox9postAheadElm:00000000 _ZN10chibios_rt7Mailbox9postAheadElm
+     /tmp/ccfOErtk.s:2064   .text._ZN10chibios_rt7Mailbox10postAheadSElm:00000000 $t
+     /tmp/ccfOErtk.s:2070   .text._ZN10chibios_rt7Mailbox10postAheadSElm:00000000 _ZN10chibios_rt7Mailbox10postAheadSElm
+     /tmp/ccfOErtk.s:2077   .text._ZN10chibios_rt7Mailbox10postAheadIEl:00000000 $t
+     /tmp/ccfOErtk.s:2083   .text._ZN10chibios_rt7Mailbox10postAheadIEl:00000000 _ZN10chibios_rt7Mailbox10postAheadIEl
+     /tmp/ccfOErtk.s:2090   .text._ZN10chibios_rt7Mailbox5fetchEPlm:00000000 $t
+     /tmp/ccfOErtk.s:2096   .text._ZN10chibios_rt7Mailbox5fetchEPlm:00000000 _ZN10chibios_rt7Mailbox5fetchEPlm
+     /tmp/ccfOErtk.s:2103   .text._ZN10chibios_rt7Mailbox6fetchSEPlm:00000000 $t
+     /tmp/ccfOErtk.s:2109   .text._ZN10chibios_rt7Mailbox6fetchSEPlm:00000000 _ZN10chibios_rt7Mailbox6fetchSEPlm
+     /tmp/ccfOErtk.s:2116   .text._ZN10chibios_rt7Mailbox6fetchIEPl:00000000 $t
+     /tmp/ccfOErtk.s:2122   .text._ZN10chibios_rt7Mailbox6fetchIEPl:00000000 _ZN10chibios_rt7Mailbox6fetchIEPl
+     /tmp/ccfOErtk.s:2129   .text._ZN10chibios_rt7Mailbox13getFreeCountIEv:00000000 $t
+     /tmp/ccfOErtk.s:2135   .text._ZN10chibios_rt7Mailbox13getFreeCountIEv:00000000 _ZN10chibios_rt7Mailbox13getFreeCountIEv
+     /tmp/ccfOErtk.s:2143   .text._ZN10chibios_rt7Mailbox13getUsedCountIEv:00000000 $t
+     /tmp/ccfOErtk.s:2149   .text._ZN10chibios_rt7Mailbox13getUsedCountIEv:00000000 _ZN10chibios_rt7Mailbox13getUsedCountIEv
+ARM GAS  /tmp/ccfOErtk.s 			page 51
 
 
-     /tmp/ccqPMoYJ.s:2157   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE:00000000 $t
-     /tmp/ccqPMoYJ.s:2163   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE:00000000 _ZN10chibios_rt10MemoryPoolC2EjPFPvjE
-     /tmp/ccqPMoYJ.s:2163   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE:00000000 _ZN10chibios_rt10MemoryPoolC1EjPFPvjE
-     /tmp/ccqPMoYJ.s:2175   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:00000000 $t
-     /tmp/ccqPMoYJ.s:2181   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:00000000 _ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j
-     /tmp/ccqPMoYJ.s:2181   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:00000000 _ZN10chibios_rt10MemoryPoolC1EjPFPvjES1_j
-     /tmp/ccqPMoYJ.s:2199   .text._ZN10chibios_rt10MemoryPool9loadArrayEPvj:00000000 $t
-     /tmp/ccqPMoYJ.s:2205   .text._ZN10chibios_rt10MemoryPool9loadArrayEPvj:00000000 _ZN10chibios_rt10MemoryPool9loadArrayEPvj
-     /tmp/ccqPMoYJ.s:2212   .text._ZN10chibios_rt10MemoryPool6allocIEv:00000000 $t
-     /tmp/ccqPMoYJ.s:2218   .text._ZN10chibios_rt10MemoryPool6allocIEv:00000000 _ZN10chibios_rt10MemoryPool6allocIEv
-     /tmp/ccqPMoYJ.s:2225   .text._ZN10chibios_rt10MemoryPool5allocEv:00000000 $t
-     /tmp/ccqPMoYJ.s:2231   .text._ZN10chibios_rt10MemoryPool5allocEv:00000000 _ZN10chibios_rt10MemoryPool5allocEv
-     /tmp/ccqPMoYJ.s:2238   .text._ZN10chibios_rt10MemoryPool4freeEPv:00000000 $t
-     /tmp/ccqPMoYJ.s:2244   .text._ZN10chibios_rt10MemoryPool4freeEPv:00000000 _ZN10chibios_rt10MemoryPool4freeEPv
-     /tmp/ccqPMoYJ.s:2251   .text._ZN10chibios_rt10MemoryPool5freeIEPv:00000000 $t
-     /tmp/ccqPMoYJ.s:2257   .text._ZN10chibios_rt10MemoryPool5freeIEPv:00000000 _ZN10chibios_rt10MemoryPool5freeIEPv
-     /tmp/ccqPMoYJ.s:2308   .rodata._ZTVN10chibios_rt15ThreadReferenceE:00000000 _ZTVN10chibios_rt15ThreadReferenceE
-     /tmp/ccqPMoYJ.s:2270   .rodata._ZTVN10chibios_rt10BaseThreadE:00000000 _ZTVN10chibios_rt10BaseThreadE
-     /tmp/ccqPMoYJ.s:2266   .rodata._ZTVN10chibios_rt10BaseThreadE:00000000 $d
-     /tmp/ccqPMoYJ.s:2277   .rodata.str1.4:00000000 $d
-     /tmp/ccqPMoYJ.s:2304   .rodata._ZTVN10chibios_rt15ThreadReferenceE:00000000 $d
-     /tmp/ccqPMoYJ.s:68     .text._ZN10chibios_rt15ThreadReference4stopEv:0000000c $t
-     /tmp/ccqPMoYJ.s:174    .text._ZN10chibios_rt6System7getTimeEv:0000000c $t
-     /tmp/ccqPMoYJ.s:199    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000018 $t
-     /tmp/ccqPMoYJ.s:362    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000028 $t
-     /tmp/ccqPMoYJ.s:408    .text._ZN10chibios_rt15ThreadReference6resumeEl:0000003c $t
-     /tmp/ccqPMoYJ.s:448    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000034 $t
-     /tmp/ccqPMoYJ.s:475    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000024 $t
-     /tmp/ccqPMoYJ.s:506    .text._ZN10chibios_rt15ThreadReference4waitEv:00000028 $t
-     /tmp/ccqPMoYJ.s:571    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000024 $t
-     /tmp/ccqPMoYJ.s:598    .text._ZN10chibios_rt15ThreadReference10getMessageEv:0000001c $t
-     /tmp/ccqPMoYJ.s:758    .text._ZN10chibios_rt10BaseThread7setNameEPKc:0000000c $t
-     /tmp/ccqPMoYJ.s:818    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000014 $t
-     /tmp/ccqPMoYJ.s:880    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000018 $t
+     /tmp/ccfOErtk.s:2157   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE:00000000 $t
+     /tmp/ccfOErtk.s:2163   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE:00000000 _ZN10chibios_rt10MemoryPoolC2EjPFPvjE
+     /tmp/ccfOErtk.s:2163   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE:00000000 _ZN10chibios_rt10MemoryPoolC1EjPFPvjE
+     /tmp/ccfOErtk.s:2175   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:00000000 $t
+     /tmp/ccfOErtk.s:2181   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:00000000 _ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j
+     /tmp/ccfOErtk.s:2181   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:00000000 _ZN10chibios_rt10MemoryPoolC1EjPFPvjES1_j
+     /tmp/ccfOErtk.s:2199   .text._ZN10chibios_rt10MemoryPool9loadArrayEPvj:00000000 $t
+     /tmp/ccfOErtk.s:2205   .text._ZN10chibios_rt10MemoryPool9loadArrayEPvj:00000000 _ZN10chibios_rt10MemoryPool9loadArrayEPvj
+     /tmp/ccfOErtk.s:2212   .text._ZN10chibios_rt10MemoryPool6allocIEv:00000000 $t
+     /tmp/ccfOErtk.s:2218   .text._ZN10chibios_rt10MemoryPool6allocIEv:00000000 _ZN10chibios_rt10MemoryPool6allocIEv
+     /tmp/ccfOErtk.s:2225   .text._ZN10chibios_rt10MemoryPool5allocEv:00000000 $t
+     /tmp/ccfOErtk.s:2231   .text._ZN10chibios_rt10MemoryPool5allocEv:00000000 _ZN10chibios_rt10MemoryPool5allocEv
+     /tmp/ccfOErtk.s:2238   .text._ZN10chibios_rt10MemoryPool4freeEPv:00000000 $t
+     /tmp/ccfOErtk.s:2244   .text._ZN10chibios_rt10MemoryPool4freeEPv:00000000 _ZN10chibios_rt10MemoryPool4freeEPv
+     /tmp/ccfOErtk.s:2251   .text._ZN10chibios_rt10MemoryPool5freeIEPv:00000000 $t
+     /tmp/ccfOErtk.s:2257   .text._ZN10chibios_rt10MemoryPool5freeIEPv:00000000 _ZN10chibios_rt10MemoryPool5freeIEPv
+     /tmp/ccfOErtk.s:2308   .rodata._ZTVN10chibios_rt15ThreadReferenceE:00000000 _ZTVN10chibios_rt15ThreadReferenceE
+     /tmp/ccfOErtk.s:2270   .rodata._ZTVN10chibios_rt10BaseThreadE:00000000 _ZTVN10chibios_rt10BaseThreadE
+     /tmp/ccfOErtk.s:2266   .rodata._ZTVN10chibios_rt10BaseThreadE:00000000 $d
+     /tmp/ccfOErtk.s:2277   .rodata.str1.4:00000000 $d
+     /tmp/ccfOErtk.s:2304   .rodata._ZTVN10chibios_rt15ThreadReferenceE:00000000 $d
+     /tmp/ccfOErtk.s:68     .text._ZN10chibios_rt15ThreadReference4stopEv:0000000c $t
+     /tmp/ccfOErtk.s:174    .text._ZN10chibios_rt6System7getTimeEv:0000000c $t
+     /tmp/ccfOErtk.s:199    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000018 $t
+     /tmp/ccfOErtk.s:362    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000028 $t
+     /tmp/ccfOErtk.s:408    .text._ZN10chibios_rt15ThreadReference6resumeEl:0000003c $t
+     /tmp/ccfOErtk.s:448    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000034 $t
+     /tmp/ccfOErtk.s:475    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000024 $t
+     /tmp/ccfOErtk.s:506    .text._ZN10chibios_rt15ThreadReference4waitEv:00000028 $t
+     /tmp/ccfOErtk.s:571    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000024 $t
+     /tmp/ccfOErtk.s:598    .text._ZN10chibios_rt15ThreadReference10getMessageEv:0000001c $t
+     /tmp/ccfOErtk.s:758    .text._ZN10chibios_rt10BaseThread7setNameEPKc:0000000c $t
+     /tmp/ccfOErtk.s:818    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000014 $t
+     /tmp/ccfOErtk.s:880    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000018 $t
 
 UNDEFINED SYMBOLS
 chDbgPanic
@@ -3052,7 +3052,7 @@ chThdWait
 chMsgSend
 chMsgRelease
 chEvtSignal
-ARM GAS  /tmp/ccqPMoYJ.s 			page 52
+ARM GAS  /tmp/ccfOErtk.s 			page 52
 
 
 chEvtSignalI
@@ -3112,7 +3112,7 @@ chIQPutI
 chIQGetTimeout
 chIQReadTimeout
 chOQInit
-ARM GAS  /tmp/ccqPMoYJ.s 			page 53
+ARM GAS  /tmp/ccfOErtk.s 			page 53
 
 
 chOQResetI

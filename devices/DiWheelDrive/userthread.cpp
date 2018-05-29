@@ -97,7 +97,7 @@ const int greyOff = whiteOn; // Where grey is completely off again
 
 int vcnl4020AmbientLight[4] = {0};
 int vcnl4020Proximity[4] = {0};
-int vcnl4020ObstacleProximity[8] = {0};
+int prox[8] = {0};
 
 // Border for the discrimination between black and white
 const int discrBlackWhite = 16000; // border in "raw sensor values"
@@ -337,20 +337,58 @@ states getNextPolicy() {
 }
 //Follow the Wall
 void wallFollowing(int (&rpmFuzzyCtrl)[2]){
+	int obSpeed = 2;
+	bool obstacle = true;
 	int direction = 0;
-	if(global.robot.getProximityRingValue(3) <= global.robot.getProximityRingValue(4)){
-		direction = 1;
-		copyRpmSpeed(rpmTurnLeft, rpmFuzzyCtrl);
-	} else {
-		direction = -1;
-		copyRpmSpeed(rpmTurnRight, rpmFuzzyCtrl);
-	}
+	int drive[2] = {0,0};
 	
+	while(obstacle){
+		int help = 0;
+		// get all Proximity Sensor values
+		for(int i = 0; i < 8; i++){
+			prox[i] = global.robot.getProximityRingValue(i);
+			if(prox[i] < 300){
+				help++;
+			}
+		}
+		if(help == 8){
+			break;
+		}
+		// look for the direction to turn
+		if(prox[3] <= prox[4] && ((prox[3] > 600)||(prox[4] > 600))){
+			direction = 1; //turn left
+			setRpmSpeed(rpmTurnLeft);
+		} else if((prox[3] > 600)||(prox[4] > 600)) {
+			direction = -1;
+			setRpmSpeed(rpmTurnRight);
+		}
+		if(direction > 0){
+			if(prox[5] < 1200){
+				drive[0] = 10*obSpeed;			//static_cast<int>(2 + (1200 - prox[5])/50.0)*obSpeed;
+				drive[1] = 3*obSpeed;
+			} else if(prox[5] > 2000){
+				drive[1] = 10*obSpeed;			//static_cast<int>(2 + (prox[5] - 2000)/150.0)*obSpeed;
+				drive[0] = 3*obSpeed;
+			} else{
+				drive[0] = 4*obSpeed;
+				drive[1] = 4*obSpeed;
+			}
+		} else {
+			if(prox[2] < 1200){
+				drive[1] = 10*obSpeed;			//static_cast<int>(2 + (1200 - prox[2])/50.0)*obSpeed;
+				drive[0] = 3*obSpeed;
+			} else if(prox[2] > 2000){
+				drive[0] = 10*obSpeed;			//static_cast<int>(2 + (prox[2] - 2000)/150.0)*obSpeed;
+				drive[1] = 3*obSpeed;
+			} else{
+				drive[0] = 10*obSpeed;
+				drive[1] = 3*obSpeed;
+			}
+		
+		}
+		setRpmSpeed(drive); 
 	
-	
-	
-	
-	
+	}	
 }
 
 
@@ -428,7 +466,7 @@ UserThread::main()
                 
             }
             for (int i = 0; i < 8; i++) {
-				vcnl4020ObstacleProximity[i] = global.vcnlq4020[i].getProximityScaledWoOffset();
+				prox[i] = global.vcnlq4020[i].getProximityScaledWoOffset();
 				//chprintf((BaseSequentialStream*) &SD1, "0x%04X   ", vcnl4020ObstacleProximity[i]);
 			}
 

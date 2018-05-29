@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccdKfMeM.s 			page 1
+ARM GAS  /tmp/ccSqGUuH.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
   55              	.L5:
   56 0010 08000000 		.word	.LANCHOR0+8
   57              		.size	_ZN5amiro8VCNL4020D0Ev, .-_ZN5amiro8VCNL4020D0Ev
-ARM GAS  /tmp/ccdKfMeM.s 			page 2
+ARM GAS  /tmp/ccSqGUuH.s 			page 2
 
 
   58 0014 AFF30080 		.section	.text.startup._ZN5amiro8VCNL40204mainEv,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
  110 007e C4F8F431 		str	r3, [r4, #500]
  111 0082 40B1     		cbz	r0, .L19
  112 0084 2B68     		ldr	r3, [r5]
-ARM GAS  /tmp/ccdKfMeM.s 			page 3
+ARM GAS  /tmp/ccSqGUuH.s 			page 3
 
 
  113 0086 2846     		mov	r0, r5
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
  167 0116 2846     		mov	r0, r5
  168 0118 1B6A     		ldr	r3, [r3, #32]
  169 011a 9847     		blx	r3
-ARM GAS  /tmp/ccdKfMeM.s 			page 4
+ARM GAS  /tmp/ccSqGUuH.s 			page 4
 
 
  170 011c 04F5F070 		add	r0, r4, #480
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
  222              		.section	.text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE,"ax",%progbits
  223              		.align	2
  224              		.p2align 4,,15
-ARM GAS  /tmp/ccdKfMeM.s 			page 5
+ARM GAS  /tmp/ccSqGUuH.s 			page 5
 
 
  225              		.global	_ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
  277              		.thumb_func
  278              		.type	_ZN5amiro8VCNL402018setProximityOffsetEt, %function
  279              	_ZN5amiro8VCNL402018setProximityOffsetEt:
-ARM GAS  /tmp/ccdKfMeM.s 			page 6
+ARM GAS  /tmp/ccSqGUuH.s 			page 6
 
 
  280              		@ args = 0, pretend = 0, frame = 0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
  328              		.global	__aeabi_i2f
  329              		.global	__aeabi_ui2f
  330              		.global	__aeabi_fdiv
-ARM GAS  /tmp/ccdKfMeM.s 			page 7
+ARM GAS  /tmp/ccSqGUuH.s 			page 7
 
 
  331              		.global	__aeabi_fmul
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
  383 0004 00F5F675 		add	r5, r0, #492
  384 0008 03AC     		add	r4, sp, #12
  385 000a 0646     		mov	r6, r0
-ARM GAS  /tmp/ccdKfMeM.s 			page 8
+ARM GAS  /tmp/ccSqGUuH.s 			page 8
 
 
  386 000c 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
  437 0014 FFF7FEFF 		bl	_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
  438 0018 B6F8E651 		ldrh	r5, [r6, #486]
  439 001c 0224     		movs	r4, #2
-ARM GAS  /tmp/ccdKfMeM.s 			page 9
+ARM GAS  /tmp/ccSqGUuH.s 			page 9
 
 
  440              	.L43:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
  494 0004 1A60     		str	r2, [r3]
  495 0006 5A60     		str	r2, [r3, #4]
  496 0008 7047     		bx	lr
-ARM GAS  /tmp/ccdKfMeM.s 			page 10
+ARM GAS  /tmp/ccSqGUuH.s 			page 10
 
 
  497              	.L48:
@@ -592,67 +592,67 @@ ARM GAS  /tmp/ccdKfMeM.s 			page 1
  540 0014 00000000 		.word	_ZN5amiro8VCNL4020D1Ev
  541 0018 00000000 		.word	_ZN5amiro8VCNL4020D0Ev
  542 001c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccdKfMeM.s 			page 11
+ARM GAS  /tmp/ccSqGUuH.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 vcnl4020.cpp
-     /tmp/ccdKfMeM.s:16     .text._ZN5amiro8VCNL4020D2Ev:00000000 $t
-     /tmp/ccdKfMeM.s:22     .text._ZN5amiro8VCNL4020D2Ev:00000000 _ZN5amiro8VCNL4020D2Ev
-     /tmp/ccdKfMeM.s:32     .text._ZN5amiro8VCNL4020D2Ev:00000008 $d
-     /tmp/ccdKfMeM.s:22     .text._ZN5amiro8VCNL4020D2Ev:00000000 _ZN5amiro8VCNL4020D1Ev
-     /tmp/ccdKfMeM.s:37     .text._ZN5amiro8VCNL4020D0Ev:00000000 $t
-     /tmp/ccdKfMeM.s:43     .text._ZN5amiro8VCNL4020D0Ev:00000000 _ZN5amiro8VCNL4020D0Ev
-     /tmp/ccdKfMeM.s:56     .text._ZN5amiro8VCNL4020D0Ev:00000010 $d
-     /tmp/ccdKfMeM.s:59     .text.startup._ZN5amiro8VCNL40204mainEv:00000000 $t
-     /tmp/ccdKfMeM.s:65     .text.startup._ZN5amiro8VCNL40204mainEv:00000000 _ZN5amiro8VCNL40204mainEv
-     /tmp/ccdKfMeM.s:187    .text.startup._ZN5amiro8VCNL40204mainEv:00000140 $d
-     /tmp/ccdKfMeM.s:190    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
-     /tmp/ccdKfMeM.s:196    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
-     /tmp/ccdKfMeM.s:219    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
-     /tmp/ccdKfMeM.s:223    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:00000000 $t
-     /tmp/ccdKfMeM.s:229    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:00000000 _ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE
-     /tmp/ccdKfMeM.s:254    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:00000038 $d
-     /tmp/ccdKfMeM.s:229    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:00000000 _ZN5amiro8VCNL4020C1EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE
-     /tmp/ccdKfMeM.s:259    .text._ZN5amiro8VCNL402015getAmbientLightEv:00000000 $t
-     /tmp/ccdKfMeM.s:265    .text._ZN5amiro8VCNL402015getAmbientLightEv:00000000 _ZN5amiro8VCNL402015getAmbientLightEv
-     /tmp/ccdKfMeM.s:273    .text._ZN5amiro8VCNL402018setProximityOffsetEt:00000000 $t
-     /tmp/ccdKfMeM.s:279    .text._ZN5amiro8VCNL402018setProximityOffsetEt:00000000 _ZN5amiro8VCNL402018setProximityOffsetEt
-     /tmp/ccdKfMeM.s:287    .text._ZN5amiro8VCNL402018getProximityOffsetEv:00000000 $t
-     /tmp/ccdKfMeM.s:293    .text._ZN5amiro8VCNL402018getProximityOffsetEv:00000000 _ZN5amiro8VCNL402018getProximityOffsetEv
-     /tmp/ccdKfMeM.s:301    .text._ZN5amiro8VCNL402014getEventSourceEv:00000000 $t
-     /tmp/ccdKfMeM.s:307    .text._ZN5amiro8VCNL402014getEventSourceEv:00000000 _ZN5amiro8VCNL402014getEventSourceEv
-     /tmp/ccdKfMeM.s:315    .text._ZN5amiro8VCNL402012getProximityEv:00000000 $t
-     /tmp/ccdKfMeM.s:321    .text._ZN5amiro8VCNL402012getProximityEv:00000000 _ZN5amiro8VCNL402012getProximityEv
-     /tmp/ccdKfMeM.s:334    .text._ZN5amiro8VCNL402026getProximityScaledWoOffsetEv:00000000 $t
-     /tmp/ccdKfMeM.s:340    .text._ZN5amiro8VCNL402026getProximityScaledWoOffsetEv:00000000 _ZN5amiro8VCNL402026getProximityScaledWoOffsetEv
-     /tmp/ccdKfMeM.s:369    .text._ZN5amiro8VCNL402026getProximityScaledWoOffsetEv:0000003c $d
-     /tmp/ccdKfMeM.s:372    .text._ZN5amiro8VCNL40208getCheckEv:00000000 $t
-     /tmp/ccdKfMeM.s:378    .text._ZN5amiro8VCNL40208getCheckEv:00000000 _ZN5amiro8VCNL40208getCheckEv
-     /tmp/ccdKfMeM.s:420    .text._ZN5amiro8VCNL402015calibrateOffsetERt:00000000 $t
-     /tmp/ccdKfMeM.s:426    .text._ZN5amiro8VCNL402015calibrateOffsetERt:00000000 _ZN5amiro8VCNL402015calibrateOffsetERt
-     /tmp/ccdKfMeM.s:460    .text._ZN5amiro8VCNL40209calibrateEv:00000000 $t
-     /tmp/ccdKfMeM.s:466    .text._ZN5amiro8VCNL40209calibrateEv:00000000 _ZN5amiro8VCNL40209calibrateEv
-     /tmp/ccdKfMeM.s:483    .text.startup._GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev:00000000 $t
-     /tmp/ccdKfMeM.s:488    .text.startup._GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev:00000000 _GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev
-     /tmp/ccdKfMeM.s:500    .text.startup._GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev:0000000c $d
-     /tmp/ccdKfMeM.s:504    .init_array:00000000 $d
-     /tmp/ccdKfMeM.s:511    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
-     /tmp/ccdKfMeM.s:508    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
-     /tmp/ccdKfMeM.s:534    .rodata._ZTVN5amiro8VCNL4020E:00000000 _ZTVN5amiro8VCNL4020E
-     /tmp/ccdKfMeM.s:519    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccdKfMeM.s:523    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccdKfMeM.s:526    .rodata.str1.4:00000000 $d
-     /tmp/ccdKfMeM.s:530    .rodata._ZTVN5amiro8VCNL4020E:00000000 $d
-     /tmp/ccdKfMeM.s:36     .text._ZN5amiro8VCNL4020D2Ev:0000000c $t
-     /tmp/ccdKfMeM.s:58     .text._ZN5amiro8VCNL4020D0Ev:00000014 $t
-     /tmp/ccdKfMeM.s:189    .text.startup._ZN5amiro8VCNL40204mainEv:00000144 $t
-     /tmp/ccdKfMeM.s:258    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:0000003c $t
-     /tmp/ccdKfMeM.s:503    .text.startup._GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev:00000014 $t
+     /tmp/ccSqGUuH.s:16     .text._ZN5amiro8VCNL4020D2Ev:00000000 $t
+     /tmp/ccSqGUuH.s:22     .text._ZN5amiro8VCNL4020D2Ev:00000000 _ZN5amiro8VCNL4020D2Ev
+     /tmp/ccSqGUuH.s:32     .text._ZN5amiro8VCNL4020D2Ev:00000008 $d
+     /tmp/ccSqGUuH.s:22     .text._ZN5amiro8VCNL4020D2Ev:00000000 _ZN5amiro8VCNL4020D1Ev
+     /tmp/ccSqGUuH.s:37     .text._ZN5amiro8VCNL4020D0Ev:00000000 $t
+     /tmp/ccSqGUuH.s:43     .text._ZN5amiro8VCNL4020D0Ev:00000000 _ZN5amiro8VCNL4020D0Ev
+     /tmp/ccSqGUuH.s:56     .text._ZN5amiro8VCNL4020D0Ev:00000010 $d
+     /tmp/ccSqGUuH.s:59     .text.startup._ZN5amiro8VCNL40204mainEv:00000000 $t
+     /tmp/ccSqGUuH.s:65     .text.startup._ZN5amiro8VCNL40204mainEv:00000000 _ZN5amiro8VCNL40204mainEv
+     /tmp/ccSqGUuH.s:187    .text.startup._ZN5amiro8VCNL40204mainEv:00000140 $d
+     /tmp/ccSqGUuH.s:190    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/ccSqGUuH.s:196    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/ccSqGUuH.s:219    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/ccSqGUuH.s:223    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:00000000 $t
+     /tmp/ccSqGUuH.s:229    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:00000000 _ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE
+     /tmp/ccSqGUuH.s:254    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:00000038 $d
+     /tmp/ccSqGUuH.s:229    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:00000000 _ZN5amiro8VCNL4020C1EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE
+     /tmp/ccSqGUuH.s:259    .text._ZN5amiro8VCNL402015getAmbientLightEv:00000000 $t
+     /tmp/ccSqGUuH.s:265    .text._ZN5amiro8VCNL402015getAmbientLightEv:00000000 _ZN5amiro8VCNL402015getAmbientLightEv
+     /tmp/ccSqGUuH.s:273    .text._ZN5amiro8VCNL402018setProximityOffsetEt:00000000 $t
+     /tmp/ccSqGUuH.s:279    .text._ZN5amiro8VCNL402018setProximityOffsetEt:00000000 _ZN5amiro8VCNL402018setProximityOffsetEt
+     /tmp/ccSqGUuH.s:287    .text._ZN5amiro8VCNL402018getProximityOffsetEv:00000000 $t
+     /tmp/ccSqGUuH.s:293    .text._ZN5amiro8VCNL402018getProximityOffsetEv:00000000 _ZN5amiro8VCNL402018getProximityOffsetEv
+     /tmp/ccSqGUuH.s:301    .text._ZN5amiro8VCNL402014getEventSourceEv:00000000 $t
+     /tmp/ccSqGUuH.s:307    .text._ZN5amiro8VCNL402014getEventSourceEv:00000000 _ZN5amiro8VCNL402014getEventSourceEv
+     /tmp/ccSqGUuH.s:315    .text._ZN5amiro8VCNL402012getProximityEv:00000000 $t
+     /tmp/ccSqGUuH.s:321    .text._ZN5amiro8VCNL402012getProximityEv:00000000 _ZN5amiro8VCNL402012getProximityEv
+     /tmp/ccSqGUuH.s:334    .text._ZN5amiro8VCNL402026getProximityScaledWoOffsetEv:00000000 $t
+     /tmp/ccSqGUuH.s:340    .text._ZN5amiro8VCNL402026getProximityScaledWoOffsetEv:00000000 _ZN5amiro8VCNL402026getProximityScaledWoOffsetEv
+     /tmp/ccSqGUuH.s:369    .text._ZN5amiro8VCNL402026getProximityScaledWoOffsetEv:0000003c $d
+     /tmp/ccSqGUuH.s:372    .text._ZN5amiro8VCNL40208getCheckEv:00000000 $t
+     /tmp/ccSqGUuH.s:378    .text._ZN5amiro8VCNL40208getCheckEv:00000000 _ZN5amiro8VCNL40208getCheckEv
+     /tmp/ccSqGUuH.s:420    .text._ZN5amiro8VCNL402015calibrateOffsetERt:00000000 $t
+     /tmp/ccSqGUuH.s:426    .text._ZN5amiro8VCNL402015calibrateOffsetERt:00000000 _ZN5amiro8VCNL402015calibrateOffsetERt
+     /tmp/ccSqGUuH.s:460    .text._ZN5amiro8VCNL40209calibrateEv:00000000 $t
+     /tmp/ccSqGUuH.s:466    .text._ZN5amiro8VCNL40209calibrateEv:00000000 _ZN5amiro8VCNL40209calibrateEv
+     /tmp/ccSqGUuH.s:483    .text.startup._GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev:00000000 $t
+     /tmp/ccSqGUuH.s:488    .text.startup._GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev:00000000 _GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev
+     /tmp/ccSqGUuH.s:500    .text.startup._GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev:0000000c $d
+     /tmp/ccSqGUuH.s:504    .init_array:00000000 $d
+     /tmp/ccSqGUuH.s:511    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/ccSqGUuH.s:508    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/ccSqGUuH.s:534    .rodata._ZTVN5amiro8VCNL4020E:00000000 _ZTVN5amiro8VCNL4020E
+     /tmp/ccSqGUuH.s:519    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccSqGUuH.s:523    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccSqGUuH.s:526    .rodata.str1.4:00000000 $d
+     /tmp/ccSqGUuH.s:530    .rodata._ZTVN5amiro8VCNL4020E:00000000 $d
+     /tmp/ccSqGUuH.s:36     .text._ZN5amiro8VCNL4020D2Ev:0000000c $t
+     /tmp/ccSqGUuH.s:58     .text._ZN5amiro8VCNL4020D0Ev:00000014 $t
+     /tmp/ccSqGUuH.s:189    .text.startup._ZN5amiro8VCNL40204mainEv:00000144 $t
+     /tmp/ccSqGUuH.s:258    .text._ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE:0000003c $t
+     /tmp/ccSqGUuH.s:503    .text.startup._GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev:00000014 $t
 
 UNDEFINED SYMBOLS
 _ZdlPv
-ARM GAS  /tmp/ccdKfMeM.s 			page 12
+ARM GAS  /tmp/ccSqGUuH.s 			page 12
 
 
 _ZN10chibios_rt10BaseThread7setNameEPKc

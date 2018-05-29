@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccuT4AOw.s 			page 1
+ARM GAS  /tmp/ccM3yuJj.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccuT4AOw.s 			page 1
   53 0012 A4B2     		uxth	r4, r4
   54 0014 E205     		lsls	r2, r4, #23
   55 0016 61D4     		bmi	.L55
-ARM GAS  /tmp/ccuT4AOw.s 			page 2
+ARM GAS  /tmp/ccM3yuJj.s 			page 2
 
 
   56              	.L5:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccuT4AOw.s 			page 1
  110 0088 83F31188 		msr     BASEPRI, r3
  111              	@ 0 "" 2
  112              		.thumb
-ARM GAS  /tmp/ccuT4AOw.s 			page 3
+ARM GAS  /tmp/ccM3yuJj.s 			page 3
 
 
  113 008c 3906     		lsls	r1, r7, #24
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccuT4AOw.s 			page 1
  167 00fe 2B80     		strh	r3, [r5]	@ movhi
  168 0100 8AE7     		b	.L5
  169              	.L57:
-ARM GAS  /tmp/ccuT4AOw.s 			page 4
+ARM GAS  /tmp/ccM3yuJj.s 			page 4
 
 
  170 0102 2023     		movs	r3, #32
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccuT4AOw.s 			page 1
  223 0000 10B5     		push	{r4, lr}
  224 0002 054C     		ldr	r4, .L64
  225 0004 0021     		movs	r1, #0
-ARM GAS  /tmp/ccuT4AOw.s 			page 5
+ARM GAS  /tmp/ccM3yuJj.s 			page 5
 
 
  226 0006 2046     		mov	r0, r4
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccuT4AOw.s 			page 1
  278 0044 9A81     		strh	r2, [r3, #12]	@ movhi
  279 0046 1980     		strh	r1, [r3]	@ movhi
  280 0048 1A88     		ldrh	r2, [r3]
-ARM GAS  /tmp/ccuT4AOw.s 			page 6
+ARM GAS  /tmp/ccM3yuJj.s 			page 6
 
 
  281 004a 9B88     		ldrh	r3, [r3, #4]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccuT4AOw.s 			page 1
  334              	.L81:
  335 002a 00BF     		.align	2
  336              	.L80:
-ARM GAS  /tmp/ccuT4AOw.s 			page 7
+ARM GAS  /tmp/ccM3yuJj.s 			page 7
 
 
  337 002c 00000000 		.word	.LANCHOR0
@@ -390,35 +390,35 @@ ARM GAS  /tmp/ccuT4AOw.s 			page 1
  358      00000000 
  358      00000000 
  359              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccuT4AOw.s 			page 8
+ARM GAS  /tmp/ccM3yuJj.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 serial_lld.c
-     /tmp/ccuT4AOw.s:16     .text.notify1:00000000 $t
-     /tmp/ccuT4AOw.s:21     .text.notify1:00000000 notify1
-     /tmp/ccuT4AOw.s:34     .text.notify1:00000010 $d
-     /tmp/ccuT4AOw.s:37     .text.VectorD4:00000000 $t
-     /tmp/ccuT4AOw.s:43     .text.VectorD4:00000000 VectorD4
-     /tmp/ccuT4AOw.s:209    .text.VectorD4:0000014c $d
-     /tmp/ccuT4AOw.s:214    .text.sd_lld_init:00000000 $t
-     /tmp/ccuT4AOw.s:220    .text.sd_lld_init:00000000 sd_lld_init
-     /tmp/ccuT4AOw.s:235    .text.sd_lld_init:00000018 $d
-     /tmp/ccuT4AOw.s:240    .text.sd_lld_start:00000000 $t
-     /tmp/ccuT4AOw.s:246    .text.sd_lld_start:00000000 sd_lld_start
-     /tmp/ccuT4AOw.s:298    .text.sd_lld_start:00000068 $d
-     /tmp/ccuT4AOw.s:304    .text.sd_lld_stop:00000000 $t
-     /tmp/ccuT4AOw.s:310    .text.sd_lld_stop:00000000 sd_lld_stop
-     /tmp/ccuT4AOw.s:337    .text.sd_lld_stop:0000002c $d
-     /tmp/ccuT4AOw.s:357    .bss.SD1:00000000 SD1
-     /tmp/ccuT4AOw.s:342    .rodata.default_config:00000000 $d
-     /tmp/ccuT4AOw.s:346    .rodata.default_config:00000000 default_config
-     /tmp/ccuT4AOw.s:353    .bss.SD1:00000000 $d
-     /tmp/ccuT4AOw.s:36     .text.notify1:00000014 $t
-     /tmp/ccuT4AOw.s:213    .text.VectorD4:00000158 $t
-     /tmp/ccuT4AOw.s:239    .text.sd_lld_init:00000024 $t
-     /tmp/ccuT4AOw.s:303    .text.sd_lld_start:00000078 $t
-     /tmp/ccuT4AOw.s:341    .text.sd_lld_stop:00000034 $t
+     /tmp/ccM3yuJj.s:16     .text.notify1:00000000 $t
+     /tmp/ccM3yuJj.s:21     .text.notify1:00000000 notify1
+     /tmp/ccM3yuJj.s:34     .text.notify1:00000010 $d
+     /tmp/ccM3yuJj.s:37     .text.VectorD4:00000000 $t
+     /tmp/ccM3yuJj.s:43     .text.VectorD4:00000000 VectorD4
+     /tmp/ccM3yuJj.s:209    .text.VectorD4:0000014c $d
+     /tmp/ccM3yuJj.s:214    .text.sd_lld_init:00000000 $t
+     /tmp/ccM3yuJj.s:220    .text.sd_lld_init:00000000 sd_lld_init
+     /tmp/ccM3yuJj.s:235    .text.sd_lld_init:00000018 $d
+     /tmp/ccM3yuJj.s:240    .text.sd_lld_start:00000000 $t
+     /tmp/ccM3yuJj.s:246    .text.sd_lld_start:00000000 sd_lld_start
+     /tmp/ccM3yuJj.s:298    .text.sd_lld_start:00000068 $d
+     /tmp/ccM3yuJj.s:304    .text.sd_lld_stop:00000000 $t
+     /tmp/ccM3yuJj.s:310    .text.sd_lld_stop:00000000 sd_lld_stop
+     /tmp/ccM3yuJj.s:337    .text.sd_lld_stop:0000002c $d
+     /tmp/ccM3yuJj.s:357    .bss.SD1:00000000 SD1
+     /tmp/ccM3yuJj.s:342    .rodata.default_config:00000000 $d
+     /tmp/ccM3yuJj.s:346    .rodata.default_config:00000000 default_config
+     /tmp/ccM3yuJj.s:353    .bss.SD1:00000000 $d
+     /tmp/ccM3yuJj.s:36     .text.notify1:00000014 $t
+     /tmp/ccM3yuJj.s:213    .text.VectorD4:00000158 $t
+     /tmp/ccM3yuJj.s:239    .text.sd_lld_init:00000024 $t
+     /tmp/ccM3yuJj.s:303    .text.sd_lld_start:00000078 $t
+     /tmp/ccM3yuJj.s:341    .text.sd_lld_stop:00000034 $t
 
 UNDEFINED SYMBOLS
 dbg_check_enter_isr

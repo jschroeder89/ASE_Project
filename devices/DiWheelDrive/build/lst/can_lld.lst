@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccN6oPXf.s 			page 1
+ARM GAS  /tmp/ccKw2EqE.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
   55 0054 2A4B     		ldr	r3, .L22+4
   56 0056 0026     		movs	r6, #0
   57 0058 0127     		movs	r7, #1
-ARM GAS  /tmp/ccN6oPXf.s 			page 2
+ARM GAS  /tmp/ccKw2EqE.s 			page 2
 
 
   58              	.L9:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  112 00ec C3F81412 		str	r1, [r3, #532]
  113 00f0 C3F80C22 		str	r2, [r3, #524]
  114 00f4 C3F81C22 		str	r2, [r3, #540]
-ARM GAS  /tmp/ccN6oPXf.s 			page 3
+ARM GAS  /tmp/ccKw2EqE.s 			page 3
 
 
  115 00f8 E3E7     		b	.L8
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  167              	.L29:
  168 004a 00BF     		.align	2
  169              	.L28:
-ARM GAS  /tmp/ccN6oPXf.s 			page 4
+ARM GAS  /tmp/ccKw2EqE.s 			page 4
 
 
  170 004c 00000000 		.word	.LANCHOR0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  224              	@ 0 "" 2
  225              		.thumb
  226 0050 FFF7FEFF 		bl	dbg_check_lock_from_isr
-ARM GAS  /tmp/ccN6oPXf.s 			page 5
+ARM GAS  /tmp/ccKw2EqE.s 			page 5
 
 
  227 0054 E369     		ldr	r3, [r4, #28]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  281              	@ 0 "" 2
  282              		.thumb
  283 0020 FFF7FEFF 		bl	dbg_check_lock_from_isr
-ARM GAS  /tmp/ccN6oPXf.s 			page 6
+ARM GAS  /tmp/ccKw2EqE.s 			page 6
 
 
  284 0024 1648     		ldr	r0, .L58+4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  338              		.global	Vector98
  339              		.thumb
  340              		.thumb_func
-ARM GAS  /tmp/ccN6oPXf.s 			page 7
+ARM GAS  /tmp/ccKw2EqE.s 			page 7
 
 
  341              		.type	Vector98, %function
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  395              		.thumb
  396 006e FFF7FEFF 		bl	dbg_check_lock_from_isr
  397 0072 05F13000 		add	r0, r5, #48
-ARM GAS  /tmp/ccN6oPXf.s 			page 8
+ARM GAS  /tmp/ccKw2EqE.s 			page 8
 
 
  398 0076 0021     		movs	r1, #0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  450 0000 194B     		ldr	r3, .L84
  451 0002 10B5     		push	{r4, lr}
  452 0004 9842     		cmp	r0, r3
-ARM GAS  /tmp/ccN6oPXf.s 			page 9
+ARM GAS  /tmp/ccKw2EqE.s 			page 9
 
 
  453 0006 0446     		mov	r4, r0
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  506      AFF30080 
  506      AFF30080 
  507              		.align	2
-ARM GAS  /tmp/ccN6oPXf.s 			page 10
+ARM GAS  /tmp/ccKw2EqE.s 			page 10
 
 
  508              		.p2align 4,,15
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  562              		@ link register save eliminated.
  563 0000 0329     		cmp	r1, #3
  564 0002 1AD8     		bhi	.L98
-ARM GAS  /tmp/ccN6oPXf.s 			page 11
+ARM GAS  /tmp/ccKw2EqE.s 			page 11
 
 
  565 0004 DFE801F0 		tbb	[pc, r1]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  619              		.align	1
  620              	.L105:
  621 000e 436B     		ldr	r3, [r0, #52]
-ARM GAS  /tmp/ccN6oPXf.s 			page 12
+ARM GAS  /tmp/ccKw2EqE.s 			page 12
 
 
  622 0010 03F5D073 		add	r3, r3, #416
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  674              		.thumb_func
  675              		.type	can_lld_is_rx_nonempty, %function
  676              	can_lld_is_rx_nonempty:
-ARM GAS  /tmp/ccN6oPXf.s 			page 13
+ARM GAS  /tmp/ccKw2EqE.s 			page 13
 
 
  677              		@ args = 0, pretend = 0, frame = 0
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  729 000e D3F8B041 		ldr	r4, [r3, #432]
  730 0012 D3F8B411 		ldr	r1, [r3, #436]
  731 0016 D3F8B831 		ldr	r3, [r3, #440]
-ARM GAS  /tmp/ccN6oPXf.s 			page 14
+ARM GAS  /tmp/ccKw2EqE.s 			page 14
 
 
  732 001a 2025     		movs	r5, #32
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  786 0090 436B     		ldr	r3, [r0, #52]
  787 0092 1D61     		str	r5, [r3, #16]
  788 0094 1869     		ldr	r0, [r3, #16]
-ARM GAS  /tmp/ccN6oPXf.s 			page 15
+ARM GAS  /tmp/ccKw2EqE.s 			page 15
 
 
  789 0096 8007     		lsls	r0, r0, #30
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  840              		@ link register save eliminated.
  841 0000 436B     		ldr	r3, [r0, #52]
  842 0002 1A68     		ldr	r2, [r3]
-ARM GAS  /tmp/ccN6oPXf.s 			page 16
+ARM GAS  /tmp/ccKw2EqE.s 			page 16
 
 
  843 0004 22F00202 		bic	r2, r2, #2
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  895              		.size	CAND1, 56
  896              	CAND1:
  897 0000 00000000 		.space	56
-ARM GAS  /tmp/ccN6oPXf.s 			page 17
+ARM GAS  /tmp/ccKw2EqE.s 			page 17
 
 
  897      00000000 
@@ -981,67 +981,67 @@ ARM GAS  /tmp/ccN6oPXf.s 			page 1
  904      696C7465 
  904      72732829 
  905 0031 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccN6oPXf.s 			page 18
+ARM GAS  /tmp/ccKw2EqE.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 can_lld.c
-     /tmp/ccN6oPXf.s:16     .text.can_lld_set_filters:00000000 $t
-     /tmp/ccN6oPXf.s:21     .text.can_lld_set_filters:00000000 can_lld_set_filters
-     /tmp/ccN6oPXf.s:119    .text.can_lld_set_filters:000000fc $d
-     /tmp/ccN6oPXf.s:123    .text.Vector8C:00000000 $t
-     /tmp/ccN6oPXf.s:129    .text.Vector8C:00000000 Vector8C
-     /tmp/ccN6oPXf.s:170    .text.Vector8C:0000004c $d
-     /tmp/ccN6oPXf.s:176    .text.Vector90:00000000 $t
-     /tmp/ccN6oPXf.s:182    .text.Vector90:00000000 Vector90
-     /tmp/ccN6oPXf.s:250    .text.Vector90:0000007c $d
-     /tmp/ccN6oPXf.s:256    .text.Vector94:00000000 $t
-     /tmp/ccN6oPXf.s:262    .text.Vector94:00000000 Vector94
-     /tmp/ccN6oPXf.s:330    .text.Vector94:0000007c $d
-     /tmp/ccN6oPXf.s:336    .text.Vector98:00000000 $t
-     /tmp/ccN6oPXf.s:342    .text.Vector98:00000000 Vector98
-     /tmp/ccN6oPXf.s:410    .text.Vector98:00000088 $d
-     /tmp/ccN6oPXf.s:414    .text.can_lld_init:00000000 $t
-     /tmp/ccN6oPXf.s:420    .text.can_lld_init:00000000 can_lld_init
-     /tmp/ccN6oPXf.s:437    .text.can_lld_init:0000001c $d
-     /tmp/ccN6oPXf.s:441    .text.can_lld_start:00000000 $t
-     /tmp/ccN6oPXf.s:447    .text.can_lld_start:00000000 can_lld_start
-     /tmp/ccN6oPXf.s:502    .text.can_lld_start:00000068 $d
-     /tmp/ccN6oPXf.s:507    .text.can_lld_stop:00000000 $t
-     /tmp/ccN6oPXf.s:513    .text.can_lld_stop:00000000 can_lld_stop
-     /tmp/ccN6oPXf.s:547    .text.can_lld_stop:00000040 $d
-     /tmp/ccN6oPXf.s:553    .text.can_lld_is_tx_empty:00000000 $t
-     /tmp/ccN6oPXf.s:559    .text.can_lld_is_tx_empty:00000000 can_lld_is_tx_empty
-     /tmp/ccN6oPXf.s:567    .text.can_lld_is_tx_empty:00000008 $d
-     /tmp/ccN6oPXf.s:571    .text.can_lld_is_tx_empty:0000000c $t
-     /tmp/ccN6oPXf.s:600    .text.can_lld_transmit:00000000 $t
-     /tmp/ccN6oPXf.s:606    .text.can_lld_transmit:00000000 can_lld_transmit
-     /tmp/ccN6oPXf.s:615    .text.can_lld_transmit:0000000a $d
-     /tmp/ccN6oPXf.s:619    .text.can_lld_transmit:0000000e $t
-     /tmp/ccN6oPXf.s:670    .text.can_lld_is_rx_nonempty:00000000 $t
-     /tmp/ccN6oPXf.s:676    .text.can_lld_is_rx_nonempty:00000000 can_lld_is_rx_nonempty
-     /tmp/ccN6oPXf.s:711    .text.can_lld_receive:00000000 $t
-     /tmp/ccN6oPXf.s:717    .text.can_lld_receive:00000000 can_lld_receive
-     /tmp/ccN6oPXf.s:814    .text.can_lld_sleep:00000000 $t
-     /tmp/ccN6oPXf.s:820    .text.can_lld_sleep:00000000 can_lld_sleep
-     /tmp/ccN6oPXf.s:831    .text.can_lld_wakeup:00000000 $t
-     /tmp/ccN6oPXf.s:837    .text.can_lld_wakeup:00000000 can_lld_wakeup
-     /tmp/ccN6oPXf.s:848    .text.canSTM32SetFilters:00000000 $t
-     /tmp/ccN6oPXf.s:854    .text.canSTM32SetFilters:00000000 canSTM32SetFilters
-     /tmp/ccN6oPXf.s:886    .text.canSTM32SetFilters:00000038 $d
-     /tmp/ccN6oPXf.s:896    .bss.CAND1:00000000 CAND1
-     /tmp/ccN6oPXf.s:892    .bss.CAND1:00000000 $d
-     /tmp/ccN6oPXf.s:899    .rodata.str1.4:00000000 $d
-     /tmp/ccN6oPXf.s:122    .text.can_lld_set_filters:00000104 $t
-     /tmp/ccN6oPXf.s:175    .text.Vector8C:0000005c $t
-     /tmp/ccN6oPXf.s:255    .text.Vector90:0000008c $t
-     /tmp/ccN6oPXf.s:335    .text.Vector94:0000008c $t
-     /tmp/ccN6oPXf.s:440    .text.can_lld_init:00000024 $t
-     /tmp/ccN6oPXf.s:506    .text.can_lld_start:00000074 $t
-     /tmp/ccN6oPXf.s:891    .text.canSTM32SetFilters:00000044 $t
+     /tmp/ccKw2EqE.s:16     .text.can_lld_set_filters:00000000 $t
+     /tmp/ccKw2EqE.s:21     .text.can_lld_set_filters:00000000 can_lld_set_filters
+     /tmp/ccKw2EqE.s:119    .text.can_lld_set_filters:000000fc $d
+     /tmp/ccKw2EqE.s:123    .text.Vector8C:00000000 $t
+     /tmp/ccKw2EqE.s:129    .text.Vector8C:00000000 Vector8C
+     /tmp/ccKw2EqE.s:170    .text.Vector8C:0000004c $d
+     /tmp/ccKw2EqE.s:176    .text.Vector90:00000000 $t
+     /tmp/ccKw2EqE.s:182    .text.Vector90:00000000 Vector90
+     /tmp/ccKw2EqE.s:250    .text.Vector90:0000007c $d
+     /tmp/ccKw2EqE.s:256    .text.Vector94:00000000 $t
+     /tmp/ccKw2EqE.s:262    .text.Vector94:00000000 Vector94
+     /tmp/ccKw2EqE.s:330    .text.Vector94:0000007c $d
+     /tmp/ccKw2EqE.s:336    .text.Vector98:00000000 $t
+     /tmp/ccKw2EqE.s:342    .text.Vector98:00000000 Vector98
+     /tmp/ccKw2EqE.s:410    .text.Vector98:00000088 $d
+     /tmp/ccKw2EqE.s:414    .text.can_lld_init:00000000 $t
+     /tmp/ccKw2EqE.s:420    .text.can_lld_init:00000000 can_lld_init
+     /tmp/ccKw2EqE.s:437    .text.can_lld_init:0000001c $d
+     /tmp/ccKw2EqE.s:441    .text.can_lld_start:00000000 $t
+     /tmp/ccKw2EqE.s:447    .text.can_lld_start:00000000 can_lld_start
+     /tmp/ccKw2EqE.s:502    .text.can_lld_start:00000068 $d
+     /tmp/ccKw2EqE.s:507    .text.can_lld_stop:00000000 $t
+     /tmp/ccKw2EqE.s:513    .text.can_lld_stop:00000000 can_lld_stop
+     /tmp/ccKw2EqE.s:547    .text.can_lld_stop:00000040 $d
+     /tmp/ccKw2EqE.s:553    .text.can_lld_is_tx_empty:00000000 $t
+     /tmp/ccKw2EqE.s:559    .text.can_lld_is_tx_empty:00000000 can_lld_is_tx_empty
+     /tmp/ccKw2EqE.s:567    .text.can_lld_is_tx_empty:00000008 $d
+     /tmp/ccKw2EqE.s:571    .text.can_lld_is_tx_empty:0000000c $t
+     /tmp/ccKw2EqE.s:600    .text.can_lld_transmit:00000000 $t
+     /tmp/ccKw2EqE.s:606    .text.can_lld_transmit:00000000 can_lld_transmit
+     /tmp/ccKw2EqE.s:615    .text.can_lld_transmit:0000000a $d
+     /tmp/ccKw2EqE.s:619    .text.can_lld_transmit:0000000e $t
+     /tmp/ccKw2EqE.s:670    .text.can_lld_is_rx_nonempty:00000000 $t
+     /tmp/ccKw2EqE.s:676    .text.can_lld_is_rx_nonempty:00000000 can_lld_is_rx_nonempty
+     /tmp/ccKw2EqE.s:711    .text.can_lld_receive:00000000 $t
+     /tmp/ccKw2EqE.s:717    .text.can_lld_receive:00000000 can_lld_receive
+     /tmp/ccKw2EqE.s:814    .text.can_lld_sleep:00000000 $t
+     /tmp/ccKw2EqE.s:820    .text.can_lld_sleep:00000000 can_lld_sleep
+     /tmp/ccKw2EqE.s:831    .text.can_lld_wakeup:00000000 $t
+     /tmp/ccKw2EqE.s:837    .text.can_lld_wakeup:00000000 can_lld_wakeup
+     /tmp/ccKw2EqE.s:848    .text.canSTM32SetFilters:00000000 $t
+     /tmp/ccKw2EqE.s:854    .text.canSTM32SetFilters:00000000 canSTM32SetFilters
+     /tmp/ccKw2EqE.s:886    .text.canSTM32SetFilters:00000038 $d
+     /tmp/ccKw2EqE.s:896    .bss.CAND1:00000000 CAND1
+     /tmp/ccKw2EqE.s:892    .bss.CAND1:00000000 $d
+     /tmp/ccKw2EqE.s:899    .rodata.str1.4:00000000 $d
+     /tmp/ccKw2EqE.s:122    .text.can_lld_set_filters:00000104 $t
+     /tmp/ccKw2EqE.s:175    .text.Vector8C:0000005c $t
+     /tmp/ccKw2EqE.s:255    .text.Vector90:0000008c $t
+     /tmp/ccKw2EqE.s:335    .text.Vector94:0000008c $t
+     /tmp/ccKw2EqE.s:440    .text.can_lld_init:00000024 $t
+     /tmp/ccKw2EqE.s:506    .text.can_lld_start:00000074 $t
+     /tmp/ccKw2EqE.s:891    .text.canSTM32SetFilters:00000044 $t
 
 UNDEFINED SYMBOLS
-ARM GAS  /tmp/ccN6oPXf.s 			page 19
+ARM GAS  /tmp/ccKw2EqE.s 			page 19
 
 
 dbg_check_enter_isr

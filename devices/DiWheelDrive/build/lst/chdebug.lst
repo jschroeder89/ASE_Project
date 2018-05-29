@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccbiiD83.s 			page 1
+ARM GAS  /tmp/cciCPpgE.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
   53              		.thumb
   54              		.thumb_func
   55              		.type	dbg_check_suspend, %function
-ARM GAS  /tmp/ccbiiD83.s 			page 2
+ARM GAS  /tmp/cciCPpgE.s 			page 2
 
 
   56              	dbg_check_suspend:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  108 0020 08BD     		pop	{r3, pc}
  109              	.L16:
  110 0022 00BF     		.align	2
-ARM GAS  /tmp/ccbiiD83.s 			page 3
+ARM GAS  /tmp/cciCPpgE.s 			page 3
 
 
  111              	.L15:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  161              		@ frame_needed = 0, uses_anonymous_args = 0
  162 0000 0A4B     		ldr	r3, .L32
  163 0002 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccbiiD83.s 			page 4
+ARM GAS  /tmp/cciCPpgE.s 			page 4
 
 
  164 0004 1B68     		ldr	r3, [r3]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  218              	.L43:
  219              		.align	2
  220              	.L42:
-ARM GAS  /tmp/ccbiiD83.s 			page 5
+ARM GAS  /tmp/cciCPpgE.s 			page 5
 
 
  221 0024 00000000 		.word	.LANCHOR0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  273              		@ args = 0, pretend = 0, frame = 0
  274              		@ frame_needed = 0, uses_anonymous_args = 0
  275 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccbiiD83.s 			page 6
+ARM GAS  /tmp/cciCPpgE.s 			page 6
 
 
  276 0002 2023     		movs	r3, #32
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  328 0008 0A4C     		ldr	r4, .L61
  329 000a 2368     		ldr	r3, [r4]
  330 000c 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccbiiD83.s 			page 7
+ARM GAS  /tmp/cciCPpgE.s 			page 7
 
 
  331 000e 02DD     		ble	.L58
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  383 001a FFF7FEFF 		bl	haltErrorCode
  384 001e BDE80840 		pop	{r3, lr}
  385 0022 FFF7FEBF 		b	port_halt
-ARM GAS  /tmp/ccbiiD83.s 			page 8
+ARM GAS  /tmp/cciCPpgE.s 			page 8
 
 
  386              	.L67:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  437              		@ frame_needed = 0, uses_anonymous_args = 0
  438              		@ link register save eliminated.
  439 0000 034A     		ldr	r2, .L74
-ARM GAS  /tmp/ccbiiD83.s 			page 9
+ARM GAS  /tmp/cciCPpgE.s 			page 9
 
 
  440 0002 4021     		movs	r1, #64
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  490      AFF30080 
  491              		.align	2
  492              		.p2align 4,,15
-ARM GAS  /tmp/ccbiiD83.s 			page 10
+ARM GAS  /tmp/cciCPpgE.s 			page 10
 
 
  493              		.global	chDbgPanic
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  539 0015 000000   		.space	3
  540              	.LC3:
  541 0018 53562334 		.ascii	"SV#4\000"
-ARM GAS  /tmp/ccbiiD83.s 			page 11
+ARM GAS  /tmp/cciCPpgE.s 			page 11
 
 
  541      00
@@ -645,79 +645,79 @@ ARM GAS  /tmp/ccbiiD83.s 			page 1
  575              	dbg_panic_msg:
  576 0000 00000000 		.space	4
  577              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccbiiD83.s 			page 12
+ARM GAS  /tmp/cciCPpgE.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chdebug.c
-     /tmp/ccbiiD83.s:16     .text.dbg_check_disable:00000000 $t
-     /tmp/ccbiiD83.s:22     .text.dbg_check_disable:00000000 dbg_check_disable
-     /tmp/ccbiiD83.s:44     .text.dbg_check_disable:00000024 $d
-     /tmp/ccbiiD83.s:50     .text.dbg_check_suspend:00000000 $t
-     /tmp/ccbiiD83.s:56     .text.dbg_check_suspend:00000000 dbg_check_suspend
-     /tmp/ccbiiD83.s:78     .text.dbg_check_suspend:00000024 $d
-     /tmp/ccbiiD83.s:84     .text.dbg_check_enable:00000000 $t
-     /tmp/ccbiiD83.s:90     .text.dbg_check_enable:00000000 dbg_check_enable
-     /tmp/ccbiiD83.s:112    .text.dbg_check_enable:00000024 $d
-     /tmp/ccbiiD83.s:118    .text.dbg_check_lock:00000000 $t
-     /tmp/ccbiiD83.s:124    .text.dbg_check_lock:00000000 dbg_check_lock
-     /tmp/ccbiiD83.s:147    .text.dbg_check_lock:00000024 $d
-     /tmp/ccbiiD83.s:153    .text.dbg_check_unlock:00000000 $t
-     /tmp/ccbiiD83.s:159    .text.dbg_check_unlock:00000000 dbg_check_unlock
-     /tmp/ccbiiD83.s:185    .text.dbg_check_unlock:0000002c $d
-     /tmp/ccbiiD83.s:191    .text.dbg_check_lock_from_isr:00000000 $t
-     /tmp/ccbiiD83.s:197    .text.dbg_check_lock_from_isr:00000000 dbg_check_lock_from_isr
-     /tmp/ccbiiD83.s:221    .text.dbg_check_lock_from_isr:00000024 $d
-     /tmp/ccbiiD83.s:227    .text.dbg_check_unlock_from_isr:00000000 $t
-     /tmp/ccbiiD83.s:233    .text.dbg_check_unlock_from_isr:00000000 dbg_check_unlock_from_isr
-     /tmp/ccbiiD83.s:260    .text.dbg_check_unlock_from_isr:0000002c $d
-     /tmp/ccbiiD83.s:266    .text.dbg_check_enter_isr:00000000 $t
-     /tmp/ccbiiD83.s:272    .text.dbg_check_enter_isr:00000000 dbg_check_enter_isr
-     /tmp/ccbiiD83.s:307    .text.dbg_check_enter_isr:00000034 $d
-     /tmp/ccbiiD83.s:313    .text.dbg_check_leave_isr:00000000 $t
-     /tmp/ccbiiD83.s:319    .text.dbg_check_leave_isr:00000000 dbg_check_leave_isr
-     /tmp/ccbiiD83.s:354    .text.dbg_check_leave_isr:00000034 $d
-     /tmp/ccbiiD83.s:360    .text.chDbgCheckClassI:00000000 $t
-     /tmp/ccbiiD83.s:366    .text.chDbgCheckClassI:00000000 chDbgCheckClassI
-     /tmp/ccbiiD83.s:389    .text.chDbgCheckClassI:00000028 $d
-     /tmp/ccbiiD83.s:395    .text.chDbgCheckClassS:00000000 $t
-     /tmp/ccbiiD83.s:401    .text.chDbgCheckClassS:00000000 chDbgCheckClassS
-     /tmp/ccbiiD83.s:423    .text.chDbgCheckClassS:00000024 $d
-     /tmp/ccbiiD83.s:429    .text._trace_init:00000000 $t
-     /tmp/ccbiiD83.s:435    .text._trace_init:00000000 _trace_init
-     /tmp/ccbiiD83.s:448    .text._trace_init:00000010 $d
-     /tmp/ccbiiD83.s:451    .text.dbg_trace:00000000 $t
-     /tmp/ccbiiD83.s:457    .text.dbg_trace:00000000 dbg_trace
-     /tmp/ccbiiD83.s:486    .text.dbg_trace:00000038 $d
-     /tmp/ccbiiD83.s:491    .text.chDbgPanic:00000000 $t
-     /tmp/ccbiiD83.s:497    .text.chDbgPanic:00000000 chDbgPanic
-     /tmp/ccbiiD83.s:509    .text.chDbgPanic:00000014 $d
-     /tmp/ccbiiD83.s:575    .bss.dbg_panic_msg:00000000 dbg_panic_msg
-     /tmp/ccbiiD83.s:527    .bss.dbg_trace_buffer:00000000 dbg_trace_buffer
-     /tmp/ccbiiD83.s:568    .bss.dbg_lock_cnt:00000000 dbg_lock_cnt
-     /tmp/ccbiiD83.s:520    .bss.dbg_isr_cnt:00000000 dbg_isr_cnt
-     /tmp/ccbiiD83.s:516    .bss.dbg_isr_cnt:00000000 $d
-     /tmp/ccbiiD83.s:523    .bss.dbg_trace_buffer:00000000 $d
-     /tmp/ccbiiD83.s:530    .rodata.str1.4:00000000 $d
-     /tmp/ccbiiD83.s:564    .bss.dbg_lock_cnt:00000000 $d
-     /tmp/ccbiiD83.s:571    .bss.dbg_panic_msg:00000000 $d
-     /tmp/ccbiiD83.s:49     .text.dbg_check_disable:00000034 $t
-     /tmp/ccbiiD83.s:83     .text.dbg_check_suspend:00000034 $t
-     /tmp/ccbiiD83.s:117    .text.dbg_check_enable:00000034 $t
-     /tmp/ccbiiD83.s:152    .text.dbg_check_lock:00000034 $t
-ARM GAS  /tmp/ccbiiD83.s 			page 13
+     /tmp/cciCPpgE.s:16     .text.dbg_check_disable:00000000 $t
+     /tmp/cciCPpgE.s:22     .text.dbg_check_disable:00000000 dbg_check_disable
+     /tmp/cciCPpgE.s:44     .text.dbg_check_disable:00000024 $d
+     /tmp/cciCPpgE.s:50     .text.dbg_check_suspend:00000000 $t
+     /tmp/cciCPpgE.s:56     .text.dbg_check_suspend:00000000 dbg_check_suspend
+     /tmp/cciCPpgE.s:78     .text.dbg_check_suspend:00000024 $d
+     /tmp/cciCPpgE.s:84     .text.dbg_check_enable:00000000 $t
+     /tmp/cciCPpgE.s:90     .text.dbg_check_enable:00000000 dbg_check_enable
+     /tmp/cciCPpgE.s:112    .text.dbg_check_enable:00000024 $d
+     /tmp/cciCPpgE.s:118    .text.dbg_check_lock:00000000 $t
+     /tmp/cciCPpgE.s:124    .text.dbg_check_lock:00000000 dbg_check_lock
+     /tmp/cciCPpgE.s:147    .text.dbg_check_lock:00000024 $d
+     /tmp/cciCPpgE.s:153    .text.dbg_check_unlock:00000000 $t
+     /tmp/cciCPpgE.s:159    .text.dbg_check_unlock:00000000 dbg_check_unlock
+     /tmp/cciCPpgE.s:185    .text.dbg_check_unlock:0000002c $d
+     /tmp/cciCPpgE.s:191    .text.dbg_check_lock_from_isr:00000000 $t
+     /tmp/cciCPpgE.s:197    .text.dbg_check_lock_from_isr:00000000 dbg_check_lock_from_isr
+     /tmp/cciCPpgE.s:221    .text.dbg_check_lock_from_isr:00000024 $d
+     /tmp/cciCPpgE.s:227    .text.dbg_check_unlock_from_isr:00000000 $t
+     /tmp/cciCPpgE.s:233    .text.dbg_check_unlock_from_isr:00000000 dbg_check_unlock_from_isr
+     /tmp/cciCPpgE.s:260    .text.dbg_check_unlock_from_isr:0000002c $d
+     /tmp/cciCPpgE.s:266    .text.dbg_check_enter_isr:00000000 $t
+     /tmp/cciCPpgE.s:272    .text.dbg_check_enter_isr:00000000 dbg_check_enter_isr
+     /tmp/cciCPpgE.s:307    .text.dbg_check_enter_isr:00000034 $d
+     /tmp/cciCPpgE.s:313    .text.dbg_check_leave_isr:00000000 $t
+     /tmp/cciCPpgE.s:319    .text.dbg_check_leave_isr:00000000 dbg_check_leave_isr
+     /tmp/cciCPpgE.s:354    .text.dbg_check_leave_isr:00000034 $d
+     /tmp/cciCPpgE.s:360    .text.chDbgCheckClassI:00000000 $t
+     /tmp/cciCPpgE.s:366    .text.chDbgCheckClassI:00000000 chDbgCheckClassI
+     /tmp/cciCPpgE.s:389    .text.chDbgCheckClassI:00000028 $d
+     /tmp/cciCPpgE.s:395    .text.chDbgCheckClassS:00000000 $t
+     /tmp/cciCPpgE.s:401    .text.chDbgCheckClassS:00000000 chDbgCheckClassS
+     /tmp/cciCPpgE.s:423    .text.chDbgCheckClassS:00000024 $d
+     /tmp/cciCPpgE.s:429    .text._trace_init:00000000 $t
+     /tmp/cciCPpgE.s:435    .text._trace_init:00000000 _trace_init
+     /tmp/cciCPpgE.s:448    .text._trace_init:00000010 $d
+     /tmp/cciCPpgE.s:451    .text.dbg_trace:00000000 $t
+     /tmp/cciCPpgE.s:457    .text.dbg_trace:00000000 dbg_trace
+     /tmp/cciCPpgE.s:486    .text.dbg_trace:00000038 $d
+     /tmp/cciCPpgE.s:491    .text.chDbgPanic:00000000 $t
+     /tmp/cciCPpgE.s:497    .text.chDbgPanic:00000000 chDbgPanic
+     /tmp/cciCPpgE.s:509    .text.chDbgPanic:00000014 $d
+     /tmp/cciCPpgE.s:575    .bss.dbg_panic_msg:00000000 dbg_panic_msg
+     /tmp/cciCPpgE.s:527    .bss.dbg_trace_buffer:00000000 dbg_trace_buffer
+     /tmp/cciCPpgE.s:568    .bss.dbg_lock_cnt:00000000 dbg_lock_cnt
+     /tmp/cciCPpgE.s:520    .bss.dbg_isr_cnt:00000000 dbg_isr_cnt
+     /tmp/cciCPpgE.s:516    .bss.dbg_isr_cnt:00000000 $d
+     /tmp/cciCPpgE.s:523    .bss.dbg_trace_buffer:00000000 $d
+     /tmp/cciCPpgE.s:530    .rodata.str1.4:00000000 $d
+     /tmp/cciCPpgE.s:564    .bss.dbg_lock_cnt:00000000 $d
+     /tmp/cciCPpgE.s:571    .bss.dbg_panic_msg:00000000 $d
+     /tmp/cciCPpgE.s:49     .text.dbg_check_disable:00000034 $t
+     /tmp/cciCPpgE.s:83     .text.dbg_check_suspend:00000034 $t
+     /tmp/cciCPpgE.s:117    .text.dbg_check_enable:00000034 $t
+     /tmp/cciCPpgE.s:152    .text.dbg_check_lock:00000034 $t
+ARM GAS  /tmp/cciCPpgE.s 			page 13
 
 
-     /tmp/ccbiiD83.s:190    .text.dbg_check_unlock:0000003c $t
-     /tmp/ccbiiD83.s:226    .text.dbg_check_lock_from_isr:00000034 $t
-     /tmp/ccbiiD83.s:265    .text.dbg_check_unlock_from_isr:0000003c $t
-     /tmp/ccbiiD83.s:312    .text.dbg_check_enter_isr:00000044 $t
-     /tmp/ccbiiD83.s:359    .text.dbg_check_leave_isr:00000044 $t
-     /tmp/ccbiiD83.s:394    .text.chDbgCheckClassI:00000038 $t
-     /tmp/ccbiiD83.s:428    .text.chDbgCheckClassS:00000034 $t
-     /tmp/ccbiiD83.s:450    .text._trace_init:00000014 $t
-     /tmp/ccbiiD83.s:490    .text.dbg_trace:00000044 $t
-     /tmp/ccbiiD83.s:515    .text.chDbgPanic:00000018 $t
+     /tmp/cciCPpgE.s:190    .text.dbg_check_unlock:0000003c $t
+     /tmp/cciCPpgE.s:226    .text.dbg_check_lock_from_isr:00000034 $t
+     /tmp/cciCPpgE.s:265    .text.dbg_check_unlock_from_isr:0000003c $t
+     /tmp/cciCPpgE.s:312    .text.dbg_check_enter_isr:00000044 $t
+     /tmp/cciCPpgE.s:359    .text.dbg_check_leave_isr:00000044 $t
+     /tmp/cciCPpgE.s:394    .text.chDbgCheckClassI:00000038 $t
+     /tmp/cciCPpgE.s:428    .text.chDbgCheckClassS:00000034 $t
+     /tmp/cciCPpgE.s:450    .text._trace_init:00000014 $t
+     /tmp/cciCPpgE.s:490    .text.dbg_trace:00000044 $t
+     /tmp/cciCPpgE.s:515    .text.chDbgPanic:00000018 $t
 
 UNDEFINED SYMBOLS
 haltErrorCode

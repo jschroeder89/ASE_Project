@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc9BspSb.s 			page 1
+ARM GAS  /tmp/ccs8RGsW.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
   55 0036 9847     		blx	r3
   56 0038 0228     		cmp	r0, #2
   57 003a 0CBF     		ite	eq
-ARM GAS  /tmp/cc9BspSb.s 			page 2
+ARM GAS  /tmp/ccs8RGsW.s 			page 2
 
 
   58 003c 0020     		moveq	r0, #0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  109 0042 0228     		cmp	r0, #2
  110 0044 0CBF     		ite	eq
  111 0046 0020     		moveq	r0, #0
-ARM GAS  /tmp/cc9BspSb.s 			page 3
+ARM GAS  /tmp/ccs8RGsW.s 			page 3
 
 
  112 0048 0820     		movne	r0, #8
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  164      0080AFF3 
  164      0080
  165              		.align	2
-ARM GAS  /tmp/cc9BspSb.s 			page 4
+ARM GAS  /tmp/ccs8RGsW.s 			page 4
 
 
  166              		.p2align 4,,15
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  219 0006 012D     		cmp	r5, #1
  220 0008 0446     		mov	r4, r0
  221 000a 0191     		str	r1, [sp, #4]	@ float
-ARM GAS  /tmp/cc9BspSb.s 			page 5
+ARM GAS  /tmp/ccs8RGsW.s 			page 5
 
 
  222 000c 02D0     		beq	.L49
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  273              	.L58:
  274 0010 0068     		ldr	r0, [r0]
  275 0012 2821     		movs	r1, #40
-ARM GAS  /tmp/cc9BspSb.s 			page 6
+ARM GAS  /tmp/ccs8RGsW.s 			page 6
 
 
  276 0014 0368     		ldr	r3, [r0]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  329              		@ sp needed
  330 0028 30BD     		pop	{r4, r5, pc}
  331              	.L68:
-ARM GAS  /tmp/cc9BspSb.s 			page 7
+ARM GAS  /tmp/ccs8RGsW.s 			page 7
 
 
  332 002a 2068     		ldr	r0, [r4]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  383 0032 0CBF     		ite	eq
  384 0034 0020     		moveq	r0, #0
  385 0036 0820     		movne	r0, #8
-ARM GAS  /tmp/cc9BspSb.s 			page 8
+ARM GAS  /tmp/ccs8RGsW.s 			page 8
 
 
  386 0038 70BD     		pop	{r4, r5, r6, pc}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  437      0080AFF3 
  437      0080
  438              		.align	2
-ARM GAS  /tmp/cc9BspSb.s 			page 9
+ARM GAS  /tmp/ccs8RGsW.s 			page 9
 
 
  439              		.p2align 4,,15
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  492 0006 012D     		cmp	r5, #1
  493 0008 0E46     		mov	r6, r1
  494 000a 01D0     		beq	.L103
-ARM GAS  /tmp/cc9BspSb.s 			page 10
+ARM GAS  /tmp/ccs8RGsW.s 			page 10
 
 
  495 000c 0820     		movs	r0, #8
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  548 001e 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
  549 0020 012B     		cmp	r3, #1
  550 0022 0BD9     		bls	.L108
-ARM GAS  /tmp/cc9BspSb.s 			page 11
+ARM GAS  /tmp/ccs8RGsW.s 			page 11
 
 
  551 0024 2068     		ldr	r0, [r4]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  602 002a 9847     		blx	r3
  603 002c 0428     		cmp	r0, #4
  604 002e 0CBF     		ite	eq
-ARM GAS  /tmp/cc9BspSb.s 			page 12
+ARM GAS  /tmp/ccs8RGsW.s 			page 12
 
 
  605 0030 0020     		moveq	r0, #0
@@ -718,45 +718,45 @@ ARM GAS  /tmp/cc9BspSb.s 			page 1
  658              		@ sp needed
  659 0040 30BD     		pop	{r4, r5, pc}
  660              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf, .-_ZN5amiro12fileSystemIo16FSIODiWheelDri
-ARM GAS  /tmp/cc9BspSb.s 			page 13
+ARM GAS  /tmp/ccs8RGsW.s 			page 13
 
 
  661 0042 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
  661      0080AFF3 
  661      0080AFF3 
  661      0080
-ARM GAS  /tmp/cc9BspSb.s 			page 14
+ARM GAS  /tmp/ccs8RGsW.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 FSIODiWheelDrive.cpp
-     /tmp/cc9BspSb.s:16     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth:00000000 $t
-     /tmp/cc9BspSb.s:22     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth
-     /tmp/cc9BspSb.s:63     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth:00000000 $t
-     /tmp/cc9BspSb.s:69     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth
-     /tmp/cc9BspSb.s:116    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf:00000000 $t
-     /tmp/cc9BspSb.s:122    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf
-     /tmp/cc9BspSb.s:165    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf:00000000 $t
-     /tmp/cc9BspSb.s:171    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf
-     /tmp/cc9BspSb.s:207    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf:00000000 $t
-     /tmp/cc9BspSb.s:213    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf
-     /tmp/cc9BspSb.s:256    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf:00000000 $t
-     /tmp/cc9BspSb.s:262    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf
-     /tmp/cc9BspSb.s:298    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf:00000000 $t
-     /tmp/cc9BspSb.s:304    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf
-     /tmp/cc9BspSb.s:347    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf:00000000 $t
-     /tmp/cc9BspSb.s:353    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf
-     /tmp/cc9BspSb.s:389    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi:00000000 $t
-     /tmp/cc9BspSb.s:395    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi
-     /tmp/cc9BspSb.s:438    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi:00000000 $t
-     /tmp/cc9BspSb.s:444    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi
-     /tmp/cc9BspSb.s:480    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf:00000000 $t
-     /tmp/cc9BspSb.s:486    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf
-     /tmp/cc9BspSb.s:522    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf:00000000 $t
-     /tmp/cc9BspSb.s:528    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf
-     /tmp/cc9BspSb.s:571    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf:00000000 $t
-     /tmp/cc9BspSb.s:577    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf
-     /tmp/cc9BspSb.s:613    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf:00000000 $t
-     /tmp/cc9BspSb.s:619    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf
+     /tmp/ccs8RGsW.s:16     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth:00000000 $t
+     /tmp/ccs8RGsW.s:22     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth
+     /tmp/ccs8RGsW.s:63     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth:00000000 $t
+     /tmp/ccs8RGsW.s:69     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth
+     /tmp/ccs8RGsW.s:116    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf:00000000 $t
+     /tmp/ccs8RGsW.s:122    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf
+     /tmp/ccs8RGsW.s:165    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf:00000000 $t
+     /tmp/ccs8RGsW.s:171    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf
+     /tmp/ccs8RGsW.s:207    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf:00000000 $t
+     /tmp/ccs8RGsW.s:213    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf
+     /tmp/ccs8RGsW.s:256    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf:00000000 $t
+     /tmp/ccs8RGsW.s:262    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf
+     /tmp/ccs8RGsW.s:298    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf:00000000 $t
+     /tmp/ccs8RGsW.s:304    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf
+     /tmp/ccs8RGsW.s:347    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf:00000000 $t
+     /tmp/ccs8RGsW.s:353    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf
+     /tmp/ccs8RGsW.s:389    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi:00000000 $t
+     /tmp/ccs8RGsW.s:395    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi
+     /tmp/ccs8RGsW.s:438    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi:00000000 $t
+     /tmp/ccs8RGsW.s:444    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi
+     /tmp/ccs8RGsW.s:480    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf:00000000 $t
+     /tmp/ccs8RGsW.s:486    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf
+     /tmp/ccs8RGsW.s:522    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf:00000000 $t
+     /tmp/ccs8RGsW.s:528    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf
+     /tmp/ccs8RGsW.s:571    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf:00000000 $t
+     /tmp/ccs8RGsW.s:577    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf
+     /tmp/ccs8RGsW.s:613    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf:00000000 $t
+     /tmp/ccs8RGsW.s:619    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf
 
 NO UNDEFINED SYMBOLS

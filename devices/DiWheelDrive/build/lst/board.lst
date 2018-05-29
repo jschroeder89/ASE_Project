@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccttZ6Ne.s 			page 1
+ARM GAS  /tmp/ccShJAcU.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccttZ6Ne.s 			page 1
   53              		.thumb
   54              		.thumb_func
   55              		.type	boardWriteIoPower, %function
-ARM GAS  /tmp/ccttZ6Ne.s 			page 2
+ARM GAS  /tmp/ccShJAcU.s 			page 2
 
 
   56              	boardWriteIoPower:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccttZ6Ne.s 			page 1
  108              		@ link register save eliminated.
  109 0000 024B     		ldr	r3, .L17
  110 0002 4FF48072 		mov	r2, #256
-ARM GAS  /tmp/ccttZ6Ne.s 			page 3
+ARM GAS  /tmp/ccShJAcU.s 			page 3
 
 
  111 0006 5A61     		str	r2, [r3, #20]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccttZ6Ne.s 			page 1
  165 004c AFF30080 		.section	.text.boardWakeup,"ax",%progbits
  166              		.align	2
  167              		.p2align 4,,15
-ARM GAS  /tmp/ccttZ6Ne.s 			page 4
+ARM GAS  /tmp/ccShJAcU.s 			page 4
 
 
  168              		.global	boardWakeup
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccttZ6Ne.s 			page 1
  221 0042 2846     		mov	r0, r5
  222 0044 7461     		str	r4, [r6, #20]
  223 0046 FFF7FEFF 		bl	chThdSleep
-ARM GAS  /tmp/ccttZ6Ne.s 			page 5
+ARM GAS  /tmp/ccShJAcU.s 			page 5
 
 
  224 004a C6F81080 		str	r8, [r6, #16]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccttZ6Ne.s 			page 1
  278 00d6 00BF     		.align	2
  279              	.L30:
  280 00d8 000C0140 		.word	1073810432
-ARM GAS  /tmp/ccttZ6Ne.s 			page 6
+ARM GAS  /tmp/ccShJAcU.s 			page 6
 
 
  281              		.size	boardClearI2CBus, .-boardClearI2CBus
@@ -330,40 +330,40 @@ ARM GAS  /tmp/ccttZ6Ne.s 			page 1
  307 004c 88888888 		.word	-2004318072
  308 0050 88888888 		.word	-2004318072
  309              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccttZ6Ne.s 			page 7
+ARM GAS  /tmp/ccShJAcU.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 board.c
-     /tmp/ccttZ6Ne.s:16     .text.__early_init:00000000 $t
-     /tmp/ccttZ6Ne.s:22     .text.__early_init:00000000 __early_init
-     /tmp/ccttZ6Ne.s:29     .text.boardInit:00000000 $t
-     /tmp/ccttZ6Ne.s:35     .text.boardInit:00000000 boardInit
-     /tmp/ccttZ6Ne.s:46     .text.boardInit:00000008 $d
-     /tmp/ccttZ6Ne.s:50     .text.boardWriteIoPower:00000000 $t
-     /tmp/ccttZ6Ne.s:56     .text.boardWriteIoPower:00000000 boardWriteIoPower
-     /tmp/ccttZ6Ne.s:73     .text.boardWriteIoPower:0000001c $d
-     /tmp/ccttZ6Ne.s:76     .text.boardWriteLed:00000000 $t
-     /tmp/ccttZ6Ne.s:82     .text.boardWriteLed:00000000 boardWriteLed
-     /tmp/ccttZ6Ne.s:96     .text.boardWriteLed:00000010 $d
-     /tmp/ccttZ6Ne.s:99     .text.boardRequestShutdown:00000000 $t
-     /tmp/ccttZ6Ne.s:105    .text.boardRequestShutdown:00000000 boardRequestShutdown
-     /tmp/ccttZ6Ne.s:116    .text.boardRequestShutdown:0000000c $d
-     /tmp/ccttZ6Ne.s:119    .text.boardStandby:00000000 $t
-     /tmp/ccttZ6Ne.s:125    .text.boardStandby:00000000 boardStandby
-     /tmp/ccttZ6Ne.s:160    .text.boardStandby:0000003c $d
-     /tmp/ccttZ6Ne.s:166    .text.boardWakeup:00000000 $t
-     /tmp/ccttZ6Ne.s:172    .text.boardWakeup:00000000 boardWakeup
-     /tmp/ccttZ6Ne.s:186    .text.boardWakeup:00000014 $d
-     /tmp/ccttZ6Ne.s:189    .text.boardClearI2CBus:00000000 $t
-     /tmp/ccttZ6Ne.s:195    .text.boardClearI2CBus:00000000 boardClearI2CBus
-     /tmp/ccttZ6Ne.s:280    .text.boardClearI2CBus:000000d8 $d
-     /tmp/ccttZ6Ne.s:287    .rodata.pal_default_config:00000000 pal_default_config
-     /tmp/ccttZ6Ne.s:284    .rodata.pal_default_config:00000000 $d
-     /tmp/ccttZ6Ne.s:98     .text.boardWriteLed:00000014 $t
-     /tmp/ccttZ6Ne.s:165    .text.boardStandby:0000004c $t
-     /tmp/ccttZ6Ne.s:188    .text.boardWakeup:00000018 $t
-     /tmp/ccttZ6Ne.s:283    .text.boardClearI2CBus:000000dc $t
+     /tmp/ccShJAcU.s:16     .text.__early_init:00000000 $t
+     /tmp/ccShJAcU.s:22     .text.__early_init:00000000 __early_init
+     /tmp/ccShJAcU.s:29     .text.boardInit:00000000 $t
+     /tmp/ccShJAcU.s:35     .text.boardInit:00000000 boardInit
+     /tmp/ccShJAcU.s:46     .text.boardInit:00000008 $d
+     /tmp/ccShJAcU.s:50     .text.boardWriteIoPower:00000000 $t
+     /tmp/ccShJAcU.s:56     .text.boardWriteIoPower:00000000 boardWriteIoPower
+     /tmp/ccShJAcU.s:73     .text.boardWriteIoPower:0000001c $d
+     /tmp/ccShJAcU.s:76     .text.boardWriteLed:00000000 $t
+     /tmp/ccShJAcU.s:82     .text.boardWriteLed:00000000 boardWriteLed
+     /tmp/ccShJAcU.s:96     .text.boardWriteLed:00000010 $d
+     /tmp/ccShJAcU.s:99     .text.boardRequestShutdown:00000000 $t
+     /tmp/ccShJAcU.s:105    .text.boardRequestShutdown:00000000 boardRequestShutdown
+     /tmp/ccShJAcU.s:116    .text.boardRequestShutdown:0000000c $d
+     /tmp/ccShJAcU.s:119    .text.boardStandby:00000000 $t
+     /tmp/ccShJAcU.s:125    .text.boardStandby:00000000 boardStandby
+     /tmp/ccShJAcU.s:160    .text.boardStandby:0000003c $d
+     /tmp/ccShJAcU.s:166    .text.boardWakeup:00000000 $t
+     /tmp/ccShJAcU.s:172    .text.boardWakeup:00000000 boardWakeup
+     /tmp/ccShJAcU.s:186    .text.boardWakeup:00000014 $d
+     /tmp/ccShJAcU.s:189    .text.boardClearI2CBus:00000000 $t
+     /tmp/ccShJAcU.s:195    .text.boardClearI2CBus:00000000 boardClearI2CBus
+     /tmp/ccShJAcU.s:280    .text.boardClearI2CBus:000000d8 $d
+     /tmp/ccShJAcU.s:287    .rodata.pal_default_config:00000000 pal_default_config
+     /tmp/ccShJAcU.s:284    .rodata.pal_default_config:00000000 $d
+     /tmp/ccShJAcU.s:98     .text.boardWriteLed:00000014 $t
+     /tmp/ccShJAcU.s:165    .text.boardStandby:0000004c $t
+     /tmp/ccShJAcU.s:188    .text.boardWakeup:00000018 $t
+     /tmp/ccShJAcU.s:283    .text.boardClearI2CBus:000000dc $t
 
 UNDEFINED SYMBOLS
 stm32_clock_init

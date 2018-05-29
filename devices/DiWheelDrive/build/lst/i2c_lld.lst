@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc3TIWia.s 			page 1
+ARM GAS  /tmp/ccObCsDS.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
   55 004c 2380     		strh	r3, [r4]	@ movhi
   56 004e 38BD     		pop	{r3, r4, r5, pc}
   57              	.L47:
-ARM GAS  /tmp/cc3TIWia.s 			page 2
+ARM GAS  /tmp/ccObCsDS.s 			page 2
 
 
   58 0050 3F3A     		subs	r2, r2, #63
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  112 00bc 218A     		ldrh	r1, [r4, #16]
  113 00be 2023     		movs	r3, #32
  114 00c0 1170     		strb	r1, [r2]
-ARM GAS  /tmp/cc3TIWia.s 			page 3
+ARM GAS  /tmp/ccObCsDS.s 			page 3
 
 
  115 00c2 426A     		ldr	r2, [r0, #36]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  169              	.L21:
  170 012a 218A     		ldrh	r1, [r4, #16]
  171 012c 6A6A     		ldr	r2, [r5, #36]
-ARM GAS  /tmp/cc3TIWia.s 			page 4
+ARM GAS  /tmp/ccObCsDS.s 			page 4
 
 
  172 012e 2023     		movs	r3, #32
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  226 019a 42F40072 		orr	r2, r2, #512
  227 019e 9DE7     		b	.L43
  228              	.L52:
-ARM GAS  /tmp/cc3TIWia.s 			page 5
+ARM GAS  /tmp/ccObCsDS.s 			page 5
 
 
  229 01a0 23F48063 		bic	r3, r3, #1024
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  283              		.section	.text.i2c_lld_serve_error_interrupt,"ax",%progbits
  284              		.align	2
  285              		.p2align 4,,15
-ARM GAS  /tmp/cc3TIWia.s 			page 6
+ARM GAS  /tmp/ccObCsDS.s 			page 6
 
 
  286              		.thumb
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  340              	@ 584 "../../../ChibiOS/os/hal/platforms/STM32/I2Cv1/i2c_lld.c" 1
  341 006a 83F31188 		msr     BASEPRI, r3
  342              	@ 0 "" 2
-ARM GAS  /tmp/cc3TIWia.s 			page 7
+ARM GAS  /tmp/ccObCsDS.s 			page 7
 
 
  343              		.thumb
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  394 0030 FFF7FEFF 		bl	dbg_check_unlock_from_isr
  395 0034 0023     		movs	r3, #0
  396              	@ 192 "../../../ChibiOS/os/hal/platforms/STM32/I2Cv1/i2c_lld.c" 1
-ARM GAS  /tmp/cc3TIWia.s 			page 8
+ARM GAS  /tmp/ccObCsDS.s 			page 8
 
 
  397 0036 83F31188 		msr     BASEPRI, r3
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  451              	.L100:
  452 0032 00BF     		.align	2
  453              	.L99:
-ARM GAS  /tmp/cc3TIWia.s 			page 9
+ARM GAS  /tmp/ccObCsDS.s 			page 9
 
 
  454 0034 00000000 		.word	.LANCHOR0
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  507              	.L105:
  508 0034 00000000 		.word	.LANCHOR1
  509              		.size	VectorC8, .-VectorC8
-ARM GAS  /tmp/cc3TIWia.s 			page 10
+ARM GAS  /tmp/ccObCsDS.s 			page 10
 
 
  510 0038 AFF30080 		.section	.text.i2c_lld_init,"ax",%progbits
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  561              	.L111:
  562 0010 7368     		ldr	r3, [r6, #4]
  563 0012 774A     		ldr	r2, .L153
-ARM GAS  /tmp/cc3TIWia.s 			page 11
+ARM GAS  /tmp/ccObCsDS.s 			page 11
 
 
  564 0014 5F68     		ldr	r7, [r3, #4]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  618 009a 716B     		ldr	r1, [r6, #52]
  619 009c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  620 009e AF83     		strh	r7, [r5, #28]	@ movhi
-ARM GAS  /tmp/cc3TIWia.s 			page 12
+ARM GAS  /tmp/ccObCsDS.s 			page 12
 
 
  621 00a0 0B88     		ldrh	r3, [r1]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  675 0114 5021     		movs	r1, #80
  676 0116 FFF7FEFF 		bl	nvicEnableVector
  677 011a 756B     		ldr	r5, [r6, #52]
-ARM GAS  /tmp/cc3TIWia.s 			page 13
+ARM GAS  /tmp/ccObCsDS.s 			page 13
 
 
  678 011c 78E7     		b	.L111
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  732 01a0 174B     		ldr	r3, .L153+16
  733 01a2 9B1A     		subs	r3, r3, r2
  734 01a4 EBB9     		cbnz	r3, .L152
-ARM GAS  /tmp/cc3TIWia.s 			page 14
+ARM GAS  /tmp/ccObCsDS.s 			page 14
 
 
  735              	.L125:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  789              		.global	i2c_lld_stop
  790              		.thumb
  791              		.thumb_func
-ARM GAS  /tmp/cc3TIWia.s 			page 15
+ARM GAS  /tmp/ccObCsDS.s 			page 15
 
 
  792              		.type	i2c_lld_stop, %function
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  844              		.p2align 4,,15
  845              		.global	i2c_lld_master_receive_timeout
  846              		.thumb
-ARM GAS  /tmp/cc3TIWia.s 			page 16
+ARM GAS  /tmp/ccObCsDS.s 			page 16
 
 
  847              		.thumb_func
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  901 005e 83F31188 		msr     BASEPRI, r3
  902              	@ 0 "" 2
  903              		.thumb
-ARM GAS  /tmp/cc3TIWia.s 			page 17
+ARM GAS  /tmp/ccObCsDS.s 			page 17
 
 
  904 0062 FFF7FEFF 		bl	dbg_check_lock
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  958 00d2 A380     		strh	r3, [r4, #4]	@ movhi
  959 00d4 2288     		ldrh	r2, [r4]
  960 00d6 AB69     		ldr	r3, [r5, #24]
-ARM GAS  /tmp/cc3TIWia.s 			page 18
+ARM GAS  /tmp/ccObCsDS.s 			page 18
 
 
  961 00d8 92B2     		uxth	r2, r2
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  1014              		.thumb
  1015 003a 0E9A     		ldr	r2, [sp, #56]
  1016 003c 4FEA4B0B 		lsl	fp, fp, #1
-ARM GAS  /tmp/cc3TIWia.s 			page 19
+ARM GAS  /tmp/ccObCsDS.s 			page 19
 
 
  1017 0040 A6F820B0 		strh	fp, [r6, #32]	@ movhi
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  1071 00a6 2288     		ldrh	r2, [r4]
  1072 00a8 AB69     		ldr	r3, [r5, #24]
  1073 00aa 92B2     		uxth	r2, r2
-ARM GAS  /tmp/cc3TIWia.s 			page 20
+ARM GAS  /tmp/ccObCsDS.s 			page 20
 
 
  1074 00ac 42F48072 		orr	r2, r2, #256
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  1122 0024 22693263 		.ascii	"\"i2c_lld_set_clock\"()\000"
  1122      5F6C6C64 
  1122      5F736574 
-ARM GAS  /tmp/cc3TIWia.s 			page 21
+ARM GAS  /tmp/ccObCsDS.s 			page 21
 
 
  1122      5F636C6F 
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  1142      5F6C6C64 
  1142      5F6D6173 
  1142      7465725F 
-ARM GAS  /tmp/cc3TIWia.s 			page 22
+ARM GAS  /tmp/ccObCsDS.s 			page 22
 
 
  1142      7472616E 
@@ -1285,67 +1285,67 @@ ARM GAS  /tmp/cc3TIWia.s 			page 1
  1156      00000000 
  1156      00000000 
  1157              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cc3TIWia.s 			page 23
+ARM GAS  /tmp/ccObCsDS.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 i2c_lld.c
-     /tmp/cc3TIWia.s:16     .text.i2c_lld_serve_event_interrupt:00000000 $t
-     /tmp/cc3TIWia.s:21     .text.i2c_lld_serve_event_interrupt:00000000 i2c_lld_serve_event_interrupt
-     /tmp/cc3TIWia.s:277    .text.i2c_lld_serve_event_interrupt:00000204 $d
-     /tmp/cc3TIWia.s:284    .text.i2c_lld_serve_error_interrupt:00000000 $t
-     /tmp/cc3TIWia.s:289    .text.i2c_lld_serve_error_interrupt:00000000 i2c_lld_serve_error_interrupt
-     /tmp/cc3TIWia.s:363    .text.i2c_lld_safety_timeout:00000000 $t
-     /tmp/cc3TIWia.s:368    .text.i2c_lld_safety_timeout:00000000 i2c_lld_safety_timeout
-     /tmp/cc3TIWia.s:403    .text.VectorBC:00000000 $t
-     /tmp/cc3TIWia.s:409    .text.VectorBC:00000000 VectorBC
-     /tmp/cc3TIWia.s:422    .text.VectorBC:00000018 $d
-     /tmp/cc3TIWia.s:425    .text.VectorC0:00000000 $t
-     /tmp/cc3TIWia.s:431    .text.VectorC0:00000000 VectorC0
-     /tmp/cc3TIWia.s:454    .text.VectorC0:00000034 $d
-     /tmp/cc3TIWia.s:457    .text.VectorC4:00000000 $t
-     /tmp/cc3TIWia.s:463    .text.VectorC4:00000000 VectorC4
-     /tmp/cc3TIWia.s:476    .text.VectorC4:00000018 $d
-     /tmp/cc3TIWia.s:479    .text.VectorC8:00000000 $t
-     /tmp/cc3TIWia.s:485    .text.VectorC8:00000000 VectorC8
-     /tmp/cc3TIWia.s:508    .text.VectorC8:00000034 $d
-     /tmp/cc3TIWia.s:511    .text.i2c_lld_init:00000000 $t
-     /tmp/cc3TIWia.s:517    .text.i2c_lld_init:00000000 i2c_lld_init
-     /tmp/cc3TIWia.s:538    .text.i2c_lld_init:00000024 $d
-     /tmp/cc3TIWia.s:544    .text.i2c_lld_start:00000000 $t
-     /tmp/cc3TIWia.s:550    .text.i2c_lld_start:00000000 i2c_lld_start
-     /tmp/cc3TIWia.s:770    .text.i2c_lld_start:000001f0 $d
-     /tmp/cc3TIWia.s:787    .text.i2c_lld_stop:00000000 $t
-     /tmp/cc3TIWia.s:793    .text.i2c_lld_stop:00000000 i2c_lld_stop
-     /tmp/cc3TIWia.s:838    .text.i2c_lld_stop:00000058 $d
-     /tmp/cc3TIWia.s:843    .text.i2c_lld_master_receive_timeout:00000000 $t
-     /tmp/cc3TIWia.s:849    .text.i2c_lld_master_receive_timeout:00000000 i2c_lld_master_receive_timeout
-     /tmp/cc3TIWia.s:971    .text.i2c_lld_master_receive_timeout:000000ec $d
-     /tmp/cc3TIWia.s:976    .text.i2c_lld_master_transmit_timeout:00000000 $t
-     /tmp/cc3TIWia.s:982    .text.i2c_lld_master_transmit_timeout:00000000 i2c_lld_master_transmit_timeout
-     /tmp/cc3TIWia.s:1111   .text.i2c_lld_master_transmit_timeout:000000f8 $d
-     /tmp/cc3TIWia.s:1155   .bss.I2CD2:00000000 I2CD2
-     /tmp/cc3TIWia.s:1148   .bss.I2CD1:00000000 I2CD1
-     /tmp/cc3TIWia.s:1118   .rodata.str1.4:00000000 $d
-     /tmp/cc3TIWia.s:1144   .bss.I2CD1:00000000 $d
-     /tmp/cc3TIWia.s:1151   .bss.I2CD2:00000000 $d
-     /tmp/cc3TIWia.s:1157   .text.i2c_lld_serve_event_interrupt:00000218 $t
-     /tmp/cc3TIWia.s:424    .text.VectorBC:0000001c $t
-     /tmp/cc3TIWia.s:456    .text.VectorC0:00000038 $t
-     /tmp/cc3TIWia.s:478    .text.VectorC4:0000001c $t
-     /tmp/cc3TIWia.s:510    .text.VectorC8:00000038 $t
-     /tmp/cc3TIWia.s:543    .text.i2c_lld_init:00000034 $t
-     /tmp/cc3TIWia.s:786    .text.i2c_lld_start:0000022c $t
-     /tmp/cc3TIWia.s:842    .text.i2c_lld_stop:00000064 $t
-     /tmp/cc3TIWia.s:975    .text.i2c_lld_master_receive_timeout:000000f8 $t
-     /tmp/cc3TIWia.s:1117   .text.i2c_lld_master_transmit_timeout:00000104 $t
+     /tmp/ccObCsDS.s:16     .text.i2c_lld_serve_event_interrupt:00000000 $t
+     /tmp/ccObCsDS.s:21     .text.i2c_lld_serve_event_interrupt:00000000 i2c_lld_serve_event_interrupt
+     /tmp/ccObCsDS.s:277    .text.i2c_lld_serve_event_interrupt:00000204 $d
+     /tmp/ccObCsDS.s:284    .text.i2c_lld_serve_error_interrupt:00000000 $t
+     /tmp/ccObCsDS.s:289    .text.i2c_lld_serve_error_interrupt:00000000 i2c_lld_serve_error_interrupt
+     /tmp/ccObCsDS.s:363    .text.i2c_lld_safety_timeout:00000000 $t
+     /tmp/ccObCsDS.s:368    .text.i2c_lld_safety_timeout:00000000 i2c_lld_safety_timeout
+     /tmp/ccObCsDS.s:403    .text.VectorBC:00000000 $t
+     /tmp/ccObCsDS.s:409    .text.VectorBC:00000000 VectorBC
+     /tmp/ccObCsDS.s:422    .text.VectorBC:00000018 $d
+     /tmp/ccObCsDS.s:425    .text.VectorC0:00000000 $t
+     /tmp/ccObCsDS.s:431    .text.VectorC0:00000000 VectorC0
+     /tmp/ccObCsDS.s:454    .text.VectorC0:00000034 $d
+     /tmp/ccObCsDS.s:457    .text.VectorC4:00000000 $t
+     /tmp/ccObCsDS.s:463    .text.VectorC4:00000000 VectorC4
+     /tmp/ccObCsDS.s:476    .text.VectorC4:00000018 $d
+     /tmp/ccObCsDS.s:479    .text.VectorC8:00000000 $t
+     /tmp/ccObCsDS.s:485    .text.VectorC8:00000000 VectorC8
+     /tmp/ccObCsDS.s:508    .text.VectorC8:00000034 $d
+     /tmp/ccObCsDS.s:511    .text.i2c_lld_init:00000000 $t
+     /tmp/ccObCsDS.s:517    .text.i2c_lld_init:00000000 i2c_lld_init
+     /tmp/ccObCsDS.s:538    .text.i2c_lld_init:00000024 $d
+     /tmp/ccObCsDS.s:544    .text.i2c_lld_start:00000000 $t
+     /tmp/ccObCsDS.s:550    .text.i2c_lld_start:00000000 i2c_lld_start
+     /tmp/ccObCsDS.s:770    .text.i2c_lld_start:000001f0 $d
+     /tmp/ccObCsDS.s:787    .text.i2c_lld_stop:00000000 $t
+     /tmp/ccObCsDS.s:793    .text.i2c_lld_stop:00000000 i2c_lld_stop
+     /tmp/ccObCsDS.s:838    .text.i2c_lld_stop:00000058 $d
+     /tmp/ccObCsDS.s:843    .text.i2c_lld_master_receive_timeout:00000000 $t
+     /tmp/ccObCsDS.s:849    .text.i2c_lld_master_receive_timeout:00000000 i2c_lld_master_receive_timeout
+     /tmp/ccObCsDS.s:971    .text.i2c_lld_master_receive_timeout:000000ec $d
+     /tmp/ccObCsDS.s:976    .text.i2c_lld_master_transmit_timeout:00000000 $t
+     /tmp/ccObCsDS.s:982    .text.i2c_lld_master_transmit_timeout:00000000 i2c_lld_master_transmit_timeout
+     /tmp/ccObCsDS.s:1111   .text.i2c_lld_master_transmit_timeout:000000f8 $d
+     /tmp/ccObCsDS.s:1155   .bss.I2CD2:00000000 I2CD2
+     /tmp/ccObCsDS.s:1148   .bss.I2CD1:00000000 I2CD1
+     /tmp/ccObCsDS.s:1118   .rodata.str1.4:00000000 $d
+     /tmp/ccObCsDS.s:1144   .bss.I2CD1:00000000 $d
+     /tmp/ccObCsDS.s:1151   .bss.I2CD2:00000000 $d
+     /tmp/ccObCsDS.s:1157   .text.i2c_lld_serve_event_interrupt:00000218 $t
+     /tmp/ccObCsDS.s:424    .text.VectorBC:0000001c $t
+     /tmp/ccObCsDS.s:456    .text.VectorC0:00000038 $t
+     /tmp/ccObCsDS.s:478    .text.VectorC4:0000001c $t
+     /tmp/ccObCsDS.s:510    .text.VectorC8:00000038 $t
+     /tmp/ccObCsDS.s:543    .text.i2c_lld_init:00000034 $t
+     /tmp/ccObCsDS.s:786    .text.i2c_lld_start:0000022c $t
+     /tmp/ccObCsDS.s:842    .text.i2c_lld_stop:00000064 $t
+     /tmp/ccObCsDS.s:975    .text.i2c_lld_master_receive_timeout:000000f8 $t
+     /tmp/ccObCsDS.s:1117   .text.i2c_lld_master_transmit_timeout:00000104 $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock_from_isr
 chSchReadyI
 dbg_check_unlock_from_isr
 chDbgPanic
-ARM GAS  /tmp/cc3TIWia.s 			page 24
+ARM GAS  /tmp/ccObCsDS.s 			page 24
 
 
 dbg_check_enter_isr

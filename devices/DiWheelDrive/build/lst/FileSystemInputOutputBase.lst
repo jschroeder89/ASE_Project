@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccaHLOUO.s 			page 1
+ARM GAS  /tmp/ccN19Lvo.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccaHLOUO.s 			page 1
   55 0034 9DF80520 		ldrb	r2, [sp, #5]	@ zero_extendqisi2
   56 0038 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
   57 003a 9A42     		cmp	r2, r3
-ARM GAS  /tmp/ccaHLOUO.s 			page 2
+ARM GAS  /tmp/ccN19Lvo.s 			page 2
 
 
   58 003c 01D0     		beq	.L12
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccaHLOUO.s 			page 1
  112 0026 2868     		ldr	r0, [r5]
  113 0028 0221     		movs	r1, #2
  114 002a 0368     		ldr	r3, [r0]
-ARM GAS  /tmp/ccaHLOUO.s 			page 3
+ARM GAS  /tmp/ccN19Lvo.s 			page 3
 
 
  115 002c 1B6A     		ldr	r3, [r3, #32]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccaHLOUO.s 			page 1
  169 009e 1B68     		ldr	r3, [r3]
  170 00a0 0322     		movs	r2, #3
  171 00a2 9847     		blx	r3
-ARM GAS  /tmp/ccaHLOUO.s 			page 4
+ARM GAS  /tmp/ccN19Lvo.s 			page 4
 
 
  172 00a4 0328     		cmp	r0, #3
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccaHLOUO.s 			page 1
  225              	_ZN5amiro12fileSystemIo16FileSystemIoBase4initEv:
  226              		@ args = 0, pretend = 0, frame = 24
  227              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccaHLOUO.s 			page 5
+ARM GAS  /tmp/ccN19Lvo.s 			page 5
 
 
  228 0000 70B5     		push	{r4, r5, r6, lr}
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccaHLOUO.s 			page 1
  282 0066 AB42     		cmp	r3, r5
  283 0068 46EA0006 		orr	r6, r6, r0
  284 006c F1D3     		bcc	.L52
-ARM GAS  /tmp/ccaHLOUO.s 			page 6
+ARM GAS  /tmp/ccN19Lvo.s 			page 6
 
 
  285              	.L41:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccaHLOUO.s 			page 1
  336 0008 012D     		cmp	r5, #1
  337 000a 0446     		mov	r4, r0
  338 000c 0E46     		mov	r6, r1
-ARM GAS  /tmp/ccaHLOUO.s 			page 7
+ARM GAS  /tmp/ccN19Lvo.s 			page 7
 
 
  339 000e ADF80430 		strh	r3, [sp, #4]	@ movhi
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccaHLOUO.s 			page 1
  393 0010 0820     		movs	r0, #8
  394 0012 03B0     		add	sp, sp, #12
  395              		@ sp needed
-ARM GAS  /tmp/ccaHLOUO.s 			page 8
+ARM GAS  /tmp/ccN19Lvo.s 			page 8
 
 
  396 0014 30BD     		pop	{r4, r5, pc}
@@ -453,22 +453,22 @@ ARM GAS  /tmp/ccaHLOUO.s 			page 1
  425 0046 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
  425      0080AFF3 
  425      0080
-ARM GAS  /tmp/ccaHLOUO.s 			page 9
+ARM GAS  /tmp/ccN19Lvo.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 FileSystemInputOutputBase.cpp
-     /tmp/ccaHLOUO.s:16     .text._ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv:00000000 $t
-     /tmp/ccaHLOUO.s:22     .text._ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv
-     /tmp/ccaHLOUO.s:85     .text._ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb:00000000 $t
-     /tmp/ccaHLOUO.s:91     .text._ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb
-     /tmp/ccaHLOUO.s:219    .text._ZN5amiro12fileSystemIo16FileSystemIoBase4initEv:00000000 $t
-     /tmp/ccaHLOUO.s:225    .text._ZN5amiro12fileSystemIo16FileSystemIoBase4initEv:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase4initEv
-     /tmp/ccaHLOUO.s:307    .text._ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv:00000000 $t
-     /tmp/ccaHLOUO.s:313    .text._ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv
-     /tmp/ccaHLOUO.s:323    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh:00000000 $t
-     /tmp/ccaHLOUO.s:329    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh
-     /tmp/ccaHLOUO.s:377    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh:00000000 $t
-     /tmp/ccaHLOUO.s:383    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh
+     /tmp/ccN19Lvo.s:16     .text._ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv:00000000 $t
+     /tmp/ccN19Lvo.s:22     .text._ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv
+     /tmp/ccN19Lvo.s:85     .text._ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb:00000000 $t
+     /tmp/ccN19Lvo.s:91     .text._ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb
+     /tmp/ccN19Lvo.s:219    .text._ZN5amiro12fileSystemIo16FileSystemIoBase4initEv:00000000 $t
+     /tmp/ccN19Lvo.s:225    .text._ZN5amiro12fileSystemIo16FileSystemIoBase4initEv:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase4initEv
+     /tmp/ccN19Lvo.s:307    .text._ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv:00000000 $t
+     /tmp/ccN19Lvo.s:313    .text._ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv
+     /tmp/ccN19Lvo.s:323    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh:00000000 $t
+     /tmp/ccN19Lvo.s:329    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh
+     /tmp/ccN19Lvo.s:377    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh:00000000 $t
+     /tmp/ccN19Lvo.s:383    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh
 
 NO UNDEFINED SYMBOLS

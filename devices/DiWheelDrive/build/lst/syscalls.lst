@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc6tZKbM.s 			page 1
+ARM GAS  /tmp/cc3EeVPw.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc6tZKbM.s 			page 1
   52              	_write_r:
   53              		@ args = 0, pretend = 0, frame = 0
   54              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc6tZKbM.s 			page 2
+ARM GAS  /tmp/cc3EeVPw.s 			page 2
 
 
   55              		@ link register save eliminated.
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc6tZKbM.s 			page 1
  105              		.size	_sbrk_r, .-_sbrk_r
  106 0028 AFF30080 		.section	.text._fstat_r,"ax",%progbits
  106      AFF30080 
-ARM GAS  /tmp/cc6tZKbM.s 			page 3
+ARM GAS  /tmp/cc3EeVPw.s 			page 3
 
 
  107              		.align	2
@@ -165,28 +165,28 @@ ARM GAS  /tmp/cc6tZKbM.s 			page 1
  144      726B5F72 
  144      22282900 
  145              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cc6tZKbM.s 			page 4
+ARM GAS  /tmp/cc3EeVPw.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 syscalls.c
-     /tmp/cc6tZKbM.s:16     .text._read_r:00000000 $t
-     /tmp/cc6tZKbM.s:22     .text._read_r:00000000 _read_r
-     /tmp/cc6tZKbM.s:32     .text._lseek_r:00000000 $t
-     /tmp/cc6tZKbM.s:38     .text._lseek_r:00000000 _lseek_r
-     /tmp/cc6tZKbM.s:46     .text._write_r:00000000 $t
-     /tmp/cc6tZKbM.s:52     .text._write_r:00000000 _write_r
-     /tmp/cc6tZKbM.s:60     .text._close_r:00000000 $t
-     /tmp/cc6tZKbM.s:66     .text._close_r:00000000 _close_r
-     /tmp/cc6tZKbM.s:74     .text._sbrk_r:00000000 $t
-     /tmp/cc6tZKbM.s:80     .text._sbrk_r:00000000 _sbrk_r
-     /tmp/cc6tZKbM.s:104    .text._sbrk_r:00000024 $d
-     /tmp/cc6tZKbM.s:107    .text._fstat_r:00000000 $t
-     /tmp/cc6tZKbM.s:113    .text._fstat_r:00000000 _fstat_r
-     /tmp/cc6tZKbM.s:128    .text._isatty_r:00000000 $t
-     /tmp/cc6tZKbM.s:134    .text._isatty_r:00000000 _isatty_r
-     /tmp/cc6tZKbM.s:142    .rodata.str1.4:00000000 $d
-     /tmp/cc6tZKbM.s:106    .text._sbrk_r:00000028 $t
+     /tmp/cc3EeVPw.s:16     .text._read_r:00000000 $t
+     /tmp/cc3EeVPw.s:22     .text._read_r:00000000 _read_r
+     /tmp/cc3EeVPw.s:32     .text._lseek_r:00000000 $t
+     /tmp/cc3EeVPw.s:38     .text._lseek_r:00000000 _lseek_r
+     /tmp/cc3EeVPw.s:46     .text._write_r:00000000 $t
+     /tmp/cc3EeVPw.s:52     .text._write_r:00000000 _write_r
+     /tmp/cc3EeVPw.s:60     .text._close_r:00000000 $t
+     /tmp/cc3EeVPw.s:66     .text._close_r:00000000 _close_r
+     /tmp/cc3EeVPw.s:74     .text._sbrk_r:00000000 $t
+     /tmp/cc3EeVPw.s:80     .text._sbrk_r:00000000 _sbrk_r
+     /tmp/cc3EeVPw.s:104    .text._sbrk_r:00000024 $d
+     /tmp/cc3EeVPw.s:107    .text._fstat_r:00000000 $t
+     /tmp/cc3EeVPw.s:113    .text._fstat_r:00000000 _fstat_r
+     /tmp/cc3EeVPw.s:128    .text._isatty_r:00000000 $t
+     /tmp/cc3EeVPw.s:134    .text._isatty_r:00000000 _isatty_r
+     /tmp/cc3EeVPw.s:142    .rodata.str1.4:00000000 $d
+     /tmp/cc3EeVPw.s:106    .text._sbrk_r:00000028 $t
 
 UNDEFINED SYMBOLS
 chCoreAlloc

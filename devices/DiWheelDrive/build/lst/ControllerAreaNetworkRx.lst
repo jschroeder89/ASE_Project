@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccIEAaF7.s 			page 1
+ARM GAS  /tmp/ccTjVpaX.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
   53 0024 03B0     		add	sp, sp, #12
   54              		@ sp needed
   55 0026 30BD     		pop	{r4, r5, pc}
-ARM GAS  /tmp/ccIEAaF7.s 			page 2
+ARM GAS  /tmp/ccTjVpaX.s 			page 2
 
 
   56              	.L4:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  110 0006 00BF     		.align	2
  111              	.L9:
  112 0008 08000000 		.word	.LANCHOR0+8
-ARM GAS  /tmp/ccIEAaF7.s 			page 3
+ARM GAS  /tmp/ccTjVpaX.s 			page 3
 
 
  113              		.size	_ZN5amiro23ControllerAreaNetworkRxD2Ev, .-_ZN5amiro23ControllerAreaNetworkRxD2Ev
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  165 001e C1       		.byte	(.L37-.L17)/2
  166 001f C1       		.byte	(.L37-.L17)/2
  167 0020 C1       		.byte	(.L37-.L17)/2
-ARM GAS  /tmp/ccIEAaF7.s 			page 4
+ARM GAS  /tmp/ccTjVpaX.s 			page 4
 
 
  168 0021 C1       		.byte	(.L37-.L17)/2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  222 0057 00       		.align	1
  223              	.L26:
  224 0058 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
-ARM GAS  /tmp/ccIEAaF7.s 			page 5
+ARM GAS  /tmp/ccTjVpaX.s 			page 5
 
 
  225 005a 03F00F03 		and	r3, r3, #15
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  279 00e0 8A7B     		ldrb	r2, [r1, #14]	@ zero_extendqisi2
  280 00e2 1B02     		lsls	r3, r3, #8
  281 00e4 43EA0443 		orr	r3, r3, r4, lsl #16
-ARM GAS  /tmp/ccIEAaF7.s 			page 6
+ARM GAS  /tmp/ccTjVpaX.s 			page 6
 
 
  282 00e8 43EA0263 		orr	r3, r3, r2, lsl #24
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  336 016e CA68     		ldr	r2, [r1, #12]
  337 0170 0023     		movs	r3, #0
  338 0172 C0F88421 		str	r2, [r0, #388]
-ARM GAS  /tmp/ccIEAaF7.s 			page 7
+ARM GAS  /tmp/ccTjVpaX.s 			page 7
 
 
  339 0176 82E7     		b	.L15
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  391 003c 0446     		mov	r4, r0
  392 003e 42F21071 		movw	r1, #10000
  393 0042 4FF0FF30 		mov	r0, #-1
-ARM GAS  /tmp/ccIEAaF7.s 			page 8
+ARM GAS  /tmp/ccTjVpaX.s 			page 8
 
 
  394 0046 002C     		cmp	r4, #0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  447              		.global	_ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE
  448              		.thumb
  449              		.thumb_func
-ARM GAS  /tmp/ccIEAaF7.s 			page 9
+ARM GAS  /tmp/ccTjVpaX.s 			page 9
 
 
  450              		.type	_ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE, %function
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  502              		.thumb
  503              		.thumb_func
  504              		.type	_ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv, %function
-ARM GAS  /tmp/ccIEAaF7.s 			page 10
+ARM GAS  /tmp/ccTjVpaX.s 			page 10
 
 
  505              	_ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  555 0008 7047     		bx	lr
  556              		.size	_ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi, .-_ZN5amiro23ControllerAreaNet
  557 000a 00BFAFF3 		.section	.text._ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame,"ax",%progbits
-ARM GAS  /tmp/ccIEAaF7.s 			page 11
+ARM GAS  /tmp/ccTjVpaX.s 			page 11
 
 
  557      0080
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  608              		.type	_ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame, %function
  609              	_ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame:
  610              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccIEAaF7.s 			page 12
+ARM GAS  /tmp/ccTjVpaX.s 			page 12
 
 
  611              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  661              		.align	2
  662              	.LC0:
  663 0000 436F6E74 		.ascii	"ControllerAreaNetworkRx\000"
-ARM GAS  /tmp/ccIEAaF7.s 			page 13
+ARM GAS  /tmp/ccTjVpaX.s 			page 13
 
 
  663      726F6C6C 
@@ -740,76 +740,76 @@ ARM GAS  /tmp/ccIEAaF7.s 			page 1
  676 0018 00000000 		.word	__cxa_pure_virtual
  677 001c 00000000 		.word	_ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame
  678              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccIEAaF7.s 			page 14
+ARM GAS  /tmp/ccTjVpaX.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ControllerAreaNetworkRx.cpp
-     /tmp/ccIEAaF7.s:16     .text._ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame:00000000 $t
-     /tmp/ccIEAaF7.s:22     .text._ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame
-     /tmp/ccIEAaF7.s:30     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 $t
-     /tmp/ccIEAaF7.s:36     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
-     /tmp/ccIEAaF7.s:59     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000028 $d
-     /tmp/ccIEAaF7.s:63     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 $t
-     /tmp/ccIEAaF7.s:69     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 _ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
-     /tmp/ccIEAaF7.s:90     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000028 $d
-     /tmp/ccIEAaF7.s:69     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 _ZN5amiro23ControllerAreaNetworkRxC1EP9CANDriverh
-     /tmp/ccIEAaF7.s:96     .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000000 $t
-     /tmp/ccIEAaF7.s:102    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000000 _ZN5amiro23ControllerAreaNetworkRxD2Ev
-     /tmp/ccIEAaF7.s:112    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000008 $d
-     /tmp/ccIEAaF7.s:102    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000000 _ZN5amiro23ControllerAreaNetworkRxD1Ev
-     /tmp/ccIEAaF7.s:117    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000000 $t
-     /tmp/ccIEAaF7.s:123    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000000 _ZN5amiro23ControllerAreaNetworkRxD0Ev
-     /tmp/ccIEAaF7.s:136    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000010 $d
-     /tmp/ccIEAaF7.s:139    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000000 $t
-     /tmp/ccIEAaF7.s:145    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame
-     /tmp/ccIEAaF7.s:157    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000016 $d
-     /tmp/ccIEAaF7.s:360    .text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv:00000000 $t
-     /tmp/ccIEAaF7.s:366    .text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv:00000000 _ZN5amiro23ControllerAreaNetworkRx4mainEv
-     /tmp/ccIEAaF7.s:427    .text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv:0000008c $d
-     /tmp/ccIEAaF7.s:430    .text._ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi:00000000 $t
-     /tmp/ccIEAaF7.s:436    .text._ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
-     /tmp/ccIEAaF7.s:445    .text._ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE:00000000 $t
-     /tmp/ccIEAaF7.s:451    .text._ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE:00000000 _ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE
-     /tmp/ccIEAaF7.s:462    .text._ZN5amiro23ControllerAreaNetworkRx11getOdometryEv:00000000 $t
-     /tmp/ccIEAaF7.s:468    .text._ZN5amiro23ControllerAreaNetworkRx11getOdometryEv:00000000 _ZN5amiro23ControllerAreaNetworkRx11getOdometryEv
-     /tmp/ccIEAaF7.s:485    .text._ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv:00000000 $t
-     /tmp/ccIEAaF7.s:491    .text._ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv:00000000 _ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv
-     /tmp/ccIEAaF7.s:499    .text._ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv:00000000 $t
-     /tmp/ccIEAaF7.s:505    .text._ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv:00000000 _ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv
-     /tmp/ccIEAaF7.s:513    .text._ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi:00000000 $t
-     /tmp/ccIEAaF7.s:519    .text._ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi
-     /tmp/ccIEAaF7.s:528    .text._ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi:00000000 $t
-     /tmp/ccIEAaF7.s:534    .text._ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi
-     /tmp/ccIEAaF7.s:543    .text._ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi:00000000 $t
-     /tmp/ccIEAaF7.s:549    .text._ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi
-     /tmp/ccIEAaF7.s:558    .text._ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame:00000000 $t
-     /tmp/ccIEAaF7.s:564    .text._ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame
-     /tmp/ccIEAaF7.s:573    .text._ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame:00000000 $t
-     /tmp/ccIEAaF7.s:579    .text._ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame
-     /tmp/ccIEAaF7.s:588    .text._ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame:00000000 $t
-     /tmp/ccIEAaF7.s:594    .text._ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame
-     /tmp/ccIEAaF7.s:603    .text._ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame:00000000 $t
-     /tmp/ccIEAaF7.s:609    .text._ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame
-     /tmp/ccIEAaF7.s:618    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 $t
-     /tmp/ccIEAaF7.s:623    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 _GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
-     /tmp/ccIEAaF7.s:635    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:0000000c $d
-     /tmp/ccIEAaF7.s:639    .init_array:00000000 $d
-     /tmp/ccIEAaF7.s:646    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi128EEE
-     /tmp/ccIEAaF7.s:643    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 $d
-     /tmp/ccIEAaF7.s:669    .rodata._ZTVN5amiro23ControllerAreaNetworkRxE:00000000 _ZTVN5amiro23ControllerAreaNetworkRxE
-     /tmp/ccIEAaF7.s:654    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccIEAaF7.s:658    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-ARM GAS  /tmp/ccIEAaF7.s 			page 15
+     /tmp/ccTjVpaX.s:16     .text._ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame:00000000 $t
+     /tmp/ccTjVpaX.s:22     .text._ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame
+     /tmp/ccTjVpaX.s:30     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 $t
+     /tmp/ccTjVpaX.s:36     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
+     /tmp/ccTjVpaX.s:59     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000028 $d
+     /tmp/ccTjVpaX.s:63     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 $t
+     /tmp/ccTjVpaX.s:69     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 _ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+     /tmp/ccTjVpaX.s:90     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000028 $d
+     /tmp/ccTjVpaX.s:69     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 _ZN5amiro23ControllerAreaNetworkRxC1EP9CANDriverh
+     /tmp/ccTjVpaX.s:96     .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000000 $t
+     /tmp/ccTjVpaX.s:102    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000000 _ZN5amiro23ControllerAreaNetworkRxD2Ev
+     /tmp/ccTjVpaX.s:112    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000008 $d
+     /tmp/ccTjVpaX.s:102    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000000 _ZN5amiro23ControllerAreaNetworkRxD1Ev
+     /tmp/ccTjVpaX.s:117    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000000 $t
+     /tmp/ccTjVpaX.s:123    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000000 _ZN5amiro23ControllerAreaNetworkRxD0Ev
+     /tmp/ccTjVpaX.s:136    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000010 $d
+     /tmp/ccTjVpaX.s:139    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000000 $t
+     /tmp/ccTjVpaX.s:145    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame
+     /tmp/ccTjVpaX.s:157    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000016 $d
+     /tmp/ccTjVpaX.s:360    .text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv:00000000 $t
+     /tmp/ccTjVpaX.s:366    .text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv:00000000 _ZN5amiro23ControllerAreaNetworkRx4mainEv
+     /tmp/ccTjVpaX.s:427    .text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv:0000008c $d
+     /tmp/ccTjVpaX.s:430    .text._ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi:00000000 $t
+     /tmp/ccTjVpaX.s:436    .text._ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+     /tmp/ccTjVpaX.s:445    .text._ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE:00000000 $t
+     /tmp/ccTjVpaX.s:451    .text._ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE:00000000 _ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE
+     /tmp/ccTjVpaX.s:462    .text._ZN5amiro23ControllerAreaNetworkRx11getOdometryEv:00000000 $t
+     /tmp/ccTjVpaX.s:468    .text._ZN5amiro23ControllerAreaNetworkRx11getOdometryEv:00000000 _ZN5amiro23ControllerAreaNetworkRx11getOdometryEv
+     /tmp/ccTjVpaX.s:485    .text._ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv:00000000 $t
+     /tmp/ccTjVpaX.s:491    .text._ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv:00000000 _ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv
+     /tmp/ccTjVpaX.s:499    .text._ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv:00000000 $t
+     /tmp/ccTjVpaX.s:505    .text._ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv:00000000 _ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv
+     /tmp/ccTjVpaX.s:513    .text._ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi:00000000 $t
+     /tmp/ccTjVpaX.s:519    .text._ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi
+     /tmp/ccTjVpaX.s:528    .text._ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi:00000000 $t
+     /tmp/ccTjVpaX.s:534    .text._ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi
+     /tmp/ccTjVpaX.s:543    .text._ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi:00000000 $t
+     /tmp/ccTjVpaX.s:549    .text._ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi
+     /tmp/ccTjVpaX.s:558    .text._ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame:00000000 $t
+     /tmp/ccTjVpaX.s:564    .text._ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame
+     /tmp/ccTjVpaX.s:573    .text._ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame:00000000 $t
+     /tmp/ccTjVpaX.s:579    .text._ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame
+     /tmp/ccTjVpaX.s:588    .text._ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame:00000000 $t
+     /tmp/ccTjVpaX.s:594    .text._ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame
+     /tmp/ccTjVpaX.s:603    .text._ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame:00000000 $t
+     /tmp/ccTjVpaX.s:609    .text._ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame
+     /tmp/ccTjVpaX.s:618    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 $t
+     /tmp/ccTjVpaX.s:623    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 _GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+     /tmp/ccTjVpaX.s:635    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:0000000c $d
+     /tmp/ccTjVpaX.s:639    .init_array:00000000 $d
+     /tmp/ccTjVpaX.s:646    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi128EEE
+     /tmp/ccTjVpaX.s:643    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 $d
+     /tmp/ccTjVpaX.s:669    .rodata._ZTVN5amiro23ControllerAreaNetworkRxE:00000000 _ZTVN5amiro23ControllerAreaNetworkRxE
+     /tmp/ccTjVpaX.s:654    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccTjVpaX.s:658    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+ARM GAS  /tmp/ccTjVpaX.s 			page 15
 
 
-     /tmp/ccIEAaF7.s:661    .rodata.str1.4:00000000 $d
-     /tmp/ccIEAaF7.s:665    .rodata._ZTVN5amiro23ControllerAreaNetworkRxE:00000000 $d
-     /tmp/ccIEAaF7.s:116    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:0000000c $t
-     /tmp/ccIEAaF7.s:138    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000014 $t
-     /tmp/ccIEAaF7.s:638    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000014 $t
-     /tmp/ccIEAaF7.s:222    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000057 $d
-     /tmp/ccIEAaF7.s:222    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000058 $t
+     /tmp/ccTjVpaX.s:661    .rodata.str1.4:00000000 $d
+     /tmp/ccTjVpaX.s:665    .rodata._ZTVN5amiro23ControllerAreaNetworkRxE:00000000 $d
+     /tmp/ccTjVpaX.s:116    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:0000000c $t
+     /tmp/ccTjVpaX.s:138    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000014 $t
+     /tmp/ccTjVpaX.s:638    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000014 $t
+     /tmp/ccTjVpaX.s:222    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000057 $d
+     /tmp/ccTjVpaX.s:222    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000058 $t
 
 UNDEFINED SYMBOLS
 chThdCreateStatic

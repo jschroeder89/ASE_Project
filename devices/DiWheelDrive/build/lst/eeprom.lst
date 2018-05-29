@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccXGLEQ4.s 			page 1
+ARM GAS  /tmp/ccQSvUQy.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccXGLEQ4.s 			page 1
   55              		@ args = 8, pretend = 0, frame = 0
   56              		@ frame_needed = 0, uses_anonymous_args = 0
   57 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
-ARM GAS  /tmp/ccXGLEQ4.s 			page 2
+ARM GAS  /tmp/ccQSvUQy.s 			page 2
 
 
   58 0002 079D     		ldr	r5, [sp, #28]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccXGLEQ4.s 			page 1
  106      0080
  107              		.align	2
  108              		.p2align 4,,15
-ARM GAS  /tmp/ccXGLEQ4.s 			page 3
+ARM GAS  /tmp/ccQSvUQy.s 			page 3
 
 
  109              		.global	_ZN5amiro6EEPROM7releaseEv
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccXGLEQ4.s 			page 1
  157              		@ link register save eliminated.
  158 0000 8068     		ldr	r0, [r0, #8]
  159 0002 7047     		bx	lr
-ARM GAS  /tmp/ccXGLEQ4.s 			page 4
+ARM GAS  /tmp/ccQSvUQy.s 			page 4
 
 
  160              		.size	_ZN5amiro6EEPROM11getpositionEPv, .-_ZN5amiro6EEPROM11getpositionEPv
@@ -202,32 +202,32 @@ ARM GAS  /tmp/ccXGLEQ4.s 			page 1
  176 0006 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
  176      0080AFF3 
  176      0080
-ARM GAS  /tmp/ccXGLEQ4.s 			page 5
+ARM GAS  /tmp/ccQSvUQy.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 eeprom.cpp
-     /tmp/ccXGLEQ4.s:16     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 $t
-     /tmp/ccXGLEQ4.s:22     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
-     /tmp/ccXGLEQ4.s:22     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
-     /tmp/ccXGLEQ4.s:48     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE:00000000 $t
-     /tmp/ccXGLEQ4.s:54     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE:00000000 _ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE
-     /tmp/ccXGLEQ4.s:54     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE:00000000 _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE
-     /tmp/ccXGLEQ4.s:78     .text._ZN5amiro6EEPROMD2Ev:00000000 $t
-     /tmp/ccXGLEQ4.s:84     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD2Ev
-     /tmp/ccXGLEQ4.s:84     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD1Ev
-     /tmp/ccXGLEQ4.s:93     .text._ZN5amiro6EEPROM7acquireEv:00000000 $t
-     /tmp/ccXGLEQ4.s:99     .text._ZN5amiro6EEPROM7acquireEv:00000000 _ZN5amiro6EEPROM7acquireEv
-     /tmp/ccXGLEQ4.s:107    .text._ZN5amiro6EEPROM7releaseEv:00000000 $t
-     /tmp/ccXGLEQ4.s:113    .text._ZN5amiro6EEPROM7releaseEv:00000000 _ZN5amiro6EEPROM7releaseEv
-     /tmp/ccXGLEQ4.s:120    .text._ZN5amiro6EEPROM8geterrorEPv:00000000 $t
-     /tmp/ccXGLEQ4.s:126    .text._ZN5amiro6EEPROM8geterrorEPv:00000000 _ZN5amiro6EEPROM8geterrorEPv
-     /tmp/ccXGLEQ4.s:134    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 $t
-     /tmp/ccXGLEQ4.s:140    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 _ZN5amiro6EEPROM7getsizeEPv
-     /tmp/ccXGLEQ4.s:148    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 $t
-     /tmp/ccXGLEQ4.s:154    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 _ZN5amiro6EEPROM11getpositionEPv
-     /tmp/ccXGLEQ4.s:162    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 $t
-     /tmp/ccXGLEQ4.s:168    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 _ZN5amiro6EEPROM5lseekEPvm
+     /tmp/ccQSvUQy.s:16     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 $t
+     /tmp/ccQSvUQy.s:22     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+     /tmp/ccQSvUQy.s:22     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+     /tmp/ccQSvUQy.s:48     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE:00000000 $t
+     /tmp/ccQSvUQy.s:54     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE:00000000 _ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE
+     /tmp/ccQSvUQy.s:54     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE:00000000 _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhtPNS_11HWSPIDriverE
+     /tmp/ccQSvUQy.s:78     .text._ZN5amiro6EEPROMD2Ev:00000000 $t
+     /tmp/ccQSvUQy.s:84     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD2Ev
+     /tmp/ccQSvUQy.s:84     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD1Ev
+     /tmp/ccQSvUQy.s:93     .text._ZN5amiro6EEPROM7acquireEv:00000000 $t
+     /tmp/ccQSvUQy.s:99     .text._ZN5amiro6EEPROM7acquireEv:00000000 _ZN5amiro6EEPROM7acquireEv
+     /tmp/ccQSvUQy.s:107    .text._ZN5amiro6EEPROM7releaseEv:00000000 $t
+     /tmp/ccQSvUQy.s:113    .text._ZN5amiro6EEPROM7releaseEv:00000000 _ZN5amiro6EEPROM7releaseEv
+     /tmp/ccQSvUQy.s:120    .text._ZN5amiro6EEPROM8geterrorEPv:00000000 $t
+     /tmp/ccQSvUQy.s:126    .text._ZN5amiro6EEPROM8geterrorEPv:00000000 _ZN5amiro6EEPROM8geterrorEPv
+     /tmp/ccQSvUQy.s:134    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 $t
+     /tmp/ccQSvUQy.s:140    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 _ZN5amiro6EEPROM7getsizeEPv
+     /tmp/ccQSvUQy.s:148    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 $t
+     /tmp/ccQSvUQy.s:154    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 _ZN5amiro6EEPROM11getpositionEPv
+     /tmp/ccQSvUQy.s:162    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 $t
+     /tmp/ccQSvUQy.s:168    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 _ZN5amiro6EEPROM5lseekEPvm
 
 UNDEFINED SYMBOLS
 chMtxInit

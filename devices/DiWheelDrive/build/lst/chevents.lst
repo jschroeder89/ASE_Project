@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccCULEKc.s 			page 1
+ARM GAS  /tmp/cccn1fvc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
   55 0034 0248     		ldr	r0, .L8+4
   56 0036 FFF7FEFF 		bl	chDbgPanic
   57 003a E7E7     		b	.L3
-ARM GAS  /tmp/ccCULEKc.s 			page 2
+ARM GAS  /tmp/cccn1fvc.s 			page 2
 
 
   58              	.L9:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  112 003e 38BD     		pop	{r3, r4, r5, pc}
  113              	.L11:
  114 0040 0148     		ldr	r0, .L21
-ARM GAS  /tmp/ccCULEKc.s 			page 3
+ARM GAS  /tmp/cccn1fvc.s 			page 3
 
 
  115 0042 FFF7FEFF 		bl	chDbgPanic
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  169 0000 10B5     		push	{r4, lr}
  170 0002 2023     		movs	r3, #32
  171 0004 0446     		mov	r4, r0
-ARM GAS  /tmp/ccCULEKc.s 			page 4
+ARM GAS  /tmp/cccn1fvc.s 			page 4
 
 
  172              	@ 159 "../../../ChibiOS/os/kernel/src/chevents.c" 1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  225      0080AFF3 
  225      0080AFF3 
  225      0080
-ARM GAS  /tmp/ccCULEKc.s 			page 5
+ARM GAS  /tmp/cccn1fvc.s 			page 5
 
 
  226              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  280              		.thumb
  281              		.thumb_func
  282              		.type	chEvtBroadcastFlagsI, %function
-ARM GAS  /tmp/ccCULEKc.s 			page 6
+ARM GAS  /tmp/cccn1fvc.s 			page 6
 
 
  283              	chEvtBroadcastFlagsI:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  335              		.thumb
  336 000e FFF7FEFF 		bl	dbg_check_lock
  337 0012 2046     		mov	r0, r4
-ARM GAS  /tmp/ccCULEKc.s 			page 7
+ARM GAS  /tmp/cccn1fvc.s 			page 7
 
 
  338 0014 2946     		mov	r1, r5
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  390              		.p2align 4,,15
  391              		.global	chEvtGetAndClearFlagsI
  392              		.thumb
-ARM GAS  /tmp/ccCULEKc.s 			page 8
+ARM GAS  /tmp/cccn1fvc.s 			page 8
 
 
  393              		.thumb_func
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  446              	.L69:
  447 0042 0348     		ldr	r0, .L71+4
  448 0044 FFF7FEFF 		bl	chDbgPanic
-ARM GAS  /tmp/ccCULEKc.s 			page 9
+ARM GAS  /tmp/cccn1fvc.s 			page 9
 
 
  449 0048 DFE7     		b	.L56
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  501              		.size	chEvtWaitOne, .-chEvtWaitOne
  502 0044 AFF30080 		.section	.text.chEvtWaitAny,"ax",%progbits
  502      AFF30080 
-ARM GAS  /tmp/ccCULEKc.s 			page 10
+ARM GAS  /tmp/cccn1fvc.s 			page 10
 
 
  502      AFF30080 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  556 0000 38B5     		push	{r3, r4, r5, lr}
  557 0002 0E4B     		ldr	r3, .L83
  558 0004 0446     		mov	r4, r0
-ARM GAS  /tmp/ccCULEKc.s 			page 11
+ARM GAS  /tmp/cccn1fvc.s 			page 11
 
 
  559 0006 9D69     		ldr	r5, [r3, #24]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  613 001a 0AD1     		bne	.L86
  614 001c AFB1     		cbz	r7, .L90
  615 001e AC62     		str	r4, [r5, #40]
-ARM GAS  /tmp/ccCULEKc.s 			page 12
+ARM GAS  /tmp/cccn1fvc.s 			page 12
 
 
  616 0020 3946     		mov	r1, r7
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  670 0002 184B     		ldr	r3, .L101
  671 0004 0446     		mov	r4, r0
  672 0006 9D69     		ldr	r5, [r3, #24]
-ARM GAS  /tmp/ccCULEKc.s 			page 13
+ARM GAS  /tmp/cccn1fvc.s 			page 13
 
 
  673 0008 0F46     		mov	r7, r1
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  726      AFF30080 
  727              		.align	2
  728              		.p2align 4,,15
-ARM GAS  /tmp/ccCULEKc.s 			page 14
+ARM GAS  /tmp/cccn1fvc.s 			page 14
 
 
  729              		.global	chEvtWaitAllTimeout
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  783 0058 83F31188 		msr     BASEPRI, r3
  784              	@ 0 "" 2
  785              		.thumb
-ARM GAS  /tmp/ccCULEKc.s 			page 15
+ARM GAS  /tmp/cccn1fvc.s 			page 15
 
 
  786 005c 0020     		movs	r0, #0
@@ -897,74 +897,74 @@ ARM GAS  /tmp/ccCULEKc.s 			page 1
  811      6828292C 
  811      20233100 
  812              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccCULEKc.s 			page 16
+ARM GAS  /tmp/cccn1fvc.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chevents.c
-     /tmp/ccCULEKc.s:16     .text.chEvtRegisterMask:00000000 $t
-     /tmp/ccCULEKc.s:22     .text.chEvtRegisterMask:00000000 chEvtRegisterMask
-     /tmp/ccCULEKc.s:61     .text.chEvtRegisterMask:0000003c $d
-     /tmp/ccCULEKc.s:65     .text.chEvtUnregister:00000000 $t
-     /tmp/ccCULEKc.s:71     .text.chEvtUnregister:00000000 chEvtUnregister
-     /tmp/ccCULEKc.s:120    .text.chEvtUnregister:00000048 $d
-     /tmp/ccCULEKc.s:123    .text.chEvtGetAndClearEvents:00000000 $t
-     /tmp/ccCULEKc.s:129    .text.chEvtGetAndClearEvents:00000000 chEvtGetAndClearEvents
-     /tmp/ccCULEKc.s:157    .text.chEvtGetAndClearEvents:0000002c $d
-     /tmp/ccCULEKc.s:160    .text.chEvtAddEvents:00000000 $t
-     /tmp/ccCULEKc.s:166    .text.chEvtAddEvents:00000000 chEvtAddEvents
-     /tmp/ccCULEKc.s:193    .text.chEvtAddEvents:00000028 $d
-     /tmp/ccCULEKc.s:196    .text.chEvtGetAndClearFlags:00000000 $t
-     /tmp/ccCULEKc.s:202    .text.chEvtGetAndClearFlags:00000000 chEvtGetAndClearFlags
-     /tmp/ccCULEKc.s:226    .text.chEvtSignalI:00000000 $t
-     /tmp/ccCULEKc.s:232    .text.chEvtSignalI:00000000 chEvtSignalI
-     /tmp/ccCULEKc.s:274    .text.chEvtSignalI:00000048 $d
-     /tmp/ccCULEKc.s:277    .text.chEvtBroadcastFlagsI:00000000 $t
-     /tmp/ccCULEKc.s:283    .text.chEvtBroadcastFlagsI:00000000 chEvtBroadcastFlagsI
-     /tmp/ccCULEKc.s:314    .text.chEvtBroadcastFlagsI:00000030 $d
-     /tmp/ccCULEKc.s:317    .text.chEvtSignal:00000000 $t
-     /tmp/ccCULEKc.s:323    .text.chEvtSignal:00000000 chEvtSignal
-     /tmp/ccCULEKc.s:355    .text.chEvtSignal:00000034 $d
-     /tmp/ccCULEKc.s:358    .text.chEvtBroadcastFlags:00000000 $t
-     /tmp/ccCULEKc.s:364    .text.chEvtBroadcastFlags:00000000 chEvtBroadcastFlags
-     /tmp/ccCULEKc.s:389    .text.chEvtGetAndClearFlagsI:00000000 $t
-     /tmp/ccCULEKc.s:395    .text.chEvtGetAndClearFlagsI:00000000 chEvtGetAndClearFlagsI
-     /tmp/ccCULEKc.s:406    .text.chEvtDispatch:00000000 $t
-     /tmp/ccCULEKc.s:412    .text.chEvtDispatch:00000000 chEvtDispatch
-     /tmp/ccCULEKc.s:453    .text.chEvtDispatch:0000004c $d
-     /tmp/ccCULEKc.s:457    .text.chEvtWaitOne:00000000 $t
-     /tmp/ccCULEKc.s:463    .text.chEvtWaitOne:00000000 chEvtWaitOne
-     /tmp/ccCULEKc.s:500    .text.chEvtWaitOne:00000040 $d
-     /tmp/ccCULEKc.s:503    .text.chEvtWaitAny:00000000 $t
-     /tmp/ccCULEKc.s:509    .text.chEvtWaitAny:00000000 chEvtWaitAny
-     /tmp/ccCULEKc.s:544    .text.chEvtWaitAny:0000003c $d
-     /tmp/ccCULEKc.s:547    .text.chEvtWaitAll:00000000 $t
-     /tmp/ccCULEKc.s:553    .text.chEvtWaitAll:00000000 chEvtWaitAll
-     /tmp/ccCULEKc.s:588    .text.chEvtWaitAll:0000003c $d
-     /tmp/ccCULEKc.s:591    .text.chEvtWaitOneTimeout:00000000 $t
-     /tmp/ccCULEKc.s:597    .text.chEvtWaitOneTimeout:00000000 chEvtWaitOneTimeout
-     /tmp/ccCULEKc.s:657    .text.chEvtWaitOneTimeout:00000068 $d
-     /tmp/ccCULEKc.s:660    .text.chEvtWaitAnyTimeout:00000000 $t
-     /tmp/ccCULEKc.s:666    .text.chEvtWaitAnyTimeout:00000000 chEvtWaitAnyTimeout
-     /tmp/ccCULEKc.s:724    .text.chEvtWaitAnyTimeout:00000064 $d
-     /tmp/ccCULEKc.s:727    .text.chEvtWaitAllTimeout:00000000 $t
-     /tmp/ccCULEKc.s:733    .text.chEvtWaitAllTimeout:00000000 chEvtWaitAllTimeout
-     /tmp/ccCULEKc.s:791    .text.chEvtWaitAllTimeout:00000060 $d
-     /tmp/ccCULEKc.s:794    .rodata.str1.4:00000000 $d
-     /tmp/ccCULEKc.s:812    .text.chEvtRegisterMask:00000044 $t
-     /tmp/ccCULEKc.s:122    .text.chEvtUnregister:0000004c $t
-     /tmp/ccCULEKc.s:195    .text.chEvtAddEvents:0000002c $t
-     /tmp/ccCULEKc.s:276    .text.chEvtSignalI:0000004c $t
-     /tmp/ccCULEKc.s:316    .text.chEvtBroadcastFlagsI:00000034 $t
-     /tmp/ccCULEKc.s:357    .text.chEvtSignal:00000038 $t
-ARM GAS  /tmp/ccCULEKc.s 			page 17
+     /tmp/cccn1fvc.s:16     .text.chEvtRegisterMask:00000000 $t
+     /tmp/cccn1fvc.s:22     .text.chEvtRegisterMask:00000000 chEvtRegisterMask
+     /tmp/cccn1fvc.s:61     .text.chEvtRegisterMask:0000003c $d
+     /tmp/cccn1fvc.s:65     .text.chEvtUnregister:00000000 $t
+     /tmp/cccn1fvc.s:71     .text.chEvtUnregister:00000000 chEvtUnregister
+     /tmp/cccn1fvc.s:120    .text.chEvtUnregister:00000048 $d
+     /tmp/cccn1fvc.s:123    .text.chEvtGetAndClearEvents:00000000 $t
+     /tmp/cccn1fvc.s:129    .text.chEvtGetAndClearEvents:00000000 chEvtGetAndClearEvents
+     /tmp/cccn1fvc.s:157    .text.chEvtGetAndClearEvents:0000002c $d
+     /tmp/cccn1fvc.s:160    .text.chEvtAddEvents:00000000 $t
+     /tmp/cccn1fvc.s:166    .text.chEvtAddEvents:00000000 chEvtAddEvents
+     /tmp/cccn1fvc.s:193    .text.chEvtAddEvents:00000028 $d
+     /tmp/cccn1fvc.s:196    .text.chEvtGetAndClearFlags:00000000 $t
+     /tmp/cccn1fvc.s:202    .text.chEvtGetAndClearFlags:00000000 chEvtGetAndClearFlags
+     /tmp/cccn1fvc.s:226    .text.chEvtSignalI:00000000 $t
+     /tmp/cccn1fvc.s:232    .text.chEvtSignalI:00000000 chEvtSignalI
+     /tmp/cccn1fvc.s:274    .text.chEvtSignalI:00000048 $d
+     /tmp/cccn1fvc.s:277    .text.chEvtBroadcastFlagsI:00000000 $t
+     /tmp/cccn1fvc.s:283    .text.chEvtBroadcastFlagsI:00000000 chEvtBroadcastFlagsI
+     /tmp/cccn1fvc.s:314    .text.chEvtBroadcastFlagsI:00000030 $d
+     /tmp/cccn1fvc.s:317    .text.chEvtSignal:00000000 $t
+     /tmp/cccn1fvc.s:323    .text.chEvtSignal:00000000 chEvtSignal
+     /tmp/cccn1fvc.s:355    .text.chEvtSignal:00000034 $d
+     /tmp/cccn1fvc.s:358    .text.chEvtBroadcastFlags:00000000 $t
+     /tmp/cccn1fvc.s:364    .text.chEvtBroadcastFlags:00000000 chEvtBroadcastFlags
+     /tmp/cccn1fvc.s:389    .text.chEvtGetAndClearFlagsI:00000000 $t
+     /tmp/cccn1fvc.s:395    .text.chEvtGetAndClearFlagsI:00000000 chEvtGetAndClearFlagsI
+     /tmp/cccn1fvc.s:406    .text.chEvtDispatch:00000000 $t
+     /tmp/cccn1fvc.s:412    .text.chEvtDispatch:00000000 chEvtDispatch
+     /tmp/cccn1fvc.s:453    .text.chEvtDispatch:0000004c $d
+     /tmp/cccn1fvc.s:457    .text.chEvtWaitOne:00000000 $t
+     /tmp/cccn1fvc.s:463    .text.chEvtWaitOne:00000000 chEvtWaitOne
+     /tmp/cccn1fvc.s:500    .text.chEvtWaitOne:00000040 $d
+     /tmp/cccn1fvc.s:503    .text.chEvtWaitAny:00000000 $t
+     /tmp/cccn1fvc.s:509    .text.chEvtWaitAny:00000000 chEvtWaitAny
+     /tmp/cccn1fvc.s:544    .text.chEvtWaitAny:0000003c $d
+     /tmp/cccn1fvc.s:547    .text.chEvtWaitAll:00000000 $t
+     /tmp/cccn1fvc.s:553    .text.chEvtWaitAll:00000000 chEvtWaitAll
+     /tmp/cccn1fvc.s:588    .text.chEvtWaitAll:0000003c $d
+     /tmp/cccn1fvc.s:591    .text.chEvtWaitOneTimeout:00000000 $t
+     /tmp/cccn1fvc.s:597    .text.chEvtWaitOneTimeout:00000000 chEvtWaitOneTimeout
+     /tmp/cccn1fvc.s:657    .text.chEvtWaitOneTimeout:00000068 $d
+     /tmp/cccn1fvc.s:660    .text.chEvtWaitAnyTimeout:00000000 $t
+     /tmp/cccn1fvc.s:666    .text.chEvtWaitAnyTimeout:00000000 chEvtWaitAnyTimeout
+     /tmp/cccn1fvc.s:724    .text.chEvtWaitAnyTimeout:00000064 $d
+     /tmp/cccn1fvc.s:727    .text.chEvtWaitAllTimeout:00000000 $t
+     /tmp/cccn1fvc.s:733    .text.chEvtWaitAllTimeout:00000000 chEvtWaitAllTimeout
+     /tmp/cccn1fvc.s:791    .text.chEvtWaitAllTimeout:00000060 $d
+     /tmp/cccn1fvc.s:794    .rodata.str1.4:00000000 $d
+     /tmp/cccn1fvc.s:812    .text.chEvtRegisterMask:00000044 $t
+     /tmp/cccn1fvc.s:122    .text.chEvtUnregister:0000004c $t
+     /tmp/cccn1fvc.s:195    .text.chEvtAddEvents:0000002c $t
+     /tmp/cccn1fvc.s:276    .text.chEvtSignalI:0000004c $t
+     /tmp/cccn1fvc.s:316    .text.chEvtBroadcastFlagsI:00000034 $t
+     /tmp/cccn1fvc.s:357    .text.chEvtSignal:00000038 $t
+ARM GAS  /tmp/cccn1fvc.s 			page 17
 
 
-     /tmp/ccCULEKc.s:456    .text.chEvtDispatch:00000054 $t
-     /tmp/ccCULEKc.s:502    .text.chEvtWaitOne:00000044 $t
-     /tmp/ccCULEKc.s:659    .text.chEvtWaitOneTimeout:0000006c $t
-     /tmp/ccCULEKc.s:726    .text.chEvtWaitAnyTimeout:00000068 $t
-     /tmp/ccCULEKc.s:793    .text.chEvtWaitAllTimeout:00000064 $t
+     /tmp/cccn1fvc.s:456    .text.chEvtDispatch:00000054 $t
+     /tmp/cccn1fvc.s:502    .text.chEvtWaitOne:00000044 $t
+     /tmp/cccn1fvc.s:659    .text.chEvtWaitOneTimeout:0000006c $t
+     /tmp/cccn1fvc.s:726    .text.chEvtWaitAnyTimeout:00000068 $t
+     /tmp/cccn1fvc.s:793    .text.chEvtWaitAllTimeout:00000064 $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock

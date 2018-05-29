@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccBxcdhA.s 			page 1
+ARM GAS  /tmp/cczurCnP.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccBxcdhA.s 			page 1
   55 0002 0446     		mov	r4, r0
   56 0004 FFF7FEFF 		bl	chDbgCheckClassI
   57 0008 4CB1     		cbz	r4, .L17
-ARM GAS  /tmp/ccBxcdhA.s 			page 2
+ARM GAS  /tmp/cczurCnP.s 			page 2
 
 
   58              	.L11:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccBxcdhA.s 			page 1
  110      AFF30080 
  111              		.align	2
  112              		.p2align 4,,15
-ARM GAS  /tmp/ccBxcdhA.s 			page 3
+ARM GAS  /tmp/cczurCnP.s 			page 3
 
 
  113              		.global	chPoolFreeI
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccBxcdhA.s 			page 1
  166              	@ 175 "../../../ChibiOS/os/kernel/src/chmempools.c" 1
  167 001e 83F31188 		msr     BASEPRI, r3
  168              	@ 0 "" 2
-ARM GAS  /tmp/ccBxcdhA.s 			page 4
+ARM GAS  /tmp/cczurCnP.s 			page 4
 
 
  169              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccBxcdhA.s 			page 1
  217 0010 22636850 		.ascii	"\"chPoolAllocI\"()\000"
  217      6F6F6C41 
  217      6C6C6F63 
-ARM GAS  /tmp/ccBxcdhA.s 			page 5
+ARM GAS  /tmp/cczurCnP.s 			page 5
 
 
  217      49222829 
@@ -256,31 +256,31 @@ ARM GAS  /tmp/ccBxcdhA.s 			page 1
  222      72726179 
  222      22282900 
  223              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccBxcdhA.s 			page 6
+ARM GAS  /tmp/cczurCnP.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmempools.c
-     /tmp/ccBxcdhA.s:16     .text.chPoolInit:00000000 $t
-     /tmp/ccBxcdhA.s:22     .text.chPoolInit:00000000 chPoolInit
-     /tmp/ccBxcdhA.s:42     .text.chPoolInit:0000001c $d
-     /tmp/ccBxcdhA.s:45     .text.chPoolAllocI:00000000 $t
-     /tmp/ccBxcdhA.s:51     .text.chPoolAllocI:00000000 chPoolAllocI
-     /tmp/ccBxcdhA.s:78     .text.chPoolAllocI:00000028 $d
-     /tmp/ccBxcdhA.s:81     .text.chPoolAlloc:00000000 $t
-     /tmp/ccBxcdhA.s:87     .text.chPoolAlloc:00000000 chPoolAlloc
-     /tmp/ccBxcdhA.s:111    .text.chPoolFreeI:00000000 $t
-     /tmp/ccBxcdhA.s:117    .text.chPoolFreeI:00000000 chPoolFreeI
-     /tmp/ccBxcdhA.s:140    .text.chPoolFreeI:00000024 $d
-     /tmp/ccBxcdhA.s:143    .text.chPoolFree:00000000 $t
-     /tmp/ccBxcdhA.s:149    .text.chPoolFree:00000000 chPoolFree
-     /tmp/ccBxcdhA.s:173    .text.chPoolLoadArray:00000000 $t
-     /tmp/ccBxcdhA.s:179    .text.chPoolLoadArray:00000000 chPoolLoadArray
-     /tmp/ccBxcdhA.s:209    .text.chPoolLoadArray:00000034 $d
-     /tmp/ccBxcdhA.s:212    .rodata.str1.4:00000000 $d
-     /tmp/ccBxcdhA.s:80     .text.chPoolAllocI:0000002c $t
-     /tmp/ccBxcdhA.s:142    .text.chPoolFreeI:00000028 $t
-     /tmp/ccBxcdhA.s:211    .text.chPoolLoadArray:00000038 $t
+     /tmp/cczurCnP.s:16     .text.chPoolInit:00000000 $t
+     /tmp/cczurCnP.s:22     .text.chPoolInit:00000000 chPoolInit
+     /tmp/cczurCnP.s:42     .text.chPoolInit:0000001c $d
+     /tmp/cczurCnP.s:45     .text.chPoolAllocI:00000000 $t
+     /tmp/cczurCnP.s:51     .text.chPoolAllocI:00000000 chPoolAllocI
+     /tmp/cczurCnP.s:78     .text.chPoolAllocI:00000028 $d
+     /tmp/cczurCnP.s:81     .text.chPoolAlloc:00000000 $t
+     /tmp/cczurCnP.s:87     .text.chPoolAlloc:00000000 chPoolAlloc
+     /tmp/cczurCnP.s:111    .text.chPoolFreeI:00000000 $t
+     /tmp/cczurCnP.s:117    .text.chPoolFreeI:00000000 chPoolFreeI
+     /tmp/cczurCnP.s:140    .text.chPoolFreeI:00000024 $d
+     /tmp/cczurCnP.s:143    .text.chPoolFree:00000000 $t
+     /tmp/cczurCnP.s:149    .text.chPoolFree:00000000 chPoolFree
+     /tmp/cczurCnP.s:173    .text.chPoolLoadArray:00000000 $t
+     /tmp/cczurCnP.s:179    .text.chPoolLoadArray:00000000 chPoolLoadArray
+     /tmp/cczurCnP.s:209    .text.chPoolLoadArray:00000034 $d
+     /tmp/cczurCnP.s:212    .rodata.str1.4:00000000 $d
+     /tmp/cczurCnP.s:80     .text.chPoolAllocI:0000002c $t
+     /tmp/cczurCnP.s:142    .text.chPoolFreeI:00000028 $t
+     /tmp/cczurCnP.s:211    .text.chPoolLoadArray:00000038 $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

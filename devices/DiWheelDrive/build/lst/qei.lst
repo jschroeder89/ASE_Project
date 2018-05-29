@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccbUlUsm.s 			page 1
+ARM GAS  /tmp/cc5ce0Zy.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccbUlUsm.s 			page 1
   52              	qeiStart:
   53              		@ args = 0, pretend = 0, frame = 0
   54              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccbUlUsm.s 			page 2
+ARM GAS  /tmp/cc5ce0Zy.s 			page 2
 
 
   55 0000 38B5     		push	{r3, r4, r5, lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccbUlUsm.s 			page 1
  109              	.L14:
  110 0006 2023     		movs	r3, #32
  111              	@ 92 "../../hal/src/qei.c" 1
-ARM GAS  /tmp/ccbUlUsm.s 			page 3
+ARM GAS  /tmp/cc5ce0Zy.s 			page 3
 
 
  112 0008 83F31188 		msr     BASEPRI, r3
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccbUlUsm.s 			page 1
  164 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
  165 0012 022B     		cmp	r3, #2
  166 0014 02D0     		beq	.L21
-ARM GAS  /tmp/ccbUlUsm.s 			page 4
+ARM GAS  /tmp/cc5ce0Zy.s 			page 4
 
 
  167 0016 0948     		ldr	r0, .L26
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccbUlUsm.s 			page 1
  219 0020 2046     		mov	r0, r4
  220 0022 FFF7FEFF 		bl	qei_lld_disable
  221 0026 0223     		movs	r3, #2
-ARM GAS  /tmp/ccbUlUsm.s 			page 5
+ARM GAS  /tmp/cc5ce0Zy.s 			page 5
 
 
  222 0028 2370     		strb	r3, [r4]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccbUlUsm.s 			page 1
  259 005c 22716569 		.ascii	"\"qeiDisable\"()\000"
  259      44697361 
  259      626C6522 
-ARM GAS  /tmp/ccbUlUsm.s 			page 6
+ARM GAS  /tmp/cc5ce0Zy.s 			page 6
 
 
  259      282900
@@ -310,32 +310,32 @@ ARM GAS  /tmp/ccbUlUsm.s 			page 1
  262      2C202331 
  262      00
  263 007d 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccbUlUsm.s 			page 7
+ARM GAS  /tmp/cc5ce0Zy.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 qei.c
-     /tmp/ccbUlUsm.s:16     .text.qeiInit:00000000 $t
-     /tmp/ccbUlUsm.s:22     .text.qeiInit:00000000 qeiInit
-     /tmp/ccbUlUsm.s:29     .text.qeiObjectInit:00000000 $t
-     /tmp/ccbUlUsm.s:35     .text.qeiObjectInit:00000000 qeiObjectInit
-     /tmp/ccbUlUsm.s:46     .text.qeiStart:00000000 $t
-     /tmp/ccbUlUsm.s:52     .text.qeiStart:00000000 qeiStart
-     /tmp/ccbUlUsm.s:93     .text.qeiStart:00000044 $d
-     /tmp/ccbUlUsm.s:97     .text.qeiStop:00000000 $t
-     /tmp/ccbUlUsm.s:103    .text.qeiStop:00000000 qeiStop
-     /tmp/ccbUlUsm.s:141    .text.qeiStop:0000003c $d
-     /tmp/ccbUlUsm.s:145    .text.qeiEnable:00000000 $t
-     /tmp/ccbUlUsm.s:151    .text.qeiEnable:00000000 qeiEnable
-     /tmp/ccbUlUsm.s:188    .text.qeiEnable:0000003c $d
-     /tmp/ccbUlUsm.s:192    .text.qeiDisable:00000000 $t
-     /tmp/ccbUlUsm.s:198    .text.qeiDisable:00000000 qeiDisable
-     /tmp/ccbUlUsm.s:237    .text.qeiDisable:00000040 $d
-     /tmp/ccbUlUsm.s:241    .rodata.str1.4:00000000 $d
-     /tmp/ccbUlUsm.s:96     .text.qeiStart:0000004c $t
-     /tmp/ccbUlUsm.s:144    .text.qeiStop:00000044 $t
-     /tmp/ccbUlUsm.s:191    .text.qeiEnable:00000044 $t
-     /tmp/ccbUlUsm.s:263    .text.qeiDisable:00000048 $t
+     /tmp/cc5ce0Zy.s:16     .text.qeiInit:00000000 $t
+     /tmp/cc5ce0Zy.s:22     .text.qeiInit:00000000 qeiInit
+     /tmp/cc5ce0Zy.s:29     .text.qeiObjectInit:00000000 $t
+     /tmp/cc5ce0Zy.s:35     .text.qeiObjectInit:00000000 qeiObjectInit
+     /tmp/cc5ce0Zy.s:46     .text.qeiStart:00000000 $t
+     /tmp/cc5ce0Zy.s:52     .text.qeiStart:00000000 qeiStart
+     /tmp/cc5ce0Zy.s:93     .text.qeiStart:00000044 $d
+     /tmp/cc5ce0Zy.s:97     .text.qeiStop:00000000 $t
+     /tmp/cc5ce0Zy.s:103    .text.qeiStop:00000000 qeiStop
+     /tmp/cc5ce0Zy.s:141    .text.qeiStop:0000003c $d
+     /tmp/cc5ce0Zy.s:145    .text.qeiEnable:00000000 $t
+     /tmp/cc5ce0Zy.s:151    .text.qeiEnable:00000000 qeiEnable
+     /tmp/cc5ce0Zy.s:188    .text.qeiEnable:0000003c $d
+     /tmp/cc5ce0Zy.s:192    .text.qeiDisable:00000000 $t
+     /tmp/cc5ce0Zy.s:198    .text.qeiDisable:00000000 qeiDisable
+     /tmp/cc5ce0Zy.s:237    .text.qeiDisable:00000040 $d
+     /tmp/cc5ce0Zy.s:241    .rodata.str1.4:00000000 $d
+     /tmp/cc5ce0Zy.s:96     .text.qeiStart:0000004c $t
+     /tmp/cc5ce0Zy.s:144    .text.qeiStop:00000044 $t
+     /tmp/cc5ce0Zy.s:191    .text.qeiEnable:00000044 $t
+     /tmp/cc5ce0Zy.s:263    .text.qeiDisable:00000048 $t
 
 UNDEFINED SYMBOLS
 qei_lld_init

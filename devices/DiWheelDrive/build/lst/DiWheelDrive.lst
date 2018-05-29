@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccjyGa9p.s 			page 1
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
   55 0054 4646     		mov	r6, r8
   56 0056 0024     		movs	r4, #0
   57              	.L5:
-ARM GAS  /tmp/ccjyGa9p.s 			page 2
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 2
 
 
   58 0058 E1B2     		uxtb	r1, r4
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  110 001e 0825     		movs	r5, #8
  111 0020 D4F87023 		ldr	r2, [r4, #880]
  112 0024 D4F86C63 		ldr	r6, [r4, #876]
-ARM GAS  /tmp/ccjyGa9p.s 			page 3
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 3
 
 
  113 0028 65F30303 		bfi	r3, r5, #0, #4
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  167 00e0 0DEB0501 		add	r1, sp, r5
  168 00e4 2046     		mov	r0, r4
  169 00e6 ADF81270 		strh	r7, [sp, #18]	@ movhi
-ARM GAS  /tmp/ccjyGa9p.s 			page 4
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 4
 
 
  170 00ea ADF81460 		strh	r6, [sp, #20]	@ movhi
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  224 0196 1BD1     		bne	.L14
  225 0198 BDF80C30 		ldrh	r3, [sp, #12]
  226 019c 2046     		mov	r0, r4
-ARM GAS  /tmp/ccjyGa9p.s 			page 5
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 5
 
 
  227 019e 62F30A03 		bfi	r3, r2, #0, #11
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  281              		.weak	_ZN5amiro12DiWheelDriveD1Ev
  282              		.thumb_set _ZN5amiro12DiWheelDriveD1Ev,_ZN5amiro12DiWheelDriveD2Ev
  283              		.thumb_set .LTHUNK2,_ZN5amiro12DiWheelDriveD1Ev
-ARM GAS  /tmp/ccjyGa9p.s 			page 6
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 6
 
 
  284 0028 AFF30080 		.section	.text._ZN5amiro12DiWheelDriveD1Ev,"axG",%progbits,_ZN5amiro12DiWheelDriveD5Ev,comdat
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  336              		@ frame_needed = 0, uses_anonymous_args = 0
  337 0030 A0F5CC70 		sub	r0, r0, #408
  338 0034 E4E7     		b	.LTHUNK3
-ARM GAS  /tmp/ccjyGa9p.s 			page 7
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 7
 
 
  339              		.size	_ZThn408_N5amiro12DiWheelDriveD0Ev, .-_ZThn408_N5amiro12DiWheelDriveD0Ev
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  391              		.thumb_set .LTHUNK1,_ZN5amiro12DiWheelDrive5startEm
  392 0064 AFF30080 		.section	.text._ZThn408_N5amiro12DiWheelDrive5startEm,"ax",%progbits
  392      AFF30080 
-ARM GAS  /tmp/ccjyGa9p.s 			page 8
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 8
 
 
  392      AFF30080 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  445 0044 0020     		movs	r0, #0
  446 0046 27E0     		b	.L31
  447              	.L59:
-ARM GAS  /tmp/ccjyGa9p.s 			page 9
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 9
 
 
  448 0048 1128     		cmp	r0, #17
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  502 00c8 43EA0060 		orr	r0, r3, r0, lsl #24
  503 00cc FFF7FEFF 		bl	__aeabi_i2f
  504 00d0 FFF7FEFF 		bl	__aeabi_f2d
-ARM GAS  /tmp/ccjyGa9p.s 			page 10
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 10
 
 
  505 00d4 60A3     		adr	r3, .L62
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  559              	.L57:
  560 0164 4FF0FF30 		mov	r0, #-1
  561 0168 07B0     		add	sp, sp, #28
-ARM GAS  /tmp/ccjyGa9p.s 			page 11
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 11
 
 
  562              		@ sp needed
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  616 01e6 2248     		ldr	r0, .L62+24
  617 01e8 FFF7FEFF 		bl	_ZN5amiro12MotorControl32setWheelDiameterCorrectionFactorEfb
  618 01ec 2069     		ldr	r0, [r4, #16]
-ARM GAS  /tmp/ccjyGa9p.s 			page 12
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 12
 
 
  619 01ee FFF7FEFF 		bl	__aeabi_ui2f
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  672 026c 00000000 		.word	shutdown_now
  673 0270 F8220000 		.word	global+8952
  674 0274 30000000 		.word	SD1+48
-ARM GAS  /tmp/ccjyGa9p.s 			page 13
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 13
 
 
  675 0278 00247449 		.word	1232348160
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  726              		.global	_ZN5amiro12DiWheelDriveC1EP9CANDriver
  727              		.thumb_set _ZN5amiro12DiWheelDriveC1EP9CANDriver,_ZN5amiro12DiWheelDriveC2EP9CANDriver
  728 0034 AFF30080 		.section	.text._ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv,"ax",%progbits
-ARM GAS  /tmp/ccjyGa9p.s 			page 14
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 14
 
 
  728      AFF30080 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  779              		.thumb_func
  780              		.type	_ZN5amiro12DiWheelDrive9terminateEv, %function
  781              	_ZN5amiro12DiWheelDrive9terminateEv:
-ARM GAS  /tmp/ccjyGa9p.s 			page 15
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 15
 
 
  782              		@ args = 0, pretend = 0, frame = 0
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  831              		.align	3
  832              		.set	.LANCHOR0,. + 0
  833              		.type	_ZTVN5amiro12DiWheelDriveE, %object
-ARM GAS  /tmp/ccjyGa9p.s 			page 16
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 16
 
 
  834              		.size	_ZTVN5amiro12DiWheelDriveE, 76
@@ -923,67 +923,67 @@ ARM GAS  /tmp/ccjyGa9p.s 			page 1
  853 0044 00000000 		.word	_ZThn408_N5amiro12DiWheelDriveD0Ev
  854 0048 00000000 		.word	_ZThn408_N5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame
  855 004c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccjyGa9p.s 			page 17
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 DiWheelDrive.cpp
-     /tmp/ccjyGa9p.s:16     .text._ZN5amiro12DiWheelDrive15updateSensorValEv:00000000 $t
-     /tmp/ccjyGa9p.s:22     .text._ZN5amiro12DiWheelDrive15updateSensorValEv:00000000 _ZN5amiro12DiWheelDrive15updateSensorValEv
-     /tmp/ccjyGa9p.s:84     .text._ZN5amiro12DiWheelDrive15updateSensorValEv:00000090 $d
-     /tmp/ccjyGa9p.s:91     .text._ZN5amiro12DiWheelDrive17periodicBroadcastEv:00000000 $t
-     /tmp/ccjyGa9p.s:97     .text._ZN5amiro12DiWheelDrive17periodicBroadcastEv:00000000 _ZN5amiro12DiWheelDrive17periodicBroadcastEv
-     /tmp/ccjyGa9p.s:251    .text._ZN5amiro12DiWheelDrive17periodicBroadcastEv:000001dc $d
-     /tmp/ccjyGa9p.s:254    .text._ZN5amiro12DiWheelDriveD2Ev:00000000 $t
-     /tmp/ccjyGa9p.s:260    .text._ZN5amiro12DiWheelDriveD2Ev:00000000 _ZN5amiro12DiWheelDriveD2Ev
-     /tmp/ccjyGa9p.s:279    .text._ZN5amiro12DiWheelDriveD2Ev:00000024 $d
-     /tmp/ccjyGa9p.s:260    .text._ZN5amiro12DiWheelDriveD2Ev:00000000 _ZN5amiro12DiWheelDriveD1Ev
-     /tmp/ccjyGa9p.s:260    .text._ZN5amiro12DiWheelDriveD2Ev:00000000 .LTHUNK2
-     /tmp/ccjyGa9p.s:285    .text._ZN5amiro12DiWheelDriveD1Ev:00000000 $t
-     /tmp/ccjyGa9p.s:291    .text._ZN5amiro12DiWheelDriveD1Ev:00000000 _ZThn408_N5amiro12DiWheelDriveD1Ev
-     /tmp/ccjyGa9p.s:298    .text._ZN5amiro12DiWheelDriveD0Ev:00000000 $t
-     /tmp/ccjyGa9p.s:304    .text._ZN5amiro12DiWheelDriveD0Ev:00000000 _ZN5amiro12DiWheelDriveD0Ev
-     /tmp/ccjyGa9p.s:325    .text._ZN5amiro12DiWheelDriveD0Ev:0000002c $d
-     /tmp/ccjyGa9p.s:328    .text._ZN5amiro12DiWheelDriveD0Ev:00000030 $t
-     /tmp/ccjyGa9p.s:334    .text._ZN5amiro12DiWheelDriveD0Ev:00000030 _ZThn408_N5amiro12DiWheelDriveD0Ev
-     /tmp/ccjyGa9p.s:341    .text._ZN5amiro12DiWheelDrive5startEm:00000000 $t
-     /tmp/ccjyGa9p.s:347    .text._ZN5amiro12DiWheelDrive5startEm:00000000 _ZN5amiro12DiWheelDrive5startEm
-     /tmp/ccjyGa9p.s:387    .text._ZN5amiro12DiWheelDrive5startEm:00000058 $d
-     /tmp/ccjyGa9p.s:347    .text._ZN5amiro12DiWheelDrive5startEm:00000000 .LTHUNK1
-     /tmp/ccjyGa9p.s:393    .text._ZThn408_N5amiro12DiWheelDrive5startEm:00000000 $t
-     /tmp/ccjyGa9p.s:399    .text._ZThn408_N5amiro12DiWheelDrive5startEm:00000000 _ZThn408_N5amiro12DiWheelDrive5startEm
-     /tmp/ccjyGa9p.s:412    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 $t
-     /tmp/ccjyGa9p.s:418    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 _ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame
-     /tmp/ccjyGa9p.s:667    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000258 $d
-     /tmp/ccjyGa9p.s:418    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 .LTHUNK0
-     /tmp/ccjyGa9p.s:681    .text._ZThn408_N5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 $t
-     /tmp/ccjyGa9p.s:687    .text._ZThn408_N5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 _ZThn408_N5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame
-     /tmp/ccjyGa9p.s:694    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 $t
-     /tmp/ccjyGa9p.s:700    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 _ZN5amiro12DiWheelDriveC2EP9CANDriver
-     /tmp/ccjyGa9p.s:724    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000030 $d
-     /tmp/ccjyGa9p.s:700    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 _ZN5amiro12DiWheelDriveC1EP9CANDriver
-     /tmp/ccjyGa9p.s:729    .text._ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv:00000000 $t
-     /tmp/ccjyGa9p.s:735    .text._ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv:00000000 _ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv
-     /tmp/ccjyGa9p.s:758    .text._ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv:00000028 $d
-     /tmp/ccjyGa9p.s:762    .text._ZN5amiro12DiWheelDrive9calibrateEv:00000000 $t
-     /tmp/ccjyGa9p.s:768    .text._ZN5amiro12DiWheelDrive9calibrateEv:00000000 _ZN5amiro12DiWheelDrive9calibrateEv
-     /tmp/ccjyGa9p.s:775    .text._ZN5amiro12DiWheelDrive9terminateEv:00000000 $t
-     /tmp/ccjyGa9p.s:781    .text._ZN5amiro12DiWheelDrive9terminateEv:00000000 _ZN5amiro12DiWheelDrive9terminateEv
-     /tmp/ccjyGa9p.s:799    .text.startup._GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 $t
-     /tmp/ccjyGa9p.s:804    .text.startup._GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 _GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver
-     /tmp/ccjyGa9p.s:816    .text.startup._GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver:0000000c $d
-     /tmp/ccjyGa9p.s:820    .init_array:00000000 $d
-     /tmp/ccjyGa9p.s:835    .rodata._ZTVN5amiro12DiWheelDriveE:00000000 _ZTVN5amiro12DiWheelDriveE
-     /tmp/ccjyGa9p.s:824    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccjyGa9p.s:828    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccjyGa9p.s:831    .rodata._ZTVN5amiro12DiWheelDriveE:00000000 $d
-     /tmp/ccjyGa9p.s:90     .text._ZN5amiro12DiWheelDrive15updateSensorValEv:000000a4 $t
-     /tmp/ccjyGa9p.s:284    .text._ZN5amiro12DiWheelDriveD2Ev:00000028 $t
-     /tmp/ccjyGa9p.s:392    .text._ZN5amiro12DiWheelDrive5startEm:00000064 $t
-     /tmp/ccjyGa9p.s:680    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000284 $t
-     /tmp/ccjyGa9p.s:728    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000034 $t
-     /tmp/ccjyGa9p.s:819    .text.startup._GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver:00000014 $t
-ARM GAS  /tmp/ccjyGa9p.s 			page 18
+     /tmp/ccQ0Y8wi.s:16     .text._ZN5amiro12DiWheelDrive15updateSensorValEv:00000000 $t
+     /tmp/ccQ0Y8wi.s:22     .text._ZN5amiro12DiWheelDrive15updateSensorValEv:00000000 _ZN5amiro12DiWheelDrive15updateSensorValEv
+     /tmp/ccQ0Y8wi.s:84     .text._ZN5amiro12DiWheelDrive15updateSensorValEv:00000090 $d
+     /tmp/ccQ0Y8wi.s:91     .text._ZN5amiro12DiWheelDrive17periodicBroadcastEv:00000000 $t
+     /tmp/ccQ0Y8wi.s:97     .text._ZN5amiro12DiWheelDrive17periodicBroadcastEv:00000000 _ZN5amiro12DiWheelDrive17periodicBroadcastEv
+     /tmp/ccQ0Y8wi.s:251    .text._ZN5amiro12DiWheelDrive17periodicBroadcastEv:000001dc $d
+     /tmp/ccQ0Y8wi.s:254    .text._ZN5amiro12DiWheelDriveD2Ev:00000000 $t
+     /tmp/ccQ0Y8wi.s:260    .text._ZN5amiro12DiWheelDriveD2Ev:00000000 _ZN5amiro12DiWheelDriveD2Ev
+     /tmp/ccQ0Y8wi.s:279    .text._ZN5amiro12DiWheelDriveD2Ev:00000024 $d
+     /tmp/ccQ0Y8wi.s:260    .text._ZN5amiro12DiWheelDriveD2Ev:00000000 _ZN5amiro12DiWheelDriveD1Ev
+     /tmp/ccQ0Y8wi.s:260    .text._ZN5amiro12DiWheelDriveD2Ev:00000000 .LTHUNK2
+     /tmp/ccQ0Y8wi.s:285    .text._ZN5amiro12DiWheelDriveD1Ev:00000000 $t
+     /tmp/ccQ0Y8wi.s:291    .text._ZN5amiro12DiWheelDriveD1Ev:00000000 _ZThn408_N5amiro12DiWheelDriveD1Ev
+     /tmp/ccQ0Y8wi.s:298    .text._ZN5amiro12DiWheelDriveD0Ev:00000000 $t
+     /tmp/ccQ0Y8wi.s:304    .text._ZN5amiro12DiWheelDriveD0Ev:00000000 _ZN5amiro12DiWheelDriveD0Ev
+     /tmp/ccQ0Y8wi.s:325    .text._ZN5amiro12DiWheelDriveD0Ev:0000002c $d
+     /tmp/ccQ0Y8wi.s:328    .text._ZN5amiro12DiWheelDriveD0Ev:00000030 $t
+     /tmp/ccQ0Y8wi.s:334    .text._ZN5amiro12DiWheelDriveD0Ev:00000030 _ZThn408_N5amiro12DiWheelDriveD0Ev
+     /tmp/ccQ0Y8wi.s:341    .text._ZN5amiro12DiWheelDrive5startEm:00000000 $t
+     /tmp/ccQ0Y8wi.s:347    .text._ZN5amiro12DiWheelDrive5startEm:00000000 _ZN5amiro12DiWheelDrive5startEm
+     /tmp/ccQ0Y8wi.s:387    .text._ZN5amiro12DiWheelDrive5startEm:00000058 $d
+     /tmp/ccQ0Y8wi.s:347    .text._ZN5amiro12DiWheelDrive5startEm:00000000 .LTHUNK1
+     /tmp/ccQ0Y8wi.s:393    .text._ZThn408_N5amiro12DiWheelDrive5startEm:00000000 $t
+     /tmp/ccQ0Y8wi.s:399    .text._ZThn408_N5amiro12DiWheelDrive5startEm:00000000 _ZThn408_N5amiro12DiWheelDrive5startEm
+     /tmp/ccQ0Y8wi.s:412    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 $t
+     /tmp/ccQ0Y8wi.s:418    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 _ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame
+     /tmp/ccQ0Y8wi.s:667    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000258 $d
+     /tmp/ccQ0Y8wi.s:418    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 .LTHUNK0
+     /tmp/ccQ0Y8wi.s:681    .text._ZThn408_N5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 $t
+     /tmp/ccQ0Y8wi.s:687    .text._ZThn408_N5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000000 _ZThn408_N5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame
+     /tmp/ccQ0Y8wi.s:694    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 $t
+     /tmp/ccQ0Y8wi.s:700    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 _ZN5amiro12DiWheelDriveC2EP9CANDriver
+     /tmp/ccQ0Y8wi.s:724    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000030 $d
+     /tmp/ccQ0Y8wi.s:700    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 _ZN5amiro12DiWheelDriveC1EP9CANDriver
+     /tmp/ccQ0Y8wi.s:729    .text._ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv:00000000 $t
+     /tmp/ccQ0Y8wi.s:735    .text._ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv:00000000 _ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv
+     /tmp/ccQ0Y8wi.s:758    .text._ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv:00000028 $d
+     /tmp/ccQ0Y8wi.s:762    .text._ZN5amiro12DiWheelDrive9calibrateEv:00000000 $t
+     /tmp/ccQ0Y8wi.s:768    .text._ZN5amiro12DiWheelDrive9calibrateEv:00000000 _ZN5amiro12DiWheelDrive9calibrateEv
+     /tmp/ccQ0Y8wi.s:775    .text._ZN5amiro12DiWheelDrive9terminateEv:00000000 $t
+     /tmp/ccQ0Y8wi.s:781    .text._ZN5amiro12DiWheelDrive9terminateEv:00000000 _ZN5amiro12DiWheelDrive9terminateEv
+     /tmp/ccQ0Y8wi.s:799    .text.startup._GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 $t
+     /tmp/ccQ0Y8wi.s:804    .text.startup._GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver:00000000 _GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver
+     /tmp/ccQ0Y8wi.s:816    .text.startup._GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver:0000000c $d
+     /tmp/ccQ0Y8wi.s:820    .init_array:00000000 $d
+     /tmp/ccQ0Y8wi.s:835    .rodata._ZTVN5amiro12DiWheelDriveE:00000000 _ZTVN5amiro12DiWheelDriveE
+     /tmp/ccQ0Y8wi.s:824    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccQ0Y8wi.s:828    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccQ0Y8wi.s:831    .rodata._ZTVN5amiro12DiWheelDriveE:00000000 $d
+     /tmp/ccQ0Y8wi.s:90     .text._ZN5amiro12DiWheelDrive15updateSensorValEv:000000a4 $t
+     /tmp/ccQ0Y8wi.s:284    .text._ZN5amiro12DiWheelDriveD2Ev:00000028 $t
+     /tmp/ccQ0Y8wi.s:392    .text._ZN5amiro12DiWheelDrive5startEm:00000064 $t
+     /tmp/ccQ0Y8wi.s:680    .text._ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame:00000284 $t
+     /tmp/ccQ0Y8wi.s:728    .text._ZN5amiro12DiWheelDriveC2EP9CANDriver:00000034 $t
+     /tmp/ccQ0Y8wi.s:819    .text.startup._GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver:00000014 $t
+ARM GAS  /tmp/ccQ0Y8wi.s 			page 18
 
 
                            .group:00000000 _ZN5amiro12DiWheelDriveD5Ev

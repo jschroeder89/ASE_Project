@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccoLBAOS.s 			page 1
+ARM GAS  /tmp/ccCXQyHl.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccoLBAOS.s 			page 1
   55 0040 C669     		ldr	r6, [r0, #28]
   56 0042 2E60     		str	r6, [r5]
   57 0044 456A     		ldr	r5, [r0, #36]
-ARM GAS  /tmp/ccoLBAOS.s 			page 2
+ARM GAS  /tmp/ccCXQyHl.s 			page 2
 
 
   58 0046 E560     		str	r5, [r4, #12]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccoLBAOS.s 			page 1
  110 000a 4161     		streq	r1, [r0, #20]
  111              	.L6:
  112 000c 154C     		ldr	r4, .L16
-ARM GAS  /tmp/ccoLBAOS.s 			page 3
+ARM GAS  /tmp/ccCXQyHl.s 			page 3
 
 
  113 000e 0023     		movs	r3, #0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccoLBAOS.s 			page 1
  166 0007 07       		.byte	7
  167 0008 08       		.byte	8
  168 0009 08       		.byte	8
-ARM GAS  /tmp/ccoLBAOS.s 			page 4
+ARM GAS  /tmp/ccCXQyHl.s 			page 4
 
 
  169 000a 08       		.byte	8
@@ -190,20 +190,20 @@ ARM GAS  /tmp/ccoLBAOS.s 			page 1
  175 0010 0B       		.byte	11
  176 0011 0F       		.byte	15
  177 0012 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccoLBAOS.s 			page 5
+ARM GAS  /tmp/ccCXQyHl.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 pal_lld.c
-     /tmp/ccoLBAOS.s:16     .text._pal_lld_init:00000000 $t
-     /tmp/ccoLBAOS.s:22     .text._pal_lld_init:00000000 _pal_lld_init
-     /tmp/ccoLBAOS.s:86     .text._pal_lld_init:00000078 $d
-     /tmp/ccoLBAOS.s:95     .text._pal_lld_setgroupmode:00000000 $t
-     /tmp/ccoLBAOS.s:101    .text._pal_lld_setgroupmode:00000000 _pal_lld_setgroupmode
-     /tmp/ccoLBAOS.s:151    .text._pal_lld_setgroupmode:00000064 $d
-     /tmp/ccoLBAOS.s:154    .rodata.cfgtab.6604:00000000 $d
-     /tmp/ccoLBAOS.s:158    .rodata.cfgtab.6604:00000000 cfgtab.6604
-     /tmp/ccoLBAOS.s:94     .text._pal_lld_init:00000094 $t
-     /tmp/ccoLBAOS.s:153    .text._pal_lld_setgroupmode:00000068 $t
+     /tmp/ccCXQyHl.s:16     .text._pal_lld_init:00000000 $t
+     /tmp/ccCXQyHl.s:22     .text._pal_lld_init:00000000 _pal_lld_init
+     /tmp/ccCXQyHl.s:86     .text._pal_lld_init:00000078 $d
+     /tmp/ccCXQyHl.s:95     .text._pal_lld_setgroupmode:00000000 $t
+     /tmp/ccCXQyHl.s:101    .text._pal_lld_setgroupmode:00000000 _pal_lld_setgroupmode
+     /tmp/ccCXQyHl.s:151    .text._pal_lld_setgroupmode:00000064 $d
+     /tmp/ccCXQyHl.s:154    .rodata.cfgtab.6604:00000000 $d
+     /tmp/ccCXQyHl.s:158    .rodata.cfgtab.6604:00000000 cfgtab.6604
+     /tmp/ccCXQyHl.s:94     .text._pal_lld_init:00000094 $t
+     /tmp/ccCXQyHl.s:153    .text._pal_lld_setgroupmode:00000068 $t
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccP6LrFo.s 			page 1
+ARM GAS  /tmp/ccdtU7Dq.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
   55              	.L5:
   56 0010 08000000 		.word	.LANCHOR0+8
   57              		.size	_ZN5amiro8L3G4200DD0Ev, .-_ZN5amiro8L3G4200DD0Ev
-ARM GAS  /tmp/ccP6LrFo.s 			page 2
+ARM GAS  /tmp/ccdtU7Dq.s 			page 2
 
 
   58 0014 AFF30080 		.section	.text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm,"axG",%progbits,_ZN10chibios_rt16
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  110              		@ sp needed
  111 0016 5DF804EB 		ldr	lr, [sp], #4
  112 001a 03B0     		add	sp, sp, #12
-ARM GAS  /tmp/ccP6LrFo.s 			page 3
+ARM GAS  /tmp/ccdtU7Dq.s 			page 3
 
 
  113 001c 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  166 0058 03EB0223 		add	r3, r3, r2, lsl #8
  167 005c A4F8D831 		strh	r3, [r4, #472]	@ movhi
  168              	.L15:
-ARM GAS  /tmp/ccP6LrFo.s 			page 4
+ARM GAS  /tmp/ccdtU7Dq.s 			page 4
 
 
  169 0060 AA07     		lsls	r2, r5, #30
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  223 00ee 0BD3     		bcc	.L18
  224 00f0 3046     		mov	r0, r6
  225 00f2 FFF7FEFF 		bl	chThdSleepUntil
-ARM GAS  /tmp/ccP6LrFo.s 			page 5
+ARM GAS  /tmp/ccdtU7Dq.s 			page 5
 
 
  226 00f6 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  280              		.size	_ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE, .-_ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE
  281              		.global	_ZN5amiro8L3G4200DC1EPNS_11HWSPIDriverE
  282              		.thumb_set _ZN5amiro8L3G4200DC1EPNS_11HWSPIDriverE,_ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE
-ARM GAS  /tmp/ccP6LrFo.s 			page 6
+ARM GAS  /tmp/ccdtU7Dq.s 			page 6
 
 
  283              		.section	.text._ZN5amiro8L3G4200D14getEventSourceEv,"ax",%progbits
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  334              		.thumb_func
  335              		.type	_ZN5amiro8L3G4200D10getAngularEh, %function
  336              	_ZN5amiro8L3G4200D10getAngularEh:
-ARM GAS  /tmp/ccP6LrFo.s 			page 7
+ARM GAS  /tmp/ccdtU7Dq.s 			page 7
 
 
  337              		@ args = 0, pretend = 0, frame = 0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  390 0002 C0F8E031 		str	r3, [r0, #480]
  391 0006 C0F8E431 		str	r3, [r0, #484]
  392 000a C0F8E831 		str	r3, [r0, #488]
-ARM GAS  /tmp/ccP6LrFo.s 			page 8
+ARM GAS  /tmp/ccdtU7Dq.s 			page 8
 
 
  393 000e C0F8F431 		str	r3, [r0, #500]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  445              	.L52:
  446 006a C4F80462 		str	r6, [r4, #516]
  447 006e C4F80002 		str	r0, [r4, #512]
-ARM GAS  /tmp/ccP6LrFo.s 			page 9
+ARM GAS  /tmp/ccdtU7Dq.s 			page 9
 
 
  448 0072 2B78     		ldrb	r3, [r5]	@ zero_extendqisi2
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  502              	.L47:
  503 00fe 41F28833 		movw	r3, #5000
  504 0102 0520     		movs	r0, #5
-ARM GAS  /tmp/ccP6LrFo.s 			page 10
+ARM GAS  /tmp/ccdtU7Dq.s 			page 10
 
 
  505 0104 C4F8FC31 		str	r3, [r4, #508]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  558              	.L63:
  559 000a 00BF     		.align	2
  560              	.L62:
-ARM GAS  /tmp/ccP6LrFo.s 			page 11
+ARM GAS  /tmp/ccdtU7Dq.s 			page 11
 
 
  561 000c 00000000 		.word	.LANCHOR1
@@ -656,67 +656,67 @@ ARM GAS  /tmp/ccP6LrFo.s 			page 1
  605      32303064 
  605      00
  606 0035 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccP6LrFo.s 			page 12
+ARM GAS  /tmp/ccdtU7Dq.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 l3g4200d.cpp
-     /tmp/ccP6LrFo.s:16     .text._ZN5amiro8L3G4200DD2Ev:00000000 $t
-     /tmp/ccP6LrFo.s:22     .text._ZN5amiro8L3G4200DD2Ev:00000000 _ZN5amiro8L3G4200DD2Ev
-     /tmp/ccP6LrFo.s:32     .text._ZN5amiro8L3G4200DD2Ev:00000008 $d
-     /tmp/ccP6LrFo.s:22     .text._ZN5amiro8L3G4200DD2Ev:00000000 _ZN5amiro8L3G4200DD1Ev
-     /tmp/ccP6LrFo.s:37     .text._ZN5amiro8L3G4200DD0Ev:00000000 $t
-     /tmp/ccP6LrFo.s:43     .text._ZN5amiro8L3G4200DD0Ev:00000000 _ZN5amiro8L3G4200DD0Ev
-     /tmp/ccP6LrFo.s:56     .text._ZN5amiro8L3G4200DD0Ev:00000010 $d
-     /tmp/ccP6LrFo.s:59     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
-     /tmp/ccP6LrFo.s:65     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
-     /tmp/ccP6LrFo.s:88     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
-     /tmp/ccP6LrFo.s:92     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0:00000000 $t
-     /tmp/ccP6LrFo.s:97     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0
-     /tmp/ccP6LrFo.s:117    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0:00000020 $d
-     /tmp/ccP6LrFo.s:121    .text.startup._ZN5amiro8L3G4200D4mainEv:00000000 $t
-     /tmp/ccP6LrFo.s:127    .text.startup._ZN5amiro8L3G4200D4mainEv:00000000 _ZN5amiro8L3G4200D4mainEv
-     /tmp/ccP6LrFo.s:242    .text.startup._ZN5amiro8L3G4200D4mainEv:00000110 $d
-     /tmp/ccP6LrFo.s:247    .text._ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 $t
-     /tmp/ccP6LrFo.s:253    .text._ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE
-     /tmp/ccP6LrFo.s:277    .text._ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000034 $d
-     /tmp/ccP6LrFo.s:253    .text._ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro8L3G4200DC1EPNS_11HWSPIDriverE
-     /tmp/ccP6LrFo.s:284    .text._ZN5amiro8L3G4200D14getEventSourceEv:00000000 $t
-     /tmp/ccP6LrFo.s:290    .text._ZN5amiro8L3G4200D14getEventSourceEv:00000000 _ZN5amiro8L3G4200D14getEventSourceEv
-     /tmp/ccP6LrFo.s:298    .text._ZN5amiro8L3G4200D14getAngularRateEh:00000000 $t
-     /tmp/ccP6LrFo.s:304    .text._ZN5amiro8L3G4200D14getAngularRateEh:00000000 _ZN5amiro8L3G4200D14getAngularRateEh
-     /tmp/ccP6LrFo.s:313    .text._ZN5amiro8L3G4200D19getAngularRate_udpsEh:00000000 $t
-     /tmp/ccP6LrFo.s:319    .text._ZN5amiro8L3G4200D19getAngularRate_udpsEh:00000000 _ZN5amiro8L3G4200D19getAngularRate_udpsEh
-     /tmp/ccP6LrFo.s:330    .text._ZN5amiro8L3G4200D10getAngularEh:00000000 $t
-     /tmp/ccP6LrFo.s:336    .text._ZN5amiro8L3G4200D10getAngularEh:00000000 _ZN5amiro8L3G4200D10getAngularEh
-     /tmp/ccP6LrFo.s:348    .text._ZN5amiro8L3G4200D13getAngular_udEh:00000000 $t
-     /tmp/ccP6LrFo.s:354    .text._ZN5amiro8L3G4200D13getAngular_udEh:00000000 _ZN5amiro8L3G4200D13getAngular_udEh
-     /tmp/ccP6LrFo.s:375    .text._ZN5amiro8L3G4200D13getAngular_udEh:00000038 $d
-     /tmp/ccP6LrFo.s:379    .text._ZN5amiro8L3G4200D12angularResetEv:00000000 $t
-     /tmp/ccP6LrFo.s:385    .text._ZN5amiro8L3G4200D12angularResetEv:00000000 _ZN5amiro8L3G4200D12angularResetEv
-     /tmp/ccP6LrFo.s:399    .text._ZN5amiro8L3G4200D9configureEPKNS0_14L3G4200DConfigE:00000000 $t
-     /tmp/ccP6LrFo.s:405    .text._ZN5amiro8L3G4200D9configureEPKNS0_14L3G4200DConfigE:00000000 _ZN5amiro8L3G4200D9configureEPKNS0_14L3G4200DConfigE
-     /tmp/ccP6LrFo.s:511    .text._ZN5amiro8L3G4200D9configureEPKNS0_14L3G4200DConfigE:00000110 $d
-     /tmp/ccP6LrFo.s:517    .text._ZN5amiro8L3G4200D8getCheckEv:00000000 $t
-     /tmp/ccP6LrFo.s:523    .text._ZN5amiro8L3G4200D8getCheckEv:00000000 _ZN5amiro8L3G4200D8getCheckEv
-     /tmp/ccP6LrFo.s:544    .text.startup._GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 $t
-     /tmp/ccP6LrFo.s:549    .text.startup._GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 _GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE
-     /tmp/ccP6LrFo.s:561    .text.startup._GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:0000000c $d
-     /tmp/ccP6LrFo.s:565    .init_array:00000000 $d
-     /tmp/ccP6LrFo.s:572    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
-     /tmp/ccP6LrFo.s:569    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
-     /tmp/ccP6LrFo.s:591    .rodata._ZTVN5amiro8L3G4200DE:00000000 _ZTVN5amiro8L3G4200DE
-     /tmp/ccP6LrFo.s:580    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccP6LrFo.s:584    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccP6LrFo.s:587    .rodata._ZTVN5amiro8L3G4200DE:00000000 $d
-     /tmp/ccP6LrFo.s:600    .rodata.str1.4:00000000 $d
-     /tmp/ccP6LrFo.s:36     .text._ZN5amiro8L3G4200DD2Ev:0000000c $t
-     /tmp/ccP6LrFo.s:58     .text._ZN5amiro8L3G4200DD0Ev:00000014 $t
-     /tmp/ccP6LrFo.s:120    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0:00000028 $t
-     /tmp/ccP6LrFo.s:246    .text.startup._ZN5amiro8L3G4200D4mainEv:0000011c $t
-     /tmp/ccP6LrFo.s:564    .text.startup._GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000014 $t
+     /tmp/ccdtU7Dq.s:16     .text._ZN5amiro8L3G4200DD2Ev:00000000 $t
+     /tmp/ccdtU7Dq.s:22     .text._ZN5amiro8L3G4200DD2Ev:00000000 _ZN5amiro8L3G4200DD2Ev
+     /tmp/ccdtU7Dq.s:32     .text._ZN5amiro8L3G4200DD2Ev:00000008 $d
+     /tmp/ccdtU7Dq.s:22     .text._ZN5amiro8L3G4200DD2Ev:00000000 _ZN5amiro8L3G4200DD1Ev
+     /tmp/ccdtU7Dq.s:37     .text._ZN5amiro8L3G4200DD0Ev:00000000 $t
+     /tmp/ccdtU7Dq.s:43     .text._ZN5amiro8L3G4200DD0Ev:00000000 _ZN5amiro8L3G4200DD0Ev
+     /tmp/ccdtU7Dq.s:56     .text._ZN5amiro8L3G4200DD0Ev:00000010 $d
+     /tmp/ccdtU7Dq.s:59     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/ccdtU7Dq.s:65     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/ccdtU7Dq.s:88     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/ccdtU7Dq.s:92     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0:00000000 $t
+     /tmp/ccdtU7Dq.s:97     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0
+     /tmp/ccdtU7Dq.s:117    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0:00000020 $d
+     /tmp/ccdtU7Dq.s:121    .text.startup._ZN5amiro8L3G4200D4mainEv:00000000 $t
+     /tmp/ccdtU7Dq.s:127    .text.startup._ZN5amiro8L3G4200D4mainEv:00000000 _ZN5amiro8L3G4200D4mainEv
+     /tmp/ccdtU7Dq.s:242    .text.startup._ZN5amiro8L3G4200D4mainEv:00000110 $d
+     /tmp/ccdtU7Dq.s:247    .text._ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 $t
+     /tmp/ccdtU7Dq.s:253    .text._ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE
+     /tmp/ccdtU7Dq.s:277    .text._ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000034 $d
+     /tmp/ccdtU7Dq.s:253    .text._ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro8L3G4200DC1EPNS_11HWSPIDriverE
+     /tmp/ccdtU7Dq.s:284    .text._ZN5amiro8L3G4200D14getEventSourceEv:00000000 $t
+     /tmp/ccdtU7Dq.s:290    .text._ZN5amiro8L3G4200D14getEventSourceEv:00000000 _ZN5amiro8L3G4200D14getEventSourceEv
+     /tmp/ccdtU7Dq.s:298    .text._ZN5amiro8L3G4200D14getAngularRateEh:00000000 $t
+     /tmp/ccdtU7Dq.s:304    .text._ZN5amiro8L3G4200D14getAngularRateEh:00000000 _ZN5amiro8L3G4200D14getAngularRateEh
+     /tmp/ccdtU7Dq.s:313    .text._ZN5amiro8L3G4200D19getAngularRate_udpsEh:00000000 $t
+     /tmp/ccdtU7Dq.s:319    .text._ZN5amiro8L3G4200D19getAngularRate_udpsEh:00000000 _ZN5amiro8L3G4200D19getAngularRate_udpsEh
+     /tmp/ccdtU7Dq.s:330    .text._ZN5amiro8L3G4200D10getAngularEh:00000000 $t
+     /tmp/ccdtU7Dq.s:336    .text._ZN5amiro8L3G4200D10getAngularEh:00000000 _ZN5amiro8L3G4200D10getAngularEh
+     /tmp/ccdtU7Dq.s:348    .text._ZN5amiro8L3G4200D13getAngular_udEh:00000000 $t
+     /tmp/ccdtU7Dq.s:354    .text._ZN5amiro8L3G4200D13getAngular_udEh:00000000 _ZN5amiro8L3G4200D13getAngular_udEh
+     /tmp/ccdtU7Dq.s:375    .text._ZN5amiro8L3G4200D13getAngular_udEh:00000038 $d
+     /tmp/ccdtU7Dq.s:379    .text._ZN5amiro8L3G4200D12angularResetEv:00000000 $t
+     /tmp/ccdtU7Dq.s:385    .text._ZN5amiro8L3G4200D12angularResetEv:00000000 _ZN5amiro8L3G4200D12angularResetEv
+     /tmp/ccdtU7Dq.s:399    .text._ZN5amiro8L3G4200D9configureEPKNS0_14L3G4200DConfigE:00000000 $t
+     /tmp/ccdtU7Dq.s:405    .text._ZN5amiro8L3G4200D9configureEPKNS0_14L3G4200DConfigE:00000000 _ZN5amiro8L3G4200D9configureEPKNS0_14L3G4200DConfigE
+     /tmp/ccdtU7Dq.s:511    .text._ZN5amiro8L3G4200D9configureEPKNS0_14L3G4200DConfigE:00000110 $d
+     /tmp/ccdtU7Dq.s:517    .text._ZN5amiro8L3G4200D8getCheckEv:00000000 $t
+     /tmp/ccdtU7Dq.s:523    .text._ZN5amiro8L3G4200D8getCheckEv:00000000 _ZN5amiro8L3G4200D8getCheckEv
+     /tmp/ccdtU7Dq.s:544    .text.startup._GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 $t
+     /tmp/ccdtU7Dq.s:549    .text.startup._GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000000 _GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE
+     /tmp/ccdtU7Dq.s:561    .text.startup._GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:0000000c $d
+     /tmp/ccdtU7Dq.s:565    .init_array:00000000 $d
+     /tmp/ccdtU7Dq.s:572    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/ccdtU7Dq.s:569    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/ccdtU7Dq.s:591    .rodata._ZTVN5amiro8L3G4200DE:00000000 _ZTVN5amiro8L3G4200DE
+     /tmp/ccdtU7Dq.s:580    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccdtU7Dq.s:584    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccdtU7Dq.s:587    .rodata._ZTVN5amiro8L3G4200DE:00000000 $d
+     /tmp/ccdtU7Dq.s:600    .rodata.str1.4:00000000 $d
+     /tmp/ccdtU7Dq.s:36     .text._ZN5amiro8L3G4200DD2Ev:0000000c $t
+     /tmp/ccdtU7Dq.s:58     .text._ZN5amiro8L3G4200DD0Ev:00000014 $t
+     /tmp/ccdtU7Dq.s:120    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0:00000028 $t
+     /tmp/ccdtU7Dq.s:246    .text.startup._ZN5amiro8L3G4200D4mainEv:0000011c $t
+     /tmp/ccdtU7Dq.s:564    .text.startup._GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE:00000014 $t
 
-ARM GAS  /tmp/ccP6LrFo.s 			page 13
+ARM GAS  /tmp/ccdtU7Dq.s 			page 13
 
 
 UNDEFINED SYMBOLS

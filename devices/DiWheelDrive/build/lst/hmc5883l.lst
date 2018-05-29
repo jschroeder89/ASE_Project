@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cca8rhDd.s 			page 1
+ARM GAS  /tmp/ccXEPwNf.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
   55              	.L5:
   56 0010 08000000 		.word	.LANCHOR0+8
   57              		.size	_ZN5amiro8HMC5883LD0Ev, .-_ZN5amiro8HMC5883LD0Ev
-ARM GAS  /tmp/cca8rhDd.s 			page 2
+ARM GAS  /tmp/ccXEPwNf.s 			page 2
 
 
   58 0014 AFF30080 		.section	.text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm,"axG",%progbits,_ZN10chibios_rt16
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
  110 0018 04F5F470 		add	r0, r4, #488
  111 001c FFF7FEFF 		bl	_ZN10chibios_rt9EvtSourceC1Ev
  112 0020 1E23     		movs	r3, #30
-ARM GAS  /tmp/cca8rhDd.s 			page 3
+ARM GAS  /tmp/ccXEPwNf.s 			page 3
 
 
  113 0022 A4F8EC31 		strh	r3, [r4, #492]	@ movhi
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
  165 0022 38BD     		pop	{r3, r4, r5, pc}
  166              		.size	_ZN5amiro8HMC5883L16getMagnetizationEh, .-_ZN5amiro8HMC5883L16getMagnetizationEh
  167 0024 AFF30080 		.section	.text._ZN5amiro8HMC5883L21getMagnetizationGaussEh,"ax",%progbits
-ARM GAS  /tmp/cca8rhDd.s 			page 4
+ARM GAS  /tmp/ccXEPwNf.s 			page 4
 
 
  167      AFF30080 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
  220              	.L20:
  221 0058 2DB2     		sxth	r5, r5
  222 005a 40F2C440 		movw	r0, #1220
-ARM GAS  /tmp/cca8rhDd.s 			page 5
+ARM GAS  /tmp/ccXEPwNf.s 			page 5
 
 
  223 005e 00FB05F0 		mul	r0, r0, r5
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
  277 0016 0DF10706 		add	r6, sp, #7
  278 001a 1E27     		movs	r7, #30
  279 001c 0125     		movs	r5, #1
-ARM GAS  /tmp/cca8rhDd.s 			page 6
+ARM GAS  /tmp/ccXEPwNf.s 			page 6
 
 
  280 001e DB69     		ldr	r3, [r3, #28]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
  334 000e 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
  335 0010 0446     		mov	r4, r0
  336 0012 8DF80510 		strb	r1, [sp, #5]
-ARM GAS  /tmp/cca8rhDd.s 			page 7
+ARM GAS  /tmp/ccXEPwNf.s 			page 7
 
 
  337 0016 5978     		ldrb	r1, [r3, #1]	@ zero_extendqisi2
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
  391 0024 8DF80770 		strb	r7, [sp, #7]
  392 0028 0268     		ldr	r2, [r0]
  393 002a 02A9     		add	r1, sp, #8
-ARM GAS  /tmp/cca8rhDd.s 			page 8
+ARM GAS  /tmp/ccXEPwNf.s 			page 8
 
 
  394 002c C4F8F811 		str	r1, [r4, #504]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
  448              		@ sp needed
  449 00c2 F0BD     		pop	{r4, r5, r6, r7, pc}
  450              	.L43:
-ARM GAS  /tmp/cca8rhDd.s 			page 9
+ARM GAS  /tmp/ccXEPwNf.s 			page 9
 
 
  451 00c4 6FF00100 		mvn	r0, #1
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
  502              		.align	3
  503              		.set	.LANCHOR0,. + 0
  504              		.type	_ZTVN5amiro8HMC5883LE, %object
-ARM GAS  /tmp/cca8rhDd.s 			page 10
+ARM GAS  /tmp/ccXEPwNf.s 			page 10
 
 
  505              		.size	_ZTVN5amiro8HMC5883LE, 28
@@ -557,52 +557,52 @@ ARM GAS  /tmp/cca8rhDd.s 			page 1
  517      3838336C 
  517      00
  518 0009 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cca8rhDd.s 			page 11
+ARM GAS  /tmp/ccXEPwNf.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 hmc5883l.cpp
-     /tmp/cca8rhDd.s:16     .text._ZN5amiro8HMC5883LD2Ev:00000000 $t
-     /tmp/cca8rhDd.s:22     .text._ZN5amiro8HMC5883LD2Ev:00000000 _ZN5amiro8HMC5883LD2Ev
-     /tmp/cca8rhDd.s:32     .text._ZN5amiro8HMC5883LD2Ev:00000008 $d
-     /tmp/cca8rhDd.s:22     .text._ZN5amiro8HMC5883LD2Ev:00000000 _ZN5amiro8HMC5883LD1Ev
-     /tmp/cca8rhDd.s:37     .text._ZN5amiro8HMC5883LD0Ev:00000000 $t
-     /tmp/cca8rhDd.s:43     .text._ZN5amiro8HMC5883LD0Ev:00000000 _ZN5amiro8HMC5883LD0Ev
-     /tmp/cca8rhDd.s:56     .text._ZN5amiro8HMC5883LD0Ev:00000010 $d
-     /tmp/cca8rhDd.s:59     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
-     /tmp/cca8rhDd.s:65     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
-     /tmp/cca8rhDd.s:88     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
-     /tmp/cca8rhDd.s:92     .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:00000000 $t
-     /tmp/cca8rhDd.s:98     .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:00000000 _ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
-     /tmp/cca8rhDd.s:119    .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:0000002c $d
-     /tmp/cca8rhDd.s:98     .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:00000000 _ZN5amiro8HMC5883LC1EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
-     /tmp/cca8rhDd.s:124    .text._ZN5amiro8HMC5883L14getEventSourceEv:00000000 $t
-     /tmp/cca8rhDd.s:130    .text._ZN5amiro8HMC5883L14getEventSourceEv:00000000 _ZN5amiro8HMC5883L14getEventSourceEv
-     /tmp/cca8rhDd.s:138    .text._ZN5amiro8HMC5883L16getMagnetizationEh:00000000 $t
-     /tmp/cca8rhDd.s:144    .text._ZN5amiro8HMC5883L16getMagnetizationEh:00000000 _ZN5amiro8HMC5883L16getMagnetizationEh
-     /tmp/cca8rhDd.s:168    .text._ZN5amiro8HMC5883L21getMagnetizationGaussEh:00000000 $t
-     /tmp/cca8rhDd.s:174    .text._ZN5amiro8HMC5883L21getMagnetizationGaussEh:00000000 _ZN5amiro8HMC5883L21getMagnetizationGaussEh
-     /tmp/cca8rhDd.s:259    .text._ZN5amiro8HMC5883L8getCheckEv:00000000 $t
-     /tmp/cca8rhDd.s:265    .text._ZN5amiro8HMC5883L8getCheckEv:00000000 _ZN5amiro8HMC5883L8getCheckEv
-     /tmp/cca8rhDd.s:320    .text._ZN5amiro8HMC5883L9writeConfEv:00000000 $t
-     /tmp/cca8rhDd.s:326    .text._ZN5amiro8HMC5883L9writeConfEv:00000000 _ZN5amiro8HMC5883L9writeConfEv
-     /tmp/cca8rhDd.s:367    .text.startup._ZN5amiro8HMC5883L4mainEv:00000000 $t
-     /tmp/cca8rhDd.s:373    .text.startup._ZN5amiro8HMC5883L4mainEv:00000000 _ZN5amiro8HMC5883L4mainEv
-     /tmp/cca8rhDd.s:456    .text.startup._ZN5amiro8HMC5883L4mainEv:000000cc $d
-     /tmp/cca8rhDd.s:459    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:00000000 $t
-     /tmp/cca8rhDd.s:464    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:00000000 _GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev
-     /tmp/cca8rhDd.s:476    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:0000000c $d
-     /tmp/cca8rhDd.s:480    .init_array:00000000 $d
-     /tmp/cca8rhDd.s:487    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
-     /tmp/cca8rhDd.s:484    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
-     /tmp/cca8rhDd.s:506    .rodata._ZTVN5amiro8HMC5883LE:00000000 _ZTVN5amiro8HMC5883LE
-     /tmp/cca8rhDd.s:495    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/cca8rhDd.s:499    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/cca8rhDd.s:502    .rodata._ZTVN5amiro8HMC5883LE:00000000 $d
-     /tmp/cca8rhDd.s:515    .rodata.str1.4:00000000 $d
-     /tmp/cca8rhDd.s:36     .text._ZN5amiro8HMC5883LD2Ev:0000000c $t
-     /tmp/cca8rhDd.s:58     .text._ZN5amiro8HMC5883LD0Ev:00000014 $t
-     /tmp/cca8rhDd.s:479    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:00000014 $t
+     /tmp/ccXEPwNf.s:16     .text._ZN5amiro8HMC5883LD2Ev:00000000 $t
+     /tmp/ccXEPwNf.s:22     .text._ZN5amiro8HMC5883LD2Ev:00000000 _ZN5amiro8HMC5883LD2Ev
+     /tmp/ccXEPwNf.s:32     .text._ZN5amiro8HMC5883LD2Ev:00000008 $d
+     /tmp/ccXEPwNf.s:22     .text._ZN5amiro8HMC5883LD2Ev:00000000 _ZN5amiro8HMC5883LD1Ev
+     /tmp/ccXEPwNf.s:37     .text._ZN5amiro8HMC5883LD0Ev:00000000 $t
+     /tmp/ccXEPwNf.s:43     .text._ZN5amiro8HMC5883LD0Ev:00000000 _ZN5amiro8HMC5883LD0Ev
+     /tmp/ccXEPwNf.s:56     .text._ZN5amiro8HMC5883LD0Ev:00000010 $d
+     /tmp/ccXEPwNf.s:59     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/ccXEPwNf.s:65     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/ccXEPwNf.s:88     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/ccXEPwNf.s:92     .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:00000000 $t
+     /tmp/ccXEPwNf.s:98     .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:00000000 _ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
+     /tmp/ccXEPwNf.s:119    .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:0000002c $d
+     /tmp/ccXEPwNf.s:98     .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:00000000 _ZN5amiro8HMC5883LC1EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
+     /tmp/ccXEPwNf.s:124    .text._ZN5amiro8HMC5883L14getEventSourceEv:00000000 $t
+     /tmp/ccXEPwNf.s:130    .text._ZN5amiro8HMC5883L14getEventSourceEv:00000000 _ZN5amiro8HMC5883L14getEventSourceEv
+     /tmp/ccXEPwNf.s:138    .text._ZN5amiro8HMC5883L16getMagnetizationEh:00000000 $t
+     /tmp/ccXEPwNf.s:144    .text._ZN5amiro8HMC5883L16getMagnetizationEh:00000000 _ZN5amiro8HMC5883L16getMagnetizationEh
+     /tmp/ccXEPwNf.s:168    .text._ZN5amiro8HMC5883L21getMagnetizationGaussEh:00000000 $t
+     /tmp/ccXEPwNf.s:174    .text._ZN5amiro8HMC5883L21getMagnetizationGaussEh:00000000 _ZN5amiro8HMC5883L21getMagnetizationGaussEh
+     /tmp/ccXEPwNf.s:259    .text._ZN5amiro8HMC5883L8getCheckEv:00000000 $t
+     /tmp/ccXEPwNf.s:265    .text._ZN5amiro8HMC5883L8getCheckEv:00000000 _ZN5amiro8HMC5883L8getCheckEv
+     /tmp/ccXEPwNf.s:320    .text._ZN5amiro8HMC5883L9writeConfEv:00000000 $t
+     /tmp/ccXEPwNf.s:326    .text._ZN5amiro8HMC5883L9writeConfEv:00000000 _ZN5amiro8HMC5883L9writeConfEv
+     /tmp/ccXEPwNf.s:367    .text.startup._ZN5amiro8HMC5883L4mainEv:00000000 $t
+     /tmp/ccXEPwNf.s:373    .text.startup._ZN5amiro8HMC5883L4mainEv:00000000 _ZN5amiro8HMC5883L4mainEv
+     /tmp/ccXEPwNf.s:456    .text.startup._ZN5amiro8HMC5883L4mainEv:000000cc $d
+     /tmp/ccXEPwNf.s:459    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:00000000 $t
+     /tmp/ccXEPwNf.s:464    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:00000000 _GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev
+     /tmp/ccXEPwNf.s:476    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:0000000c $d
+     /tmp/ccXEPwNf.s:480    .init_array:00000000 $d
+     /tmp/ccXEPwNf.s:487    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/ccXEPwNf.s:484    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/ccXEPwNf.s:506    .rodata._ZTVN5amiro8HMC5883LE:00000000 _ZTVN5amiro8HMC5883LE
+     /tmp/ccXEPwNf.s:495    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccXEPwNf.s:499    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccXEPwNf.s:502    .rodata._ZTVN5amiro8HMC5883LE:00000000 $d
+     /tmp/ccXEPwNf.s:515    .rodata.str1.4:00000000 $d
+     /tmp/ccXEPwNf.s:36     .text._ZN5amiro8HMC5883LD2Ev:0000000c $t
+     /tmp/ccXEPwNf.s:58     .text._ZN5amiro8HMC5883LD0Ev:00000014 $t
+     /tmp/ccXEPwNf.s:479    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:00000014 $t
 
 UNDEFINED SYMBOLS
 _ZdlPv
@@ -617,7 +617,7 @@ _ZN10chibios_rt10BaseThread7setNameEPKc
 _ZN10chibios_rt9EvtSource14broadcastFlagsEm
 _ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
 _ZN10chibios_rt10BaseThread15shouldTerminateEv
-ARM GAS  /tmp/cca8rhDd.s 			page 12
+ARM GAS  /tmp/ccXEPwNf.s 			page 12
 
 
 _ZN10chibios_rt15ThreadReference4stopEv

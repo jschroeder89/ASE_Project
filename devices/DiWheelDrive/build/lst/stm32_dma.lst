@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccZPPbvS.s 			page 1
+ARM GAS  /tmp/cc817Ew2.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
   55              		@ frame_needed = 0, uses_anonymous_args = 0
   56 0000 10B5     		push	{r4, lr}
   57 0002 FFF7FEFF 		bl	dbg_check_enter_isr
-ARM GAS  /tmp/ccZPPbvS.s 			page 2
+ARM GAS  /tmp/cc817Ew2.s 			page 2
 
 
   58 0006 084B     		ldr	r3, .L14
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  112              		.p2align 4,,15
  113              		.global	Vector78
  114              		.thumb
-ARM GAS  /tmp/ccZPPbvS.s 			page 3
+ARM GAS  /tmp/cc817Ew2.s 			page 3
 
 
  115              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  169              		.align	2
  170              	.L35:
  171 0028 00000240 		.word	1073872896
-ARM GAS  /tmp/ccZPPbvS.s 			page 4
+ARM GAS  /tmp/cc817Ew2.s 			page 4
 
 
  172 002c 00000000 		.word	.LANCHOR0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  226 0018 406B     		ldr	r0, [r0, #52]
  227 001a 9047     		blx	r2
  228              	.L45:
-ARM GAS  /tmp/ccZPPbvS.s 			page 5
+ARM GAS  /tmp/cc817Ew2.s 			page 5
 
 
  229 001c FFF7FEFF 		bl	dbg_check_leave_isr
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  283 000a 1968     		ldr	r1, [r3]
  284 000c 026C     		ldr	r2, [r0, #64]
  285 000e C1F30311 		ubfx	r1, r1, #4, #4
-ARM GAS  /tmp/ccZPPbvS.s 			page 6
+ARM GAS  /tmp/cc817Ew2.s 			page 6
 
 
  286 0012 0C01     		lsls	r4, r1, #4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  340              	Vector12C:
  341              		@ args = 0, pretend = 0, frame = 0
  342              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccZPPbvS.s 			page 7
+ARM GAS  /tmp/cc817Ew2.s 			page 7
 
 
  343 0000 10B5     		push	{r4, lr}
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  397              	.L89:
  398 0010 E858     		ldr	r0, [r5, r3]
  399 0012 0C33     		adds	r3, r3, #12
-ARM GAS  /tmp/ccZPPbvS.s 			page 8
+ARM GAS  /tmp/cc817Ew2.s 			page 8
 
 
  400 0014 902B     		cmp	r3, #144
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  452 0034 194B     		ldr	r3, .L107+8
  453 0036 5869     		ldr	r0, [r3, #20]
  454 0038 40F00100 		orr	r0, r0, #1
-ARM GAS  /tmp/ccZPPbvS.s 			page 9
+ARM GAS  /tmp/cc817Ew2.s 			page 9
 
 
  455 003c 5861     		str	r0, [r3, #20]
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  507      AFF30080 
  508              		.align	2
  509              		.p2align 4,,15
-ARM GAS  /tmp/ccZPPbvS.s 			page 10
+ARM GAS  /tmp/cc817Ew2.s 			page 10
 
 
  510              		.global	dmaStreamRelease
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  564 0060 0448     		ldr	r0, .L123+12
  565 0062 FFF7FEFF 		bl	chDbgPanic
  566 0066 CEE7     		b	.L110
-ARM GAS  /tmp/ccZPPbvS.s 			page 11
+ARM GAS  /tmp/cc817Ew2.s 			page 11
 
 
  567              	.L124:
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  604 000b 00       		.space	1
  605 000c 1C000240 		.word	1073872924
  606 0010 04000240 		.word	1073872900
-ARM GAS  /tmp/ccZPPbvS.s 			page 12
+ARM GAS  /tmp/cc817Ew2.s 			page 12
 
 
  607 0014 04       		.byte	4
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  661 0080 0C       		.byte	12
  662 0081 0A       		.byte	10
  663 0082 3B       		.byte	59
-ARM GAS  /tmp/ccZPPbvS.s 			page 13
+ARM GAS  /tmp/cc817Ew2.s 			page 13
 
 
  664 0083 00       		.space	1
@@ -736,67 +736,67 @@ ARM GAS  /tmp/ccZPPbvS.s 			page 1
  676              	dma_streams_mask:
  677 0000 00000000 		.space	4
  678              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccZPPbvS.s 			page 14
+ARM GAS  /tmp/cc817Ew2.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32_dma.c
-     /tmp/ccZPPbvS.s:16     .text.Vector6C:00000000 $t
-     /tmp/ccZPPbvS.s:22     .text.Vector6C:00000000 Vector6C
-     /tmp/ccZPPbvS.s:43     .text.Vector6C:00000028 $d
-     /tmp/ccZPPbvS.s:47     .text.Vector70:00000000 $t
-     /tmp/ccZPPbvS.s:53     .text.Vector70:00000000 Vector70
-     /tmp/ccZPPbvS.s:75     .text.Vector70:00000028 $d
-     /tmp/ccZPPbvS.s:79     .text.Vector74:00000000 $t
-     /tmp/ccZPPbvS.s:85     .text.Vector74:00000000 Vector74
-     /tmp/ccZPPbvS.s:107    .text.Vector74:00000028 $d
-     /tmp/ccZPPbvS.s:111    .text.Vector78:00000000 $t
-     /tmp/ccZPPbvS.s:117    .text.Vector78:00000000 Vector78
-     /tmp/ccZPPbvS.s:139    .text.Vector78:00000028 $d
-     /tmp/ccZPPbvS.s:143    .text.Vector7C:00000000 $t
-     /tmp/ccZPPbvS.s:149    .text.Vector7C:00000000 Vector7C
-     /tmp/ccZPPbvS.s:171    .text.Vector7C:00000028 $d
-     /tmp/ccZPPbvS.s:175    .text.Vector80:00000000 $t
-     /tmp/ccZPPbvS.s:181    .text.Vector80:00000000 Vector80
-     /tmp/ccZPPbvS.s:203    .text.Vector80:00000028 $d
-     /tmp/ccZPPbvS.s:207    .text.Vector84:00000000 $t
-     /tmp/ccZPPbvS.s:213    .text.Vector84:00000000 Vector84
-     /tmp/ccZPPbvS.s:235    .text.Vector84:00000028 $d
-     /tmp/ccZPPbvS.s:239    .text.Vector120:00000000 $t
-     /tmp/ccZPPbvS.s:245    .text.Vector120:00000000 Vector120
-     /tmp/ccZPPbvS.s:266    .text.Vector120:00000028 $d
-     /tmp/ccZPPbvS.s:270    .text.Vector124:00000000 $t
-     /tmp/ccZPPbvS.s:276    .text.Vector124:00000000 Vector124
-     /tmp/ccZPPbvS.s:298    .text.Vector124:00000028 $d
-     /tmp/ccZPPbvS.s:302    .text.Vector128:00000000 $t
-     /tmp/ccZPPbvS.s:308    .text.Vector128:00000000 Vector128
-     /tmp/ccZPPbvS.s:330    .text.Vector128:00000028 $d
-     /tmp/ccZPPbvS.s:334    .text.Vector12C:00000000 $t
-     /tmp/ccZPPbvS.s:340    .text.Vector12C:00000000 Vector12C
-     /tmp/ccZPPbvS.s:375    .text.Vector12C:00000044 $d
-     /tmp/ccZPPbvS.s:379    .text.dmaInit:00000000 $t
-     /tmp/ccZPPbvS.s:385    .text.dmaInit:00000000 dmaInit
-     /tmp/ccZPPbvS.s:415    .text.dmaInit:00000030 $d
-     /tmp/ccZPPbvS.s:422    .text.dmaStreamAllocate:00000000 $t
-     /tmp/ccZPPbvS.s:428    .text.dmaStreamAllocate:00000000 dmaStreamAllocate
-     /tmp/ccZPPbvS.s:502    .text.dmaStreamAllocate:00000094 $d
-     /tmp/ccZPPbvS.s:508    .text.dmaStreamRelease:00000000 $t
-     /tmp/ccZPPbvS.s:514    .text.dmaStreamRelease:00000000 dmaStreamRelease
-     /tmp/ccZPPbvS.s:570    .text.dmaStreamRelease:00000068 $d
-     /tmp/ccZPPbvS.s:598    .rodata._stm32_dma_streams:00000000 _stm32_dma_streams
-     /tmp/ccZPPbvS.s:577    .rodata.str1.4:00000000 $d
-     /tmp/ccZPPbvS.s:587    .bss.dma_isr_redir:00000000 $d
-     /tmp/ccZPPbvS.s:591    .bss.dma_isr_redir:00000000 dma_isr_redir
-     /tmp/ccZPPbvS.s:594    .rodata._stm32_dma_streams:00000000 $d
-     /tmp/ccZPPbvS.s:672    .bss.dma_streams_mask:00000000 $d
-     /tmp/ccZPPbvS.s:676    .bss.dma_streams_mask:00000000 dma_streams_mask
-     /tmp/ccZPPbvS.s:378    .text.Vector12C:0000004c $t
-     /tmp/ccZPPbvS.s:421    .text.dmaInit:00000044 $t
-     /tmp/ccZPPbvS.s:507    .text.dmaStreamAllocate:000000a4 $t
-     /tmp/ccZPPbvS.s:576    .text.dmaStreamRelease:00000078 $t
+     /tmp/cc817Ew2.s:16     .text.Vector6C:00000000 $t
+     /tmp/cc817Ew2.s:22     .text.Vector6C:00000000 Vector6C
+     /tmp/cc817Ew2.s:43     .text.Vector6C:00000028 $d
+     /tmp/cc817Ew2.s:47     .text.Vector70:00000000 $t
+     /tmp/cc817Ew2.s:53     .text.Vector70:00000000 Vector70
+     /tmp/cc817Ew2.s:75     .text.Vector70:00000028 $d
+     /tmp/cc817Ew2.s:79     .text.Vector74:00000000 $t
+     /tmp/cc817Ew2.s:85     .text.Vector74:00000000 Vector74
+     /tmp/cc817Ew2.s:107    .text.Vector74:00000028 $d
+     /tmp/cc817Ew2.s:111    .text.Vector78:00000000 $t
+     /tmp/cc817Ew2.s:117    .text.Vector78:00000000 Vector78
+     /tmp/cc817Ew2.s:139    .text.Vector78:00000028 $d
+     /tmp/cc817Ew2.s:143    .text.Vector7C:00000000 $t
+     /tmp/cc817Ew2.s:149    .text.Vector7C:00000000 Vector7C
+     /tmp/cc817Ew2.s:171    .text.Vector7C:00000028 $d
+     /tmp/cc817Ew2.s:175    .text.Vector80:00000000 $t
+     /tmp/cc817Ew2.s:181    .text.Vector80:00000000 Vector80
+     /tmp/cc817Ew2.s:203    .text.Vector80:00000028 $d
+     /tmp/cc817Ew2.s:207    .text.Vector84:00000000 $t
+     /tmp/cc817Ew2.s:213    .text.Vector84:00000000 Vector84
+     /tmp/cc817Ew2.s:235    .text.Vector84:00000028 $d
+     /tmp/cc817Ew2.s:239    .text.Vector120:00000000 $t
+     /tmp/cc817Ew2.s:245    .text.Vector120:00000000 Vector120
+     /tmp/cc817Ew2.s:266    .text.Vector120:00000028 $d
+     /tmp/cc817Ew2.s:270    .text.Vector124:00000000 $t
+     /tmp/cc817Ew2.s:276    .text.Vector124:00000000 Vector124
+     /tmp/cc817Ew2.s:298    .text.Vector124:00000028 $d
+     /tmp/cc817Ew2.s:302    .text.Vector128:00000000 $t
+     /tmp/cc817Ew2.s:308    .text.Vector128:00000000 Vector128
+     /tmp/cc817Ew2.s:330    .text.Vector128:00000028 $d
+     /tmp/cc817Ew2.s:334    .text.Vector12C:00000000 $t
+     /tmp/cc817Ew2.s:340    .text.Vector12C:00000000 Vector12C
+     /tmp/cc817Ew2.s:375    .text.Vector12C:00000044 $d
+     /tmp/cc817Ew2.s:379    .text.dmaInit:00000000 $t
+     /tmp/cc817Ew2.s:385    .text.dmaInit:00000000 dmaInit
+     /tmp/cc817Ew2.s:415    .text.dmaInit:00000030 $d
+     /tmp/cc817Ew2.s:422    .text.dmaStreamAllocate:00000000 $t
+     /tmp/cc817Ew2.s:428    .text.dmaStreamAllocate:00000000 dmaStreamAllocate
+     /tmp/cc817Ew2.s:502    .text.dmaStreamAllocate:00000094 $d
+     /tmp/cc817Ew2.s:508    .text.dmaStreamRelease:00000000 $t
+     /tmp/cc817Ew2.s:514    .text.dmaStreamRelease:00000000 dmaStreamRelease
+     /tmp/cc817Ew2.s:570    .text.dmaStreamRelease:00000068 $d
+     /tmp/cc817Ew2.s:598    .rodata._stm32_dma_streams:00000000 _stm32_dma_streams
+     /tmp/cc817Ew2.s:577    .rodata.str1.4:00000000 $d
+     /tmp/cc817Ew2.s:587    .bss.dma_isr_redir:00000000 $d
+     /tmp/cc817Ew2.s:591    .bss.dma_isr_redir:00000000 dma_isr_redir
+     /tmp/cc817Ew2.s:594    .rodata._stm32_dma_streams:00000000 $d
+     /tmp/cc817Ew2.s:672    .bss.dma_streams_mask:00000000 $d
+     /tmp/cc817Ew2.s:676    .bss.dma_streams_mask:00000000 dma_streams_mask
+     /tmp/cc817Ew2.s:378    .text.Vector12C:0000004c $t
+     /tmp/cc817Ew2.s:421    .text.dmaInit:00000044 $t
+     /tmp/cc817Ew2.s:507    .text.dmaStreamAllocate:000000a4 $t
+     /tmp/cc817Ew2.s:576    .text.dmaStreamRelease:00000078 $t
 
 UNDEFINED SYMBOLS
-ARM GAS  /tmp/ccZPPbvS.s 			page 15
+ARM GAS  /tmp/cc817Ew2.s 			page 15
 
 
 dbg_check_enter_isr

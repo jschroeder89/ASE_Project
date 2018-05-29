@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccCndqLi.s 			page 1
+ARM GAS  /tmp/ccJcaelS.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccCndqLi.s 			page 1
   55              	@ 0 "" 2
   56              		.thumb
   57 000a 0023     		movs	r3, #0
-ARM GAS  /tmp/ccCndqLi.s 			page 2
+ARM GAS  /tmp/ccJcaelS.s 			page 2
 
 
   58              	@ 82 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccCndqLi.s 			page 1
  107 0000 2023     		movs	r3, #32
  108              	@ 152 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
  109 0002 83F31188 		msr     BASEPRI, r3
-ARM GAS  /tmp/ccCndqLi.s 			page 3
+ARM GAS  /tmp/ccJcaelS.s 			page 3
 
 
  110              	@ 0 "" 2
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccCndqLi.s 			page 1
  164 0064 00000000 		.word	rlist
  165 0068 00000000 		.word	_port_switch_from_isr
  166 006c 0C000000 		.word	_port_exit_from_isr
-ARM GAS  /tmp/ccCndqLi.s 			page 4
+ARM GAS  /tmp/ccJcaelS.s 			page 4
 
 
  167              		.size	_port_irq_epilogue, .-_port_irq_epilogue
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccCndqLi.s 			page 1
  220              		.section	.text._port_thread_start,"ax",%progbits
  221              		.align	2
  222              		.p2align 4,,15
-ARM GAS  /tmp/ccCndqLi.s 			page 5
+ARM GAS  /tmp/ccJcaelS.s 			page 5
 
 
  223              		.global	_port_thread_start
@@ -265,29 +265,29 @@ ARM GAS  /tmp/ccCndqLi.s 			page 1
  244 0016 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
  244      0080AFF3 
  244      0080
-ARM GAS  /tmp/ccCndqLi.s 			page 6
+ARM GAS  /tmp/ccJcaelS.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chcore_v7m.c
-     /tmp/ccCndqLi.s:16     .text._port_switch_from_isr:00000000 $t
-     /tmp/ccCndqLi.s:22     .text._port_switch_from_isr:00000000 _port_switch_from_isr
-     /tmp/ccCndqLi.s:30     .text._port_switch_from_isr:0000000c _port_exit_from_isr
-     /tmp/ccCndqLi.s:38     .text.SVCallVector:00000000 $t
-     /tmp/ccCndqLi.s:44     .text.SVCallVector:00000000 SVCallVector
-     /tmp/ccCndqLi.s:65     .text._port_init:00000000 $t
-     /tmp/ccCndqLi.s:71     .text._port_init:00000000 _port_init
-     /tmp/ccCndqLi.s:93     .text._port_init:0000002c $d
-     /tmp/ccCndqLi.s:97     .text._port_irq_epilogue:00000000 $t
-     /tmp/ccCndqLi.s:103    .text._port_irq_epilogue:00000000 _port_irq_epilogue
-     /tmp/ccCndqLi.s:163    .text._port_irq_epilogue:00000060 $d
-     /tmp/ccCndqLi.s:169    .text.SysTickVector:00000000 $t
-     /tmp/ccCndqLi.s:175    .text.SysTickVector:00000000 SysTickVector
-     /tmp/ccCndqLi.s:198    .text._port_switch:00000000 $t
-     /tmp/ccCndqLi.s:204    .text._port_switch:00000000 _port_switch
-     /tmp/ccCndqLi.s:221    .text._port_thread_start:00000000 $t
-     /tmp/ccCndqLi.s:227    .text._port_thread_start:00000000 _port_thread_start
-     /tmp/ccCndqLi.s:96     .text._port_init:00000034 $t
+     /tmp/ccJcaelS.s:16     .text._port_switch_from_isr:00000000 $t
+     /tmp/ccJcaelS.s:22     .text._port_switch_from_isr:00000000 _port_switch_from_isr
+     /tmp/ccJcaelS.s:30     .text._port_switch_from_isr:0000000c _port_exit_from_isr
+     /tmp/ccJcaelS.s:38     .text.SVCallVector:00000000 $t
+     /tmp/ccJcaelS.s:44     .text.SVCallVector:00000000 SVCallVector
+     /tmp/ccJcaelS.s:65     .text._port_init:00000000 $t
+     /tmp/ccJcaelS.s:71     .text._port_init:00000000 _port_init
+     /tmp/ccJcaelS.s:93     .text._port_init:0000002c $d
+     /tmp/ccJcaelS.s:97     .text._port_irq_epilogue:00000000 $t
+     /tmp/ccJcaelS.s:103    .text._port_irq_epilogue:00000000 _port_irq_epilogue
+     /tmp/ccJcaelS.s:163    .text._port_irq_epilogue:00000060 $d
+     /tmp/ccJcaelS.s:169    .text.SysTickVector:00000000 $t
+     /tmp/ccJcaelS.s:175    .text.SysTickVector:00000000 SysTickVector
+     /tmp/ccJcaelS.s:198    .text._port_switch:00000000 $t
+     /tmp/ccJcaelS.s:204    .text._port_switch:00000000 _port_switch
+     /tmp/ccJcaelS.s:221    .text._port_thread_start:00000000 $t
+     /tmp/ccJcaelS.s:227    .text._port_thread_start:00000000 _port_thread_start
+     /tmp/ccJcaelS.s:96     .text._port_init:00000034 $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock
