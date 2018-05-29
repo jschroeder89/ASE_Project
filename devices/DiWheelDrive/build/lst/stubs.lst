@@ -1,0 +1,100 @@
+ARM GAS  /tmp/ccF6t1lg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"stubs.c"
+  15              		.section	.text._getpid,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_getpid
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_getpid, %function
+  22              	_getpid:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 0120     		movs	r0, #1
+  27 0002 7047     		bx	lr
+  28              		.size	_getpid, .-_getpid
+  29 0004 AFF30080 		.section	.text._exit,"ax",%progbits
+  29      AFF30080 
+  29      AFF30080 
+  30              		.align	2
+  31              		.p2align 4,,15
+  32              		.global	_exit
+  33              		.thumb
+  34              		.thumb_func
+  35              		.type	_exit, %function
+  36              	_exit:
+  37              		@ Volatile: function does not return.
+  38              		@ args = 0, pretend = 0, frame = 0
+  39              		@ frame_needed = 0, uses_anonymous_args = 0
+  40              		@ link register save eliminated.
+  41              	.L3:
+  42 0000 FEE7     		b	.L3
+  43              		.size	_exit, .-_exit
+  44 0002 00BFAFF3 		.section	.text._kill,"ax",%progbits
+  44      0080AFF3 
+  44      0080AFF3 
+  44      0080
+  45              		.align	2
+  46              		.p2align 4,,15
+  47              		.global	_kill
+  48              		.thumb
+  49              		.thumb_func
+  50              		.type	_kill, %function
+  51              	_kill:
+  52              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccF6t1lg.s 			page 2
+
+
+  53              		@ frame_needed = 0, uses_anonymous_args = 0
+  54              		@ link register save eliminated.
+  55 0000 024B     		ldr	r3, .L5
+  56 0002 1622     		movs	r2, #22
+  57 0004 1A60     		str	r2, [r3]
+  58 0006 4FF0FF30 		mov	r0, #-1
+  59 000a 7047     		bx	lr
+  60              	.L6:
+  61              		.align	2
+  62              	.L5:
+  63 000c 00000000 		.word	errno
+  64              		.size	_kill, .-_kill
+  65              		.global	__dso_handle
+  66              		.section	.bss.__dso_handle,"aw",%nobits
+  67              		.align	2
+  68              		.type	__dso_handle, %object
+  69              		.size	__dso_handle, 4
+  70              	__dso_handle:
+  71 0000 00000000 		.space	4
+  72              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccF6t1lg.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stubs.c
+     /tmp/ccF6t1lg.s:16     .text._getpid:00000000 $t
+     /tmp/ccF6t1lg.s:22     .text._getpid:00000000 _getpid
+     /tmp/ccF6t1lg.s:30     .text._exit:00000000 $t
+     /tmp/ccF6t1lg.s:36     .text._exit:00000000 _exit
+     /tmp/ccF6t1lg.s:45     .text._kill:00000000 $t
+     /tmp/ccF6t1lg.s:51     .text._kill:00000000 _kill
+     /tmp/ccF6t1lg.s:63     .text._kill:0000000c $d
+     /tmp/ccF6t1lg.s:70     .bss.__dso_handle:00000000 __dso_handle
+     /tmp/ccF6t1lg.s:67     .bss.__dso_handle:00000000 $d
+
+UNDEFINED SYMBOLS
+errno

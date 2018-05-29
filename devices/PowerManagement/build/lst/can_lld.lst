@@ -1,0 +1,1064 @@
+ARM GAS  /tmp/ccuzlkx7.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"can_lld.c"
+  17              		.section	.text.can_lld_set_filters,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.thumb
+  21              		.thumb_func
+  22              		.type	can_lld_set_filters, %function
+  23              	can_lld_set_filters:
+  24              		@ args = 0, pretend = 0, frame = 0
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26              		@ link register save eliminated.
+  27 0000 F0B4     		push	{r4, r5, r6, r7}
+  28 0002 444C     		ldr	r4, .L22
+  29 0004 444B     		ldr	r3, .L22+4
+  30 0006 256C     		ldr	r5, [r4, #64]
+  31 0008 45F00075 		orr	r5, r5, #33554432
+  32 000c 2564     		str	r5, [r4, #64]
+  33 000e D3F80042 		ldr	r4, [r3, #512]
+  34 0012 240C     		lsrs	r4, r4, #16
+  35 0014 2404     		lsls	r4, r4, #16
+  36 0016 44F00104 		orr	r4, r4, #1
+  37 001a 44EA0024 		orr	r4, r4, r0, lsl #8
+  38 001e C3F80042 		str	r4, [r3, #512]
+  39 0022 0029     		cmp	r1, #0
+  40 0024 5BD0     		beq	.L2
+  41 0026 0025     		movs	r5, #0
+  42 0028 C3F81C52 		str	r5, [r3, #540]
+  43 002c 2846     		mov	r0, r5
+  44 002e C3F80452 		str	r5, [r3, #516]
+  45 0032 2C46     		mov	r4, r5
+  46 0034 C3F80C52 		str	r5, [r3, #524]
+  47 0038 C3F81452 		str	r5, [r3, #532]
+  48              	.L4:
+  49 003c C300     		lsls	r3, r0, #3
+  50 003e 03F18043 		add	r3, r3, #1073741824
+  51 0042 03F5C843 		add	r3, r3, #25600
+  52 0046 0130     		adds	r0, r0, #1
+  53 0048 1C28     		cmp	r0, #28
+  54 004a C3F84042 		str	r4, [r3, #576]
+  55 004e C3F84442 		str	r4, [r3, #580]
+  56 0052 F3D1     		bne	.L4
+  57 0054 304B     		ldr	r3, .L22+4
+ARM GAS  /tmp/ccuzlkx7.s 			page 2
+
+
+  58 0056 0026     		movs	r6, #0
+  59 0058 0127     		movs	r7, #1
+  60              	.L9:
+  61 005a 1568     		ldr	r5, [r2]
+  62 005c 1479     		ldrb	r4, [r2, #4]	@ zero_extendqisi2
+  63 005e E800     		lsls	r0, r5, #3
+  64 0060 00F18040 		add	r0, r0, #1073741824
+  65 0064 14F0010F 		tst	r4, #1
+  66 0068 00F5C840 		add	r0, r0, #25600
+  67 006c 06F10106 		add	r6, r6, #1
+  68 0070 07FA05F5 		lsl	r5, r7, r5
+  69 0074 05D0     		beq	.L5
+  70 0076 D3F80442 		ldr	r4, [r3, #516]
+  71 007a 2C43     		orrs	r4, r4, r5
+  72 007c C3F80442 		str	r4, [r3, #516]
+  73 0080 1479     		ldrb	r4, [r2, #4]	@ zero_extendqisi2
+  74              	.L5:
+  75 0082 14F0020F 		tst	r4, #2
+  76 0086 05D0     		beq	.L6
+  77 0088 D3F80C42 		ldr	r4, [r3, #524]
+  78 008c 2C43     		orrs	r4, r4, r5
+  79 008e C3F80C42 		str	r4, [r3, #524]
+  80 0092 1479     		ldrb	r4, [r2, #4]	@ zero_extendqisi2
+  81              	.L6:
+  82 0094 6407     		lsls	r4, r4, #29
+  83 0096 04D5     		bpl	.L7
+  84 0098 D3F81442 		ldr	r4, [r3, #532]
+  85 009c 2C43     		orrs	r4, r4, r5
+  86 009e C3F81442 		str	r4, [r3, #532]
+  87              	.L7:
+  88 00a2 9468     		ldr	r4, [r2, #8]
+  89 00a4 C0F84042 		str	r4, [r0, #576]
+  90 00a8 D468     		ldr	r4, [r2, #12]
+  91 00aa C0F84442 		str	r4, [r0, #580]
+  92 00ae D3F81C02 		ldr	r0, [r3, #540]
+  93 00b2 8E42     		cmp	r6, r1
+  94 00b4 45EA0005 		orr	r5, r5, r0
+  95 00b8 02F11002 		add	r2, r2, #16
+  96 00bc C3F81C52 		str	r5, [r3, #540]
+  97 00c0 CBD1     		bne	.L9
+  98              	.L8:
+  99 00c2 154A     		ldr	r2, .L22+4
+ 100 00c4 134B     		ldr	r3, .L22
+ 101 00c6 D2F80012 		ldr	r1, [r2, #512]
+ 102 00ca 21F00101 		bic	r1, r1, #1
+ 103 00ce C2F80012 		str	r1, [r2, #512]
+ 104 00d2 1A6C     		ldr	r2, [r3, #64]
+ 105 00d4 22F00072 		bic	r2, r2, #33554432
+ 106 00d8 1A64     		str	r2, [r3, #64]
+ 107 00da F0BC     		pop	{r4, r5, r6, r7}
+ 108 00dc 7047     		bx	lr
+ 109              	.L2:
+ 110 00de C200     		lsls	r2, r0, #3
+ 111 00e0 0124     		movs	r4, #1
+ 112 00e2 02F18042 		add	r2, r2, #1073741824
+ 113 00e6 02F5C842 		add	r2, r2, #25600
+ 114 00ea 04FA00F0 		lsl	r0, r4, r0
+ARM GAS  /tmp/ccuzlkx7.s 			page 3
+
+
+ 115 00ee 2043     		orrs	r0, r0, r4
+ 116 00f0 C3F84012 		str	r1, [r3, #576]
+ 117 00f4 C3F84412 		str	r1, [r3, #580]
+ 118 00f8 C2F84012 		str	r1, [r2, #576]
+ 119 00fc C2F84412 		str	r1, [r2, #580]
+ 120 0100 C3F80412 		str	r1, [r3, #516]
+ 121 0104 C3F81412 		str	r1, [r3, #532]
+ 122 0108 C3F80C02 		str	r0, [r3, #524]
+ 123 010c C3F81C02 		str	r0, [r3, #540]
+ 124 0110 D7E7     		b	.L8
+ 125              	.L23:
+ 126 0112 00BF     		.align	2
+ 127              	.L22:
+ 128 0114 00380240 		.word	1073887232
+ 129 0118 00640040 		.word	1073767424
+ 130              		.size	can_lld_set_filters, .-can_lld_set_filters
+ 131 011c AFF30080 		.section	.text.Vector8C,"ax",%progbits
+ 132              		.align	2
+ 133              		.p2align 4,,15
+ 134              		.global	Vector8C
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.type	Vector8C, %function
+ 138              	Vector8C:
+ 139              		@ args = 0, pretend = 0, frame = 0
+ 140              		@ frame_needed = 0, uses_anonymous_args = 0
+ 141 0000 10B5     		push	{r4, lr}
+ 142 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 143 0006 114B     		ldr	r3, .L28
+ 144 0008 1149     		ldr	r1, .L28+4
+ 145 000a 5A6B     		ldr	r2, [r3, #52]
+ 146 000c 2023     		movs	r3, #32
+ 147 000e 9160     		str	r1, [r2, #8]
+ 148              	@ 140 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 149 0010 83F31188 		msr     BASEPRI, r3
+ 150              	@ 0 "" 2
+ 151              		.thumb
+ 152 0014 0D4C     		ldr	r4, .L28
+ 153 0016 FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 154 001a 2369     		ldr	r3, [r4, #16]
+ 155 001c 002B     		cmp	r3, #0
+ 156 001e 05DA     		bge	.L26
+ 157              	.L27:
+ 158 0020 0C48     		ldr	r0, .L28+8
+ 159 0022 FFF7FEFF 		bl	chSemSignalI
+ 160 0026 2369     		ldr	r3, [r4, #16]
+ 161 0028 002B     		cmp	r3, #0
+ 162 002a F9DB     		blt	.L27
+ 163              	.L26:
+ 164 002c 0A48     		ldr	r0, .L28+12
+ 165 002e 0121     		movs	r1, #1
+ 166 0030 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 167 0034 FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 168 0038 0023     		movs	r3, #0
+ 169              	@ 144 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 170 003a 83F31188 		msr     BASEPRI, r3
+ 171              	@ 0 "" 2
+ARM GAS  /tmp/ccuzlkx7.s 			page 4
+
+
+ 172              		.thumb
+ 173 003e FFF7FEFF 		bl	dbg_check_leave_isr
+ 174 0042 BDE81040 		pop	{r4, lr}
+ 175 0046 FFF7FEBF 		b	_port_irq_epilogue
+ 176              	.L29:
+ 177 004a 00BF     		.align	2
+ 178              	.L28:
+ 179 004c 00000000 		.word	.LANCHOR0
+ 180 0050 01010100 		.word	65793
+ 181 0054 08000000 		.word	.LANCHOR0+8
+ 182 0058 24000000 		.word	.LANCHOR0+36
+ 183              		.size	Vector8C, .-Vector8C
+ 184 005c AFF30080 		.section	.text.Vector90,"ax",%progbits
+ 185              		.align	2
+ 186              		.p2align 4,,15
+ 187              		.global	Vector90
+ 188              		.thumb
+ 189              		.thumb_func
+ 190              		.type	Vector90, %function
+ 191              	Vector90:
+ 192              		@ args = 0, pretend = 0, frame = 0
+ 193              		@ frame_needed = 0, uses_anonymous_args = 0
+ 194 0000 38B5     		push	{r3, r4, r5, lr}
+ 195 0002 1E4C     		ldr	r4, .L43
+ 196 0004 FFF7FEFF 		bl	dbg_check_enter_isr
+ 197 0008 636B     		ldr	r3, [r4, #52]
+ 198 000a DD68     		ldr	r5, [r3, #12]
+ 199 000c AA07     		lsls	r2, r5, #30
+ 200 000e 18D1     		bne	.L42
+ 201              	.L31:
+ 202 0010 EB06     		lsls	r3, r5, #27
+ 203 0012 10D5     		bpl	.L35
+ 204 0014 636B     		ldr	r3, [r4, #52]
+ 205 0016 1022     		movs	r2, #16
+ 206 0018 DA60     		str	r2, [r3, #12]
+ 207 001a 2023     		movs	r3, #32
+ 208              	@ 170 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 209 001c 83F31188 		msr     BASEPRI, r3
+ 210              	@ 0 "" 2
+ 211              		.thumb
+ 212 0020 FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 213 0024 1648     		ldr	r0, .L43+4
+ 214 0026 1021     		movs	r1, #16
+ 215 0028 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 216 002c FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 217 0030 0023     		movs	r3, #0
+ 218              	@ 172 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 219 0032 83F31188 		msr     BASEPRI, r3
+ 220              	@ 0 "" 2
+ 221              		.thumb
+ 222              	.L35:
+ 223 0036 FFF7FEFF 		bl	dbg_check_leave_isr
+ 224 003a BDE83840 		pop	{r3, r4, r5, lr}
+ 225 003e FFF7FEBF 		b	_port_irq_epilogue
+ 226              	.L42:
+ 227 0042 5A69     		ldr	r2, [r3, #20]
+ 228 0044 22F00202 		bic	r2, r2, #2
+ARM GAS  /tmp/ccuzlkx7.s 			page 5
+
+
+ 229 0048 5A61     		str	r2, [r3, #20]
+ 230 004a 2023     		movs	r3, #32
+ 231              	@ 161 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 232 004c 83F31188 		msr     BASEPRI, r3
+ 233              	@ 0 "" 2
+ 234              		.thumb
+ 235 0050 FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 236 0054 E369     		ldr	r3, [r4, #28]
+ 237 0056 002B     		cmp	r3, #0
+ 238 0058 05DA     		bge	.L33
+ 239              	.L34:
+ 240 005a 0A48     		ldr	r0, .L43+8
+ 241 005c FFF7FEFF 		bl	chSemSignalI
+ 242 0060 E369     		ldr	r3, [r4, #28]
+ 243 0062 002B     		cmp	r3, #0
+ 244 0064 F9DB     		blt	.L34
+ 245              	.L33:
+ 246 0066 0848     		ldr	r0, .L43+12
+ 247 0068 0121     		movs	r1, #1
+ 248 006a FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 249 006e FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 250 0072 0023     		movs	r3, #0
+ 251              	@ 165 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 252 0074 83F31188 		msr     BASEPRI, r3
+ 253              	@ 0 "" 2
+ 254              		.thumb
+ 255 0078 CAE7     		b	.L31
+ 256              	.L44:
+ 257 007a 00BF     		.align	2
+ 258              	.L43:
+ 259 007c 00000000 		.word	.LANCHOR0
+ 260 0080 28000000 		.word	.LANCHOR0+40
+ 261 0084 14000000 		.word	.LANCHOR0+20
+ 262 0088 20000000 		.word	.LANCHOR0+32
+ 263              		.size	Vector90, .-Vector90
+ 264 008c AFF30080 		.section	.text.Vector94,"ax",%progbits
+ 265              		.align	2
+ 266              		.p2align 4,,15
+ 267              		.global	Vector94
+ 268              		.thumb
+ 269              		.thumb_func
+ 270              		.type	Vector94, %function
+ 271              	Vector94:
+ 272              		@ args = 0, pretend = 0, frame = 0
+ 273              		@ frame_needed = 0, uses_anonymous_args = 0
+ 274 0000 38B5     		push	{r3, r4, r5, lr}
+ 275 0002 1E4C     		ldr	r4, .L58
+ 276 0004 FFF7FEFF 		bl	dbg_check_enter_isr
+ 277 0008 636B     		ldr	r3, [r4, #52]
+ 278 000a 1D69     		ldr	r5, [r3, #16]
+ 279 000c AA07     		lsls	r2, r5, #30
+ 280 000e 18D1     		bne	.L57
+ 281              	.L46:
+ 282 0010 EB06     		lsls	r3, r5, #27
+ 283 0012 10D5     		bpl	.L50
+ 284 0014 636B     		ldr	r3, [r4, #52]
+ 285 0016 1022     		movs	r2, #16
+ARM GAS  /tmp/ccuzlkx7.s 			page 6
+
+
+ 286 0018 1A61     		str	r2, [r3, #16]
+ 287 001a 2023     		movs	r3, #32
+ 288              	@ 199 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 289 001c 83F31188 		msr     BASEPRI, r3
+ 290              	@ 0 "" 2
+ 291              		.thumb
+ 292 0020 FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 293 0024 1648     		ldr	r0, .L58+4
+ 294 0026 1021     		movs	r1, #16
+ 295 0028 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 296 002c FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 297 0030 0023     		movs	r3, #0
+ 298              	@ 201 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 299 0032 83F31188 		msr     BASEPRI, r3
+ 300              	@ 0 "" 2
+ 301              		.thumb
+ 302              	.L50:
+ 303 0036 FFF7FEFF 		bl	dbg_check_leave_isr
+ 304 003a BDE83840 		pop	{r3, r4, r5, lr}
+ 305 003e FFF7FEBF 		b	_port_irq_epilogue
+ 306              	.L57:
+ 307 0042 5A69     		ldr	r2, [r3, #20]
+ 308 0044 22F01002 		bic	r2, r2, #16
+ 309 0048 5A61     		str	r2, [r3, #20]
+ 310 004a 2023     		movs	r3, #32
+ 311              	@ 190 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 312 004c 83F31188 		msr     BASEPRI, r3
+ 313              	@ 0 "" 2
+ 314              		.thumb
+ 315 0050 FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 316 0054 E369     		ldr	r3, [r4, #28]
+ 317 0056 002B     		cmp	r3, #0
+ 318 0058 05DA     		bge	.L48
+ 319              	.L49:
+ 320 005a 0A48     		ldr	r0, .L58+8
+ 321 005c FFF7FEFF 		bl	chSemSignalI
+ 322 0060 E369     		ldr	r3, [r4, #28]
+ 323 0062 002B     		cmp	r3, #0
+ 324 0064 F9DB     		blt	.L49
+ 325              	.L48:
+ 326 0066 0848     		ldr	r0, .L58+12
+ 327 0068 0221     		movs	r1, #2
+ 328 006a FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 329 006e FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 330 0072 0023     		movs	r3, #0
+ 331              	@ 194 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 332 0074 83F31188 		msr     BASEPRI, r3
+ 333              	@ 0 "" 2
+ 334              		.thumb
+ 335 0078 CAE7     		b	.L46
+ 336              	.L59:
+ 337 007a 00BF     		.align	2
+ 338              	.L58:
+ 339 007c 00000000 		.word	.LANCHOR0
+ 340 0080 28000000 		.word	.LANCHOR0+40
+ 341 0084 14000000 		.word	.LANCHOR0+20
+ 342 0088 20000000 		.word	.LANCHOR0+32
+ARM GAS  /tmp/ccuzlkx7.s 			page 7
+
+
+ 343              		.size	Vector94, .-Vector94
+ 344 008c AFF30080 		.section	.text.Vector98,"ax",%progbits
+ 345              		.align	2
+ 346              		.p2align 4,,15
+ 347              		.global	Vector98
+ 348              		.thumb
+ 349              		.thumb_func
+ 350              		.type	Vector98, %function
+ 351              	Vector98:
+ 352              		@ args = 0, pretend = 0, frame = 0
+ 353              		@ frame_needed = 0, uses_anonymous_args = 0
+ 354 0000 38B5     		push	{r3, r4, r5, lr}
+ 355 0002 214D     		ldr	r5, .L74
+ 356 0004 FFF7FEFF 		bl	dbg_check_enter_isr
+ 357 0008 6A6B     		ldr	r2, [r5, #52]
+ 358 000a 5468     		ldr	r4, [r2, #4]
+ 359 000c 1C23     		movs	r3, #28
+ 360 000e 2107     		lsls	r1, r4, #28
+ 361 0010 5360     		str	r3, [r2, #4]
+ 362 0012 23D4     		bmi	.L73
+ 363              	.L61:
+ 364 0014 6307     		lsls	r3, r4, #29
+ 365 0016 1BD5     		bpl	.L62
+ 366 0018 6B6B     		ldr	r3, [r5, #52]
+ 367 001a 9C69     		ldr	r4, [r3, #24]
+ 368 001c 9A69     		ldr	r2, [r3, #24]
+ 369 001e 04F00705 		and	r5, r4, #7
+ 370 0022 22F07002 		bic	r2, r2, #112
+ 371 0026 14F0700F 		tst	r4, #112
+ 372 002a 9A61     		str	r2, [r3, #24]
+ 373 002c 18BF     		it	ne
+ 374 002e 45F00805 		orrne	r5, r5, #8
+ 375 0032 2023     		movs	r3, #32
+ 376              	@ 237 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 377 0034 83F31188 		msr     BASEPRI, r3
+ 378              	@ 0 "" 2
+ 379              		.thumb
+ 380 0038 FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 381 003c 45EA0441 		orr	r1, r5, r4, lsl #16
+ 382 0040 1248     		ldr	r0, .L74+4
+ 383 0042 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 384 0046 FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 385 004a 0023     		movs	r3, #0
+ 386              	@ 241 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 387 004c 83F31188 		msr     BASEPRI, r3
+ 388              	@ 0 "" 2
+ 389              		.thumb
+ 390              	.L62:
+ 391 0050 FFF7FEFF 		bl	dbg_check_leave_isr
+ 392 0054 BDE83840 		pop	{r3, r4, r5, lr}
+ 393 0058 FFF7FEBF 		b	_port_irq_epilogue
+ 394              	.L73:
+ 395 005c 1168     		ldr	r1, [r2]
+ 396 005e 0323     		movs	r3, #3
+ 397 0060 21F00201 		bic	r1, r1, #2
+ 398 0064 2B70     		strb	r3, [r5]
+ 399 0066 2023     		movs	r3, #32
+ARM GAS  /tmp/ccuzlkx7.s 			page 8
+
+
+ 400 0068 1160     		str	r1, [r2]
+ 401              	@ 222 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 402 006a 83F31188 		msr     BASEPRI, r3
+ 403              	@ 0 "" 2
+ 404              		.thumb
+ 405 006e FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 406 0072 05F13000 		add	r0, r5, #48
+ 407 0076 0021     		movs	r1, #0
+ 408 0078 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 409 007c FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 410 0080 0023     		movs	r3, #0
+ 411              	@ 224 "../../../ChibiOS/os/hal/platforms/STM32/can_lld.c" 1
+ 412 0082 83F31188 		msr     BASEPRI, r3
+ 413              	@ 0 "" 2
+ 414              		.thumb
+ 415 0086 C5E7     		b	.L61
+ 416              	.L75:
+ 417              		.align	2
+ 418              	.L74:
+ 419 0088 00000000 		.word	.LANCHOR0
+ 420 008c 28000000 		.word	.LANCHOR0+40
+ 421              		.size	Vector98, .-Vector98
+ 422              		.section	.text.can_lld_init,"ax",%progbits
+ 423              		.align	2
+ 424              		.p2align 4,,15
+ 425              		.global	can_lld_init
+ 426              		.thumb
+ 427              		.thumb_func
+ 428              		.type	can_lld_init, %function
+ 429              	can_lld_init:
+ 430              		@ args = 0, pretend = 0, frame = 0
+ 431              		@ frame_needed = 0, uses_anonymous_args = 0
+ 432 0000 10B5     		push	{r4, lr}
+ 433 0002 064C     		ldr	r4, .L77
+ 434 0004 2046     		mov	r0, r4
+ 435 0006 FFF7FEFF 		bl	canObjectInit
+ 436 000a 0021     		movs	r1, #0
+ 437 000c 044B     		ldr	r3, .L77+4
+ 438 000e 6363     		str	r3, [r4, #52]
+ 439 0010 0A46     		mov	r2, r1
+ 440 0012 0E20     		movs	r0, #14
+ 441 0014 BDE81040 		pop	{r4, lr}
+ 442 0018 FFF7FEBF 		b	can_lld_set_filters
+ 443              	.L78:
+ 444              		.align	2
+ 445              	.L77:
+ 446 001c 00000000 		.word	.LANCHOR0
+ 447 0020 00640040 		.word	1073767424
+ 448              		.size	can_lld_init, .-can_lld_init
+ 449 0024 AFF30080 		.section	.text.can_lld_start,"ax",%progbits
+ 449      AFF30080 
+ 449      AFF30080 
+ 450              		.align	2
+ 451              		.p2align 4,,15
+ 452              		.global	can_lld_start
+ 453              		.thumb
+ 454              		.thumb_func
+ARM GAS  /tmp/ccuzlkx7.s 			page 9
+
+
+ 455              		.type	can_lld_start, %function
+ 456              	can_lld_start:
+ 457              		@ args = 0, pretend = 0, frame = 0
+ 458              		@ frame_needed = 0, uses_anonymous_args = 0
+ 459 0000 194B     		ldr	r3, .L84
+ 460 0002 9842     		cmp	r0, r3
+ 461 0004 10B5     		push	{r4, lr}
+ 462 0006 0446     		mov	r4, r0
+ 463 0008 17D0     		beq	.L83
+ 464              	.L80:
+ 465 000a 636B     		ldr	r3, [r4, #52]
+ 466 000c 0221     		movs	r1, #2
+ 467 000e 0122     		movs	r2, #1
+ 468 0010 2170     		strb	r1, [r4]
+ 469 0012 1A60     		str	r2, [r3]
+ 470 0014 5A68     		ldr	r2, [r3, #4]
+ 471 0016 D107     		lsls	r1, r2, #31
+ 472 0018 07D4     		bmi	.L81
+ 473              	.L82:
+ 474 001a 0620     		movs	r0, #6
+ 475 001c 0121     		movs	r1, #1
+ 476 001e FFF7FEFF 		bl	chSchGoSleepTimeoutS
+ 477 0022 636B     		ldr	r3, [r4, #52]
+ 478 0024 5A68     		ldr	r2, [r3, #4]
+ 479 0026 D207     		lsls	r2, r2, #31
+ 480 0028 F7D5     		bpl	.L82
+ 481              	.L81:
+ 482 002a 6268     		ldr	r2, [r4, #4]
+ 483 002c 0F49     		ldr	r1, .L84+4
+ 484 002e 5068     		ldr	r0, [r2, #4]
+ 485 0030 1268     		ldr	r2, [r2]
+ 486 0032 D861     		str	r0, [r3, #28]
+ 487 0034 1A60     		str	r2, [r3]
+ 488 0036 5961     		str	r1, [r3, #20]
+ 489 0038 10BD     		pop	{r4, pc}
+ 490              	.L83:
+ 491 003a 1320     		movs	r0, #19
+ 492 003c B021     		movs	r1, #176
+ 493 003e FFF7FEFF 		bl	nvicEnableVector
+ 494 0042 1420     		movs	r0, #20
+ 495 0044 B021     		movs	r1, #176
+ 496 0046 FFF7FEFF 		bl	nvicEnableVector
+ 497 004a 1520     		movs	r0, #21
+ 498 004c B021     		movs	r1, #176
+ 499 004e FFF7FEFF 		bl	nvicEnableVector
+ 500 0052 1620     		movs	r0, #22
+ 501 0054 B021     		movs	r1, #176
+ 502 0056 FFF7FEFF 		bl	nvicEnableVector
+ 503 005a 054B     		ldr	r3, .L84+8
+ 504 005c 1A6C     		ldr	r2, [r3, #64]
+ 505 005e 42F00072 		orr	r2, r2, #33554432
+ 506 0062 1A64     		str	r2, [r3, #64]
+ 507 0064 D1E7     		b	.L80
+ 508              	.L85:
+ 509 0066 00BF     		.align	2
+ 510              	.L84:
+ 511 0068 00000000 		.word	.LANCHOR0
+ARM GAS  /tmp/ccuzlkx7.s 			page 10
+
+
+ 512 006c 5B8F0100 		.word	102235
+ 513 0070 00380240 		.word	1073887232
+ 514              		.size	can_lld_start, .-can_lld_start
+ 515 0074 AFF30080 		.section	.text.can_lld_stop,"ax",%progbits
+ 515      AFF30080 
+ 515      AFF30080 
+ 516              		.align	2
+ 517              		.p2align 4,,15
+ 518              		.global	can_lld_stop
+ 519              		.thumb
+ 520              		.thumb_func
+ 521              		.type	can_lld_stop, %function
+ 522              	can_lld_stop:
+ 523              		@ args = 0, pretend = 0, frame = 0
+ 524              		@ frame_needed = 0, uses_anonymous_args = 0
+ 525 0000 08B5     		push	{r3, lr}
+ 526 0002 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 527 0004 032B     		cmp	r3, #3
+ 528 0006 00D0     		beq	.L88
+ 529              	.L86:
+ 530 0008 08BD     		pop	{r3, pc}
+ 531              	.L88:
+ 532 000a 0D4B     		ldr	r3, .L89
+ 533 000c 9842     		cmp	r0, r3
+ 534 000e FBD1     		bne	.L86
+ 535 0010 0C4B     		ldr	r3, .L89+4
+ 536 0012 0D4A     		ldr	r2, .L89+8
+ 537 0014 1A60     		str	r2, [r3]
+ 538 0016 0022     		movs	r2, #0
+ 539 0018 5A61     		str	r2, [r3, #20]
+ 540 001a 1320     		movs	r0, #19
+ 541 001c FFF7FEFF 		bl	nvicDisableVector
+ 542 0020 1420     		movs	r0, #20
+ 543 0022 FFF7FEFF 		bl	nvicDisableVector
+ 544 0026 1520     		movs	r0, #21
+ 545 0028 FFF7FEFF 		bl	nvicDisableVector
+ 546 002c 1620     		movs	r0, #22
+ 547 002e FFF7FEFF 		bl	nvicDisableVector
+ 548 0032 064B     		ldr	r3, .L89+12
+ 549 0034 1A6C     		ldr	r2, [r3, #64]
+ 550 0036 22F00072 		bic	r2, r2, #33554432
+ 551 003a 1A64     		str	r2, [r3, #64]
+ 552 003c E4E7     		b	.L86
+ 553              	.L90:
+ 554 003e 00BF     		.align	2
+ 555              	.L89:
+ 556 0040 00000000 		.word	.LANCHOR0
+ 557 0044 00640040 		.word	1073767424
+ 558 0048 02000100 		.word	65538
+ 559 004c 00380240 		.word	1073887232
+ 560              		.size	can_lld_stop, .-can_lld_stop
+ 561              		.section	.text.can_lld_is_tx_empty,"ax",%progbits
+ 562              		.align	2
+ 563              		.p2align 4,,15
+ 564              		.global	can_lld_is_tx_empty
+ 565              		.thumb
+ 566              		.thumb_func
+ARM GAS  /tmp/ccuzlkx7.s 			page 11
+
+
+ 567              		.type	can_lld_is_tx_empty, %function
+ 568              	can_lld_is_tx_empty:
+ 569              		@ args = 0, pretend = 0, frame = 0
+ 570              		@ frame_needed = 0, uses_anonymous_args = 0
+ 571              		@ link register save eliminated.
+ 572 0000 0329     		cmp	r1, #3
+ 573 0002 1AD8     		bhi	.L98
+ 574 0004 DFE801F0 		tbb	[pc, r1]
+ 575              	.L94:
+ 576 0008 11       		.byte	(.L93-.L94)/2
+ 577 0009 0C       		.byte	(.L95-.L94)/2
+ 578 000a 07       		.byte	(.L96-.L94)/2
+ 579 000b 02       		.byte	(.L97-.L94)/2
+ 580              		.align	1
+ 581              	.L97:
+ 582 000c 436B     		ldr	r3, [r0, #52]
+ 583 000e 9868     		ldr	r0, [r3, #8]
+ 584 0010 C0F30070 		ubfx	r0, r0, #28, #1
+ 585 0014 7047     		bx	lr
+ 586              	.L96:
+ 587 0016 436B     		ldr	r3, [r0, #52]
+ 588 0018 9868     		ldr	r0, [r3, #8]
+ 589 001a C0F3C060 		ubfx	r0, r0, #27, #1
+ 590 001e 7047     		bx	lr
+ 591              	.L95:
+ 592 0020 436B     		ldr	r3, [r0, #52]
+ 593 0022 9868     		ldr	r0, [r3, #8]
+ 594 0024 C0F38060 		ubfx	r0, r0, #26, #1
+ 595 0028 7047     		bx	lr
+ 596              	.L93:
+ 597 002a 436B     		ldr	r3, [r0, #52]
+ 598 002c 9B68     		ldr	r3, [r3, #8]
+ 599 002e 13F0E05F 		tst	r3, #469762048
+ 600 0032 0CBF     		ite	eq
+ 601 0034 0020     		moveq	r0, #0
+ 602 0036 0120     		movne	r0, #1
+ 603 0038 7047     		bx	lr
+ 604              	.L98:
+ 605 003a 0020     		movs	r0, #0
+ 606 003c 7047     		bx	lr
+ 607              		.size	can_lld_is_tx_empty, .-can_lld_is_tx_empty
+ 608 003e 00BF     		.section	.text.can_lld_transmit,"ax",%progbits
+ 609              		.align	2
+ 610              		.p2align 4,,15
+ 611              		.global	can_lld_transmit
+ 612              		.thumb
+ 613              		.thumb_func
+ 614              		.type	can_lld_transmit, %function
+ 615              	can_lld_transmit:
+ 616              		@ args = 0, pretend = 0, frame = 0
+ 617              		@ frame_needed = 0, uses_anonymous_args = 0
+ 618              		@ link register save eliminated.
+ 619 0000 10B4     		push	{r4}
+ 620 0002 0329     		cmp	r1, #3
+ 621 0004 1BD8     		bhi	.L99
+ 622 0006 DFE801F0 		tbb	[pc, r1]
+ 623              	.L102:
+ARM GAS  /tmp/ccuzlkx7.s 			page 12
+
+
+ 624 000a 2E       		.byte	(.L101-.L102)/2
+ 625 000b 2A       		.byte	(.L103-.L102)/2
+ 626 000c 1D       		.byte	(.L104-.L102)/2
+ 627 000d 02       		.byte	(.L105-.L102)/2
+ 628              		.align	1
+ 629              	.L105:
+ 630 000e 436B     		ldr	r3, [r0, #52]
+ 631 0010 03F5D073 		add	r3, r3, #416
+ 632              	.L106:
+ 633 0014 1178     		ldrb	r1, [r2]	@ zero_extendqisi2
+ 634 0016 8806     		lsls	r0, r1, #26
+ 635 0018 1AD5     		bpl	.L107
+ 636              	.L109:
+ 637 001a C1F30010 		ubfx	r0, r1, #4, #1
+ 638 001e 5468     		ldr	r4, [r2, #4]
+ 639 0020 4000     		lsls	r0, r0, #1
+ 640 0022 40EAC400 		orr	r0, r0, r4, lsl #3
+ 641 0026 40F00400 		orr	r0, r0, #4
+ 642              	.L108:
+ 643 002a 01F00F01 		and	r1, r1, #15
+ 644 002e 5960     		str	r1, [r3, #4]
+ 645 0030 9168     		ldr	r1, [r2, #8]
+ 646 0032 9960     		str	r1, [r3, #8]
+ 647 0034 D268     		ldr	r2, [r2, #12]
+ 648 0036 DA60     		str	r2, [r3, #12]
+ 649 0038 40F00101 		orr	r1, r0, #1
+ 650 003c 1960     		str	r1, [r3]
+ 651              	.L99:
+ 652 003e 5DF8044B 		ldr	r4, [sp], #4
+ 653 0042 7047     		bx	lr
+ 654              	.L104:
+ 655 0044 1178     		ldrb	r1, [r2]	@ zero_extendqisi2
+ 656 0046 436B     		ldr	r3, [r0, #52]
+ 657 0048 8806     		lsls	r0, r1, #26
+ 658 004a 03F5C873 		add	r3, r3, #400
+ 659 004e E4D4     		bmi	.L109
+ 660              	.L107:
+ 661 0050 9488     		ldrh	r4, [r2, #4]
+ 662 0052 C1F30010 		ubfx	r0, r1, #4, #1
+ 663 0056 6405     		lsls	r4, r4, #21
+ 664 0058 44EA4000 		orr	r0, r4, r0, lsl #1
+ 665 005c E5E7     		b	.L108
+ 666              	.L103:
+ 667 005e 436B     		ldr	r3, [r0, #52]
+ 668 0060 03F5C073 		add	r3, r3, #384
+ 669 0064 D6E7     		b	.L106
+ 670              	.L101:
+ 671 0066 416B     		ldr	r1, [r0, #52]
+ 672 0068 8B68     		ldr	r3, [r1, #8]
+ 673 006a C3F30163 		ubfx	r3, r3, #24, #2
+ 674 006e 1833     		adds	r3, r3, #24
+ 675 0070 01EB0313 		add	r3, r1, r3, lsl #4
+ 676 0074 CEE7     		b	.L106
+ 677              		.size	can_lld_transmit, .-can_lld_transmit
+ 678 0076 00BFAFF3 		.section	.text.can_lld_is_rx_nonempty,"ax",%progbits
+ 678      0080AFF3 
+ 678      0080
+ARM GAS  /tmp/ccuzlkx7.s 			page 13
+
+
+ 679              		.align	2
+ 680              		.p2align 4,,15
+ 681              		.global	can_lld_is_rx_nonempty
+ 682              		.thumb
+ 683              		.thumb_func
+ 684              		.type	can_lld_is_rx_nonempty, %function
+ 685              	can_lld_is_rx_nonempty:
+ 686              		@ args = 0, pretend = 0, frame = 0
+ 687              		@ frame_needed = 0, uses_anonymous_args = 0
+ 688              		@ link register save eliminated.
+ 689 0000 0129     		cmp	r1, #1
+ 690 0002 11D0     		beq	.L112
+ 691 0004 0AD3     		bcc	.L113
+ 692 0006 0229     		cmp	r1, #2
+ 693 0008 06D1     		bne	.L120
+ 694 000a 436B     		ldr	r3, [r0, #52]
+ 695              	.L119:
+ 696 000c 1869     		ldr	r0, [r3, #16]
+ 697 000e 10F00300 		ands	r0, r0, #3
+ 698 0012 18BF     		it	ne
+ 699 0014 0120     		movne	r0, #1
+ 700 0016 7047     		bx	lr
+ 701              	.L120:
+ 702 0018 0020     		movs	r0, #0
+ 703 001a 7047     		bx	lr
+ 704              	.L113:
+ 705 001c 436B     		ldr	r3, [r0, #52]
+ 706 001e DA68     		ldr	r2, [r3, #12]
+ 707 0020 9207     		lsls	r2, r2, #30
+ 708 0022 F3D0     		beq	.L119
+ 709 0024 0120     		movs	r0, #1
+ 710 0026 7047     		bx	lr
+ 711              	.L112:
+ 712 0028 436B     		ldr	r3, [r0, #52]
+ 713 002a D868     		ldr	r0, [r3, #12]
+ 714 002c 10F00300 		ands	r0, r0, #3
+ 715 0030 18BF     		it	ne
+ 716 0032 0120     		movne	r0, #1
+ 717 0034 7047     		bx	lr
+ 718              		.size	can_lld_is_rx_nonempty, .-can_lld_is_rx_nonempty
+ 719 0036 00BFAFF3 		.section	.text.can_lld_receive,"ax",%progbits
+ 719      0080AFF3 
+ 719      0080
+ 720              		.align	2
+ 721              		.p2align 4,,15
+ 722              		.global	can_lld_receive
+ 723              		.thumb
+ 724              		.thumb_func
+ 725              		.type	can_lld_receive, %function
+ 726              	can_lld_receive:
+ 727              		@ args = 0, pretend = 0, frame = 0
+ 728              		@ frame_needed = 0, uses_anonymous_args = 0
+ 729              		@ link register save eliminated.
+ 730 0000 10B4     		push	{r4}
+ 731 0002 0029     		cmp	r1, #0
+ 732 0004 30D1     		bne	.L122
+ 733 0006 436B     		ldr	r3, [r0, #52]
+ARM GAS  /tmp/ccuzlkx7.s 			page 14
+
+
+ 734 0008 D968     		ldr	r1, [r3, #12]
+ 735 000a 8907     		lsls	r1, r1, #30
+ 736 000c 33D0     		beq	.L131
+ 737              	.L123:
+ 738 000e D3F8B041 		ldr	r4, [r3, #432]
+ 739 0012 D3F8B411 		ldr	r1, [r3, #436]
+ 740 0016 D3F8B831 		ldr	r3, [r3, #440]
+ 741 001a D360     		str	r3, [r2, #12]
+ 742 001c 436B     		ldr	r3, [r0, #52]
+ 743 001e D3F8BC31 		ldr	r3, [r3, #444]
+ 744 0022 1361     		str	r3, [r2, #16]
+ 745 0024 436B     		ldr	r3, [r0, #52]
+ 746 0026 2020     		movs	r0, #32
+ 747 0028 D860     		str	r0, [r3, #12]
+ 748 002a D868     		ldr	r0, [r3, #12]
+ 749 002c 8007     		lsls	r0, r0, #30
+ 750 002e 41D0     		beq	.L132
+ 751              	.L128:
+ 752 0030 1079     		ldrb	r0, [r2, #4]	@ zero_extendqisi2
+ 753 0032 C4F34003 		ubfx	r3, r4, #1, #1
+ 754 0036 63F30410 		bfi	r0, r3, #4, #1
+ 755 003a C4F38003 		ubfx	r3, r4, #2, #1
+ 756 003e 63F34510 		bfi	r0, r3, #5, #1
+ 757 0042 1071     		strb	r0, [r2, #4]
+ 758 0044 002B     		cmp	r3, #0
+ 759 0046 2FD0     		beq	.L129
+ 760 0048 9368     		ldr	r3, [r2, #8]
+ 761 004a E408     		lsrs	r4, r4, #3
+ 762 004c 64F31C03 		bfi	r3, r4, #0, #29
+ 763 0050 9360     		str	r3, [r2, #8]
+ 764              	.L130:
+ 765 0052 1379     		ldrb	r3, [r2, #4]	@ zero_extendqisi2
+ 766 0054 5DF8044B 		ldr	r4, [sp], #4
+ 767 0058 080A     		lsrs	r0, r1, #8
+ 768 005a 61F30303 		bfi	r3, r1, #0, #4
+ 769 005e 090C     		lsrs	r1, r1, #16
+ 770 0060 1371     		strb	r3, [r2, #4]
+ 771 0062 1070     		strb	r0, [r2]
+ 772 0064 5180     		strh	r1, [r2, #2]	@ movhi
+ 773 0066 7047     		bx	lr
+ 774              	.L122:
+ 775 0068 0129     		cmp	r1, #1
+ 776 006a 28D0     		beq	.L126
+ 777 006c 0229     		cmp	r1, #2
+ 778 006e 28D0     		beq	.L133
+ 779              	.L121:
+ 780 0070 5DF8044B 		ldr	r4, [sp], #4
+ 781 0074 7047     		bx	lr
+ 782              	.L131:
+ 783 0076 1969     		ldr	r1, [r3, #16]
+ 784 0078 8C07     		lsls	r4, r1, #30
+ 785 007a F9D0     		beq	.L121
+ 786              	.L124:
+ 787 007c D3F8C041 		ldr	r4, [r3, #448]
+ 788 0080 D3F8C411 		ldr	r1, [r3, #452]
+ 789 0084 D3F8C831 		ldr	r3, [r3, #456]
+ 790 0088 D360     		str	r3, [r2, #12]
+ARM GAS  /tmp/ccuzlkx7.s 			page 15
+
+
+ 791 008a 436B     		ldr	r3, [r0, #52]
+ 792 008c D3F8CC31 		ldr	r3, [r3, #460]
+ 793 0090 1361     		str	r3, [r2, #16]
+ 794 0092 436B     		ldr	r3, [r0, #52]
+ 795 0094 2020     		movs	r0, #32
+ 796 0096 1861     		str	r0, [r3, #16]
+ 797 0098 1869     		ldr	r0, [r3, #16]
+ 798 009a 8007     		lsls	r0, r0, #30
+ 799 009c C8D1     		bne	.L128
+ 800 009e 5869     		ldr	r0, [r3, #20]
+ 801 00a0 40F01000 		orr	r0, r0, #16
+ 802 00a4 5861     		str	r0, [r3, #20]
+ 803 00a6 C3E7     		b	.L128
+ 804              	.L129:
+ 805 00a8 1389     		ldrh	r3, [r2, #8]
+ 806 00aa 640D     		lsrs	r4, r4, #21
+ 807 00ac 64F30A03 		bfi	r3, r4, #0, #11
+ 808 00b0 1381     		strh	r3, [r2, #8]	@ movhi
+ 809 00b2 CEE7     		b	.L130
+ 810              	.L132:
+ 811 00b4 5869     		ldr	r0, [r3, #20]
+ 812 00b6 40F00200 		orr	r0, r0, #2
+ 813 00ba 5861     		str	r0, [r3, #20]
+ 814 00bc B8E7     		b	.L128
+ 815              	.L126:
+ 816 00be 436B     		ldr	r3, [r0, #52]
+ 817 00c0 A5E7     		b	.L123
+ 818              	.L133:
+ 819 00c2 436B     		ldr	r3, [r0, #52]
+ 820 00c4 DAE7     		b	.L124
+ 821              		.size	can_lld_receive, .-can_lld_receive
+ 822 00c6 00BFAFF3 		.section	.text.can_lld_sleep,"ax",%progbits
+ 822      0080AFF3 
+ 822      0080
+ 823              		.align	2
+ 824              		.p2align 4,,15
+ 825              		.global	can_lld_sleep
+ 826              		.thumb
+ 827              		.thumb_func
+ 828              		.type	can_lld_sleep, %function
+ 829              	can_lld_sleep:
+ 830              		@ args = 0, pretend = 0, frame = 0
+ 831              		@ frame_needed = 0, uses_anonymous_args = 0
+ 832              		@ link register save eliminated.
+ 833 0000 436B     		ldr	r3, [r0, #52]
+ 834 0002 1A68     		ldr	r2, [r3]
+ 835 0004 42F00202 		orr	r2, r2, #2
+ 836 0008 1A60     		str	r2, [r3]
+ 837 000a 7047     		bx	lr
+ 838              		.size	can_lld_sleep, .-can_lld_sleep
+ 839 000c AFF30080 		.section	.text.can_lld_wakeup,"ax",%progbits
+ 840              		.align	2
+ 841              		.p2align 4,,15
+ 842              		.global	can_lld_wakeup
+ 843              		.thumb
+ 844              		.thumb_func
+ 845              		.type	can_lld_wakeup, %function
+ARM GAS  /tmp/ccuzlkx7.s 			page 16
+
+
+ 846              	can_lld_wakeup:
+ 847              		@ args = 0, pretend = 0, frame = 0
+ 848              		@ frame_needed = 0, uses_anonymous_args = 0
+ 849              		@ link register save eliminated.
+ 850 0000 436B     		ldr	r3, [r0, #52]
+ 851 0002 1A68     		ldr	r2, [r3]
+ 852 0004 22F00202 		bic	r2, r2, #2
+ 853 0008 1A60     		str	r2, [r3]
+ 854 000a 7047     		bx	lr
+ 855              		.size	can_lld_wakeup, .-can_lld_wakeup
+ 856 000c AFF30080 		.section	.text.canSTM32SetFilters,"ax",%progbits
+ 857              		.align	2
+ 858              		.p2align 4,,15
+ 859              		.global	canSTM32SetFilters
+ 860              		.thumb
+ 861              		.thumb_func
+ 862              		.type	canSTM32SetFilters, %function
+ 863              	canSTM32SetFilters:
+ 864              		@ args = 0, pretend = 0, frame = 0
+ 865              		@ frame_needed = 0, uses_anonymous_args = 0
+ 866 0000 431E     		subs	r3, r0, #1
+ 867 0002 1A2B     		cmp	r3, #26
+ 868 0004 70B5     		push	{r4, r5, r6, lr}
+ 869 0006 0446     		mov	r4, r0
+ 870 0008 0D46     		mov	r5, r1
+ 871 000a 1646     		mov	r6, r2
+ 872 000c 0FD8     		bhi	.L137
+ 873 000e 1C29     		cmp	r1, #28
+ 874 0010 0DD8     		bhi	.L137
+ 875              	.L138:
+ 876 0012 094B     		ldr	r3, .L143
+ 877 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 878 0016 012B     		cmp	r3, #1
+ 879 0018 02D0     		beq	.L139
+ 880 001a 0848     		ldr	r0, .L143+4
+ 881 001c FFF7FEFF 		bl	chDbgPanic
+ 882              	.L139:
+ 883 0020 2046     		mov	r0, r4
+ 884 0022 2946     		mov	r1, r5
+ 885 0024 3246     		mov	r2, r6
+ 886 0026 BDE87040 		pop	{r4, r5, r6, lr}
+ 887 002a FFF7FEBF 		b	can_lld_set_filters
+ 888              	.L137:
+ 889 002e 0448     		ldr	r0, .L143+8
+ 890 0030 FFF7FEFF 		bl	chDbgPanic
+ 891 0034 EDE7     		b	.L138
+ 892              	.L144:
+ 893 0036 00BF     		.align	2
+ 894              	.L143:
+ 895 0038 00000000 		.word	.LANCHOR0
+ 896 003c 18000000 		.word	.LC1
+ 897 0040 00000000 		.word	.LC0
+ 898              		.size	canSTM32SetFilters, .-canSTM32SetFilters
+ 899              		.global	CAND1
+ 900 0044 AFF30080 		.section	.bss.CAND1,"aw",%nobits
+ 900      AFF30080 
+ 900      AFF30080 
+ARM GAS  /tmp/ccuzlkx7.s 			page 17
+
+
+ 901              		.align	2
+ 902              		.set	.LANCHOR0,. + 0
+ 903              		.type	CAND1, %object
+ 904              		.size	CAND1, 56
+ 905              	CAND1:
+ 906 0000 00000000 		.space	56
+ 906      00000000 
+ 906      00000000 
+ 906      00000000 
+ 906      00000000 
+ 907              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 908              		.align	2
+ 909              	.LC0:
+ 910 0000 2263616E 		.ascii	"\"canSTM32SetFilters\"()\000"
+ 910      53544D33 
+ 910      32536574 
+ 910      46696C74 
+ 910      65727322 
+ 911 0017 00       		.space	1
+ 912              	.LC1:
+ 913 0018 63616E53 		.ascii	"canSTM32SetFilters(), #1\000"
+ 913      544D3332 
+ 913      53657446 
+ 913      696C7465 
+ 913      72732829 
+ 914 0031 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccuzlkx7.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 can_lld.c
+     /tmp/ccuzlkx7.s:18     .text.can_lld_set_filters:00000000 $t
+     /tmp/ccuzlkx7.s:23     .text.can_lld_set_filters:00000000 can_lld_set_filters
+     /tmp/ccuzlkx7.s:128    .text.can_lld_set_filters:00000114 $d
+     /tmp/ccuzlkx7.s:132    .text.Vector8C:00000000 $t
+     /tmp/ccuzlkx7.s:138    .text.Vector8C:00000000 Vector8C
+     /tmp/ccuzlkx7.s:179    .text.Vector8C:0000004c $d
+     /tmp/ccuzlkx7.s:185    .text.Vector90:00000000 $t
+     /tmp/ccuzlkx7.s:191    .text.Vector90:00000000 Vector90
+     /tmp/ccuzlkx7.s:259    .text.Vector90:0000007c $d
+     /tmp/ccuzlkx7.s:265    .text.Vector94:00000000 $t
+     /tmp/ccuzlkx7.s:271    .text.Vector94:00000000 Vector94
+     /tmp/ccuzlkx7.s:339    .text.Vector94:0000007c $d
+     /tmp/ccuzlkx7.s:345    .text.Vector98:00000000 $t
+     /tmp/ccuzlkx7.s:351    .text.Vector98:00000000 Vector98
+     /tmp/ccuzlkx7.s:419    .text.Vector98:00000088 $d
+     /tmp/ccuzlkx7.s:423    .text.can_lld_init:00000000 $t
+     /tmp/ccuzlkx7.s:429    .text.can_lld_init:00000000 can_lld_init
+     /tmp/ccuzlkx7.s:446    .text.can_lld_init:0000001c $d
+     /tmp/ccuzlkx7.s:450    .text.can_lld_start:00000000 $t
+     /tmp/ccuzlkx7.s:456    .text.can_lld_start:00000000 can_lld_start
+     /tmp/ccuzlkx7.s:511    .text.can_lld_start:00000068 $d
+     /tmp/ccuzlkx7.s:516    .text.can_lld_stop:00000000 $t
+     /tmp/ccuzlkx7.s:522    .text.can_lld_stop:00000000 can_lld_stop
+     /tmp/ccuzlkx7.s:556    .text.can_lld_stop:00000040 $d
+     /tmp/ccuzlkx7.s:562    .text.can_lld_is_tx_empty:00000000 $t
+     /tmp/ccuzlkx7.s:568    .text.can_lld_is_tx_empty:00000000 can_lld_is_tx_empty
+     /tmp/ccuzlkx7.s:576    .text.can_lld_is_tx_empty:00000008 $d
+     /tmp/ccuzlkx7.s:580    .text.can_lld_is_tx_empty:0000000c $t
+     /tmp/ccuzlkx7.s:609    .text.can_lld_transmit:00000000 $t
+     /tmp/ccuzlkx7.s:615    .text.can_lld_transmit:00000000 can_lld_transmit
+     /tmp/ccuzlkx7.s:624    .text.can_lld_transmit:0000000a $d
+     /tmp/ccuzlkx7.s:628    .text.can_lld_transmit:0000000e $t
+     /tmp/ccuzlkx7.s:679    .text.can_lld_is_rx_nonempty:00000000 $t
+     /tmp/ccuzlkx7.s:685    .text.can_lld_is_rx_nonempty:00000000 can_lld_is_rx_nonempty
+     /tmp/ccuzlkx7.s:720    .text.can_lld_receive:00000000 $t
+     /tmp/ccuzlkx7.s:726    .text.can_lld_receive:00000000 can_lld_receive
+     /tmp/ccuzlkx7.s:823    .text.can_lld_sleep:00000000 $t
+     /tmp/ccuzlkx7.s:829    .text.can_lld_sleep:00000000 can_lld_sleep
+     /tmp/ccuzlkx7.s:840    .text.can_lld_wakeup:00000000 $t
+     /tmp/ccuzlkx7.s:846    .text.can_lld_wakeup:00000000 can_lld_wakeup
+     /tmp/ccuzlkx7.s:857    .text.canSTM32SetFilters:00000000 $t
+     /tmp/ccuzlkx7.s:863    .text.canSTM32SetFilters:00000000 canSTM32SetFilters
+     /tmp/ccuzlkx7.s:895    .text.canSTM32SetFilters:00000038 $d
+     /tmp/ccuzlkx7.s:905    .bss.CAND1:00000000 CAND1
+     /tmp/ccuzlkx7.s:901    .bss.CAND1:00000000 $d
+     /tmp/ccuzlkx7.s:908    .rodata.str1.4:00000000 $d
+     /tmp/ccuzlkx7.s:131    .text.can_lld_set_filters:0000011c $t
+     /tmp/ccuzlkx7.s:184    .text.Vector8C:0000005c $t
+     /tmp/ccuzlkx7.s:264    .text.Vector90:0000008c $t
+     /tmp/ccuzlkx7.s:344    .text.Vector94:0000008c $t
+     /tmp/ccuzlkx7.s:449    .text.can_lld_init:00000024 $t
+     /tmp/ccuzlkx7.s:515    .text.can_lld_start:00000074 $t
+     /tmp/ccuzlkx7.s:900    .text.canSTM32SetFilters:00000044 $t
+
+UNDEFINED SYMBOLS
+ARM GAS  /tmp/ccuzlkx7.s 			page 19
+
+
+dbg_check_enter_isr
+dbg_check_lock_from_isr
+chSemSignalI
+chEvtBroadcastFlagsI
+dbg_check_unlock_from_isr
+dbg_check_leave_isr
+_port_irq_epilogue
+canObjectInit
+chSchGoSleepTimeoutS
+nvicEnableVector
+nvicDisableVector
+chDbgPanic

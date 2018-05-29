@@ -1,0 +1,781 @@
+ARM GAS  /tmp/ccc1QvPH.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"DistControl.cpp"
+  15              		.section	.text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm,"axG",%progbits,_ZN10chibios_rt16
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.weak	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, %function
+  22              	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 30B5     		push	{r4, r5, lr}
+  26 0002 0D46     		mov	r5, r1
+  27 0004 83B0     		sub	sp, sp, #12
+  28 0006 0446     		mov	r4, r0
+  29 0008 0091     		str	r1, [sp]
+  30 000a 05F10800 		add	r0, r5, #8
+  31 000e 4FF4E871 		mov	r1, #464
+  32 0012 054B     		ldr	r3, .L2
+  33 0014 FFF7FEFF 		bl	chThdCreateStatic
+  34 0018 044A     		ldr	r2, .L2+4
+  35 001a 0346     		mov	r3, r0
+  36 001c 6860     		str	r0, [r5, #4]
+  37 001e 2046     		mov	r0, r4
+  38 0020 84E80C00 		stmia	r4, {r2, r3}
+  39 0024 03B0     		add	sp, sp, #12
+  40              		@ sp needed
+  41 0026 30BD     		pop	{r4, r5, pc}
+  42              	.L3:
+  43              		.align	2
+  44              	.L2:
+  45 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+  46 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+  47              		.size	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi256
+  48              		.global	__aeabi_fdiv
+  49              		.global	__aeabi_f2iz
+  50              		.section	.text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE,"ax",%progbits
+  51              		.align	2
+  52              		.p2align 4,,15
+  53              		.global	_ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE
+  54              		.thumb
+  55              		.thumb_func
+  56              		.type	_ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE, %function
+  57              	_ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:
+ARM GAS  /tmp/ccc1QvPH.s 			page 2
+
+
+  58              		@ args = 0, pretend = 0, frame = 0
+  59              		@ frame_needed = 0, uses_anonymous_args = 0
+  60 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  61 0002 0446     		mov	r4, r0
+  62 0004 0E46     		mov	r6, r1
+  63 0006 1746     		mov	r7, r2
+  64 0008 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+  65 000c 214B     		ldr	r3, .L5
+  66 000e DFF894E0 		ldr	lr, .L5+16
+  67 0012 1D68     		ldr	r5, [r3]	@ float
+  68 0014 2049     		ldr	r1, .L5+4
+  69 0016 0023     		movs	r3, #0
+  70 0018 44F62062 		movw	r2, #20000
+  71 001c 0A20     		movs	r0, #10
+  72 001e C4F800E0 		str	lr, [r4]
+  73 0022 C4F85422 		str	r2, [r4, #596]
+  74 0026 C4F82832 		str	r3, [r4, #552]
+  75 002a C4F82C32 		str	r3, [r4, #556]
+  76 002e C4F83032 		str	r3, [r4, #560]
+  77 0032 C4F83432 		str	r3, [r4, #564]
+  78 0036 C4F83C32 		str	r3, [r4, #572]
+  79 003a C4F84032 		str	r3, [r4, #576]
+  80 003e C4F84432 		str	r3, [r4, #580]
+  81 0042 C4F84832 		str	r3, [r4, #584]
+  82 0046 C4F84C32 		str	r3, [r4, #588]
+  83 004a C4F85032 		str	r3, [r4, #592]
+  84 004e C4F85832 		str	r3, [r4, #600]
+  85 0052 C4F85C32 		str	r3, [r4, #604]
+  86 0056 C4F86032 		str	r3, [r4, #608]
+  87 005a C4F86432 		str	r3, [r4, #612]
+  88 005e C4F8E401 		str	r0, [r4, #484]
+  89 0062 C4F82412 		str	r1, [r4, #548]
+  90 0066 C4F8D861 		str	r6, [r4, #472]
+  91 006a 2946     		mov	r1, r5
+  92 006c C4F8DC71 		str	r7, [r4, #476]
+  93 0070 0A48     		ldr	r0, .L5+8
+  94 0072 FFF7FEFF 		bl	__aeabi_fdiv
+  95 0076 FFF7FEFF 		bl	__aeabi_f2iz
+  96 007a 2946     		mov	r1, r5
+  97 007c C4F83802 		str	r0, [r4, #568]
+  98 0080 0748     		ldr	r0, .L5+12
+  99 0082 FFF7FEFF 		bl	__aeabi_fdiv
+ 100 0086 FFF7FEFF 		bl	__aeabi_f2iz
+ 101 008a C4F86802 		str	r0, [r4, #616]
+ 102 008e 2046     		mov	r0, r4
+ 103 0090 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 104              	.L6:
+ 105 0092 00BF     		.align	2
+ 106              	.L5:
+ 107 0094 00000000 		.word	_ZN5amiro12MotorControl25actualWheelBaseDistanceSIE
+ 108 0098 F0490200 		.word	150000
+ 109 009c 007C9248 		.word	1217559552
+ 110 00a0 00401C47 		.word	1193033728
+ 111 00a4 08000000 		.word	.LANCHOR0+8
+ 112              		.size	_ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE, .-_ZN5amiro11DistControl
+ 113              		.global	_ZN5amiro11DistControlC1EPNS_12MotorControlEPNS_15MotorIncrementsE
+ 114              		.thumb_set _ZN5amiro11DistControlC1EPNS_12MotorControlEPNS_15MotorIncrementsE,_ZN5amiro11DistContr
+ARM GAS  /tmp/ccc1QvPH.s 			page 3
+
+
+ 115              		.global	__aeabi_i2d
+ 116              		.global	__aeabi_dmul
+ 117              		.global	__aeabi_d2iz
+ 118 00a8 AFF30080 		.section	.text._ZN5amiro11DistControl20getCurrentTargetDistEv,"ax",%progbits
+ 118      AFF30080 
+ 119              		.align	2
+ 120              		.p2align 4,,15
+ 121              		.global	_ZN5amiro11DistControl20getCurrentTargetDistEv
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.type	_ZN5amiro11DistControl20getCurrentTargetDistEv, %function
+ 125              	_ZN5amiro11DistControl20getCurrentTargetDistEv:
+ 126              		@ args = 0, pretend = 0, frame = 0
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+ 128 0000 08B5     		push	{r3, lr}
+ 129 0002 D0F81002 		ldr	r0, [r0, #528]
+ 130 0006 FFF7FEFF 		bl	__aeabi_i2d
+ 131 000a 05A3     		adr	r3, .L8
+ 132 000c D3E90023 		ldrd	r2, [r3]
+ 133 0010 FFF7FEFF 		bl	__aeabi_dmul
+ 134 0014 FFF7FEFF 		bl	__aeabi_d2iz
+ 135 0018 08BD     		pop	{r3, pc}
+ 136              	.L9:
+ 137 001a 00BFAFF3 		.align	3
+ 137      0080
+ 138              	.L8:
+ 139 0020 00000000 		.word	0
+ 140 0024 80842E41 		.word	1093567616
+ 141              		.size	_ZN5amiro11DistControl20getCurrentTargetDistEv, .-_ZN5amiro11DistControl20getCurrentTargetDi
+ 142 0028 AFF30080 		.section	.text._ZN5amiro11DistControl21getCurrentTargetAngleEv,"ax",%progbits
+ 142      AFF30080 
+ 143              		.align	2
+ 144              		.p2align 4,,15
+ 145              		.global	_ZN5amiro11DistControl21getCurrentTargetAngleEv
+ 146              		.thumb
+ 147              		.thumb_func
+ 148              		.type	_ZN5amiro11DistControl21getCurrentTargetAngleEv, %function
+ 149              	_ZN5amiro11DistControl21getCurrentTargetAngleEv:
+ 150              		@ args = 0, pretend = 0, frame = 0
+ 151              		@ frame_needed = 0, uses_anonymous_args = 0
+ 152 0000 08B5     		push	{r3, lr}
+ 153 0002 D0F81402 		ldr	r0, [r0, #532]
+ 154 0006 FFF7FEFF 		bl	__aeabi_i2d
+ 155 000a 05A3     		adr	r3, .L11
+ 156 000c D3E90023 		ldrd	r2, [r3]
+ 157 0010 FFF7FEFF 		bl	__aeabi_dmul
+ 158 0014 FFF7FEFF 		bl	__aeabi_d2iz
+ 159 0018 08BD     		pop	{r3, pc}
+ 160              	.L12:
+ 161 001a 00BFAFF3 		.align	3
+ 161      0080
+ 162              	.L11:
+ 163 0020 00000000 		.word	0
+ 164 0024 80842E41 		.word	1093567616
+ 165              		.size	_ZN5amiro11DistControl21getCurrentTargetAngleEv, .-_ZN5amiro11DistControl21getCurrentTargetA
+ 166              		.global	__aeabi_d2uiz
+ 167              		.section	.text._ZN5amiro11DistControl17setTargetPositionEllt,"ax",%progbits
+ARM GAS  /tmp/ccc1QvPH.s 			page 4
+
+
+ 168              		.align	2
+ 169              		.p2align 4,,15
+ 170              		.global	_ZN5amiro11DistControl17setTargetPositionEllt
+ 171              		.thumb
+ 172              		.thumb_func
+ 173              		.type	_ZN5amiro11DistControl17setTargetPositionEllt, %function
+ 174              	_ZN5amiro11DistControl17setTargetPositionEllt:
+ 175              		@ args = 0, pretend = 0, frame = 0
+ 176              		@ frame_needed = 0, uses_anonymous_args = 0
+ 177 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 178 0002 1F46     		mov	r7, r3
+ 179 0004 0446     		mov	r4, r0
+ 180 0006 0E46     		mov	r6, r1
+ 181 0008 1546     		mov	r5, r2
+ 182 000a 2023     		movs	r3, #32
+ 183              	@ 58 "../../components/DistControl.cpp" 1
+ 184 000c 83F31188 		msr     BASEPRI, r3
+ 185              	@ 0 "" 2
+ 186              		.thumb
+ 187 0010 FFF7FEFF 		bl	dbg_check_lock
+ 188 0014 002E     		cmp	r6, #0
+ 189 0016 D4BF     		ite	le
+ 190 0018 0022     		movle	r2, #0
+ 191 001a 0122     		movgt	r2, #1
+ 192 001c C4F81062 		str	r6, [r4, #528]
+ 193 0020 84F8E121 		strb	r2, [r4, #481]
+ 194 0024 12B9     		cbnz	r2, .L14
+ 195 0026 7642     		negs	r6, r6
+ 196 0028 C4F81062 		str	r6, [r4, #528]
+ 197              	.L14:
+ 198 002c 002D     		cmp	r5, #0
+ 199 002e D4BF     		ite	le
+ 200 0030 0022     		movle	r2, #0
+ 201 0032 0122     		movgt	r2, #1
+ 202 0034 C4F81452 		str	r5, [r4, #532]
+ 203 0038 84F8E221 		strb	r2, [r4, #482]
+ 204 003c 12B9     		cbnz	r2, .L15
+ 205 003e 6D42     		negs	r5, r5
+ 206 0040 C4F81452 		str	r5, [r4, #532]
+ 207              	.L15:
+ 208 0044 3846     		mov	r0, r7
+ 209 0046 FFF7FEFF 		bl	__aeabi_i2d
+ 210 004a 0022     		movs	r2, #0
+ 211 004c 0E4B     		ldr	r3, .L17
+ 212 004e FFF7FEFF 		bl	__aeabi_dmul
+ 213 0052 FFF7FEFF 		bl	__aeabi_d2uiz
+ 214 0056 0123     		movs	r3, #1
+ 215 0058 84F8E031 		strb	r3, [r4, #480]
+ 216 005c C4F82002 		str	r0, [r4, #544]
+ 217 0060 FFF7FEFF 		bl	dbg_check_unlock
+ 218 0064 0023     		movs	r3, #0
+ 219              	@ 71 "../../components/DistControl.cpp" 1
+ 220 0066 83F31188 		msr     BASEPRI, r3
+ 221              	@ 0 "" 2
+ 222              		.thumb
+ 223 006a C4F80032 		str	r3, [r4, #512]
+ 224 006e C4F80432 		str	r3, [r4, #516]
+ARM GAS  /tmp/ccc1QvPH.s 			page 5
+
+
+ 225 0072 D4F8DC01 		ldr	r0, [r4, #476]
+ 226 0076 04F5F471 		add	r1, r4, #488
+ 227 007a 04F5F872 		add	r2, r4, #496
+ 228 007e BDE8F840 		pop	{r3, r4, r5, r6, r7, lr}
+ 229 0082 FFF7FEBF 		b	_ZN5amiro12MotorControl16updateIncrementsEPNS_15MotorIncrementsERA2_lRA2_f
+ 230              	.L18:
+ 231 0086 00BF     		.align	2
+ 232              	.L17:
+ 233 0088 00408F40 		.word	1083129856
+ 234              		.size	_ZN5amiro11DistControl17setTargetPositionEllt, .-_ZN5amiro11DistControl17setTargetPositionEl
+ 235 008c AFF30080 		.section	.text._ZN5amiro11DistControl8isActiveEv,"ax",%progbits
+ 236              		.align	2
+ 237              		.p2align 4,,15
+ 238              		.global	_ZN5amiro11DistControl8isActiveEv
+ 239              		.thumb
+ 240              		.thumb_func
+ 241              		.type	_ZN5amiro11DistControl8isActiveEv, %function
+ 242              	_ZN5amiro11DistControl8isActiveEv:
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245              		@ link register save eliminated.
+ 246 0000 90F8E001 		ldrb	r0, [r0, #480]	@ zero_extendqisi2
+ 247 0004 7047     		bx	lr
+ 248              		.size	_ZN5amiro11DistControl8isActiveEv, .-_ZN5amiro11DistControl8isActiveEv
+ 249 0006 00BFAFF3 		.section	.text._ZN5amiro11DistControl20deactivateControllerEv,"ax",%progbits
+ 249      0080AFF3 
+ 249      0080
+ 250              		.align	2
+ 251              		.p2align 4,,15
+ 252              		.global	_ZN5amiro11DistControl20deactivateControllerEv
+ 253              		.thumb
+ 254              		.thumb_func
+ 255              		.type	_ZN5amiro11DistControl20deactivateControllerEv, %function
+ 256              	_ZN5amiro11DistControl20deactivateControllerEv:
+ 257              		@ args = 0, pretend = 0, frame = 0
+ 258              		@ frame_needed = 0, uses_anonymous_args = 0
+ 259 0000 38B5     		push	{r3, r4, r5, lr}
+ 260 0002 0446     		mov	r4, r0
+ 261 0004 2023     		movs	r3, #32
+ 262              	@ 82 "../../components/DistControl.cpp" 1
+ 263 0006 83F31188 		msr     BASEPRI, r3
+ 264              	@ 0 "" 2
+ 265              		.thumb
+ 266 000a FFF7FEFF 		bl	dbg_check_lock
+ 267 000e 0025     		movs	r5, #0
+ 268 0010 0023     		movs	r3, #0
+ 269 0012 C4F8F031 		str	r3, [r4, #496]	@ float
+ 270 0016 C4F8F831 		str	r3, [r4, #504]	@ float
+ 271 001a C4F8F431 		str	r3, [r4, #500]	@ float
+ 272 001e C4F8FC31 		str	r3, [r4, #508]	@ float
+ 273 0022 84F8E051 		strb	r5, [r4, #480]
+ 274 0026 C4F81052 		str	r5, [r4, #528]
+ 275 002a C4F81452 		str	r5, [r4, #532]
+ 276 002e C4F82052 		str	r5, [r4, #544]
+ 277 0032 C4F8E851 		str	r5, [r4, #488]
+ 278 0036 C4F80052 		str	r5, [r4, #512]
+ 279 003a C4F8EC51 		str	r5, [r4, #492]
+ARM GAS  /tmp/ccc1QvPH.s 			page 6
+
+
+ 280 003e C4F80452 		str	r5, [r4, #516]
+ 281 0042 FFF7FEFF 		bl	dbg_check_unlock
+ 282 0046 2B46     		mov	r3, r5
+ 283              	@ 93 "../../components/DistControl.cpp" 1
+ 284 0048 83F31188 		msr     BASEPRI, r3
+ 285              	@ 0 "" 2
+ 286              		.thumb
+ 287 004c 38BD     		pop	{r3, r4, r5, pc}
+ 288              		.size	_ZN5amiro11DistControl20deactivateControllerEv, .-_ZN5amiro11DistControl20deactivateControll
+ 289              		.global	__aeabi_ui2f
+ 290              		.global	__aeabi_f2d
+ 291              		.global	__aeabi_ddiv
+ 292              		.global	__aeabi_i2f
+ 293              		.global	__aeabi_fmul
+ 294 004e 00BF     		.section	.text._ZN5amiro11DistControl14calcVelocitiesEv,"ax",%progbits
+ 295              		.align	2
+ 296              		.p2align 4,,15
+ 297              		.global	_ZN5amiro11DistControl14calcVelocitiesEv
+ 298              		.thumb
+ 299              		.thumb_func
+ 300              		.type	_ZN5amiro11DistControl14calcVelocitiesEv, %function
+ 301              	_ZN5amiro11DistControl14calcVelocitiesEv:
+ 302              		@ args = 0, pretend = 0, frame = 0
+ 303              		@ frame_needed = 0, uses_anonymous_args = 0
+ 304 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 305 0004 0646     		mov	r6, r0
+ 306 0006 D0F82002 		ldr	r0, [r0, #544]
+ 307 000a FFF7FEFF 		bl	__aeabi_ui2f
+ 308 000e FFF7FEFF 		bl	__aeabi_f2d
+ 309 0012 D6F81882 		ldr	r8, [r6, #536]
+ 310 0016 0446     		mov	r4, r0
+ 311 0018 4046     		mov	r0, r8
+ 312 001a 0D46     		mov	r5, r1
+ 313 001c FFF7FEFF 		bl	__aeabi_i2d
+ 314 0020 43A3     		adr	r3, .L33
+ 315 0022 D3E90023 		ldrd	r2, [r3]
+ 316 0026 FFF7FEFF 		bl	__aeabi_dmul
+ 317 002a 2246     		mov	r2, r4
+ 318 002c 2B46     		mov	r3, r5
+ 319 002e FFF7FEFF 		bl	__aeabi_ddiv
+ 320 0032 FFF7FEFF 		bl	__aeabi_d2iz
+ 321 0036 D6F82422 		ldr	r2, [r6, #548]
+ 322 003a D6F81C92 		ldr	r9, [r6, #540]
+ 323 003e D6F83832 		ldr	r3, [r6, #568]
+ 324 0042 4245     		cmp	r2, r8
+ 325 0044 B4BF     		ite	lt
+ 326 0046 9346     		movlt	fp, r2
+ 327 0048 C346     		movge	fp, r8
+ 328 004a 4B45     		cmp	r3, r9
+ 329 004c B4BF     		ite	lt
+ 330 004e 9A46     		movlt	r10, r3
+ 331 0050 CA46     		movge	r10, r9
+ 332 0052 5845     		cmp	r0, fp
+ 333 0054 0746     		mov	r7, r0
+ 334 0056 49DC     		bgt	.L22
+ 335 0058 4846     		mov	r0, r9
+ 336 005a FFF7FEFF 		bl	__aeabi_i2d
+ARM GAS  /tmp/ccc1QvPH.s 			page 7
+
+
+ 337 005e 34A3     		adr	r3, .L33
+ 338 0060 D3E90023 		ldrd	r2, [r3]
+ 339 0064 FFF7FEFF 		bl	__aeabi_dmul
+ 340 0068 2246     		mov	r2, r4
+ 341 006a 2B46     		mov	r3, r5
+ 342 006c FFF7FEFF 		bl	__aeabi_ddiv
+ 343 0070 FFF7FEFF 		bl	__aeabi_d2iz
+ 344              	.L23:
+ 345 0074 5045     		cmp	r0, r10
+ 346 0076 16DD     		ble	.L24
+ 347 0078 5046     		mov	r0, r10
+ 348 007a FFF7FEFF 		bl	__aeabi_i2f
+ 349 007e 0446     		mov	r4, r0
+ 350 0080 4046     		mov	r0, r8
+ 351 0082 FFF7FEFF 		bl	__aeabi_i2f
+ 352 0086 0546     		mov	r5, r0
+ 353 0088 4846     		mov	r0, r9
+ 354 008a FFF7FEFF 		bl	__aeabi_i2f
+ 355 008e 0146     		mov	r1, r0
+ 356 0090 2846     		mov	r0, r5
+ 357 0092 FFF7FEFF 		bl	__aeabi_fdiv
+ 358 0096 0146     		mov	r1, r0
+ 359 0098 2046     		mov	r0, r4
+ 360 009a FFF7FEFF 		bl	__aeabi_fmul
+ 361 009e FFF7FEFF 		bl	__aeabi_f2iz
+ 362 00a2 0746     		mov	r7, r0
+ 363 00a4 5046     		mov	r0, r10
+ 364              	.L24:
+ 365 00a6 B8F1000F 		cmp	r8, #0
+ 366 00aa 04DD     		ble	.L25
+ 367 00ac D6F85422 		ldr	r2, [r6, #596]
+ 368 00b0 9742     		cmp	r7, r2
+ 369 00b2 B8BF     		it	lt
+ 370 00b4 1746     		movlt	r7, r2
+ 371              	.L25:
+ 372 00b6 B9F1000F 		cmp	r9, #0
+ 373 00ba 02DD     		ble	.L26
+ 374 00bc B8F1000F 		cmp	r8, #0
+ 375 00c0 2BD0     		beq	.L31
+ 376              	.L26:
+ 377 00c2 96F8E121 		ldrb	r2, [r6, #481]	@ zero_extendqisi2
+ 378 00c6 02B9     		cbnz	r2, .L27
+ 379 00c8 7F42     		negs	r7, r7
+ 380              	.L27:
+ 381 00ca 96F8E221 		ldrb	r2, [r6, #482]	@ zero_extendqisi2
+ 382 00ce 02B9     		cbnz	r2, .L28
+ 383 00d0 4042     		negs	r0, r0
+ 384              	.L28:
+ 385 00d2 D6F83C22 		ldr	r2, [r6, #572]
+ 386 00d6 BA42     		cmp	r2, r7
+ 387 00d8 25D0     		beq	.L32
+ 388              	.L29:
+ 389 00da 0122     		movs	r2, #1
+ 390 00dc C6F83C72 		str	r7, [r6, #572]
+ 391 00e0 C6F85002 		str	r0, [r6, #592]
+ 392 00e4 86F8E321 		strb	r2, [r6, #483]
+ 393              	.L21:
+ARM GAS  /tmp/ccc1QvPH.s 			page 8
+
+
+ 394 00e8 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 395              	.L22:
+ 396 00ec 5846     		mov	r0, fp
+ 397 00ee FFF7FEFF 		bl	__aeabi_i2f
+ 398 00f2 0446     		mov	r4, r0
+ 399 00f4 4846     		mov	r0, r9
+ 400 00f6 FFF7FEFF 		bl	__aeabi_i2f
+ 401 00fa 0546     		mov	r5, r0
+ 402 00fc 4046     		mov	r0, r8
+ 403 00fe FFF7FEFF 		bl	__aeabi_i2f
+ 404 0102 0146     		mov	r1, r0
+ 405 0104 2846     		mov	r0, r5
+ 406 0106 FFF7FEFF 		bl	__aeabi_fdiv
+ 407 010a 0146     		mov	r1, r0
+ 408 010c 2046     		mov	r0, r4
+ 409 010e FFF7FEFF 		bl	__aeabi_fmul
+ 410 0112 5F46     		mov	r7, fp
+ 411 0114 FFF7FEFF 		bl	__aeabi_f2iz
+ 412 0118 ACE7     		b	.L23
+ 413              	.L31:
+ 414 011a D6F86822 		ldr	r2, [r6, #616]
+ 415 011e 9042     		cmp	r0, r2
+ 416 0120 B8BF     		it	lt
+ 417 0122 1046     		movlt	r0, r2
+ 418 0124 CDE7     		b	.L26
+ 419              	.L32:
+ 420 0126 D6F85022 		ldr	r2, [r6, #592]
+ 421 012a 8242     		cmp	r2, r0
+ 422 012c D5D1     		bne	.L29
+ 423 012e DBE7     		b	.L21
+ 424              	.L34:
+ 425              		.align	3
+ 426              	.L33:
+ 427 0130 00000000 		.word	0
+ 428 0134 80842E41 		.word	1093567616
+ 429              		.size	_ZN5amiro11DistControl14calcVelocitiesEv, .-_ZN5amiro11DistControl14calcVelocitiesEv
+ 430              		.global	__aeabi_ui2d
+ 431              		.global	__aeabi_dsub
+ 432 0138 AFF30080 		.section	.text.startup._ZN5amiro11DistControl4mainEv,"ax",%progbits
+ 432      AFF30080 
+ 433              		.align	2
+ 434              		.p2align 4,,15
+ 435              		.global	_ZN5amiro11DistControl4mainEv
+ 436              		.thumb
+ 437              		.thumb_func
+ 438              		.type	_ZN5amiro11DistControl4mainEv, %function
+ 439              	_ZN5amiro11DistControl4mainEv:
+ 440              		@ args = 0, pretend = 0, frame = 0
+ 441              		@ frame_needed = 0, uses_anonymous_args = 0
+ 442 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 443 0004 8246     		mov	r10, r0
+ 444 0006 FFF7FEFF 		bl	_ZN10chibios_rt6System7getTimeEv
+ 445 000a 0646     		mov	r6, r0
+ 446 000c 6648     		ldr	r0, .L58+8
+ 447 000e FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread7setNameEPKc
+ 448 0012 5046     		mov	r0, r10
+ 449 0014 FFF7FEFF 		bl	_ZN5amiro11DistControl20deactivateControllerEv
+ARM GAS  /tmp/ccc1QvPH.s 			page 9
+
+
+ 450 0018 4FF47A78 		mov	r8, #1000
+ 451 001c 634F     		ldr	r7, .L58+12
+ 452 001e DFF89891 		ldr	r9, .L58+24
+ 453 0022 02E0     		b	.L36
+ 454              	.L38:
+ 455 0024 3046     		mov	r0, r6
+ 456 0026 FFF7FEFF 		bl	chThdSleepUntil
+ 457              	.L36:
+ 458 002a FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 459 002e 0028     		cmp	r0, #0
+ 460 0030 40F0A980 		bne	.L56
+ 461 0034 DAF8E431 		ldr	r3, [r10, #484]
+ 462 0038 9AF8E021 		ldrb	r2, [r10, #480]	@ zero_extendqisi2
+ 463 003c 08FB03F3 		mul	r3, r8, r3
+ 464 0040 013B     		subs	r3, r3, #1
+ 465 0042 A7FB0313 		umull	r1, r3, r7, r3
+ 466 0046 06EB9316 		add	r6, r6, r3, lsr #6
+ 467 004a 0136     		adds	r6, r6, #1
+ 468 004c 002A     		cmp	r2, #0
+ 469 004e E9D0     		beq	.L38
+ 470 0050 0AF5F874 		add	r4, r10, #496
+ 471 0054 2246     		mov	r2, r4
+ 472 0056 DAF8DC01 		ldr	r0, [r10, #476]
+ 473 005a 0AF5F471 		add	r1, r10, #488
+ 474 005e FFF7FEFF 		bl	_ZN5amiro12MotorControl16updateIncrementsEPNS_15MotorIncrementsERA2_lRA2_f
+ 475 0062 2046     		mov	r0, r4
+ 476 0064 0AF5FC71 		add	r1, r10, #504
+ 477 0068 FFF7FEFF 		bl	_ZN5amiro12MotorControl14updateDistanceERA2_KfRA2_f
+ 478 006c DAF8F801 		ldr	r0, [r10, #504]	@ float
+ 479 0070 FFF7FEFF 		bl	__aeabi_f2d
+ 480 0074 4AA3     		adr	r3, .L58
+ 481 0076 D3E90023 		ldrd	r2, [r3]
+ 482 007a FFF7FEFF 		bl	__aeabi_dmul
+ 483 007e FFF7FEFF 		bl	__aeabi_d2iz
+ 484 0082 DAF80052 		ldr	r5, [r10, #512]
+ 485 0086 0544     		add	r5, r5, r0
+ 486 0088 CAF80052 		str	r5, [r10, #512]
+ 487 008c DAF8FC01 		ldr	r0, [r10, #508]	@ float
+ 488 0090 FFF7FEFF 		bl	__aeabi_f2d
+ 489 0094 42A3     		adr	r3, .L58
+ 490 0096 D3E90023 		ldrd	r2, [r3]
+ 491 009a FFF7FEFF 		bl	__aeabi_dmul
+ 492 009e FFF7FEFF 		bl	__aeabi_d2iz
+ 493 00a2 DAF80432 		ldr	r3, [r10, #516]
+ 494 00a6 00EB030B 		add	fp, r0, r3
+ 495 00aa CAF804B2 		str	fp, [r10, #516]
+ 496 00ae 05EB0B00 		add	r0, r5, fp
+ 497 00b2 FFF7FEFF 		bl	__aeabi_i2d
+ 498 00b6 3E4B     		ldr	r3, .L58+16
+ 499 00b8 0022     		movs	r2, #0
+ 500 00ba FFF7FEFF 		bl	__aeabi_dmul
+ 501 00be FFF7FEFF 		bl	__aeabi_d2iz
+ 502 00c2 9AF8E131 		ldrb	r3, [r10, #481]	@ zero_extendqisi2
+ 503 00c6 0446     		mov	r4, r0
+ 504 00c8 CAF80802 		str	r0, [r10, #520]
+ 505 00cc 13B9     		cbnz	r3, .L39
+ 506 00ce 4442     		negs	r4, r0
+ARM GAS  /tmp/ccc1QvPH.s 			page 10
+
+
+ 507 00d0 CAF80842 		str	r4, [r10, #520]
+ 508              	.L39:
+ 509 00d4 C5EB0B00 		rsb	r0, r5, fp
+ 510 00d8 FFF7FEFF 		bl	__aeabi_i2f
+ 511 00dc D9F80010 		ldr	r1, [r9]	@ float
+ 512 00e0 FFF7FEFF 		bl	__aeabi_fdiv
+ 513 00e4 FFF7FEFF 		bl	__aeabi_f2iz
+ 514 00e8 9AF8E231 		ldrb	r3, [r10, #482]	@ zero_extendqisi2
+ 515 00ec CAF80C02 		str	r0, [r10, #524]
+ 516 00f0 13B9     		cbnz	r3, .L40
+ 517 00f2 4042     		negs	r0, r0
+ 518 00f4 CAF80C02 		str	r0, [r10, #524]
+ 519              	.L40:
+ 520 00f8 DAF81032 		ldr	r3, [r10, #528]
+ 521 00fc 1C1B     		subs	r4, r3, r4
+ 522 00fe 44BF     		itt	mi
+ 523 0100 0023     		movmi	r3, #0
+ 524 0102 CAF81832 		strmi	r3, [r10, #536]
+ 525 0106 DAF81432 		ldr	r3, [r10, #532]
+ 526 010a 58BF     		it	pl
+ 527 010c CAF81842 		strpl	r4, [r10, #536]
+ 528 0110 181A     		subs	r0, r3, r0
+ 529 0112 4ABF     		itet	mi
+ 530 0114 0023     		movmi	r3, #0
+ 531 0116 CAF81C02 		strpl	r0, [r10, #540]
+ 532 011a CAF81C32 		strmi	r3, [r10, #540]
+ 533 011e 5046     		mov	r0, r10
+ 534 0120 FFF7FEFF 		bl	_ZN5amiro11DistControl14calcVelocitiesEv
+ 535 0124 9AF8E031 		ldrb	r3, [r10, #480]	@ zero_extendqisi2
+ 536 0128 13B1     		cbz	r3, .L45
+ 537 012a 9AF8E331 		ldrb	r3, [r10, #483]	@ zero_extendqisi2
+ 538 012e 6BBB     		cbnz	r3, .L57
+ 539              	.L45:
+ 540 0130 DAF82002 		ldr	r0, [r10, #544]
+ 541 0134 FFF7FEFF 		bl	__aeabi_ui2d
+ 542 0138 0446     		mov	r4, r0
+ 543 013a DAF8E401 		ldr	r0, [r10, #484]
+ 544 013e 0D46     		mov	r5, r1
+ 545 0140 FFF7FEFF 		bl	__aeabi_ui2d
+ 546 0144 0022     		movs	r2, #0
+ 547 0146 1B4B     		ldr	r3, .L58+20
+ 548 0148 FFF7FEFF 		bl	__aeabi_dmul
+ 549 014c 0246     		mov	r2, r0
+ 550 014e 0B46     		mov	r3, r1
+ 551 0150 2046     		mov	r0, r4
+ 552 0152 2946     		mov	r1, r5
+ 553 0154 FFF7FEFF 		bl	__aeabi_dsub
+ 554 0158 FFF7FEFF 		bl	__aeabi_d2uiz
+ 555 015c 78B1     		cbz	r0, .L46
+ 556 015e CAF82002 		str	r0, [r10, #544]
+ 557              	.L47:
+ 558 0162 DAF81832 		ldr	r3, [r10, #536]
+ 559 0166 002B     		cmp	r3, #0
+ 560 0168 7FF45CAF 		bne	.L38
+ 561 016c DAF81C32 		ldr	r3, [r10, #540]
+ 562 0170 002B     		cmp	r3, #0
+ 563 0172 7FF457AF 		bne	.L38
+ARM GAS  /tmp/ccc1QvPH.s 			page 11
+
+
+ 564 0176 5046     		mov	r0, r10
+ 565 0178 FFF7FEFF 		bl	_ZN5amiro11DistControl20deactivateControllerEv
+ 566 017c 52E7     		b	.L38
+ 567              	.L46:
+ 568 017e 0123     		movs	r3, #1
+ 569 0180 CAF82032 		str	r3, [r10, #544]
+ 570 0184 EDE7     		b	.L47
+ 571              	.L56:
+ 572 0186 0120     		movs	r0, #1
+ 573 0188 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 574              	.L57:
+ 575 018c DAF8D801 		ldr	r0, [r10, #472]
+ 576 0190 0AF50F71 		add	r1, r10, #572
+ 577 0194 FFF7FEFF 		bl	_ZN5amiro12MotorControl14setTargetSpeedERKN5types9kinematicE
+ 578 0198 0023     		movs	r3, #0
+ 579 019a 8AF8E331 		strb	r3, [r10, #483]
+ 580 019e C7E7     		b	.L45
+ 581              	.L59:
+ 582              		.align	3
+ 583              	.L58:
+ 584 01a0 00000000 		.word	0
+ 585 01a4 80842E41 		.word	1093567616
+ 586 01a8 00000000 		.word	.LC0
+ 587 01ac D34D6210 		.word	274877907
+ 588 01b0 0000E03F 		.word	1071644672
+ 589 01b4 00408F40 		.word	1083129856
+ 590 01b8 00000000 		.word	_ZN5amiro12MotorControl25actualWheelBaseDistanceSIE
+ 591              		.size	_ZN5amiro11DistControl4mainEv, .-_ZN5amiro11DistControl4mainEv
+ 592 01bc AFF30080 		.section	.text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncre
+ 593              		.align	2
+ 594              		.p2align 4,,15
+ 595              		.thumb
+ 596              		.thumb_func
+ 597              		.type	_GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE, %function
+ 598              	_GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:
+ 599              		@ args = 0, pretend = 0, frame = 0
+ 600              		@ frame_needed = 0, uses_anonymous_args = 0
+ 601              		@ link register save eliminated.
+ 602 0000 024B     		ldr	r3, .L61
+ 603 0002 034A     		ldr	r2, .L61+4
+ 604 0004 1A60     		str	r2, [r3]
+ 605 0006 5A60     		str	r2, [r3, #4]
+ 606 0008 7047     		bx	lr
+ 607              	.L62:
+ 608 000a 00BF     		.align	2
+ 609              	.L61:
+ 610 000c 00000000 		.word	.LANCHOR1
+ 611 0010 A0860100 		.word	100000
+ 612              		.size	_GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE, .-_GLOBAL
+ 613 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 613      AFF30080 
+ 613      AFF30080 
+ 614              		.align	2
+ 615 0000 00000000 		.word	_GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE(target1)
+ 616              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+ 617              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
+ 618              		.align	3
+ARM GAS  /tmp/ccc1QvPH.s 			page 12
+
+
+ 619              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, %object
+ 620              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, 20
+ 621              	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE:
+ 622 0000 00000000 		.word	0
+ 623 0004 00000000 		.word	0
+ 624 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 625 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 626 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 627              		.global	_ZTVN5amiro11DistControlE
+ 628 0014 00000000 		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 629              		.align	2
+ 630              		.set	.LANCHOR1,. + 0
+ 631              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 632              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 633              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 634 0000 00000000 		.space	8
+ 634      00000000 
+ 635              		.section	.rodata._ZTVN5amiro11DistControlE,"a",%progbits
+ 636              		.align	3
+ 637              		.set	.LANCHOR0,. + 0
+ 638              		.type	_ZTVN5amiro11DistControlE, %object
+ 639              		.size	_ZTVN5amiro11DistControlE, 20
+ 640              	_ZTVN5amiro11DistControlE:
+ 641 0000 00000000 		.word	0
+ 642 0004 00000000 		.word	0
+ 643 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 644 000c 00000000 		.word	_ZN5amiro11DistControl4mainEv
+ 645 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 646 0014 00000000 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 647              		.align	2
+ 648              	.LC0:
+ 649 0000 44697374 		.ascii	"DistControl\000"
+ 649      436F6E74 
+ 649      726F6C00 
+ 650              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccc1QvPH.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 DistControl.cpp
+     /tmp/ccc1QvPH.s:16     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/ccc1QvPH.s:22     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/ccc1QvPH.s:45     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/ccc1QvPH.s:51     .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 $t
+     /tmp/ccc1QvPH.s:57     .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 _ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE
+     /tmp/ccc1QvPH.s:107    .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000094 $d
+     /tmp/ccc1QvPH.s:57     .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 _ZN5amiro11DistControlC1EPNS_12MotorControlEPNS_15MotorIncrementsE
+     /tmp/ccc1QvPH.s:119    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000000 $t
+     /tmp/ccc1QvPH.s:125    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000000 _ZN5amiro11DistControl20getCurrentTargetDistEv
+     /tmp/ccc1QvPH.s:139    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000020 $d
+     /tmp/ccc1QvPH.s:143    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000000 $t
+     /tmp/ccc1QvPH.s:149    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000000 _ZN5amiro11DistControl21getCurrentTargetAngleEv
+     /tmp/ccc1QvPH.s:163    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000020 $d
+     /tmp/ccc1QvPH.s:168    .text._ZN5amiro11DistControl17setTargetPositionEllt:00000000 $t
+     /tmp/ccc1QvPH.s:174    .text._ZN5amiro11DistControl17setTargetPositionEllt:00000000 _ZN5amiro11DistControl17setTargetPositionEllt
+     /tmp/ccc1QvPH.s:233    .text._ZN5amiro11DistControl17setTargetPositionEllt:00000088 $d
+     /tmp/ccc1QvPH.s:236    .text._ZN5amiro11DistControl8isActiveEv:00000000 $t
+     /tmp/ccc1QvPH.s:242    .text._ZN5amiro11DistControl8isActiveEv:00000000 _ZN5amiro11DistControl8isActiveEv
+     /tmp/ccc1QvPH.s:250    .text._ZN5amiro11DistControl20deactivateControllerEv:00000000 $t
+     /tmp/ccc1QvPH.s:256    .text._ZN5amiro11DistControl20deactivateControllerEv:00000000 _ZN5amiro11DistControl20deactivateControllerEv
+     /tmp/ccc1QvPH.s:295    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000000 $t
+     /tmp/ccc1QvPH.s:301    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000000 _ZN5amiro11DistControl14calcVelocitiesEv
+     /tmp/ccc1QvPH.s:427    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000130 $d
+     /tmp/ccc1QvPH.s:433    .text.startup._ZN5amiro11DistControl4mainEv:00000000 $t
+     /tmp/ccc1QvPH.s:439    .text.startup._ZN5amiro11DistControl4mainEv:00000000 _ZN5amiro11DistControl4mainEv
+     /tmp/ccc1QvPH.s:584    .text.startup._ZN5amiro11DistControl4mainEv:000001a0 $d
+     /tmp/ccc1QvPH.s:593    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 $t
+     /tmp/ccc1QvPH.s:598    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000000 _GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE
+     /tmp/ccc1QvPH.s:610    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:0000000c $d
+     /tmp/ccc1QvPH.s:614    .init_array:00000000 $d
+     /tmp/ccc1QvPH.s:621    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/ccc1QvPH.s:618    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/ccc1QvPH.s:640    .rodata._ZTVN5amiro11DistControlE:00000000 _ZTVN5amiro11DistControlE
+     /tmp/ccc1QvPH.s:629    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccc1QvPH.s:633    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccc1QvPH.s:636    .rodata._ZTVN5amiro11DistControlE:00000000 $d
+     /tmp/ccc1QvPH.s:647    .rodata.str1.4:00000000 $d
+     /tmp/ccc1QvPH.s:118    .text._ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:000000a8 $t
+     /tmp/ccc1QvPH.s:142    .text._ZN5amiro11DistControl20getCurrentTargetDistEv:00000028 $t
+     /tmp/ccc1QvPH.s:650    .text._ZN5amiro11DistControl21getCurrentTargetAngleEv:00000028 $t
+     /tmp/ccc1QvPH.s:235    .text._ZN5amiro11DistControl17setTargetPositionEllt:0000008c $t
+     /tmp/ccc1QvPH.s:432    .text._ZN5amiro11DistControl14calcVelocitiesEv:00000138 $t
+     /tmp/ccc1QvPH.s:592    .text.startup._ZN5amiro11DistControl4mainEv:000001bc $t
+     /tmp/ccc1QvPH.s:613    .text.startup._GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE:00000014 $t
+
+UNDEFINED SYMBOLS
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+__aeabi_fdiv
+__aeabi_f2iz
+_ZN10chibios_rt10BaseThreadC2Ev
+_ZN5amiro12MotorControl25actualWheelBaseDistanceSIE
+__aeabi_i2d
+__aeabi_dmul
+ARM GAS  /tmp/ccc1QvPH.s 			page 14
+
+
+__aeabi_d2iz
+__aeabi_d2uiz
+dbg_check_lock
+dbg_check_unlock
+_ZN5amiro12MotorControl16updateIncrementsEPNS_15MotorIncrementsERA2_lRA2_f
+__aeabi_ui2f
+__aeabi_f2d
+__aeabi_ddiv
+__aeabi_i2f
+__aeabi_fmul
+__aeabi_ui2d
+__aeabi_dsub
+_ZN10chibios_rt6System7getTimeEv
+_ZN10chibios_rt10BaseThread7setNameEPKc
+chThdSleepUntil
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+_ZN5amiro12MotorControl14updateDistanceERA2_KfRA2_f
+_ZN5amiro12MotorControl14setTargetSpeedERKN5types9kinematicE
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv

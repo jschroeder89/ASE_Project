@@ -1,0 +1,11 @@
+chmboxes.c:72:6:chMBInit	16	static
+chmboxes.c:91:6:chMBReset	8	static
+chmboxes.c:150:7:chMBPostS	16	static
+chmboxes.c:122:7:chMBPost	16	static
+chmboxes.c:181:7:chMBPostI	16	static
+chmboxes.c:243:7:chMBPostAheadS	16	static
+chmboxes.c:215:7:chMBPostAhead	16	static
+chmboxes.c:274:7:chMBPostAheadI	16	static
+chmboxes.c:336:7:chMBFetchS	16	static
+chmboxes.c:308:7:chMBFetch	16	static
+chmboxes.c:367:7:chMBFetchI	16	static

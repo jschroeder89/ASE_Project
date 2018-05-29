@@ -1,0 +1,114 @@
+ARM GAS  /tmp/cceh9TGO.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"exti.cpp"
+  15              		.section	.text._Z13power_down_cbP9EXTDriverm,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_Z13power_down_cbP9EXTDriverm
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_Z13power_down_cbP9EXTDriverm, %function
+  22              	_Z13power_down_cbP9EXTDriverm:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 054B     		ldr	r3, .L3
+  27 0002 9A68     		ldr	r2, [r3, #8]
+  28 0004 D205     		lsls	r2, r2, #23
+  29 0006 5CBF     		itt	pl
+  30 0008 4FF40032 		movpl	r2, #131072
+  31 000c 1A61     		strpl	r2, [r3, #16]
+  32 000e 034B     		ldr	r3, .L3+4
+  33 0010 0522     		movs	r2, #5
+  34 0012 1A60     		str	r2, [r3]
+  35 0014 7047     		bx	lr
+  36              	.L4:
+  37 0016 00BF     		.align	2
+  38              	.L3:
+  39 0018 00100140 		.word	1073811456
+  40 001c 00000000 		.word	.LANCHOR0
+  41              		.size	_Z13power_down_cbP9EXTDriverm, .-_Z13power_down_cbP9EXTDriverm
+  42              		.global	extcfg
+  43              		.global	shutdown_now
+  44              		.section	.data.extcfg,"aw",%progbits
+  45              		.align	2
+  46              		.type	extcfg, %object
+  47              		.size	extcfg, 152
+  48              	extcfg:
+  49 0000 00000000 		.word	0
+  50 0004 00000000 		.word	0
+  51 0008 00000000 		.word	0
+  52 000c 00000000 		.word	0
+  53 0010 00000000 		.word	0
+  54 0014 00000000 		.word	0
+  55 0018 00000000 		.word	0
+  56 001c 00000000 		.word	0
+  57 0020 00000000 		.word	0
+ARM GAS  /tmp/cceh9TGO.s 			page 2
+
+
+  58 0024 00000000 		.word	0
+  59 0028 00000000 		.word	0
+  60 002c 00000000 		.word	0
+  61 0030 00000000 		.word	0
+  62 0034 00000000 		.word	0
+  63 0038 00000000 		.word	0
+  64 003c 00000000 		.word	0
+  65 0040 26000000 		.word	38
+  66 0044 00000000 		.word	_Z13power_down_cbP9EXTDriverm
+  67 0048 00000000 		.word	0
+  68 004c 00000000 		.word	0
+  69 0050 00000000 		.word	0
+  70 0054 00000000 		.word	0
+  71 0058 00000000 		.word	0
+  72 005c 00000000 		.word	0
+  73 0060 00000000 		.word	0
+  74 0064 00000000 		.word	0
+  75 0068 00000000 		.word	0
+  76 006c 00000000 		.word	0
+  77 0070 00000000 		.word	0
+  78 0074 00000000 		.word	0
+  79 0078 00000000 		.word	0
+  80 007c 00000000 		.word	0
+  81 0080 00000000 		.word	0
+  82 0084 00000000 		.word	0
+  83 0088 00000000 		.word	0
+  84 008c 00000000 		.word	0
+  85 0090 00000000 		.word	0
+  86 0094 00000000 		.word	0
+  87              		.section	.bss.shutdown_now,"aw",%nobits
+  88              		.align	2
+  89              		.set	.LANCHOR0,. + 0
+  90              		.type	shutdown_now, %object
+  91              		.size	shutdown_now, 4
+  92              	shutdown_now:
+  93 0000 00000000 		.space	4
+  94              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cceh9TGO.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 exti.cpp
+     /tmp/cceh9TGO.s:16     .text._Z13power_down_cbP9EXTDriverm:00000000 $t
+     /tmp/cceh9TGO.s:22     .text._Z13power_down_cbP9EXTDriverm:00000000 _Z13power_down_cbP9EXTDriverm
+     /tmp/cceh9TGO.s:39     .text._Z13power_down_cbP9EXTDriverm:00000018 $d
+     /tmp/cceh9TGO.s:48     .data.extcfg:00000000 extcfg
+     /tmp/cceh9TGO.s:92     .bss.shutdown_now:00000000 shutdown_now
+     /tmp/cceh9TGO.s:45     .data.extcfg:00000000 $d
+     /tmp/cceh9TGO.s:88     .bss.shutdown_now:00000000 $d
+
+NO UNDEFINED SYMBOLS

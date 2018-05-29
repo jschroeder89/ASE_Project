@@ -1,0 +1,656 @@
+ARM GAS  /tmp/ccAXAJau.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"can.c"
+  17              		.section	.text.canInit,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	canInit
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	canInit, %function
+  24              	canInit:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 FFF7FEBF 		b	can_lld_init
+  29              		.size	canInit, .-canInit
+  30 0004 AFF30080 		.section	.text.canObjectInit,"ax",%progbits
+  30      AFF30080 
+  30      AFF30080 
+  31              		.align	2
+  32              		.p2align 4,,15
+  33              		.global	canObjectInit
+  34              		.thumb
+  35              		.thumb_func
+  36              		.type	canObjectInit, %function
+  37              	canObjectInit:
+  38              		@ args = 0, pretend = 0, frame = 0
+  39              		@ frame_needed = 0, uses_anonymous_args = 0
+  40 0000 38B5     		push	{r3, r4, r5, lr}
+  41 0002 0123     		movs	r3, #1
+  42 0004 0025     		movs	r5, #0
+  43 0006 0446     		mov	r4, r0
+  44 0008 0370     		strb	r3, [r0]
+  45 000a 4560     		str	r5, [r0, #4]
+  46 000c 2946     		mov	r1, r5
+  47 000e 0830     		adds	r0, r0, #8
+  48 0010 FFF7FEFF 		bl	chSemInit
+  49 0014 2946     		mov	r1, r5
+  50 0016 04F11400 		add	r0, r4, #20
+  51 001a FFF7FEFF 		bl	chSemInit
+  52 001e 04F12005 		add	r5, r4, #32
+  53 0022 04F12400 		add	r0, r4, #36
+  54 0026 04F12801 		add	r1, r4, #40
+  55 002a 04F12C02 		add	r2, r4, #44
+ARM GAS  /tmp/ccAXAJau.s 			page 2
+
+
+  56 002e 04F13003 		add	r3, r4, #48
+  57 0032 2562     		str	r5, [r4, #32]
+  58 0034 6062     		str	r0, [r4, #36]
+  59 0036 A162     		str	r1, [r4, #40]
+  60 0038 E262     		str	r2, [r4, #44]
+  61 003a 2363     		str	r3, [r4, #48]
+  62 003c 38BD     		pop	{r3, r4, r5, pc}
+  63              		.size	canObjectInit, .-canObjectInit
+  64 003e 00BF     		.section	.text.canStart,"ax",%progbits
+  65              		.align	2
+  66              		.p2align 4,,15
+  67              		.global	canStart
+  68              		.thumb
+  69              		.thumb_func
+  70              		.type	canStart, %function
+  71              	canStart:
+  72              		@ args = 0, pretend = 0, frame = 0
+  73              		@ frame_needed = 0, uses_anonymous_args = 0
+  74 0000 38B5     		push	{r3, r4, r5, lr}
+  75 0002 0446     		mov	r4, r0
+  76 0004 0D46     		mov	r5, r1
+  77 0006 48B3     		cbz	r0, .L11
+  78              	.L4:
+  79 0008 2023     		movs	r3, #32
+  80              	@ 111 "../../../ChibiOS/os/hal/src/can.c" 1
+  81 000a 83F31188 		msr     BASEPRI, r3
+  82              	@ 0 "" 2
+  83              		.thumb
+  84 000e FFF7FEFF 		bl	dbg_check_lock
+  85 0012 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+  86 0014 5A1E     		subs	r2, r3, #1
+  87 0016 022A     		cmp	r2, #2
+  88 0018 05D9     		bls	.L9
+  89 001a 0EE0     		b	.L14
+  90              	.L7:
+  91 001c 0620     		movs	r0, #6
+  92 001e 0121     		movs	r1, #1
+  93 0020 FFF7FEFF 		bl	chSchGoSleepTimeoutS
+  94 0024 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+  95              	.L9:
+  96 0026 022B     		cmp	r3, #2
+  97 0028 F8D0     		beq	.L7
+  98 002a 012B     		cmp	r3, #1
+  99 002c 0AD0     		beq	.L13
+ 100 002e FFF7FEFF 		bl	dbg_check_unlock
+ 101 0032 0023     		movs	r3, #0
+ 102              	@ 123 "../../../ChibiOS/os/hal/src/can.c" 1
+ 103 0034 83F31188 		msr     BASEPRI, r3
+ 104              	@ 0 "" 2
+ 105              		.thumb
+ 106 0038 38BD     		pop	{r3, r4, r5, pc}
+ 107              	.L14:
+ 108 003a 0A48     		ldr	r0, .L15
+ 109 003c FFF7FEFF 		bl	chDbgPanic
+ 110 0040 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 111 0042 F0E7     		b	.L9
+ 112              	.L13:
+ARM GAS  /tmp/ccAXAJau.s 			page 3
+
+
+ 113 0044 2046     		mov	r0, r4
+ 114 0046 6560     		str	r5, [r4, #4]
+ 115 0048 FFF7FEFF 		bl	can_lld_start
+ 116 004c 0323     		movs	r3, #3
+ 117 004e 2370     		strb	r3, [r4]
+ 118 0050 FFF7FEFF 		bl	dbg_check_unlock
+ 119 0054 0023     		movs	r3, #0
+ 120              	@ 123 "../../../ChibiOS/os/hal/src/can.c" 1
+ 121 0056 83F31188 		msr     BASEPRI, r3
+ 122              	@ 0 "" 2
+ 123              		.thumb
+ 124 005a 38BD     		pop	{r3, r4, r5, pc}
+ 125              	.L11:
+ 126 005c 0248     		ldr	r0, .L15+4
+ 127 005e FFF7FEFF 		bl	chDbgPanic
+ 128 0062 D1E7     		b	.L4
+ 129              	.L16:
+ 130              		.align	2
+ 131              	.L15:
+ 132 0064 10000000 		.word	.LC1
+ 133 0068 00000000 		.word	.LC0
+ 134              		.size	canStart, .-canStart
+ 135 006c AFF30080 		.section	.text.canStop,"ax",%progbits
+ 136              		.align	2
+ 137              		.p2align 4,,15
+ 138              		.global	canStop
+ 139              		.thumb
+ 140              		.thumb_func
+ 141              		.type	canStop, %function
+ 142              	canStop:
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145 0000 10B5     		push	{r4, lr}
+ 146 0002 0446     		mov	r4, r0
+ 147 0004 18B3     		cbz	r0, .L23
+ 148              	.L18:
+ 149 0006 2023     		movs	r3, #32
+ 150              	@ 137 "../../../ChibiOS/os/hal/src/can.c" 1
+ 151 0008 83F31188 		msr     BASEPRI, r3
+ 152              	@ 0 "" 2
+ 153              		.thumb
+ 154 000c FFF7FEFF 		bl	dbg_check_lock
+ 155 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 156 0012 03F0FD03 		and	r3, r3, #253
+ 157 0016 012B     		cmp	r3, #1
+ 158 0018 02D0     		beq	.L19
+ 159 001a 0F48     		ldr	r0, .L24
+ 160 001c FFF7FEFF 		bl	chDbgPanic
+ 161              	.L19:
+ 162 0020 2046     		mov	r0, r4
+ 163 0022 FFF7FEFF 		bl	can_lld_stop
+ 164 0026 2046     		mov	r0, r4
+ 165 0028 0123     		movs	r3, #1
+ 166 002a 00F8143B 		strb	r3, [r0], #20
+ 167 002e 0021     		movs	r1, #0
+ 168 0030 FFF7FEFF 		bl	chSemResetI
+ 169 0034 04F10800 		add	r0, r4, #8
+ARM GAS  /tmp/ccAXAJau.s 			page 4
+
+
+ 170 0038 0021     		movs	r1, #0
+ 171 003a FFF7FEFF 		bl	chSemResetI
+ 172 003e FFF7FEFF 		bl	chSchRescheduleS
+ 173 0042 FFF7FEFF 		bl	dbg_check_unlock
+ 174 0046 0023     		movs	r3, #0
+ 175              	@ 145 "../../../ChibiOS/os/hal/src/can.c" 1
+ 176 0048 83F31188 		msr     BASEPRI, r3
+ 177              	@ 0 "" 2
+ 178              		.thumb
+ 179 004c 10BD     		pop	{r4, pc}
+ 180              	.L23:
+ 181 004e 0348     		ldr	r0, .L24+4
+ 182 0050 FFF7FEFF 		bl	chDbgPanic
+ 183 0054 D7E7     		b	.L18
+ 184              	.L25:
+ 185 0056 00BF     		.align	2
+ 186              	.L24:
+ 187 0058 2C000000 		.word	.LC3
+ 188 005c 20000000 		.word	.LC2
+ 189              		.size	canStop, .-canStop
+ 190              		.section	.text.canTransmit,"ax",%progbits
+ 191              		.align	2
+ 192              		.p2align 4,,15
+ 193              		.global	canTransmit
+ 194              		.thumb
+ 195              		.thumb_func
+ 196              		.type	canTransmit, %function
+ 197              	canTransmit:
+ 198              		@ args = 0, pretend = 0, frame = 8
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 201 0004 0446     		mov	r4, r0
+ 202 0006 83B0     		sub	sp, sp, #12
+ 203 0008 0E46     		mov	r6, r1
+ 204 000a 9146     		mov	r9, r2
+ 205 000c 9846     		mov	r8, r3
+ 206 000e 50B3     		cbz	r0, .L27
+ 207 0010 4AB3     		cbz	r2, .L27
+ 208 0012 0329     		cmp	r1, #3
+ 209 0014 27D8     		bhi	.L27
+ 210              	.L28:
+ 211 0016 2023     		movs	r3, #32
+ 212              	@ 177 "../../../ChibiOS/os/hal/src/can.c" 1
+ 213 0018 83F31188 		msr     BASEPRI, r3
+ 214              	@ 0 "" 2
+ 215              		.thumb
+ 216 001c FFF7FEFF 		bl	dbg_check_lock
+ 217 0020 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
+ 218 0022 EB1E     		subs	r3, r5, #3
+ 219 0024 012B     		cmp	r3, #1
+ 220 0026 03D9     		bls	.L29
+ 221 0028 1848     		ldr	r0, .L48
+ 222 002a FFF7FEFF 		bl	chDbgPanic
+ 223 002e 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
+ 224              	.L29:
+ 225 0030 04F10807 		add	r7, r4, #8
+ 226 0034 00E0     		b	.L31
+ARM GAS  /tmp/ccAXAJau.s 			page 5
+
+
+ 227              	.L47:
+ 228 0036 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
+ 229              	.L31:
+ 230 0038 042D     		cmp	r5, #4
+ 231 003a 3146     		mov	r1, r6
+ 232 003c 2046     		mov	r0, r4
+ 233 003e 02D0     		beq	.L33
+ 234 0040 FFF7FEFF 		bl	can_lld_is_tx_empty
+ 235 0044 98B9     		cbnz	r0, .L46
+ 236              	.L33:
+ 237 0046 3846     		mov	r0, r7
+ 238 0048 4146     		mov	r1, r8
+ 239 004a FFF7FEFF 		bl	chSemWaitTimeoutS
+ 240 004e 0028     		cmp	r0, #0
+ 241 0050 F1D0     		beq	.L47
+ 242 0052 0190     		str	r0, [sp, #4]
+ 243 0054 FFF7FEFF 		bl	dbg_check_unlock
+ 244 0058 0023     		movs	r3, #0
+ 245              	@ 183 "../../../ChibiOS/os/hal/src/can.c" 1
+ 246 005a 83F31188 		msr     BASEPRI, r3
+ 247              	@ 0 "" 2
+ 248              		.thumb
+ 249 005e 0198     		ldr	r0, [sp, #4]
+ 250 0060 03B0     		add	sp, sp, #12
+ 251              		@ sp needed
+ 252 0062 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 253              	.L27:
+ 254 0066 0A48     		ldr	r0, .L48+4
+ 255 0068 FFF7FEFF 		bl	chDbgPanic
+ 256 006c D3E7     		b	.L28
+ 257              	.L46:
+ 258 006e 2046     		mov	r0, r4
+ 259 0070 3146     		mov	r1, r6
+ 260 0072 4A46     		mov	r2, r9
+ 261 0074 FFF7FEFF 		bl	can_lld_transmit
+ 262 0078 FFF7FEFF 		bl	dbg_check_unlock
+ 263 007c 0023     		movs	r3, #0
+ 264              	@ 188 "../../../ChibiOS/os/hal/src/can.c" 1
+ 265 007e 83F31188 		msr     BASEPRI, r3
+ 266              	@ 0 "" 2
+ 267              		.thumb
+ 268 0082 0020     		movs	r0, #0
+ 269 0084 03B0     		add	sp, sp, #12
+ 270              		@ sp needed
+ 271 0086 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 272              	.L49:
+ 273 008a 00BF     		.align	2
+ 274              	.L48:
+ 275 008c 4C000000 		.word	.LC5
+ 276 0090 3C000000 		.word	.LC4
+ 277              		.size	canTransmit, .-canTransmit
+ 278 0094 AFF30080 		.section	.text.canReceive,"ax",%progbits
+ 278      AFF30080 
+ 278      AFF30080 
+ 279              		.align	2
+ 280              		.p2align 4,,15
+ 281              		.global	canReceive
+ARM GAS  /tmp/ccAXAJau.s 			page 6
+
+
+ 282              		.thumb
+ 283              		.thumb_func
+ 284              		.type	canReceive, %function
+ 285              	canReceive:
+ 286              		@ args = 0, pretend = 0, frame = 8
+ 287              		@ frame_needed = 0, uses_anonymous_args = 0
+ 288 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 289 0004 0446     		mov	r4, r0
+ 290 0006 83B0     		sub	sp, sp, #12
+ 291 0008 0E46     		mov	r6, r1
+ 292 000a 9146     		mov	r9, r2
+ 293 000c 9846     		mov	r8, r3
+ 294 000e 10B1     		cbz	r0, .L51
+ 295 0010 0AB1     		cbz	r2, .L51
+ 296 0012 0129     		cmp	r1, #1
+ 297 0014 02D9     		bls	.L52
+ 298              	.L51:
+ 299 0016 1C48     		ldr	r0, .L72
+ 300 0018 FFF7FEFF 		bl	chDbgPanic
+ 301              	.L52:
+ 302 001c 2023     		movs	r3, #32
+ 303              	@ 222 "../../../ChibiOS/os/hal/src/can.c" 1
+ 304 001e 83F31188 		msr     BASEPRI, r3
+ 305              	@ 0 "" 2
+ 306              		.thumb
+ 307 0022 FFF7FEFF 		bl	dbg_check_lock
+ 308 0026 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
+ 309 0028 EB1E     		subs	r3, r5, #3
+ 310 002a 012B     		cmp	r3, #1
+ 311 002c 03D9     		bls	.L53
+ 312 002e 1748     		ldr	r0, .L72+4
+ 313 0030 FFF7FEFF 		bl	chDbgPanic
+ 314 0034 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
+ 315              	.L53:
+ 316 0036 04F11407 		add	r7, r4, #20
+ 317 003a 00E0     		b	.L55
+ 318              	.L71:
+ 319 003c 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
+ 320              	.L55:
+ 321 003e 042D     		cmp	r5, #4
+ 322 0040 3146     		mov	r1, r6
+ 323 0042 2046     		mov	r0, r4
+ 324 0044 02D0     		beq	.L57
+ 325 0046 FFF7FEFF 		bl	can_lld_is_rx_nonempty
+ 326 004a 78B9     		cbnz	r0, .L70
+ 327              	.L57:
+ 328 004c 3846     		mov	r0, r7
+ 329 004e 4146     		mov	r1, r8
+ 330 0050 FFF7FEFF 		bl	chSemWaitTimeoutS
+ 331 0054 0028     		cmp	r0, #0
+ 332 0056 F1D0     		beq	.L71
+ 333 0058 0190     		str	r0, [sp, #4]
+ 334 005a FFF7FEFF 		bl	dbg_check_unlock
+ 335 005e 0023     		movs	r3, #0
+ 336              	@ 228 "../../../ChibiOS/os/hal/src/can.c" 1
+ 337 0060 83F31188 		msr     BASEPRI, r3
+ 338              	@ 0 "" 2
+ARM GAS  /tmp/ccAXAJau.s 			page 7
+
+
+ 339              		.thumb
+ 340 0064 0198     		ldr	r0, [sp, #4]
+ 341 0066 03B0     		add	sp, sp, #12
+ 342              		@ sp needed
+ 343 0068 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 344              	.L70:
+ 345 006c 2046     		mov	r0, r4
+ 346 006e 3146     		mov	r1, r6
+ 347 0070 4A46     		mov	r2, r9
+ 348 0072 FFF7FEFF 		bl	can_lld_receive
+ 349 0076 FFF7FEFF 		bl	dbg_check_unlock
+ 350 007a 0023     		movs	r3, #0
+ 351              	@ 233 "../../../ChibiOS/os/hal/src/can.c" 1
+ 352 007c 83F31188 		msr     BASEPRI, r3
+ 353              	@ 0 "" 2
+ 354              		.thumb
+ 355 0080 0020     		movs	r0, #0
+ 356 0082 03B0     		add	sp, sp, #12
+ 357              		@ sp needed
+ 358 0084 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 359              	.L73:
+ 360              		.align	2
+ 361              	.L72:
+ 362 0088 60000000 		.word	.LC6
+ 363 008c 70000000 		.word	.LC7
+ 364              		.size	canReceive, .-canReceive
+ 365              		.section	.text.canSleep,"ax",%progbits
+ 366              		.align	2
+ 367              		.p2align 4,,15
+ 368              		.global	canSleep
+ 369              		.thumb
+ 370              		.thumb_func
+ 371              		.type	canSleep, %function
+ 372              	canSleep:
+ 373              		@ args = 0, pretend = 0, frame = 0
+ 374              		@ frame_needed = 0, uses_anonymous_args = 0
+ 375 0000 10B5     		push	{r4, lr}
+ 376 0002 0446     		mov	r4, r0
+ 377 0004 30B3     		cbz	r0, .L78
+ 378              	.L75:
+ 379 0006 2023     		movs	r3, #32
+ 380              	@ 254 "../../../ChibiOS/os/hal/src/can.c" 1
+ 381 0008 83F31188 		msr     BASEPRI, r3
+ 382              	@ 0 "" 2
+ 383              		.thumb
+ 384 000c FFF7FEFF 		bl	dbg_check_lock
+ 385 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 386 0012 DA1E     		subs	r2, r3, #3
+ 387 0014 012A     		cmp	r2, #1
+ 388 0016 03D9     		bls	.L76
+ 389 0018 1048     		ldr	r0, .L80
+ 390 001a FFF7FEFF 		bl	chDbgPanic
+ 391 001e 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 392              	.L76:
+ 393 0020 032B     		cmp	r3, #3
+ 394 0022 05D0     		beq	.L79
+ 395 0024 FFF7FEFF 		bl	dbg_check_unlock
+ARM GAS  /tmp/ccAXAJau.s 			page 8
+
+
+ 396 0028 0023     		movs	r3, #0
+ 397              	@ 263 "../../../ChibiOS/os/hal/src/can.c" 1
+ 398 002a 83F31188 		msr     BASEPRI, r3
+ 399              	@ 0 "" 2
+ 400              		.thumb
+ 401 002e 10BD     		pop	{r4, pc}
+ 402              	.L79:
+ 403 0030 2046     		mov	r0, r4
+ 404 0032 FFF7FEFF 		bl	can_lld_sleep
+ 405 0036 2046     		mov	r0, r4
+ 406 0038 0423     		movs	r3, #4
+ 407 003a 00F82C3B 		strb	r3, [r0], #44
+ 408 003e 0021     		movs	r1, #0
+ 409 0040 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 410 0044 FFF7FEFF 		bl	chSchRescheduleS
+ 411 0048 FFF7FEFF 		bl	dbg_check_unlock
+ 412 004c 0023     		movs	r3, #0
+ 413              	@ 263 "../../../ChibiOS/os/hal/src/can.c" 1
+ 414 004e 83F31188 		msr     BASEPRI, r3
+ 415              	@ 0 "" 2
+ 416              		.thumb
+ 417 0052 10BD     		pop	{r4, pc}
+ 418              	.L78:
+ 419 0054 0248     		ldr	r0, .L80+4
+ 420 0056 FFF7FEFF 		bl	chDbgPanic
+ 421 005a D4E7     		b	.L75
+ 422              	.L81:
+ 423              		.align	2
+ 424              	.L80:
+ 425 005c 94000000 		.word	.LC9
+ 426 0060 84000000 		.word	.LC8
+ 427              		.size	canSleep, .-canSleep
+ 428 0064 AFF30080 		.section	.text.canWakeup,"ax",%progbits
+ 428      AFF30080 
+ 428      AFF30080 
+ 429              		.align	2
+ 430              		.p2align 4,,15
+ 431              		.global	canWakeup
+ 432              		.thumb
+ 433              		.thumb_func
+ 434              		.type	canWakeup, %function
+ 435              	canWakeup:
+ 436              		@ args = 0, pretend = 0, frame = 0
+ 437              		@ frame_needed = 0, uses_anonymous_args = 0
+ 438 0000 10B5     		push	{r4, lr}
+ 439 0002 0446     		mov	r4, r0
+ 440 0004 30B3     		cbz	r0, .L86
+ 441              	.L83:
+ 442 0006 2023     		movs	r3, #32
+ 443              	@ 277 "../../../ChibiOS/os/hal/src/can.c" 1
+ 444 0008 83F31188 		msr     BASEPRI, r3
+ 445              	@ 0 "" 2
+ 446              		.thumb
+ 447 000c FFF7FEFF 		bl	dbg_check_lock
+ 448 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 449 0012 DA1E     		subs	r2, r3, #3
+ 450 0014 012A     		cmp	r2, #1
+ARM GAS  /tmp/ccAXAJau.s 			page 9
+
+
+ 451 0016 03D9     		bls	.L84
+ 452 0018 1048     		ldr	r0, .L88
+ 453 001a FFF7FEFF 		bl	chDbgPanic
+ 454 001e 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 455              	.L84:
+ 456 0020 042B     		cmp	r3, #4
+ 457 0022 05D0     		beq	.L87
+ 458 0024 FFF7FEFF 		bl	dbg_check_unlock
+ 459 0028 0023     		movs	r3, #0
+ 460              	@ 286 "../../../ChibiOS/os/hal/src/can.c" 1
+ 461 002a 83F31188 		msr     BASEPRI, r3
+ 462              	@ 0 "" 2
+ 463              		.thumb
+ 464 002e 10BD     		pop	{r4, pc}
+ 465              	.L87:
+ 466 0030 2046     		mov	r0, r4
+ 467 0032 FFF7FEFF 		bl	can_lld_wakeup
+ 468 0036 2046     		mov	r0, r4
+ 469 0038 0323     		movs	r3, #3
+ 470 003a 00F8303B 		strb	r3, [r0], #48
+ 471 003e 0021     		movs	r1, #0
+ 472 0040 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 473 0044 FFF7FEFF 		bl	chSchRescheduleS
+ 474 0048 FFF7FEFF 		bl	dbg_check_unlock
+ 475 004c 0023     		movs	r3, #0
+ 476              	@ 286 "../../../ChibiOS/os/hal/src/can.c" 1
+ 477 004e 83F31188 		msr     BASEPRI, r3
+ 478              	@ 0 "" 2
+ 479              		.thumb
+ 480 0052 10BD     		pop	{r4, pc}
+ 481              	.L86:
+ 482 0054 0248     		ldr	r0, .L88+4
+ 483 0056 FFF7FEFF 		bl	chDbgPanic
+ 484 005a D4E7     		b	.L83
+ 485              	.L89:
+ 486              		.align	2
+ 487              	.L88:
+ 488 005c B4000000 		.word	.LC11
+ 489 0060 A4000000 		.word	.LC10
+ 490              		.size	canWakeup, .-canWakeup
+ 491 0064 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 491      AFF30080 
+ 491      AFF30080 
+ 492              		.align	2
+ 493              	.LC0:
+ 494 0000 2263616E 		.ascii	"\"canStart\"()\000"
+ 494      53746172 
+ 494      74222829 
+ 494      00
+ 495 000d 000000   		.space	3
+ 496              	.LC1:
+ 497 0010 63616E53 		.ascii	"canStart(), #1\000"
+ 497      74617274 
+ 497      28292C20 
+ 497      233100
+ 498 001f 00       		.space	1
+ 499              	.LC2:
+ARM GAS  /tmp/ccAXAJau.s 			page 10
+
+
+ 500 0020 2263616E 		.ascii	"\"canStop\"()\000"
+ 500      53746F70 
+ 500      22282900 
+ 501              	.LC3:
+ 502 002c 63616E53 		.ascii	"canStop(), #1\000"
+ 502      746F7028 
+ 502      292C2023 
+ 502      3100
+ 503 003a 0000     		.space	2
+ 504              	.LC4:
+ 505 003c 2263616E 		.ascii	"\"canTransmit\"()\000"
+ 505      5472616E 
+ 505      736D6974 
+ 505      22282900 
+ 506              	.LC5:
+ 507 004c 63616E54 		.ascii	"canTransmit(), #1\000"
+ 507      72616E73 
+ 507      6D697428 
+ 507      292C2023 
+ 507      3100
+ 508 005e 0000     		.space	2
+ 509              	.LC6:
+ 510 0060 2263616E 		.ascii	"\"canReceive\"()\000"
+ 510      52656365 
+ 510      69766522 
+ 510      282900
+ 511 006f 00       		.space	1
+ 512              	.LC7:
+ 513 0070 63616E52 		.ascii	"canReceive(), #1\000"
+ 513      65636569 
+ 513      76652829 
+ 513      2C202331 
+ 513      00
+ 514 0081 000000   		.space	3
+ 515              	.LC8:
+ 516 0084 2263616E 		.ascii	"\"canSleep\"()\000"
+ 516      536C6565 
+ 516      70222829 
+ 516      00
+ 517 0091 000000   		.space	3
+ 518              	.LC9:
+ 519 0094 63616E53 		.ascii	"canSleep(), #1\000"
+ 519      6C656570 
+ 519      28292C20 
+ 519      233100
+ 520 00a3 00       		.space	1
+ 521              	.LC10:
+ 522 00a4 2263616E 		.ascii	"\"canWakeup\"()\000"
+ 522      57616B65 
+ 522      75702228 
+ 522      2900
+ 523 00b2 0000     		.space	2
+ 524              	.LC11:
+ 525 00b4 63616E57 		.ascii	"canWakeup(), #1\000"
+ 525      616B6575 
+ 525      7028292C 
+ 525      20233100 
+ARM GAS  /tmp/ccAXAJau.s 			page 11
+
+
+ 526              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccAXAJau.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 can.c
+     /tmp/ccAXAJau.s:18     .text.canInit:00000000 $t
+     /tmp/ccAXAJau.s:24     .text.canInit:00000000 canInit
+     /tmp/ccAXAJau.s:31     .text.canObjectInit:00000000 $t
+     /tmp/ccAXAJau.s:37     .text.canObjectInit:00000000 canObjectInit
+     /tmp/ccAXAJau.s:65     .text.canStart:00000000 $t
+     /tmp/ccAXAJau.s:71     .text.canStart:00000000 canStart
+     /tmp/ccAXAJau.s:132    .text.canStart:00000064 $d
+     /tmp/ccAXAJau.s:136    .text.canStop:00000000 $t
+     /tmp/ccAXAJau.s:142    .text.canStop:00000000 canStop
+     /tmp/ccAXAJau.s:187    .text.canStop:00000058 $d
+     /tmp/ccAXAJau.s:191    .text.canTransmit:00000000 $t
+     /tmp/ccAXAJau.s:197    .text.canTransmit:00000000 canTransmit
+     /tmp/ccAXAJau.s:275    .text.canTransmit:0000008c $d
+     /tmp/ccAXAJau.s:279    .text.canReceive:00000000 $t
+     /tmp/ccAXAJau.s:285    .text.canReceive:00000000 canReceive
+     /tmp/ccAXAJau.s:362    .text.canReceive:00000088 $d
+     /tmp/ccAXAJau.s:366    .text.canSleep:00000000 $t
+     /tmp/ccAXAJau.s:372    .text.canSleep:00000000 canSleep
+     /tmp/ccAXAJau.s:425    .text.canSleep:0000005c $d
+     /tmp/ccAXAJau.s:429    .text.canWakeup:00000000 $t
+     /tmp/ccAXAJau.s:435    .text.canWakeup:00000000 canWakeup
+     /tmp/ccAXAJau.s:488    .text.canWakeup:0000005c $d
+     /tmp/ccAXAJau.s:492    .rodata.str1.4:00000000 $d
+     /tmp/ccAXAJau.s:135    .text.canStart:0000006c $t
+     /tmp/ccAXAJau.s:278    .text.canTransmit:00000094 $t
+     /tmp/ccAXAJau.s:428    .text.canSleep:00000064 $t
+     /tmp/ccAXAJau.s:491    .text.canWakeup:00000064 $t
+
+UNDEFINED SYMBOLS
+can_lld_init
+chSemInit
+dbg_check_lock
+chSchGoSleepTimeoutS
+dbg_check_unlock
+chDbgPanic
+can_lld_start
+can_lld_stop
+chSemResetI
+chSchRescheduleS
+can_lld_is_tx_empty
+chSemWaitTimeoutS
+can_lld_transmit
+can_lld_is_rx_nonempty
+can_lld_receive
+can_lld_sleep
+chEvtBroadcastFlagsI
+can_lld_wakeup

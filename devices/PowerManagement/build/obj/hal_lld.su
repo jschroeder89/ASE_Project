@@ -1,0 +1,2 @@
+hal_lld.c:111:6:hal_lld_init	20	static
+hal_lld.c:154:6:stm32_clock_init	0	static

@@ -1,0 +1,830 @@
+ARM GAS  /tmp/cc10FDmJ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"ControllerAreaNetworkRx.cpp"
+  15              		.section	.text._ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame, %function
+  22              	_ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 0020     		movs	r0, #0
+  27 0002 7047     		bx	lr
+  28              		.size	_ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame, .-_ZN5amiro23ControllerAre
+  29 0004 AFF30080 		.section	.text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm,"axG",%progbits,_ZN10chibios_rt16
+  29      AFF30080 
+  29      AFF30080 
+  30              		.align	2
+  31              		.p2align 4,,15
+  32              		.weak	_ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
+  33              		.thumb
+  34              		.thumb_func
+  35              		.type	_ZN10chibios_rt16BaseStaticThreadILi128EE5startEm, %function
+  36              	_ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:
+  37              		@ args = 0, pretend = 0, frame = 0
+  38              		@ frame_needed = 0, uses_anonymous_args = 0
+  39 0000 30B5     		push	{r4, r5, lr}
+  40 0002 0D46     		mov	r5, r1
+  41 0004 83B0     		sub	sp, sp, #12
+  42 0006 0446     		mov	r4, r0
+  43 0008 0091     		str	r1, [sp]
+  44 000a 05F10800 		add	r0, r5, #8
+  45 000e 4FF4A871 		mov	r1, #336
+  46 0012 054B     		ldr	r3, .L3
+  47 0014 FFF7FEFF 		bl	chThdCreateStatic
+  48 0018 044A     		ldr	r2, .L3+4
+  49 001a 0346     		mov	r3, r0
+  50 001c 6860     		str	r0, [r5, #4]
+  51 001e 2046     		mov	r0, r4
+  52 0020 84E80C00 		stmia	r4, {r2, r3}
+  53 0024 03B0     		add	sp, sp, #12
+  54              		@ sp needed
+  55 0026 30BD     		pop	{r4, r5, pc}
+ARM GAS  /tmp/cc10FDmJ.s 			page 2
+
+
+  56              	.L4:
+  57              		.align	2
+  58              	.L3:
+  59 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+  60 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+  61              		.size	_ZN10chibios_rt16BaseStaticThreadILi128EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi128
+  62              		.section	.text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh,"ax",%progbits
+  63              		.align	2
+  64              		.p2align 4,,15
+  65              		.global	_ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+  66              		.thumb
+  67              		.thumb_func
+  68              		.type	_ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh, %function
+  69              	_ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 0, uses_anonymous_args = 0
+  72 0000 70B5     		push	{r4, r5, r6, lr}
+  73 0002 0446     		mov	r4, r0
+  74 0004 0D46     		mov	r5, r1
+  75 0006 1646     		mov	r6, r2
+  76 0008 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+  77 000c 0649     		ldr	r1, .L6
+  78 000e 074B     		ldr	r3, .L6+4
+  79 0010 6422     		movs	r2, #100
+  80 0012 C4F85861 		str	r6, [r4, #344]
+  81 0016 C4F8C451 		str	r5, [r4, #452]
+  82 001a 2160     		str	r1, [r4]
+  83 001c C4F8C821 		str	r2, [r4, #456]
+  84 0020 C4F8CC31 		str	r3, [r4, #460]
+  85 0024 2046     		mov	r0, r4
+  86 0026 70BD     		pop	{r4, r5, r6, pc}
+  87              	.L7:
+  88              		.align	2
+  89              	.L6:
+  90 0028 08000000 		.word	.LANCHOR0+8
+  91 002c 01002D01 		.word	19726337
+  92              		.size	_ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh, .-_ZN5amiro23ControllerAreaNetworkRxC2EP9
+  93              		.global	_ZN5amiro23ControllerAreaNetworkRxC1EP9CANDriverh
+  94              		.thumb_set _ZN5amiro23ControllerAreaNetworkRxC1EP9CANDriverh,_ZN5amiro23ControllerAreaNetworkRxC2E
+  95              		.section	.text._ZN5amiro23ControllerAreaNetworkRxD2Ev,"ax",%progbits
+  96              		.align	2
+  97              		.p2align 4,,15
+  98              		.global	_ZN5amiro23ControllerAreaNetworkRxD2Ev
+  99              		.thumb
+ 100              		.thumb_func
+ 101              		.type	_ZN5amiro23ControllerAreaNetworkRxD2Ev, %function
+ 102              	_ZN5amiro23ControllerAreaNetworkRxD2Ev:
+ 103              		@ args = 0, pretend = 0, frame = 0
+ 104              		@ frame_needed = 0, uses_anonymous_args = 0
+ 105              		@ link register save eliminated.
+ 106 0000 014B     		ldr	r3, .L9
+ 107 0002 0360     		str	r3, [r0]
+ 108 0004 7047     		bx	lr
+ 109              	.L10:
+ 110 0006 00BF     		.align	2
+ 111              	.L9:
+ 112 0008 08000000 		.word	.LANCHOR0+8
+ARM GAS  /tmp/cc10FDmJ.s 			page 3
+
+
+ 113              		.size	_ZN5amiro23ControllerAreaNetworkRxD2Ev, .-_ZN5amiro23ControllerAreaNetworkRxD2Ev
+ 114              		.global	_ZN5amiro23ControllerAreaNetworkRxD1Ev
+ 115              		.thumb_set _ZN5amiro23ControllerAreaNetworkRxD1Ev,_ZN5amiro23ControllerAreaNetworkRxD2Ev
+ 116 000c AFF30080 		.section	.text._ZN5amiro23ControllerAreaNetworkRxD0Ev,"ax",%progbits
+ 117              		.align	2
+ 118              		.p2align 4,,15
+ 119              		.global	_ZN5amiro23ControllerAreaNetworkRxD0Ev
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.type	_ZN5amiro23ControllerAreaNetworkRxD0Ev, %function
+ 123              	_ZN5amiro23ControllerAreaNetworkRxD0Ev:
+ 124              		@ args = 0, pretend = 0, frame = 0
+ 125              		@ frame_needed = 0, uses_anonymous_args = 0
+ 126 0000 10B5     		push	{r4, lr}
+ 127 0002 034B     		ldr	r3, .L12
+ 128 0004 0446     		mov	r4, r0
+ 129 0006 0360     		str	r3, [r0]
+ 130 0008 FFF7FEFF 		bl	_ZdlPv
+ 131 000c 2046     		mov	r0, r4
+ 132 000e 10BD     		pop	{r4, pc}
+ 133              	.L13:
+ 134              		.align	2
+ 135              	.L12:
+ 136 0010 08000000 		.word	.LANCHOR0+8
+ 137              		.size	_ZN5amiro23ControllerAreaNetworkRxD0Ev, .-_ZN5amiro23ControllerAreaNetworkRxD0Ev
+ 138 0014 AFF30080 		.section	.text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame,"ax",%progbits
+ 138      AFF30080 
+ 138      AFF30080 
+ 139              		.align	2
+ 140              		.p2align 4,,15
+ 141              		.global	_ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame
+ 142              		.thumb
+ 143              		.thumb_func
+ 144              		.type	_ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame, %function
+ 145              	_ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:
+ 146              		@ args = 0, pretend = 0, frame = 0
+ 147              		@ frame_needed = 0, uses_anonymous_args = 0
+ 148              		@ link register save eliminated.
+ 149 0000 0A89     		ldrh	r2, [r1, #8]
+ 150 0002 10B4     		push	{r4}
+ 151 0004 C2F3C702 		ubfx	r2, r2, #3, #8
+ 152 0008 A2F12003 		sub	r3, r2, #32
+ 153 000c 402B     		cmp	r3, #64
+ 154 000e 00F2C380 		bhi	.L37
+ 155 0012 DFE803F0 		tbb	[pc, r3]
+ 156              	.L17:
+ 157 0016 38       		.byte	(.L16-.L17)/2
+ 158 0017 C1       		.byte	(.L37-.L17)/2
+ 159 0018 C1       		.byte	(.L37-.L17)/2
+ 160 0019 C1       		.byte	(.L37-.L17)/2
+ 161 001a C1       		.byte	(.L37-.L17)/2
+ 162 001b C1       		.byte	(.L37-.L17)/2
+ 163 001c C1       		.byte	(.L37-.L17)/2
+ 164 001d C1       		.byte	(.L37-.L17)/2
+ 165 001e C1       		.byte	(.L37-.L17)/2
+ 166 001f C1       		.byte	(.L37-.L17)/2
+ 167 0020 C1       		.byte	(.L37-.L17)/2
+ARM GAS  /tmp/cc10FDmJ.s 			page 4
+
+
+ 168 0021 C1       		.byte	(.L37-.L17)/2
+ 169 0022 C1       		.byte	(.L37-.L17)/2
+ 170 0023 C1       		.byte	(.L37-.L17)/2
+ 171 0024 C1       		.byte	(.L37-.L17)/2
+ 172 0025 C1       		.byte	(.L37-.L17)/2
+ 173 0026 46       		.byte	(.L18-.L17)/2
+ 174 0027 46       		.byte	(.L18-.L17)/2
+ 175 0028 46       		.byte	(.L18-.L17)/2
+ 176 0029 46       		.byte	(.L18-.L17)/2
+ 177 002a 46       		.byte	(.L18-.L17)/2
+ 178 002b 46       		.byte	(.L18-.L17)/2
+ 179 002c 46       		.byte	(.L18-.L17)/2
+ 180 002d 46       		.byte	(.L18-.L17)/2
+ 181 002e C1       		.byte	(.L37-.L17)/2
+ 182 002f C1       		.byte	(.L37-.L17)/2
+ 183 0030 C1       		.byte	(.L37-.L17)/2
+ 184 0031 C1       		.byte	(.L37-.L17)/2
+ 185 0032 C1       		.byte	(.L37-.L17)/2
+ 186 0033 C1       		.byte	(.L37-.L17)/2
+ 187 0034 C1       		.byte	(.L37-.L17)/2
+ 188 0035 C1       		.byte	(.L37-.L17)/2
+ 189 0036 C1       		.byte	(.L37-.L17)/2
+ 190 0037 C1       		.byte	(.L37-.L17)/2
+ 191 0038 C1       		.byte	(.L37-.L17)/2
+ 192 0039 C1       		.byte	(.L37-.L17)/2
+ 193 003a C1       		.byte	(.L37-.L17)/2
+ 194 003b C1       		.byte	(.L37-.L17)/2
+ 195 003c C1       		.byte	(.L37-.L17)/2
+ 196 003d C1       		.byte	(.L37-.L17)/2
+ 197 003e 54       		.byte	(.L19-.L17)/2
+ 198 003f C1       		.byte	(.L37-.L17)/2
+ 199 0040 C1       		.byte	(.L37-.L17)/2
+ 200 0041 C1       		.byte	(.L37-.L17)/2
+ 201 0042 C1       		.byte	(.L37-.L17)/2
+ 202 0043 C1       		.byte	(.L37-.L17)/2
+ 203 0044 C1       		.byte	(.L37-.L17)/2
+ 204 0045 C1       		.byte	(.L37-.L17)/2
+ 205 0046 5E       		.byte	(.L20-.L17)/2
+ 206 0047 80       		.byte	(.L21-.L17)/2
+ 207 0048 C1       		.byte	(.L37-.L17)/2
+ 208 0049 C1       		.byte	(.L37-.L17)/2
+ 209 004a 93       		.byte	(.L22-.L17)/2
+ 210 004b 9D       		.byte	(.L23-.L17)/2
+ 211 004c A7       		.byte	(.L24-.L17)/2
+ 212 004d C1       		.byte	(.L37-.L17)/2
+ 213 004e B1       		.byte	(.L25-.L17)/2
+ 214 004f C1       		.byte	(.L37-.L17)/2
+ 215 0050 C1       		.byte	(.L37-.L17)/2
+ 216 0051 C1       		.byte	(.L37-.L17)/2
+ 217 0052 C1       		.byte	(.L37-.L17)/2
+ 218 0053 C1       		.byte	(.L37-.L17)/2
+ 219 0054 C1       		.byte	(.L37-.L17)/2
+ 220 0055 C1       		.byte	(.L37-.L17)/2
+ 221 0056 21       		.byte	(.L26-.L17)/2
+ 222 0057 00       		.align	1
+ 223              	.L26:
+ 224 0058 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ARM GAS  /tmp/cc10FDmJ.s 			page 5
+
+
+ 225 005a 03F00F03 		and	r3, r3, #15
+ 226 005e 062B     		cmp	r3, #6
+ 227 0060 40F09A80 		bne	.L37
+ 228 0064 0A7B     		ldrb	r2, [r1, #12]	@ zero_extendqisi2
+ 229 0066 0023     		movs	r3, #0
+ 230 0068 80F8A821 		strb	r2, [r0, #424]
+ 231 006c 4A7B     		ldrb	r2, [r1, #13]	@ zero_extendqisi2
+ 232 006e 80F8A921 		strb	r2, [r0, #425]
+ 233 0072 CA89     		ldrh	r2, [r1, #14]
+ 234 0074 A0F8AA21 		strh	r2, [r0, #426]	@ movhi
+ 235 0078 0A8A     		ldrh	r2, [r1, #16]
+ 236 007a A0F8AC21 		strh	r2, [r0, #428]	@ movhi
+ 237              	.L15:
+ 238 007e 1846     		mov	r0, r3
+ 239 0080 5DF8044B 		ldr	r4, [sp], #4
+ 240 0084 7047     		bx	lr
+ 241              	.L16:
+ 242 0086 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ 243 0088 03F00F03 		and	r3, r3, #15
+ 244 008c 082B     		cmp	r3, #8
+ 245 008e 40F08380 		bne	.L37
+ 246 0092 CA68     		ldr	r2, [r1, #12]
+ 247 0094 0023     		movs	r3, #0
+ 248 0096 C0F86C21 		str	r2, [r0, #364]
+ 249 009a 0A69     		ldr	r2, [r1, #16]
+ 250 009c C0F87021 		str	r2, [r0, #368]
+ 251 00a0 EDE7     		b	.L15
+ 252              	.L18:
+ 253 00a2 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ 254 00a4 03F00F03 		and	r3, r3, #15
+ 255 00a8 022B     		cmp	r3, #2
+ 256 00aa 75D1     		bne	.L37
+ 257 00ac 8B89     		ldrh	r3, [r1, #12]
+ 258 00ae 02F00702 		and	r2, r2, #7
+ 259 00b2 00EB4200 		add	r0, r0, r2, lsl #1
+ 260 00b6 A0F85C31 		strh	r3, [r0, #348]	@ movhi
+ 261 00ba 0023     		movs	r3, #0
+ 262 00bc DFE7     		b	.L15
+ 263              	.L19:
+ 264 00be 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ 265 00c0 03F00F03 		and	r3, r3, #15
+ 266 00c4 012B     		cmp	r3, #1
+ 267 00c6 67D1     		bne	.L37
+ 268 00c8 0A7B     		ldrb	r2, [r1, #12]	@ zero_extendqisi2
+ 269 00ca 0023     		movs	r3, #0
+ 270 00cc 80F8AE21 		strb	r2, [r0, #430]
+ 271 00d0 D5E7     		b	.L15
+ 272              	.L20:
+ 273 00d2 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ 274 00d4 03F00F03 		and	r3, r3, #15
+ 275 00d8 082B     		cmp	r3, #8
+ 276 00da 5DD1     		bne	.L37
+ 277 00dc 0B7B     		ldrb	r3, [r1, #12]	@ zero_extendqisi2
+ 278 00de 4C7B     		ldrb	r4, [r1, #13]	@ zero_extendqisi2
+ 279 00e0 8A7B     		ldrb	r2, [r1, #14]	@ zero_extendqisi2
+ 280 00e2 1B02     		lsls	r3, r3, #8
+ 281 00e4 43EA0443 		orr	r3, r3, r4, lsl #16
+ARM GAS  /tmp/cc10FDmJ.s 			page 6
+
+
+ 282 00e8 43EA0263 		orr	r3, r3, r2, lsl #24
+ 283 00ec C0F89031 		str	r3, [r0, #400]
+ 284 00f0 CB7B     		ldrb	r3, [r1, #15]	@ zero_extendqisi2
+ 285 00f2 0C7C     		ldrb	r4, [r1, #16]	@ zero_extendqisi2
+ 286 00f4 4A7C     		ldrb	r2, [r1, #17]	@ zero_extendqisi2
+ 287 00f6 1B02     		lsls	r3, r3, #8
+ 288 00f8 43EA0443 		orr	r3, r3, r4, lsl #16
+ 289 00fc 43EA0263 		orr	r3, r3, r2, lsl #24
+ 290 0100 C0F89431 		str	r3, [r0, #404]
+ 291 0104 8B7C     		ldrb	r3, [r1, #18]	@ zero_extendqisi2
+ 292 0106 CA7C     		ldrb	r2, [r1, #19]	@ zero_extendqisi2
+ 293 0108 1B02     		lsls	r3, r3, #8
+ 294 010a 43EA0243 		orr	r3, r3, r2, lsl #16
+ 295 010e C0F8A431 		str	r3, [r0, #420]
+ 296 0112 0023     		movs	r3, #0
+ 297 0114 B3E7     		b	.L15
+ 298              	.L21:
+ 299 0116 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ 300 0118 03F00F03 		and	r3, r3, #15
+ 301 011c 082B     		cmp	r3, #8
+ 302 011e 3BD1     		bne	.L37
+ 303 0120 8A89     		ldrh	r2, [r1, #12]
+ 304 0122 0023     		movs	r3, #0
+ 305 0124 A0F87421 		strh	r2, [r0, #372]	@ movhi
+ 306 0128 CA89     		ldrh	r2, [r1, #14]
+ 307 012a A0F87621 		strh	r2, [r0, #374]	@ movhi
+ 308 012e 0A8A     		ldrh	r2, [r1, #16]
+ 309 0130 A0F87821 		strh	r2, [r0, #376]	@ movhi
+ 310 0134 4A8A     		ldrh	r2, [r1, #18]
+ 311 0136 A0F87A21 		strh	r2, [r0, #378]	@ movhi
+ 312 013a A0E7     		b	.L15
+ 313              	.L22:
+ 314 013c 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ 315 013e 03F00F03 		and	r3, r3, #15
+ 316 0142 042B     		cmp	r3, #4
+ 317 0144 28D1     		bne	.L37
+ 318 0146 CA68     		ldr	r2, [r1, #12]
+ 319 0148 0023     		movs	r3, #0
+ 320 014a C0F87C21 		str	r2, [r0, #380]
+ 321 014e 96E7     		b	.L15
+ 322              	.L23:
+ 323 0150 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ 324 0152 03F00F03 		and	r3, r3, #15
+ 325 0156 042B     		cmp	r3, #4
+ 326 0158 1ED1     		bne	.L37
+ 327 015a CA68     		ldr	r2, [r1, #12]
+ 328 015c 0023     		movs	r3, #0
+ 329 015e C0F88021 		str	r2, [r0, #384]
+ 330 0162 8CE7     		b	.L15
+ 331              	.L24:
+ 332 0164 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ 333 0166 03F00F03 		and	r3, r3, #15
+ 334 016a 042B     		cmp	r3, #4
+ 335 016c 14D1     		bne	.L37
+ 336 016e CA68     		ldr	r2, [r1, #12]
+ 337 0170 0023     		movs	r3, #0
+ 338 0172 C0F88421 		str	r2, [r0, #388]
+ARM GAS  /tmp/cc10FDmJ.s 			page 7
+
+
+ 339 0176 82E7     		b	.L15
+ 340              	.L25:
+ 341 0178 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+ 342 017a 03F00F03 		and	r3, r3, #15
+ 343 017e 062B     		cmp	r3, #6
+ 344 0180 0AD1     		bne	.L37
+ 345 0182 8A89     		ldrh	r2, [r1, #12]
+ 346 0184 0023     		movs	r3, #0
+ 347 0186 A0F88821 		strh	r2, [r0, #392]	@ movhi
+ 348 018a CA89     		ldrh	r2, [r1, #14]
+ 349 018c A0F88A21 		strh	r2, [r0, #394]	@ movhi
+ 350 0190 0A8A     		ldrh	r2, [r1, #16]
+ 351 0192 A0F88C21 		strh	r2, [r0, #396]	@ movhi
+ 352 0196 72E7     		b	.L15
+ 353              	.L37:
+ 354 0198 6FF00103 		mvn	r3, #1
+ 355 019c 1846     		mov	r0, r3
+ 356 019e 5DF8044B 		ldr	r4, [sp], #4
+ 357 01a2 7047     		bx	lr
+ 358              		.size	_ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame, .-_ZN5amiro23ControllerA
+ 359 01a4 AFF30080 		.section	.text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv,"ax",%progbits
+ 359      AFF30080 
+ 359      AFF30080 
+ 360              		.align	2
+ 361              		.p2align 4,,15
+ 362              		.global	_ZN5amiro23ControllerAreaNetworkRx4mainEv
+ 363              		.thumb
+ 364              		.thumb_func
+ 365              		.type	_ZN5amiro23ControllerAreaNetworkRx4mainEv, %function
+ 366              	_ZN5amiro23ControllerAreaNetworkRx4mainEv:
+ 367              		@ args = 0, pretend = 0, frame = 24
+ 368              		@ frame_needed = 0, uses_anonymous_args = 0
+ 369 0000 70B5     		push	{r4, r5, r6, lr}
+ 370 0002 0546     		mov	r5, r0
+ 371 0004 D0F8C401 		ldr	r0, [r0, #452]
+ 372 0008 05F5D876 		add	r6, r5, #432
+ 373 000c 2030     		adds	r0, r0, #32
+ 374 000e 86B0     		sub	sp, sp, #24
+ 375 0010 C5F8C001 		str	r0, [r5, #448]
+ 376 0014 3146     		mov	r1, r6
+ 377 0016 0222     		movs	r2, #2
+ 378 0018 FFF7FEFF 		bl	_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+ 379 001c D5F8C401 		ldr	r0, [r5, #452]
+ 380 0020 05F5E471 		add	r1, r5, #456
+ 381 0024 FFF7FEFF 		bl	canStart
+ 382 0028 1848     		ldr	r0, .L52
+ 383 002a FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread7setNameEPKc
+ 384 002e 03E0     		b	.L43
+ 385              	.L47:
+ 386 0030 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
+ 387 0034 0428     		cmp	r0, #4
+ 388 0036 14D0     		beq	.L51
+ 389              	.L43:
+ 390 0038 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 391 003c 0446     		mov	r4, r0
+ 392 003e 42F21071 		movw	r1, #10000
+ 393 0042 4FF0FF30 		mov	r0, #-1
+ARM GAS  /tmp/cc10FDmJ.s 			page 8
+
+
+ 394 0046 002C     		cmp	r4, #0
+ 395 0048 F2D0     		beq	.L47
+ 396 004a D5F8C401 		ldr	r0, [r5, #452]
+ 397 004e FFF7FEFF 		bl	canStop
+ 398 0052 D5F8C001 		ldr	r0, [r5, #448]
+ 399 0056 3146     		mov	r1, r6
+ 400 0058 FFF7FEFF 		bl	_ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
+ 401 005c 0020     		movs	r0, #0
+ 402 005e 06B0     		add	sp, sp, #24
+ 403              		@ sp needed
+ 404 0060 70BD     		pop	{r4, r5, r6, pc}
+ 405              	.L51:
+ 406 0062 2146     		mov	r1, r4
+ 407 0064 2346     		mov	r3, r4
+ 408 0066 D5F8C401 		ldr	r0, [r5, #452]
+ 409 006a 01AA     		add	r2, sp, #4
+ 410 006c FFF7FEFF 		bl	canReceive
+ 411 0070 0028     		cmp	r0, #0
+ 412 0072 E1D1     		bne	.L43
+ 413 0074 2B68     		ldr	r3, [r5]
+ 414 0076 2846     		mov	r0, r5
+ 415 0078 5B69     		ldr	r3, [r3, #20]
+ 416 007a 01A9     		add	r1, sp, #4
+ 417 007c 9847     		blx	r3
+ 418 007e 0028     		cmp	r0, #0
+ 419 0080 DAD0     		beq	.L43
+ 420 0082 2846     		mov	r0, r5
+ 421 0084 01A9     		add	r1, sp, #4
+ 422 0086 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame
+ 423 008a D5E7     		b	.L43
+ 424              	.L53:
+ 425              		.align	2
+ 426              	.L52:
+ 427 008c 00000000 		.word	.LC0
+ 428              		.size	_ZN5amiro23ControllerAreaNetworkRx4mainEv, .-_ZN5amiro23ControllerAreaNetworkRx4mainEv
+ 429              		.section	.text._ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi,"ax",%progbits
+ 430              		.align	2
+ 431              		.p2align 4,,15
+ 432              		.global	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 433              		.thumb
+ 434              		.thumb_func
+ 435              		.type	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi, %function
+ 436              	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi:
+ 437              		@ args = 0, pretend = 0, frame = 0
+ 438              		@ frame_needed = 0, uses_anonymous_args = 0
+ 439              		@ link register save eliminated.
+ 440 0000 00EB4101 		add	r1, r0, r1, lsl #1
+ 441 0004 B1F85C01 		ldrh	r0, [r1, #348]
+ 442 0008 7047     		bx	lr
+ 443              		.size	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi, .-_ZN5amiro23ControllerAreaNetw
+ 444 000a 00BFAFF3 		.section	.text._ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE,"ax",%progbi
+ 444      0080
+ 445              		.align	2
+ 446              		.p2align 4,,15
+ 447              		.global	_ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE
+ 448              		.thumb
+ 449              		.thumb_func
+ARM GAS  /tmp/cc10FDmJ.s 			page 9
+
+
+ 450              		.type	_ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE, %function
+ 451              	_ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE:
+ 452              		@ args = 0, pretend = 0, frame = 0
+ 453              		@ frame_needed = 0, uses_anonymous_args = 0
+ 454              		@ link register save eliminated.
+ 455 0000 D0F86C21 		ldr	r2, [r0, #364]
+ 456 0004 D0F87031 		ldr	r3, [r0, #368]
+ 457 0008 0A60     		str	r2, [r1]
+ 458 000a 4B61     		str	r3, [r1, #20]
+ 459 000c 7047     		bx	lr
+ 460              		.size	_ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE, .-_ZN5amiro23Control
+ 461 000e 00BF     		.section	.text._ZN5amiro23ControllerAreaNetworkRx11getOdometryEv,"ax",%progbits
+ 462              		.align	2
+ 463              		.p2align 4,,15
+ 464              		.global	_ZN5amiro23ControllerAreaNetworkRx11getOdometryEv
+ 465              		.thumb
+ 466              		.thumb_func
+ 467              		.type	_ZN5amiro23ControllerAreaNetworkRx11getOdometryEv, %function
+ 468              	_ZN5amiro23ControllerAreaNetworkRx11getOdometryEv:
+ 469              		@ args = 0, pretend = 0, frame = 0
+ 470              		@ frame_needed = 0, uses_anonymous_args = 0
+ 471              		@ link register save eliminated.
+ 472 0000 70B4     		push	{r4, r5, r6}
+ 473 0002 0446     		mov	r4, r0
+ 474 0004 01F5C875 		add	r5, r1, #400
+ 475 0008 0646     		mov	r6, r0
+ 476 000a 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 477 000c 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 478 000e 95E80300 		ldmia	r5, {r0, r1}
+ 479 0012 84E80300 		stmia	r4, {r0, r1}
+ 480 0016 3046     		mov	r0, r6
+ 481 0018 70BC     		pop	{r4, r5, r6}
+ 482 001a 7047     		bx	lr
+ 483              		.size	_ZN5amiro23ControllerAreaNetworkRx11getOdometryEv, .-_ZN5amiro23ControllerAreaNetworkRx11get
+ 484 001c AFF30080 		.section	.text._ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv,"ax",%progbits
+ 485              		.align	2
+ 486              		.p2align 4,,15
+ 487              		.global	_ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv
+ 488              		.thumb
+ 489              		.thumb_func
+ 490              		.type	_ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv, %function
+ 491              	_ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv:
+ 492              		@ args = 0, pretend = 0, frame = 0
+ 493              		@ frame_needed = 0, uses_anonymous_args = 0
+ 494              		@ link register save eliminated.
+ 495 0000 00F5D470 		add	r0, r0, #424
+ 496 0004 7047     		bx	lr
+ 497              		.size	_ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv, .-_ZN5amiro23ControllerAreaNetworkRx14
+ 498 0006 00BFAFF3 		.section	.text._ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv,"ax",%progbits
+ 498      0080AFF3 
+ 498      0080
+ 499              		.align	2
+ 500              		.p2align 4,,15
+ 501              		.global	_ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv
+ 502              		.thumb
+ 503              		.thumb_func
+ 504              		.type	_ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv, %function
+ARM GAS  /tmp/cc10FDmJ.s 			page 10
+
+
+ 505              	_ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv:
+ 506              		@ args = 0, pretend = 0, frame = 0
+ 507              		@ frame_needed = 0, uses_anonymous_args = 0
+ 508              		@ link register save eliminated.
+ 509 0000 90F8AE01 		ldrb	r0, [r0, #430]	@ zero_extendqisi2
+ 510 0004 7047     		bx	lr
+ 511              		.size	_ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv, .-_ZN5amiro23ControllerAreaNetworkRx10getR
+ 512 0006 00BFAFF3 		.section	.text._ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi,"ax",%progbits
+ 512      0080AFF3 
+ 512      0080
+ 513              		.align	2
+ 514              		.p2align 4,,15
+ 515              		.global	_ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi
+ 516              		.thumb
+ 517              		.thumb_func
+ 518              		.type	_ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi, %function
+ 519              	_ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi:
+ 520              		@ args = 0, pretend = 0, frame = 0
+ 521              		@ frame_needed = 0, uses_anonymous_args = 0
+ 522              		@ link register save eliminated.
+ 523 0000 00EB8101 		add	r1, r0, r1, lsl #2
+ 524 0004 D1F87C01 		ldr	r0, [r1, #380]
+ 525 0008 7047     		bx	lr
+ 526              		.size	_ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi, .-_ZN5amiro23ControllerAreaNetwo
+ 527 000a 00BFAFF3 		.section	.text._ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi,"ax",%progbits
+ 527      0080
+ 528              		.align	2
+ 529              		.p2align 4,,15
+ 530              		.global	_ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi
+ 531              		.thumb
+ 532              		.thumb_func
+ 533              		.type	_ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi, %function
+ 534              	_ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi:
+ 535              		@ args = 0, pretend = 0, frame = 0
+ 536              		@ frame_needed = 0, uses_anonymous_args = 0
+ 537              		@ link register save eliminated.
+ 538 0000 C431     		adds	r1, r1, #196
+ 539 0002 30F91100 		ldrsh	r0, [r0, r1, lsl #1]
+ 540 0006 7047     		bx	lr
+ 541              		.size	_ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi, .-_ZN5amiro23ControllerAreaNetworkR
+ 542 0008 AFF30080 		.section	.text._ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi,"ax",%progbits
+ 542      AFF30080 
+ 543              		.align	2
+ 544              		.p2align 4,,15
+ 545              		.global	_ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi
+ 546              		.thumb
+ 547              		.thumb_func
+ 548              		.type	_ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi, %function
+ 549              	_ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi:
+ 550              		@ args = 0, pretend = 0, frame = 0
+ 551              		@ frame_needed = 0, uses_anonymous_args = 0
+ 552              		@ link register save eliminated.
+ 553 0000 00EB4101 		add	r1, r0, r1, lsl #1
+ 554 0004 B1F87401 		ldrh	r0, [r1, #372]
+ 555 0008 7047     		bx	lr
+ 556              		.size	_ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi, .-_ZN5amiro23ControllerAreaNet
+ 557 000a 00BFAFF3 		.section	.text._ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame,"ax",%progbits
+ARM GAS  /tmp/cc10FDmJ.s 			page 11
+
+
+ 557      0080
+ 558              		.align	2
+ 559              		.p2align 4,,15
+ 560              		.global	_ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame
+ 561              		.thumb
+ 562              		.thumb_func
+ 563              		.type	_ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame, %function
+ 564              	_ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame:
+ 565              		@ args = 0, pretend = 0, frame = 0
+ 566              		@ frame_needed = 0, uses_anonymous_args = 0
+ 567              		@ link register save eliminated.
+ 568 0000 0889     		ldrh	r0, [r1, #8]
+ 569 0002 00F00700 		and	r0, r0, #7
+ 570 0006 7047     		bx	lr
+ 571              		.size	_ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame, .-_ZN5amiro23ControllerArea
+ 572 0008 AFF30080 		.section	.text._ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame,"ax",%progbits
+ 572      AFF30080 
+ 573              		.align	2
+ 574              		.p2align 4,,15
+ 575              		.global	_ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame
+ 576              		.thumb
+ 577              		.thumb_func
+ 578              		.type	_ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame, %function
+ 579              	_ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame:
+ 580              		@ args = 0, pretend = 0, frame = 0
+ 581              		@ frame_needed = 0, uses_anonymous_args = 0
+ 582              		@ link register save eliminated.
+ 583 0000 0889     		ldrh	r0, [r1, #8]
+ 584 0002 C0F3C700 		ubfx	r0, r0, #3, #8
+ 585 0006 7047     		bx	lr
+ 586              		.size	_ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame, .-_ZN5amiro23ControllerAre
+ 587 0008 AFF30080 		.section	.text._ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame,"ax",%progbits
+ 587      AFF30080 
+ 588              		.align	2
+ 589              		.p2align 4,,15
+ 590              		.global	_ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame
+ 591              		.thumb
+ 592              		.thumb_func
+ 593              		.type	_ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame, %function
+ 594              	_ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame:
+ 595              		@ args = 0, pretend = 0, frame = 0
+ 596              		@ frame_needed = 0, uses_anonymous_args = 0
+ 597              		@ link register save eliminated.
+ 598 0000 0889     		ldrh	r0, [r1, #8]
+ 599 0002 C0F3C200 		ubfx	r0, r0, #3, #3
+ 600 0006 7047     		bx	lr
+ 601              		.size	_ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame, .-_ZN5amiro23ControllerArea
+ 602 0008 AFF30080 		.section	.text._ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame,"ax",%progbits
+ 602      AFF30080 
+ 603              		.align	2
+ 604              		.p2align 4,,15
+ 605              		.global	_ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame
+ 606              		.thumb
+ 607              		.thumb_func
+ 608              		.type	_ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame, %function
+ 609              	_ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame:
+ 610              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/cc10FDmJ.s 			page 12
+
+
+ 611              		@ frame_needed = 0, uses_anonymous_args = 0
+ 612              		@ link register save eliminated.
+ 613 0000 0889     		ldrh	r0, [r1, #8]
+ 614 0002 00F00700 		and	r0, r0, #7
+ 615 0006 7047     		bx	lr
+ 616              		.size	_ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame, .-_ZN5amiro23ControllerAreaNet
+ 617 0008 AFF30080 		.section	.text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh,"ax",%prog
+ 617      AFF30080 
+ 618              		.align	2
+ 619              		.p2align 4,,15
+ 620              		.thumb
+ 621              		.thumb_func
+ 622              		.type	_GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh, %function
+ 623              	_GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:
+ 624              		@ args = 0, pretend = 0, frame = 0
+ 625              		@ frame_needed = 0, uses_anonymous_args = 0
+ 626              		@ link register save eliminated.
+ 627 0000 024B     		ldr	r3, .L67
+ 628 0002 034A     		ldr	r2, .L67+4
+ 629 0004 1A60     		str	r2, [r3]
+ 630 0006 5A60     		str	r2, [r3, #4]
+ 631 0008 7047     		bx	lr
+ 632              	.L68:
+ 633 000a 00BF     		.align	2
+ 634              	.L67:
+ 635 000c 00000000 		.word	.LANCHOR1
+ 636 0010 A0860100 		.word	100000
+ 637              		.size	_GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh, .-_GLOBAL__sub_I__ZN5amiro
+ 638 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 638      AFF30080 
+ 638      AFF30080 
+ 639              		.align	2
+ 640 0000 00000000 		.word	_GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh(target1)
+ 641              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi128EEE
+ 642              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
+ 643              		.align	3
+ 644              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi128EEE, %object
+ 645              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi128EEE, 20
+ 646              	_ZTVN10chibios_rt16BaseStaticThreadILi128EEE:
+ 647 0000 00000000 		.word	0
+ 648 0004 00000000 		.word	0
+ 649 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 650 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 651 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
+ 652              		.global	_ZTVN5amiro23ControllerAreaNetworkRxE
+ 653 0014 00000000 		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 654              		.align	2
+ 655              		.set	.LANCHOR1,. + 0
+ 656              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 657              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 658              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 659 0000 00000000 		.space	8
+ 659      00000000 
+ 660              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 661              		.align	2
+ 662              	.LC0:
+ 663 0000 436F6E74 		.ascii	"ControllerAreaNetworkRx\000"
+ARM GAS  /tmp/cc10FDmJ.s 			page 13
+
+
+ 663      726F6C6C 
+ 663      65724172 
+ 663      65614E65 
+ 663      74776F72 
+ 664              		.section	.rodata._ZTVN5amiro23ControllerAreaNetworkRxE,"a",%progbits
+ 665              		.align	3
+ 666              		.set	.LANCHOR0,. + 0
+ 667              		.type	_ZTVN5amiro23ControllerAreaNetworkRxE, %object
+ 668              		.size	_ZTVN5amiro23ControllerAreaNetworkRxE, 32
+ 669              	_ZTVN5amiro23ControllerAreaNetworkRxE:
+ 670 0000 00000000 		.word	0
+ 671 0004 00000000 		.word	0
+ 672 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 673 000c 00000000 		.word	_ZN5amiro23ControllerAreaNetworkRx4mainEv
+ 674 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
+ 675 0014 00000000 		.word	__cxa_pure_virtual
+ 676 0018 00000000 		.word	__cxa_pure_virtual
+ 677 001c 00000000 		.word	_ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame
+ 678              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cc10FDmJ.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ControllerAreaNetworkRx.cpp
+     /tmp/cc10FDmJ.s:16     .text._ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame:00000000 $t
+     /tmp/cc10FDmJ.s:22     .text._ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame
+     /tmp/cc10FDmJ.s:30     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 $t
+     /tmp/cc10FDmJ.s:36     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
+     /tmp/cc10FDmJ.s:59     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000028 $d
+     /tmp/cc10FDmJ.s:63     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 $t
+     /tmp/cc10FDmJ.s:69     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 _ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+     /tmp/cc10FDmJ.s:90     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000028 $d
+     /tmp/cc10FDmJ.s:69     .text._ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 _ZN5amiro23ControllerAreaNetworkRxC1EP9CANDriverh
+     /tmp/cc10FDmJ.s:96     .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000000 $t
+     /tmp/cc10FDmJ.s:102    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000000 _ZN5amiro23ControllerAreaNetworkRxD2Ev
+     /tmp/cc10FDmJ.s:112    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000008 $d
+     /tmp/cc10FDmJ.s:102    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:00000000 _ZN5amiro23ControllerAreaNetworkRxD1Ev
+     /tmp/cc10FDmJ.s:117    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000000 $t
+     /tmp/cc10FDmJ.s:123    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000000 _ZN5amiro23ControllerAreaNetworkRxD0Ev
+     /tmp/cc10FDmJ.s:136    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000010 $d
+     /tmp/cc10FDmJ.s:139    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000000 $t
+     /tmp/cc10FDmJ.s:145    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame
+     /tmp/cc10FDmJ.s:157    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000016 $d
+     /tmp/cc10FDmJ.s:360    .text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv:00000000 $t
+     /tmp/cc10FDmJ.s:366    .text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv:00000000 _ZN5amiro23ControllerAreaNetworkRx4mainEv
+     /tmp/cc10FDmJ.s:427    .text.startup._ZN5amiro23ControllerAreaNetworkRx4mainEv:0000008c $d
+     /tmp/cc10FDmJ.s:430    .text._ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi:00000000 $t
+     /tmp/cc10FDmJ.s:436    .text._ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+     /tmp/cc10FDmJ.s:445    .text._ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE:00000000 $t
+     /tmp/cc10FDmJ.s:451    .text._ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE:00000000 _ZN5amiro23ControllerAreaNetworkRx14getActualSpeedERN5types9kinematicE
+     /tmp/cc10FDmJ.s:462    .text._ZN5amiro23ControllerAreaNetworkRx11getOdometryEv:00000000 $t
+     /tmp/cc10FDmJ.s:468    .text._ZN5amiro23ControllerAreaNetworkRx11getOdometryEv:00000000 _ZN5amiro23ControllerAreaNetworkRx11getOdometryEv
+     /tmp/cc10FDmJ.s:485    .text._ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv:00000000 $t
+     /tmp/cc10FDmJ.s:491    .text._ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv:00000000 _ZN5amiro23ControllerAreaNetworkRx14getPowerStatusEv
+     /tmp/cc10FDmJ.s:499    .text._ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv:00000000 $t
+     /tmp/cc10FDmJ.s:505    .text._ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv:00000000 _ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv
+     /tmp/cc10FDmJ.s:513    .text._ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi:00000000 $t
+     /tmp/cc10FDmJ.s:519    .text._ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx20getMagnetometerValueEi
+     /tmp/cc10FDmJ.s:528    .text._ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi:00000000 $t
+     /tmp/cc10FDmJ.s:534    .text._ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx17getGyroscopeValueEi
+     /tmp/cc10FDmJ.s:543    .text._ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi:00000000 $t
+     /tmp/cc10FDmJ.s:549    .text._ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi:00000000 _ZN5amiro23ControllerAreaNetworkRx22getProximityFloorValueEi
+     /tmp/cc10FDmJ.s:558    .text._ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame:00000000 $t
+     /tmp/cc10FDmJ.s:564    .text._ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame
+     /tmp/cc10FDmJ.s:573    .text._ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame:00000000 $t
+     /tmp/cc10FDmJ.s:579    .text._ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame
+     /tmp/cc10FDmJ.s:588    .text._ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame:00000000 $t
+     /tmp/cc10FDmJ.s:594    .text._ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx13decodeIndexIdEP10CANRxFrame
+     /tmp/cc10FDmJ.s:603    .text._ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame:00000000 $t
+     /tmp/cc10FDmJ.s:609    .text._ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame:00000000 _ZN5amiro23ControllerAreaNetworkRx10rxCmdShellEP10CANRxFrame
+     /tmp/cc10FDmJ.s:618    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 $t
+     /tmp/cc10FDmJ.s:623    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000000 _GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+     /tmp/cc10FDmJ.s:635    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:0000000c $d
+     /tmp/cc10FDmJ.s:639    .init_array:00000000 $d
+     /tmp/cc10FDmJ.s:646    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi128EEE
+     /tmp/cc10FDmJ.s:643    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 $d
+     /tmp/cc10FDmJ.s:669    .rodata._ZTVN5amiro23ControllerAreaNetworkRxE:00000000 _ZTVN5amiro23ControllerAreaNetworkRxE
+     /tmp/cc10FDmJ.s:654    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/cc10FDmJ.s:658    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+ARM GAS  /tmp/cc10FDmJ.s 			page 15
+
+
+     /tmp/cc10FDmJ.s:661    .rodata.str1.4:00000000 $d
+     /tmp/cc10FDmJ.s:665    .rodata._ZTVN5amiro23ControllerAreaNetworkRxE:00000000 $d
+     /tmp/cc10FDmJ.s:116    .text._ZN5amiro23ControllerAreaNetworkRxD2Ev:0000000c $t
+     /tmp/cc10FDmJ.s:138    .text._ZN5amiro23ControllerAreaNetworkRxD0Ev:00000014 $t
+     /tmp/cc10FDmJ.s:638    .text.startup._GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh:00000014 $t
+     /tmp/cc10FDmJ.s:222    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000057 $d
+     /tmp/cc10FDmJ.s:222    .text._ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame:00000058 $t
+
+UNDEFINED SYMBOLS
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+_ZN10chibios_rt10BaseThreadC2Ev
+_ZdlPv
+_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+canStart
+_ZN10chibios_rt10BaseThread7setNameEPKc
+_ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+canStop
+_ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
+canReceive
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv
+__cxa_pure_virtual

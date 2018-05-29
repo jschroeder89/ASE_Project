@@ -1,0 +1,10 @@
+chschd.c:55:6:_scheduler_init	0	static
+chschd.c:81:9:chSchReadyI	8	static
+chschd.c:136:13:wakeup	8	static
+chschd.c:115:6:chSchGoSleepS	16	static
+chschd.c:189:7:chSchGoSleepTimeoutS	40	static
+chschd.c:225:6:chSchWakeupS	16	static
+chschd.c:304:6:chSchDoRescheduleBehind	16	static
+chschd.c:329:6:chSchDoRescheduleAhead	16	static
+chschd.c:253:6:chSchRescheduleS	8	static
+chschd.c:362:6:chSchDoReschedule	0	static

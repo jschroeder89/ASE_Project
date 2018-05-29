@@ -1,0 +1,1393 @@
+
+build/DiWheelDrive.elf:     file format elf32-littlearm
+build/DiWheelDrive.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x0800f341
+
+Program Header:
+0x70000001 off    0x00027cdc vaddr 0x08027cdc paddr 0x08027cdc align 2**2
+         filesz 0x000001d8 memsz 0x000001d8 flags r--
+    LOAD off    0x00000000 vaddr 0x08000000 paddr 0x08000000 align 2**15
+         filesz 0x00027eb4 memsz 0x00027eb8 flags rwx
+    LOAD off    0x00028800 vaddr 0x20000800 paddr 0x08027eb8 align 2**15
+         filesz 0x00000940 memsz 0x00000940 flags rw-
+    LOAD off    0x00030000 vaddr 0x20000000 paddr 0x20000000 align 2**15
+         filesz 0x00000000 memsz 0x00005890 flags rw-
+private flags = 5000002: [Version5 EABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 startup       00000130  08006000  08006000  00006000  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 crc           00000004  08006150  08006150  00006150  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 constructors  00000038  08006154  08006154  00006154  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .text         00021a2c  08006190  08006190  00006190  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .ARM.extab    00000120  08027bbc  08027bbc  00027bbc  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .ARM.exidx    000001d8  08027cdc  08027cdc  00027cdc  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .textalign    00000004  08027eb4  08027eb4  00027eb4  2**0
+                  ALLOC
+  7 .stacks       00000800  20000000  20000000  00030000  2**0
+                  ALLOC
+  8 .data         00000940  20000800  08027eb8  00028800  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  9 .bss          00004750  20001140  20001140  00030000  2**3
+                  ALLOC
+ 10 .comment      00000070  00000000  00000000  00029140  2**0
+                  CONTENTS, READONLY
+ 11 .ARM.attributes 00000031  00000000  00000000  000291b0  2**0
+                  CONTENTS, READONLY
+ 12 .debug_frame  000020f0  00000000  00000000  000291e4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+08006000 l    d  startup	00000000 startup
+08006150 l    d  crc	00000000 crc
+08006154 l    d  constructors	00000000 constructors
+08006190 l    d  .text	00000000 .text
+08027bbc l    d  .ARM.extab	00000000 .ARM.extab
+08027cdc l    d  .ARM.exidx	00000000 .ARM.exidx
+08027eb4 l    d  .textalign	00000000 .textalign
+20000000 l    d  .stacks	00000000 .stacks
+20000800 l    d  .data	00000000 .data
+20001140 l    d  .bss	00000000 .bss
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 vectors.c
+00000000 l    df *ABS*	00000000 vcnl4020.cpp
+080062f0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev
+20001964 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 hmc5883l.cpp
+080063e0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev
+2000196c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 lis331dlh.cpp
+080064a0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro9LIS331DLHC2EPNS_11HWSPIDriverE
+20001974 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 l3g4200d.cpp
+08014da0 l     F .text	00000028 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0
+080065e0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE
+2000197c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 ina219.cpp
+08015130 l     F .text	00000024 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3
+08006630 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh
+20001984 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+08024dc0 l     O .text	0000000c CSWTCH.31
+00000000 l    df *ABS*	00000000 MotorControl.cpp
+080161e0 l     F .text	00000024 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0
+080067c0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro12MotorControl29wheelDiameterCorrectionFactorE
+2000198c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 DistControl.cpp
+080069a0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE
+20001994 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 Odometry.cpp
+080171b0 l     F .text	00000028 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6
+080171e0 l     F .text	00000068 _ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7
+08017250 l     F .text	0000008e _ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8
+08006a40 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE
+2000199c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 ControllerAreaNetworkRx.cpp
+08006af0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+200019a4 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 ControllerAreaNetworkTx.cpp
+08006b90 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkTxC2EP9CANDriverh
+200019ac l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 serial_can_mux.cpp
+08017ba0 l     F .text	00000020 NVIC_SystemReset
+08017bf0 l     F .text	0000001e _ZL8chprintfP20BaseSequentialStreamPKcz
+08006bb0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
+200019b4 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 DiWheelDrive.cpp
+08006bd0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro12DiWheelDriveC2EP9CANDriver
+200019bc l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 userthread.cpp
+08018760 l     F .text	00000024 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1
+08006ec0 l     F .text	00000040 _GLOBAL__sub_I_policy
+200019c4 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+200019ec l     O .bss	00000008 _ZL12rpmHardRight
+20001a08 l     O .bss	00000008 _ZL12rpmSoftRight
+20001a24 l     O .bss	00000008 _ZL12rpmTurnRight
+00000000 l    df *ABS*	00000000 main.cpp
+08018ba0 l     F .text	0000001e _ZL8chprintfP20BaseSequentialStreamPKcz
+08007300 l     F .text	00000034 _GLOBAL__sub_I_global
+20005038 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+08025440 l     O .text	00000008 _ZL10shell_cfg1
+080269a0 l     O .text	000000d8 _ZL8commands
+08026940 l     O .text	00000014 CSWTCH.132
+08026960 l     O .text	00000014 CSWTCH.133
+08026980 l     O .text	00000014 CSWTCH.134
+00000000 l    df *ABS*	00000000 ch.cpp
+00000000 l    df *ABS*	00000000 cp-demangle.c
+08007340 l     F .text	00000096 d_make_comp
+080073d8 l     F .text	00000032 d_make_name
+0800740c l     F .text	000000b2 d_cv_qualifiers
+080074c0 l     F .text	00000038 d_ref_qualifier
+080074f8 l     F .text	00000094 d_clone_suffix
+0800758c l     F .text	00000154 d_substitution
+080076e0 l     F .text	00000048 d_append_char
+08007728 l     F .text	0000004c d_number.isra.0
+08007774 l     F .text	00000038 d_number_component
+080077ac l     F .text	00000030 d_compact_number
+080077dc l     F .text	00000044 d_template_param
+08007820 l     F .text	0000001e d_discriminator
+08007840 l     F .text	00000084 d_source_name
+080078c4 l     F .text	00000054 d_call_offset
+08007918 l     F .text	00000044 d_lookup_template_argument.isra.6
+0800795c l     F .text	00000086 d_find_pack
+080079e4 l     F .text	0000007c d_growable_string_callback_adapter
+08007a60 l     F .text	000000cc d_expr_primary
+0800866c l     F .text	00000662 d_encoding
+08007ea8 l     F .text	00000700 d_type
+08007b2c l     F .text	000000bc d_template_args
+0800904c l     F .text	000003bc d_expression
+08007be8 l     F .text	000002c0 d_name
+08008dd0 l     F .text	0000027c d_unqualified_name
+08008630 l     F .text	0000003c d_bare_function_type
+080085a8 l     F .text	00000088 d_parmlist
+08008cd0 l     F .text	00000100 d_operator_name
+08009408 l     F .text	00000064 d_exprlist
+0800946c l     F .text	0000006a d_append_string
+080094d8 l     F .text	00002534 d_print_comp.part.10
+0800ba0c l     F .text	00000016 d_print_comp
+0800ba24 l     F .text	00000546 d_print_mod
+0800c6d4 l     F .text	00000074 d_print_expr_op
+0800c748 l     F .text	000000aa d_print_subexpr
+0800c1d0 l     F .text	000001a4 d_print_array_type.isra.9
+0800c374 l     F .text	000001d8 d_print_function_type.isra.11
+0800c54c l     F .text	00000186 d_print_cast.isra.12
+0800bf6c l     F .text	00000264 d_print_mod_list
+0800c7f4 l     F .text	0000020c d_demangle_callback.constprop.16
+08023000 l     O .text	000000c4 standard_subs
+080230c4 l     O .text	00000294 cplus_demangle_builtin_types
+08023358 l     O .text	000003e0 cplus_demangle_operators
+00000000 l    df *ABS*	00000000 _arm_addsubdf3.o
+00000000 l    df *ABS*	00000000 _arm_muldivdf3.o
+00000000 l    df *ABS*	00000000 _arm_cmpdf2.o
+00000000 l    df *ABS*	00000000 _arm_fixdfsi.o
+00000000 l    df *ABS*	00000000 _arm_fixunsdfsi.o
+00000000 l    df *ABS*	00000000 _arm_truncdfsf2.o
+00000000 l    df *ABS*	00000000 _arm_addsubsf3.o
+00000000 l    df *ABS*	00000000 _arm_muldivsf3.o
+00000000 l    df *ABS*	00000000 _arm_cmpsf2.o
+00000000 l    df *ABS*	00000000 _arm_fixsfsi.o
+00000000 l    df *ABS*	00000000 _arm_fixunssfsi.o
+00000000 l    df *ABS*	00000000 unwind-arm.c
+0800db00 l     F .text	00000012 selfrel_offset31
+0800db14 l     F .text	00000072 search_EIT_table
+0800db88 l     F .text	00000028 __gnu_unwind_get_pr_addr
+0800dbb0 l     F .text	000000ac get_eit_entry
+0800dc5c l     F .text	00000058 restore_non_core_regs
+0800dcb4 l     F .text	0000000c _Unwind_decode_typeinfo_ptr.isra.0
+0800dcc0 l     F .text	00000004 __gnu_unwind_24bit.isra.1
+0800dcc4 l     F .text	00000002 _Unwind_DebugHook
+0800dcc8 l     F .text	0000003e unwind_phase2
+0800dd08 l     F .text	000000da unwind_phase2_forced
+0800df04 l     F .text	0000001a _Unwind_GetGR
+0800df54 l     F .text	0000001c _Unwind_SetGR
+0800dfe0 l     F .text	000002e4 __gnu_unwind_pr_common
+00000000 l    df *ABS*	00000000 libunwind.o
+00000000 l    df *ABS*	00000000 pr-support.c
+0800e6e0 l     F .text	00000032 next_unwind_byte
+0800e714 l     F .text	0000001a _Unwind_GetGR.constprop.0
+0800e730 l     F .text	00000004 unwind_UCB_from_context
+00000000 l    df *ABS*	00000000 lib_a-memcpy.o
+00000000 l    df *ABS*	00000000 lib_a-strcmp.o
+00000000 l    df *ABS*	00000000 _aeabi_uldivmod.o
+00000000 l    df *ABS*	00000000 bpabi.c
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 crt0.c
+00000000 l    df *ABS*	00000000 chcore.c
+00000000 l    df *ABS*	00000000 chcore_v7m.c
+0800f46c l       .text	00000000 _port_exit_from_isr
+00000000 l    df *ABS*	00000000 nvic.c
+00000000 l    df *ABS*	00000000 chsys.c
+20001140 l     O .bss	0000004c mainthread.4840
+00000000 l    df *ABS*	00000000 chdebug.c
+00000000 l    df *ABS*	00000000 chvt.c
+00000000 l    df *ABS*	00000000 chschd.c
+0800fbb0 l     F .text	00000052 wakeup
+00000000 l    df *ABS*	00000000 chthreads.c
+00000000 l    df *ABS*	00000000 chdynamic.c
+00000000 l    df *ABS*	00000000 chsem.c
+00000000 l    df *ABS*	00000000 chmtx.c
+00000000 l    df *ABS*	00000000 chevents.c
+00000000 l    df *ABS*	00000000 chqueues.c
+08010790 l     F .text	00000030 qwait
+00000000 l    df *ABS*	00000000 chmemcore.c
+200016b0 l     O .bss	00000004 endmem
+200016b4 l     O .bss	00000004 nextmem
+00000000 l    df *ABS*	00000000 chheap.c
+200016b8 l     O .bss	00000020 default_heap
+00000000 l    df *ABS*	00000000 chmempools.c
+00000000 l    df *ABS*	00000000 hal.c
+00000000 l    df *ABS*	00000000 can.c
+00000000 l    df *ABS*	00000000 ext.c
+00000000 l    df *ABS*	00000000 i2c.c
+00000000 l    df *ABS*	00000000 pwm.c
+00000000 l    df *ABS*	00000000 serial.c
+08011350 l     F .text	00000006 readt
+08011360 l     F .text	0000000a read
+08011370 l     F .text	00000006 writet
+08011380 l     F .text	0000000a write
+08011390 l     F .text	00000006 gett
+080113a0 l     F .text	0000000a get
+080113b0 l     F .text	00000006 putt
+080113c0 l     F .text	0000000a put
+08024020 l     O .text	00000020 vmt
+00000000 l    df *ABS*	00000000 spi.c
+00000000 l    df *ABS*	00000000 tm.c
+08011710 l     F .text	0000000c tm_start
+08011720 l     F .text	0000002c tm_stop
+200016d8 l     O .bss	00000004 measurement_offset
+00000000 l    df *ABS*	00000000 qei.c
+00000000 l    df *ABS*	00000000 stm32_dma.c
+200016dc l     O .bss	00000060 dma_isr_redir
+2000173c l     O .bss	00000004 dma_streams_mask
+00000000 l    df *ABS*	00000000 hal_lld.c
+00000000 l    df *ABS*	00000000 ext_lld_isr.c
+00000000 l    df *ABS*	00000000 can_lld.c
+08011f70 l     F .text	00000104 can_lld_set_filters
+00000000 l    df *ABS*	00000000 ext_lld.c
+00000000 l    df *ABS*	00000000 pal_lld.c
+080243e0 l     O .text	00000012 cfgtab.6604
+00000000 l    df *ABS*	00000000 i2c_lld.c
+08012780 l     F .text	00000218 i2c_lld_serve_event_interrupt
+080129a0 l     F .text	00000092 i2c_lld_serve_error_interrupt
+08012a40 l     F .text	0000003c i2c_lld_safety_timeout
+00000000 l    df *ABS*	00000000 spi_lld.c
+08013030 l     F .text	00000014 spi_lld_serve_tx_interrupt
+08013050 l     F .text	0000007e spi_lld_serve_rx_interrupt
+200017f0 l     O .bss	00000002 dummytx
+20001854 l     O .bss	00000002 dummyrx
+00000000 l    df *ABS*	00000000 pwm_lld.c
+00000000 l    df *ABS*	00000000 serial_lld.c
+080134c0 l     F .text	00000014 notify1
+080245a0 l     O .text	0000000c default_config
+00000000 l    df *ABS*	00000000 qei_lld.c
+00000000 l    df *ABS*	00000000 board.c
+00000000 l    df *ABS*	00000000 evtimer.c
+08013940 l     F .text	00000034 tmrcb
+00000000 l    df *ABS*	00000000 syscalls.c
+00000000 l    df *ABS*	00000000 chprintf.c
+08013a90 l     F .text	0000004e long_to_string_with_divisor
+00000000 l    df *ABS*	00000000 shell.c
+08013e30 l     F .text	0000001e chprintf
+08013e50 l     F .text	00000028 cmd_systime
+08013e80 l     F .text	000000c0 cmd_info
+08013f40 l     F .text	00000040 _strtok.constprop.2
+08014070 l     F .text	000001a0 shell_thread
+20000800 l     O .data	00000018 local_commands
+00000000 l    df *ABS*	00000000 stubs.c
+00000000 l    df *ABS*	00000000 Debug.c
+00000000 l    df *ABS*	00000000 HWSPIDriver.cpp
+00000000 l    df *ABS*	00000000 HWI2CDriver.cpp
+00000000 l    df *ABS*	00000000 I2CMultiplexer.cpp
+00000000 l    df *ABS*	00000000 VI2CDriver.cpp
+00000000 l    df *ABS*	00000000 eeprom.cpp
+00000000 l    df *ABS*	00000000 at24.cpp
+08024e10 l     O .text	00000024 _ZN5amiroL36eeprom_at24_base_file_stream_methodsE
+00000000 l    df *ABS*	00000000 FileSystemInputOutputBase.cpp
+00000000 l    df *ABS*	00000000 FSIODiWheelDrive.cpp
+00000000 l    df *ABS*	00000000 MotorIncrements.cpp
+00000000 l    df *ABS*	00000000 Color.cpp
+08025070 l     O .text	000001b9 _ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors
+00000000 l    df *ABS*	00000000 exti.cpp
+00000000 l    df *ABS*	00000000 pure.cc
+00000000 l    df *ABS*	00000000 del_op.cc
+00000000 l    df *ABS*	00000000 eh_terminate.cc
+00000000 l    df *ABS*	00000000 eh_catch.cc
+00000000 l    df *ABS*	00000000 atexit_arm.cc
+00000000 l    df *ABS*	00000000 eh_arm.cc
+00000000 l    df *ABS*	00000000 eh_call.cc
+0801a990 l     F .text	0000003a _ZN10__cxxabiv1L24__is_gxx_exception_classEPc
+00000000 l    df *ABS*	00000000 eh_personality.cc
+0801aad0 l     F .text	00000032 _ZL12read_sleb128PKhPl
+0801ab10 l     F .text	000000b0 _ZL28read_encoded_value_with_basehjPKhPj
+0801abc0 l     F .text	0000004a _ZL21base_of_encoded_valuehP15_Unwind_Context
+0801ac10 l     F .text	00000092 _ZL17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info
+00000000 l    df *ABS*	00000000 eh_globals.cc
+20005044 l     O .bss	0000000c _ZL10eh_globals
+00000000 l    df *ABS*	00000000 vterminate.cc
+20005050 l     O .bss	00000001 _ZZN9__gnu_cxx27__verbose_terminate_handlerEvE11terminating
+00000000 l    df *ABS*	00000000 eh_throw.cc
+0801b200 l     F .text	00000044 _ZL23__gxx_exception_cleanup19_Unwind_Reason_CodeP21_Unwind_Control_Block
+00000000 l    df *ABS*	00000000 eh_exception.cc
+00000000 l    df *ABS*	00000000 eh_type.cc
+00000000 l    df *ABS*	00000000 class_type_info.cc
+00000000 l    df *ABS*	00000000 eh_alloc.cc
+20005054 l     O .bss	00000004 _ZL14emergency_used
+20005058 l     O .bss	00000800 _ZL16emergency_buffer
+00000000 l    df *ABS*	00000000 si_class_type_info.cc
+00000000 l    df *ABS*	00000000 tinfo.cc
+00000000 l    df *ABS*	00000000 s_cos.c
+00000000 l    df *ABS*	00000000 s_sin.c
+00000000 l    df *ABS*	00000000 e_rem_pio2.c
+080275a0 l     O .text	00000080 npio2_hw
+08027620 l     O .text	00000108 two_over_pi
+00000000 l    df *ABS*	00000000 k_cos.c
+00000000 l    df *ABS*	00000000 k_rem_pio2.c
+08027730 l     O .text	00000010 init_jk
+08027740 l     O .text	00000040 PIo2
+00000000 l    df *ABS*	00000000 k_sin.c
+00000000 l    df *ABS*	00000000 s_fabs.c
+00000000 l    df *ABS*	00000000 s_floor.c
+00000000 l    df *ABS*	00000000 s_scalbn.c
+00000000 l    df *ABS*	00000000 s_copysign.c
+00000000 l    df *ABS*	00000000 abort.c
+00000000 l    df *ABS*	00000000 atof.c
+00000000 l    df *ABS*	00000000 atoi.c
+00000000 l    df *ABS*	00000000 cxa_atexit.c
+00000000 l    df *ABS*	00000000 fputc.c
+00000000 l    df *ABS*	00000000 fputs.c
+00000000 l    df *ABS*	00000000 fvwrite.c
+00000000 l    df *ABS*	00000000 fwrite.c
+00000000 l    df *ABS*	00000000 malloc.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 memchr-stub.c
+00000000 l    df *ABS*	00000000 memcmp.c
+00000000 l    df *ABS*	00000000 memmove.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 mlock.c
+00000000 l    df *ABS*	00000000 putc.c
+00000000 l    df *ABS*	00000000 realloc.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 signal.c
+00000000 l    df *ABS*	00000000 signalr.c
+00000000 l    df *ABS*	00000000 sprintf.c
+00000000 l    df *ABS*	00000000 strcasecmp.c
+00000000 l    df *ABS*	00000000 strlen.c
+00000000 l    df *ABS*	00000000 strncmp.c
+00000000 l    df *ABS*	00000000 strpbrk.c
+00000000 l    df *ABS*	00000000 strspn.c
+00000000 l    df *ABS*	00000000 strtod.c
+0801dea0 l     F .text	0000003e sulp
+080277a0 l     O .text	00000014 fpi.5235
+080277c0 l     O .text	00000014 fpinan.5271
+080277f0 l     O .text	00000028 tinytens
+00000000 l    df *ABS*	00000000 strtol.c
+00000000 l    df *ABS*	00000000 vfprintf.c
+08027820 l     O .text	00000010 zeroes.6760
+08027870 l     O .text	00000010 blanks.6759
+00000000 l    df *ABS*	00000000 syswrite.c
+00000000 l    df *ABS*	00000000 wbuf.c
+00000000 l    df *ABS*	00000000 wsetup.c
+00000000 l    df *ABS*	00000000 __atexit.c
+00000000 l    df *ABS*	00000000 dtoa.c
+080206a0 l     F .text	00000132 quorem
+00000000 l    df *ABS*	00000000 fflush.c
+00000000 l    df *ABS*	00000000 findfp.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 fwalk.c
+00000000 l    df *ABS*	00000000 gdtoa-gethex.c
+08021b60 l     F .text	000000a0 rshift
+00000000 l    df *ABS*	00000000 gdtoa-hexnan.c
+00000000 l    df *ABS*	00000000 locale.c
+20001108 l     O .data	00000038 lconv
+00000000 l    df *ABS*	00000000 makebuf.c
+00000000 l    df *ABS*	00000000 mprec.c
+08027bb0 l     O .text	0000000c p05.5266
+00000000 l    df *ABS*	00000000 s_fpclassify.c
+00000000 l    df *ABS*	00000000 stdio.c
+00000000 l    df *ABS*	00000000 vfprintf.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 fclose.c
+00000000 l    df *ABS*	00000000 chregistry.c
+00000000 l    df *ABS*	00000000 impure.c
+200008c8 l     O .data	00000428 impure_data
+00000000 l    df *ABS*	00000000 ctype_.c
+00000000 l    df *ABS*	00000000 eh_unex_handler.cc
+00000000 l    df *ABS*	00000000 eh_term_handler.cc
+00000000 l    df *ABS*	00000000 reent.c
+00000000 l    df *ABS*	00000000 
+08027eb8 l       .stacks	00000000 _etext
+00000000 l       *UND*	00000000 _ZN5amiro6globalE
+08006150 l       *ABS*	00000000 __crc_start__
+00010000 l       *ABS*	00000000 __ram_size__
+00000000 l       startup	00000000 _text
+20000000 l       startup	00000000 __ram_start__
+20010000 l       *ABS*	00000000 __ram_end__
+20005890 l       .bss	00000000 _end
+00000400 l       *ABS*	00000000 __main_stack_size__
+00000400 l       *ABS*	00000000 __process_stack_size__
+080245d0 g     O .text	00000054 pal_default_config
+0801b570 g     F .text	00000034 __cxa_free_exception
+0800e694 g     F .text	00000022 .hidden ___Unwind_ForcedUnwind
+0800dde8 g     F .text	0000005e .hidden __gnu_Unwind_RaiseException
+0801b710 g     F .text	00000004 _ZNKSt9type_info15__is_function_pEv
+08011c80 g     F .text	0000002c Vector58
+0801a6b0 g     F .text	00000010 _ZSt10unexpectedv
+080142f0 g     F .text	00000010 _ZN10chibios_rt10BaseThread5startEm
+08011ee0 g     F .text	00000030 VectorE8
+08011d70 g     F .text	00000074 Vector9C
+08022c60 g     F .text	0000005e __any_on
+08013a80 g     F .text	00000004 _isatty_r
+0800d354 g     F .text	00000012 .hidden __aeabi_dcmple
+08014620 g     F .text	00000006 _ZN5amiro11HWI2CDriver10releaseBusEv
+0800f5a0 g     F .text	00000046 nvicEnableVector
+0800f840 g     F .text	00000034 dbg_check_lock_from_isr
+0800edb0 g     F .text	00000030 .hidden __gnu_uldivmod_helper
+08006650 g     F .text	00000170 _ZN5amiro12MotorControl4mainEv
+0800f440  w    F .text	00000002 VectorAC
+08014210 g     F .text	00000004 _getpid
+08010050 g     F .text	00000018 chThdExit
+0800f710 g     F .text	0000006c chSysTimerHandlerI
+080105f0 g     F .text	00000034 chEvtBroadcastFlagsI
+08015460 g     F .text	00000058 _ZN5amiro6INA2196Driver4initEPNS0_8InitDataE
+0800fc60 g     F .text	00000050 chSchGoSleepTimeoutS
+0800d290 g     F .text	0000007a .hidden __cmpdf2
+08011050 g     F .text	00000004 i2cInit
+0801c880 g     F .text	00000006 fabs
+08013a00 g     F .text	00000004 _lseek_r
+08018950 g     F .text	00000160 _Z13lineFollowingRA4_iRA2_i
+08017b90 g     F .text	00000004 _ZN5amiro5Color7getBlueEv
+08014d40 g     F .text	00000028 _ZN5amiro9LIS331DLH8getCheckEv
+0800ca00 g     F .text	000000c4 __cxa_demangle
+080148a0 g     F .text	00000006 _ZN5amiro8VCNL402015getAmbientLightEv
+0800d290 g     F .text	0000007a .hidden __eqdf2
+0801a320 g     F .text	00000188 _Z19boardPeripheryCheckP20BaseSequentialStream
+08014440 g     F .text	00000004 _ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
+0800edf0 g     F .text	000002a0 .hidden __divdi3
+0801b2e0 g     F .text	00000070 __cxa_rethrow
+08010350 g     F .text	00000100 chMtxLockS
+0800f7c0 g     F .text	00000034 dbg_check_lock
+08006310 g     F .text	000000d0 _ZN5amiro8HMC5883L4mainEv
+08011cb0 g     F .text	0000002c Vector5C
+08012570 g     F .text	00000090 ext_lld_channel_enable
+08013240 g     F .text	00000010 spi_lld_select
+0800cdf4 g     F .text	0000005a .hidden __floatdidf
+0801dc10 g     F .text	00000028 _kill_r
+080180d0 g     F .text	000001e0 _ZN5amiro12DiWheelDrive17periodicBroadcastEv
+0800f440  w    F .text	00000002 NMIVector
+0801a7f0 g     F .text	00000000 __cxa_end_cleanup
+08014bd0 g     F .text	0000000c _ZN5amiro9LIS331DLHD2Ev
+08010c20 g     F .text	000000c8 chHeapFree
+0800f440  w    F .text	00000002 Vector11C
+08022d80 g     F .text	00000020 __sseek
+080217b0 g     F .text	000000f4 __sinit
+08017c10 g     F .text	00000054 _ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
+08020470 g     F .text	000000a8 __swbuf_r
+08014390 g     F .text	00000010 _ZN10chibios_rt10BaseThreadC2Ev
+080193c0 g     F .text	00000048 _Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc
+08006a60 g     F .text	00000090 _ZN5amiro23ControllerAreaNetworkRx4mainEv
+08006bf0 g     F .text	000002c4 _ZN5amiro10UserThread4mainEv
+08011a80 g     F .text	00000044 dmaInit
+0801b5b0 g     F .text	00000014 _ZN10__cxxabiv120__si_class_type_infoD2Ev
+08027530 g     O .text	00000025 _ZTSN10__cxxabiv120__si_class_type_infoE
+08018790 g     F .text	000000a4 _Z13fuzzyficationiRA3_f
+08013980 g     F .text	0000003c evtStart
+08017c10 g     F .text	00000054 _ZN5amiro12SerialCanMuxC1EP12SerialDriverP9CANDriverh
+08014dd0 g     F .text	00000040 _ZN5amiro8L3G4200DC2EPNS_11HWSPIDriverE
+0801d760 g     F .text	00000002 __malloc_unlock
+08014c00 g     F .text	00000028 _ZN5amiro9LIS331DLHC1EPNS_11HWSPIDriverE
+08017990 g     F .text	0000000a _ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+08024c70 g     O .text	0000001c _ZTVN5amiro8L3G4200DE
+08012340 g     F .text	00000050 can_lld_stop
+08018b40  w    F .text	00000010 _ZNK5amiro10LTC4412wENILj1073811456ELh3ELj1073811456ELh5EE11isPluggedInEv
+08014690 g     F .text	00000012 _ZN5amiro14I2CMultiplexer10releaseBusEv
+08017b50 g     F .text	00000020 _ZN5amiro5ColorC1ENS0_11GlobalColorE
+0801dee0 g     F .text	00000f38 _strtod_r
+0800d848 g     F .text	00000136 .hidden __divsf3
+08015c90 g     F .text	0000000a _ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv
+08012080 g     F .text	0000005c Vector8C
+08017e80 g     F .text	00000046 _ZN5amiro12SerialCanMux3getEv
+08015090  w    F .text	0000000c _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev
+08019850 g     F .text	0000000c _Z25shellRequestMotorGetGainsP20BaseSequentialStreamiPPc
+20000818 g     O .data	00000004 _ZN5amiro12MotorControl25actualWheelBaseDistanceSIE
+08010550 g     F .text	0000004c chEvtUnregister
+08015f90 g     F .text	00000042 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi
+0801d5e0 g     F .text	000000ca memmove
+080112b0 g     F .text	00000050 pwmStart
+0800f440  w    F .text	00000002 VectorDC
+200019cc g     O .bss	00000020 vcnl4020ObstacleProximity
+08016380 g     F .text	0000001c _ZN5amiro12MotorControl18getCurrentVelocityEv
+0800e550 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP
+0801b350 g     F .text	0000000c _ZNSt9exceptionD2Ev
+0800e670 g     F .text	00000022 .hidden _Unwind_Resume_or_Rethrow
+080223c0 g     F .text	0000004c _Balloc
+20001950 g     O .bss	0000000c QEID4
+08006000 g     O startup	00000130 _vectors
+08027eb4 g       .ARM.exidx	00000000 __exidx_end
+0800da70 g     F .text	0000004c .hidden __fixsfsi
+080179e0 g     F .text	00000030 _ZN5amiro23ControllerAreaNetworkTxC1EP9CANDriverh
+0800fc10 g     F .text	00000050 chSchGoSleepS
+08024a20 g     O .text	0000002c _ZTVN5amiro11HWI2CDriverE
+0800f440  w    F .text	00000002 Vector110
+0800e2c4 g     F .text	00000006 .hidden __aeabi_unwind_cpp_pr0
+0800d280 g     F .text	0000008a .hidden __gtdf2
+08026c30 g     O .text	00000014 _ZTVSt13bad_exception
+0801a4b0 g     F .text	00000018 _Z17shellRequestCheckP20BaseSequentialStreamiPPc
+08024e40 g     O .text	00000014 _ZTVN5amiro12MotorControlE
+08015120 g     F .text	00000008 _ZThn8_N5amiro6INA2196Driver4mainEv
+08024cd0  w    O .text	00000028 _ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE
+08015100  w    F .text	00000014 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev
+08013370 g     F .text	00000110 pwm_lld_start
+08011110 g     F .text	00000018 i2cGetErrors
+08011270 g     F .text	00000020 i2cReleaseBus
+08014320 g     F .text	0000000c _ZN10chibios_rt6System7getTimeEv
+080253b0 g     O .text	0000001c _ZTVN5amiro10UserThreadE
+0800e9ec g     F .text	0000000a .hidden _Unwind_GetRegionStart
+20001778 g     O .bss	00000008 EXTD1
+0800e670 g     F .text	00000022 .hidden ___Unwind_Resume_or_Rethrow
+20001780 g     O .bss	00000038 I2CD1
+20005890 g       .bss	00000000 __heap_base__
+08013a60 g     F .text	00000018 _fstat_r
+080173e0 g     F .text	00000088 _ZN5amiro8OdometryC1EPNS_15MotorIncrementsEPNS_8L3G4200DE
+08019610 g     F .text	00000040 _Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc
+2000588c g     O .bss	00000004 errno
+0801c890 g     F .text	00000120 floor
+080119a0 g     F .text	00000030 Vector120
+0800fe80 g     F .text	0000009c chThdCreateI
+08019c60  w    F .text	00000454 _ZN6GlobalC1Ev
+08017b50 g     F .text	00000020 _ZN5amiro5ColorC2ENS0_11GlobalColorE
+0800f780 g     F .text	00000034 dbg_check_enable
+08024f80 g     O .text	00000014 _ZTVN5amiro8OdometryE
+08012db0 g     F .text	00000064 i2c_lld_stop
+08016c20 g     F .text	00000068 _ZN5amiro12MotorControl10printGainsEv
+0800e6b8 g     F .text	00000022 .hidden _Unwind_Backtrace
+0800d31c g     F .text	00000010 .hidden __aeabi_cdcmple
+08014590 g     F .text	00000006 _ZN5amiro11HWI2CDriver5startEPK9I2CConfig
+08018af0 g     F .text	00000014 _ZN5amiro10UserThreadC2Ev
+08018640 g     F .text	00000008 _ZThn408_N5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame
+200019f4 g     O .bss	00000001 running
+08012b00 g     F .text	00000038 VectorC8
+08017ae0 g     F .text	00000034 _ZN5amiro23ControllerAreaNetworkTx14setTargetSpeedERN5types9kinematicE
+0800d4cc g     F .text	00000160 .hidden __aeabi_fadd
+08013250 g     F .text	00000010 spi_lld_unselect
+0800d4c8 g     F .text	00000164 .hidden __subsf3
+08015ca0 g     F .text	00000050 _ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh
+080148b0 g     F .text	00000006 _ZN5amiro8VCNL402018setProximityOffsetEt
+0801a8b0 g     F .text	00000064 __cxa_begin_cleanup
+080148d0 g     F .text	00000006 _ZN5amiro8VCNL402012getProximityEv
+08014610 g     F .text	00000006 _ZN5amiro11HWI2CDriver10acquireBusEv
+08014830  w    F .text	00000030 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+0801a610 g     F .text	00000020 _Z13power_down_cbP9EXTDriverm
+0800e530 g     F .text	00000018 .hidden __restore_core_regs
+0800e570 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP_D_16_to_31
+0800fcb0 g     F .text	00000064 chSchWakeupS
+080249d0 g     O .text	0000000c _ZTVN10chibios_rt15ThreadReferenceE
+08011f10 g     F .text	00000056 ext_lld_exti_irq_enable
+0801a9f0 g     F .text	000000d8 __cxa_call_unexpected
+080146e0  w    F .text	0000000c _ZN5amiro10VI2CDriverD1Ev
+08011470 g     F .text	00000050 sdIncomingDataI
+080109e0 g     F .text	0000004a chOQGetI
+08015510 g     F .text	00000250 _ZN5amiro6INA2196Driver8selftestEv
+0800fb40 g     F .text	00000014 _scheduler_init
+0800fdd0 g     F .text	00000024 chSchRescheduleS
+0800ff20 g     F .text	00000042 chThdCreateStatic
+08018020 g     F .text	000000a4 _ZN5amiro12DiWheelDrive15updateSensorValEv
+080117b0 g     F .text	0000004c qeiStart
+08012170 g     F .text	0000008c Vector94
+08017d80 g     F .text	00000046 _ZN5amiro12SerialCanMux5writeEPKhj
+080179e0 g     F .text	00000030 _ZN5amiro23ControllerAreaNetworkTxC2EP9CANDriverh
+0801b8c0 g     F .text	0000043c __ieee754_rem_pio2
+08006400 g     F .text	000000a0 _ZN5amiro9LIS331DLH4mainEv
+0800f440  w    F .text	00000002 VectorA8
+0800dde4 g     F .text	00000004 .hidden _Unwind_GetCFA
+0800ea20 g     F .text	000000ec memcpy
+08022130 g     F .text	00000194 __hexnan
+0800d30c g     F .text	00000020 .hidden __aeabi_cdrcmple
+08018dd0 g     F .text	00000334 _Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc
+08014530  w    F .text	0000000c _ZN5amiro9I2CDriverD2Ev
+0800f440  w    F .text	00000002 VectorB4
+080143b0 g     F .text	0000000c _ZN10chibios_rt10BaseThread7setNameEPKc
+0800df20 g     F .text	00000034 .hidden _Unwind_VRS_Set
+080146d0 g     F .text	0000000c _ZN5amiro14I2CMultiplexerD2Ev
+0800da58 g     F .text	00000012 .hidden __aeabi_fcmpgt
+080217a0 g     F .text	0000000c _cleanup_r
+08016190 g     F .text	0000000a _ZN5amiro15MotorIncrements14qeiGetPositionEi
+08015790 g     F .text	00000002 _ZN5amiro6EEPROMD1Ev
+0801b430 g     F .text	0000000c _ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+0801ef70 g     F .text	000014e0 _svfprintf_r
+0800cd84 g     F .text	00000022 .hidden __floatsidf
+0800d288 g     F .text	00000082 .hidden __ltdf2
+080199a0 g     F .text	00000060 _Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc
+080147e0 g     F .text	0000001c _ZN5amiro10VI2CDriverC2EPNS_14I2CMultiplexerEh
+0801b440 g     F .text	00000014 _ZN10__cxxabiv117__class_type_infoD1Ev
+0800ed50 g     F .text	00000000 .hidden __aeabi_uldivmod
+08016140 g     F .text	0000001a _ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_
+080157a0 g     F .text	00000004 _ZN5amiro6EEPROM8geterrorEPv
+0800fb60 g     F .text	00000044 chSchReadyI
+08017770  w    F .text	00000030 _ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
+0800618c g       constructors	00000000 __fini_array_end
+0800f450  w    F .text	00000004 port_halt
+08011070 g     F .text	00000050 i2cStart
+080101f0 g     F .text	0000005c chSemResetI
+20000800 g       .stacks	00000000 __main_thread_stack_end__
+080177d0 g     F .text	0000000c _ZN5amiro23ControllerAreaNetworkRxD2Ev
+08022cc0 g     F .text	00000050 __fpclassifyd
+0800fa70 g     F .text	00000018 _vt_init
+08022bc0 g     F .text	00000050 __ratio
+080123d0 g     F .text	00000076 can_lld_transmit
+08010b00 g     F .text	00000030 chCoreAllocI
+080157d0 g     F .text	00000006 _ZN5amiro6EEPROM5lseekEPvm
+080067e0 g     F .text	000001bc _ZN5amiro11DistControl4mainEv
+08014a20 g     F .text	00000030 _ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
+08014d80 g     F .text	00000014 _ZN5amiro8L3G4200DD0Ev
+0801cf70 g     F .text	00000010 malloc
+08019110 g     F .text	00000264 _Z21shellRequestSetLightsP20BaseSequentialStreamiPPc
+08017760 g     F .text	00000004 _ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame
+08011570 g     F .text	00000040 spiUnselect
+0801dba0 g     F .text	00000056 _raise_r
+0801a0c0 g     F .text	000000f8 _Z14systemShutdownv
+08010b80 g     F .text	0000001c _heap_init
+0800d634 g     F .text	0000001c .hidden __aeabi_i2f
+080118b0 g     F .text	00000030 Vector74
+20001740 g     O .bss	00000038 CAND1
+08027ab0 g     O .text	000000c8 __mprec_tens
+080195f0 g     F .text	0000001c _Z17shellRequestCalibP20BaseSequentialStreamiPPc
+08010d50 g     F .text	00000034 halInit
+08025420  w    O .text	0000001c _ZTVN5amiro10LTC4412wENILj1073811456ELh3ELj1073811456ELh5EEE
+08010d90 g     F .text	00000004 canInit
+080157e0 g     F .text	00000004 _ZN5amiro4AT245closeEPv
+08018af0 g     F .text	00000014 _ZN5amiro10UserThreadC1Ev
+080146b0 g     F .text	00000018 _ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE
+0801bd00 g     F .text	00000248 __kernel_cos
+080150b0  w    F .text	00000004 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv
+0800d988 g     F .text	00000066 .hidden __lesf2
+0800f440  w    F .text	00000002 VectorEC
+20001140 g       .bss	00000000 _bss_start
+08014d70 g     F .text	0000000c _ZN5amiro8L3G4200DD2Ev
+0800fd20 g     F .text	0000004c chSchDoRescheduleBehind
+0800d3e0 g     F .text	00000040 .hidden __fixunsdfsi
+080163a0 g     F .text	00000058 _ZN5amiro12MotorControl32setWheelDiameterCorrectionFactorEfb
+20005860 g     O .bss	00000004 __malloc_top_pad
+0800f440  w    F .text	00000002 UsageFaultVector
+08016ee0 g     F .text	000000a8 _ZN5amiro11DistControlC1EPNS_12MotorControlEPNS_15MotorIncrementsE
+0801a260  w    F .text	000000ba _ZN5amiro7PCA9544ILb1EE8getCheckEv
+0801dc40 g     F .text	00000004 _getpid_r
+08014700 g     F .text	00000002 _ZN5amiro10VI2CDriver4stopEv
+080144b0 g     F .text	0000003a _ZN5amiro11HWSPIDriver8exchangeEPhPKhj
+20010000 g       *ABS*	00000000 __heap_end__
+0800f440  w    F .text	00000002 DebugMonitorVector
+0800df70 g     F .text	00000070 .hidden __gnu_Unwind_Backtrace
+080145b0 g     F .text	00000006 _ZN5amiro11HWI2CDriver9getErrorsEv
+20001960 g     O .bss	00000004 .hidden __dso_handle
+08010170 g     F .text	0000004a chThdCreateFromHeap
+0800cd64 g     F .text	0000001e .hidden __aeabi_ui2d
+08012490 g     F .text	000000c2 can_lld_receive
+080222d0 g     F .text	00000008 _localeconv_r
+08015d40 g     F .text	00000042 _ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth
+0801a920 g     F .text	00000070 __gnu_end_cleanup
+08022610 g     F .text	00000012 __i2b
+0801cbb0 g     F .text	00000314 __sfvwrite_r
+0801b4a0 g     F .text	00000024 _ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+08011790 g     F .text	00000004 qeiInit
+08014860 g     F .text	0000003c _ZN5amiro8VCNL4020C1EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE
+08006190 g     F .text	00000004 _ZN10chibios_rt10BaseThread4mainEv
+08016990 g     F .text	000001f0 _ZN5amiro12MotorControl13PIDControllerEv
+080186d0 g     F .text	00000024 _ZN5amiro12DiWheelDrive9terminateEv
+0800f800 g     F .text	0000003c dbg_check_unlock
+08025230 g     O .text	00000020 _ZTVN5amiro12SerialCanMuxE
+0800cae0 g     F .text	00000000 .hidden __aeabi_drsub
+0800f440  w    F .text	00000002 Vector40
+08018700 g     F .text	0000000c _ZN5amiro10UserThreadD1Ev
+08013a30 g     F .text	00000028 _sbrk_r
+08018b20  w    F .text	0000000c _ZN5amiro11BaseLTC4412D2Ev
+0800f440  w    F .text	00000002 VectorF8
+0800f440  w    F .text	00000002 Vector108
+080151e0 g     F .text	000000a4 _ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+08014490 g     F .text	00000014 _ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig
+08015af0 g     F .text	000000fa _ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb
+0800f340 g     F .text	000000fc ResetHandler
+080108b0 g     F .text	0000009c chIQReadTimeout
+0800e560 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP_D
+08017bc0 g     F .text	0000000c _ZN5amiro12SerialCanMuxD1Ev
+08027580 g     O .text	00000020 _ZTVSt9type_info
+08012a80 g     F .text	0000001c VectorBC
+080197d0 g     F .text	00000028 _Z21shellRequestMotorStopP20BaseSequentialStreamiPPc
+08011000 g     F .text	0000004c extStart
+08014570  w    F .text	00000014 _ZN5amiro11HWI2CDriverD0Ev
+0801b370 g     F .text	00000008 _ZNKSt9exception4whatEv
+080139f0 g     F .text	0000000a _read_r
+080119d0 g     F .text	00000030 Vector124
+0801a4d0  w    F .text	0000013c _ZN6GlobalD1Ev
+080144f0 g     F .text	00000036 _ZN5amiro11HWSPIDriver5writeEPKhj
+0800d340 g     F .text	00000012 .hidden __aeabi_dcmplt
+0800e2dc g     F .text	0000024c .hidden _Unwind_VRS_Pop
+08022f10 g     F .text	00000080 _fclose_r
+0800e2d4  w    F .text	00000006 .hidden __aeabi_unwind_cpp_pr2
+0800f490 g     F .text	00000034 _port_init
+08014b70 g     F .text	00000060 _ZN5amiro8HMC5883L9writeConfEv
+080146e0  w    F .text	0000000c _ZN5amiro10VI2CDriverD2Ev
+2000585c g     O .bss	00000004 __malloc_max_sbrked_mem
+080117a0 g     F .text	0000000a qeiObjectInit
+08015960 g     F .text	0000007a _ZN5amiro4AT248poll_ackEPv
+0800e6b8 g     F .text	00000022 .hidden ___Unwind_Backtrace
+08014800 g     F .text	0000000c _ZN5amiro8VCNL4020D2Ev
+08011b80 g     F .text	00000070 hal_lld_init
+0801c710 g     F .text	0000016c __kernel_sin
+0800cda8 g     F .text	0000003a .hidden __extendsfdf2
+0800d0a4 g     F .text	000001d0 .hidden __aeabi_ddiv
+08019bc0 g     F .text	00000098 _Z25shellRequestSetVcnlOffsetP20BaseSequentialStreamiPPc
+08017a40 g     F .text	00000040 _ZN5amiro23ControllerAreaNetworkTx15transmitMessageEP10CANTxFrame
+080177e0 g     F .text	000001a4 _ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame
+0800caec g     F .text	00000276 .hidden __adddf3
+0800d990 g     F .text	0000005e .hidden __nesf2
+08018690 g     F .text	00000030 _ZN5amiro12DiWheelDrive29calibrateProximityFloorValuesEv
+080177a0 g     F .text	00000030 _ZN5amiro23ControllerAreaNetworkRxC1EP9CANDriverh
+08016b80 g     F .text	00000094 _ZN5amiro12MotorControl29controllerAndCalibrationLogicEv
+080130d0 g     F .text	00000068 spi_lld_init
+080274f0 g     O .text	0000002c _ZTVN10__cxxabiv120__si_class_type_infoE
+08017b40 g     F .text	0000000e _ZN5amiro5ColorC1Eiii
+08022a40 g     F .text	000000b6 __b2d
+08027cdc g       .ARM.exidx	00000000 __exidx_start
+08017730 g     F .text	00000024 _ZN5amiro8Odometry14updateDistanceEv
+0800ce50 g     F .text	00000254 .hidden __aeabi_dmul
+08010000 g     F .text	0000004c chThdExitS
+08010ff0 g     F .text	0000000a extObjectInit
+08024dd0 g     O .text	00000040 _ZTVN5amiro6INA2196DriverE
+0801b480 g     F .text	00000018 _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+0801a650 g     F .text	00000008 _ZdlPv
+08027790 g     O .text	00000004 _global_impure_ptr
+08017b20 g     F .text	00000012 _ZN5amiro5ColorC1ERKS0_
+0801d7e0 g     F .text	000003c0 _realloc_r
+080177d0 g     F .text	0000000c _ZN5amiro23ControllerAreaNetworkRxD1Ev
+08014980 g     F .text	0000004e _ZN5amiro8VCNL402015calibrateOffsetERt
+08018b30  w    F .text	0000000c _ZN5amiro10LTC4412wENILj1073811456ELh3ELj1073811456ELh5EED2Ev
+08015340  w    F .text	00000098 _ZN5amiro6INA2196Driver19readShuntVoltage_uVEv
+080279a0 g     O .text	00000100 __hexdig
+2000195c g     O .bss	00000004 shell_terminated
+0800f090 g     F .text	00000290 .hidden __udivdi3
+0800e628 g     F .text	00000022 .hidden ___Unwind_RaiseException
+08027b80 g     O .text	00000028 __mprec_bigtens
+08011240 g     F .text	00000028 i2cAcquireBus
+080224d0 g     F .text	00000098 __s2b
+0801cad0 g     F .text	0000000e abort
+08012450 g     F .text	00000036 can_lld_is_rx_nonempty
+0800e64c g     F .text	00000022 .hidden ___Unwind_Resume
+0800cd64 g     F .text	0000001e .hidden __floatunsidf
+08014330 g     F .text	00000024 _ZN10chibios_rt15ThreadReference16requestTerminateEv
+080228d0 g     F .text	00000046 __mcmp
+080110c0 g     F .text	00000048 i2cStop
+08017c70 g     F .text	00000088 _ZN5amiro12SerialCanMux19checkByteForBLResetEPhj
+08017a20 g     F .text	00000014 _ZN5amiro23ControllerAreaNetworkTx14encodeDeviceIdEP10CANTxFramei
+08016c90 g     F .text	00000070 _ZN5amiro12MotorControl10resetGainsEv
+0801a750 g     F .text	0000008c __cxa_end_catch
+08018b50  w    F .text	00000004 _ZNK5amiro10LTC4412wENILj1073811456ELh3ELj1073811456ELh5EE9isEnabledEv
+08013ae0 g     F .text	00000344 chvprintf
+0801b360 g     F .text	0000000c _ZNSt13bad_exceptionD2Ev
+200019f8 g     O .bss	00000010 vcnl4020AmbientLight
+20001274 g     O .bss	00000408 dbg_trace_buffer
+0800f440  w    F .text	00000002 PendSVVector
+0801ef50 g     F .text	00000018 strtol
+08014b00 g     F .text	00000070 _ZN5amiro8HMC5883L8getCheckEv
+08006600 g     F .text	00000022 _ZN5amiro6INA2196Driver4mainEv
+08015bf0 g     F .text	00000096 _ZN5amiro12fileSystemIo16FileSystemIoBase4initEv
+08018710 g     F .text	00000014 _ZN5amiro10UserThreadD0Ev
+08015920 g     F .text	00000028 _ZN5amiro4AT24C2EjhtPNS_9I2CDriverE
+0800f440  w    F .text	00000002 Vector118
+08017b20 g     F .text	00000012 _ZN5amiro5ColorC2ERKS0_
+0801a690 g     F .text	00000010 _ZSt9terminatev
+080150a0  w    F .text	00000004 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_
+0800d420 g     F .text	0000009e .hidden __aeabi_d2f
+0800e578 g     F .text	00000000 .hidden __gnu_Unwind_Restore_WMMXD
+0800fa90 g     F .text	00000054 chVTSetI
+080249f0  w    O .text	0000002c _ZTVN5amiro9I2CDriverE
+080154c0 g     F .text	0000001e _ZN5amiro6INA2196Driver6wakeupEv
+08011d10 g     F .text	0000002c Vector64
+20005890 g       .bss	00000000 _bss_end
+08014420 g     F .text	00000004 _ZN10chibios_rt9EvtSourceC1Ev
+0800d4c8 g     F .text	00000164 .hidden __aeabi_fsub
+20001680 g     O .bss	00000004 dbg_panic_msg
+0801bf50 g     F .text	000007bc __kernel_rem_pio2
+080069c0 g     F .text	00000080 _ZN5amiro8Odometry4mainEv
+08019410 g     F .text	0000007c _Z37shellRequestResetCalibrationConstantsP20BaseSequentialStreamiPPc
+0800f330  w    F .text	00000002 _default_exit
+08012710 g     F .text	00000068 _pal_lld_setgroupmode
+08018650 g     F .text	00000034 _ZN5amiro12DiWheelDriveC1EP9CANDriver
+08026cd0 g     O .text	00000022 _ZTSN10__cxxabiv117__class_type_infoE
+080116c0 g     F .text	00000028 spiAcquireBus
+08022570 g     F .text	00000040 __hi0bits
+0800f440  w    F .text	00000002 VectorCC
+0801acb0 g     F .text	0000040a __gxx_personality_v0
+08026b90 g     O .text	00000008 _ZTISt9exception
+0800da44 g     F .text	00000012 .hidden __aeabi_fcmpge
+080137f0 g     F .text	00000008 qei_lld_enable
+0800d390 g     F .text	0000004e .hidden __fixdfsi
+08013640 g     F .text	00000024 sd_lld_init
+080157f0 g     F .text	0000012c _ZN5amiro4AT245writeEPvPKhj
+080101c0 g     F .text	00000028 chSemInit
+08018ab0 g     F .text	00000034 _Z13wallFollowingRA2_i
+0800f440  w    F .text	00000002 Vector54
+08014630 g     F .text	0000000c _ZN5amiro11HWI2CDriverC2EP9I2CDriver
+08015cf0 g     F .text	00000046 _ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh
+0800d660 g     F .text	0000007c .hidden __floatdisf
+08012200 g     F .text	00000090 Vector98
+0801ee20 g     F .text	00000010 strtod
+08024f50 g     O .text	00000014 _ZTVN5amiro11DistControlE
+08024a50 g     O .text	0000002c _ZTVN5amiro14I2CMultiplexerE
+0801b6f0 g     F .text	0000000c _ZNSt9type_infoD1Ev
+08014430 g     F .text	0000000a _ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+08015f00 g     F .text	00000042 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf
+08020450 g     F .text	00000018 write
+08014530  w    F .text	0000000c _ZN5amiro9I2CDriverD1Ev
+0801d770 g     F .text	00000058 _putc_r
+08014540  w    F .text	0000000c _ZN5amiro11HWI2CDriverD2Ev
+0801b730 g     F .text	00000014 _ZNSt9type_infoD0Ev
+0801cae0 g     F .text	00000006 atof
+0800f440  w    F .text	00000002 VectorD8
+0800d980 g     F .text	0000006e .hidden __gtsf2
+0800caec g     F .text	00000276 .hidden __aeabi_dadd
+08012e20 g     F .text	000000f8 i2c_lld_master_receive_timeout
+0800f440  w    F .text	00000002 Vector24
+0800d288 g     F .text	00000082 .hidden __ledf2
+08014f90 g     F .text	00000100 _ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE
+0800f960 g     F .text	00000038 chDbgCheckClassI
+08010450 g     F .text	00000020 chMtxLock
+08013140 g     F .text	000000fc spi_lld_start
+080161b0  w    F .text	00000030 _ZN10chibios_rt16BaseStaticThreadILi512EE5startEm
+0800da30 g     F .text	00000012 .hidden __aeabi_fcmple
+08022770 g     F .text	0000009c __pow5mult
+0800cde4 g     F .text	0000006a .hidden __aeabi_ul2d
+08010b60 g     F .text	00000014 chCoreStatus
+0801b720 g     F .text	00000004 _ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+08015e30 g     F .text	0000003a _ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf
+0800e548 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP
+0800fe00 g     F .text	00000018 chSchDoReschedule
+0800f690 g     F .text	00000074 chSysInit
+080179d0 g     F .text	00000004 _ZN5amiro23ControllerAreaNetworkTx15updateSensorValEv
+080182e0  w    F .text	00000008 _ZThn408_N5amiro12DiWheelDriveD1Ev
+080198d0  w    F .text	00000054 _ZN5amiro7PCA9544ILb1EE6selectEh
+0800ffa0 g     F .text	00000030 chThdSleep
+080107c0 g     F .text	0000001e chIQInit
+08014a20 g     F .text	00000030 _ZN5amiro8HMC5883LC1EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
+08019860  w    F .text	00000014 _ZN5amiro7PCA9544ILb1EED1Ev
+08024ae0 g     O .text	0000001c _ZTVN5amiro8HMC5883LE
+08014300 g     F .text	0000000c _ZN10chibios_rt15ThreadReference4stopEv
+08024350 g     O .text	00000090 _stm32_dma_streams
+08011970 g     F .text	00000030 Vector84
+0800e64c g     F .text	00000022 .hidden _Unwind_Resume
+08015950 g     F .text	0000000c _ZN5amiro4AT24D2Ev
+08010fe0 g     F .text	00000004 extInit
+0800dec0 g     F .text	0000000e .hidden _Unwind_DeleteException
+08019650 g     F .text	000000e4 _Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc
+0800debc g     F .text	00000002 .hidden _Unwind_Complete
+08017b70 g     F .text	00000004 _ZN5amiro5Color6getRedEv
+0800f540 g     F .text	0000002a SysTickVector
+080114d0 g     F .text	00000010 spiObjectInit
+0801b4d0 g     F .text	0000003e _ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+08019570 g     F .text	00000078 _Z25shellRequestGetVcnlOffsetP20BaseSequentialStreamiPPc
+200017f4 g     O .bss	00000030 SPID1
+08017f00 g     F .text	000000d0 _ZN5amiro12SerialCanMux13sendSwitchCmdEh
+0800d37c g     F .text	00000012 .hidden __aeabi_dcmpgt
+080198a0  w    F .text	00000030 _ZN5amiro10LTC4412wENILj1073811456ELh3ELj1073811456ELh5EE6enableEb
+08016400 g     F .text	00000030 _ZN5amiro12MotorControl26setActualWheelBaseDistanceEfb
+08010e50 g     F .text	00000060 canStop
+0801b3f0 g     F .text	00000036 _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+08014c00 g     F .text	00000028 _ZN5amiro9LIS331DLHC2EPNS_11HWSPIDriverE
+0801b790 g     F .text	0000008c cos
+20001270 g     O .bss	00000004 dbg_isr_cnt
+08019ad0 g     F .text	0000003c _Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc
+08014490 g     F .text	00000014 _ZN5amiro11HWSPIDriverC1EP9SPIDriverPK9SPIConfig
+08011bf0 g     F .text	00000090 stm32_clock_init
+080218b0 g     F .text	00000002 __sfp_lock_acquire
+08026ba0 g     O .text	00000012 _ZTSSt13bad_exception
+0801d4d0 g     F .text	00000092 memchr
+20000824 g     O .data	00000098 extcfg
+08012670 g     F .text	00000094 _pal_lld_init
+08021970 g     F .text	00000198 _free_r
+08018b20  w    F .text	0000000c _ZN5amiro11BaseLTC4412D1Ev
+080136f0 g     F .text	0000002c qei_lld_init
+08014630 g     F .text	0000000c _ZN5amiro11HWI2CDriverC1EP9I2CDriver
+0800d368 g     F .text	00000012 .hidden __aeabi_dcmpge
+08018700 g     F .text	0000000c _ZN5amiro10UserThreadD2Ev
+080113d0 g     F .text	00000004 sdInit
+0800f440  w    F .text	00000002 BusFaultVector
+080157b0 g     F .text	00000004 _ZN5amiro6EEPROM7getsizeEPv
+08014460 g     F .text	0000000c _ZN5amiro11HWSPIDriverD2Ev
+0800cae8 g     F .text	0000027a .hidden __aeabi_dsub
+0800f440  w    F .text	00000002 VectorD0
+080150c0  w    F .text	00000004 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_
+20001100 g     O .data	00000004 __malloc_sbrk_base
+08024ac0 g     O .text	0000001c _ZTVN5amiro8VCNL4020E
+08018840 g     F .text	000000cc _Z15defuzzyficationRA4_11colorMemberRA2_i
+08010ad0 g     F .text	00000028 _core_init
+08019490 g     F .text	00000080 _Z35shellRequestGetCalibrationConstantsP20BaseSequentialStreamiPPc
+08013350 g     F .text	00000018 pwm_lld_init
+08027570 g     O .text	0000000d _ZTSSt9type_info
+08014310 g     F .text	00000004 _ZN10chibios_rt6System4initEv
+0801b820 g     F .text	00000094 sin
+0800cde4 g     F .text	0000006a .hidden __floatundidf
+0801a630 g     F .text	00000014 __cxa_pure_virtual
+20001858 g     O .bss	00000014 PWMD2
+08011420 g     F .text	00000048 sdStart
+08022810 g     F .text	000000bc __lshift
+080179b0 g     F .text	00000008 _ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame
+0800d634 g     F .text	0000001c .hidden __floatsisf
+080177a0 g     F .text	00000030 _ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+08022db0 g     F .text	00000100 __ssprint_r
+0800e734 g     F .text	0000028e .hidden __gnu_unwind_execute
+08012560 g     F .text	0000000c ext_lld_init
+080253d0  w    O .text	0000002c _ZTVN5amiro7PCA9544ILb1EEE
+08011eb0 g     F .text	00000030 VectorE4
+08011300 g     F .text	0000004c pwmEnableChannel
+080205f0 g     F .text	000000a8 __register_exitproc
+080248a0 g     O .text	00000014 _ZTVN10chibios_rt10BaseThreadE
+08019c60  w    F .text	00000454 _ZN6GlobalC2Ev
+08012aa0 g     F .text	00000038 VectorC0
+0801dd50 g     F .text	000000b4 strncmp
+0801b630 g     F .text	00000096 _ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+080146f0 g     F .text	00000002 _ZN5amiro10VI2CDriver5startEPK9I2CConfig
+0800e558 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP_D
+08016060 g     F .text	00000042 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf
+08014420 g     F .text	00000004 _ZN10chibios_rt9EvtSourceC2Ev
+0800f570 g     F .text	00000010 _port_switch
+080139c0 g     F .text	00000024 evtStop
+08025330 g     O .text	0000004c _ZTVN5amiro12DiWheelDriveE
+08022630 g     F .text	0000013c __multiply
+080173e0 g     F .text	00000088 _ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE
+08018bc0 g     F .text	000001bc _Z20shellRequestShutdownP20BaseSequentialStreamiPPc
+080160f0 g     F .text	00000042 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf
+0800da70 g     F .text	0000004c .hidden __aeabi_f2iz
+08019510 g     F .text	00000060 _Z27shellRequestResetVcnlOffsetP20BaseSequentialStreamiPPc
+20005864 g     O .bss	00000028 __malloc_current_mallinfo
+0800d990 g     F .text	0000005e .hidden __eqsf2
+08022b00 g     F .text	000000ba __d2b
+0800f470 g     F .text	00000012 SVCallVector
+0801dca0 g     F .text	00000044 strcasecmp
+0800f320  w    F .text	00000002 __late_init
+0801b6f0 g     F .text	0000000c _ZNSt9type_infoD2Ev
+0801a800 g     F .text	000000ac __cxa_type_match
+0800fa50 g     F .text	00000018 chDbgPanic
+0801b6d0 g     F .text	00000020 _ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+20001684 g     O .bss	00000010 vtlist
+080143f0 g     F .text	00000004 _ZN10chibios_rt10BaseThread12waitOneEventEm
+0800f440  w    F .text	00000002 HardFaultVector
+0800f4d0 g     F .text	00000070 _port_irq_epilogue
+08014450 g     F .text	00000004 _ZN10chibios_rt9EvtSource14broadcastFlagsEm
+0801d7d0 g     F .text	00000010 realloc
+08013840 g     F .text	00000018 boardWakeup
+0800de5c g     F .text	00000044 .hidden __gnu_Unwind_Resume
+08014a00 g     F .text	00000014 _ZN5amiro8HMC5883LD0Ev
+0801cb00 g     F .text	00000014 __cxa_atexit
+08010b30 g     F .text	00000024 chCoreAlloc
+08026c20 g     O .text	00000008 _ZTIN10__cxxabiv119__foreign_exceptionE
+0800d848 g     F .text	00000136 .hidden __aeabi_fdiv
+08018650 g     F .text	00000034 _ZN5amiro12DiWheelDriveC2EP9CANDriver
+08013fb0 g     F .text	00000018 shellCreate
+08013a20 g     F .text	00000004 _close_r
+0800cd84 g     F .text	00000022 .hidden __aeabi_i2d
+080111c0 g     F .text	0000007c i2cMasterReceiveTimeout
+08015920 g     F .text	00000028 _ZN5amiro4AT24C1EjhtPNS_9I2CDriverE
+20001a30 g     O .bss	00003608 global
+080122c0 g     F .text	00000074 can_lld_start
+08010ba0 g     F .text	00000080 chHeapAlloc
+0800f9a0 g     F .text	00000034 chDbgCheckClassS
+0800e568 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP_D_16_to_31
+0800f440  w    F .text	00000002 VectorF0
+08018910 g     F .text	00000036 _Z11memberToLed11colorMember
+0801d570 g     F .text	00000066 memcmp
+08014f70 g     F .text	00000014 _ZN5amiro6INA2196DriverD1Ev
+0801ced0 g     F .text	00000062 _fwrite_r
+08010eb0 g     F .text	00000094 canTransmit
+08011a30 g     F .text	0000004c Vector12C
+20001824 g     O .bss	00000030 SPID2
+08017b80 g     F .text	00000004 _ZN5amiro5Color8getGreenEv
+08011290 g     F .text	00000004 pwmInit
+0800d650 g     F .text	0000008c .hidden __floatundisf
+0801b5b0 g     F .text	00000014 _ZN10__cxxabiv120__si_class_type_infoD1Ev
+08020520 g     F .text	000000c4 __swsetup_r
+0800e628 g     F .text	00000022 .hidden _Unwind_RaiseException
+0800ede0  w    F .text	00000002 .hidden __aeabi_ldiv0
+0800d0a4 g     F .text	000001d0 .hidden __divdf3
+08011800 g     F .text	00000044 qeiEnable
+08017a10 g     F .text	0000000c _ZN5amiro23ControllerAreaNetworkTxD2Ev
+08014460 g     F .text	0000000c _ZN5amiro11HWSPIDriverD1Ev
+08022c10 g     F .text	00000046 __copybits
+0801b700 g     F .text	00000004 _ZNKSt9type_info14__is_pointer_pEv
+08014670 g     F .text	00000014 _ZN5amiro14I2CMultiplexer10acquireBusEv
+08015760 g     F .text	0000002e _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+080153e0 g     F .text	00000080 _ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+080182b0  w    F .text	00000028 _ZN5amiro12DiWheelDriveD2Ev
+20000cf4 g     O .data	00000408 __malloc_av_
+0800d62c g     F .text	00000024 .hidden __aeabi_ui2f
+08016210 g     F .text	00000168 _ZN5amiro12MotorControlC1EP9PWMDriverPNS_15MotorIncrementsEP12GPIO_TypeDefiPNS_12fileSystemIo16FSIODiWheelDriveE
+08016210 g     F .text	00000168 _ZN5amiro12MotorControlC2EP9PWMDriverPNS_15MotorIncrementsEP12GPIO_TypeDefiPNS_12fileSystemIo16FSIODiWheelDriveE
+08014a50 g     F .text	000000ae _ZN5amiro8HMC5883L21getMagnetizationGaussEh
+08014360 g     F .text	00000028 _ZN10chibios_rt15ThreadReference4waitEv
+08015790 g     F .text	00000002 _ZN5amiro6EEPROMD2Ev
+080182f0  w    F .text	00000030 _ZN5amiro12DiWheelDriveD0Ev
+08016160 g     F .text	00000028 _ZN5amiro15MotorIncrements5startEv
+0800f440  w    F .text	00000002 Vector100
+0800f910 g     F .text	00000044 dbg_check_leave_isr
+0800ce50 g     F .text	00000254 .hidden __muldf3
+08027eb8 g       .stacks	00000000 _textdata
+08013260 g     F .text	00000036 spi_lld_exchange
+08022d10 g     F .text	00000022 __sread
+08011df0 g     F .text	00000084 VectorE0
+0800f440  w    F .text	00000002 VectorF4
+08026b60 g     O .text	00000014 _ZTVSt9exception
+0800f440  w    F .text	00000002 MemManageVector
+08010da0 g     F .text	0000003e canObjectInit
+0801d750 g     F .text	00000002 __malloc_lock
+0800618c g       constructors	00000000 __fini_array_start
+08026c90 g     O .text	0000002c _ZTVN10__cxxabiv117__class_type_infoE
+0801b250 g     F .text	00000090 __cxa_throw
+08014860 g     F .text	0000003c _ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE
+08021770 g     F .text	0000002c _fflush_r
+08014e10 g     F .text	00000008 _ZN5amiro8L3G4200D14getAngularRateEh
+08022eb0 g     F .text	0000005e _calloc_r
+08015760 g     F .text	0000002e _ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+0800d990 g     F .text	0000005e .hidden __cmpsf2
+080143c0 g     F .text	00000014 _ZN10chibios_rt10BaseThread15shouldTerminateEv
+08017b40 g     F .text	0000000e _ZN5amiro5ColorC2Eiii
+08018b80  w    F .text	00000014 _ZN5amiro10LTC4412wENILj1073811456ELh3ELj1073811456ELh5EED0Ev
+080064c0 g     F .text	0000011c _ZN5amiro8L3G4200D4mainEv
+0800ffd0 g     F .text	0000002c chThdSleepUntil
+08017bd0 g     F .text	00000014 _ZN5amiro12SerialCanMuxD0Ev
+0801d6b0 g     F .text	00000094 memset
+08018d80 g     F .text	00000010 _Z22shellRequestHelloWorldP20BaseSequentialStreamiPPc
+08019380 g     F .text	0000003c _Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc
+08006f00 g     F .text	000003fc main
+08011850 g     F .text	00000030 Vector6C
+08014540  w    F .text	0000000c _ZN5amiro11HWI2CDriverD1Ev
+20005858 g     O .bss	00000004 __malloc_max_total_mem
+08015160 g     F .text	00000080 _ZN5amiro6INA2196DriverC1ERNS_9I2CDriverEh
+0800d660 g     F .text	0000007c .hidden __aeabi_l2f
+20001694 g     O .bss	0000001c rlist
+08019b10 g     F .text	000000a8 _Z19shellRequestGetVcnlP20BaseSequentialStreamiPPc
+080168d0 g     F .text	000000bc _ZN5amiro12MotorControl18setRightWheelSpeedEii
+0801b0c0 g     F .text	00000008 __cxa_get_globals_fast
+08014650 g     F .text	0000000c _ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm
+0800f440  w    F .text	00000002 VectorA0
+0800d988 g     F .text	00000066 .hidden __ltsf2
+08012630 g     F .text	00000038 ext_lld_start
+080114c0 g     F .text	00000004 spiInit
+080116f0 g     F .text	00000020 spiReleaseBus
+08022da0 g     F .text	00000008 __sclose
+0800f8c0 g     F .text	00000044 dbg_check_enter_isr
+08022f90 g     F .text	00000010 fclose
+20001a14 g     O .bss	00000010 vcnl4020Proximity
+08017380 g     F .text	0000002c _ZN5amiro8Odometry11setPositionEfff
+08012f20 g     F .text	00000104 i2c_lld_master_transmit_timeout
+0801ee30 g     F .text	00000114 _strtol_r
+0800d420 g     F .text	0000009e .hidden __truncdfsf2
+080149d0 g     F .text	0000001c _ZN5amiro8VCNL40209calibrateEv
+08016e10 g     F .text	00000030 _ZN5amiro12MotorControl14updateDistanceERA2_KfRA2_f
+0800618c g       constructors	00000000 __init_array_end
+08014e20 g     F .text	00000120 _ZN5amiro8L3G4200D9configureEPKNS0_14L3G4200DConfigE
+080207e0 g     F .text	00000e38 _dtoa_r
+0801cf90 g     F .text	00000538 _malloc_r
+08013480 g     F .text	00000032 pwm_lld_enable_channel
+080159e0 g     F .text	0000009a _ZN5amiro4AT244readEPvPhj
+080147d0 g     F .text	00000004 _ZN5amiro10VI2CDriver10releaseBusEv
+0801b380 g     F .text	00000008 _ZNKSt13bad_exception4whatEv
+0800cdf4 g     F .text	0000005a .hidden __aeabi_l2d
+08012ae0 g     F .text	0000001c VectorC4
+08011910 g     F .text	00000030 Vector7C
+20005040 g     O .bss	00000004 shutdown_now
+08026cc0 g     O .text	0000000c _ZTIN10__cxxabiv117__class_type_infoE
+08021b10 g     F .text	00000048 _fwalk
+08016ee0 g     F .text	000000a8 _ZN5amiro11DistControlC2EPNS_12MotorControlEPNS_15MotorIncrementsE
+08010330 g     F .text	0000001c chMtxInit
+0800d650 g     F .text	0000008c .hidden __aeabi_ul2f
+0800f670 g     F .text	00000014 _idle_thread
+0801b360 g     F .text	0000000c _ZNSt13bad_exceptionD1Ev
+08010630 g     F .text	00000028 chEvtBroadcastFlags
+08006b10 g     F .text	00000078 _ZN5amiro23ControllerAreaNetworkTx4mainEv
+08025400  w    O .text	00000014 _ZTVN5amiro11BaseLTC4412E
+08010a30 g     F .text	00000098 chOQWriteTimeout
+0800d9f8 g     F .text	00000010 .hidden __aeabi_cfcmple
+080112a0 g     F .text	0000000a pwmObjectInit
+08015090  w    F .text	0000000c _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED1Ev
+08014c60 g     F .text	000000e0 _ZN5amiro9LIS331DLH9configureEPNS0_15LIS331DLHConfigE
+080132e0 g     F .text	0000006c VectorB0
+080218d0 g     F .text	0000009c _malloc_trim_r
+0800de48 g     F .text	00000014 .hidden __gnu_Unwind_ForcedUnwind
+08023910 g     O .text	00000016 ch_debug
+0800d6e0 g     F .text	00000168 .hidden __mulsf3
+08018b60  w    F .text	00000014 _ZN5amiro11BaseLTC4412D0Ev
+080120e0 g     F .text	0000008c Vector90
+08013720 g     F .text	000000c4 qei_lld_start
+080105a0 g     F .text	0000004c chEvtSignalI
+0800eb10 g     F .text	00000000 strcmp
+2000167c g     O .bss	00000004 dbg_lock_cnt
+08012600 g     F .text	0000002c ext_lld_channel_disable
+08018d90 g     F .text	00000038 _Z18shellRequestWakeupP20BaseSequentialStreamiPPc
+08010660 g     F .text	00000044 chEvtWaitOne
+0800f440  w    F .text	00000002 Vector114
+0800f580 g     F .text	00000016 _port_thread_start
+080145c0 g     F .text	00000022 _ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm
+080147c0 g     F .text	00000006 _ZN5amiro10VI2CDriver10acquireBusEv
+08011ce0 g     F .text	0000002c Vector60
+0800dea0 g     F .text	0000001a .hidden __gnu_Unwind_Resume_or_Rethrow
+08010cf0 g     F .text	00000028 chPoolFreeI
+08014760 g     F .text	00000040 _ZN5amiro10VI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm
+0800f440  w    F .text	00000002 Vector1C
+00000000  w      *UND*	00000000 __gnu_Unwind_Find_exidx
+0801cab0 g     F .text	00000012 copysign
+0800d290 g     F .text	0000007a .hidden __nedf2
+0800fd70 g     F .text	00000060 chSchDoRescheduleAhead
+0800e530 g     F .text	00000018 .hidden restore_core_regs
+08015a80 g     F .text	0000006e _ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv
+08018b10  w    F .text	00000004 _ZN5amiro7PCA9544ILb1EE8deselectEv
+0800e614 g     F .text	00000000 .hidden __gnu_Unwind_Save_WMMXC
+0801b5d0 g     F .text	0000001c _ZN10__cxxabiv120__si_class_type_infoD0Ev
+08017d00 g     F .text	00000078 _ZN5amiro12SerialCanMux10sendViaCanEmPhj
+2000081c g     O .data	00000008 _ZN5amiro12MotorControl29wheelDiameterCorrectionFactorE
+08011130 g     F .text	0000008c i2cMasterTransmitTimeout
+0801dc50 g     F .text	0000004c sprintf
+0800f440  w    F .text	00000002 Vector48
+08012b40 g     F .text	00000034 i2c_lld_init
+08016140 g     F .text	0000001a _ZN5amiro15MotorIncrementsC1EP9QEIDriverS2_
+20000400 g       .stacks	00000000 __process_stack_base__
+080160b0 g     F .text	0000003a _ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf
+08014d70 g     F .text	0000000c _ZN5amiro8L3G4200DD1Ev
+08019840 g     F .text	0000000c _Z27shellRequestMotorResetGainsP20BaseSequentialStreamiPPc
+080115b0 g     F .text	00000088 spiExchange
+0800d980 g     F .text	0000006e .hidden __gesf2
+08013a10 g     F .text	00000004 _write_r
+08019740 g     F .text	0000008c _Z22shellRequestMotorDriveP20BaseSequentialStreamiPPc
+08014720 g     F .text	00000040 _ZN5amiro10VI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm
+08012290 g     F .text	00000024 can_lld_init
+08014bd0 g     F .text	0000000c _ZN5amiro9LIS331DLHD1Ev
+0800d4c0 g     F .text	0000016c .hidden __aeabi_frsub
+0800ea14 g     F .text	00000006 .hidden _Unwind_GetTextRelBase
+080182b0  w    F .text	00000028 _ZN5amiro12DiWheelDriveD1Ev
+0801a9d0 g     F .text	0000001e __cxa_call_terminate
+080147e0 g     F .text	0000001c _ZN5amiro10VI2CDriverC1EPNS_14I2CMultiplexerEh
+08017470 g     F .text	000002bc _ZN5amiro8Odometry14updateOdometryEv
+08014c30 g     F .text	0000002e _ZN5amiro9LIS331DLH20getAccelerationForceEh
+20000cf0 g     O .data	00000004 _impure_ptr
+08026b80 g     O .text	00000008 _ZTIN10__cxxabiv115__forced_unwindE
+08011880 g     F .text	00000030 Vector70
+0800da08 g     F .text	00000012 .hidden __aeabi_fcmpeq
+08017bc0 g     F .text	0000000c _ZN5amiro12SerialCanMuxD2Ev
+08014550  w    F .text	00000014 _ZN5amiro9I2CDriverD0Ev
+20001944 g     O .bss	0000000c QEID3
+08021620 g     F .text	00000146 __sflush_r
+0801c9b0 g     F .text	000000fc scalbn
+080134e0 g     F .text	00000158 VectorD4
+0800f640 g     F .text	00000024 nvicSetSystemHandlerPriority
+08011060 g     F .text	0000000e i2cObjectInit
+0800d6e0 g     F .text	00000168 .hidden __aeabi_fmul
+080154e0 g     F .text	0000002c _ZN5amiro6INA2196Driver9hibernateEv
+08015290 g     F .text	00000066 _ZN5amiro6INA2196Driver6updateEv
+08013fd0 g     F .text	000000a0 shellGetLine
+080100f0 g     F .text	00000080 chThdRelease
+080106b0 g     F .text	0000006c chEvtWaitOneTimeout
+08017e30 g     F .text	0000004a _ZN5amiro12SerialCanMux3putEh
+0800d9f0 g     F .text	00000018 .hidden __aeabi_cfrcmple
+080132a0 g     F .text	00000038 spi_lld_send
+08014400 g     F .text	00000004 _ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
+08015950 g     F .text	0000000c _ZN5amiro4AT24D1Ev
+20001190 g     O .bss	000000e0 _idle_thread_wa
+08010950 g     F .text	0000001c chOQInit
+08010840 g     F .text	00000062 chIQGetTimeout
+20000800 g       .data	00000000 _data
+08022a00 g     F .text	00000040 __ulp
+0801a1c0 g     F .text	000000a0 _Z16initPowermonitorRN5amiro6INA2196DriverEfft
+08010d20 g     F .text	00000024 chPoolFree
+0801cb20 g     F .text	00000028 fputc
+08014470 g     F .text	00000014 _ZN5amiro11HWSPIDriverD0Ev
+08026bf0 g     O .text	00000024 _ZTSN10__cxxabiv119__foreign_exceptionE
+08018730  w    F .text	00000030 _ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+0800f440  w    F .text	00000002 Vector4C
+08016f90 g     F .text	0000008c _ZN5amiro11DistControl17setTargetPositionEllt
+0800e9f8 g     F .text	00000012 .hidden _Unwind_GetLanguageSpecificData
+08024b10 g     O .text	0000001c _ZTVN5amiro9LIS331DLHE
+08011940 g     F .text	00000030 Vector80
+080107e0 g     F .text	00000056 chIQPutI
+08018b30  w    F .text	0000000c _ZN5amiro10LTC4412wENILj1073811456ELh3ELj1073811456ELh5EED1Ev
+0800f460 g     F .text	0000000e _port_switch_from_isr
+0800d3e0 g     F .text	00000040 .hidden __aeabi_d2uiz
+0801a6c0 g     F .text	0000008c __cxa_begin_catch
+08011750 g     F .text	00000040 tmInit
+08014be0 g     F .text	00000014 _ZN5amiro9LIS331DLHD0Ev
+0801b440 g     F .text	00000014 _ZN10__cxxabiv117__class_type_infoD2Ev
+0801a6a0 g     F .text	00000008 _ZN10__cxxabiv112__unexpectedEPFvvE
+0800da1c g     F .text	00000012 .hidden __aeabi_fcmplt
+08011d40 g     F .text	0000002c Vector68
+08010470 g     F .text	00000088 chMtxUnlock
+080061a0 g     F .text	00000144 _ZN5amiro8VCNL40204mainEv
+0800ded0 g     F .text	00000034 .hidden _Unwind_VRS_Get
+0800f9e0 g     F .text	00000014 _trace_init
+08011530 g     F .text	00000040 spiSelect
+0801b3b0 g     F .text	00000014 _ZNSt13bad_exceptionD0Ev
+08010720 g     F .text	00000068 chEvtWaitAnyTimeout
+200008c0 g     O .data	00000004 _ZN10__cxxabiv119__terminate_handlerE
+0800e600 g     F .text	00000000 .hidden __gnu_Unwind_Restore_WMMXC
+0800cac4 g     F .text	0000001c __gcclibcxx_demangle_callback
+08011640 g     F .text	00000080 spiSend
+08017a80 g     F .text	00000058 _ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+20000400 g       .stacks	00000000 __main_stack_end__
+080118e0 g     F .text	00000030 Vector78
+0800d32c g     F .text	00000012 .hidden __aeabi_dcmpeq
+08017020 g     F .text	0000004e _ZN5amiro11DistControl20deactivateControllerEv
+0801b510 g     F .text	00000058 __cxa_allocate_exception
+0801cf40 g     F .text	00000024 fwrite
+080161a0 g     F .text	00000004 _ZN5amiro15MotorIncrements17getQeiConfigRangeEv
+08027520 g     O .text	0000000c _ZTIN10__cxxabiv120__si_class_type_infoE
+0800e9c4 g     F .text	00000028 .hidden __gnu_unwind_frame
+0800e694 g     F .text	00000022 .hidden _Unwind_ForcedUnwind
+20001140 g       .data	00000000 _edata
+08015d90 g     F .text	0000004c _ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth
+08012b80 g     F .text	0000022c i2c_lld_start
+08014dd0 g     F .text	00000040 _ZN5amiro8L3G4200DC1EPNS_11HWSPIDriverE
+08015300  w    F .text	00000038 _ZN5amiro6INA2196Driver14readBusVoltageEv
+08010de0 g     F .text	0000006c canStart
+08017a10 g     F .text	0000000c _ZN5amiro23ControllerAreaNetworkTxD1Ev
+080143e0 g     F .text	00000004 _ZN10chibios_rt10BaseThread5sleepEm
+0800faf0 g     F .text	00000048 chVTResetI
+0801cb50 g     F .text	0000004c _fputs_r
+08016d00 g     F .text	0000006c _ZN5amiro12MotorControl12calcVelocityEv
+080173b0 g     F .text	00000028 _ZN5amiro8Odometry13resetPositionEv
+0800f440 g     F .text	00000002 _unhandled_exception
+08017dd0 g     F .text	00000052 _ZN5amiro12SerialCanMux4readEPhj
+08013f80 g     F .text	00000024 shellExit
+200017b8 g     O .bss	00000038 I2CD2
+080113e0 g     F .text	00000040 sdObjectInit
+0800dac0 g     F .text	0000003e .hidden __aeabi_f2uiz
+080249e0 g     O .text	00000010 _ZTVN5amiro11HWSPIDriverE
+0801b350 g     F .text	0000000c _ZNSt9exceptionD1Ev
+08016430 g     F .text	00000078 _ZN5amiro12MotorControl12setTargetRPMEll
+0800f440  w    F .text	00000002 Vector88
+08010500 g     F .text	00000044 chEvtRegisterMask
+08022d40 g     F .text	00000038 __swrite
+200010fc g     O .data	00000004 __malloc_trim_threshold
+080157c0 g     F .text	00000004 _ZN5amiro6EEPROM11getpositionEPv
+080164b0 g     F .text	0000002e _ZN5amiro12MotorControl14setTargetSpeedERKN5types9kinematicE
+08016e40 g     F .text	0000009c _ZN5amiro12MotorControl25writePulseWidthModulationEv
+20000400 g       .stacks	00000000 __main_thread_stack_base__
+080179a0 g     F .text	00000006 _ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv
+0801b5f0 g     F .text	00000034 _ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+0800d62c g     F .text	00000024 .hidden __floatunsisf
+08022920 g     F .text	000000d6 __mdiff
+0800d390 g     F .text	0000004e .hidden __aeabi_d2iz
+0801a660 g     F .text	00000026 _ZN10__cxxabiv111__terminateEPFvvE
+08018330 g     F .text	00000064 _ZN5amiro12DiWheelDrive5startEm
+0800e5bc g     F .text	00000000 .hidden __gnu_Unwind_Save_WMMXD
+08010f50 g     F .text	00000090 canReceive
+080149f0 g     F .text	0000000c _ZN5amiro8HMC5883LD2Ev
+08014230 g     F .text	00000010 _kill
+0800f440  w    F .text	00000002 Vector104
+08015de0 g     F .text	00000042 _ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf
+08014800 g     F .text	0000000c _ZN5amiro8VCNL4020D1Ev
+20001104 g     O .data	00000004 __ctype_ptr__
+0800d9f8 g     F .text	00000010 .hidden __aeabi_cfcmpeq
+080183a0 g     F .text	00000008 _ZThn408_N5amiro12DiWheelDrive5startEm
+08012390 g     F .text	0000003e can_lld_is_tx_empty
+080218c0 g     F .text	00000002 __sfp_lock_release
+08018320  w    F .text	00000006 _ZThn408_N5amiro12DiWheelDriveD0Ev
+20001a10 g     O .bss	00000002 accel_z
+08026c80 g     O .text	0000000c _ZTISt13bad_exception
+080146b0 g     F .text	00000018 _ZN5amiro14I2CMultiplexerC1EPNS_9I2CDriverE
+08014f40 g     F .text	00000028 _ZN5amiro8L3G4200D8getCheckEv
+0800f440  w    F .text	00000002 Vector10C
+0800fa00 g     F .text	00000044 dbg_trace
+0801caf0 g     F .text	00000008 atoi
+080179c0 g     F .text	00000008 _ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame
+08014240 g     F .text	000000a4 haltErrorCode
+08027880 g     O .text	00000101 _ctype_
+08016630 g     F .text	000002a0 _ZN5amiro12MotorControl16calibrateZieglerEv
+0800ede0  w    F .text	00000002 .hidden __aeabi_idiv0
+08006154 g       constructors	00000000 __init_array_start
+08019880  w    F .text	0000001c _ZN5amiro7PCA9544ILb1EED0Ev
+080172e0 g     F .text	000000a0 _ZN5amiro8Odometry11getPositionEv
+08010070 g     F .text	00000074 chThdWait
+08017ed0 g     F .text	00000030 _ZN5amiro12SerialCanMux14convCan2SerialEPhj
+0800dac0 g     F .text	0000003e .hidden __fixunssfsi
+08019930 g     F .text	0000006c _Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc
+080143a0 g     F .text	0000000a _ZN10chibios_rt10_thd_startEPv
+080150e0 g     F .text	0000001c _ZN5amiro6INA2196DriverD0Ev
+08014220 g     F .text	00000002 _exit
+080114e0 g     F .text	0000004c spiStart
+2000186c g     O .bss	000000d8 SD1
+08015160 g     F .text	00000080 _ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh
+0801de60 g     F .text	0000003e strspn
+0800fe20 g     F .text	0000005c _thread_init
+08016d70 g     F .text	00000094 _ZN5amiro12MotorControl16updateIncrementsEPNS_15MotorIncrementsERA2_lRA2_f
+0800f440  w    F .text	00000002 Vector50
+0801b0d0 g     F .text	00000008 __cxa_get_globals
+080222e0 g     F .text	000000e0 __smakebuf_r
+200008bc g     O .data	00000004 _ZN10__cxxabiv120__unexpected_handlerE
+08019a00 g     F .text	000000c8 _Z35shellRequestSetCalibrationConstantsP20BaseSequentialStreamiPPc
+08025020 g     O .text	00000024 _ZTVN5amiro23ControllerAreaNetworkTxE
+0801dcf0 g     F .text	0000005e strlen
+08011ad0 g     F .text	000000a4 dmaStreamAllocate
+08027560 g     O .text	00000008 _ZTISt9type_info
+0800e2cc  w    F .text	00000006 .hidden __aeabi_unwind_cpp_pr1
+0800d31c g     F .text	00000010 .hidden __aeabi_cdcmpeq
+08015e70 g     F .text	00000042 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf
+0800d280 g     F .text	0000008a .hidden __gedf2
+08026c50 g     O .text	0000000d _ZTSSt9exception
+08021c00 g     F .text	0000052a __gethex
+080149f0 g     F .text	0000000c _ZN5amiro8HMC5883LD1Ev
+08014410 g     F .text	00000004 _ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
+08014810 g     F .text	00000014 _ZN5amiro8VCNL4020D0Ev
+080186c0 g     F .text	00000004 _ZN5amiro12DiWheelDrive9calibrateEv
+0801b3d0 g     F .text	0000001a __cxa_current_exception_type
+080148e0 g     F .text	00000040 _ZN5amiro8VCNL402026getProximityScaledWoOffsetEv
+08014710 g     F .text	0000000c _ZN5amiro10VI2CDriver9getErrorsEv
+0800ed80 g     F .text	00000030 .hidden __gnu_ldivmod_helper
+080164e0 g     F .text	00000150 _ZN5amiro12MotorControl9calibrateEv
+08019860  w    F .text	00000014 _ZN5amiro7PCA9544ILb1EED2Ev
+0801b390 g     F .text	00000014 _ZNSt9exceptionD0Ev
+08025000 g     O .text	00000020 _ZTVN5amiro23ControllerAreaNetworkRxE
+0800f5f0 g     F .text	00000044 nvicDisableVector
+08010970 g     F .text	0000006a chOQPutTimeout
+080145f0 g     F .text	0000001a _ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm
+20000000 g       .stacks	00000000 __main_stack_base__
+08015f50 g     F .text	0000003a _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf
+08011e80 g     F .text	00000030 Vector44
+0800cda8 g     F .text	0000003a .hidden __aeabi_f2d
+0800f440  w    F .text	00000002 Vector28
+0801cba0 g     F .text	00000010 fputs
+08013810 g     F .text	00000010 boardInit
+0800ea0c g     F .text	00000006 .hidden _Unwind_GetDataRelBase
+0800f440  w    F .text	00000002 VectorB8
+08015ec0 g     F .text	0000003a _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf
+08013670 g     F .text	00000078 sd_lld_start
+08013860 g     F .text	000000dc boardClearI2CBus
+080145a0 g     F .text	00000006 _ZN5amiro11HWI2CDriver4stopEv
+0800f440  w    F .text	00000002 VectorFC
+0801a4d0  w    F .text	0000013c _ZN6GlobalD2Ev
+08019800 g     F .text	00000034 _Z26shellRequestMotorCalibrateP20BaseSequentialStreamiPPc
+0800f880 g     F .text	0000003c dbg_check_unlock_from_isr
+080148c0 g     F .text	00000006 _ZN5amiro8VCNL402018getProximityOffsetEv
+080183b0 g     F .text	00000284 _ZN5amiro12DiWheelDrive14receiveMessageEP10CANRxFrame
+080150d0  w    F .text	00000004 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv
+0800cae8 g     F .text	0000027a .hidden __subdf3
+08013820 g     F .text	00000014 boardWriteLed
+20000800 g       .stacks	00000000 __process_stack_end__
+08016020 g     F .text	0000003a _ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf
+08015fe0 g     F .text	0000003a _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi
+080225b0 g     F .text	0000005a __lo0bits
+080146d0 g     F .text	0000000c _ZN5amiro14I2CMultiplexerD1Ev
+08024a80 g     O .text	0000002c _ZTVN5amiro10VI2CDriverE
+0800f440  w    F .text	00000002 Vector34
+08013800 g     F .text	00000004 __early_init
+080147a0  w    F .text	00000014 _ZN5amiro10VI2CDriverD0Ev
+080102d0 g     F .text	0000005c chSemSignalI
+0801a7e0 g     F .text	0000000a __aeabi_atexit
+0801b750 g     F .text	0000002e _ZNKSt9type_infoeqERKS_
+08011a00 g     F .text	00000030 Vector128
+0800d4cc g     F .text	00000160 .hidden __addsf3
+0800ff70 g     F .text	00000026 chThdTerminate
+08014640 g     F .text	0000000c _ZN5amiro14I2CMultiplexer9getErrorsEv
+0800f440  w    F .text	00000002 VectorA4
+08014f70 g     F .text	00000014 _ZN5amiro6INA2196DriverD2Ev
+08014660 g     F .text	0000000c _ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm
+08026c60 g     O .text	00000020 _ZTSN10__cxxabiv115__forced_unwindE
+08017fd0 g     F .text	00000044 _ZN5amiro12SerialCanMux12rcvSwitchCmdEh
+0801b780 g     F .text	00000004 _ZNKSt9type_info10__do_catchEPKS_PPvj
+08017070 g     F .text	00000138 _ZN5amiro11DistControl14calcVelocitiesEv
+0801de10 g     F .text	00000050 strpbrk
+0800f440  w    F .text	00000002 Vector20
+0801dc00 g     F .text	00000010 raise
+08014390 g     F .text	00000010 _ZN10chibios_rt10BaseThreadC1Ev
+0801cf80 g     F .text	00000010 free
+0801b0e0 g     F .text	00000114 _ZN9__gnu_cxx27__verbose_terminate_handlerEv
+08022430 g     F .text	00000092 __multadd
+08014920 g     F .text	00000052 _ZN5amiro8VCNL40208getCheckEv
+08010250 g     F .text	00000074 chSemWaitTimeoutS
+0801b460 g     F .text	0000001c _ZN10__cxxabiv117__class_type_infoD0Ev
+08022410 g     F .text	00000012 _Bfree
+
+

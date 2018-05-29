@@ -1,0 +1,3 @@
+chvt.c:50:6:_vt_init	0	static
+chvt.c:76:6:chVTSetI	24	static
+chvt.c:106:6:chVTResetI	8	static

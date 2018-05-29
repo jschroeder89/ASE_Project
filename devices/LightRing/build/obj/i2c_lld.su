@@ -1,0 +1,8 @@
+i2c_lld.c:181:13:i2c_lld_safety_timeout	16	static
+i2c_lld.c:627:1:VectorC4	16	static
+i2c_lld.c:641:1:VectorC8	16	static
+i2c_lld.c:694:6:i2c_lld_init	8	static
+i2c_lld.c:734:6:i2c_lld_start	24	static
+i2c_lld.c:878:6:i2c_lld_stop	8	static
+i2c_lld.c:939:7:i2c_lld_master_receive_timeout	56	static
+i2c_lld.c:1025:7:i2c_lld_master_transmit_timeout	56	static

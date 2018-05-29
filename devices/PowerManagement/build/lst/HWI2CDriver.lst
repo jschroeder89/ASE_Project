@@ -1,0 +1,377 @@
+ARM GAS  /tmp/cc7EmJK6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"HWI2CDriver.cpp"
+  17              		.section	.text._ZN5amiro9I2CDriverD2Ev,"axG",%progbits,_ZN5amiro9I2CDriverD5Ev,comdat
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.weak	_ZN5amiro9I2CDriverD2Ev
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_ZN5amiro9I2CDriverD2Ev, %function
+  24              	_ZN5amiro9I2CDriverD2Ev:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 014B     		ldr	r3, .L2
+  29 0002 0360     		str	r3, [r0]
+  30 0004 7047     		bx	lr
+  31              	.L3:
+  32 0006 00BF     		.align	2
+  33              	.L2:
+  34 0008 08000000 		.word	_ZTVN5amiro9I2CDriverE+8
+  35              		.size	_ZN5amiro9I2CDriverD2Ev, .-_ZN5amiro9I2CDriverD2Ev
+  36              		.weak	_ZN5amiro9I2CDriverD1Ev
+  37              		.thumb_set _ZN5amiro9I2CDriverD1Ev,_ZN5amiro9I2CDriverD2Ev
+  38 000c AFF30080 		.section	.text._ZN5amiro11HWI2CDriverD2Ev,"axG",%progbits,_ZN5amiro11HWI2CDriverD5Ev,comdat
+  39              		.align	2
+  40              		.p2align 4,,15
+  41              		.weak	_ZN5amiro11HWI2CDriverD2Ev
+  42              		.thumb
+  43              		.thumb_func
+  44              		.type	_ZN5amiro11HWI2CDriverD2Ev, %function
+  45              	_ZN5amiro11HWI2CDriverD2Ev:
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48              		@ link register save eliminated.
+  49 0000 014B     		ldr	r3, .L5
+  50 0002 0360     		str	r3, [r0]
+  51 0004 7047     		bx	lr
+  52              	.L6:
+  53 0006 00BF     		.align	2
+  54              	.L5:
+  55 0008 08000000 		.word	_ZTVN5amiro9I2CDriverE+8
+  56              		.size	_ZN5amiro11HWI2CDriverD2Ev, .-_ZN5amiro11HWI2CDriverD2Ev
+  57              		.weak	_ZN5amiro11HWI2CDriverD1Ev
+ARM GAS  /tmp/cc7EmJK6.s 			page 2
+
+
+  58              		.thumb_set _ZN5amiro11HWI2CDriverD1Ev,_ZN5amiro11HWI2CDriverD2Ev
+  59 000c AFF30080 		.section	.text._ZN5amiro9I2CDriverD0Ev,"axG",%progbits,_ZN5amiro9I2CDriverD0Ev,comdat
+  60              		.align	2
+  61              		.p2align 4,,15
+  62              		.weak	_ZN5amiro9I2CDriverD0Ev
+  63              		.thumb
+  64              		.thumb_func
+  65              		.type	_ZN5amiro9I2CDriverD0Ev, %function
+  66              	_ZN5amiro9I2CDriverD0Ev:
+  67              		@ args = 0, pretend = 0, frame = 0
+  68              		@ frame_needed = 0, uses_anonymous_args = 0
+  69 0000 10B5     		push	{r4, lr}
+  70 0002 034B     		ldr	r3, .L8
+  71 0004 0360     		str	r3, [r0]
+  72 0006 0446     		mov	r4, r0
+  73 0008 FFF7FEFF 		bl	_ZdlPv
+  74 000c 2046     		mov	r0, r4
+  75 000e 10BD     		pop	{r4, pc}
+  76              	.L9:
+  77              		.align	2
+  78              	.L8:
+  79 0010 08000000 		.word	_ZTVN5amiro9I2CDriverE+8
+  80              		.size	_ZN5amiro9I2CDriverD0Ev, .-_ZN5amiro9I2CDriverD0Ev
+  81 0014 AFF30080 		.section	.text._ZN5amiro11HWI2CDriverD0Ev,"axG",%progbits,_ZN5amiro11HWI2CDriverD0Ev,comdat
+  81      AFF30080 
+  81      AFF30080 
+  82              		.align	2
+  83              		.p2align 4,,15
+  84              		.weak	_ZN5amiro11HWI2CDriverD0Ev
+  85              		.thumb
+  86              		.thumb_func
+  87              		.type	_ZN5amiro11HWI2CDriverD0Ev, %function
+  88              	_ZN5amiro11HWI2CDriverD0Ev:
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91 0000 10B5     		push	{r4, lr}
+  92 0002 034B     		ldr	r3, .L11
+  93 0004 0360     		str	r3, [r0]
+  94 0006 0446     		mov	r4, r0
+  95 0008 FFF7FEFF 		bl	_ZdlPv
+  96 000c 2046     		mov	r0, r4
+  97 000e 10BD     		pop	{r4, pc}
+  98              	.L12:
+  99              		.align	2
+ 100              	.L11:
+ 101 0010 08000000 		.word	_ZTVN5amiro9I2CDriverE+8
+ 102              		.size	_ZN5amiro11HWI2CDriverD0Ev, .-_ZN5amiro11HWI2CDriverD0Ev
+ 103 0014 AFF30080 		.section	.text._ZN5amiro11HWI2CDriver5startEPK9I2CConfig,"ax",%progbits
+ 103      AFF30080 
+ 103      AFF30080 
+ 104              		.align	2
+ 105              		.p2align 4,,15
+ 106              		.global	_ZN5amiro11HWI2CDriver5startEPK9I2CConfig
+ 107              		.thumb
+ 108              		.thumb_func
+ 109              		.type	_ZN5amiro11HWI2CDriver5startEPK9I2CConfig, %function
+ 110              	_ZN5amiro11HWI2CDriver5startEPK9I2CConfig:
+ARM GAS  /tmp/cc7EmJK6.s 			page 3
+
+
+ 111              		@ args = 0, pretend = 0, frame = 0
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113              		@ link register save eliminated.
+ 114 0000 4068     		ldr	r0, [r0, #4]
+ 115 0002 FFF7FEBF 		b	i2cStart
+ 116              		.size	_ZN5amiro11HWI2CDriver5startEPK9I2CConfig, .-_ZN5amiro11HWI2CDriver5startEPK9I2CConfig
+ 117 0006 00BFAFF3 		.section	.text._ZN5amiro11HWI2CDriver4stopEv,"ax",%progbits
+ 117      0080AFF3 
+ 117      0080
+ 118              		.align	2
+ 119              		.p2align 4,,15
+ 120              		.global	_ZN5amiro11HWI2CDriver4stopEv
+ 121              		.thumb
+ 122              		.thumb_func
+ 123              		.type	_ZN5amiro11HWI2CDriver4stopEv, %function
+ 124              	_ZN5amiro11HWI2CDriver4stopEv:
+ 125              		@ args = 0, pretend = 0, frame = 0
+ 126              		@ frame_needed = 0, uses_anonymous_args = 0
+ 127              		@ link register save eliminated.
+ 128 0000 4068     		ldr	r0, [r0, #4]
+ 129 0002 FFF7FEBF 		b	i2cStop
+ 130              		.size	_ZN5amiro11HWI2CDriver4stopEv, .-_ZN5amiro11HWI2CDriver4stopEv
+ 131 0006 00BFAFF3 		.section	.text._ZN5amiro11HWI2CDriver9getErrorsEv,"ax",%progbits
+ 131      0080AFF3 
+ 131      0080
+ 132              		.align	2
+ 133              		.p2align 4,,15
+ 134              		.global	_ZN5amiro11HWI2CDriver9getErrorsEv
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.type	_ZN5amiro11HWI2CDriver9getErrorsEv, %function
+ 138              	_ZN5amiro11HWI2CDriver9getErrorsEv:
+ 139              		@ args = 0, pretend = 0, frame = 0
+ 140              		@ frame_needed = 0, uses_anonymous_args = 0
+ 141              		@ link register save eliminated.
+ 142 0000 4068     		ldr	r0, [r0, #4]
+ 143 0002 FFF7FEBF 		b	i2cGetErrors
+ 144              		.size	_ZN5amiro11HWI2CDriver9getErrorsEv, .-_ZN5amiro11HWI2CDriver9getErrorsEv
+ 145 0006 00BFAFF3 		.section	.text._ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm,"ax",%progbits
+ 145      0080AFF3 
+ 145      0080
+ 146              		.align	2
+ 147              		.p2align 4,,15
+ 148              		.global	_ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm
+ 149              		.thumb
+ 150              		.thumb_func
+ 151              		.type	_ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm, %function
+ 152              	_ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm:
+ 153              		@ args = 0, pretend = 0, frame = 0
+ 154              		@ frame_needed = 0, uses_anonymous_args = 0
+ 155 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 156 0002 4E68     		ldr	r6, [r1, #4]
+ 157 0004 0F88     		ldrh	r7, [r1]
+ 158 0006 CD68     		ldr	r5, [r1, #12]
+ 159 0008 0C69     		ldr	r4, [r1, #16]
+ 160 000a 8B68     		ldr	r3, [r1, #8]
+ 161 000c 4068     		ldr	r0, [r0, #4]
+ARM GAS  /tmp/cc7EmJK6.s 			page 4
+
+
+ 162 000e 85B0     		sub	sp, sp, #20
+ 163 0010 3946     		mov	r1, r7
+ 164 0012 0292     		str	r2, [sp, #8]
+ 165 0014 0095     		str	r5, [sp]
+ 166 0016 3246     		mov	r2, r6
+ 167 0018 0194     		str	r4, [sp, #4]
+ 168 001a FFF7FEFF 		bl	i2cMasterTransmitTimeout
+ 169 001e 05B0     		add	sp, sp, #20
+ 170              		@ sp needed
+ 171 0020 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 172              		.size	_ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm, .-_ZN5amiro11HWI2CDriver14maste
+ 173 0022 00BFAFF3 		.section	.text._ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm,"ax",%progbits
+ 173      0080AFF3 
+ 173      0080AFF3 
+ 173      0080
+ 174              		.align	2
+ 175              		.p2align 4,,15
+ 176              		.global	_ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm
+ 177              		.thumb
+ 178              		.thumb_func
+ 179              		.type	_ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm, %function
+ 180              	_ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm:
+ 181              		@ args = 0, pretend = 0, frame = 0
+ 182              		@ frame_needed = 0, uses_anonymous_args = 0
+ 183 0000 10B5     		push	{r4, lr}
+ 184 0002 0B46     		mov	r3, r1
+ 185 0004 82B0     		sub	sp, sp, #8
+ 186 0006 5C68     		ldr	r4, [r3, #4]
+ 187 0008 0988     		ldrh	r1, [r1]
+ 188 000a 9B68     		ldr	r3, [r3, #8]
+ 189 000c 4068     		ldr	r0, [r0, #4]
+ 190 000e 0092     		str	r2, [sp]
+ 191 0010 2246     		mov	r2, r4
+ 192 0012 FFF7FEFF 		bl	i2cMasterReceiveTimeout
+ 193 0016 02B0     		add	sp, sp, #8
+ 194              		@ sp needed
+ 195 0018 10BD     		pop	{r4, pc}
+ 196              		.size	_ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm, .-_ZN5amiro11HWI2CDriver13master
+ 197 001a 00BFAFF3 		.section	.text._ZN5amiro11HWI2CDriver10acquireBusEv,"ax",%progbits
+ 197      0080
+ 198              		.align	2
+ 199              		.p2align 4,,15
+ 200              		.global	_ZN5amiro11HWI2CDriver10acquireBusEv
+ 201              		.thumb
+ 202              		.thumb_func
+ 203              		.type	_ZN5amiro11HWI2CDriver10acquireBusEv, %function
+ 204              	_ZN5amiro11HWI2CDriver10acquireBusEv:
+ 205              		@ args = 0, pretend = 0, frame = 0
+ 206              		@ frame_needed = 0, uses_anonymous_args = 0
+ 207              		@ link register save eliminated.
+ 208 0000 4068     		ldr	r0, [r0, #4]
+ 209 0002 FFF7FEBF 		b	i2cAcquireBus
+ 210              		.size	_ZN5amiro11HWI2CDriver10acquireBusEv, .-_ZN5amiro11HWI2CDriver10acquireBusEv
+ 211 0006 00BFAFF3 		.section	.text._ZN5amiro11HWI2CDriver10releaseBusEv,"ax",%progbits
+ 211      0080AFF3 
+ 211      0080
+ 212              		.align	2
+ARM GAS  /tmp/cc7EmJK6.s 			page 5
+
+
+ 213              		.p2align 4,,15
+ 214              		.global	_ZN5amiro11HWI2CDriver10releaseBusEv
+ 215              		.thumb
+ 216              		.thumb_func
+ 217              		.type	_ZN5amiro11HWI2CDriver10releaseBusEv, %function
+ 218              	_ZN5amiro11HWI2CDriver10releaseBusEv:
+ 219              		@ args = 0, pretend = 0, frame = 0
+ 220              		@ frame_needed = 0, uses_anonymous_args = 0
+ 221              		@ link register save eliminated.
+ 222 0000 4068     		ldr	r0, [r0, #4]
+ 223 0002 FFF7FEBF 		b	i2cReleaseBus
+ 224              		.size	_ZN5amiro11HWI2CDriver10releaseBusEv, .-_ZN5amiro11HWI2CDriver10releaseBusEv
+ 225 0006 00BFAFF3 		.section	.text._ZN5amiro11HWI2CDriverC2EP9I2CDriver,"ax",%progbits
+ 225      0080AFF3 
+ 225      0080
+ 226              		.align	2
+ 227              		.p2align 4,,15
+ 228              		.global	_ZN5amiro11HWI2CDriverC2EP9I2CDriver
+ 229              		.thumb
+ 230              		.thumb_func
+ 231              		.type	_ZN5amiro11HWI2CDriverC2EP9I2CDriver, %function
+ 232              	_ZN5amiro11HWI2CDriverC2EP9I2CDriver:
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+ 235              		@ link register save eliminated.
+ 236 0000 014A     		ldr	r2, .L21
+ 237 0002 4160     		str	r1, [r0, #4]
+ 238 0004 0260     		str	r2, [r0]
+ 239 0006 7047     		bx	lr
+ 240              	.L22:
+ 241              		.align	2
+ 242              	.L21:
+ 243 0008 08000000 		.word	.LANCHOR0+8
+ 244              		.size	_ZN5amiro11HWI2CDriverC2EP9I2CDriver, .-_ZN5amiro11HWI2CDriverC2EP9I2CDriver
+ 245              		.global	_ZN5amiro11HWI2CDriverC1EP9I2CDriver
+ 246              		.thumb_set _ZN5amiro11HWI2CDriverC1EP9I2CDriver,_ZN5amiro11HWI2CDriverC2EP9I2CDriver
+ 247              		.weak	_ZTVN5amiro9I2CDriverE
+ 248 000c AFF30080 		.section	.rodata._ZTVN5amiro9I2CDriverE,"aG",%progbits,_ZTVN5amiro9I2CDriverE,comdat
+ 249              		.align	3
+ 250              		.type	_ZTVN5amiro9I2CDriverE, %object
+ 251              		.size	_ZTVN5amiro9I2CDriverE, 44
+ 252              	_ZTVN5amiro9I2CDriverE:
+ 253 0000 00000000 		.word	0
+ 254 0004 00000000 		.word	0
+ 255 0008 00000000 		.word	_ZN5amiro9I2CDriverD1Ev
+ 256 000c 00000000 		.word	_ZN5amiro9I2CDriverD0Ev
+ 257 0010 00000000 		.word	__cxa_pure_virtual
+ 258 0014 00000000 		.word	__cxa_pure_virtual
+ 259 0018 00000000 		.word	__cxa_pure_virtual
+ 260 001c 00000000 		.word	__cxa_pure_virtual
+ 261 0020 00000000 		.word	__cxa_pure_virtual
+ 262 0024 00000000 		.word	__cxa_pure_virtual
+ 263 0028 00000000 		.word	__cxa_pure_virtual
+ 264              		.global	_ZTVN5amiro11HWI2CDriverE
+ 265 002c 00000000 		.section	.rodata._ZTVN5amiro11HWI2CDriverE,"a",%progbits
+ 266              		.align	3
+ 267              		.set	.LANCHOR0,. + 0
+ARM GAS  /tmp/cc7EmJK6.s 			page 6
+
+
+ 268              		.type	_ZTVN5amiro11HWI2CDriverE, %object
+ 269              		.size	_ZTVN5amiro11HWI2CDriverE, 44
+ 270              	_ZTVN5amiro11HWI2CDriverE:
+ 271 0000 00000000 		.word	0
+ 272 0004 00000000 		.word	0
+ 273 0008 00000000 		.word	_ZN5amiro11HWI2CDriverD1Ev
+ 274 000c 00000000 		.word	_ZN5amiro11HWI2CDriverD0Ev
+ 275 0010 00000000 		.word	_ZN5amiro11HWI2CDriver5startEPK9I2CConfig
+ 276 0014 00000000 		.word	_ZN5amiro11HWI2CDriver4stopEv
+ 277 0018 00000000 		.word	_ZN5amiro11HWI2CDriver9getErrorsEv
+ 278 001c 00000000 		.word	_ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm
+ 279 0020 00000000 		.word	_ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm
+ 280 0024 00000000 		.word	_ZN5amiro11HWI2CDriver10acquireBusEv
+ 281 0028 00000000 		.word	_ZN5amiro11HWI2CDriver10releaseBusEv
+ 282 002c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cc7EmJK6.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 HWI2CDriver.cpp
+     /tmp/cc7EmJK6.s:18     .text._ZN5amiro9I2CDriverD2Ev:00000000 $t
+     /tmp/cc7EmJK6.s:24     .text._ZN5amiro9I2CDriverD2Ev:00000000 _ZN5amiro9I2CDriverD2Ev
+     /tmp/cc7EmJK6.s:34     .text._ZN5amiro9I2CDriverD2Ev:00000008 $d
+     /tmp/cc7EmJK6.s:252    .rodata._ZTVN5amiro9I2CDriverE:00000000 _ZTVN5amiro9I2CDriverE
+     /tmp/cc7EmJK6.s:24     .text._ZN5amiro9I2CDriverD2Ev:00000000 _ZN5amiro9I2CDriverD1Ev
+     /tmp/cc7EmJK6.s:39     .text._ZN5amiro11HWI2CDriverD2Ev:00000000 $t
+     /tmp/cc7EmJK6.s:45     .text._ZN5amiro11HWI2CDriverD2Ev:00000000 _ZN5amiro11HWI2CDriverD2Ev
+     /tmp/cc7EmJK6.s:55     .text._ZN5amiro11HWI2CDriverD2Ev:00000008 $d
+     /tmp/cc7EmJK6.s:45     .text._ZN5amiro11HWI2CDriverD2Ev:00000000 _ZN5amiro11HWI2CDriverD1Ev
+     /tmp/cc7EmJK6.s:60     .text._ZN5amiro9I2CDriverD0Ev:00000000 $t
+     /tmp/cc7EmJK6.s:66     .text._ZN5amiro9I2CDriverD0Ev:00000000 _ZN5amiro9I2CDriverD0Ev
+     /tmp/cc7EmJK6.s:79     .text._ZN5amiro9I2CDriverD0Ev:00000010 $d
+     /tmp/cc7EmJK6.s:82     .text._ZN5amiro11HWI2CDriverD0Ev:00000000 $t
+     /tmp/cc7EmJK6.s:88     .text._ZN5amiro11HWI2CDriverD0Ev:00000000 _ZN5amiro11HWI2CDriverD0Ev
+     /tmp/cc7EmJK6.s:101    .text._ZN5amiro11HWI2CDriverD0Ev:00000010 $d
+     /tmp/cc7EmJK6.s:104    .text._ZN5amiro11HWI2CDriver5startEPK9I2CConfig:00000000 $t
+     /tmp/cc7EmJK6.s:110    .text._ZN5amiro11HWI2CDriver5startEPK9I2CConfig:00000000 _ZN5amiro11HWI2CDriver5startEPK9I2CConfig
+     /tmp/cc7EmJK6.s:118    .text._ZN5amiro11HWI2CDriver4stopEv:00000000 $t
+     /tmp/cc7EmJK6.s:124    .text._ZN5amiro11HWI2CDriver4stopEv:00000000 _ZN5amiro11HWI2CDriver4stopEv
+     /tmp/cc7EmJK6.s:132    .text._ZN5amiro11HWI2CDriver9getErrorsEv:00000000 $t
+     /tmp/cc7EmJK6.s:138    .text._ZN5amiro11HWI2CDriver9getErrorsEv:00000000 _ZN5amiro11HWI2CDriver9getErrorsEv
+     /tmp/cc7EmJK6.s:146    .text._ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm:00000000 $t
+     /tmp/cc7EmJK6.s:152    .text._ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm:00000000 _ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm
+     /tmp/cc7EmJK6.s:174    .text._ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm:00000000 $t
+     /tmp/cc7EmJK6.s:180    .text._ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm:00000000 _ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm
+     /tmp/cc7EmJK6.s:198    .text._ZN5amiro11HWI2CDriver10acquireBusEv:00000000 $t
+     /tmp/cc7EmJK6.s:204    .text._ZN5amiro11HWI2CDriver10acquireBusEv:00000000 _ZN5amiro11HWI2CDriver10acquireBusEv
+     /tmp/cc7EmJK6.s:212    .text._ZN5amiro11HWI2CDriver10releaseBusEv:00000000 $t
+     /tmp/cc7EmJK6.s:218    .text._ZN5amiro11HWI2CDriver10releaseBusEv:00000000 _ZN5amiro11HWI2CDriver10releaseBusEv
+     /tmp/cc7EmJK6.s:226    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000000 $t
+     /tmp/cc7EmJK6.s:232    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000000 _ZN5amiro11HWI2CDriverC2EP9I2CDriver
+     /tmp/cc7EmJK6.s:243    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000008 $d
+     /tmp/cc7EmJK6.s:232    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000000 _ZN5amiro11HWI2CDriverC1EP9I2CDriver
+     /tmp/cc7EmJK6.s:249    .rodata._ZTVN5amiro9I2CDriverE:00000000 $d
+     /tmp/cc7EmJK6.s:270    .rodata._ZTVN5amiro11HWI2CDriverE:00000000 _ZTVN5amiro11HWI2CDriverE
+     /tmp/cc7EmJK6.s:266    .rodata._ZTVN5amiro11HWI2CDriverE:00000000 $d
+     /tmp/cc7EmJK6.s:38     .text._ZN5amiro9I2CDriverD2Ev:0000000c $t
+     /tmp/cc7EmJK6.s:59     .text._ZN5amiro11HWI2CDriverD2Ev:0000000c $t
+     /tmp/cc7EmJK6.s:81     .text._ZN5amiro9I2CDriverD0Ev:00000014 $t
+     /tmp/cc7EmJK6.s:103    .text._ZN5amiro11HWI2CDriverD0Ev:00000014 $t
+     /tmp/cc7EmJK6.s:248    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:0000000c $t
+                           .group:00000000 _ZN5amiro9I2CDriverD5Ev
+                           .group:00000000 _ZN5amiro11HWI2CDriverD5Ev
+
+UNDEFINED SYMBOLS
+_ZdlPv
+i2cStart
+i2cStop
+i2cGetErrors
+i2cMasterTransmitTimeout
+i2cMasterReceiveTimeout
+i2cAcquireBus
+i2cReleaseBus
+__cxa_pure_virtual

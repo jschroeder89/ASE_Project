@@ -1,0 +1,1434 @@
+
+build/PowerManagement.elf:     file format elf32-littlearm
+build/PowerManagement.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x080111d1
+
+Program Header:
+0x70000001 off    0x0002a5d8 vaddr 0x0802a5d8 paddr 0x0802a5d8 align 2**2
+         filesz 0x000001d8 memsz 0x000001d8 flags r--
+    LOAD off    0x00008000 vaddr 0x08008000 paddr 0x08008000 align 2**15
+         filesz 0x000227b0 memsz 0x000227b0 flags rwx
+    LOAD off    0x00030800 vaddr 0x20000800 paddr 0x0802a7b0 align 2**15
+         filesz 0x00000958 memsz 0x00000958 flags rw-
+    LOAD off    0x00038000 vaddr 0x20000000 paddr 0x20000000 align 2**15
+         filesz 0x00000000 memsz 0x000068b0 flags rw-
+private flags = 5000002: [Version5 EABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 startup       000001ac  08008000  08008000  00008000  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 crc           00000004  080081ac  080081ac  000081ac  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 constructors  0000003c  080081b0  080081b0  000081b0  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .text         000222cc  080081f0  080081f0  000081f0  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .ARM.extab    0000011c  0802a4bc  0802a4bc  0002a4bc  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .ARM.exidx    000001d8  0802a5d8  0802a5d8  0002a5d8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .stacks       00000800  20000000  20000000  00038000  2**0
+                  ALLOC
+  7 .data         00000958  20000800  0802a7b0  00030800  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  8 .bss          00005758  20001158  20001158  00038000  2**3
+                  ALLOC
+  9 .comment      00000070  00000000  00000000  00031158  2**0
+                  CONTENTS, READONLY
+ 10 .ARM.attributes 00000037  00000000  00000000  000311c8  2**0
+                  CONTENTS, READONLY
+ 11 .debug_frame  00001fe8  00000000  00000000  00031200  2**2
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+08008000 l    d  startup	00000000 startup
+080081ac l    d  crc	00000000 crc
+080081b0 l    d  constructors	00000000 constructors
+080081f0 l    d  .text	00000000 .text
+0802a4bc l    d  .ARM.extab	00000000 .ARM.extab
+0802a5d8 l    d  .ARM.exidx	00000000 .ARM.exidx
+20000000 l    d  .stacks	00000000 .stacks
+20000800 l    d  .data	00000000 .data
+20001158 l    d  .bss	00000000 .bss
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 vectors.c
+00000000 l    df *ABS*	00000000 ControllerAreaNetworkRx.cpp
+08008290 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+20001a0c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 ControllerAreaNetworkTx.cpp
+08008330 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro23ControllerAreaNetworkTxC2EP9CANDriverh
+20001a14 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 vcnl4020.cpp
+080084a0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro8VCNL4020D2Ev
+20001a1c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 mpr121.cpp
+080085a0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh
+20001a24 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 adconverter.cpp
+08018290 l     F .text	0000001c _ZN5amiro11ADConverter14enableWatchdogEb.part.1
+080182b0 l     F .text	00000024 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2
+080087e0 l     F .text	00000014 _GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t
+20001a2c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 ina219.cpp
+080185e0 l     F .text	00000024 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3
+08008830 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh
+080272f0 l     O .text	0000000c CSWTCH.33
+20001a34 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 bq27500.cpp
+08018d00 l     F .text	00000024 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.0
+08008890 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro7BQ275006DriverC2ERNS_9I2CDriverERK12GPIO_TypeDefhS6_h
+20001a3c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 bluetooth-wiimote.cpp
+080089c0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh
+20001a44 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 bluetooth-serial.cpp
+08008a10 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh
+20001a4c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 bluetooth-iwrap.cpp
+08008a70 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro14BluetoothIwrapC2EP10UARTDriver
+20001a54 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 iwrap_can_mux.cpp
+0801a7e0 l     F .text	00000020 NVIC_SystemReset
+0801a830 l     F .text	0000001c _ZL8chprintfP20BaseSequentialStreamPKcz
+08008a90 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro11IwrapCanMuxC2EP12SerialDriverP9CANDriverh
+20001a5c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 serial_can_mux.cpp
+0801ab10 l     F .text	00000020 NVIC_SystemReset
+0801ab60 l     F .text	0000001c _ZL8chprintfP20BaseSequentialStreamPKcz
+08008ab0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
+20001a64 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 PowerManagement.cpp
+08008ad0 l     F .text	00000014 _GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver
+20001a6c l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+00000000 l    df *ABS*	00000000 userthread.cpp
+0801b400 l     F .text	00000024 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1
+08009290 l     F .text	00000038 _GLOBAL__sub_I_current_state
+20001a88 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+08027cf0 l     O .text	00000040 _ZN18obstacle_avoidanceL9namMatrixE
+00000000 l    df *ABS*	00000000 main.cpp
+0801b760 l     F .text	0000001c _ZL8chprintfP20BaseSequentialStreamPKcz
+080097c0 l     F .text	00000034 _GLOBAL__sub_I_global
+20006050 l     O .bss	00000008 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+08027f80 l     O .text	00000008 _ZL10shell_cfg1
+080294c0 l     O .text	00000098 _ZL8commands
+08029460 l     O .text	00000014 CSWTCH.194
+08029480 l     O .text	00000014 CSWTCH.195
+080294a0 l     O .text	00000014 CSWTCH.196
+00000000 l    df *ABS*	00000000 ch.cpp
+00000000 l    df *ABS*	00000000 bluetooth-transport.cpp
+00000000 l    df *ABS*	00000000 cp-demangle.c
+08009800 l     F .text	00000096 d_make_comp
+08009898 l     F .text	00000032 d_make_name
+080098cc l     F .text	000000b2 d_cv_qualifiers
+08009980 l     F .text	00000038 d_ref_qualifier
+080099b8 l     F .text	00000086 d_clone_suffix
+08009a40 l     F .text	00000154 d_substitution
+08009b94 l     F .text	00000046 d_append_char
+08009bdc l     F .text	0000004c d_number.isra.0
+08009c28 l     F .text	00000038 d_number_component
+08009c60 l     F .text	00000030 d_compact_number
+08009c90 l     F .text	00000044 d_template_param
+08009cd4 l     F .text	0000001e d_discriminator
+08009cf4 l     F .text	00000084 d_source_name
+08009d78 l     F .text	00000054 d_call_offset
+08009dcc l     F .text	00000044 d_lookup_template_argument.isra.6
+08009e10 l     F .text	00000086 d_find_pack
+08009e98 l     F .text	0000007c d_growable_string_callback_adapter
+08009f14 l     F .text	000000cc d_expr_primary
+0800ab28 l     F .text	0000065e d_encoding
+0800a35c l     F .text	00000708 d_type
+08009fe0 l     F .text	000000bc d_template_args
+0800b500 l     F .text	000003bc d_expression
+0800a09c l     F .text	000002c0 d_name
+0800b284 l     F .text	0000027c d_unqualified_name
+0800aaec l     F .text	0000003c d_bare_function_type
+0800aa64 l     F .text	00000088 d_parmlist
+0800b188 l     F .text	000000fc d_operator_name
+0800b8bc l     F .text	00000064 d_exprlist
+0800b920 l     F .text	00000068 d_append_string
+0800b988 l     F .text	0000252c d_print_comp.part.10
+0800deb4 l     F .text	00000016 d_print_comp
+0800decc l     F .text	00000546 d_print_mod
+0800eb78 l     F .text	00000074 d_print_expr_op
+0800ebec l     F .text	000000aa d_print_subexpr
+0800e678 l     F .text	000001a0 d_print_array_type.isra.9
+0800e818 l     F .text	000001d8 d_print_function_type.isra.11
+0800e9f0 l     F .text	00000186 d_print_cast.isra.12
+0800e414 l     F .text	00000264 d_print_mod_list
+0800ec98 l     F .text	0000020c d_demangle_callback.constprop.16
+08025330 l     O .text	000000c4 standard_subs
+080253f4 l     O .text	00000294 cplus_demangle_builtin_types
+08025688 l     O .text	000003e0 cplus_demangle_operators
+00000000 l    df *ABS*	00000000 _arm_addsubdf3.o
+00000000 l    df *ABS*	00000000 _arm_muldivdf3.o
+00000000 l    df *ABS*	00000000 _arm_fixdfsi.o
+00000000 l    df *ABS*	00000000 _arm_truncdfsf2.o
+00000000 l    df *ABS*	00000000 unwind-arm.c
+0800f820 l     F .text	00000012 selfrel_offset31
+0800f834 l     F .text	00000072 search_EIT_table
+0800f8a8 l     F .text	00000028 __gnu_unwind_get_pr_addr
+0800f8d0 l     F .text	000000ac get_eit_entry
+0800f97c l     F .text	00000058 restore_non_core_regs
+0800f9d4 l     F .text	0000000c _Unwind_decode_typeinfo_ptr.isra.0
+0800f9e0 l     F .text	00000004 __gnu_unwind_24bit.isra.1
+0800f9e4 l     F .text	00000002 _Unwind_DebugHook
+0800f9e8 l     F .text	0000003e unwind_phase2
+0800fa28 l     F .text	000000da unwind_phase2_forced
+0800fc18 l     F .text	0000001a _Unwind_GetGR
+0800fc68 l     F .text	0000001c _Unwind_SetGR
+0800fcf4 l     F .text	000002e4 __gnu_unwind_pr_common
+00000000 l    df *ABS*	00000000 libunwind.o
+00000000 l    df *ABS*	00000000 pr-support.c
+080103f0 l     F .text	00000032 next_unwind_byte
+08010424 l     F .text	0000001a _Unwind_GetGR.constprop.0
+08010440 l     F .text	00000004 unwind_UCB_from_context
+00000000 l    df *ABS*	00000000 lib_a-memcpy.o
+00000000 l    df *ABS*	00000000 lib_a-strcmp.o
+00000000 l    df *ABS*	00000000 _arm_cmpdf2.o
+00000000 l    df *ABS*	00000000 _arm_fixunsdfsi.o
+00000000 l    df *ABS*	00000000 _aeabi_uldivmod.o
+00000000 l    df *ABS*	00000000 bpabi.c
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 crt0.c
+00000000 l    df *ABS*	00000000 chcore.c
+00000000 l    df *ABS*	00000000 chcore_v7m.c
+0801132c l       .text	00000000 _port_exit_from_isr
+00000000 l    df *ABS*	00000000 nvic.c
+00000000 l    df *ABS*	00000000 chsys.c
+20001158 l     O .bss	0000004c mainthread.4874
+00000000 l    df *ABS*	00000000 chdebug.c
+00000000 l    df *ABS*	00000000 chvt.c
+00000000 l    df *ABS*	00000000 chschd.c
+08011a80 l     F .text	00000052 wakeup
+00000000 l    df *ABS*	00000000 chthreads.c
+00000000 l    df *ABS*	00000000 chdynamic.c
+00000000 l    df *ABS*	00000000 chsem.c
+00000000 l    df *ABS*	00000000 chmtx.c
+00000000 l    df *ABS*	00000000 chevents.c
+00000000 l    df *ABS*	00000000 chmboxes.c
+00000000 l    df *ABS*	00000000 chqueues.c
+08012860 l     F .text	00000030 qwait
+00000000 l    df *ABS*	00000000 chmemcore.c
+20001750 l     O .bss	00000004 endmem
+20001754 l     O .bss	00000004 nextmem
+00000000 l    df *ABS*	00000000 chheap.c
+20001758 l     O .bss	00000020 default_heap
+00000000 l    df *ABS*	00000000 chmempools.c
+00000000 l    df *ABS*	00000000 hal.c
+00000000 l    df *ABS*	00000000 adc.c
+00000000 l    df *ABS*	00000000 can.c
+00000000 l    df *ABS*	00000000 ext.c
+00000000 l    df *ABS*	00000000 i2c.c
+00000000 l    df *ABS*	00000000 pwm.c
+00000000 l    df *ABS*	00000000 serial.c
+080135e0 l     F .text	00000006 readt
+080135f0 l     F .text	0000000a read
+08013600 l     F .text	00000006 writet
+08013610 l     F .text	0000000a write
+08013620 l     F .text	00000006 gett
+08013630 l     F .text	0000000a get
+08013640 l     F .text	00000006 putt
+08013650 l     F .text	0000000a put
+080264f0 l     O .text	00000020 vmt
+00000000 l    df *ABS*	00000000 uart.c
+00000000 l    df *ABS*	00000000 stm32_dma.c
+20001778 l     O .bss	00000080 dma_isr_redir
+200017f8 l     O .bss	00000004 dma_streams_mask
+00000000 l    df *ABS*	00000000 hal_lld.c
+00000000 l    df *ABS*	00000000 adc_lld.c
+08014220 l     F .text	000000e2 adc_lld_serve_rx_interrupt
+00000000 l    df *ABS*	00000000 ext_lld_isr.c
+00000000 l    df *ABS*	00000000 can_lld.c
+080146b0 l     F .text	0000011c can_lld_set_filters
+00000000 l    df *ABS*	00000000 ext_lld.c
+00000000 l    df *ABS*	00000000 pal_lld.c
+00000000 l    df *ABS*	00000000 i2c_lld.c
+08015060 l     F .text	00000054 i2c_lld_abort_operation
+080150c0 l     F .text	00000118 i2c_lld_serve_event_interrupt
+080151e0 l     F .text	000000c8 i2c_lld_serve_error_interrupt
+080152b0 l     F .text	00000034 i2c_lld_safety_timeout
+080152f0 l     F .text	00000040 i2c_lld_serve_tx_end_irq
+08015330 l     F .text	0000007c i2c_lld_serve_rx_end_irq
+00000000 l    df *ABS*	00000000 pwm_lld.c
+00000000 l    df *ABS*	00000000 serial_lld.c
+08015c50 l     F .text	00000014 notify1
+08026970 l     O .text	0000000c default_config
+00000000 l    df *ABS*	00000000 uart_lld.c
+08015ea0 l     F .text	00000048 usart_stop
+08015ef0 l     F .text	00000074 serve_usart_irq
+08015f70 l     F .text	0000005e uart_lld_serve_tx_end_irq
+08015fd0 l     F .text	0000008c uart_lld_serve_rx_end_irq
+00000000 l    df *ABS*	00000000 board.c
+00000000 l    df *ABS*	00000000 evtimer.c
+08016540 l     F .text	00000034 tmrcb
+00000000 l    df *ABS*	00000000 syscalls.c
+00000000 l    df *ABS*	00000000 chprintf.c
+08016690 l     F .text	0000004e long_to_string_with_divisor
+00000000 l    df *ABS*	00000000 shell.c
+08016a10 l     F .text	0000001c chprintf
+08016a30 l     F .text	00000028 cmd_systime
+08016a60 l     F .text	000000c0 cmd_info
+08016b20 l     F .text	00000040 _strtok.constprop.2
+08016c50 l     F .text	000001a0 shell_thread
+20000800 l     O .data	00000018 local_commands
+00000000 l    df *ABS*	00000000 stubs.c
+00000000 l    df *ABS*	00000000 Debug.c
+00000000 l    df *ABS*	00000000 Color.cpp
+08026ea0 l     O .text	000001b9 _ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors
+00000000 l    df *ABS*	00000000 HWI2CDriver.cpp
+00000000 l    df *ABS*	00000000 I2CMultiplexer.cpp
+00000000 l    df *ABS*	00000000 VI2CDriver.cpp
+00000000 l    df *ABS*	00000000 eeprom.cpp
+00000000 l    df *ABS*	00000000 at24.cpp
+080271e0 l     O .text	00000024 _ZN5amiroL36eeprom_at24_base_file_stream_methodsE
+00000000 l    df *ABS*	00000000 FileSystemInputOutputBase.cpp
+00000000 l    df *ABS*	00000000 FSIOPowerManagement.cpp
+00000000 l    df *ABS*	00000000 bluetooth-descriptor.cpp
+00000000 l    df *ABS*	00000000 bluetooth-connector.cpp
+00000000 l    df *ABS*	00000000 bluetooth.cpp
+00000000 l    df *ABS*	00000000 exti.cpp
+00000000 l    df *ABS*	00000000 pure.cc
+00000000 l    df *ABS*	00000000 del_op.cc
+00000000 l    df *ABS*	00000000 eh_terminate.cc
+00000000 l    df *ABS*	00000000 eh_catch.cc
+00000000 l    df *ABS*	00000000 atexit_arm.cc
+00000000 l    df *ABS*	00000000 eh_arm.cc
+00000000 l    df *ABS*	00000000 eh_call.cc
+0801d850 l     F .text	0000003a _ZN10__cxxabiv1L24__is_gxx_exception_classEPc
+00000000 l    df *ABS*	00000000 eh_personality.cc
+0801d990 l     F .text	00000032 _ZL12read_sleb128PKhPl
+0801d9d0 l     F .text	000000b0 _ZL28read_encoded_value_with_basehjPKhPj
+0801da80 l     F .text	0000004a _ZL21base_of_encoded_valuehP15_Unwind_Context
+0801dad0 l     F .text	00000096 _ZL17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info
+00000000 l    df *ABS*	00000000 eh_globals.cc
+20006060 l     O .bss	0000000c _ZL10eh_globals
+00000000 l    df *ABS*	00000000 vterminate.cc
+2000606c l     O .bss	00000001 _ZZN9__gnu_cxx27__verbose_terminate_handlerEvE11terminating
+00000000 l    df *ABS*	00000000 eh_throw.cc
+0801e0c0 l     F .text	00000044 _ZL23__gxx_exception_cleanup19_Unwind_Reason_CodeP21_Unwind_Control_Block
+00000000 l    df *ABS*	00000000 eh_exception.cc
+00000000 l    df *ABS*	00000000 eh_type.cc
+00000000 l    df *ABS*	00000000 class_type_info.cc
+00000000 l    df *ABS*	00000000 eh_alloc.cc
+20006070 l     O .bss	00000004 _ZL14emergency_used
+20006078 l     O .bss	00000800 _ZL16emergency_buffer
+00000000 l    df *ABS*	00000000 si_class_type_info.cc
+00000000 l    df *ABS*	00000000 tinfo.cc
+00000000 l    df *ABS*	00000000 abort.c
+00000000 l    df *ABS*	00000000 atof.c
+00000000 l    df *ABS*	00000000 atoi.c
+00000000 l    df *ABS*	00000000 cxa_atexit.c
+00000000 l    df *ABS*	00000000 fputc.c
+00000000 l    df *ABS*	00000000 fputs.c
+00000000 l    df *ABS*	00000000 fvwrite.c
+00000000 l    df *ABS*	00000000 fwrite.c
+00000000 l    df *ABS*	00000000 malloc.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 memchr-stub.c
+00000000 l    df *ABS*	00000000 memcmp.c
+00000000 l    df *ABS*	00000000 memmove.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 mlock.c
+00000000 l    df *ABS*	00000000 putc.c
+00000000 l    df *ABS*	00000000 realloc.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 signal.c
+00000000 l    df *ABS*	00000000 signalr.c
+00000000 l    df *ABS*	00000000 sprintf.c
+00000000 l    df *ABS*	00000000 strcasecmp.c
+00000000 l    df *ABS*	00000000 strcpy.c
+00000000 l    df *ABS*	00000000 strlen.c
+00000000 l    df *ABS*	00000000 strncmp.c
+00000000 l    df *ABS*	00000000 strncpy.c
+00000000 l    df *ABS*	00000000 strpbrk.c
+00000000 l    df *ABS*	00000000 strspn.c
+00000000 l    df *ABS*	00000000 strstr.c
+0801fb30 l     F .text	000000ba critical_factorization
+0801fbf0 l     F .text	000001ec two_way_long_needle
+00000000 l    df *ABS*	00000000 strtod.c
+0801ffe0 l     F .text	0000003a sulp
+0802a0a0 l     O .text	00000014 fpi.5235
+0802a0c0 l     O .text	00000014 fpinan.5271
+0802a0f0 l     O .text	00000028 tinytens
+00000000 l    df *ABS*	00000000 strtol.c
+00000000 l    df *ABS*	00000000 vfprintf.c
+0802a120 l     O .text	00000010 zeroes.6760
+0802a170 l     O .text	00000010 blanks.6759
+00000000 l    df *ABS*	00000000 syswrite.c
+00000000 l    df *ABS*	00000000 wbuf.c
+00000000 l    df *ABS*	00000000 wsetup.c
+00000000 l    df *ABS*	00000000 __atexit.c
+00000000 l    df *ABS*	00000000 dtoa.c
+08022830 l     F .text	00000130 quorem
+00000000 l    df *ABS*	00000000 fflush.c
+00000000 l    df *ABS*	00000000 findfp.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 fwalk.c
+00000000 l    df *ABS*	00000000 gdtoa-gethex.c
+08023d10 l     F .text	000000a0 rshift
+00000000 l    df *ABS*	00000000 gdtoa-hexnan.c
+00000000 l    df *ABS*	00000000 locale.c
+20001120 l     O .data	00000038 lconv
+00000000 l    df *ABS*	00000000 makebuf.c
+00000000 l    df *ABS*	00000000 mprec.c
+0802a4b0 l     O .text	0000000c p05.5266
+00000000 l    df *ABS*	00000000 s_fpclassify.c
+00000000 l    df *ABS*	00000000 stdio.c
+00000000 l    df *ABS*	00000000 strchr.c
+00000000 l    df *ABS*	00000000 vfprintf.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 fclose.c
+00000000 l    df *ABS*	00000000 chregistry.c
+00000000 l    df *ABS*	00000000 impure.c
+200008e0 l     O .data	00000428 impure_data
+00000000 l    df *ABS*	00000000 ctype_.c
+00000000 l    df *ABS*	00000000 eh_unex_handler.cc
+00000000 l    df *ABS*	00000000 eh_term_handler.cc
+00000000 l    df *ABS*	00000000 reent.c
+00000000 l    df *ABS*	00000000 
+0802a7b0 l       .stacks	00000000 _etext
+080081ac l       *ABS*	00000000 __crc_start__
+0001c000 l       *ABS*	00000000 __ram_size__
+00000000 l       startup	00000000 _text
+20000000 l       startup	00000000 __ram_start__
+2001c000 l       *ABS*	00000000 __ram_end__
+200068b0 l       .bss	00000000 _end
+00000400 l       *ABS*	00000000 __main_stack_size__
+00000400 l       *ABS*	00000000 __process_stack_size__
+080269e0 g     O .text	000000fc pal_default_config
+0801e430 g     F .text	00000034 __cxa_free_exception
+080103a4 g     F .text	00000022 .hidden ___Unwind_ForcedUnwind
+0800fb08 g     F .text	0000005e .hidden __gnu_Unwind_RaiseException
+20001ce0 g     O .bss	00000238 _ZN12wii_steering8btserialE
+0801e5d0 g     F .text	00000004 _ZNKSt9type_info15__is_function_pEv
+08019720 g     F .text	00000016 _ZN5amiro19BluetoothDescriptorC2Ev
+08014310 g     F .text	0000002c Vector58
+0801d570 g     F .text	00000010 _ZSt10unexpectedv
+08016ed0 g     F .text	00000010 _ZN10chibios_rt10BaseThread5startEm
+08014570 g     F .text	00000030 VectorE8
+08014400 g     F .text	00000074 Vector9C
+08024e20 g     F .text	0000005e __any_on
+08016f10 g     F .text	0000000e _ZN10chibios_rt6System6unlockEv
+08016680 g     F .text	00000004 _isatty_r
+08010b64 g     F .text	00000012 .hidden __aeabi_dcmple
+08017630 g     F .text	00000006 _ZN5amiro11HWI2CDriver10releaseBusEv
+08011480 g     F .text	0000004a nvicEnableVector
+08011720 g     F .text	00000034 dbg_check_lock_from_isr
+08027a30 g     O .text	00000014 _ZTVN5amiro14BluetoothIwrapE
+0801f850 g     F .text	000000ba strcpy
+08010c40 g     F .text	00000030 .hidden __gnu_uldivmod_helper
+0801bde0 g     F .text	00000160 _Z21shellRequestPrintVCNLP20BaseSequentialStreamiPPc
+08018c80  w    F .text	00000004 _ZN5amiro10BaseSensorINS_7BQ275008InitDataENS1_9CalibDataEE9hibernateEv
+08011300  w    F .text	00000002 VectorAC
+08016df0 g     F .text	00000004 _getpid
+08011f00 g     F .text	00000018 chThdExit
+080115f0 g     F .text	0000006c chSysTimerHandlerI
+080124a0 g     F .text	00000034 chEvtBroadcastFlagsI
+08018910 g     F .text	00000058 _ZN5amiro6INA2196Driver4initEPNS0_8InitDataE
+08011b30 g     F .text	00000050 chSchGoSleepTimeoutS
+08010aa0 g     F .text	0000007a .hidden __cmpdf2
+08013290 g     F .text	00000004 i2cInit
+08016600 g     F .text	00000004 _lseek_r
+08017150 g     F .text	00000004 _ZN5amiro5Color7getBlueEv
+0801b200  w    F .text	00000028 _ZN5amiro15PowerManagementD1Ev
+0800eea4 g     F .text	000000c4 __cxa_demangle
+080178b0 g     F .text	00000006 _ZN5amiro8VCNL402015getAmbientLightEv
+08010aa0 g     F .text	0000007a .hidden __eqdf2
+0801ca10 g     F .text	000008b0 _Z19boardPeripheryCheckP20BaseSequentialStream
+08017090 g     F .text	00000004 _ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
+08010c80 g     F .text	00000296 .hidden __divdi3
+08011300  w    F .text	00000002 Vector1A0
+0801e1a0 g     F .text	00000070 __cxa_rethrow
+08012200 g     F .text	00000100 chMtxLockS
+0801a200 g     F .text	00000008 _ZN5amiro16BluetoothWiimote22bluetoothWiimoteListenEPKc
+080116a0 g     F .text	00000034 dbg_check_lock
+08014340 g     F .text	0000002c Vector5C
+08014cc0 g     F .text	000000a0 ext_lld_channel_enable
+0800f2a4 g     F .text	0000005a .hidden __floatdidf
+08019770 g     F .text	00000004 _ZN5amiro19BluetoothDescriptor34bluetoothDescriptorGetBufferLengthEv
+0801f770 g     F .text	00000028 _kill_r
+08011300  w    F .text	00000002 NMIVector
+0801d6b0 g     F .text	00000000 __cxa_end_cleanup
+08012cf0 g     F .text	000000c8 chHeapFree
+08011300  w    F .text	00000002 Vector11C
+08024f50 g     F .text	00000020 __sseek
+08023960 g     F .text	000000f4 __sinit
+0801ab80 g     F .text	00000054 _ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
+08022600 g     F .text	000000a8 __swbuf_r
+08016fd0 g     F .text	00000010 _ZN10chibios_rt10BaseThreadC2Ev
+0801b980 g     F .text	00000048 _Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc
+08008200 g     F .text	00000090 _ZN5amiro23ControllerAreaNetworkRx4mainEv
+08008af0 g     F .text	000007a0 _ZN5amiro10UserThread4mainEv
+08013cb0 g     F .text	00000048 dmaInit
+0801e470 g     F .text	00000014 _ZN10__cxxabiv120__si_class_type_infoD2Ev
+0802a010 g     O .text	00000025 _ZTSN10__cxxabiv120__si_class_type_infoE
+08011300  w    F .text	00000002 Vector19C
+08016580 g     F .text	0000003c evtStart
+0801ab80 g     F .text	00000054 _ZN5amiro12SerialCanMuxC1EP12SerialDriverP9CANDriverh
+0801b6e0  w    F .text	00000014 _ZN5amiro8BQ24103AILj1073875968ELm2ELj1073873920ELm4EED0Ev
+0801f2b0 g     F .text	00000002 __malloc_unlock
+08014a90 g     F .text	00000050 can_lld_stop
+0801a380 g     F .text	00000008 _ZN5amiro15BluetoothSerial21bluetoothSerialListenEPKc
+0801b130 g     F .text	000000cc _ZN5amiro15PowerManagement17periodicBroadcastEv
+0801b5e0  w    F .text	0000000c _ZN5amiro8BQ24103AILj1073875968ELm2ELj1073873920ELm4EED1Ev
+080176a0 g     F .text	00000012 _ZN5amiro14I2CMultiplexer10releaseBusEv
+08017110 g     F .text	00000020 _ZN5amiro5ColorC1ENS0_11GlobalColorE
+08020020 g     F .text	00000f80 _strtod_r
+08017f40 g     F .text	0000000a _ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv
+080147d0 g     F .text	0000005c Vector8C
+0801adf0 g     F .text	00000046 _ZN5amiro12SerialCanMux3getEv
+08018240 g     F .text	00000014 _ZN5amiro11ADConverterD0Ev
+08018540  w    F .text	0000000c _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev
+08012400 g     F .text	0000004c chEvtUnregister
+08019800 g     F .text	000000e4 _ZN5amiro18BluetoothTransportC2EP10UARTDriver
+0801f140 g     F .text	000000c0 memmove
+080134f0 g     F .text	00000050 pwmStart
+08016080 g     F .text	0000001c VectorDC
+0801b350 g     F .text	00000004 _ZN5amiro15PowerManagement9calibrateEv
+08010260 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP
+0801e210 g     F .text	0000000c _ZNSt9exceptionD2Ev
+08010380 g     F .text	00000022 .hidden _Unwind_Resume_or_Rethrow
+08011300  w    F .text	00000002 Vector168
+08024570 g     F .text	0000004c _Balloc
+0801b630  w    F .text	00000004 _ZNK5amiro8BQ24103AILj1073874944ELm3ELj1073874944ELm0EE9isEnabledEv
+08008000 g     O startup	000001ac _vectors
+0802a7b0 g       .ARM.exidx	00000000 __exidx_end
+0801d390  w    F .text	00000128 _ZN5amiro6GlobalD1Ev
+080173c0 g     F .text	00000030 _ZN5amiro23ControllerAreaNetworkTxC1EP9CANDriverh
+08011ae0 g     F .text	00000050 chSchGoSleepS
+08027120 g     O .text	0000002c _ZTVN5amiro11HWI2CDriverE
+08011300  w    F .text	00000002 Vector110
+0800ffd8 g     F .text	00000006 .hidden __aeabi_unwind_cpp_pr0
+0801a750 g     F .text	00000030 _ZN5amiro9BLUETOOTH14bluetoothResetEv
+08010a90 g     F .text	0000008a .hidden __gtdf2
+08029710 g     O .text	00000014 _ZTVSt13bad_exception
+0801d2c0 g     F .text	00000018 _Z17shellRequestCheckP20BaseSequentialStreamiPPc
+08019d70 g     F .text	0000000c _ZN5amiro18BluetoothConnectorC1EPNS_9BLUETOOTHEPvPKc
+08008990 g     F .text	0000002c _ZN5amiro16BluetoothWiimote4mainEv
+20001f28 g     O .bss	00000018 kinematic
+0801a620 g     F .text	00000114 _ZN5amiro14BluetoothIwrap25bluetoothIwrapSendCommandEPKc
+080185d0 g     F .text	00000008 _ZThn8_N5amiro6INA2196Driver4mainEv
+080272c0  w    O .text	00000028 _ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE
+080185b0  w    F .text	00000014 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev
+08015ae0 g     F .text	00000110 pwm_lld_start
+08013350 g     F .text	00000018 i2cGetErrors
+080134b0 g     F .text	00000020 i2cReleaseBus
+08027e90 g     O .text	0000001c _ZTVN5amiro10UserThreadE
+080106fc g     F .text	0000000a .hidden _Unwind_GetRegionStart
+20001868 g     O .bss	00000008 EXTD1
+08010380 g     F .text	00000022 .hidden ___Unwind_Resume_or_Rethrow
+0801b4f0 g     F .text	0000002c _ZN5amiro10UserThread13setWiiAddressEPKc
+20001870 g     O .bss	00000038 I2CD1
+200068b0 g       .bss	00000000 __heap_base__
+080162a0 g     F .text	00000036 uart_lld_start_receive
+08016660 g     F .text	00000018 _fstat_r
+0801bf60 g     F .text	00000040 _Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc
+200068ac g     O .bss	00000004 errno
+08019a70 g     F .text	0000014c _ZN5amiro18BluetoothTransport34bluetoothTransportReceiveCompletedEv
+08013ad0 g     F .text	00000030 Vector120
+0801a7c0 g     F .text	00000004 _ZN5amiro9BLUETOOTH20bluetoothSendCommandEPKc
+08011d50 g     F .text	000000a4 chThdCreateI
+08017110 g     F .text	00000020 _ZN5amiro5ColorC2ENS0_11GlobalColorE
+20001a98 g     O .bss	00000240 _ZN12wii_steering7wiimoteE
+08011660 g     F .text	00000034 dbg_check_enable
+080157d0 g     F .text	00000064 i2c_lld_stop
+080103c8 g     F .text	00000022 .hidden _Unwind_Backtrace
+08010b2c g     F .text	00000010 .hidden __aeabi_cdcmple
+080175a0 g     F .text	00000006 _ZN5amiro11HWI2CDriver5startEPK9I2CConfig
+0801b4b0 g     F .text	00000014 _ZN5amiro10UserThreadC2Ev
+08015430 g     F .text	00000038 VectorC8
+0801a800 g     F .text	0000000c _ZN5amiro11IwrapCanMuxD2Ev
+08027f00  w    O .text	0000001c _ZTVN5amiro12BaseBQ24103AE
+080174c0 g     F .text	00000036 _ZN5amiro23ControllerAreaNetworkTx14setTargetSpeedERN5types9kinematicE
+08017f50 g     F .text	00000050 _ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh
+080178c0 g     F .text	00000006 _ZN5amiro8VCNL402018setProximityOffsetEt
+0801d770 g     F .text	00000064 __cxa_begin_cleanup
+0801c530  w    F .text	000003dc _ZN5amiro6GlobalC1Ev
+08018c70  w    F .text	00000004 _ZN5amiro10BaseSensorINS_7BQ275008InitDataENS1_9CalibDataEE4initEPS2_
+080178e0 g     F .text	00000006 _ZN5amiro8VCNL402012getProximityEv
+08017620 g     F .text	00000006 _ZN5amiro11HWI2CDriver10acquireBusEv
+08017840  w    F .text	00000030 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+080170e0 g     F .text	00000004 _ZN10chibios_rt7Mailbox5fetchEPlm
+0801d4c0 g     F .text	00000020 _Z13power_down_cbP9EXTDriverm
+08010240 g     F .text	00000018 .hidden __restore_core_regs
+08010280 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP_D_16_to_31
+08011b80 g     F .text	00000064 chSchWakeupS
+08026e90 g     O .text	0000000c _ZTVN10chibios_rt15ThreadReferenceE
+08014630 g     F .text	00000076 ext_lld_exti_irq_enable
+080160f0 g     F .text	0000018c uart_lld_start
+0801a740 g     F .text	0000000c _ZN5amiro9BLUETOOTHC2EP10UARTDriver
+0801d8b0 g     F .text	000000d4 __cxa_call_unexpected
+080176f0  w    F .text	0000000c _ZN5amiro10VI2CDriverD1Ev
+0801c0a0 g     F .text	000000e4 _Z23shellRequestWiiSteeringP20BaseSequentialStreamiPPc
+08013700 g     F .text	00000050 sdIncomingDataI
+0801b6c0  w    F .text	00000014 _ZN5amiro8BQ24103AILj1073874944ELm3ELj1073874944ELm0EED0Ev
+08012ab0 g     F .text	0000004a chOQGetI
+080189c0 g     F .text	00000278 _ZN5amiro6INA2196Driver8selftestEv
+08011a10 g     F .text	00000014 _scheduler_init
+08011ca0 g     F .text	00000024 chSchRescheduleS
+08011e00 g     F .text	00000042 chThdCreateStatic
+08018c40 g     F .text	00000014 _ZN5amiro7BQ275006DriverD2Ev
+08018cf0 g     F .text	00000008 _ZThn8_N5amiro7BQ275006Driver4mainEv
+08019ff0 g     F .text	0000019c _ZN5amiro16BluetoothWiimote14wiimoteReceiveEv
+080148c0 g     F .text	0000008c Vector94
+0801acf0 g     F .text	00000046 _ZN5amiro12SerialCanMux5writeEPKhj
+080173c0 g     F .text	00000030 _ZN5amiro23ControllerAreaNetworkTxC2EP9CANDriverh
+080085c0 g     F .text	00000214 _ZN5amiro11ADConverter4mainEv
+08013770 g     F .text	0000004c uartStart
+08011300  w    F .text	00000002 VectorA8
+0800fb04 g     F .text	00000004 .hidden _Unwind_GetCFA
+08010730 g     F .text	00000134 memcpy
+080242e0 g     F .text	00000194 __hexnan
+08027f40  w    O .text	0000001c _ZTVN5amiro8BQ24103AILj1073874944ELm3ELj1073874944ELm0EEE
+08010b1c g     F .text	00000020 .hidden __aeabi_cdrcmple
+0801b9d0 g     F .text	00000318 _Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc
+08017540  w    F .text	0000000c _ZN5amiro9I2CDriverD2Ev
+08019910 g     F .text	00000006 _ZN5amiro18BluetoothTransport35bluetoothTransportGetStorageMailboxEv
+20001cd8 g     O .bss	00000001 current_state
+08015a50 g     F .text	0000006c VectorB4
+08016ff0 g     F .text	0000000c _ZN10chibios_rt10BaseThread7setNameEPKc
+0800fc34 g     F .text	00000034 .hidden _Unwind_VRS_Set
+080176e0 g     F .text	0000000c _ZN5amiro14I2CMultiplexerD2Ev
+08023950 g     F .text	0000000c _cleanup_r
+08017a40 g     F .text	00000002 _ZN5amiro6EEPROMD1Ev
+0801e2f0 g     F .text	0000000c _ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+080210f0 g     F .text	000014ec _svfprintf_r
+0800f234 g     F .text	00000022 .hidden __floatsidf
+0801a7b0 g     F .text	0000000c _ZN5amiro9BLUETOOTH18bluetoothEnableMuxEv
+08012f70 g     F .text	00000054 adcConvert
+08010a98 g     F .text	00000082 .hidden __ltdf2
+0801c2a0 g     F .text	00000060 _Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc
+0801a9c0 g     F .text	00000046 _ZN5amiro11IwrapCanMux5writeEPKhj
+080177f0 g     F .text	0000001c _ZN5amiro10VI2CDriverC2EPNS_14I2CMultiplexerEh
+0801e300 g     F .text	00000014 _ZN10__cxxabiv117__class_type_infoD1Ev
+0801b5b0  w    F .text	0000000c _ZN5amiro12BaseBQ24103AD2Ev
+08010be0 g     F .text	00000000 .hidden __aeabi_uldivmod
+0801aa70 g     F .text	0000004a _ZN5amiro11IwrapCanMux3putEh
+08017a50 g     F .text	00000004 _ZN5amiro6EEPROM8geterrorEPv
+08011a30 g     F .text	00000044 chSchReadyI
+08017170  w    F .text	00000030 _ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
+080081ec g       constructors	00000000 __fini_array_end
+08011310  w    F .text	00000004 port_halt
+080132b0 g     F .text	00000050 i2cStart
+080120a0 g     F .text	0000005c chSemResetI
+20000800 g       .stacks	00000000 __main_thread_stack_end__
+080171d0 g     F .text	0000000c _ZN5amiro23ControllerAreaNetworkRxD2Ev
+08024e80 g     F .text	00000054 __fpclassifyd
+08011940 g     F .text	00000018 _vt_init
+08024d70 g     F .text	00000054 __ratio
+0801c530  w    F .text	000003dc _ZN5amiro6GlobalC2Ev
+08014b20 g     F .text	00000076 can_lld_transmit
+0801a780 g     F .text	00000030 _ZN5amiro9BLUETOOTH14bluetoothStartEv
+08012bd0 g     F .text	00000030 chCoreAllocI
+08017a80 g     F .text	00000006 _ZN5amiro6EEPROM5lseekEPvm
+0801b5d0  w    F .text	0000000c _ZN5amiro8BQ24103AILj1073874944ELm3ELj1073874944ELm0EED1Ev
+0801a810 g     F .text	00000014 _ZN5amiro11IwrapCanMuxD0Ev
+20001a90 g     O .bss	00000001 next_state
+0801eae0 g     F .text	00000010 malloc
+0801b030 g     F .text	00000008 _ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+08019920 g     F .text	00000006 _ZN5amiro18BluetoothTransport36bluetoothTransportGetTransmitMailboxEv
+08017160 g     F .text	00000004 _ZN5amiro23ControllerAreaNetworkRx14receiveMessageEP10CANRxFrame
+0801f700 g     F .text	00000056 _raise_r
+08012c50 g     F .text	0000001c _heap_init
+08013960 g     F .text	00000034 Vector74
+20001830 g     O .bss	00000038 CAND1
+0802a3b0 g     O .text	000000c8 __mprec_tens
+0801bf40 g     F .text	0000001c _Z17shellRequestCalibP20BaseSequentialStreamiPPc
+08012e20 g     F .text	00000034 halInit
+080278f0 g     O .text	00000040 _ZTVN5amiro7BQ275006DriverE
+08012fd0 g     F .text	00000004 canInit
+08017a90 g     F .text	00000004 _ZN5amiro4AT245closeEPv
+20001f1c g     O .bss	0000000c _ZN12wii_steering12wiimoteCalibE
+0801b360 g     F .text	00000006 _ZN5amiro15PowerManagement14getPowerStatusEv
+08018230 g     F .text	0000000c _ZN5amiro11ADConverterD2Ev
+08011300  w    F .text	00000002 Vector160
+0801b4b0 g     F .text	00000014 _ZN5amiro10UserThreadC1Ev
+080176c0 g     F .text	00000018 _ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE
+08018560  w    F .text	00000004 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv
+08016430 g     F .text	0000010c boardResetBQ27500I2C
+08011300  w    F .text	00000002 VectorEC
+0801a390 g     F .text	00000048 _ZN5amiro14BluetoothIwrapC1EP10UARTDriver
+20001158 g       .bss	00000000 _bss_start
+08011bf0 g     F .text	0000004c chSchDoRescheduleBehind
+08010ba0 g     F .text	00000040 .hidden __fixunsdfsi
+0801b5b0  w    F .text	0000000c _ZN5amiro12BaseBQ24103AD1Ev
+20006880 g     O .bss	00000004 __malloc_top_pad
+08011300  w    F .text	00000002 UsageFaultVector
+080160a0 g     F .text	0000004c uart_lld_init
+20006058 g     O .bss	00000004 pathdc_change
+0801f7a0 g     F .text	00000004 _getpid_r
+08017710 g     F .text	00000002 _ZN5amiro10VI2CDriver4stopEv
+2001c000 g       *ABS*	00000000 __heap_end__
+08011300  w    F .text	00000002 DebugMonitorVector
+0800fc84 g     F .text	00000070 .hidden __gnu_Unwind_Backtrace
+080175c0 g     F .text	00000006 _ZN5amiro11HWI2CDriver9getErrorsEv
+20001a08 g     O .bss	00000004 .hidden __dso_handle
+08012020 g     F .text	0000004a chThdCreateFromHeap
+0800f214 g     F .text	0000001e .hidden __aeabi_ui2d
+08014be0 g     F .text	000000c6 can_lld_receive
+08024480 g     F .text	00000008 _localeconv_r
+080088b0 g     F .text	000000d8 _ZN5amiro18BluetoothTransport4mainEv
+0801d7e0 g     F .text	00000070 __gnu_end_cleanup
+080247c0 g     F .text	00000012 __i2b
+0801e730 g     F .text	00000314 __sfvwrite_r
+0801e360 g     F .text	00000024 _ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+08017870 g     F .text	0000003c _ZN5amiro8VCNL4020C1EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE
+080081f0 g     F .text	00000004 _ZN10chibios_rt10BaseThread4mainEv
+080116e0 g     F .text	0000003c dbg_check_unlock
+08027c80 g     O .text	00000020 _ZTVN5amiro12SerialCanMuxE
+08013590 g     F .text	00000048 pwmDisableChannel
+0800ef90 g     F .text	00000000 .hidden __aeabi_drsub
+08011300  w    F .text	00000002 Vector40
+0801b3a0 g     F .text	0000000c _ZN5amiro10UserThreadD1Ev
+08016630 g     F .text	00000028 _sbrk_r
+0801b5a0  w    F .text	0000000c _ZN5amiro11BaseLTC4412D2Ev
+08011300  w    F .text	00000002 VectorF8
+08011300  w    F .text	00000002 Vector108
+08018690 g     F .text	000000a4 _ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+080170b0 g     F .text	0000000c _ZN10chibios_rt7MailboxC2EPll
+08017da0 g     F .text	000000fa _ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb
+080111d0 g     F .text	00000128 ResetHandler
+08027f60  w    O .text	0000001c _ZTVN5amiro8BQ24103AILj1073875968ELm2ELj1073873920ELm4EEE
+08012980 g     F .text	0000009c chIQReadTimeout
+08010270 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP_D
+0801ab30 g     F .text	0000000c _ZN5amiro12SerialCanMuxD1Ev
+0802a060 g     O .text	00000020 _ZTVSt9type_info
+080153b0 g     F .text	0000001c VectorBC
+08011300  w    F .text	00000002 Vector190
+08013bf0 g     F .text	00000034 Vector150
+080170c0 g     F .text	00000004 _ZN10chibios_rt7Mailbox4postElm
+08013240 g     F .text	0000004c extStart
+08017580  w    F .text	00000014 _ZN5amiro11HWI2CDriverD0Ev
+0801e230 g     F .text	00000008 _ZNKSt9exception4whatEv
+080165f0 g     F .text	0000000a _read_r
+0801b5c0  w    F .text	0000000c _ZN5amiro7LTC4412ILj1073874944ELh8EED1Ev
+08013b00 g     F .text	00000034 Vector124
+08027ca0 g     O .text	0000004c _ZTVN5amiro15PowerManagementE
+08010b50 g     F .text	00000012 .hidden __aeabi_dcmplt
+0800fff0 g     F .text	0000024a .hidden _Unwind_VRS_Pop
+080251e0 g     F .text	00000080 _fclose_r
+0801a360 g     F .text	0000001c _ZN5amiro15BluetoothSerial19bluetoothSerialStopEv
+0800ffe8  w    F .text	00000006 .hidden __aeabi_unwind_cpp_pr2
+08018fe0 g     F .text	000000f4 _ZN5amiro7BQ275006Driver10extCommandENS1_15ExtendedCommandENS1_21ExtendedCommandAccessEPhhh
+08011350 g     F .text	00000034 _port_init
+080176f0  w    F .text	0000000c _ZN5amiro10VI2CDriverD2Ev
+2000687c g     O .bss	00000004 __malloc_max_sbrked_mem
+08012ee0 g     F .text	00000054 adcStartConversionI
+08017c10 g     F .text	0000007a _ZN5amiro4AT248poll_ackEPv
+080103c8 g     F .text	00000022 .hidden ___Unwind_Backtrace
+08017810 g     F .text	0000000c _ZN5amiro8VCNL4020D2Ev
+08013e30 g     F .text	000000a0 hal_lld_init
+0800f258 g     F .text	0000003a .hidden __extendsfdf2
+0800f554 g     F .text	000001d0 .hidden __aeabi_ddiv
+08019ef0 g     F .text	00000064 _ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc
+0801a250 g     F .text	0000004c _ZN5amiro15BluetoothSerialC1EPNS_9BLUETOOTHEh
+08012680 g     F .text	00000040 chMBInit
+0801c3e0 g     F .text	000000a0 _Z25shellRequestSetVcnlOffsetP20BaseSequentialStreamiPPc
+0801b640  w    F .text	00000014 _ZNK5amiro8BQ24103AILj1073874944ELm3ELj1073874944ELm0EE10isChargingEv
+08019c30 g     F .text	000000de _ZN5amiro18BluetoothTransport35bluetoothTransportTransmitCompletedEv
+08017420 g     F .text	00000040 _ZN5amiro23ControllerAreaNetworkTx15transmitMessageEP10CANTxFrame
+080171e0 g     F .text	000001a0 _ZN5amiro23ControllerAreaNetworkRx16receiveSensorValEP10CANRxFrame
+0800ef9c g     F .text	00000276 .hidden __adddf3
+0801a5b0 g     F .text	0000006c _ZN5amiro14BluetoothIwrap13iwrapTransmitEhPKhj
+080171a0 g     F .text	00000030 _ZN5amiro23ControllerAreaNetworkRxC1EP9CANDriverh
+08029fd0 g     O .text	0000002c _ZTVN10__cxxabiv120__si_class_type_infoE
+08017100 g     F .text	0000000e _ZN5amiro5ColorC1Eiii
+08024c00 g     F .text	000000ae __b2d
+0802a5d8 g       .ARM.exidx	00000000 __exidx_start
+0800f300 g     F .text	00000254 .hidden __aeabi_dmul
+08011eb0 g     F .text	0000004c chThdExitS
+08013230 g     F .text	0000000a extObjectInit
+080273c0 g     O .text	00000040 _ZTVN5amiro6INA2196DriverE
+0801e340 g     F .text	00000018 _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+0801d510 g     F .text	00000008 _ZdlPv
+0802a090 g     O .text	00000004 _global_impure_ptr
+080190e0 g     F .text	00000560 _ZN5amiro7BQ275006Driver8selftestEv
+0801f330 g     F .text	000003cc _realloc_r
+080171d0 g     F .text	0000000c _ZN5amiro23ControllerAreaNetworkRxD1Ev
+080179a0 g     F .text	0000004e _ZN5amiro8VCNL402015calibrateOffsetERt
+080187f0  w    F .text	00000098 _ZN5amiro6INA2196Driver19readShuntVoltage_uVEv
+08012f40 g     F .text	0000002c adcStartConversion
+080199b0 g     F .text	000000b4 _ZN5amiro18BluetoothTransport35bluetoothTransportCharacterReceivedEt
+0801a1f0 g     F .text	0000000c _ZN5amiro16BluetoothWiimote27bluetoothWiimoteIsConnectedEv
+0802a2a0 g     O .text	00000100 __hexdig
+20001a04 g     O .bss	00000004 shell_terminated
+08010f20 g     F .text	00000282 .hidden __udivdi3
+08010338 g     F .text	00000022 .hidden ___Unwind_RaiseException
+0802a480 g     O .text	00000028 __mprec_bigtens
+08013480 g     F .text	00000028 i2cAcquireBus
+08024680 g     F .text	00000098 __s2b
+08011300  w    F .text	00000002 Vector148
+0801e650 g     F .text	0000000e abort
+08014ba0 g     F .text	00000036 can_lld_is_rx_nonempty
+0801035c g     F .text	00000022 .hidden ___Unwind_Resume
+08011300  w    F .text	00000002 Vector188
+0801b4e0 g     F .text	0000000c _ZNK5amiro10UserThread14getCurrenStateEv
+0801b240  w    F .text	00000030 _ZN5amiro15PowerManagementD0Ev
+08012e60 g     F .text	00000004 adcInit
+0800f214 g     F .text	0000001e .hidden __floatunsidf
+08016f40 g     F .text	00000024 _ZN10chibios_rt15ThreadReference16requestTerminateEv
+08024a80 g     F .text	00000046 __mcmp
+08018d30 g     F .text	00000020 _ZN5amiro7BQ275006Driver4initEPNS0_8InitDataE
+08013300 g     F .text	00000048 i2cStop
+0801abe0 g     F .text	00000088 _ZN5amiro12SerialCanMux19checkByteForBLResetEPhj
+08017400 g     F .text	00000014 _ZN5amiro23ControllerAreaNetworkTx14encodeDeviceIdEP10CANTxFramei
+0801d610 g     F .text	0000008c __cxa_end_catch
+080166e0 g     F .text	0000032c chvprintf
+0801e220 g     F .text	0000000c _ZNSt13bad_exceptionD2Ev
+20001314 g     O .bss	00000408 dbg_trace_buffer
+08013fe0 g     F .text	00000070 adc_lld_start
+0801aa10 g     F .text	00000052 _ZN5amiro11IwrapCanMux4readEPhj
+08011300  w    F .text	00000002 PendSVVector
+080210d0 g     F .text	00000018 strtol
+08008800 g     F .text	00000022 _ZN5amiro6INA2196Driver4mainEv
+08017ea0 g     F .text	00000096 _ZN5amiro12fileSystemIo16FileSystemIoBase4initEv
+0801b3b0 g     F .text	00000014 _ZN5amiro10UserThreadD0Ev
+0801a1d0 g     F .text	0000001c _ZN5amiro16BluetoothWiimote20bluetoothWiimoteStopEv
+08011300  w    F .text	00000002 Vector198
+08017bd0 g     F .text	00000028 _ZN5amiro4AT24C2EjhtPNS_9I2CDriverE
+08011300  w    F .text	00000002 Vector118
+0801d550 g     F .text	00000010 _ZSt9terminatev
+08018550  w    F .text	00000004 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_
+0800f780 g     F .text	0000009e .hidden __aeabi_d2f
+08010288 g     F .text	00000000 .hidden __gnu_Unwind_Restore_WMMXD
+0801a320 g     F .text	00000038 _ZN5amiro15BluetoothSerial20bluetoothSerialStartEh
+08011960 g     F .text	00000054 chVTSetI
+080270f0  w    O .text	0000002c _ZTVN5amiro9I2CDriverE
+08018970 g     F .text	0000001e _ZN5amiro6INA2196Driver6wakeupEv
+080143a0 g     F .text	0000002c Vector64
+200068b0 g       .bss	00000000 _bss_end
+08012810 g     F .text	0000004c chMBFetchI
+08017070 g     F .text	00000004 _ZN10chibios_rt9EvtSourceC1Ev
+20001720 g     O .bss	00000004 dbg_panic_msg
+080111c0  w    F .text	00000002 _default_exit
+08014f90 g     F .text	000000c8 _pal_lld_setgroupmode
+08016fa0 g     F .text	00000030 _ZN10chibios_rt15ThreadReference13signalEventsIEm
+08019bc0 g     F .text	00000022 _ZN5amiro18BluetoothTransport23postTransmitDescriptorIEv
+08013fa0 g     F .text	00000034 adc_lld_init
+080297b0 g     O .text	00000022 _ZTSN10__cxxabiv117__class_type_infoE
+08027400  w    O .text	00000028 _ZTVN5amiro10BaseSensorINS_7BQ275008InitDataENS1_9CalibDataEEE
+08024720 g     F .text	00000040 __hi0bits
+08011300  w    F .text	00000002 VectorCC
+0801db70 g     F .text	00000406 __gxx_personality_v0
+08029670 g     O .text	00000008 _ZTISt9exception
+0800f730 g     F .text	0000004e .hidden __fixdfsi
+08015dd0 g     F .text	00000024 sd_lld_init
+0801d4e0 g     F .text	00000010 _Z9pathdc_cbP9EXTDriverm
+08017aa0 g     F .text	0000012a _ZN5amiro4AT245writeEPvPKhj
+08012070 g     F .text	00000028 chSemInit
+08011300  w    F .text	00000002 Vector54
+08017640 g     F .text	0000000c _ZN5amiro11HWI2CDriverC2EP9I2CDriver
+08017fa0 g     F .text	00000046 _ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh
+08014950 g     F .text	00000090 Vector98
+08020fa0 g     F .text	00000010 strtod
+08019d80 g     F .text	000000b0 _ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc
+080126c0 g     F .text	0000004c chMBPostS
+08027150 g     O .text	0000002c _ZTVN5amiro14I2CMultiplexerE
+0801e5b0 g     F .text	0000000c _ZNSt9type_infoD1Ev
+200017fc g     O .bss	00000034 ADCD1
+08017080 g     F .text	0000000a _ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+080225e0 g     F .text	00000018 write
+08017540  w    F .text	0000000c _ZN5amiro9I2CDriverD1Ev
+0801f2c0 g     F .text	00000058 _putc_r
+08017550  w    F .text	0000000c _ZN5amiro11HWI2CDriverD2Ev
+0801e5f0 g     F .text	00000014 _ZNSt9type_infoD0Ev
+0801e660 g     F .text	00000006 atof
+0801a800 g     F .text	0000000c _ZN5amiro11IwrapCanMuxD1Ev
+08016060 g     F .text	0000001c VectorD8
+08019d10 g     F .text	0000002c _ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh
+20000819 g     O .data	00000001 _ZN12wii_steering14axis_directionE
+080145a0 g     F .text	00000030 Vector138
+08019720 g     F .text	00000016 _ZN5amiro19BluetoothDescriptorC1Ev
+0800ef9c g     F .text	00000276 .hidden __aeabi_dadd
+08015840 g     F .text	000000f4 i2c_lld_master_receive_timeout
+08011300  w    F .text	00000002 Vector24
+08010a98 g     F .text	00000082 .hidden __ledf2
+08018430 g     F .text	0000010c _ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE
+08011840 g     F .text	00000038 chDbgCheckClassI
+08012300 g     F .text	00000020 chMtxLock
+08019780 g     F .text	00000004 _ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv
+0801a7d0 g     F .text	00000008 _ZN5amiro9BLUETOOTH18bluetoothIsMuxModeEv
+08024920 g     F .text	0000009c __pow5mult
+0800f294 g     F .text	0000006a .hidden __aeabi_ul2d
+08012c30 g     F .text	00000014 chCoreStatus
+0801e5e0 g     F .text	00000004 _ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+08010258 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP
+08011cd0 g     F .text	00000018 chSchDoReschedule
+08011570 g     F .text	00000078 chSysInit
+080173b0 g     F .text	00000004 _ZN5amiro23ControllerAreaNetworkTx15updateSensorValEv
+08011300  w    F .text	00000002 Vector178
+0801c1d0  w    F .text	00000054 _ZN5amiro7PCA9544ILb1EE6selectEh
+0801b5d0  w    F .text	0000000c _ZN5amiro8BQ24103AILj1073874944ELm3ELj1073874944ELm0EED2Ev
+08011e80 g     F .text	00000030 chThdSleep
+08012890 g     F .text	0000001e chIQInit
+08016f30 g     F .text	0000000e _ZN10chibios_rt6System13unlockFromIsrEv
+080137c0 g     F .text	00000064 uartStartSend
+080170b0 g     F .text	0000000c _ZN10chibios_rt7MailboxC1EPll
+0801c190  w    F .text	00000014 _ZN5amiro7PCA9544ILb1EED1Ev
+08016ee0 g     F .text	0000000c _ZN10chibios_rt15ThreadReference4stopEv
+08026760 g     O .text	000000c0 _stm32_dma_streams
+08013a50 g     F .text	00000034 Vector84
+0801035c g     F .text	00000022 .hidden _Unwind_Resume
+0801b040 g     F .text	000000ec _ZN5amiro15PowerManagement15updateSensorValEv
+08017c00 g     F .text	0000000c _ZN5amiro4AT24D2Ev
+08013220 g     F .text	00000004 extInit
+0800fbd4 g     F .text	0000000e .hidden _Unwind_DeleteException
+0801bfa0 g     F .text	000000f4 _Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc
+0800fbd0 g     F .text	00000002 .hidden _Unwind_Complete
+08017130 g     F .text	00000004 _ZN5amiro5Color6getRedEv
+08011410 g     F .text	0000002a SysTickVector
+20000818 g     O .data	00000001 _ZN12wii_steering14principal_axisE
+08019e30 g     F .text	000000b4 _ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc
+0801b6a0  w    F .text	00000014 _ZN5amiro7LTC4412ILj1073874944ELh8EED0Ev
+0801b370 g     F .text	00000024 _ZN5amiro15PowerManagement9terminateEv
+0801a250 g     F .text	0000004c _ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh
+08019f60 g     F .text	00000058 _ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh
+08017ff0 g     F .text	00000042 _ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth
+0801e390 g     F .text	0000003e _ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+0801bd60 g     F .text	00000080 _Z25shellRequestGetVcnlOffsetP20BaseSequentialStreamiPPc
+0801ae70 g     F .text	000000d0 _ZN5amiro12SerialCanMux13sendSwitchCmdEh
+080183c0 g     F .text	00000028 _ZN5amiro11ADConverterC1ER9ADCDriverR18ADCConversionGroupm
+08010b8c g     F .text	00000012 .hidden __aeabi_dcmpgt
+08013890 g     F .text	00000054 uartStartReceiveI
+08013090 g     F .text	00000060 canStop
+0801e2b0 g     F .text	00000036 _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+0801a740 g     F .text	0000000c _ZN5amiro9BLUETOOTHC1EP10UARTDriver
+20001310 g     O .bss	00000004 dbg_isr_cnt
+0801c3a0 g     F .text	0000003c _Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc
+08013ed0 g     F .text	000000c8 stm32_clock_init
+08023a60 g     F .text	00000002 __sfp_lock_acquire
+08029680 g     O .text	00000012 _ZTSSt13bad_exception
+0801f040 g     F .text	00000090 memchr
+08011300  w    F .text	00000002 Vector1A4
+2000081c g     O .data	000000b8 extcfg
+08014dd0 g     F .text	000001c0 _pal_lld_init
+08023b20 g     F .text	0000019c _free_r
+08019760 g     F .text	00000004 _ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetLinkIdEv
+0801b5a0  w    F .text	0000000c _ZN5amiro11BaseLTC4412D1Ev
+08017640 g     F .text	0000000c _ZN5amiro11HWI2CDriverC1EP9I2CDriver
+08010b78 g     F .text	00000012 .hidden __aeabi_dcmpge
+20001a74 g     O .bss	00000012 _ZN12wii_steering10bt_addressE
+0801b3a0 g     F .text	0000000c _ZN5amiro10UserThreadD2Ev
+08013660 g     F .text	00000004 sdInit
+080089e0 g     F .text	0000002c _ZN5amiro15BluetoothSerial4mainEv
+08011300  w    F .text	00000002 BusFaultVector
+08017a60 g     F .text	00000004 _ZN5amiro6EEPROM7getsizeEPv
+080183f0 g     F .text	0000001a _ZN5amiro11ADConverter14enableWatchdogEb
+08017040 g     F .text	00000004 _ZN10chibios_rt10BaseThread12waitAnyEventEm
+0800ef98 g     F .text	0000027a .hidden __aeabi_dsub
+08011300  w    F .text	00000002 VectorD0
+0801b200  w    F .text	00000028 _ZN5amiro15PowerManagementD2Ev
+08027950 g     O .text	00000020 _ZTVN5amiro18BluetoothTransportE
+08018570  w    F .text	00000004 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_
+20001118 g     O .data	00000004 __malloc_sbrk_base
+0801a2a0 g     F .text	00000078 _ZN5amiro15BluetoothSerial13serialReceiveEv
+080271c0 g     O .text	0000001c _ZTVN5amiro8VCNL4020E
+08012ba0 g     F .text	00000028 _core_init
+0801fde0 g     F .text	00000200 strstr
+08015ac0 g     F .text	00000018 pwm_lld_init
+0801a210 g     F .text	00000008 _ZN5amiro16BluetoothWiimote23bluetoothWiimoteConnectEPKc
+0802a050 g     O .text	0000000d _ZTSSt9type_info
+08016ef0 g     F .text	00000004 _ZN10chibios_rt6System4initEv
+0800f294 g     F .text	0000006a .hidden __floatundidf
+0801d4f0 g     F .text	00000014 __cxa_pure_virtual
+080136b0 g     F .text	00000048 sdStart
+080249c0 g     F .text	000000bc __lshift
+08017390 g     F .text	00000008 _ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame
+080171a0 g     F .text	00000030 _ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+08011300  w    F .text	00000002 Vector140
+08025080 g     F .text	00000100 __ssprint_r
+08010444 g     F .text	0000028c .hidden __gnu_unwind_execute
+08014cb0 g     F .text	0000000c ext_lld_init
+08019d70 g     F .text	0000000c _ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc
+08027eb0  w    O .text	0000002c _ZTVN5amiro7PCA9544ILb1EEE
+08014540 g     F .text	00000030 VectorE4
+08013540 g     F .text	0000004c pwmEnableChannel
+08022780 g     F .text	000000a8 __register_exitproc
+08018cd0  w    F .text	00000014 _ZN5amiro10BaseSensorINS_7BQ275008InitDataENS1_9CalibDataEED0Ev
+08027240 g     O .text	0000001c _ZTVN5amiro6MPR121E
+08026d60 g     O .text	00000014 _ZTVN10chibios_rt10BaseThreadE
+080153d0 g     F .text	00000038 VectorC0
+0801f970 g     F .text	000000b4 strncmp
+08013c70 g     F .text	00000034 Vector158
+0801e4f0 g     F .text	00000096 _ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+08017700 g     F .text	00000002 _ZN5amiro10VI2CDriver5startEPK9I2CConfig
+08010268 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP_D
+08017070 g     F .text	00000004 _ZN10chibios_rt9EvtSourceC2Ev
+08019790 g     F .text	00000004 _ZN5amiro19BluetoothDescriptor29bluetoothDescriptorGetPayloadEv
+08013bc0 g     F .text	00000030 Vector130
+08013750 g     F .text	00000004 uartInit
+08011440 g     F .text	00000018 _port_switch
+0801a940 g     F .text	00000078 _ZN5amiro11IwrapCanMux10sendViaCanEmPhj
+08018090 g     F .text	0000000c _ZN5amiro6MPR121D2Ev
+080165c0 g     F .text	00000024 evtStop
+080247e0 g     F .text	0000013c __multiply
+0801b2e0 g     F .text	00000038 _ZN5amiro15PowerManagementC1EP9CANDriver
+0801b780 g     F .text	000001bc _Z20shellRequestShutdownP20BaseSequentialStreamiPPc
+08018090 g     F .text	0000000c _ZN5amiro6MPR121D1Ev
+20001f18 g     O .bss	00000004 _ZN12wii_steering8deadzoneE
+0801bcf0 g     F .text	0000006c _Z27shellRequestResetVcnlOffsetP20BaseSequentialStreamiPPc
+0801fa30 g     F .text	00000064 strncpy
+20006884 g     O .bss	00000028 __malloc_current_mallinfo
+08012790 g     F .text	00000050 chMBFetchS
+08024cb0 g     F .text	000000b2 __d2b
+08011330 g     F .text	00000020 SVCallVector
+0801f800 g     F .text	00000044 strcasecmp
+080111b0  w    F .text	00000002 __late_init
+0801e5b0 g     F .text	0000000c _ZNSt9type_infoD2Ev
+0801d6c0 g     F .text	000000ac __cxa_type_match
+08011920 g     F .text	00000018 chDbgPanic
+0801e590 g     F .text	00000020 _ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+08019bf0 g     F .text	00000038 _ZN5amiro18BluetoothTransport15getEncodeHeaderEv
+20001724 g     O .bss	00000010 vtlist
+08017030 g     F .text	00000004 _ZN10chibios_rt10BaseThread12waitOneEventEm
+08011300  w    F .text	00000002 HardFaultVector
+08011390 g     F .text	00000080 _port_irq_epilogue
+080170a0 g     F .text	00000004 _ZN10chibios_rt9EvtSource14broadcastFlagsEm
+0801f320 g     F .text	00000010 realloc
+08011300  w    F .text	00000002 Vector134
+0801c300 g     F .text	00000098 _Z23shellRequestSetChargingP20BaseSequentialStreamiPPc
+08019fc0 g     F .text	00000030 _ZN5amiro16BluetoothWiimote15wiimoteTransmitEPKhj
+0800fb7c g     F .text	00000044 .hidden __gnu_Unwind_Resume
+08018e80 g     F .text	0000004e _ZN5amiro7BQ275006Driver6updateEv
+0801e680 g     F .text	00000014 __cxa_atexit
+08019960 g     F .text	00000048 _ZN5amiro18BluetoothTransport22postReceiveDescriptorIEv
+08012c00 g     F .text	00000024 chCoreAlloc
+08029700 g     O .text	00000008 _ZTIN10__cxxabiv119__foreign_exceptionE
+08016b90 g     F .text	00000018 shellCreate
+08016620 g     F .text	00000004 _close_r
+0800f234 g     F .text	00000022 .hidden __aeabi_i2d
+08013400 g     F .text	0000007c i2cMasterReceiveTimeout
+08017bd0 g     F .text	00000028 _ZN5amiro4AT24C1EjhtPNS_9I2CDriverE
+20001f40 g     O .bss	00004110 global
+08014a10 g     F .text	00000074 can_lld_start
+08012c70 g     F .text	00000080 chHeapAlloc
+08011880 g     F .text	00000034 chDbgCheckClassS
+08010278 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP_D_16_to_31
+0801b730  w    F .text	00000030 _ZN5amiro8BQ24103AILj1073875968ELm2ELj1073873920ELm4EE6enableEb
+08011300  w    F .text	00000002 VectorF0
+08015c30 g     F .text	0000001e pwm_lld_disable_channel
+0801b610  w    F .text	00000014 _ZNK5amiro8BQ24103AILj1073875968ELm2ELj1073873920ELm4EE10isChargingEv
+0801f0d0 g     F .text	00000066 memcmp
+08018410 g     F .text	00000014 _ZN5amiro6INA2196DriverD1Ev
+08018c60  w    F .text	0000000c _ZN5amiro10BaseSensorINS_7BQ275008InitDataENS1_9CalibDataEED2Ev
+0801ea50 g     F .text	00000062 _fwrite_r
+080130f0 g     F .text	00000094 canTransmit
+08013b80 g     F .text	00000034 Vector12C
+08017140 g     F .text	00000004 _ZN5amiro5Color8getGreenEv
+080134d0 g     F .text	00000004 pwmInit
+0801e470 g     F .text	00000014 _ZN10__cxxabiv120__si_class_type_infoD1Ev
+080226b0 g     F .text	000000c4 __swsetup_r
+08010338 g     F .text	00000022 .hidden _Unwind_RaiseException
+08011300  w    F .text	00000002 Vector13C
+08010c70  w    F .text	00000002 .hidden __aeabi_ldiv0
+0800f554 g     F .text	000001d0 .hidden __divdf3
+080173f0 g     F .text	0000000c _ZN5amiro23ControllerAreaNetworkTxD2Ev
+08017500 g     F .text	00000036 _ZN5amiro23ControllerAreaNetworkTx17broadcastShutdownEv
+08024dd0 g     F .text	00000046 __copybits
+0801e5c0 g     F .text	00000004 _ZNKSt9type_info14__is_pointer_pEv
+08017680 g     F .text	00000014 _ZN5amiro14I2CMultiplexer10acquireBusEv
+08017a10 g     F .text	0000002e _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+08018890 g     F .text	00000080 _ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+20000d0c g     O .data	00000408 __malloc_av_
+08016f70 g     F .text	00000028 _ZN10chibios_rt15ThreadReference4waitEv
+08017a40 g     F .text	00000002 _ZN5amiro6EEPROMD2Ev
+0801c910 g     F .text	000000f8 _Z10systemStopv
+08011300  w    F .text	00000002 Vector100
+080117f0 g     F .text	00000044 dbg_check_leave_isr
+0800f300 g     F .text	00000254 .hidden __muldf3
+0802a7b0 g       .stacks	00000000 _textdata
+08024ee0 g     F .text	00000022 __sread
+08014480 g     F .text	00000084 VectorE0
+08011300  w    F .text	00000002 VectorF4
+08029640 g     O .text	00000014 _ZTVSt9exception
+0801a230 g     F .text	00000006 _ZN5amiro16BluetoothWiimote16getAccelerometerEv
+08011300  w    F .text	00000002 MemManageVector
+08012fe0 g     F .text	0000003e canObjectInit
+0801f2a0 g     F .text	00000002 __malloc_lock
+08012740 g     F .text	00000048 chMBPostI
+0801b700  w    F .text	00000030 _ZN5amiro8BQ24103AILj1073874944ELm3ELj1073874944ELm0EE6enableEb
+080081ec g       constructors	00000000 __fini_array_start
+080196a0 g     F .text	00000074 _ZN5amiro7BQ275006Driver11calibrationEPNS0_9CalibDataE
+08029770 g     O .text	0000002c _ZTVN10__cxxabiv117__class_type_infoE
+0801e110 g     F .text	00000090 __cxa_throw
+08017870 g     F .text	0000003c _ZN5amiro8VCNL4020C2EPNS_9I2CDriverEPKNS0_14VCNL4020ConfigE
+08023920 g     F .text	0000002c _fflush_r
+08025180 g     F .text	0000005e _calloc_r
+08017a10 g     F .text	0000002e _ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+08017000 g     F .text	00000014 _ZN10chibios_rt10BaseThread15shouldTerminateEv
+08017100 g     F .text	0000000e _ZN5amiro5ColorC2Eiii
+080180c0 g     F .text	00000048 _ZN5amiro6MPR121C2EPNS_9I2CDriverEh
+0801ab40 g     F .text	00000014 _ZN5amiro12SerialCanMuxD0Ev
+0801f200 g     F .text	00000094 memset
+0801b940 g     F .text	0000003c _Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc
+080092d0 g     F .text	000004e4 main
+080138f0 g     F .text	00000030 Vector6C
+080197a0 g     F .text	00000012 _ZN5amiro18BluetoothTransport38bluetoothTransportTransmitCompleted_cbEP10UARTDriver
+08017550  w    F .text	0000000c _ZN5amiro11HWI2CDriverD1Ev
+20006878 g     O .bss	00000004 __malloc_max_total_mem
+080279c0 g     O .text	00000014 _ZTVN5amiro16BluetoothWiimoteE
+08012e90 g     F .text	00000048 adcStart
+08018610 g     F .text	0000007c _ZN5amiro6INA2196DriverC1ERNS_9I2CDriverEh
+20001734 g     O .bss	0000001c rlist
+0801c480 g     F .text	000000a8 _Z19shellRequestGetVcnlP20BaseSequentialStreamiPPc
+0801df80 g     F .text	00000008 __cxa_get_globals_fast
+08017660 g     F .text	0000000c _ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm
+08011300  w    F .text	00000002 VectorA0
+08014d90 g     F .text	0000003a ext_lld_start
+08012e70 g     F .text	00000016 adcObjectInit
+0801b280 g     F .text	00000050 _ZN5amiro15PowerManagement5startEm
+080127e0 g     F .text	0000002c chMBFetch
+0801b520 g     F .text	00000064 _ZN5amiro10UserThread14setWiiDeadzoneEf
+08024f70 g     F .text	00000008 __sclose
+080117a0 g     F .text	00000044 dbg_check_enter_isr
+08013830 g     F .text	00000054 uartStartSendI
+08025260 g     F .text	00000010 fclose
+08015940 g     F .text	0000010c i2c_lld_master_transmit_timeout
+08020fb0 g     F .text	00000114 _strtol_r
+0800f780 g     F .text	0000009e .hidden __truncdfsf2
+080179f0 g     F .text	0000001c _ZN5amiro8VCNL40209calibrateEv
+080081ec g       constructors	00000000 __init_array_end
+08022960 g     F .text	00000e58 _dtoa_r
+0801eb00 g     F .text	00000538 _malloc_r
+08015bf0 g     F .text	00000032 pwm_lld_enable_channel
+08017c90 g     F .text	0000009a _ZN5amiro4AT244readEPvPhj
+08027f20  w    O .text	00000014 _ZTVN5amiro7LTC4412ILj1073874944ELh8EEE
+080177e0 g     F .text	00000004 _ZN5amiro10VI2CDriver10releaseBusEv
+200019e8 g     O .bss	0000001c UARTD3
+0801e240 g     F .text	00000008 _ZNKSt13bad_exception4whatEv
+0800f2a4 g     F .text	0000005a .hidden __aeabi_l2d
+08015410 g     F .text	0000001c VectorC4
+080139e0 g     F .text	00000030 Vector7C
+08018ed0 g     F .text	000000d0 _ZN5amiro7BQ275006Driver10subCommandENS1_17ControlSubcommandEPt
+08027c60 g     O .text	00000020 _ZTVN5amiro11IwrapCanMuxE
+2000605c g     O .bss	00000004 shutdown_now
+08011300  w    F .text	00000002 Vector180
+080297a0 g     O .text	0000000c _ZTIN10__cxxabiv117__class_type_infoE
+08013dc0 g     F .text	00000070 dmaStreamRelease
+08023cc0 g     F .text	0000004a _fwalk
+080121e0 g     F .text	0000001c chMtxInit
+08011550 g     F .text	00000014 _idle_thread
+0801e220 g     F .text	0000000c _ZNSt13bad_exceptionD1Ev
+080197e0 g     F .text	00000012 _ZN5amiro18BluetoothTransport37bluetoothTransportReceiveCompleted_cbEP10UARTDriver
+080124e0 g     F .text	00000028 chEvtBroadcastFlags
+080082b0 g     F .text	00000078 _ZN5amiro23ControllerAreaNetworkTx4mainEv
+08027ee0  w    O .text	00000014 _ZTVN5amiro11BaseLTC4412E
+08012b00 g     F .text	00000098 chOQWriteTimeout
+080134e0 g     F .text	0000000a pwmObjectInit
+08018540  w    F .text	0000000c _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED1Ev
+08018260 g     F .text	0000002e _Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t
+08011300  w    F .text	00000002 VectorB0
+08023a80 g     F .text	0000009c _malloc_trim_r
+0800fb68 g     F .text	00000014 .hidden __gnu_Unwind_ForcedUnwind
+08025c40 g     O .text	00000016 ch_debug
+0801b660  w    F .text	00000014 _ZN5amiro11BaseLTC4412D0Ev
+08014830 g     F .text	0000008c Vector90
+08012450 g     F .text	0000004c chEvtSignalI
+0801a240 g     F .text	00000006 _ZN5amiro16BluetoothWiimote10getButtonsEv
+08010870 g     F .text	00000000 strcmp
+2000171c g     O .bss	00000004 dbg_lock_cnt
+08014d60 g     F .text	0000002c ext_lld_channel_disable
+08012510 g     F .text	00000044 chEvtWaitOne
+08011300  w    F .text	00000002 Vector114
+08011460 g     F .text	00000016 _port_thread_start
+080175d0 g     F .text	00000022 _ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm
+080177d0 g     F .text	00000006 _ZN5amiro10VI2CDriver10acquireBusEv
+08011300  w    F .text	00000002 Vector164
+08014370 g     F .text	0000002c Vector60
+0800fbc0 g     F .text	00000010 .hidden __gnu_Unwind_Resume_or_Rethrow
+08012dc0 g     F .text	00000028 chPoolFreeI
+0801b600  w    F .text	00000004 _ZNK5amiro8BQ24103AILj1073875968ELm2ELj1073873920ELm4EE9isEnabledEv
+08018ca0  w    F .text	00000004 _ZN5amiro10BaseSensorINS_7BQ275008InitDataENS1_9CalibDataEE8selftestEv
+08018de0 g     F .text	00000006 _ZNK5amiro7BQ275006Driver9getStatusEv
+08017770 g     F .text	00000040 _ZN5amiro10VI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm
+08011300  w    F .text	00000002 Vector1C
+00000000  w      *UND*	00000000 __gnu_Unwind_Find_exidx
+08010aa0 g     F .text	0000007a .hidden __nedf2
+08011c40 g     F .text	00000060 chSchDoRescheduleAhead
+080182e0 g     F .text	00000070 _ZN5amiro11ADConverter6uV2AdcEm
+08010240 g     F .text	00000018 .hidden restore_core_regs
+08017d30 g     F .text	0000006e _ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv
+0801b590  w    F .text	00000004 _ZN5amiro7PCA9544ILb1EE8deselectEv
+0801b5f0  w    F .text	00000010 _ZNK5amiro7LTC4412ILj1073874944ELh8EE11isPluggedInEv
+08010324 g     F .text	00000000 .hidden __gnu_Unwind_Save_WMMXC
+0801e490 g     F .text	0000001c _ZN10__cxxabiv120__si_class_type_infoD0Ev
+0801b270  w    F .text	00000006 _ZThn544_N5amiro15PowerManagementD0Ev
+0801b680  w    F .text	00000014 _ZN5amiro12BaseBQ24103AD0Ev
+0801ac70 g     F .text	00000078 _ZN5amiro12SerialCanMux10sendViaCanEmPhj
+08011300  w    F .text	00000002 Vector17C
+08013370 g     F .text	0000008c i2cMasterTransmitTimeout
+0801f7b0 g     F .text	0000004c sprintf
+08011300  w    F .text	00000002 Vector48
+08015470 g     F .text	0000004c i2c_lld_init
+08018c60  w    F .text	0000000c _ZN5amiro10BaseSensorINS_7BQ275008InitDataENS1_9CalibDataEED1Ev
+20000400 g       .stacks	00000000 __process_stack_base__
+08011300  w    F .text	00000002 Vector1A8
+08008a30 g     F .text	00000040 _ZN5amiro14BluetoothIwrap4mainEv
+08014050 g     F .text	000000ae adc_lld_start_conversion
+08016610 g     F .text	00000004 _write_r
+08011300  w    F .text	00000002 Vector16C
+08017730 g     F .text	00000040 _ZN5amiro10VI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm
+080149e0 g     F .text	00000024 can_lld_init
+08010724 g     F .text	00000006 .hidden _Unwind_GetTextRelBase
+0801d890 g     F .text	0000001e __cxa_call_terminate
+080177f0 g     F .text	0000001c _ZN5amiro10VI2CDriverC1EPNS_14I2CMultiplexerEh
+20000d08 g     O .data	00000004 _impure_ptr
+08029660 g     O .text	00000008 _ZTIN10__cxxabiv115__forced_unwindE
+0801b5e0  w    F .text	0000000c _ZN5amiro8BQ24103AILj1073875968ELm2ELj1073873920ELm4EED2Ev
+08013920 g     F .text	00000034 Vector70
+0801ab30 g     F .text	0000000c _ZN5amiro12SerialCanMuxD2Ev
+08017560  w    F .text	00000014 _ZN5amiro9I2CDriverD0Ev
+08018fa0 g     F .text	00000014 _ZN5amiro7BQ275006Driver6wakeupEv
+080237c0 g     F .text	00000152 __sflush_r
+08015c70 g     F .text	00000158 VectorD4
+08011520 g     F .text	0000002a nvicSetSystemHandlerPriority
+0801a220 g     F .text	00000008 _ZN5amiro16BluetoothWiimote26bluetoothWiimoteDisconnectEPKc
+080132a0 g     F .text	0000000e i2cObjectInit
+08018990 g     F .text	0000002a _ZN5amiro6INA2196Driver9hibernateEv
+08018740 g     F .text	00000068 _ZN5amiro6INA2196Driver6updateEv
+08018d50 g     F .text	0000006c _ZN5amiro7BQ275006DriverC2ERNS_9I2CDriverERK12GPIO_TypeDefhS6_h
+08019d40 g     F .text	00000028 _ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv
+08016bb0 g     F .text	000000a0 shellGetLine
+0801d390  w    F .text	00000128 _ZN5amiro6GlobalD2Ev
+08011fa0 g     F .text	00000080 chThdRelease
+080125a0 g     F .text	0000006c chEvtWaitOneTimeout
+0801ada0 g     F .text	0000004a _ZN5amiro12SerialCanMux3putEh
+080198f0 g     F .text	0000000c _ZN5amiro18BluetoothTransport28bluetoothTransportResetStateEv
+08017050 g     F .text	00000004 _ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
+08017c00 g     F .text	0000000c _ZN5amiro4AT24D1Ev
+200011a8 g     O .bss	00000168 _idle_thread_wa
+08012a20 g     F .text	0000001c chOQInit
+08012910 g     F .text	00000062 chIQGetTimeout
+20000800 g       .data	00000000 _data
+08024bb0 g     F .text	00000050 __ulp
+0801a8b0 g     F .text	00000088 _ZN5amiro11IwrapCanMux19checkByteForBLResetEPhj
+08012df0 g     F .text	00000024 chPoolFree
+0801e6a0 g     F .text	00000028 fputc
+08018110 g     F .text	00000006 _ZN5amiro6MPR12115getButtonStatusEv
+080296d0 g     O .text	00000024 _ZTSN10__cxxabiv119__foreign_exceptionE
+0801b3d0  w    F .text	00000030 _ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+08014600 g     F .text	00000030 Vector4C
+08016f00 g     F .text	0000000a _ZN10chibios_rt6System4lockEv
+08013760 g     F .text	0000000e uartObjectInit
+08011300  w    F .text	00000002 Vector144
+08010708 g     F .text	00000012 .hidden _Unwind_GetLanguageSpecificData
+08013a10 g     F .text	00000034 Vector80
+080128b0 g     F .text	00000056 chIQPutI
+08011320 g     F .text	0000000e _port_switch_from_isr
+08010ba0 g     F .text	00000040 .hidden __aeabi_d2uiz
+0801a850 g     F .text	00000054 _ZN5amiro11IwrapCanMuxC1EP12SerialDriverP9CANDriverh
+0801d580 g     F .text	0000008c __cxa_begin_catch
+0801a190 g     F .text	00000038 _ZN5amiro16BluetoothWiimote21bluetoothWiimoteStartEh
+0801e300 g     F .text	00000014 _ZN10__cxxabiv117__class_type_infoD2Ev
+0801d560 g     F .text	00000008 _ZN10__cxxabiv112__unexpectedEPFvvE
+08011300  w    F .text	00000002 Vector15C
+080143d0 g     F .text	0000002c Vector68
+08018c90  w    F .text	00000004 _ZN5amiro10BaseSensorINS_7BQ275008InitDataENS1_9CalibDataEE11calibrationEPS3_
+08012320 g     F .text	00000088 chMtxUnlock
+08016280 g     F .text	0000001a uart_lld_start_send
+08008350 g     F .text	00000144 _ZN5amiro8VCNL40204mainEv
+0800fbe4 g     F .text	00000034 .hidden _Unwind_VRS_Get
+080118c0 g     F .text	00000014 _trace_init
+0801e270 g     F .text	00000014 _ZNSt13bad_exceptionD0Ev
+08012610 g     F .text	00000068 chEvtWaitAnyTimeout
+200008d8 g     O .data	00000004 _ZN10__cxxabiv119__terminate_handlerE
+08010310 g     F .text	00000000 .hidden __gnu_Unwind_Restore_WMMXC
+0800ef68 g     F .text	0000001c __gcclibcxx_demangle_callback
+08018c40 g     F .text	00000014 _ZN5amiro7BQ275006DriverD1Ev
+08019640 g     F .text	00000058 _ZN5amiro7BQ275006Driver18readDataFlashBlockERNS1_14DataFlashBlockENS1_19DataFlashSubClassIDEh
+08017460 g     F .text	00000058 _ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+20000400 g       .stacks	00000000 __main_stack_end__
+080180c0 g     F .text	00000048 _ZN5amiro6MPR121C1EPNS_9I2CDriverEh
+080139a0 g     F .text	00000034 Vector78
+08016f20 g     F .text	0000000a _ZN10chibios_rt6System11lockFromIsrEv
+08010b3c g     F .text	00000012 .hidden __aeabi_dcmpeq
+0801e3d0 g     F .text	00000058 __cxa_allocate_exception
+0801b2d0 g     F .text	00000008 _ZThn544_N5amiro15PowerManagement5startEm
+0801eac0 g     F .text	00000020 fwrite
+0802a000 g     O .text	0000000c _ZTIN10__cxxabiv120__si_class_type_infoE
+080106d0 g     F .text	0000002a .hidden __gnu_unwind_frame
+080103a4 g     F .text	00000022 .hidden _Unwind_ForcedUnwind
+20001158 g       .data	00000000 _edata
+0801b5c0  w    F .text	0000000c _ZN5amiro7LTC4412ILj1073874944ELh8EED2Ev
+080154c0 g     F .text	00000308 i2c_lld_start
+080187b0  w    F .text	0000003a _ZN5amiro6INA2196Driver14readBusVoltageEv
+08013020 g     F .text	0000006c canStart
+080173f0 g     F .text	0000000c _ZN5amiro23ControllerAreaNetworkTxD1Ev
+08017020 g     F .text	00000004 _ZN10chibios_rt10BaseThread5sleepEm
+08012560 g     F .text	00000040 chEvtWaitAny
+080119c0 g     F .text	00000048 chVTResetI
+0801e6d0 g     F .text	0000004c _fputs_r
+08018230 g     F .text	0000000c _ZN5amiro11ADConverterD1Ev
+0801b320 g     F .text	00000030 _ZN5amiro15PowerManagement28calibrateProximityRingValuesEv
+08011300 g     F .text	00000002 _unhandled_exception
+0801ad40 g     F .text	00000052 _ZN5amiro12SerialCanMux4readEPhj
+08016b60 g     F .text	00000024 shellExit
+080180a0 g     F .text	00000014 _ZN5amiro6MPR121D0Ev
+200018a8 g     O .bss	00000038 I2CD2
+080145d0 g     F .text	00000030 Vector170
+08013670 g     F .text	00000040 sdObjectInit
+0801a3e0 g     F .text	000001d0 _ZN5amiro14BluetoothIwrap12iwrapReceiveEv
+080084c0 g     F .text	000000d8 _ZN5amiro6MPR1214mainEv
+0801e210 g     F .text	0000000c _ZNSt9exceptionD1Ev
+08012710 g     F .text	0000002c chMBPost
+08019800 g     F .text	000000e4 _ZN5amiro18BluetoothTransportC1EP10UARTDriver
+08014140 g     F .text	000000dc Vector88
+080123b0 g     F .text	00000044 chEvtRegisterMask
+08024f10 g     F .text	00000038 __swrite
+20001114 g     O .data	00000004 __malloc_trim_threshold
+08017a70 g     F .text	00000004 _ZN5amiro6EEPROM11getpositionEPv
+08018cb0 g     F .text	0000001c _ZN5amiro7BQ275006DriverD0Ev
+20000400 g       .stacks	00000000 __main_thread_stack_base__
+08017380 g     F .text	00000006 _ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv
+080170d0 g     F .text	00000004 _ZN10chibios_rt7Mailbox5postIEl
+0801e4b0 g     F .text	00000034 _ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+08024ad0 g     F .text	000000d4 __mdiff
+0800f730 g     F .text	0000004e .hidden __aeabi_d2iz
+0801d520 g     F .text	00000026 _ZN10__cxxabiv111__terminateEPFvvE
+0801b4d0 g     F .text	0000000c _ZN5amiro10UserThread12setNextStateENS0_5StateE
+080102cc g     F .text	00000000 .hidden __gnu_Unwind_Save_WMMXD
+08013190 g     F .text	00000090 canReceive
+08016e10 g     F .text	00000010 _kill
+08011300  w    F .text	00000002 Vector104
+0801a850 g     F .text	00000054 _ZN5amiro11IwrapCanMuxC2EP12SerialDriverP9CANDriverh
+08017810 g     F .text	0000000c _ZN5amiro8VCNL4020D1Ev
+2000111c g     O .data	00000004 __ctype_ptr__
+08014ae0 g     F .text	0000003e can_lld_is_tx_empty
+08027a00 g     O .text	00000014 _ZTVN5amiro15BluetoothSerialE
+08023a70 g     F .text	00000002 __sfp_lock_release
+08011300  w    F .text	00000002 Vector184
+08029760 g     O .text	0000000c _ZTISt13bad_exception
+08019900 g     F .text	0000000c _ZN5amiro18BluetoothTransport27bluetoothTransportIsMuxModeEv
+080176c0 g     F .text	00000018 _ZN5amiro14I2CMultiplexerC1EPNS_9I2CDriverE
+08008850 g     F .text	00000034 _ZN5amiro7BQ275006Driver4mainEv
+08011300  w    F .text	00000002 Vector10C
+080118e0 g     F .text	00000040 dbg_trace
+08018dc0 g     F .text	00000016 _ZNK5amiro7BQ275006Driver13isBatteryGoodEv
+0801e670 g     F .text	00000008 atoi
+080173a0 g     F .text	00000008 _ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame
+08018120 g     F .text	00000108 _ZN5amiro6MPR1219configureEPKNS0_12MPR121ConfigE
+08016e20 g     F .text	000000a4 haltErrorCode
+0802a180 g     O .text	00000101 _ctype_
+08010c70  w    F .text	00000002 .hidden __aeabi_idiv0
+080081b0 g       constructors	00000000 __init_array_start
+0801c1b0  w    F .text	0000001c _ZN5amiro7PCA9544ILb1EED0Ev
+080170f0 g     F .text	00000004 _ZN10chibios_rt7Mailbox6fetchIEPl
+08019f60 g     F .text	00000058 _ZN5amiro16BluetoothWiimoteC1EPNS_9BLUETOOTHEh
+08011f20 g     F .text	00000074 chThdWait
+0801ae40 g     F .text	00000030 _ZN5amiro12SerialCanMux14convCan2SerialEPhj
+0801c230 g     F .text	0000006c _Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc
+08016fe0 g     F .text	0000000a _ZN10chibios_rt10_thd_startEPv
+08016320 g     F .text	0000001c boardBluetoothSetState
+08018590 g     F .text	0000001c _ZN5amiro6INA2196DriverD0Ev
+08016e00 g     F .text	00000002 _exit
+200018f4 g     O .bss	000000d8 SD1
+08019750 g     F .text	00000004 _ZN5amiro19BluetoothDescriptor35bluetoothDescriptorSetPayloadLengthEj
+08011300  w    F .text	00000002 Vector14C
+08018610 g     F .text	0000007c _ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh
+0801faf0 g     F .text	0000003e strspn
+08011cf0 g     F .text	0000005c _thread_init
+200018e0 g     O .bss	00000014 PWMD3
+08011300  w    F .text	00000002 Vector50
+0801df90 g     F .text	00000008 __cxa_get_globals
+08024490 g     F .text	000000e0 __smakebuf_r
+200008d4 g     O .data	00000004 _ZN10__cxxabiv120__unexpected_handlerE
+08014100 g     F .text	00000032 adc_lld_stop_conversion
+080270a0 g     O .text	00000024 _ZTVN5amiro23ControllerAreaNetworkTxE
+0801d2e0 g     F .text	000000a4 _Z17init_powermonitorRN5amiro6INA2196DriverEfft
+0801f910 g     F .text	0000005e strlen
+08013d00 g     F .text	000000bc dmaStreamAllocate
+0801b430 g     F .text	00000080 _ZN18obstacle_avoidance10Prox2ColorEf
+0802a040 g     O .text	00000008 _ZTISt9type_info
+0800ffe0  w    F .text	00000006 .hidden __aeabi_unwind_cpp_pr1
+08019740 g     F .text	00000004 _ZN5amiro19BluetoothDescriptor28bluetoothDescriptorSetLinkIdEh
+08011300  w    F .text	00000002 Vector194
+08010b2c g     F .text	00000010 .hidden __aeabi_cdcmpeq
+08010a90 g     F .text	0000008a .hidden __gedf2
+08013c30 g     F .text	00000034 Vector154
+08029730 g     O .text	0000000d _ZTSSt9exception
+0801aac0 g     F .text	00000046 _ZN5amiro11IwrapCanMux3getEv
+08023db0 g     F .text	0000052e __gethex
+08017060 g     F .text	00000004 _ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
+08017820 g     F .text	00000014 _ZN5amiro8VCNL4020D0Ev
+08018df0 g     F .text	00000084 _ZN5amiro7BQ275006Driver10stdCommandENS1_15StandardCommandERt
+0801e290 g     F .text	0000001a __cxa_current_exception_type
+080178f0 g     F .text	00000044 _ZN5amiro8VCNL402026getProximityScaledWoOffsetEv
+08017720 g     F .text	0000000c _ZN5amiro10VI2CDriver9getErrorsEv
+08010c10 g     F .text	00000030 .hidden __gnu_ldivmod_helper
+0801c190  w    F .text	00000014 _ZN5amiro7PCA9544ILb1EED2Ev
+08018350 g     F .text	00000064 _ZN5amiro11ADConverter6adc2uVEt
+0801e250 g     F .text	00000014 _ZNSt9exceptionD0Ev
+08027080 g     O .text	00000020 _ZTVN5amiro23ControllerAreaNetworkRxE
+08018d50 g     F .text	0000006c _ZN5amiro7BQ275006DriverC1ERNS_9I2CDriverERK12GPIO_TypeDefhS6_h
+08024f80 g     F .text	000000f4 strchr
+080114d0 g     F .text	00000044 nvicDisableVector
+08012a40 g     F .text	0000006a chOQPutTimeout
+08017600 g     F .text	0000001a _ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm
+20000000 g       .stacks	00000000 __main_stack_base__
+08014510 g     F .text	00000030 Vector44
+0800f258 g     F .text	0000003a .hidden __aeabi_f2d
+0801a390 g     F .text	00000048 _ZN5amiro14BluetoothIwrapC2EP10UARTDriver
+08011300  w    F .text	00000002 Vector28
+0801e720 g     F .text	00000010 fputs
+080162f0 g     F .text	00000002 boardInit
+0801071c g     F .text	00000006 .hidden _Unwind_GetDataRelBase
+08011300  w    F .text	00000002 VectorB8
+08015e00 g     F .text	0000009c sd_lld_start
+0801af90 g     F .text	00000098 _ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+08016340 g     F .text	000000ec boardClearI2CBus
+080175b0 g     F .text	00000006 _ZN5amiro11HWI2CDriver4stopEv
+08013a90 g     F .text	00000034 VectorFC
+08011760 g     F .text	0000003c dbg_check_unlock_from_isr
+080178d0 g     F .text	00000006 _ZN5amiro8VCNL402018getProximityOffsetEv
+08018580  w    F .text	00000004 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv
+0800ef98 g     F .text	0000027a .hidden __subdf3
+08016300 g     F .text	00000018 boardWriteLed
+20000800 g       .stacks	00000000 __process_stack_end__
+08024760 g     F .text	0000005a __lo0bits
+080176e0 g     F .text	0000000c _ZN5amiro14I2CMultiplexerD1Ev
+08027180 g     O .text	0000002c _ZTVN5amiro10VI2CDriverE
+08018040 g     F .text	0000004c _ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth
+08011300  w    F .text	00000002 Vector34
+0801b230  w    F .text	00000008 _ZThn544_N5amiro15PowerManagementD1Ev
+080162e0 g     F .text	00000004 __early_init
+08018fc0 g     F .text	00000014 _ZN5amiro7BQ275006Driver9hibernateEv
+080177b0  w    F .text	00000014 _ZN5amiro10VI2CDriverD0Ev
+08012180 g     F .text	0000005c chSemSignalI
+0801d6a0 g     F .text	0000000a __aeabi_atexit
+0801e610 g     F .text	0000002e _ZNKSt9type_infoeqERKS_
+08013b40 g     F .text	00000034 Vector128
+08011e50 g     F .text	00000026 chThdTerminate
+080183c0 g     F .text	00000028 _ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm
+08017650 g     F .text	0000000c _ZN5amiro14I2CMultiplexer9getErrorsEv
+08019930 g     F .text	00000022 _ZN5amiro18BluetoothTransport35bluetoothTransportSetReceiveMailboxEhPN10chibios_rt7MailboxE
+08011300  w    F .text	00000002 VectorA4
+08018410 g     F .text	00000014 _ZN5amiro6INA2196DriverD2Ev
+08017670 g     F .text	0000000c _ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm
+08029740 g     O .text	00000020 _ZTSN10__cxxabiv115__forced_unwindE
+0801af40 g     F .text	00000044 _ZN5amiro12SerialCanMux12rcvSwitchCmdEh
+0801b2e0 g     F .text	00000038 _ZN5amiro15PowerManagementC2EP9CANDriver
+0801e640 g     F .text	00000004 _ZNKSt9type_info10__do_catchEPKS_PPvj
+080272a0 g     O .text	0000001c _ZTVN5amiro11ADConverterE
+0801faa0 g     F .text	00000050 strpbrk
+08011300  w    F .text	00000002 Vector20
+0801f760 g     F .text	00000010 raise
+08016fd0 g     F .text	00000010 _ZN10chibios_rt10BaseThreadC1Ev
+0801eaf0 g     F .text	00000010 free
+08011300  w    F .text	00000002 Vector18C
+0801dfa0 g     F .text	00000114 _ZN9__gnu_cxx27__verbose_terminate_handlerEv
+080245e0 g     F .text	00000096 __multadd
+08017940 g     F .text	00000052 _ZN5amiro8VCNL40208getCheckEv
+08012100 g     F .text	00000074 chSemWaitTimeoutS
+0801e320 g     F .text	0000001c _ZN10__cxxabiv117__class_type_infoD0Ev
+080245c0 g     F .text	00000012 _Bfree
+200019cc g     O .bss	0000001c UARTD2
+08011300  w    F .text	00000002 Vector174
+080197c0 g     F .text	00000012 _ZN5amiro18BluetoothTransport38bluetoothTransportCharacterReceived_cbEP10UARTDrivert
+
+

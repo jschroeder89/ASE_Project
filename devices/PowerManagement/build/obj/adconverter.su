@@ -1,0 +1,13 @@
+adconverter.cpp:67:1:amiro::ADConverter::~ADConverter()	0	static
+adconverter.cpp:67:1:virtual amiro::ADConverter::~ADConverter()	8	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+adconverter.cpp:14:6:void adcVsysErrorCallback(ADCDriver*, adcerror_t)	8	static
+adconverter.cpp:148:1:1()	0	static
+chprintf.h:69:20:)	12	static
+adconverter.cpp:28:6:void adcTimerCallback(Thread*)	0	static
+adconverter.cpp:37:1:static uint16_t amiro::ADConverter::uV2Adc(uint32_t)	16	static
+adconverter.cpp:49:10:static uint32_t amiro::ADConverter::adc2uV(uint16_t)	16	static
+adconverter.cpp:61:1:amiro::ADConverter::ADConverter(ADCDriver&, ADCConversionGroup&, uint32_t)	24	static
+adconverter.cpp:148:1:void amiro::ADConverter::enableWatchdog(bool)	0	static
+adconverter.cpp:72:1:virtual msg_t amiro::ADConverter::main()	40	static
+adconverter.cpp:157:1:cpp)	0	static

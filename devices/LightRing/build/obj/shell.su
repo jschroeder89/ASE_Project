@@ -1,0 +1,10 @@
+chprintf.h:69:20:chprintf	12	static
+shell.c:99:13:cmd_systime	0	static
+shell.c:67:13:cmd_info	16	static
+shell.c:37:14:2	16	static
+shell.c:204:6:shellInit	0	static
+shell.c:218:6:shellExit	8	static
+shell.c:240:9:shellCreate	16	static
+shell.c:257:9:shellCreateStatic	16	static
+shell.c:275:8:shellGetLine	32	static
+shell.c:141:14:shell_thread	112	static

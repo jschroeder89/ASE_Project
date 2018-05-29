@@ -1,0 +1,15 @@
+can_lld.c:67:13:can_lld_set_filters	16	static
+can_lld.c:255:1:Vector8C	8	static
+can_lld.c:269:1:Vector90	16	static
+can_lld.c:283:1:Vector94	16	static
+can_lld.c:297:1:Vector98	16	static
+can_lld.c:374:6:can_lld_init	8	static
+can_lld.c:402:6:can_lld_start	8	static
+can_lld.c:460:6:can_lld_stop	8	static
+can_lld.c:507:8:can_lld_is_tx_empty	0	static
+can_lld.c:532:6:can_lld_transmit	4	static
+can_lld.c:580:8:can_lld_is_rx_nonempty	0	static
+can_lld.c:604:6:can_lld_receive	8	static
+can_lld.c:675:6:can_lld_sleep	0	static
+can_lld.c:687:6:can_lld_wakeup	0	static
+can_lld.c:705:6:canSTM32SetFilters	16	static

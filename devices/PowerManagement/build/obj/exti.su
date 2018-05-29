@@ -1,0 +1,2 @@
+exti.cpp:132:6:void power_down_cb(EXTDriver*, expchannel_t)	0	static
+exti.cpp:142:6:void pathdc_cb(EXTDriver*, expchannel_t)	0	static

@@ -1,0 +1,300 @@
+ARM GAS  /tmp/ccGnO3PK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"a2500r24a.cpp"
+  15              		.section	.text._ZN5amiro9A2500R24AD2Ev,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro9A2500R24AD2Ev
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro9A2500R24AD2Ev, %function
+  22              	_ZN5amiro9A2500R24AD2Ev:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 014B     		ldr	r3, .L2
+  27 0002 0360     		str	r3, [r0]
+  28 0004 7047     		bx	lr
+  29              	.L3:
+  30 0006 00BF     		.align	2
+  31              	.L2:
+  32 0008 08000000 		.word	.LANCHOR0+8
+  33              		.size	_ZN5amiro9A2500R24AD2Ev, .-_ZN5amiro9A2500R24AD2Ev
+  34              		.global	_ZN5amiro9A2500R24AD1Ev
+  35              		.thumb_set _ZN5amiro9A2500R24AD1Ev,_ZN5amiro9A2500R24AD2Ev
+  36 000c AFF30080 		.section	.text._ZN5amiro9A2500R24AD0Ev,"ax",%progbits
+  37              		.align	2
+  38              		.p2align 4,,15
+  39              		.global	_ZN5amiro9A2500R24AD0Ev
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	_ZN5amiro9A2500R24AD0Ev, %function
+  43              	_ZN5amiro9A2500R24AD0Ev:
+  44              		@ args = 0, pretend = 0, frame = 0
+  45              		@ frame_needed = 0, uses_anonymous_args = 0
+  46 0000 10B5     		push	{r4, lr}
+  47 0002 034B     		ldr	r3, .L5
+  48 0004 0446     		mov	r4, r0
+  49 0006 0360     		str	r3, [r0]
+  50 0008 FFF7FEFF 		bl	_ZdlPv
+  51 000c 2046     		mov	r0, r4
+  52 000e 10BD     		pop	{r4, pc}
+  53              	.L6:
+  54              		.align	2
+  55              	.L5:
+  56 0010 08000000 		.word	.LANCHOR0+8
+  57              		.size	_ZN5amiro9A2500R24AD0Ev, .-_ZN5amiro9A2500R24AD0Ev
+ARM GAS  /tmp/ccGnO3PK.s 			page 2
+
+
+  58 0014 AFF30080 		.section	.text.startup._ZN5amiro9A2500R24A4mainEv,"ax",%progbits
+  58      AFF30080 
+  58      AFF30080 
+  59              		.align	2
+  60              		.p2align 4,,15
+  61              		.global	_ZN5amiro9A2500R24A4mainEv
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	_ZN5amiro9A2500R24A4mainEv, %function
+  65              	_ZN5amiro9A2500R24A4mainEv:
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68 0000 10B5     		push	{r4, lr}
+  69 0002 00F5EE74 		add	r4, r0, #476
+  70 0006 06E0     		b	.L8
+  71              	.L9:
+  72 0008 FFF7FEFF 		bl	_ZN10chibios_rt9EvtSource14broadcastFlagsEm
+  73 000c 4FF0FF30 		mov	r0, #-1
+  74 0010 C821     		movs	r1, #200
+  75 0012 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
+  76              	.L8:
+  77 0016 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+  78 001a 0346     		mov	r3, r0
+  79 001c 0146     		mov	r1, r0
+  80 001e 2046     		mov	r0, r4
+  81 0020 002B     		cmp	r3, #0
+  82 0022 F1D0     		beq	.L9
+  83 0024 0020     		movs	r0, #0
+  84 0026 10BD     		pop	{r4, pc}
+  85              		.size	_ZN5amiro9A2500R24A4mainEv, .-_ZN5amiro9A2500R24A4mainEv
+  86 0028 AFF30080 		.section	.text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm,"axG",%progbits,_ZN10chibios_rt16
+  86      AFF30080 
+  87              		.align	2
+  88              		.p2align 4,,15
+  89              		.weak	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+  90              		.thumb
+  91              		.thumb_func
+  92              		.type	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, %function
+  93              	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:
+  94              		@ args = 0, pretend = 0, frame = 0
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
+  96 0000 30B5     		push	{r4, r5, lr}
+  97 0002 0D46     		mov	r5, r1
+  98 0004 83B0     		sub	sp, sp, #12
+  99 0006 0446     		mov	r4, r0
+ 100 0008 0091     		str	r1, [sp]
+ 101 000a 05F10800 		add	r0, r5, #8
+ 102 000e 4FF4E871 		mov	r1, #464
+ 103 0012 054B     		ldr	r3, .L12
+ 104 0014 FFF7FEFF 		bl	chThdCreateStatic
+ 105 0018 044A     		ldr	r2, .L12+4
+ 106 001a 0346     		mov	r3, r0
+ 107 001c 6860     		str	r0, [r5, #4]
+ 108 001e 2046     		mov	r0, r4
+ 109 0020 84E80C00 		stmia	r4, {r2, r3}
+ 110 0024 03B0     		add	sp, sp, #12
+ 111              		@ sp needed
+ARM GAS  /tmp/ccGnO3PK.s 			page 3
+
+
+ 112 0026 30BD     		pop	{r4, r5, pc}
+ 113              	.L13:
+ 114              		.align	2
+ 115              	.L12:
+ 116 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+ 117 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+ 118              		.size	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi256
+ 119              		.section	.text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE,"ax",%progbits
+ 120              		.align	2
+ 121              		.p2align 4,,15
+ 122              		.global	_ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE
+ 123              		.thumb
+ 124              		.thumb_func
+ 125              		.type	_ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE, %function
+ 126              	_ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129 0000 38B5     		push	{r3, r4, r5, lr}
+ 130 0002 0446     		mov	r4, r0
+ 131 0004 0D46     		mov	r5, r1
+ 132 0006 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+ 133 000a 054B     		ldr	r3, .L15
+ 134 000c C4F8D851 		str	r5, [r4, #472]
+ 135 0010 2360     		str	r3, [r4]
+ 136 0012 04F5EE70 		add	r0, r4, #476
+ 137 0016 FFF7FEFF 		bl	_ZN10chibios_rt9EvtSourceC1Ev
+ 138 001a 2046     		mov	r0, r4
+ 139 001c 38BD     		pop	{r3, r4, r5, pc}
+ 140              	.L16:
+ 141 001e 00BF     		.align	2
+ 142              	.L15:
+ 143 0020 08000000 		.word	.LANCHOR0+8
+ 144              		.size	_ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE, .-_ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE
+ 145              		.global	_ZN5amiro9A2500R24AC1EPNS_11HWSPIDriverE
+ 146              		.thumb_set _ZN5amiro9A2500R24AC1EPNS_11HWSPIDriverE,_ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE
+ 147 0024 AFF30080 		.section	.text._ZN5amiro9A2500R24A14getEventSourceEv,"ax",%progbits
+ 147      AFF30080 
+ 147      AFF30080 
+ 148              		.align	2
+ 149              		.p2align 4,,15
+ 150              		.global	_ZN5amiro9A2500R24A14getEventSourceEv
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.type	_ZN5amiro9A2500R24A14getEventSourceEv, %function
+ 154              	_ZN5amiro9A2500R24A14getEventSourceEv:
+ 155              		@ args = 0, pretend = 0, frame = 0
+ 156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 157              		@ link register save eliminated.
+ 158 0000 00F5EE70 		add	r0, r0, #476
+ 159 0004 7047     		bx	lr
+ 160              		.size	_ZN5amiro9A2500R24A14getEventSourceEv, .-_ZN5amiro9A2500R24A14getEventSourceEv
+ 161 0006 00BFAFF3 		.section	.text._ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE,"ax",%progbits
+ 161      0080AFF3 
+ 161      0080
+ 162              		.align	2
+ 163              		.p2align 4,,15
+ 164              		.global	_ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE
+ARM GAS  /tmp/ccGnO3PK.s 			page 4
+
+
+ 165              		.thumb
+ 166              		.thumb_func
+ 167              		.type	_ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE, %function
+ 168              	_ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE:
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171              		@ link register save eliminated.
+ 172 0000 0020     		movs	r0, #0
+ 173 0002 7047     		bx	lr
+ 174              		.size	_ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE, .-_ZN5amiro9A2500R24A9configureEPNS0_
+ 175 0004 AFF30080 		.section	.text._ZN5amiro9A2500R24A8getCheckEv,"ax",%progbits
+ 175      AFF30080 
+ 175      AFF30080 
+ 176              		.align	2
+ 177              		.p2align 4,,15
+ 178              		.global	_ZN5amiro9A2500R24A8getCheckEv
+ 179              		.thumb
+ 180              		.thumb_func
+ 181              		.type	_ZN5amiro9A2500R24A8getCheckEv, %function
+ 182              	_ZN5amiro9A2500R24A8getCheckEv:
+ 183              		@ args = 0, pretend = 0, frame = 8
+ 184              		@ frame_needed = 0, uses_anonymous_args = 0
+ 185 0000 00B5     		push	{lr}
+ 186 0002 83B0     		sub	sp, sp, #12
+ 187 0004 02A9     		add	r1, sp, #8
+ 188 0006 F023     		movs	r3, #240
+ 189 0008 01F8043D 		strb	r3, [r1, #-4]!
+ 190 000c D0F8D801 		ldr	r0, [r0, #472]
+ 191 0010 0A46     		mov	r2, r1
+ 192 0012 0223     		movs	r3, #2
+ 193 0014 FFF7FEFF 		bl	_ZN5amiro11HWSPIDriver8exchangeEPhPKhj
+ 194 0018 9DF80500 		ldrb	r0, [sp, #5]	@ zero_extendqisi2
+ 195 001c 8038     		subs	r0, r0, #128
+ 196 001e 18BF     		it	ne
+ 197 0020 0120     		movne	r0, #1
+ 198 0022 03B0     		add	sp, sp, #12
+ 199              		@ sp needed
+ 200 0024 5DF804FB 		ldr	pc, [sp], #4
+ 201              		.size	_ZN5amiro9A2500R24A8getCheckEv, .-_ZN5amiro9A2500R24A8getCheckEv
+ 202              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+ 203 0028 AFF30080 		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
+ 203      AFF30080 
+ 204              		.align	3
+ 205              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, %object
+ 206              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, 20
+ 207              	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE:
+ 208 0000 00000000 		.word	0
+ 209 0004 00000000 		.word	0
+ 210 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 211 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 212 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 213              		.global	_ZTVN5amiro9A2500R24AE
+ 214 0014 00000000 		.section	.rodata._ZTVN5amiro9A2500R24AE,"a",%progbits
+ 215              		.align	3
+ 216              		.set	.LANCHOR0,. + 0
+ 217              		.type	_ZTVN5amiro9A2500R24AE, %object
+ 218              		.size	_ZTVN5amiro9A2500R24AE, 28
+ARM GAS  /tmp/ccGnO3PK.s 			page 5
+
+
+ 219              	_ZTVN5amiro9A2500R24AE:
+ 220 0000 00000000 		.word	0
+ 221 0004 00000000 		.word	0
+ 222 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 223 000c 00000000 		.word	_ZN5amiro9A2500R24A4mainEv
+ 224 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 225 0014 00000000 		.word	_ZN5amiro9A2500R24AD1Ev
+ 226 0018 00000000 		.word	_ZN5amiro9A2500R24AD0Ev
+ 227 001c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccGnO3PK.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 a2500r24a.cpp
+     /tmp/ccGnO3PK.s:16     .text._ZN5amiro9A2500R24AD2Ev:00000000 $t
+     /tmp/ccGnO3PK.s:22     .text._ZN5amiro9A2500R24AD2Ev:00000000 _ZN5amiro9A2500R24AD2Ev
+     /tmp/ccGnO3PK.s:32     .text._ZN5amiro9A2500R24AD2Ev:00000008 $d
+     /tmp/ccGnO3PK.s:22     .text._ZN5amiro9A2500R24AD2Ev:00000000 _ZN5amiro9A2500R24AD1Ev
+     /tmp/ccGnO3PK.s:37     .text._ZN5amiro9A2500R24AD0Ev:00000000 $t
+     /tmp/ccGnO3PK.s:43     .text._ZN5amiro9A2500R24AD0Ev:00000000 _ZN5amiro9A2500R24AD0Ev
+     /tmp/ccGnO3PK.s:56     .text._ZN5amiro9A2500R24AD0Ev:00000010 $d
+     /tmp/ccGnO3PK.s:59     .text.startup._ZN5amiro9A2500R24A4mainEv:00000000 $t
+     /tmp/ccGnO3PK.s:65     .text.startup._ZN5amiro9A2500R24A4mainEv:00000000 _ZN5amiro9A2500R24A4mainEv
+     /tmp/ccGnO3PK.s:87     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/ccGnO3PK.s:93     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/ccGnO3PK.s:116    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/ccGnO3PK.s:120    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000000 $t
+     /tmp/ccGnO3PK.s:126    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE
+     /tmp/ccGnO3PK.s:143    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000020 $d
+     /tmp/ccGnO3PK.s:126    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro9A2500R24AC1EPNS_11HWSPIDriverE
+     /tmp/ccGnO3PK.s:148    .text._ZN5amiro9A2500R24A14getEventSourceEv:00000000 $t
+     /tmp/ccGnO3PK.s:154    .text._ZN5amiro9A2500R24A14getEventSourceEv:00000000 _ZN5amiro9A2500R24A14getEventSourceEv
+     /tmp/ccGnO3PK.s:162    .text._ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE:00000000 $t
+     /tmp/ccGnO3PK.s:168    .text._ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE:00000000 _ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE
+     /tmp/ccGnO3PK.s:176    .text._ZN5amiro9A2500R24A8getCheckEv:00000000 $t
+     /tmp/ccGnO3PK.s:182    .text._ZN5amiro9A2500R24A8getCheckEv:00000000 _ZN5amiro9A2500R24A8getCheckEv
+     /tmp/ccGnO3PK.s:207    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/ccGnO3PK.s:204    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/ccGnO3PK.s:219    .rodata._ZTVN5amiro9A2500R24AE:00000000 _ZTVN5amiro9A2500R24AE
+     /tmp/ccGnO3PK.s:215    .rodata._ZTVN5amiro9A2500R24AE:00000000 $d
+     /tmp/ccGnO3PK.s:36     .text._ZN5amiro9A2500R24AD2Ev:0000000c $t
+     /tmp/ccGnO3PK.s:58     .text._ZN5amiro9A2500R24AD0Ev:00000014 $t
+     /tmp/ccGnO3PK.s:147    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000024 $t
+
+UNDEFINED SYMBOLS
+_ZdlPv
+_ZN10chibios_rt9EvtSource14broadcastFlagsEm
+_ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+_ZN10chibios_rt10BaseThreadC2Ev
+_ZN10chibios_rt9EvtSourceC1Ev
+_ZN5amiro11HWSPIDriver8exchangeEPhPKhj
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv

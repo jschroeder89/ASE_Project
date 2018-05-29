@@ -1,0 +1,6 @@
+qei.c:42:6:qeiInit	0	static
+qei.c:54:6:qeiObjectInit	0	static
+qei.c:68:6:qeiStart	16	static
+qei.c:88:6:qeiStop	8	static
+qei.c:107:6:qeiEnable	8	static
+qei.c:125:6:qeiDisable	8	static

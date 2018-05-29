@@ -1,0 +1,11 @@
+adc.c:68:6:adcInit	0	static
+adc.c:80:6:adcObjectInit	0	static
+adc.c:111:6:adcStart	16	static
+adc.c:131:6:adcStop	8	static
+adc.c:187:6:adcStartConversionI	24	static
+adc.c:159:6:adcStartConversion	24	static
+adc.c:218:6:adcStopConversion	8	static
+adc.c:245:6:adcStopConversionI	8	static
+adc.c:286:7:adcConvert	24	static
+adc.c:315:6:adcAcquireBus	8	static
+adc.c:335:6:adcReleaseBus	8	static

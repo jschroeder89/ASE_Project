@@ -1,0 +1,14 @@
+serial.c:99:15:readt	0	static
+serial.c:68:15:read	0	static
+serial.c:94:15:writet	0	static
+serial.c:62:15:write	0	static
+serial.c:89:14:gett	0	static
+serial.c:79:14:get	0	static
+serial.c:84:14:putt	0	static
+serial.c:74:14:put	0	static
+serial.c:120:6:sdInit	0	static
+serial.c:140:6:sdObjectInit	24	static
+serial.c:159:6:sdStart	16	static
+serial.c:181:6:sdStop	8	static
+serial.c:213:6:sdIncomingDataI	16	static
+serial.c:239:7:sdRequestDataI	16	static

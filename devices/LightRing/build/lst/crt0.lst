@@ -1,0 +1,239 @@
+ARM GAS  /tmp/ccan4AQl.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"crt0.c"
+  15              		.section	.text.__early_init,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.weak	__early_init
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	__early_init, %function
+  22              	__early_init:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 7047     		bx	lr
+  27              		.size	__early_init, .-__early_init
+  28 0002 00BFAFF3 		.section	.text.__late_init,"ax",%progbits
+  28      0080AFF3 
+  28      0080AFF3 
+  28      0080
+  29              		.align	2
+  30              		.p2align 4,,15
+  31              		.weak	__late_init
+  32              		.thumb
+  33              		.thumb_func
+  34              		.type	__late_init, %function
+  35              	__late_init:
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38              		@ link register save eliminated.
+  39 0000 7047     		bx	lr
+  40              		.size	__late_init, .-__late_init
+  41 0002 00BFAFF3 		.section	.text._default_exit,"ax",%progbits
+  41      0080AFF3 
+  41      0080AFF3 
+  41      0080
+  42              		.align	2
+  43              		.p2align 4,,15
+  44              		.weak	_default_exit
+  45              		.thumb
+  46              		.thumb_func
+  47              		.type	_default_exit, %function
+  48              	_default_exit:
+  49              		@ Naked Function: prologue and epilogue provided by programmer.
+  50              		@ args = 0, pretend = 0, frame = 0
+  51              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccan4AQl.s 			page 2
+
+
+  52              	.L4:
+  53 0000 FEE7     		b	.L4
+  54              		.size	_default_exit, .-_default_exit
+  55 0002 00BFAFF3 		.section	.text.ResetHandler,"ax",%progbits
+  55      0080AFF3 
+  55      0080AFF3 
+  55      0080
+  56              		.align	2
+  57              		.p2align 4,,15
+  58              		.global	ResetHandler
+  59              		.thumb
+  60              		.thumb_func
+  61              		.type	ResetHandler, %function
+  62              	ResetHandler:
+  63              		@ Naked Function: prologue and epilogue provided by programmer.
+  64              		@ args = 0, pretend = 0, frame = 0
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66              	@ 274 "../../../ChibiOS/os/ports/GCC/ARMCMx/crt0.c" 1
+  67 0000 72B6     		cpsid   i
+  68              	@ 0 "" 2
+  69              		.thumb
+  70 0002 3048     		ldr	r0, .L27
+  71              	@ 276 "../../../ChibiOS/os/ports/GCC/ARMCMx/crt0.c" 1
+  72 0004 80F30988 		msr     PSP, r0
+  73              	@ 0 "" 2
+  74              		.thumb
+  75 0008 0223     		movs	r3, #2
+  76              	@ 296 "../../../ChibiOS/os/ports/GCC/ARMCMx/crt0.c" 1
+  77 000a 83F31488 		msr     CONTROL, r3
+  78              	@ 0 "" 2
+  79              	@ 297 "../../../ChibiOS/os/ports/GCC/ARMCMx/crt0.c" 1
+  80 000e BFF36F8F 		isb
+  81              	@ 0 "" 2
+  82              		.thumb
+  83 0012 2D4B     		ldr	r3, .L27+4
+  84 0014 2D4A     		ldr	r2, .L27+8
+  85 0016 9342     		cmp	r3, r2
+  86 0018 0BD2     		bcs	.L9
+  87 001a D943     		mvns	r1, r3
+  88 001c 1144     		add	r1, r1, r2
+  89 001e 21F00301 		bic	r1, r1, #3
+  90 0022 1944     		add	r1, r1, r3
+  91 0024 4FF05532 		mov	r2, #1431655765
+  92 0028 043B     		subs	r3, r3, #4
+  93              	.L10:
+  94 002a 43F8042F 		str	r2, [r3, #4]!
+  95 002e 8B42     		cmp	r3, r1
+  96 0030 FBD1     		bne	.L10
+  97              	.L9:
+  98 0032 274B     		ldr	r3, .L27+12
+  99 0034 8342     		cmp	r3, r0
+ 100 0036 0CD2     		bcs	.L8
+ 101 0038 2649     		ldr	r1, .L27+16
+ 102 003a 1A1D     		adds	r2, r3, #4
+ 103 003c 891A     		subs	r1, r1, r2
+ 104 003e 21F00301 		bic	r1, r1, #3
+ 105 0042 1944     		add	r1, r1, r3
+ARM GAS  /tmp/ccan4AQl.s 			page 3
+
+
+ 106 0044 4FF05532 		mov	r2, #1431655765
+ 107 0048 043B     		subs	r3, r3, #4
+ 108              	.L13:
+ 109 004a 43F8042F 		str	r2, [r3, #4]!
+ 110 004e 8B42     		cmp	r3, r1
+ 111 0050 FBD1     		bne	.L13
+ 112              	.L8:
+ 113 0052 FFF7FEFF 		bl	__early_init
+ 114 0056 2049     		ldr	r1, .L27+20
+ 115 0058 204B     		ldr	r3, .L27+24
+ 116 005a 9942     		cmp	r1, r3
+ 117 005c 0BD2     		bcs	.L12
+ 118 005e C843     		mvns	r0, r1
+ 119 0060 1844     		add	r0, r0, r3
+ 120 0062 20F00300 		bic	r0, r0, #3
+ 121 0066 1E4C     		ldr	r4, .L27+28
+ 122 0068 0430     		adds	r0, r0, #4
+ 123 006a 0023     		movs	r3, #0
+ 124              	.L16:
+ 125 006c E258     		ldr	r2, [r4, r3]
+ 126 006e CA50     		str	r2, [r1, r3]
+ 127 0070 0433     		adds	r3, r3, #4
+ 128 0072 8342     		cmp	r3, r0
+ 129 0074 FAD1     		bne	.L16
+ 130              	.L12:
+ 131 0076 1B4B     		ldr	r3, .L27+32
+ 132 0078 1B4A     		ldr	r2, .L27+36
+ 133 007a 9342     		cmp	r3, r2
+ 134 007c 0AD2     		bcs	.L15
+ 135 007e D943     		mvns	r1, r3
+ 136 0080 1144     		add	r1, r1, r2
+ 137 0082 21F00301 		bic	r1, r1, #3
+ 138 0086 1944     		add	r1, r1, r3
+ 139 0088 0022     		movs	r2, #0
+ 140 008a 043B     		subs	r3, r3, #4
+ 141              	.L19:
+ 142 008c 43F8042F 		str	r2, [r3, #4]!
+ 143 0090 8B42     		cmp	r3, r1
+ 144 0092 FBD1     		bne	.L19
+ 145              	.L15:
+ 146 0094 154D     		ldr	r5, .L27+40
+ 147 0096 164C     		ldr	r4, .L27+44
+ 148 0098 FFF7FEFF 		bl	__late_init
+ 149 009c AC42     		cmp	r4, r5
+ 150 009e 04D2     		bcs	.L18
+ 151              	.L22:
+ 152 00a0 54F8043B 		ldr	r3, [r4], #4
+ 153 00a4 9847     		blx	r3
+ 154 00a6 AC42     		cmp	r4, r5
+ 155 00a8 FAD3     		bcc	.L22
+ 156              	.L18:
+ 157 00aa 124D     		ldr	r5, .L27+48
+ 158 00ac 124C     		ldr	r4, .L27+52
+ 159 00ae FFF7FEFF 		bl	main
+ 160 00b2 AC42     		cmp	r4, r5
+ 161 00b4 04D2     		bcs	.L21
+ 162              	.L23:
+ARM GAS  /tmp/ccan4AQl.s 			page 4
+
+
+ 163 00b6 54F8043B 		ldr	r3, [r4], #4
+ 164 00ba 9847     		blx	r3
+ 165 00bc AC42     		cmp	r4, r5
+ 166 00be FAD3     		bcc	.L23
+ 167              	.L21:
+ 168 00c0 FFF7FEFF 		bl	_default_exit
+ 169              	.L28:
+ 170              		.align	2
+ 171              	.L27:
+ 172 00c4 00000000 		.word	__process_stack_end__
+ 173 00c8 00000000 		.word	__main_stack_base__
+ 174 00cc 00000000 		.word	__main_stack_end__
+ 175 00d0 00000000 		.word	__process_stack_base__
+ 176 00d4 03000000 		.word	__process_stack_end__+3
+ 177 00d8 00000000 		.word	_data
+ 178 00dc 00000000 		.word	_edata
+ 179 00e0 00000000 		.word	_textdata
+ 180 00e4 00000000 		.word	_bss_start
+ 181 00e8 00000000 		.word	_bss_end
+ 182 00ec 00000000 		.word	__init_array_end
+ 183 00f0 00000000 		.word	__init_array_start
+ 184 00f4 00000000 		.word	__fini_array_end
+ 185 00f8 00000000 		.word	__fini_array_start
+ 186              		.size	ResetHandler, .-ResetHandler
+ 187 00fc AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccan4AQl.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 crt0.c
+     /tmp/ccan4AQl.s:16     .text.__early_init:00000000 $t
+     /tmp/ccan4AQl.s:22     .text.__early_init:00000000 __early_init
+     /tmp/ccan4AQl.s:29     .text.__late_init:00000000 $t
+     /tmp/ccan4AQl.s:35     .text.__late_init:00000000 __late_init
+     /tmp/ccan4AQl.s:42     .text._default_exit:00000000 $t
+     /tmp/ccan4AQl.s:48     .text._default_exit:00000000 _default_exit
+     /tmp/ccan4AQl.s:56     .text.ResetHandler:00000000 $t
+     /tmp/ccan4AQl.s:62     .text.ResetHandler:00000000 ResetHandler
+     /tmp/ccan4AQl.s:172    .text.ResetHandler:000000c4 $d
+     /tmp/ccan4AQl.s:187    .text.ResetHandler:000000fc $t
+
+UNDEFINED SYMBOLS
+main
+__process_stack_end__
+__main_stack_base__
+__main_stack_end__
+__process_stack_base__
+_data
+_edata
+_textdata
+_bss_start
+_bss_end
+__init_array_end
+__init_array_start
+__fini_array_end
+__fini_array_start

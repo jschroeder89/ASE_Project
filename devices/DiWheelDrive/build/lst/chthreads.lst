@@ -1,0 +1,708 @@
+ARM GAS  /tmp/ccOP6szW.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"chthreads.c"
+  15              		.section	.text._thread_init,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_thread_init
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_thread_init, %function
+  22              	_thread_init:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 2DE9F007 		push	{r4, r5, r6, r7, r8, r9, r10}
+  27 0004 144C     		ldr	r4, .L2
+  28 0006 0022     		movs	r2, #0
+  29 0008 6569     		ldr	r5, [r4, #20]
+  30 000a 00F13006 		add	r6, r0, #48
+  31 000e 4FF0020A 		mov	r10, #2
+  32 0012 4FF01409 		mov	r9, #20
+  33 0016 4FF00108 		mov	r8, #1
+  34 001a 00F14C07 		add	r7, r0, #76
+  35 001e 00F12C0C 		add	ip, r0, #44
+  36 0022 4561     		str	r5, [r0, #20]
+  37 0024 0461     		str	r4, [r0, #16]
+  38 0026 8160     		str	r1, [r0, #8]
+  39 0028 80F820A0 		strb	r10, [r0, #32]
+  40 002c 6061     		str	r0, [r4, #20]
+  41 002e 80F82390 		strb	r9, [r0, #35]
+  42 0032 80F82280 		strb	r8, [r0, #34]
+  43 0036 4164     		str	r1, [r0, #68]
+  44 0038 80F82120 		strb	r2, [r0, #33]
+  45 003c 0264     		str	r2, [r0, #64]
+  46 003e C263     		str	r2, [r0, #60]
+  47 0040 4262     		str	r2, [r0, #36]
+  48 0042 8261     		str	r2, [r0, #24]
+  49 0044 2861     		str	r0, [r5, #16]
+  50 0046 C761     		str	r7, [r0, #28]
+  51 0048 4663     		str	r6, [r0, #52]
+  52 004a 0663     		str	r6, [r0, #48]
+  53 004c C0F82CC0 		str	ip, [r0, #44]
+  54 0050 BDE8F007 		pop	{r4, r5, r6, r7, r8, r9, r10}
+  55 0054 7047     		bx	lr
+  56              	.L3:
+  57 0056 00BF     		.align	2
+ARM GAS  /tmp/ccOP6szW.s 			page 2
+
+
+  58              	.L2:
+  59 0058 00000000 		.word	rlist
+  60              		.size	_thread_init, .-_thread_init
+  61              		.section	.text.chThdCreateI,"ax",%progbits
+  62              		.align	2
+  63              		.p2align 4,,15
+  64              		.global	chThdCreateI
+  65              		.thumb
+  66              		.thumb_func
+  67              		.type	chThdCreateI, %function
+  68              	chThdCreateI:
+  69              		@ args = 4, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  72 0004 0446     		mov	r4, r0
+  73 0006 0D46     		mov	r5, r1
+  74 0008 1746     		mov	r7, r2
+  75 000a 9846     		mov	r8, r3
+  76 000c FFF7FEFF 		bl	chDbgCheckClassI
+  77 0010 0CB1     		cbz	r4, .L5
+  78 0012 CF2D     		cmp	r5, #207
+  79 0014 36D8     		bhi	.L11
+  80              	.L5:
+  81 0016 1E48     		ldr	r0, .L12
+  82 0018 FFF7FEFF 		bl	chDbgPanic
+  83              	.L6:
+  84 001c 1D4E     		ldr	r6, .L12+4
+  85 001e A5F12401 		sub	r1, r5, #36
+  86 0022 6018     		adds	r0, r4, r1
+  87 0024 7269     		ldr	r2, [r6, #20]
+  88 0026 E060     		str	r0, [r4, #12]
+  89 0028 44F80180 		str	r8, [r4, r1]
+  90 002c 0A99     		ldr	r1, [sp, #40]
+  91 002e 0025     		movs	r5, #0
+  92 0030 4160     		str	r1, [r0, #4]
+  93 0032 1949     		ldr	r1, .L12+8
+  94 0034 4FF0020A 		mov	r10, #2
+  95 0038 4FF01409 		mov	r9, #20
+  96 003c 4FF0010C 		mov	ip, #1
+  97 0040 0162     		str	r1, [r0, #32]
+  98 0042 04F13003 		add	r3, r4, #48
+  99 0046 04F12C0B 		add	fp, r4, #44
+ 100 004a 04F14C08 		add	r8, r4, #76
+ 101 004e 84F820A0 		strb	r10, [r4, #32]
+ 102 0052 84F82150 		strb	r5, [r4, #33]
+ 103 0056 84F82390 		strb	r9, [r4, #35]
+ 104 005a 84F822C0 		strb	ip, [r4, #34]
+ 105 005e A760     		str	r7, [r4, #8]
+ 106 0060 2661     		str	r6, [r4, #16]
+ 107 0062 6261     		str	r2, [r4, #20]
+ 108 0064 6764     		str	r7, [r4, #68]
+ 109 0066 7461     		str	r4, [r6, #20]
+ 110 0068 2564     		str	r5, [r4, #64]
+ 111 006a E563     		str	r5, [r4, #60]
+ 112 006c 6562     		str	r5, [r4, #36]
+ 113 006e A561     		str	r5, [r4, #24]
+ 114 0070 2046     		mov	r0, r4
+ARM GAS  /tmp/ccOP6szW.s 			page 3
+
+
+ 115 0072 1461     		str	r4, [r2, #16]
+ 116 0074 C4F82CB0 		str	fp, [r4, #44]
+ 117 0078 6363     		str	r3, [r4, #52]
+ 118 007a 2363     		str	r3, [r4, #48]
+ 119 007c C4F81C80 		str	r8, [r4, #28]
+ 120 0080 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 121              	.L11:
+ 122 0084 7F2F     		cmp	r7, #127
+ 123 0086 C6D8     		bhi	.L5
+ 124 0088 B8F1000F 		cmp	r8, #0
+ 125 008c C6D1     		bne	.L6
+ 126 008e C2E7     		b	.L5
+ 127              	.L13:
+ 128              		.align	2
+ 129              	.L12:
+ 130 0090 00000000 		.word	.LC0
+ 131 0094 00000000 		.word	rlist
+ 132 0098 00000000 		.word	_port_thread_start
+ 133              		.size	chThdCreateI, .-chThdCreateI
+ 134 009c AFF30080 		.section	.text.chThdCreateStatic,"ax",%progbits
+ 135              		.align	2
+ 136              		.p2align 4,,15
+ 137              		.global	chThdCreateStatic
+ 138              		.thumb
+ 139              		.thumb_func
+ 140              		.type	chThdCreateStatic, %function
+ 141              	chThdCreateStatic:
+ 142              		@ args = 4, pretend = 0, frame = 0
+ 143              		@ frame_needed = 0, uses_anonymous_args = 0
+ 144 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 145 0004 82B0     		sub	sp, sp, #8
+ 146 0006 1D46     		mov	r5, r3
+ 147 0008 8046     		mov	r8, r0
+ 148 000a 0F46     		mov	r7, r1
+ 149 000c 1646     		mov	r6, r2
+ 150 000e 089C     		ldr	r4, [sp, #32]
+ 151 0010 2023     		movs	r3, #32
+ 152              	@ 199 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 153 0012 83F31188 		msr     BASEPRI, r3
+ 154              	@ 0 "" 2
+ 155              		.thumb
+ 156 0016 FFF7FEFF 		bl	dbg_check_lock
+ 157 001a 2B46     		mov	r3, r5
+ 158 001c 3246     		mov	r2, r6
+ 159 001e 0094     		str	r4, [sp]
+ 160 0020 3946     		mov	r1, r7
+ 161 0022 4046     		mov	r0, r8
+ 162 0024 FFF7FEFF 		bl	chThdCreateI
+ 163 0028 0021     		movs	r1, #0
+ 164 002a 0446     		mov	r4, r0
+ 165 002c FFF7FEFF 		bl	chSchWakeupS
+ 166 0030 FFF7FEFF 		bl	dbg_check_unlock
+ 167 0034 0023     		movs	r3, #0
+ 168              	@ 201 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 169 0036 83F31188 		msr     BASEPRI, r3
+ 170              	@ 0 "" 2
+ 171              		.thumb
+ARM GAS  /tmp/ccOP6szW.s 			page 4
+
+
+ 172 003a 2046     		mov	r0, r4
+ 173 003c 02B0     		add	sp, sp, #8
+ 174              		@ sp needed
+ 175 003e BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 176              		.size	chThdCreateStatic, .-chThdCreateStatic
+ 177 0042 00BFAFF3 		.section	.text.chThdSetPriority,"ax",%progbits
+ 177      0080AFF3 
+ 177      0080AFF3 
+ 177      0080
+ 178              		.align	2
+ 179              		.p2align 4,,15
+ 180              		.global	chThdSetPriority
+ 181              		.thumb
+ 182              		.thumb_func
+ 183              		.type	chThdSetPriority, %function
+ 184              	chThdSetPriority:
+ 185              		@ args = 0, pretend = 0, frame = 0
+ 186              		@ frame_needed = 0, uses_anonymous_args = 0
+ 187 0000 7F28     		cmp	r0, #127
+ 188 0002 38B5     		push	{r3, r4, r5, lr}
+ 189 0004 0446     		mov	r4, r0
+ 190 0006 17D8     		bhi	.L19
+ 191              	.L16:
+ 192 0008 2023     		movs	r3, #32
+ 193              	@ 222 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 194 000a 83F31188 		msr     BASEPRI, r3
+ 195              	@ 0 "" 2
+ 196              		.thumb
+ 197 000e FFF7FEFF 		bl	dbg_check_lock
+ 198 0012 0B4B     		ldr	r3, .L20
+ 199 0014 9B69     		ldr	r3, [r3, #24]
+ 200 0016 5D6C     		ldr	r5, [r3, #68]
+ 201 0018 9A68     		ldr	r2, [r3, #8]
+ 202 001a 9542     		cmp	r5, r2
+ 203 001c 01D0     		beq	.L17
+ 204 001e 9442     		cmp	r4, r2
+ 205 0020 00D9     		bls	.L18
+ 206              	.L17:
+ 207 0022 9C60     		str	r4, [r3, #8]
+ 208              	.L18:
+ 209 0024 5C64     		str	r4, [r3, #68]
+ 210 0026 FFF7FEFF 		bl	chSchRescheduleS
+ 211 002a FFF7FEFF 		bl	dbg_check_unlock
+ 212 002e 0023     		movs	r3, #0
+ 213              	@ 233 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 214 0030 83F31188 		msr     BASEPRI, r3
+ 215              	@ 0 "" 2
+ 216              		.thumb
+ 217 0034 2846     		mov	r0, r5
+ 218 0036 38BD     		pop	{r3, r4, r5, pc}
+ 219              	.L19:
+ 220 0038 0248     		ldr	r0, .L20+4
+ 221 003a FFF7FEFF 		bl	chDbgPanic
+ 222 003e E3E7     		b	.L16
+ 223              	.L21:
+ 224              		.align	2
+ 225              	.L20:
+ARM GAS  /tmp/ccOP6szW.s 			page 5
+
+
+ 226 0040 00000000 		.word	rlist
+ 227 0044 14000000 		.word	.LC1
+ 228              		.size	chThdSetPriority, .-chThdSetPriority
+ 229 0048 AFF30080 		.section	.text.chThdResume,"ax",%progbits
+ 229      AFF30080 
+ 230              		.align	2
+ 231              		.p2align 4,,15
+ 232              		.global	chThdResume
+ 233              		.thumb
+ 234              		.thumb_func
+ 235              		.type	chThdResume, %function
+ 236              	chThdResume:
+ 237              		@ args = 0, pretend = 0, frame = 0
+ 238              		@ frame_needed = 0, uses_anonymous_args = 0
+ 239 0000 10B5     		push	{r4, lr}
+ 240 0002 2023     		movs	r3, #32
+ 241 0004 0446     		mov	r4, r0
+ 242              	@ 252 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 243 0006 83F31188 		msr     BASEPRI, r3
+ 244              	@ 0 "" 2
+ 245              		.thumb
+ 246 000a FFF7FEFF 		bl	dbg_check_lock
+ 247 000e 94F82030 		ldrb	r3, [r4, #32]	@ zero_extendqisi2
+ 248 0012 022B     		cmp	r3, #2
+ 249 0014 02D0     		beq	.L23
+ 250 0016 0748     		ldr	r0, .L27
+ 251 0018 FFF7FEFF 		bl	chDbgPanic
+ 252              	.L23:
+ 253 001c 2046     		mov	r0, r4
+ 254 001e 0021     		movs	r1, #0
+ 255 0020 FFF7FEFF 		bl	chSchWakeupS
+ 256 0024 FFF7FEFF 		bl	dbg_check_unlock
+ 257 0028 0023     		movs	r3, #0
+ 258              	@ 257 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 259 002a 83F31188 		msr     BASEPRI, r3
+ 260              	@ 0 "" 2
+ 261              		.thumb
+ 262 002e 2046     		mov	r0, r4
+ 263 0030 10BD     		pop	{r4, pc}
+ 264              	.L28:
+ 265 0032 00BF     		.align	2
+ 266              	.L27:
+ 267 0034 2C000000 		.word	.LC2
+ 268              		.size	chThdResume, .-chThdResume
+ 269 0038 AFF30080 		.section	.text.chThdTerminate,"ax",%progbits
+ 269      AFF30080 
+ 270              		.align	2
+ 271              		.p2align 4,,15
+ 272              		.global	chThdTerminate
+ 273              		.thumb
+ 274              		.thumb_func
+ 275              		.type	chThdTerminate, %function
+ 276              	chThdTerminate:
+ 277              		@ args = 0, pretend = 0, frame = 0
+ 278              		@ frame_needed = 0, uses_anonymous_args = 0
+ 279 0000 10B5     		push	{r4, lr}
+ 280 0002 2023     		movs	r3, #32
+ARM GAS  /tmp/ccOP6szW.s 			page 6
+
+
+ 281 0004 0446     		mov	r4, r0
+ 282              	@ 275 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 283 0006 83F31188 		msr     BASEPRI, r3
+ 284              	@ 0 "" 2
+ 285              		.thumb
+ 286 000a FFF7FEFF 		bl	dbg_check_lock
+ 287 000e 94F82130 		ldrb	r3, [r4, #33]	@ zero_extendqisi2
+ 288 0012 43F00403 		orr	r3, r3, #4
+ 289 0016 84F82130 		strb	r3, [r4, #33]
+ 290 001a FFF7FEFF 		bl	dbg_check_unlock
+ 291 001e 0023     		movs	r3, #0
+ 292              	@ 277 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 293 0020 83F31188 		msr     BASEPRI, r3
+ 294              	@ 0 "" 2
+ 295              		.thumb
+ 296 0024 10BD     		pop	{r4, pc}
+ 297              		.size	chThdTerminate, .-chThdTerminate
+ 298 0026 00BFAFF3 		.section	.text.chThdSleep,"ax",%progbits
+ 298      0080AFF3 
+ 298      0080
+ 299              		.align	2
+ 300              		.p2align 4,,15
+ 301              		.global	chThdSleep
+ 302              		.thumb
+ 303              		.thumb_func
+ 304              		.type	chThdSleep, %function
+ 305              	chThdSleep:
+ 306              		@ args = 0, pretend = 0, frame = 0
+ 307              		@ frame_needed = 0, uses_anonymous_args = 0
+ 308 0000 10B5     		push	{r4, lr}
+ 309 0002 0446     		mov	r4, r0
+ 310 0004 10B9     		cbnz	r0, .L31
+ 311 0006 0948     		ldr	r0, .L32
+ 312 0008 FFF7FEFF 		bl	chDbgPanic
+ 313              	.L31:
+ 314 000c 2023     		movs	r3, #32
+ 315              	@ 296 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 316 000e 83F31188 		msr     BASEPRI, r3
+ 317              	@ 0 "" 2
+ 318              		.thumb
+ 319 0012 FFF7FEFF 		bl	dbg_check_lock
+ 320 0016 2146     		mov	r1, r4
+ 321 0018 0620     		movs	r0, #6
+ 322 001a FFF7FEFF 		bl	chSchGoSleepTimeoutS
+ 323 001e FFF7FEFF 		bl	dbg_check_unlock
+ 324 0022 0023     		movs	r3, #0
+ 325              	@ 298 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 326 0024 83F31188 		msr     BASEPRI, r3
+ 327              	@ 0 "" 2
+ 328              		.thumb
+ 329 0028 10BD     		pop	{r4, pc}
+ 330              	.L33:
+ 331 002a 00BF     		.align	2
+ 332              	.L32:
+ 333 002c 40000000 		.word	.LC3
+ 334              		.size	chThdSleep, .-chThdSleep
+ 335              		.section	.text.chThdSleepUntil,"ax",%progbits
+ARM GAS  /tmp/ccOP6szW.s 			page 7
+
+
+ 336              		.align	2
+ 337              		.p2align 4,,15
+ 338              		.global	chThdSleepUntil
+ 339              		.thumb
+ 340              		.thumb_func
+ 341              		.type	chThdSleepUntil, %function
+ 342              	chThdSleepUntil:
+ 343              		@ args = 0, pretend = 0, frame = 0
+ 344              		@ frame_needed = 0, uses_anonymous_args = 0
+ 345 0000 10B5     		push	{r4, lr}
+ 346 0002 2023     		movs	r3, #32
+ 347 0004 0446     		mov	r4, r0
+ 348              	@ 311 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 349 0006 83F31188 		msr     BASEPRI, r3
+ 350              	@ 0 "" 2
+ 351              		.thumb
+ 352 000a FFF7FEFF 		bl	dbg_check_lock
+ 353 000e 064B     		ldr	r3, .L39
+ 354 0010 D968     		ldr	r1, [r3, #12]
+ 355 0012 611A     		subs	r1, r4, r1
+ 356 0014 02D0     		beq	.L35
+ 357 0016 0620     		movs	r0, #6
+ 358 0018 FFF7FEFF 		bl	chSchGoSleepTimeoutS
+ 359              	.L35:
+ 360 001c FFF7FEFF 		bl	dbg_check_unlock
+ 361 0020 0023     		movs	r3, #0
+ 362              	@ 314 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 363 0022 83F31188 		msr     BASEPRI, r3
+ 364              	@ 0 "" 2
+ 365              		.thumb
+ 366 0026 10BD     		pop	{r4, pc}
+ 367              	.L40:
+ 368              		.align	2
+ 369              	.L39:
+ 370 0028 00000000 		.word	vtlist
+ 371              		.size	chThdSleepUntil, .-chThdSleepUntil
+ 372 002c AFF30080 		.section	.text.chThdYield,"ax",%progbits
+ 373              		.align	2
+ 374              		.p2align 4,,15
+ 375              		.global	chThdYield
+ 376              		.thumb
+ 377              		.thumb_func
+ 378              		.type	chThdYield, %function
+ 379              	chThdYield:
+ 380              		@ args = 0, pretend = 0, frame = 0
+ 381              		@ frame_needed = 0, uses_anonymous_args = 0
+ 382 0000 08B5     		push	{r3, lr}
+ 383 0002 2023     		movs	r3, #32
+ 384              	@ 326 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 385 0004 83F31188 		msr     BASEPRI, r3
+ 386              	@ 0 "" 2
+ 387              		.thumb
+ 388 0008 FFF7FEFF 		bl	dbg_check_lock
+ 389 000c 074B     		ldr	r3, .L43
+ 390 000e 1A68     		ldr	r2, [r3]
+ 391 0010 9B69     		ldr	r3, [r3, #24]
+ 392 0012 9268     		ldr	r2, [r2, #8]
+ARM GAS  /tmp/ccOP6szW.s 			page 8
+
+
+ 393 0014 9B68     		ldr	r3, [r3, #8]
+ 394 0016 9A42     		cmp	r2, r3
+ 395 0018 01D3     		bcc	.L42
+ 396 001a FFF7FEFF 		bl	chSchDoRescheduleBehind
+ 397              	.L42:
+ 398 001e FFF7FEFF 		bl	dbg_check_unlock
+ 399 0022 0023     		movs	r3, #0
+ 400              	@ 328 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 401 0024 83F31188 		msr     BASEPRI, r3
+ 402              	@ 0 "" 2
+ 403              		.thumb
+ 404 0028 08BD     		pop	{r3, pc}
+ 405              	.L44:
+ 406 002a 00BF     		.align	2
+ 407              	.L43:
+ 408 002c 00000000 		.word	rlist
+ 409              		.size	chThdYield, .-chThdYield
+ 410              		.section	.text.chThdExitS,"ax",%progbits
+ 411              		.align	2
+ 412              		.p2align 4,,15
+ 413              		.global	chThdExitS
+ 414              		.thumb
+ 415              		.thumb_func
+ 416              		.type	chThdExitS, %function
+ 417              	chThdExitS:
+ 418              		@ args = 0, pretend = 0, frame = 0
+ 419              		@ frame_needed = 0, uses_anonymous_args = 0
+ 420 0000 38B5     		push	{r3, r4, r5, lr}
+ 421 0002 104B     		ldr	r3, .L51
+ 422 0004 9C69     		ldr	r4, [r3, #24]
+ 423 0006 2546     		mov	r5, r4
+ 424 0008 55F82C3F 		ldr	r3, [r5, #44]!
+ 425 000c A062     		str	r0, [r4, #40]
+ 426 000e AB42     		cmp	r3, r5
+ 427 0010 07D0     		beq	.L49
+ 428              	.L50:
+ 429 0012 1A68     		ldr	r2, [r3]
+ 430 0014 1846     		mov	r0, r3
+ 431 0016 E262     		str	r2, [r4, #44]
+ 432 0018 FFF7FEFF 		bl	chSchReadyI
+ 433 001c E36A     		ldr	r3, [r4, #44]
+ 434 001e AB42     		cmp	r3, r5
+ 435 0020 F7D1     		bne	.L50
+ 436              	.L49:
+ 437 0022 94F82130 		ldrb	r3, [r4, #33]	@ zero_extendqisi2
+ 438 0026 9B07     		lsls	r3, r3, #30
+ 439 0028 04D1     		bne	.L48
+ 440 002a 2269     		ldr	r2, [r4, #16]
+ 441 002c 6369     		ldr	r3, [r4, #20]
+ 442 002e 1A61     		str	r2, [r3, #16]
+ 443 0030 2269     		ldr	r2, [r4, #16]
+ 444 0032 5361     		str	r3, [r2, #20]
+ 445              	.L48:
+ 446 0034 0E20     		movs	r0, #14
+ 447 0036 FFF7FEFF 		bl	chSchGoSleepS
+ 448 003a BDE83840 		pop	{r3, r4, r5, lr}
+ 449 003e 0248     		ldr	r0, .L51+4
+ARM GAS  /tmp/ccOP6szW.s 			page 9
+
+
+ 450 0040 FFF7FEBF 		b	chDbgPanic
+ 451              	.L52:
+ 452              		.align	2
+ 453              	.L51:
+ 454 0044 00000000 		.word	rlist
+ 455 0048 50000000 		.word	.LC4
+ 456              		.size	chThdExitS, .-chThdExitS
+ 457 004c AFF30080 		.section	.text.chThdExit,"ax",%progbits
+ 458              		.align	2
+ 459              		.p2align 4,,15
+ 460              		.global	chThdExit
+ 461              		.thumb
+ 462              		.thumb_func
+ 463              		.type	chThdExit, %function
+ 464              	chThdExit:
+ 465              		@ args = 0, pretend = 0, frame = 0
+ 466              		@ frame_needed = 0, uses_anonymous_args = 0
+ 467 0000 10B5     		push	{r4, lr}
+ 468 0002 2023     		movs	r3, #32
+ 469 0004 0446     		mov	r4, r0
+ 470              	@ 347 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 471 0006 83F31188 		msr     BASEPRI, r3
+ 472              	@ 0 "" 2
+ 473              		.thumb
+ 474 000a FFF7FEFF 		bl	dbg_check_lock
+ 475 000e 2046     		mov	r0, r4
+ 476 0010 BDE81040 		pop	{r4, lr}
+ 477 0014 FFF7FEBF 		b	chThdExitS
+ 478              		.size	chThdExit, .-chThdExit
+ 479 0018 AFF30080 		.section	.text.chThdWait,"ax",%progbits
+ 479      AFF30080 
+ 480              		.align	2
+ 481              		.p2align 4,,15
+ 482              		.global	chThdWait
+ 483              		.thumb
+ 484              		.thumb_func
+ 485              		.type	chThdWait, %function
+ 486              	chThdWait:
+ 487              		@ args = 0, pretend = 0, frame = 0
+ 488              		@ frame_needed = 0, uses_anonymous_args = 0
+ 489 0000 38B5     		push	{r3, r4, r5, lr}
+ 490 0002 0446     		mov	r4, r0
+ 491 0004 48B3     		cbz	r0, .L62
+ 492              	.L55:
+ 493 0006 2023     		movs	r3, #32
+ 494              	@ 425 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 495 0008 83F31188 		msr     BASEPRI, r3
+ 496              	@ 0 "" 2
+ 497              		.thumb
+ 498 000c 154D     		ldr	r5, .L65
+ 499 000e FFF7FEFF 		bl	dbg_check_lock
+ 500 0012 AB69     		ldr	r3, [r5, #24]
+ 501 0014 A342     		cmp	r3, r4
+ 502 0016 1CD0     		beq	.L63
+ 503              	.L56:
+ 504 0018 94F82230 		ldrb	r3, [r4, #34]	@ zero_extendqisi2
+ 505 001c ABB1     		cbz	r3, .L64
+ARM GAS  /tmp/ccOP6szW.s 			page 10
+
+
+ 506              	.L57:
+ 507 001e 94F82030 		ldrb	r3, [r4, #32]	@ zero_extendqisi2
+ 508 0022 0E2B     		cmp	r3, #14
+ 509 0024 06D0     		beq	.L58
+ 510 0026 AB69     		ldr	r3, [r5, #24]
+ 511 0028 E26A     		ldr	r2, [r4, #44]
+ 512 002a 0720     		movs	r0, #7
+ 513 002c 1A60     		str	r2, [r3]
+ 514 002e E362     		str	r3, [r4, #44]
+ 515 0030 FFF7FEFF 		bl	chSchGoSleepS
+ 516              	.L58:
+ 517 0034 A56A     		ldr	r5, [r4, #40]
+ 518 0036 FFF7FEFF 		bl	dbg_check_unlock
+ 519 003a 0023     		movs	r3, #0
+ 520              	@ 435 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
+ 521 003c 83F31188 		msr     BASEPRI, r3
+ 522              	@ 0 "" 2
+ 523              		.thumb
+ 524 0040 2046     		mov	r0, r4
+ 525 0042 FFF7FEFF 		bl	chThdRelease
+ 526 0046 2846     		mov	r0, r5
+ 527 0048 38BD     		pop	{r3, r4, r5, pc}
+ 528              	.L64:
+ 529 004a 0748     		ldr	r0, .L65+4
+ 530 004c FFF7FEFF 		bl	chDbgPanic
+ 531 0050 E5E7     		b	.L57
+ 532              	.L63:
+ 533 0052 0648     		ldr	r0, .L65+8
+ 534 0054 FFF7FEFF 		bl	chDbgPanic
+ 535 0058 DEE7     		b	.L56
+ 536              	.L62:
+ 537 005a 0548     		ldr	r0, .L65+12
+ 538 005c FFF7FEFF 		bl	chDbgPanic
+ 539 0060 D1E7     		b	.L55
+ 540              	.L66:
+ 541 0062 00BF     		.align	2
+ 542              	.L65:
+ 543 0064 00000000 		.word	rlist
+ 544 0068 84000000 		.word	.LC7
+ 545 006c 74000000 		.word	.LC6
+ 546 0070 64000000 		.word	.LC5
+ 547              		.size	chThdWait, .-chThdWait
+ 548 0074 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 548      AFF30080 
+ 548      AFF30080 
+ 549              		.align	2
+ 550              	.LC0:
+ 551 0000 22636854 		.ascii	"\"chThdCreateI\"()\000"
+ 551      68644372 
+ 551      65617465 
+ 551      49222829 
+ 551      00
+ 552 0011 000000   		.space	3
+ 553              	.LC1:
+ 554 0014 22636854 		.ascii	"\"chThdSetPriority\"()\000"
+ 554      68645365 
+ 554      74507269 
+ARM GAS  /tmp/ccOP6szW.s 			page 11
+
+
+ 554      6F726974 
+ 554      79222829 
+ 555 0029 000000   		.space	3
+ 556              	.LC2:
+ 557 002c 63685468 		.ascii	"chThdResume(), #1\000"
+ 557      64526573 
+ 557      756D6528 
+ 557      292C2023 
+ 557      3100
+ 558 003e 0000     		.space	2
+ 559              	.LC3:
+ 560 0040 22636854 		.ascii	"\"chThdSleep\"()\000"
+ 560      6864536C 
+ 560      65657022 
+ 560      282900
+ 561 004f 00       		.space	1
+ 562              	.LC4:
+ 563 0050 63685468 		.ascii	"chThdExitS(), #1\000"
+ 563      64457869 
+ 563      74532829 
+ 563      2C202331 
+ 563      00
+ 564 0061 000000   		.space	3
+ 565              	.LC5:
+ 566 0064 22636854 		.ascii	"\"chThdWait\"()\000"
+ 566      68645761 
+ 566      69742228 
+ 566      2900
+ 567 0072 0000     		.space	2
+ 568              	.LC6:
+ 569 0074 63685468 		.ascii	"chThdWait(), #1\000"
+ 569      64576169 
+ 569      7428292C 
+ 569      20233100 
+ 570              	.LC7:
+ 571 0084 63685468 		.ascii	"chThdWait(), #2\000"
+ 571      64576169 
+ 571      7428292C 
+ 571      20233200 
+ 572              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccOP6szW.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chthreads.c
+     /tmp/ccOP6szW.s:16     .text._thread_init:00000000 $t
+     /tmp/ccOP6szW.s:22     .text._thread_init:00000000 _thread_init
+     /tmp/ccOP6szW.s:59     .text._thread_init:00000058 $d
+     /tmp/ccOP6szW.s:62     .text.chThdCreateI:00000000 $t
+     /tmp/ccOP6szW.s:68     .text.chThdCreateI:00000000 chThdCreateI
+     /tmp/ccOP6szW.s:130    .text.chThdCreateI:00000090 $d
+     /tmp/ccOP6szW.s:135    .text.chThdCreateStatic:00000000 $t
+     /tmp/ccOP6szW.s:141    .text.chThdCreateStatic:00000000 chThdCreateStatic
+     /tmp/ccOP6szW.s:178    .text.chThdSetPriority:00000000 $t
+     /tmp/ccOP6szW.s:184    .text.chThdSetPriority:00000000 chThdSetPriority
+     /tmp/ccOP6szW.s:226    .text.chThdSetPriority:00000040 $d
+     /tmp/ccOP6szW.s:230    .text.chThdResume:00000000 $t
+     /tmp/ccOP6szW.s:236    .text.chThdResume:00000000 chThdResume
+     /tmp/ccOP6szW.s:267    .text.chThdResume:00000034 $d
+     /tmp/ccOP6szW.s:270    .text.chThdTerminate:00000000 $t
+     /tmp/ccOP6szW.s:276    .text.chThdTerminate:00000000 chThdTerminate
+     /tmp/ccOP6szW.s:299    .text.chThdSleep:00000000 $t
+     /tmp/ccOP6szW.s:305    .text.chThdSleep:00000000 chThdSleep
+     /tmp/ccOP6szW.s:333    .text.chThdSleep:0000002c $d
+     /tmp/ccOP6szW.s:336    .text.chThdSleepUntil:00000000 $t
+     /tmp/ccOP6szW.s:342    .text.chThdSleepUntil:00000000 chThdSleepUntil
+     /tmp/ccOP6szW.s:370    .text.chThdSleepUntil:00000028 $d
+     /tmp/ccOP6szW.s:373    .text.chThdYield:00000000 $t
+     /tmp/ccOP6szW.s:379    .text.chThdYield:00000000 chThdYield
+     /tmp/ccOP6szW.s:408    .text.chThdYield:0000002c $d
+     /tmp/ccOP6szW.s:411    .text.chThdExitS:00000000 $t
+     /tmp/ccOP6szW.s:417    .text.chThdExitS:00000000 chThdExitS
+     /tmp/ccOP6szW.s:454    .text.chThdExitS:00000044 $d
+     /tmp/ccOP6szW.s:458    .text.chThdExit:00000000 $t
+     /tmp/ccOP6szW.s:464    .text.chThdExit:00000000 chThdExit
+     /tmp/ccOP6szW.s:480    .text.chThdWait:00000000 $t
+     /tmp/ccOP6szW.s:486    .text.chThdWait:00000000 chThdWait
+     /tmp/ccOP6szW.s:543    .text.chThdWait:00000064 $d
+     /tmp/ccOP6szW.s:549    .rodata.str1.4:00000000 $d
+     /tmp/ccOP6szW.s:572    .text._thread_init:0000005c $t
+     /tmp/ccOP6szW.s:134    .text.chThdCreateI:0000009c $t
+     /tmp/ccOP6szW.s:229    .text.chThdSetPriority:00000048 $t
+     /tmp/ccOP6szW.s:269    .text.chThdResume:00000038 $t
+     /tmp/ccOP6szW.s:372    .text.chThdSleepUntil:0000002c $t
+     /tmp/ccOP6szW.s:457    .text.chThdExitS:0000004c $t
+     /tmp/ccOP6szW.s:548    .text.chThdWait:00000074 $t
+
+UNDEFINED SYMBOLS
+rlist
+chDbgCheckClassI
+chDbgPanic
+_port_thread_start
+dbg_check_lock
+chSchWakeupS
+dbg_check_unlock
+chSchRescheduleS
+chSchGoSleepTimeoutS
+vtlist
+chSchDoRescheduleBehind
+chSchReadyI
+ARM GAS  /tmp/ccOP6szW.s 			page 13
+
+
+chSchGoSleepS
+chThdRelease

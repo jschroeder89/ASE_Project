@@ -1,0 +1,6 @@
+pwm_lld.c:197:1:VectorB0	16	static
+pwm_lld.c:345:6:pwm_lld_init	8	static
+pwm_lld.c:399:6:pwm_lld_start	16	static
+pwm_lld.c:603:6:pwm_lld_stop	8	static
+pwm_lld.c:673:6:pwm_lld_enable_channel	4	static
+pwm_lld.c:703:6:pwm_lld_disable_channel	0	static

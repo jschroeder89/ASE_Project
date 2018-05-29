@@ -1,0 +1,3 @@
+chmsg.c:75:7:chMsgSend	16	static
+chmsg.c:106:9:chMsgWait	16	static
+chmsg.c:128:6:chMsgRelease	16	static

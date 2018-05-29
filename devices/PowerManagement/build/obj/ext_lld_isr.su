@@ -1,0 +1,16 @@
+ext_lld_isr.c:57:1:Vector58	8	static
+ext_lld_isr.c:72:1:Vector5C	8	static
+ext_lld_isr.c:87:1:Vector60	8	static
+ext_lld_isr.c:102:1:Vector64	8	static
+ext_lld_isr.c:117:1:Vector68	8	static
+ext_lld_isr.c:132:1:Vector9C	8	static
+ext_lld_isr.c:158:1:VectorE0	8	static
+ext_lld_isr.c:187:1:Vector44	8	static
+ext_lld_isr.c:202:1:VectorE4	8	static
+ext_lld_isr.c:217:1:VectorE8	8	static
+ext_lld_isr.c:233:1:Vector138	8	static
+ext_lld_isr.c:248:1:Vector170	8	static
+ext_lld_isr.c:263:1:TAMPER_STAMP_IRQHandler	8	static
+ext_lld_isr.c:279:1:Vector4C	8	static
+ext_lld_isr.c:298:6:ext_lld_exti_irq_enable	8	static
+ext_lld_isr.c:337:6:ext_lld_exti_irq_disable	8	static

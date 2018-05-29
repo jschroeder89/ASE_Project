@@ -1,0 +1,3138 @@
+ARM GAS  /tmp/cc4xRmdX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"ch.cpp"
+  15              		.section	.text.startup._ZN10chibios_rt10BaseThread4mainEv,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN10chibios_rt10BaseThread4mainEv
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN10chibios_rt10BaseThread4mainEv, %function
+  22              	_ZN10chibios_rt10BaseThread4mainEv:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 0020     		movs	r0, #0
+  27 0002 7047     		bx	lr
+  28              		.size	_ZN10chibios_rt10BaseThread4mainEv, .-_ZN10chibios_rt10BaseThread4mainEv
+  29 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread5startEm,"ax",%progbits
+  29      AFF30080 
+  29      AFF30080 
+  30              		.align	2
+  31              		.p2align 4,,15
+  32              		.global	_ZN10chibios_rt10BaseThread5startEm
+  33              		.thumb
+  34              		.thumb_func
+  35              		.type	_ZN10chibios_rt10BaseThread5startEm, %function
+  36              	_ZN10chibios_rt10BaseThread5startEm:
+  37              		@ args = 0, pretend = 0, frame = 0
+  38              		@ frame_needed = 0, uses_anonymous_args = 0
+  39              		@ link register save eliminated.
+  40 0000 4968     		ldr	r1, [r1, #4]
+  41 0002 024A     		ldr	r2, .L3
+  42 0004 4160     		str	r1, [r0, #4]
+  43 0006 0260     		str	r2, [r0]
+  44 0008 7047     		bx	lr
+  45              	.L4:
+  46 000a 00BF     		.align	2
+  47              	.L3:
+  48 000c 08000000 		.word	.LANCHOR0+8
+  49              		.size	_ZN10chibios_rt10BaseThread5startEm, .-_ZN10chibios_rt10BaseThread5startEm
+  50              		.section	.text._ZN10chibios_rt15ThreadReference4stopEv,"ax",%progbits
+  51              		.align	2
+  52              		.p2align 4,,15
+  53              		.global	_ZN10chibios_rt15ThreadReference4stopEv
+  54              		.thumb
+  55              		.thumb_func
+ARM GAS  /tmp/cc4xRmdX.s 			page 2
+
+
+  56              		.type	_ZN10chibios_rt15ThreadReference4stopEv, %function
+  57              	_ZN10chibios_rt15ThreadReference4stopEv:
+  58              		@ args = 0, pretend = 0, frame = 0
+  59              		@ frame_needed = 0, uses_anonymous_args = 0
+  60              		@ link register save eliminated.
+  61 0000 0148     		ldr	r0, .L6
+  62 0002 FFF7FEBF 		b	chDbgPanic
+  63              	.L7:
+  64 0006 00BF     		.align	2
+  65              	.L6:
+  66 0008 00000000 		.word	.LC0
+  67              		.size	_ZN10chibios_rt15ThreadReference4stopEv, .-_ZN10chibios_rt15ThreadReference4stopEv
+  68 000c AFF30080 		.section	.text._ZN10chibios_rt6System4initEv,"ax",%progbits
+  69              		.align	2
+  70              		.p2align 4,,15
+  71              		.global	_ZN10chibios_rt6System4initEv
+  72              		.thumb
+  73              		.thumb_func
+  74              		.type	_ZN10chibios_rt6System4initEv, %function
+  75              	_ZN10chibios_rt6System4initEv:
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78              		@ link register save eliminated.
+  79 0000 FFF7FEBF 		b	chSysInit
+  80              		.size	_ZN10chibios_rt6System4initEv, .-_ZN10chibios_rt6System4initEv
+  81 0004 AFF30080 		.section	.text._ZN10chibios_rt6System4lockEv,"ax",%progbits
+  81      AFF30080 
+  81      AFF30080 
+  82              		.align	2
+  83              		.p2align 4,,15
+  84              		.global	_ZN10chibios_rt6System4lockEv
+  85              		.thumb
+  86              		.thumb_func
+  87              		.type	_ZN10chibios_rt6System4lockEv, %function
+  88              	_ZN10chibios_rt6System4lockEv:
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		@ link register save eliminated.
+  92 0000 2023     		movs	r3, #32
+  93              	@ 38 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+  94 0002 83F31188 		msr     BASEPRI, r3
+  95              	@ 0 "" 2
+  96              		.thumb
+  97 0006 FFF7FEBF 		b	dbg_check_lock
+  98              		.size	_ZN10chibios_rt6System4lockEv, .-_ZN10chibios_rt6System4lockEv
+  99 000a 00BFAFF3 		.section	.text._ZN10chibios_rt6System6unlockEv,"ax",%progbits
+  99      0080
+ 100              		.align	2
+ 101              		.p2align 4,,15
+ 102              		.global	_ZN10chibios_rt6System6unlockEv
+ 103              		.thumb
+ 104              		.thumb_func
+ 105              		.type	_ZN10chibios_rt6System6unlockEv, %function
+ 106              	_ZN10chibios_rt6System6unlockEv:
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109 0000 08B5     		push	{r3, lr}
+ARM GAS  /tmp/cc4xRmdX.s 			page 3
+
+
+ 110 0002 FFF7FEFF 		bl	dbg_check_unlock
+ 111 0006 0023     		movs	r3, #0
+ 112              	@ 43 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+ 113 0008 83F31188 		msr     BASEPRI, r3
+ 114              	@ 0 "" 2
+ 115              		.thumb
+ 116 000c 08BD     		pop	{r3, pc}
+ 117              		.size	_ZN10chibios_rt6System6unlockEv, .-_ZN10chibios_rt6System6unlockEv
+ 118 000e 00BF     		.section	.text._ZN10chibios_rt6System11lockFromIsrEv,"ax",%progbits
+ 119              		.align	2
+ 120              		.p2align 4,,15
+ 121              		.global	_ZN10chibios_rt6System11lockFromIsrEv
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.type	_ZN10chibios_rt6System11lockFromIsrEv, %function
+ 125              	_ZN10chibios_rt6System11lockFromIsrEv:
+ 126              		@ args = 0, pretend = 0, frame = 0
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+ 128              		@ link register save eliminated.
+ 129 0000 2023     		movs	r3, #32
+ 130              	@ 48 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+ 131 0002 83F31188 		msr     BASEPRI, r3
+ 132              	@ 0 "" 2
+ 133              		.thumb
+ 134 0006 FFF7FEBF 		b	dbg_check_lock_from_isr
+ 135              		.size	_ZN10chibios_rt6System11lockFromIsrEv, .-_ZN10chibios_rt6System11lockFromIsrEv
+ 136 000a 00BFAFF3 		.section	.text._ZN10chibios_rt6System13unlockFromIsrEv,"ax",%progbits
+ 136      0080
+ 137              		.align	2
+ 138              		.p2align 4,,15
+ 139              		.global	_ZN10chibios_rt6System13unlockFromIsrEv
+ 140              		.thumb
+ 141              		.thumb_func
+ 142              		.type	_ZN10chibios_rt6System13unlockFromIsrEv, %function
+ 143              	_ZN10chibios_rt6System13unlockFromIsrEv:
+ 144              		@ args = 0, pretend = 0, frame = 0
+ 145              		@ frame_needed = 0, uses_anonymous_args = 0
+ 146 0000 08B5     		push	{r3, lr}
+ 147 0002 FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 148 0006 0023     		movs	r3, #0
+ 149              	@ 53 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+ 150 0008 83F31188 		msr     BASEPRI, r3
+ 151              	@ 0 "" 2
+ 152              		.thumb
+ 153 000c 08BD     		pop	{r3, pc}
+ 154              		.size	_ZN10chibios_rt6System13unlockFromIsrEv, .-_ZN10chibios_rt6System13unlockFromIsrEv
+ 155 000e 00BF     		.section	.text._ZN10chibios_rt6System7getTimeEv,"ax",%progbits
+ 156              		.align	2
+ 157              		.p2align 4,,15
+ 158              		.global	_ZN10chibios_rt6System7getTimeEv
+ 159              		.thumb
+ 160              		.thumb_func
+ 161              		.type	_ZN10chibios_rt6System7getTimeEv, %function
+ 162              	_ZN10chibios_rt6System7getTimeEv:
+ 163              		@ args = 0, pretend = 0, frame = 0
+ 164              		@ frame_needed = 0, uses_anonymous_args = 0
+ 165              		@ link register save eliminated.
+ARM GAS  /tmp/cc4xRmdX.s 			page 4
+
+
+ 166 0000 014B     		ldr	r3, .L14
+ 167 0002 D868     		ldr	r0, [r3, #12]
+ 168 0004 7047     		bx	lr
+ 169              	.L15:
+ 170 0006 00BF     		.align	2
+ 171              	.L14:
+ 172 0008 00000000 		.word	vtlist
+ 173              		.size	_ZN10chibios_rt6System7getTimeEv, .-_ZN10chibios_rt6System7getTimeEv
+ 174 000c AFF30080 		.section	.text._ZN10chibios_rt6System12isTimeWithinEmm,"ax",%progbits
+ 175              		.align	2
+ 176              		.p2align 4,,15
+ 177              		.global	_ZN10chibios_rt6System12isTimeWithinEmm
+ 178              		.thumb
+ 179              		.thumb_func
+ 180              		.type	_ZN10chibios_rt6System12isTimeWithinEmm, %function
+ 181              	_ZN10chibios_rt6System12isTimeWithinEmm:
+ 182              		@ args = 0, pretend = 0, frame = 0
+ 183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 184              		@ link register save eliminated.
+ 185 0000 044B     		ldr	r3, .L17
+ 186 0002 091A     		subs	r1, r1, r0
+ 187 0004 DB68     		ldr	r3, [r3, #12]
+ 188 0006 181A     		subs	r0, r3, r0
+ 189 0008 8842     		cmp	r0, r1
+ 190 000a 2CBF     		ite	cs
+ 191 000c 0020     		movcs	r0, #0
+ 192 000e 0120     		movcc	r0, #1
+ 193 0010 7047     		bx	lr
+ 194              	.L18:
+ 195 0012 00BF     		.align	2
+ 196              	.L17:
+ 197 0014 00000000 		.word	vtlist
+ 198              		.size	_ZN10chibios_rt6System12isTimeWithinEmm, .-_ZN10chibios_rt6System12isTimeWithinEmm
+ 199 0018 AFF30080 		.section	.text._ZN10chibios_rt4Core5allocEj,"ax",%progbits
+ 199      AFF30080 
+ 200              		.align	2
+ 201              		.p2align 4,,15
+ 202              		.global	_ZN10chibios_rt4Core5allocEj
+ 203              		.thumb
+ 204              		.thumb_func
+ 205              		.type	_ZN10chibios_rt4Core5allocEj, %function
+ 206              	_ZN10chibios_rt4Core5allocEj:
+ 207              		@ args = 0, pretend = 0, frame = 0
+ 208              		@ frame_needed = 0, uses_anonymous_args = 0
+ 209              		@ link register save eliminated.
+ 210 0000 FFF7FEBF 		b	chCoreAlloc
+ 211              		.size	_ZN10chibios_rt4Core5allocEj, .-_ZN10chibios_rt4Core5allocEj
+ 212 0004 AFF30080 		.section	.text._ZN10chibios_rt4Core6allocIEj,"ax",%progbits
+ 212      AFF30080 
+ 212      AFF30080 
+ 213              		.align	2
+ 214              		.p2align 4,,15
+ 215              		.global	_ZN10chibios_rt4Core6allocIEj
+ 216              		.thumb
+ 217              		.thumb_func
+ 218              		.type	_ZN10chibios_rt4Core6allocIEj, %function
+ 219              	_ZN10chibios_rt4Core6allocIEj:
+ARM GAS  /tmp/cc4xRmdX.s 			page 5
+
+
+ 220              		@ args = 0, pretend = 0, frame = 0
+ 221              		@ frame_needed = 0, uses_anonymous_args = 0
+ 222              		@ link register save eliminated.
+ 223 0000 FFF7FEBF 		b	chCoreAllocI
+ 224              		.size	_ZN10chibios_rt4Core6allocIEj, .-_ZN10chibios_rt4Core6allocIEj
+ 225 0004 AFF30080 		.section	.text._ZN10chibios_rt4Core9getStatusEv,"ax",%progbits
+ 225      AFF30080 
+ 225      AFF30080 
+ 226              		.align	2
+ 227              		.p2align 4,,15
+ 228              		.global	_ZN10chibios_rt4Core9getStatusEv
+ 229              		.thumb
+ 230              		.thumb_func
+ 231              		.type	_ZN10chibios_rt4Core9getStatusEv, %function
+ 232              	_ZN10chibios_rt4Core9getStatusEv:
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+ 235              		@ link register save eliminated.
+ 236 0000 FFF7FEBF 		b	chCoreStatus
+ 237              		.size	_ZN10chibios_rt4Core9getStatusEv, .-_ZN10chibios_rt4Core9getStatusEv
+ 238 0004 AFF30080 		.section	.text._ZN10chibios_rt5Timer4setIEmPFvPvES1_,"ax",%progbits
+ 238      AFF30080 
+ 238      AFF30080 
+ 239              		.align	2
+ 240              		.p2align 4,,15
+ 241              		.global	_ZN10chibios_rt5Timer4setIEmPFvPvES1_
+ 242              		.thumb
+ 243              		.thumb_func
+ 244              		.type	_ZN10chibios_rt5Timer4setIEmPFvPvES1_, %function
+ 245              	_ZN10chibios_rt5Timer4setIEmPFvPvES1_:
+ 246              		@ args = 0, pretend = 0, frame = 0
+ 247              		@ frame_needed = 0, uses_anonymous_args = 0
+ 248              		@ link register save eliminated.
+ 249 0000 FFF7FEBF 		b	chVTSetI
+ 250              		.size	_ZN10chibios_rt5Timer4setIEmPFvPvES1_, .-_ZN10chibios_rt5Timer4setIEmPFvPvES1_
+ 251 0004 AFF30080 		.section	.text._ZN10chibios_rt5Timer6resetIEv,"ax",%progbits
+ 251      AFF30080 
+ 251      AFF30080 
+ 252              		.align	2
+ 253              		.p2align 4,,15
+ 254              		.global	_ZN10chibios_rt5Timer6resetIEv
+ 255              		.thumb
+ 256              		.thumb_func
+ 257              		.type	_ZN10chibios_rt5Timer6resetIEv, %function
+ 258              	_ZN10chibios_rt5Timer6resetIEv:
+ 259              		@ args = 0, pretend = 0, frame = 0
+ 260              		@ frame_needed = 0, uses_anonymous_args = 0
+ 261              		@ link register save eliminated.
+ 262 0000 C368     		ldr	r3, [r0, #12]
+ 263 0002 0BB1     		cbz	r3, .L23
+ 264 0004 FFF7FEBF 		b	chVTResetI
+ 265              	.L23:
+ 266 0008 7047     		bx	lr
+ 267              		.size	_ZN10chibios_rt5Timer6resetIEv, .-_ZN10chibios_rt5Timer6resetIEv
+ 268 000a 00BFAFF3 		.section	.text._ZN10chibios_rt5Timer8isArmedIEv,"ax",%progbits
+ 268      0080
+ 269              		.align	2
+ARM GAS  /tmp/cc4xRmdX.s 			page 6
+
+
+ 270              		.p2align 4,,15
+ 271              		.global	_ZN10chibios_rt5Timer8isArmedIEv
+ 272              		.thumb
+ 273              		.thumb_func
+ 274              		.type	_ZN10chibios_rt5Timer8isArmedIEv, %function
+ 275              	_ZN10chibios_rt5Timer8isArmedIEv:
+ 276              		@ args = 0, pretend = 0, frame = 0
+ 277              		@ frame_needed = 0, uses_anonymous_args = 0
+ 278              		@ link register save eliminated.
+ 279 0000 C068     		ldr	r0, [r0, #12]
+ 280 0002 0030     		adds	r0, r0, #0
+ 281 0004 18BF     		it	ne
+ 282 0006 0120     		movne	r0, #1
+ 283 0008 7047     		bx	lr
+ 284              		.size	_ZN10chibios_rt5Timer8isArmedIEv, .-_ZN10chibios_rt5Timer8isArmedIEv
+ 285 000a 00BFAFF3 		.section	.text._ZN10chibios_rt15ThreadReference7suspendEv,"ax",%progbits
+ 285      0080
+ 286              		.align	2
+ 287              		.p2align 4,,15
+ 288              		.global	_ZN10chibios_rt15ThreadReference7suspendEv
+ 289              		.thumb
+ 290              		.thumb_func
+ 291              		.type	_ZN10chibios_rt15ThreadReference7suspendEv, %function
+ 292              	_ZN10chibios_rt15ThreadReference7suspendEv:
+ 293              		@ args = 0, pretend = 0, frame = 0
+ 294              		@ frame_needed = 0, uses_anonymous_args = 0
+ 295 0000 10B5     		push	{r4, lr}
+ 296 0002 2023     		movs	r3, #32
+ 297 0004 0446     		mov	r4, r0
+ 298              	@ 115 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+ 299 0006 83F31188 		msr     BASEPRI, r3
+ 300              	@ 0 "" 2
+ 301              		.thumb
+ 302 000a FFF7FEFF 		bl	dbg_check_lock
+ 303 000e 6368     		ldr	r3, [r4, #4]
+ 304 0010 73B1     		cbz	r3, .L29
+ 305              	.L28:
+ 306 0012 094B     		ldr	r3, .L30
+ 307 0014 0220     		movs	r0, #2
+ 308 0016 9B69     		ldr	r3, [r3, #24]
+ 309 0018 6360     		str	r3, [r4, #4]
+ 310 001a FFF7FEFF 		bl	chSchGoSleepS
+ 311 001e 6368     		ldr	r3, [r4, #4]
+ 312 0020 9C6A     		ldr	r4, [r3, #40]
+ 313 0022 FFF7FEFF 		bl	dbg_check_unlock
+ 314 0026 0023     		movs	r3, #0
+ 315              	@ 125 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+ 316 0028 83F31188 		msr     BASEPRI, r3
+ 317              	@ 0 "" 2
+ 318              		.thumb
+ 319 002c 2046     		mov	r0, r4
+ 320 002e 10BD     		pop	{r4, pc}
+ 321              	.L29:
+ 322 0030 0248     		ldr	r0, .L30+4
+ 323 0032 FFF7FEFF 		bl	chDbgPanic
+ 324 0036 ECE7     		b	.L28
+ 325              	.L31:
+ARM GAS  /tmp/cc4xRmdX.s 			page 7
+
+
+ 326              		.align	2
+ 327              	.L30:
+ 328 0038 00000000 		.word	rlist
+ 329 003c 24000000 		.word	.LC1
+ 330              		.size	_ZN10chibios_rt15ThreadReference7suspendEv, .-_ZN10chibios_rt15ThreadReference7suspendEv
+ 331              		.section	.text._ZN10chibios_rt15ThreadReference8suspendSEv,"ax",%progbits
+ 332              		.align	2
+ 333              		.p2align 4,,15
+ 334              		.global	_ZN10chibios_rt15ThreadReference8suspendSEv
+ 335              		.thumb
+ 336              		.thumb_func
+ 337              		.type	_ZN10chibios_rt15ThreadReference8suspendSEv, %function
+ 338              	_ZN10chibios_rt15ThreadReference8suspendSEv:
+ 339              		@ args = 0, pretend = 0, frame = 0
+ 340              		@ frame_needed = 0, uses_anonymous_args = 0
+ 341 0000 4368     		ldr	r3, [r0, #4]
+ 342 0002 10B5     		push	{r4, lr}
+ 343 0004 0446     		mov	r4, r0
+ 344 0006 13B1     		cbz	r3, .L33
+ 345 0008 0548     		ldr	r0, .L37
+ 346 000a FFF7FEFF 		bl	chDbgPanic
+ 347              	.L33:
+ 348 000e 054B     		ldr	r3, .L37+4
+ 349 0010 0220     		movs	r0, #2
+ 350 0012 9B69     		ldr	r3, [r3, #24]
+ 351 0014 6360     		str	r3, [r4, #4]
+ 352 0016 FFF7FEFF 		bl	chSchGoSleepS
+ 353 001a 6368     		ldr	r3, [r4, #4]
+ 354 001c 986A     		ldr	r0, [r3, #40]
+ 355 001e 10BD     		pop	{r4, pc}
+ 356              	.L38:
+ 357              		.align	2
+ 358              	.L37:
+ 359 0020 38000000 		.word	.LC2
+ 360 0024 00000000 		.word	rlist
+ 361              		.size	_ZN10chibios_rt15ThreadReference8suspendSEv, .-_ZN10chibios_rt15ThreadReference8suspendSEv
+ 362 0028 AFF30080 		.section	.text._ZN10chibios_rt15ThreadReference6resumeEl,"ax",%progbits
+ 362      AFF30080 
+ 363              		.align	2
+ 364              		.p2align 4,,15
+ 365              		.global	_ZN10chibios_rt15ThreadReference6resumeEl
+ 366              		.thumb
+ 367              		.thumb_func
+ 368              		.type	_ZN10chibios_rt15ThreadReference6resumeEl, %function
+ 369              	_ZN10chibios_rt15ThreadReference6resumeEl:
+ 370              		@ args = 0, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372 0000 38B5     		push	{r3, r4, r5, lr}
+ 373 0002 0446     		mov	r4, r0
+ 374 0004 0D46     		mov	r5, r1
+ 375 0006 2023     		movs	r3, #32
+ 376              	@ 142 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+ 377 0008 83F31188 		msr     BASEPRI, r3
+ 378              	@ 0 "" 2
+ 379              		.thumb
+ 380 000c FFF7FEFF 		bl	dbg_check_lock
+ 381 0010 6068     		ldr	r0, [r4, #4]
+ARM GAS  /tmp/cc4xRmdX.s 			page 8
+
+
+ 382 0012 50B1     		cbz	r0, .L45
+ 383              	.L40:
+ 384 0014 0022     		movs	r2, #0
+ 385 0016 2946     		mov	r1, r5
+ 386 0018 6260     		str	r2, [r4, #4]
+ 387 001a FFF7FEFF 		bl	chSchWakeupS
+ 388              	.L41:
+ 389 001e FFF7FEFF 		bl	dbg_check_unlock
+ 390 0022 0023     		movs	r3, #0
+ 391              	@ 154 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+ 392 0024 83F31188 		msr     BASEPRI, r3
+ 393              	@ 0 "" 2
+ 394              		.thumb
+ 395 0028 38BD     		pop	{r3, r4, r5, pc}
+ 396              	.L45:
+ 397 002a 0348     		ldr	r0, .L46
+ 398 002c FFF7FEFF 		bl	chDbgPanic
+ 399 0030 6068     		ldr	r0, [r4, #4]
+ 400 0032 0028     		cmp	r0, #0
+ 401 0034 F3D0     		beq	.L41
+ 402 0036 EDE7     		b	.L40
+ 403              	.L47:
+ 404              		.align	2
+ 405              	.L46:
+ 406 0038 4C000000 		.word	.LC3
+ 407              		.size	_ZN10chibios_rt15ThreadReference6resumeEl, .-_ZN10chibios_rt15ThreadReference6resumeEl
+ 408 003c AFF30080 		.section	.text._ZN10chibios_rt15ThreadReference7resumeIEl,"ax",%progbits
+ 409              		.align	2
+ 410              		.p2align 4,,15
+ 411              		.global	_ZN10chibios_rt15ThreadReference7resumeIEl
+ 412              		.thumb
+ 413              		.thumb_func
+ 414              		.type	_ZN10chibios_rt15ThreadReference7resumeIEl, %function
+ 415              	_ZN10chibios_rt15ThreadReference7resumeIEl:
+ 416              		@ args = 0, pretend = 0, frame = 8
+ 417              		@ frame_needed = 0, uses_anonymous_args = 0
+ 418 0000 10B5     		push	{r4, lr}
+ 419 0002 4368     		ldr	r3, [r0, #4]
+ 420 0004 82B0     		sub	sp, sp, #8
+ 421 0006 0446     		mov	r4, r0
+ 422 0008 43B1     		cbz	r3, .L51
+ 423              	.L49:
+ 424 000a 0022     		movs	r2, #0
+ 425 000c 1846     		mov	r0, r3
+ 426 000e 6260     		str	r2, [r4, #4]
+ 427 0010 9963     		str	r1, [r3, #56]
+ 428 0012 02B0     		add	sp, sp, #8
+ 429              		@ sp needed
+ 430 0014 BDE81040 		pop	{r4, lr}
+ 431 0018 FFF7FEBF 		b	chSchReadyI
+ 432              	.L51:
+ 433 001c 0448     		ldr	r0, .L52
+ 434 001e 0191     		str	r1, [sp, #4]
+ 435 0020 FFF7FEFF 		bl	chDbgPanic
+ 436 0024 6368     		ldr	r3, [r4, #4]
+ 437 0026 0199     		ldr	r1, [sp, #4]
+ 438 0028 002B     		cmp	r3, #0
+ARM GAS  /tmp/cc4xRmdX.s 			page 9
+
+
+ 439 002a EED1     		bne	.L49
+ 440 002c 02B0     		add	sp, sp, #8
+ 441              		@ sp needed
+ 442 002e 10BD     		pop	{r4, pc}
+ 443              	.L53:
+ 444              		.align	2
+ 445              	.L52:
+ 446 0030 60000000 		.word	.LC4
+ 447              		.size	_ZN10chibios_rt15ThreadReference7resumeIEl, .-_ZN10chibios_rt15ThreadReference7resumeIEl
+ 448 0034 AFF30080 		.section	.text._ZN10chibios_rt15ThreadReference16requestTerminateEv,"ax",%progbits
+ 448      AFF30080 
+ 448      AFF30080 
+ 449              		.align	2
+ 450              		.p2align 4,,15
+ 451              		.global	_ZN10chibios_rt15ThreadReference16requestTerminateEv
+ 452              		.thumb
+ 453              		.thumb_func
+ 454              		.type	_ZN10chibios_rt15ThreadReference16requestTerminateEv, %function
+ 455              	_ZN10chibios_rt15ThreadReference16requestTerminateEv:
+ 456              		@ args = 0, pretend = 0, frame = 0
+ 457              		@ frame_needed = 0, uses_anonymous_args = 0
+ 458 0000 10B5     		push	{r4, lr}
+ 459 0002 0446     		mov	r4, r0
+ 460 0004 4068     		ldr	r0, [r0, #4]
+ 461 0006 18B1     		cbz	r0, .L56
+ 462 0008 BDE81040 		pop	{r4, lr}
+ 463 000c FFF7FEBF 		b	chThdTerminate
+ 464              	.L56:
+ 465 0010 0348     		ldr	r0, .L57
+ 466 0012 FFF7FEFF 		bl	chDbgPanic
+ 467 0016 6068     		ldr	r0, [r4, #4]
+ 468 0018 BDE81040 		pop	{r4, lr}
+ 469 001c FFF7FEBF 		b	chThdTerminate
+ 470              	.L58:
+ 471              		.align	2
+ 472              	.L57:
+ 473 0020 74000000 		.word	.LC5
+ 474              		.size	_ZN10chibios_rt15ThreadReference16requestTerminateEv, .-_ZN10chibios_rt15ThreadReference16re
+ 475 0024 AFF30080 		.section	.text._ZN10chibios_rt15ThreadReference4waitEv,"ax",%progbits
+ 475      AFF30080 
+ 475      AFF30080 
+ 476              		.align	2
+ 477              		.p2align 4,,15
+ 478              		.global	_ZN10chibios_rt15ThreadReference4waitEv
+ 479              		.thumb
+ 480              		.thumb_func
+ 481              		.type	_ZN10chibios_rt15ThreadReference4waitEv, %function
+ 482              	_ZN10chibios_rt15ThreadReference4waitEv:
+ 483              		@ args = 0, pretend = 0, frame = 0
+ 484              		@ frame_needed = 0, uses_anonymous_args = 0
+ 485 0000 10B5     		push	{r4, lr}
+ 486 0002 0446     		mov	r4, r0
+ 487 0004 4068     		ldr	r0, [r0, #4]
+ 488 0006 20B1     		cbz	r0, .L61
+ 489 0008 FFF7FEFF 		bl	chThdWait
+ 490 000c 0023     		movs	r3, #0
+ 491 000e 6360     		str	r3, [r4, #4]
+ARM GAS  /tmp/cc4xRmdX.s 			page 10
+
+
+ 492 0010 10BD     		pop	{r4, pc}
+ 493              	.L61:
+ 494 0012 0448     		ldr	r0, .L62
+ 495 0014 FFF7FEFF 		bl	chDbgPanic
+ 496 0018 6068     		ldr	r0, [r4, #4]
+ 497 001a FFF7FEFF 		bl	chThdWait
+ 498 001e 0023     		movs	r3, #0
+ 499 0020 6360     		str	r3, [r4, #4]
+ 500 0022 10BD     		pop	{r4, pc}
+ 501              	.L63:
+ 502              		.align	2
+ 503              	.L62:
+ 504 0024 88000000 		.word	.LC6
+ 505              		.size	_ZN10chibios_rt15ThreadReference4waitEv, .-_ZN10chibios_rt15ThreadReference4waitEv
+ 506 0028 AFF30080 		.section	.text._ZN10chibios_rt15ThreadReference11sendMessageEl,"ax",%progbits
+ 506      AFF30080 
+ 507              		.align	2
+ 508              		.p2align 4,,15
+ 509              		.global	_ZN10chibios_rt15ThreadReference11sendMessageEl
+ 510              		.thumb
+ 511              		.thumb_func
+ 512              		.type	_ZN10chibios_rt15ThreadReference11sendMessageEl, %function
+ 513              	_ZN10chibios_rt15ThreadReference11sendMessageEl:
+ 514              		@ args = 0, pretend = 0, frame = 8
+ 515              		@ frame_needed = 0, uses_anonymous_args = 0
+ 516 0000 10B5     		push	{r4, lr}
+ 517 0002 0446     		mov	r4, r0
+ 518 0004 4068     		ldr	r0, [r0, #4]
+ 519 0006 82B0     		sub	sp, sp, #8
+ 520 0008 20B1     		cbz	r0, .L66
+ 521 000a 02B0     		add	sp, sp, #8
+ 522              		@ sp needed
+ 523 000c BDE81040 		pop	{r4, lr}
+ 524 0010 FFF7FEBF 		b	chMsgSend
+ 525              	.L66:
+ 526 0014 0548     		ldr	r0, .L67
+ 527 0016 0191     		str	r1, [sp, #4]
+ 528 0018 FFF7FEFF 		bl	chDbgPanic
+ 529 001c 6068     		ldr	r0, [r4, #4]
+ 530 001e 0199     		ldr	r1, [sp, #4]
+ 531 0020 02B0     		add	sp, sp, #8
+ 532              		@ sp needed
+ 533 0022 BDE81040 		pop	{r4, lr}
+ 534 0026 FFF7FEBF 		b	chMsgSend
+ 535              	.L68:
+ 536 002a 00BF     		.align	2
+ 537              	.L67:
+ 538 002c 9C000000 		.word	.LC7
+ 539              		.size	_ZN10chibios_rt15ThreadReference11sendMessageEl, .-_ZN10chibios_rt15ThreadReference11sendMes
+ 540              		.section	.text._ZN10chibios_rt15ThreadReference16isPendingMessageEv,"ax",%progbits
+ 541              		.align	2
+ 542              		.p2align 4,,15
+ 543              		.global	_ZN10chibios_rt15ThreadReference16isPendingMessageEv
+ 544              		.thumb
+ 545              		.thumb_func
+ 546              		.type	_ZN10chibios_rt15ThreadReference16isPendingMessageEv, %function
+ 547              	_ZN10chibios_rt15ThreadReference16isPendingMessageEv:
+ARM GAS  /tmp/cc4xRmdX.s 			page 11
+
+
+ 548              		@ args = 0, pretend = 0, frame = 0
+ 549              		@ frame_needed = 0, uses_anonymous_args = 0
+ 550 0000 4368     		ldr	r3, [r0, #4]
+ 551 0002 10B5     		push	{r4, lr}
+ 552 0004 0446     		mov	r4, r0
+ 553 0006 2BB1     		cbz	r3, .L71
+ 554              	.L70:
+ 555 0008 186B     		ldr	r0, [r3, #48]
+ 556 000a 3033     		adds	r3, r3, #48
+ 557 000c C01A     		subs	r0, r0, r3
+ 558 000e 18BF     		it	ne
+ 559 0010 0120     		movne	r0, #1
+ 560 0012 10BD     		pop	{r4, pc}
+ 561              	.L71:
+ 562 0014 0248     		ldr	r0, .L72
+ 563 0016 FFF7FEFF 		bl	chDbgPanic
+ 564 001a 6368     		ldr	r3, [r4, #4]
+ 565 001c F4E7     		b	.L70
+ 566              	.L73:
+ 567 001e 00BF     		.align	2
+ 568              	.L72:
+ 569 0020 9C000000 		.word	.LC7
+ 570              		.size	_ZN10chibios_rt15ThreadReference16isPendingMessageEv, .-_ZN10chibios_rt15ThreadReference16is
+ 571 0024 AFF30080 		.section	.text._ZN10chibios_rt15ThreadReference10getMessageEv,"ax",%progbits
+ 571      AFF30080 
+ 571      AFF30080 
+ 572              		.align	2
+ 573              		.p2align 4,,15
+ 574              		.global	_ZN10chibios_rt15ThreadReference10getMessageEv
+ 575              		.thumb
+ 576              		.thumb_func
+ 577              		.type	_ZN10chibios_rt15ThreadReference10getMessageEv, %function
+ 578              	_ZN10chibios_rt15ThreadReference10getMessageEv:
+ 579              		@ args = 0, pretend = 0, frame = 0
+ 580              		@ frame_needed = 0, uses_anonymous_args = 0
+ 581 0000 4368     		ldr	r3, [r0, #4]
+ 582 0002 10B5     		push	{r4, lr}
+ 583 0004 0446     		mov	r4, r0
+ 584 0006 0BB1     		cbz	r3, .L76
+ 585 0008 986B     		ldr	r0, [r3, #56]
+ 586 000a 10BD     		pop	{r4, pc}
+ 587              	.L76:
+ 588 000c 0248     		ldr	r0, .L77
+ 589 000e FFF7FEFF 		bl	chDbgPanic
+ 590 0012 6368     		ldr	r3, [r4, #4]
+ 591 0014 986B     		ldr	r0, [r3, #56]
+ 592 0016 10BD     		pop	{r4, pc}
+ 593              	.L78:
+ 594              		.align	2
+ 595              	.L77:
+ 596 0018 B0000000 		.word	.LC8
+ 597              		.size	_ZN10chibios_rt15ThreadReference10getMessageEv, .-_ZN10chibios_rt15ThreadReference10getMessa
+ 598 001c AFF30080 		.section	.text._ZN10chibios_rt15ThreadReference14releaseMessageEl,"ax",%progbits
+ 599              		.align	2
+ 600              		.p2align 4,,15
+ 601              		.global	_ZN10chibios_rt15ThreadReference14releaseMessageEl
+ 602              		.thumb
+ARM GAS  /tmp/cc4xRmdX.s 			page 12
+
+
+ 603              		.thumb_func
+ 604              		.type	_ZN10chibios_rt15ThreadReference14releaseMessageEl, %function
+ 605              	_ZN10chibios_rt15ThreadReference14releaseMessageEl:
+ 606              		@ args = 0, pretend = 0, frame = 8
+ 607              		@ frame_needed = 0, uses_anonymous_args = 0
+ 608 0000 10B5     		push	{r4, lr}
+ 609 0002 0446     		mov	r4, r0
+ 610 0004 4068     		ldr	r0, [r0, #4]
+ 611 0006 82B0     		sub	sp, sp, #8
+ 612 0008 20B1     		cbz	r0, .L81
+ 613 000a 02B0     		add	sp, sp, #8
+ 614              		@ sp needed
+ 615 000c BDE81040 		pop	{r4, lr}
+ 616 0010 FFF7FEBF 		b	chMsgRelease
+ 617              	.L81:
+ 618 0014 0548     		ldr	r0, .L82
+ 619 0016 0191     		str	r1, [sp, #4]
+ 620 0018 FFF7FEFF 		bl	chDbgPanic
+ 621 001c 6068     		ldr	r0, [r4, #4]
+ 622 001e 0199     		ldr	r1, [sp, #4]
+ 623 0020 02B0     		add	sp, sp, #8
+ 624              		@ sp needed
+ 625 0022 BDE81040 		pop	{r4, lr}
+ 626 0026 FFF7FEBF 		b	chMsgRelease
+ 627              	.L83:
+ 628 002a 00BF     		.align	2
+ 629              	.L82:
+ 630 002c C4000000 		.word	.LC9
+ 631              		.size	_ZN10chibios_rt15ThreadReference14releaseMessageEl, .-_ZN10chibios_rt15ThreadReference14rele
+ 632              		.section	.text._ZN10chibios_rt15ThreadReference12signalEventsEm,"ax",%progbits
+ 633              		.align	2
+ 634              		.p2align 4,,15
+ 635              		.global	_ZN10chibios_rt15ThreadReference12signalEventsEm
+ 636              		.thumb
+ 637              		.thumb_func
+ 638              		.type	_ZN10chibios_rt15ThreadReference12signalEventsEm, %function
+ 639              	_ZN10chibios_rt15ThreadReference12signalEventsEm:
+ 640              		@ args = 0, pretend = 0, frame = 8
+ 641              		@ frame_needed = 0, uses_anonymous_args = 0
+ 642 0000 10B5     		push	{r4, lr}
+ 643 0002 0446     		mov	r4, r0
+ 644 0004 4068     		ldr	r0, [r0, #4]
+ 645 0006 82B0     		sub	sp, sp, #8
+ 646 0008 20B1     		cbz	r0, .L86
+ 647 000a 02B0     		add	sp, sp, #8
+ 648              		@ sp needed
+ 649 000c BDE81040 		pop	{r4, lr}
+ 650 0010 FFF7FEBF 		b	chEvtSignal
+ 651              	.L86:
+ 652 0014 0548     		ldr	r0, .L87
+ 653 0016 0191     		str	r1, [sp, #4]
+ 654 0018 FFF7FEFF 		bl	chDbgPanic
+ 655 001c 6068     		ldr	r0, [r4, #4]
+ 656 001e 0199     		ldr	r1, [sp, #4]
+ 657 0020 02B0     		add	sp, sp, #8
+ 658              		@ sp needed
+ 659 0022 BDE81040 		pop	{r4, lr}
+ARM GAS  /tmp/cc4xRmdX.s 			page 13
+
+
+ 660 0026 FFF7FEBF 		b	chEvtSignal
+ 661              	.L88:
+ 662 002a 00BF     		.align	2
+ 663              	.L87:
+ 664 002c D8000000 		.word	.LC10
+ 665              		.size	_ZN10chibios_rt15ThreadReference12signalEventsEm, .-_ZN10chibios_rt15ThreadReference12signal
+ 666              		.section	.text._ZN10chibios_rt15ThreadReference13signalEventsIEm,"ax",%progbits
+ 667              		.align	2
+ 668              		.p2align 4,,15
+ 669              		.global	_ZN10chibios_rt15ThreadReference13signalEventsIEm
+ 670              		.thumb
+ 671              		.thumb_func
+ 672              		.type	_ZN10chibios_rt15ThreadReference13signalEventsIEm, %function
+ 673              	_ZN10chibios_rt15ThreadReference13signalEventsIEm:
+ 674              		@ args = 0, pretend = 0, frame = 8
+ 675              		@ frame_needed = 0, uses_anonymous_args = 0
+ 676 0000 10B5     		push	{r4, lr}
+ 677 0002 0446     		mov	r4, r0
+ 678 0004 4068     		ldr	r0, [r0, #4]
+ 679 0006 82B0     		sub	sp, sp, #8
+ 680 0008 20B1     		cbz	r0, .L91
+ 681 000a 02B0     		add	sp, sp, #8
+ 682              		@ sp needed
+ 683 000c BDE81040 		pop	{r4, lr}
+ 684 0010 FFF7FEBF 		b	chEvtSignalI
+ 685              	.L91:
+ 686 0014 0548     		ldr	r0, .L92
+ 687 0016 0191     		str	r1, [sp, #4]
+ 688 0018 FFF7FEFF 		bl	chDbgPanic
+ 689 001c 6068     		ldr	r0, [r4, #4]
+ 690 001e 0199     		ldr	r1, [sp, #4]
+ 691 0020 02B0     		add	sp, sp, #8
+ 692              		@ sp needed
+ 693 0022 BDE81040 		pop	{r4, lr}
+ 694 0026 FFF7FEBF 		b	chEvtSignalI
+ 695              	.L93:
+ 696 002a 00BF     		.align	2
+ 697              	.L92:
+ 698 002c F0000000 		.word	.LC11
+ 699              		.size	_ZN10chibios_rt15ThreadReference13signalEventsIEm, .-_ZN10chibios_rt15ThreadReference13signa
+ 700              		.section	.text._ZN10chibios_rt10BaseThreadC2Ev,"ax",%progbits
+ 701              		.align	2
+ 702              		.p2align 4,,15
+ 703              		.global	_ZN10chibios_rt10BaseThreadC2Ev
+ 704              		.thumb
+ 705              		.thumb_func
+ 706              		.type	_ZN10chibios_rt10BaseThreadC2Ev, %function
+ 707              	_ZN10chibios_rt10BaseThreadC2Ev:
+ 708              		@ args = 0, pretend = 0, frame = 0
+ 709              		@ frame_needed = 0, uses_anonymous_args = 0
+ 710              		@ link register save eliminated.
+ 711 0000 0249     		ldr	r1, .L95
+ 712 0002 0022     		movs	r2, #0
+ 713 0004 80E80600 		stmia	r0, {r1, r2}
+ 714 0008 7047     		bx	lr
+ 715              	.L96:
+ 716 000a 00BF     		.align	2
+ARM GAS  /tmp/cc4xRmdX.s 			page 14
+
+
+ 717              	.L95:
+ 718 000c 08000000 		.word	.LANCHOR1+8
+ 719              		.size	_ZN10chibios_rt10BaseThreadC2Ev, .-_ZN10chibios_rt10BaseThreadC2Ev
+ 720              		.global	_ZN10chibios_rt10BaseThreadC1Ev
+ 721              		.thumb_set _ZN10chibios_rt10BaseThreadC1Ev,_ZN10chibios_rt10BaseThreadC2Ev
+ 722              		.section	.text._ZN10chibios_rt10_thd_startEPv,"ax",%progbits
+ 723              		.align	2
+ 724              		.p2align 4,,15
+ 725              		.global	_ZN10chibios_rt10_thd_startEPv
+ 726              		.thumb
+ 727              		.thumb_func
+ 728              		.type	_ZN10chibios_rt10_thd_startEPv, %function
+ 729              	_ZN10chibios_rt10_thd_startEPv:
+ 730              		@ args = 0, pretend = 0, frame = 0
+ 731              		@ frame_needed = 0, uses_anonymous_args = 0
+ 732 0000 08B5     		push	{r3, lr}
+ 733 0002 0368     		ldr	r3, [r0]
+ 734 0004 5B68     		ldr	r3, [r3, #4]
+ 735 0006 9847     		blx	r3
+ 736 0008 08BD     		pop	{r3, pc}
+ 737              		.size	_ZN10chibios_rt10_thd_startEPv, .-_ZN10chibios_rt10_thd_startEPv
+ 738 000a 00BFAFF3 		.section	.text._ZN10chibios_rt10BaseThread7setNameEPKc,"ax",%progbits
+ 738      0080
+ 739              		.align	2
+ 740              		.p2align 4,,15
+ 741              		.global	_ZN10chibios_rt10BaseThread7setNameEPKc
+ 742              		.thumb
+ 743              		.thumb_func
+ 744              		.type	_ZN10chibios_rt10BaseThread7setNameEPKc, %function
+ 745              	_ZN10chibios_rt10BaseThread7setNameEPKc:
+ 746              		@ args = 0, pretend = 0, frame = 0
+ 747              		@ frame_needed = 0, uses_anonymous_args = 0
+ 748              		@ link register save eliminated.
+ 749 0000 014B     		ldr	r3, .L99
+ 750 0002 9B69     		ldr	r3, [r3, #24]
+ 751 0004 9861     		str	r0, [r3, #24]
+ 752 0006 7047     		bx	lr
+ 753              	.L100:
+ 754              		.align	2
+ 755              	.L99:
+ 756 0008 00000000 		.word	rlist
+ 757              		.size	_ZN10chibios_rt10BaseThread7setNameEPKc, .-_ZN10chibios_rt10BaseThread7setNameEPKc
+ 758 000c AFF30080 		.section	.text._ZN10chibios_rt10BaseThread11setPriorityEm,"ax",%progbits
+ 759              		.align	2
+ 760              		.p2align 4,,15
+ 761              		.global	_ZN10chibios_rt10BaseThread11setPriorityEm
+ 762              		.thumb
+ 763              		.thumb_func
+ 764              		.type	_ZN10chibios_rt10BaseThread11setPriorityEm, %function
+ 765              	_ZN10chibios_rt10BaseThread11setPriorityEm:
+ 766              		@ args = 0, pretend = 0, frame = 0
+ 767              		@ frame_needed = 0, uses_anonymous_args = 0
+ 768              		@ link register save eliminated.
+ 769 0000 FFF7FEBF 		b	chThdSetPriority
+ 770              		.size	_ZN10chibios_rt10BaseThread11setPriorityEm, .-_ZN10chibios_rt10BaseThread11setPriorityEm
+ 771 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread4exitEl,"ax",%progbits
+ 771      AFF30080 
+ARM GAS  /tmp/cc4xRmdX.s 			page 15
+
+
+ 771      AFF30080 
+ 772              		.align	2
+ 773              		.p2align 4,,15
+ 774              		.global	_ZN10chibios_rt10BaseThread4exitEl
+ 775              		.thumb
+ 776              		.thumb_func
+ 777              		.type	_ZN10chibios_rt10BaseThread4exitEl, %function
+ 778              	_ZN10chibios_rt10BaseThread4exitEl:
+ 779              		@ args = 0, pretend = 0, frame = 0
+ 780              		@ frame_needed = 0, uses_anonymous_args = 0
+ 781              		@ link register save eliminated.
+ 782 0000 FFF7FEBF 		b	chThdExit
+ 783              		.size	_ZN10chibios_rt10BaseThread4exitEl, .-_ZN10chibios_rt10BaseThread4exitEl
+ 784 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread5exitSEl,"ax",%progbits
+ 784      AFF30080 
+ 784      AFF30080 
+ 785              		.align	2
+ 786              		.p2align 4,,15
+ 787              		.global	_ZN10chibios_rt10BaseThread5exitSEl
+ 788              		.thumb
+ 789              		.thumb_func
+ 790              		.type	_ZN10chibios_rt10BaseThread5exitSEl, %function
+ 791              	_ZN10chibios_rt10BaseThread5exitSEl:
+ 792              		@ args = 0, pretend = 0, frame = 0
+ 793              		@ frame_needed = 0, uses_anonymous_args = 0
+ 794              		@ link register save eliminated.
+ 795 0000 FFF7FEBF 		b	chThdExitS
+ 796              		.size	_ZN10chibios_rt10BaseThread5exitSEl, .-_ZN10chibios_rt10BaseThread5exitSEl
+ 797 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread15shouldTerminateEv,"ax",%progbits
+ 797      AFF30080 
+ 797      AFF30080 
+ 798              		.align	2
+ 799              		.p2align 4,,15
+ 800              		.global	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 801              		.thumb
+ 802              		.thumb_func
+ 803              		.type	_ZN10chibios_rt10BaseThread15shouldTerminateEv, %function
+ 804              	_ZN10chibios_rt10BaseThread15shouldTerminateEv:
+ 805              		@ args = 0, pretend = 0, frame = 0
+ 806              		@ frame_needed = 0, uses_anonymous_args = 0
+ 807              		@ link register save eliminated.
+ 808 0000 034B     		ldr	r3, .L105
+ 809 0002 9B69     		ldr	r3, [r3, #24]
+ 810 0004 93F82100 		ldrb	r0, [r3, #33]	@ zero_extendqisi2
+ 811 0008 C0F38000 		ubfx	r0, r0, #2, #1
+ 812 000c 7047     		bx	lr
+ 813              	.L106:
+ 814 000e 00BF     		.align	2
+ 815              	.L105:
+ 816 0010 00000000 		.word	rlist
+ 817              		.size	_ZN10chibios_rt10BaseThread15shouldTerminateEv, .-_ZN10chibios_rt10BaseThread15shouldTermina
+ 818 0014 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread5sleepEm,"ax",%progbits
+ 818      AFF30080 
+ 818      AFF30080 
+ 819              		.align	2
+ 820              		.p2align 4,,15
+ 821              		.global	_ZN10chibios_rt10BaseThread5sleepEm
+ARM GAS  /tmp/cc4xRmdX.s 			page 16
+
+
+ 822              		.thumb
+ 823              		.thumb_func
+ 824              		.type	_ZN10chibios_rt10BaseThread5sleepEm, %function
+ 825              	_ZN10chibios_rt10BaseThread5sleepEm:
+ 826              		@ args = 0, pretend = 0, frame = 0
+ 827              		@ frame_needed = 0, uses_anonymous_args = 0
+ 828              		@ link register save eliminated.
+ 829 0000 FFF7FEBF 		b	chThdSleep
+ 830              		.size	_ZN10chibios_rt10BaseThread5sleepEm, .-_ZN10chibios_rt10BaseThread5sleepEm
+ 831 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread10sleepUntilEm,"ax",%progbits
+ 831      AFF30080 
+ 831      AFF30080 
+ 832              		.align	2
+ 833              		.p2align 4,,15
+ 834              		.global	_ZN10chibios_rt10BaseThread10sleepUntilEm
+ 835              		.thumb
+ 836              		.thumb_func
+ 837              		.type	_ZN10chibios_rt10BaseThread10sleepUntilEm, %function
+ 838              	_ZN10chibios_rt10BaseThread10sleepUntilEm:
+ 839              		@ args = 0, pretend = 0, frame = 0
+ 840              		@ frame_needed = 0, uses_anonymous_args = 0
+ 841              		@ link register save eliminated.
+ 842 0000 FFF7FEBF 		b	chThdSleepUntil
+ 843              		.size	_ZN10chibios_rt10BaseThread10sleepUntilEm, .-_ZN10chibios_rt10BaseThread10sleepUntilEm
+ 844 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread5yieldEv,"ax",%progbits
+ 844      AFF30080 
+ 844      AFF30080 
+ 845              		.align	2
+ 846              		.p2align 4,,15
+ 847              		.global	_ZN10chibios_rt10BaseThread5yieldEv
+ 848              		.thumb
+ 849              		.thumb_func
+ 850              		.type	_ZN10chibios_rt10BaseThread5yieldEv, %function
+ 851              	_ZN10chibios_rt10BaseThread5yieldEv:
+ 852              		@ args = 0, pretend = 0, frame = 0
+ 853              		@ frame_needed = 0, uses_anonymous_args = 0
+ 854              		@ link register save eliminated.
+ 855 0000 FFF7FEBF 		b	chThdYield
+ 856              		.size	_ZN10chibios_rt10BaseThread5yieldEv, .-_ZN10chibios_rt10BaseThread5yieldEv
+ 857 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread11waitMessageEv,"ax",%progbits
+ 857      AFF30080 
+ 857      AFF30080 
+ 858              		.align	2
+ 859              		.p2align 4,,15
+ 860              		.global	_ZN10chibios_rt10BaseThread11waitMessageEv
+ 861              		.thumb
+ 862              		.thumb_func
+ 863              		.type	_ZN10chibios_rt10BaseThread11waitMessageEv, %function
+ 864              	_ZN10chibios_rt10BaseThread11waitMessageEv:
+ 865              		@ args = 0, pretend = 0, frame = 0
+ 866              		@ frame_needed = 0, uses_anonymous_args = 0
+ 867 0000 10B5     		push	{r4, lr}
+ 868 0002 0446     		mov	r4, r0
+ 869 0004 FFF7FEFF 		bl	chMsgWait
+ 870 0008 024B     		ldr	r3, .L111
+ 871 000a 6060     		str	r0, [r4, #4]
+ 872 000c 2360     		str	r3, [r4]
+ARM GAS  /tmp/cc4xRmdX.s 			page 17
+
+
+ 873 000e 2046     		mov	r0, r4
+ 874 0010 10BD     		pop	{r4, pc}
+ 875              	.L112:
+ 876 0012 00BF     		.align	2
+ 877              	.L111:
+ 878 0014 08000000 		.word	.LANCHOR0+8
+ 879              		.size	_ZN10chibios_rt10BaseThread11waitMessageEv, .-_ZN10chibios_rt10BaseThread11waitMessageEv
+ 880 0018 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread17getAndClearEventsEm,"ax",%progbits
+ 880      AFF30080 
+ 881              		.align	2
+ 882              		.p2align 4,,15
+ 883              		.global	_ZN10chibios_rt10BaseThread17getAndClearEventsEm
+ 884              		.thumb
+ 885              		.thumb_func
+ 886              		.type	_ZN10chibios_rt10BaseThread17getAndClearEventsEm, %function
+ 887              	_ZN10chibios_rt10BaseThread17getAndClearEventsEm:
+ 888              		@ args = 0, pretend = 0, frame = 0
+ 889              		@ frame_needed = 0, uses_anonymous_args = 0
+ 890              		@ link register save eliminated.
+ 891 0000 FFF7FEBF 		b	chEvtGetAndClearEvents
+ 892              		.size	_ZN10chibios_rt10BaseThread17getAndClearEventsEm, .-_ZN10chibios_rt10BaseThread17getAndClear
+ 893 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread9addEventsEm,"ax",%progbits
+ 893      AFF30080 
+ 893      AFF30080 
+ 894              		.align	2
+ 895              		.p2align 4,,15
+ 896              		.global	_ZN10chibios_rt10BaseThread9addEventsEm
+ 897              		.thumb
+ 898              		.thumb_func
+ 899              		.type	_ZN10chibios_rt10BaseThread9addEventsEm, %function
+ 900              	_ZN10chibios_rt10BaseThread9addEventsEm:
+ 901              		@ args = 0, pretend = 0, frame = 0
+ 902              		@ frame_needed = 0, uses_anonymous_args = 0
+ 903              		@ link register save eliminated.
+ 904 0000 FFF7FEBF 		b	chEvtAddEvents
+ 905              		.size	_ZN10chibios_rt10BaseThread9addEventsEm, .-_ZN10chibios_rt10BaseThread9addEventsEm
+ 906 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread12waitOneEventEm,"ax",%progbits
+ 906      AFF30080 
+ 906      AFF30080 
+ 907              		.align	2
+ 908              		.p2align 4,,15
+ 909              		.global	_ZN10chibios_rt10BaseThread12waitOneEventEm
+ 910              		.thumb
+ 911              		.thumb_func
+ 912              		.type	_ZN10chibios_rt10BaseThread12waitOneEventEm, %function
+ 913              	_ZN10chibios_rt10BaseThread12waitOneEventEm:
+ 914              		@ args = 0, pretend = 0, frame = 0
+ 915              		@ frame_needed = 0, uses_anonymous_args = 0
+ 916              		@ link register save eliminated.
+ 917 0000 FFF7FEBF 		b	chEvtWaitOne
+ 918              		.size	_ZN10chibios_rt10BaseThread12waitOneEventEm, .-_ZN10chibios_rt10BaseThread12waitOneEventEm
+ 919 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread12waitAnyEventEm,"ax",%progbits
+ 919      AFF30080 
+ 919      AFF30080 
+ 920              		.align	2
+ 921              		.p2align 4,,15
+ 922              		.global	_ZN10chibios_rt10BaseThread12waitAnyEventEm
+ARM GAS  /tmp/cc4xRmdX.s 			page 18
+
+
+ 923              		.thumb
+ 924              		.thumb_func
+ 925              		.type	_ZN10chibios_rt10BaseThread12waitAnyEventEm, %function
+ 926              	_ZN10chibios_rt10BaseThread12waitAnyEventEm:
+ 927              		@ args = 0, pretend = 0, frame = 0
+ 928              		@ frame_needed = 0, uses_anonymous_args = 0
+ 929              		@ link register save eliminated.
+ 930 0000 FFF7FEBF 		b	chEvtWaitAny
+ 931              		.size	_ZN10chibios_rt10BaseThread12waitAnyEventEm, .-_ZN10chibios_rt10BaseThread12waitAnyEventEm
+ 932 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread13waitAllEventsEm,"ax",%progbits
+ 932      AFF30080 
+ 932      AFF30080 
+ 933              		.align	2
+ 934              		.p2align 4,,15
+ 935              		.global	_ZN10chibios_rt10BaseThread13waitAllEventsEm
+ 936              		.thumb
+ 937              		.thumb_func
+ 938              		.type	_ZN10chibios_rt10BaseThread13waitAllEventsEm, %function
+ 939              	_ZN10chibios_rt10BaseThread13waitAllEventsEm:
+ 940              		@ args = 0, pretend = 0, frame = 0
+ 941              		@ frame_needed = 0, uses_anonymous_args = 0
+ 942              		@ link register save eliminated.
+ 943 0000 FFF7FEBF 		b	chEvtWaitAll
+ 944              		.size	_ZN10chibios_rt10BaseThread13waitAllEventsEm, .-_ZN10chibios_rt10BaseThread13waitAllEventsEm
+ 945 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm,"ax",%progbits
+ 945      AFF30080 
+ 945      AFF30080 
+ 946              		.align	2
+ 947              		.p2align 4,,15
+ 948              		.global	_ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
+ 949              		.thumb
+ 950              		.thumb_func
+ 951              		.type	_ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm, %function
+ 952              	_ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm:
+ 953              		@ args = 0, pretend = 0, frame = 0
+ 954              		@ frame_needed = 0, uses_anonymous_args = 0
+ 955              		@ link register save eliminated.
+ 956 0000 FFF7FEBF 		b	chEvtWaitOneTimeout
+ 957              		.size	_ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm, .-_ZN10chibios_rt10BaseThread19waitOneE
+ 958 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm,"ax",%progbits
+ 958      AFF30080 
+ 958      AFF30080 
+ 959              		.align	2
+ 960              		.p2align 4,,15
+ 961              		.global	_ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
+ 962              		.thumb
+ 963              		.thumb_func
+ 964              		.type	_ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm, %function
+ 965              	_ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm:
+ 966              		@ args = 0, pretend = 0, frame = 0
+ 967              		@ frame_needed = 0, uses_anonymous_args = 0
+ 968              		@ link register save eliminated.
+ 969 0000 FFF7FEBF 		b	chEvtWaitAnyTimeout
+ 970              		.size	_ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm, .-_ZN10chibios_rt10BaseThread19waitAnyE
+ 971 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm,"ax",%progbits
+ 971      AFF30080 
+ 971      AFF30080 
+ARM GAS  /tmp/cc4xRmdX.s 			page 19
+
+
+ 972              		.align	2
+ 973              		.p2align 4,,15
+ 974              		.global	_ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm
+ 975              		.thumb
+ 976              		.thumb_func
+ 977              		.type	_ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm, %function
+ 978              	_ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm:
+ 979              		@ args = 0, pretend = 0, frame = 0
+ 980              		@ frame_needed = 0, uses_anonymous_args = 0
+ 981              		@ link register save eliminated.
+ 982 0000 FFF7FEBF 		b	chEvtWaitAllTimeout
+ 983              		.size	_ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm, .-_ZN10chibios_rt10BaseThread20waitAll
+ 984 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm,"ax",%progbits
+ 984      AFF30080 
+ 984      AFF30080 
+ 985              		.align	2
+ 986              		.p2align 4,,15
+ 987              		.global	_ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm
+ 988              		.thumb
+ 989              		.thumb_func
+ 990              		.type	_ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm, %function
+ 991              	_ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm:
+ 992              		@ args = 0, pretend = 0, frame = 0
+ 993              		@ frame_needed = 0, uses_anonymous_args = 0
+ 994              		@ link register save eliminated.
+ 995 0000 FFF7FEBF 		b	chEvtDispatch
+ 996              		.size	_ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm, .-_ZN10chibios_rt10BaseThread14dispatc
+ 997 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread11unlockMutexEv,"ax",%progbits
+ 997      AFF30080 
+ 997      AFF30080 
+ 998              		.align	2
+ 999              		.p2align 4,,15
+ 1000              		.global	_ZN10chibios_rt10BaseThread11unlockMutexEv
+ 1001              		.thumb
+ 1002              		.thumb_func
+ 1003              		.type	_ZN10chibios_rt10BaseThread11unlockMutexEv, %function
+ 1004              	_ZN10chibios_rt10BaseThread11unlockMutexEv:
+ 1005              		@ args = 0, pretend = 0, frame = 0
+ 1006              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1007              		@ link register save eliminated.
+ 1008 0000 FFF7FEBF 		b	chMtxUnlock
+ 1009              		.size	_ZN10chibios_rt10BaseThread11unlockMutexEv, .-_ZN10chibios_rt10BaseThread11unlockMutexEv
+ 1010 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread12unlockMutexSEv,"ax",%progbits
+ 1010      AFF30080 
+ 1010      AFF30080 
+ 1011              		.align	2
+ 1012              		.p2align 4,,15
+ 1013              		.global	_ZN10chibios_rt10BaseThread12unlockMutexSEv
+ 1014              		.thumb
+ 1015              		.thumb_func
+ 1016              		.type	_ZN10chibios_rt10BaseThread12unlockMutexSEv, %function
+ 1017              	_ZN10chibios_rt10BaseThread12unlockMutexSEv:
+ 1018              		@ args = 0, pretend = 0, frame = 0
+ 1019              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1020              		@ link register save eliminated.
+ 1021 0000 FFF7FEBF 		b	chMtxUnlockS
+ 1022              		.size	_ZN10chibios_rt10BaseThread12unlockMutexSEv, .-_ZN10chibios_rt10BaseThread12unlockMutexSEv
+ARM GAS  /tmp/cc4xRmdX.s 			page 20
+
+
+ 1023 0004 AFF30080 		.section	.text._ZN10chibios_rt10BaseThread16unlockAllMutexesEv,"ax",%progbits
+ 1023      AFF30080 
+ 1023      AFF30080 
+ 1024              		.align	2
+ 1025              		.p2align 4,,15
+ 1026              		.global	_ZN10chibios_rt10BaseThread16unlockAllMutexesEv
+ 1027              		.thumb
+ 1028              		.thumb_func
+ 1029              		.type	_ZN10chibios_rt10BaseThread16unlockAllMutexesEv, %function
+ 1030              	_ZN10chibios_rt10BaseThread16unlockAllMutexesEv:
+ 1031              		@ args = 0, pretend = 0, frame = 0
+ 1032              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1033              		@ link register save eliminated.
+ 1034 0000 FFF7FEBF 		b	chMtxUnlockAll
+ 1035              		.size	_ZN10chibios_rt10BaseThread16unlockAllMutexesEv, .-_ZN10chibios_rt10BaseThread16unlockAllMut
+ 1036 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphoreC2El,"ax",%progbits
+ 1036      AFF30080 
+ 1036      AFF30080 
+ 1037              		.align	2
+ 1038              		.p2align 4,,15
+ 1039              		.global	_ZN10chibios_rt16CounterSemaphoreC2El
+ 1040              		.thumb
+ 1041              		.thumb_func
+ 1042              		.type	_ZN10chibios_rt16CounterSemaphoreC2El, %function
+ 1043              	_ZN10chibios_rt16CounterSemaphoreC2El:
+ 1044              		@ args = 0, pretend = 0, frame = 0
+ 1045              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1046 0000 10B5     		push	{r4, lr}
+ 1047 0002 0446     		mov	r4, r0
+ 1048 0004 FFF7FEFF 		bl	chSemInit
+ 1049 0008 2046     		mov	r0, r4
+ 1050 000a 10BD     		pop	{r4, pc}
+ 1051              		.size	_ZN10chibios_rt16CounterSemaphoreC2El, .-_ZN10chibios_rt16CounterSemaphoreC2El
+ 1052              		.global	_ZN10chibios_rt16CounterSemaphoreC1El
+ 1053              		.thumb_set _ZN10chibios_rt16CounterSemaphoreC1El,_ZN10chibios_rt16CounterSemaphoreC2El
+ 1054 000c AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore5resetEl,"ax",%progbits
+ 1055              		.align	2
+ 1056              		.p2align 4,,15
+ 1057              		.global	_ZN10chibios_rt16CounterSemaphore5resetEl
+ 1058              		.thumb
+ 1059              		.thumb_func
+ 1060              		.type	_ZN10chibios_rt16CounterSemaphore5resetEl, %function
+ 1061              	_ZN10chibios_rt16CounterSemaphore5resetEl:
+ 1062              		@ args = 0, pretend = 0, frame = 0
+ 1063              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1064              		@ link register save eliminated.
+ 1065 0000 FFF7FEBF 		b	chSemReset
+ 1066              		.size	_ZN10chibios_rt16CounterSemaphore5resetEl, .-_ZN10chibios_rt16CounterSemaphore5resetEl
+ 1067 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore6resetIEl,"ax",%progbits
+ 1067      AFF30080 
+ 1067      AFF30080 
+ 1068              		.align	2
+ 1069              		.p2align 4,,15
+ 1070              		.global	_ZN10chibios_rt16CounterSemaphore6resetIEl
+ 1071              		.thumb
+ 1072              		.thumb_func
+ 1073              		.type	_ZN10chibios_rt16CounterSemaphore6resetIEl, %function
+ARM GAS  /tmp/cc4xRmdX.s 			page 21
+
+
+ 1074              	_ZN10chibios_rt16CounterSemaphore6resetIEl:
+ 1075              		@ args = 0, pretend = 0, frame = 0
+ 1076              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1077              		@ link register save eliminated.
+ 1078 0000 FFF7FEBF 		b	chSemResetI
+ 1079              		.size	_ZN10chibios_rt16CounterSemaphore6resetIEl, .-_ZN10chibios_rt16CounterSemaphore6resetIEl
+ 1080 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore4waitEv,"ax",%progbits
+ 1080      AFF30080 
+ 1080      AFF30080 
+ 1081              		.align	2
+ 1082              		.p2align 4,,15
+ 1083              		.global	_ZN10chibios_rt16CounterSemaphore4waitEv
+ 1084              		.thumb
+ 1085              		.thumb_func
+ 1086              		.type	_ZN10chibios_rt16CounterSemaphore4waitEv, %function
+ 1087              	_ZN10chibios_rt16CounterSemaphore4waitEv:
+ 1088              		@ args = 0, pretend = 0, frame = 0
+ 1089              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1090              		@ link register save eliminated.
+ 1091 0000 FFF7FEBF 		b	chSemWait
+ 1092              		.size	_ZN10chibios_rt16CounterSemaphore4waitEv, .-_ZN10chibios_rt16CounterSemaphore4waitEv
+ 1093 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore5waitSEv,"ax",%progbits
+ 1093      AFF30080 
+ 1093      AFF30080 
+ 1094              		.align	2
+ 1095              		.p2align 4,,15
+ 1096              		.global	_ZN10chibios_rt16CounterSemaphore5waitSEv
+ 1097              		.thumb
+ 1098              		.thumb_func
+ 1099              		.type	_ZN10chibios_rt16CounterSemaphore5waitSEv, %function
+ 1100              	_ZN10chibios_rt16CounterSemaphore5waitSEv:
+ 1101              		@ args = 0, pretend = 0, frame = 0
+ 1102              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1103              		@ link register save eliminated.
+ 1104 0000 FFF7FEBF 		b	chSemWaitS
+ 1105              		.size	_ZN10chibios_rt16CounterSemaphore5waitSEv, .-_ZN10chibios_rt16CounterSemaphore5waitSEv
+ 1106 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore11waitTimeoutEm,"ax",%progbits
+ 1106      AFF30080 
+ 1106      AFF30080 
+ 1107              		.align	2
+ 1108              		.p2align 4,,15
+ 1109              		.global	_ZN10chibios_rt16CounterSemaphore11waitTimeoutEm
+ 1110              		.thumb
+ 1111              		.thumb_func
+ 1112              		.type	_ZN10chibios_rt16CounterSemaphore11waitTimeoutEm, %function
+ 1113              	_ZN10chibios_rt16CounterSemaphore11waitTimeoutEm:
+ 1114              		@ args = 0, pretend = 0, frame = 0
+ 1115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1116              		@ link register save eliminated.
+ 1117 0000 FFF7FEBF 		b	chSemWaitTimeout
+ 1118              		.size	_ZN10chibios_rt16CounterSemaphore11waitTimeoutEm, .-_ZN10chibios_rt16CounterSemaphore11waitT
+ 1119 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm,"ax",%progbits
+ 1119      AFF30080 
+ 1119      AFF30080 
+ 1120              		.align	2
+ 1121              		.p2align 4,,15
+ 1122              		.global	_ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm
+ARM GAS  /tmp/cc4xRmdX.s 			page 22
+
+
+ 1123              		.thumb
+ 1124              		.thumb_func
+ 1125              		.type	_ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm, %function
+ 1126              	_ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm:
+ 1127              		@ args = 0, pretend = 0, frame = 0
+ 1128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1129              		@ link register save eliminated.
+ 1130 0000 FFF7FEBF 		b	chSemWaitTimeoutS
+ 1131              		.size	_ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm, .-_ZN10chibios_rt16CounterSemaphore12wait
+ 1132 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore6signalEv,"ax",%progbits
+ 1132      AFF30080 
+ 1132      AFF30080 
+ 1133              		.align	2
+ 1134              		.p2align 4,,15
+ 1135              		.global	_ZN10chibios_rt16CounterSemaphore6signalEv
+ 1136              		.thumb
+ 1137              		.thumb_func
+ 1138              		.type	_ZN10chibios_rt16CounterSemaphore6signalEv, %function
+ 1139              	_ZN10chibios_rt16CounterSemaphore6signalEv:
+ 1140              		@ args = 0, pretend = 0, frame = 0
+ 1141              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1142              		@ link register save eliminated.
+ 1143 0000 FFF7FEBF 		b	chSemSignal
+ 1144              		.size	_ZN10chibios_rt16CounterSemaphore6signalEv, .-_ZN10chibios_rt16CounterSemaphore6signalEv
+ 1145 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore7signalIEv,"ax",%progbits
+ 1145      AFF30080 
+ 1145      AFF30080 
+ 1146              		.align	2
+ 1147              		.p2align 4,,15
+ 1148              		.global	_ZN10chibios_rt16CounterSemaphore7signalIEv
+ 1149              		.thumb
+ 1150              		.thumb_func
+ 1151              		.type	_ZN10chibios_rt16CounterSemaphore7signalIEv, %function
+ 1152              	_ZN10chibios_rt16CounterSemaphore7signalIEv:
+ 1153              		@ args = 0, pretend = 0, frame = 0
+ 1154              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1155              		@ link register save eliminated.
+ 1156 0000 FFF7FEBF 		b	chSemSignalI
+ 1157              		.size	_ZN10chibios_rt16CounterSemaphore7signalIEv, .-_ZN10chibios_rt16CounterSemaphore7signalIEv
+ 1158 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore11addCounterIEl,"ax",%progbits
+ 1158      AFF30080 
+ 1158      AFF30080 
+ 1159              		.align	2
+ 1160              		.p2align 4,,15
+ 1161              		.global	_ZN10chibios_rt16CounterSemaphore11addCounterIEl
+ 1162              		.thumb
+ 1163              		.thumb_func
+ 1164              		.type	_ZN10chibios_rt16CounterSemaphore11addCounterIEl, %function
+ 1165              	_ZN10chibios_rt16CounterSemaphore11addCounterIEl:
+ 1166              		@ args = 0, pretend = 0, frame = 0
+ 1167              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1168              		@ link register save eliminated.
+ 1169 0000 FFF7FEBF 		b	chSemAddCounterI
+ 1170              		.size	_ZN10chibios_rt16CounterSemaphore11addCounterIEl, .-_ZN10chibios_rt16CounterSemaphore11addCo
+ 1171 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore11getCounterIEv,"ax",%progbits
+ 1171      AFF30080 
+ 1171      AFF30080 
+ARM GAS  /tmp/cc4xRmdX.s 			page 23
+
+
+ 1172              		.align	2
+ 1173              		.p2align 4,,15
+ 1174              		.global	_ZN10chibios_rt16CounterSemaphore11getCounterIEv
+ 1175              		.thumb
+ 1176              		.thumb_func
+ 1177              		.type	_ZN10chibios_rt16CounterSemaphore11getCounterIEv, %function
+ 1178              	_ZN10chibios_rt16CounterSemaphore11getCounterIEv:
+ 1179              		@ args = 0, pretend = 0, frame = 0
+ 1180              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1181              		@ link register save eliminated.
+ 1182 0000 8068     		ldr	r0, [r0, #8]
+ 1183 0002 7047     		bx	lr
+ 1184              		.size	_ZN10chibios_rt16CounterSemaphore11getCounterIEv, .-_ZN10chibios_rt16CounterSemaphore11getCo
+ 1185 0004 AFF30080 		.section	.text._ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_,"ax",%progbits
+ 1185      AFF30080 
+ 1185      AFF30080 
+ 1186              		.align	2
+ 1187              		.p2align 4,,15
+ 1188              		.global	_ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_
+ 1189              		.thumb
+ 1190              		.thumb_func
+ 1191              		.type	_ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_, %function
+ 1192              	_ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_:
+ 1193              		@ args = 0, pretend = 0, frame = 0
+ 1194              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1195              		@ link register save eliminated.
+ 1196 0000 FFF7FEBF 		b	chSemSignalWait
+ 1197              		.size	_ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_, .-_ZN10chibios_rt16CounterSemaphore10
+ 1198 0004 AFF30080 		.section	.text._ZN10chibios_rt15BinarySemaphoreC2Eb,"ax",%progbits
+ 1198      AFF30080 
+ 1198      AFF30080 
+ 1199              		.align	2
+ 1200              		.p2align 4,,15
+ 1201              		.global	_ZN10chibios_rt15BinarySemaphoreC2Eb
+ 1202              		.thumb
+ 1203              		.thumb_func
+ 1204              		.type	_ZN10chibios_rt15BinarySemaphoreC2Eb, %function
+ 1205              	_ZN10chibios_rt15BinarySemaphoreC2Eb:
+ 1206              		@ args = 0, pretend = 0, frame = 0
+ 1207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1208 0000 10B5     		push	{r4, lr}
+ 1209 0002 81F00101 		eor	r1, r1, #1
+ 1210 0006 0446     		mov	r4, r0
+ 1211 0008 FFF7FEFF 		bl	chSemInit
+ 1212 000c 2046     		mov	r0, r4
+ 1213 000e 10BD     		pop	{r4, pc}
+ 1214              		.size	_ZN10chibios_rt15BinarySemaphoreC2Eb, .-_ZN10chibios_rt15BinarySemaphoreC2Eb
+ 1215              		.global	_ZN10chibios_rt15BinarySemaphoreC1Eb
+ 1216              		.thumb_set _ZN10chibios_rt15BinarySemaphoreC1Eb,_ZN10chibios_rt15BinarySemaphoreC2Eb
+ 1217              		.section	.text._ZN10chibios_rt15BinarySemaphore4waitEv,"ax",%progbits
+ 1218              		.align	2
+ 1219              		.p2align 4,,15
+ 1220              		.global	_ZN10chibios_rt15BinarySemaphore4waitEv
+ 1221              		.thumb
+ 1222              		.thumb_func
+ 1223              		.type	_ZN10chibios_rt15BinarySemaphore4waitEv, %function
+ 1224              	_ZN10chibios_rt15BinarySemaphore4waitEv:
+ARM GAS  /tmp/cc4xRmdX.s 			page 24
+
+
+ 1225              		@ args = 0, pretend = 0, frame = 0
+ 1226              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1227              		@ link register save eliminated.
+ 1228 0000 FFF7FEBF 		b	chSemWait
+ 1229              		.size	_ZN10chibios_rt15BinarySemaphore4waitEv, .-_ZN10chibios_rt15BinarySemaphore4waitEv
+ 1230 0004 AFF30080 		.section	.text._ZN10chibios_rt15BinarySemaphore5waitSEv,"ax",%progbits
+ 1230      AFF30080 
+ 1230      AFF30080 
+ 1231              		.align	2
+ 1232              		.p2align 4,,15
+ 1233              		.global	_ZN10chibios_rt15BinarySemaphore5waitSEv
+ 1234              		.thumb
+ 1235              		.thumb_func
+ 1236              		.type	_ZN10chibios_rt15BinarySemaphore5waitSEv, %function
+ 1237              	_ZN10chibios_rt15BinarySemaphore5waitSEv:
+ 1238              		@ args = 0, pretend = 0, frame = 0
+ 1239              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1240              		@ link register save eliminated.
+ 1241 0000 FFF7FEBF 		b	chSemWaitS
+ 1242              		.size	_ZN10chibios_rt15BinarySemaphore5waitSEv, .-_ZN10chibios_rt15BinarySemaphore5waitSEv
+ 1243 0004 AFF30080 		.section	.text._ZN10chibios_rt15BinarySemaphore11waitTimeoutEm,"ax",%progbits
+ 1243      AFF30080 
+ 1243      AFF30080 
+ 1244              		.align	2
+ 1245              		.p2align 4,,15
+ 1246              		.global	_ZN10chibios_rt15BinarySemaphore11waitTimeoutEm
+ 1247              		.thumb
+ 1248              		.thumb_func
+ 1249              		.type	_ZN10chibios_rt15BinarySemaphore11waitTimeoutEm, %function
+ 1250              	_ZN10chibios_rt15BinarySemaphore11waitTimeoutEm:
+ 1251              		@ args = 0, pretend = 0, frame = 0
+ 1252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1253              		@ link register save eliminated.
+ 1254 0000 FFF7FEBF 		b	chSemWaitTimeout
+ 1255              		.size	_ZN10chibios_rt15BinarySemaphore11waitTimeoutEm, .-_ZN10chibios_rt15BinarySemaphore11waitTim
+ 1256 0004 AFF30080 		.section	.text._ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm,"ax",%progbits
+ 1256      AFF30080 
+ 1256      AFF30080 
+ 1257              		.align	2
+ 1258              		.p2align 4,,15
+ 1259              		.global	_ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm
+ 1260              		.thumb
+ 1261              		.thumb_func
+ 1262              		.type	_ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm, %function
+ 1263              	_ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm:
+ 1264              		@ args = 0, pretend = 0, frame = 0
+ 1265              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1266              		@ link register save eliminated.
+ 1267 0000 FFF7FEBF 		b	chSemWaitTimeoutS
+ 1268              		.size	_ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm, .-_ZN10chibios_rt15BinarySemaphore12waitTi
+ 1269 0004 AFF30080 		.section	.text._ZN10chibios_rt15BinarySemaphore5resetEb,"ax",%progbits
+ 1269      AFF30080 
+ 1269      AFF30080 
+ 1270              		.align	2
+ 1271              		.p2align 4,,15
+ 1272              		.global	_ZN10chibios_rt15BinarySemaphore5resetEb
+ 1273              		.thumb
+ARM GAS  /tmp/cc4xRmdX.s 			page 25
+
+
+ 1274              		.thumb_func
+ 1275              		.type	_ZN10chibios_rt15BinarySemaphore5resetEb, %function
+ 1276              	_ZN10chibios_rt15BinarySemaphore5resetEb:
+ 1277              		@ args = 0, pretend = 0, frame = 0
+ 1278              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1279              		@ link register save eliminated.
+ 1280 0000 81F00101 		eor	r1, r1, #1
+ 1281 0004 FFF7FEBF 		b	chSemReset
+ 1282              		.size	_ZN10chibios_rt15BinarySemaphore5resetEb, .-_ZN10chibios_rt15BinarySemaphore5resetEb
+ 1283 0008 AFF30080 		.section	.text._ZN10chibios_rt15BinarySemaphore6resetIEb,"ax",%progbits
+ 1283      AFF30080 
+ 1284              		.align	2
+ 1285              		.p2align 4,,15
+ 1286              		.global	_ZN10chibios_rt15BinarySemaphore6resetIEb
+ 1287              		.thumb
+ 1288              		.thumb_func
+ 1289              		.type	_ZN10chibios_rt15BinarySemaphore6resetIEb, %function
+ 1290              	_ZN10chibios_rt15BinarySemaphore6resetIEb:
+ 1291              		@ args = 0, pretend = 0, frame = 0
+ 1292              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1293              		@ link register save eliminated.
+ 1294 0000 81F00101 		eor	r1, r1, #1
+ 1295 0004 FFF7FEBF 		b	chSemResetI
+ 1296              		.size	_ZN10chibios_rt15BinarySemaphore6resetIEb, .-_ZN10chibios_rt15BinarySemaphore6resetIEb
+ 1297 0008 AFF30080 		.section	.text._ZN10chibios_rt15BinarySemaphore6signalEv,"ax",%progbits
+ 1297      AFF30080 
+ 1298              		.align	2
+ 1299              		.p2align 4,,15
+ 1300              		.global	_ZN10chibios_rt15BinarySemaphore6signalEv
+ 1301              		.thumb
+ 1302              		.thumb_func
+ 1303              		.type	_ZN10chibios_rt15BinarySemaphore6signalEv, %function
+ 1304              	_ZN10chibios_rt15BinarySemaphore6signalEv:
+ 1305              		@ args = 0, pretend = 0, frame = 0
+ 1306              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1307 0000 10B5     		push	{r4, lr}
+ 1308 0002 2023     		movs	r3, #32
+ 1309 0004 0446     		mov	r4, r0
+ 1310              	@ 503 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+ 1311 0006 83F31188 		msr     BASEPRI, r3
+ 1312              	@ 0 "" 2
+ 1313              		.thumb
+ 1314 000a FFF7FEFF 		bl	dbg_check_lock
+ 1315 000e A368     		ldr	r3, [r4, #8]
+ 1316 0010 002B     		cmp	r3, #0
+ 1317 0012 07DD     		ble	.L146
+ 1318              	.L145:
+ 1319 0014 FFF7FEFF 		bl	chSchRescheduleS
+ 1320 0018 FFF7FEFF 		bl	dbg_check_unlock
+ 1321 001c 0023     		movs	r3, #0
+ 1322              	@ 503 "../../../ChibiOS/os/various/cpp_wrappers/ch.cpp" 1
+ 1323 001e 83F31188 		msr     BASEPRI, r3
+ 1324              	@ 0 "" 2
+ 1325              		.thumb
+ 1326 0022 10BD     		pop	{r4, pc}
+ 1327              	.L146:
+ 1328 0024 2046     		mov	r0, r4
+ARM GAS  /tmp/cc4xRmdX.s 			page 26
+
+
+ 1329 0026 FFF7FEFF 		bl	chSemSignalI
+ 1330 002a F3E7     		b	.L145
+ 1331              		.size	_ZN10chibios_rt15BinarySemaphore6signalEv, .-_ZN10chibios_rt15BinarySemaphore6signalEv
+ 1332 002c AFF30080 		.section	.text._ZN10chibios_rt15BinarySemaphore7signalIEv,"ax",%progbits
+ 1333              		.align	2
+ 1334              		.p2align 4,,15
+ 1335              		.global	_ZN10chibios_rt15BinarySemaphore7signalIEv
+ 1336              		.thumb
+ 1337              		.thumb_func
+ 1338              		.type	_ZN10chibios_rt15BinarySemaphore7signalIEv, %function
+ 1339              	_ZN10chibios_rt15BinarySemaphore7signalIEv:
+ 1340              		@ args = 0, pretend = 0, frame = 0
+ 1341              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1342              		@ link register save eliminated.
+ 1343 0000 8368     		ldr	r3, [r0, #8]
+ 1344 0002 002B     		cmp	r3, #0
+ 1345 0004 00DD     		ble	.L149
+ 1346 0006 7047     		bx	lr
+ 1347              	.L149:
+ 1348 0008 FFF7FEBF 		b	chSemSignalI
+ 1349              		.size	_ZN10chibios_rt15BinarySemaphore7signalIEv, .-_ZN10chibios_rt15BinarySemaphore7signalIEv
+ 1350 000c AFF30080 		.section	.text._ZN10chibios_rt15BinarySemaphore9getStateIEv,"ax",%progbits
+ 1351              		.align	2
+ 1352              		.p2align 4,,15
+ 1353              		.global	_ZN10chibios_rt15BinarySemaphore9getStateIEv
+ 1354              		.thumb
+ 1355              		.thumb_func
+ 1356              		.type	_ZN10chibios_rt15BinarySemaphore9getStateIEv, %function
+ 1357              	_ZN10chibios_rt15BinarySemaphore9getStateIEv:
+ 1358              		@ args = 0, pretend = 0, frame = 0
+ 1359              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1360              		@ link register save eliminated.
+ 1361 0000 8068     		ldr	r0, [r0, #8]
+ 1362 0002 0028     		cmp	r0, #0
+ 1363 0004 CCBF     		ite	gt
+ 1364 0006 0020     		movgt	r0, #0
+ 1365 0008 0120     		movle	r0, #1
+ 1366 000a 7047     		bx	lr
+ 1367              		.size	_ZN10chibios_rt15BinarySemaphore9getStateIEv, .-_ZN10chibios_rt15BinarySemaphore9getStateIEv
+ 1368 000c AFF30080 		.section	.text._ZN10chibios_rt5MutexC2Ev,"ax",%progbits
+ 1369              		.align	2
+ 1370              		.p2align 4,,15
+ 1371              		.global	_ZN10chibios_rt5MutexC2Ev
+ 1372              		.thumb
+ 1373              		.thumb_func
+ 1374              		.type	_ZN10chibios_rt5MutexC2Ev, %function
+ 1375              	_ZN10chibios_rt5MutexC2Ev:
+ 1376              		@ args = 0, pretend = 0, frame = 0
+ 1377              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1378 0000 10B5     		push	{r4, lr}
+ 1379 0002 0446     		mov	r4, r0
+ 1380 0004 FFF7FEFF 		bl	chMtxInit
+ 1381 0008 2046     		mov	r0, r4
+ 1382 000a 10BD     		pop	{r4, pc}
+ 1383              		.size	_ZN10chibios_rt5MutexC2Ev, .-_ZN10chibios_rt5MutexC2Ev
+ 1384              		.global	_ZN10chibios_rt5MutexC1Ev
+ 1385              		.thumb_set _ZN10chibios_rt5MutexC1Ev,_ZN10chibios_rt5MutexC2Ev
+ARM GAS  /tmp/cc4xRmdX.s 			page 27
+
+
+ 1386 000c AFF30080 		.section	.text._ZN10chibios_rt5Mutex7tryLockEv,"ax",%progbits
+ 1387              		.align	2
+ 1388              		.p2align 4,,15
+ 1389              		.global	_ZN10chibios_rt5Mutex7tryLockEv
+ 1390              		.thumb
+ 1391              		.thumb_func
+ 1392              		.type	_ZN10chibios_rt5Mutex7tryLockEv, %function
+ 1393              	_ZN10chibios_rt5Mutex7tryLockEv:
+ 1394              		@ args = 0, pretend = 0, frame = 0
+ 1395              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1396              		@ link register save eliminated.
+ 1397 0000 FFF7FEBF 		b	chMtxTryLock
+ 1398              		.size	_ZN10chibios_rt5Mutex7tryLockEv, .-_ZN10chibios_rt5Mutex7tryLockEv
+ 1399 0004 AFF30080 		.section	.text._ZN10chibios_rt5Mutex8tryLockSEv,"ax",%progbits
+ 1399      AFF30080 
+ 1399      AFF30080 
+ 1400              		.align	2
+ 1401              		.p2align 4,,15
+ 1402              		.global	_ZN10chibios_rt5Mutex8tryLockSEv
+ 1403              		.thumb
+ 1404              		.thumb_func
+ 1405              		.type	_ZN10chibios_rt5Mutex8tryLockSEv, %function
+ 1406              	_ZN10chibios_rt5Mutex8tryLockSEv:
+ 1407              		@ args = 0, pretend = 0, frame = 0
+ 1408              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1409              		@ link register save eliminated.
+ 1410 0000 FFF7FEBF 		b	chMtxTryLockS
+ 1411              		.size	_ZN10chibios_rt5Mutex8tryLockSEv, .-_ZN10chibios_rt5Mutex8tryLockSEv
+ 1412 0004 AFF30080 		.section	.text._ZN10chibios_rt5Mutex4lockEv,"ax",%progbits
+ 1412      AFF30080 
+ 1412      AFF30080 
+ 1413              		.align	2
+ 1414              		.p2align 4,,15
+ 1415              		.global	_ZN10chibios_rt5Mutex4lockEv
+ 1416              		.thumb
+ 1417              		.thumb_func
+ 1418              		.type	_ZN10chibios_rt5Mutex4lockEv, %function
+ 1419              	_ZN10chibios_rt5Mutex4lockEv:
+ 1420              		@ args = 0, pretend = 0, frame = 0
+ 1421              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1422              		@ link register save eliminated.
+ 1423 0000 FFF7FEBF 		b	chMtxLock
+ 1424              		.size	_ZN10chibios_rt5Mutex4lockEv, .-_ZN10chibios_rt5Mutex4lockEv
+ 1425 0004 AFF30080 		.section	.text._ZN10chibios_rt5Mutex5lockSEv,"ax",%progbits
+ 1425      AFF30080 
+ 1425      AFF30080 
+ 1426              		.align	2
+ 1427              		.p2align 4,,15
+ 1428              		.global	_ZN10chibios_rt5Mutex5lockSEv
+ 1429              		.thumb
+ 1430              		.thumb_func
+ 1431              		.type	_ZN10chibios_rt5Mutex5lockSEv, %function
+ 1432              	_ZN10chibios_rt5Mutex5lockSEv:
+ 1433              		@ args = 0, pretend = 0, frame = 0
+ 1434              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1435              		@ link register save eliminated.
+ 1436 0000 FFF7FEBF 		b	chMtxLockS
+ARM GAS  /tmp/cc4xRmdX.s 			page 28
+
+
+ 1437              		.size	_ZN10chibios_rt5Mutex5lockSEv, .-_ZN10chibios_rt5Mutex5lockSEv
+ 1438 0004 AFF30080 		.section	.text._ZN10chibios_rt7CondVarC2Ev,"ax",%progbits
+ 1438      AFF30080 
+ 1438      AFF30080 
+ 1439              		.align	2
+ 1440              		.p2align 4,,15
+ 1441              		.global	_ZN10chibios_rt7CondVarC2Ev
+ 1442              		.thumb
+ 1443              		.thumb_func
+ 1444              		.type	_ZN10chibios_rt7CondVarC2Ev, %function
+ 1445              	_ZN10chibios_rt7CondVarC2Ev:
+ 1446              		@ args = 0, pretend = 0, frame = 0
+ 1447              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1448 0000 10B5     		push	{r4, lr}
+ 1449 0002 0446     		mov	r4, r0
+ 1450 0004 FFF7FEFF 		bl	chCondInit
+ 1451 0008 2046     		mov	r0, r4
+ 1452 000a 10BD     		pop	{r4, pc}
+ 1453              		.size	_ZN10chibios_rt7CondVarC2Ev, .-_ZN10chibios_rt7CondVarC2Ev
+ 1454              		.global	_ZN10chibios_rt7CondVarC1Ev
+ 1455              		.thumb_set _ZN10chibios_rt7CondVarC1Ev,_ZN10chibios_rt7CondVarC2Ev
+ 1456 000c AFF30080 		.section	.text._ZN10chibios_rt7CondVar6signalEv,"ax",%progbits
+ 1457              		.align	2
+ 1458              		.p2align 4,,15
+ 1459              		.global	_ZN10chibios_rt7CondVar6signalEv
+ 1460              		.thumb
+ 1461              		.thumb_func
+ 1462              		.type	_ZN10chibios_rt7CondVar6signalEv, %function
+ 1463              	_ZN10chibios_rt7CondVar6signalEv:
+ 1464              		@ args = 0, pretend = 0, frame = 0
+ 1465              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1466              		@ link register save eliminated.
+ 1467 0000 FFF7FEBF 		b	chCondSignal
+ 1468              		.size	_ZN10chibios_rt7CondVar6signalEv, .-_ZN10chibios_rt7CondVar6signalEv
+ 1469 0004 AFF30080 		.section	.text._ZN10chibios_rt7CondVar7signalIEv,"ax",%progbits
+ 1469      AFF30080 
+ 1469      AFF30080 
+ 1470              		.align	2
+ 1471              		.p2align 4,,15
+ 1472              		.global	_ZN10chibios_rt7CondVar7signalIEv
+ 1473              		.thumb
+ 1474              		.thumb_func
+ 1475              		.type	_ZN10chibios_rt7CondVar7signalIEv, %function
+ 1476              	_ZN10chibios_rt7CondVar7signalIEv:
+ 1477              		@ args = 0, pretend = 0, frame = 0
+ 1478              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1479              		@ link register save eliminated.
+ 1480 0000 FFF7FEBF 		b	chCondSignalI
+ 1481              		.size	_ZN10chibios_rt7CondVar7signalIEv, .-_ZN10chibios_rt7CondVar7signalIEv
+ 1482 0004 AFF30080 		.section	.text._ZN10chibios_rt7CondVar9broadcastEv,"ax",%progbits
+ 1482      AFF30080 
+ 1482      AFF30080 
+ 1483              		.align	2
+ 1484              		.p2align 4,,15
+ 1485              		.global	_ZN10chibios_rt7CondVar9broadcastEv
+ 1486              		.thumb
+ 1487              		.thumb_func
+ARM GAS  /tmp/cc4xRmdX.s 			page 29
+
+
+ 1488              		.type	_ZN10chibios_rt7CondVar9broadcastEv, %function
+ 1489              	_ZN10chibios_rt7CondVar9broadcastEv:
+ 1490              		@ args = 0, pretend = 0, frame = 0
+ 1491              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1492              		@ link register save eliminated.
+ 1493 0000 FFF7FEBF 		b	chCondBroadcast
+ 1494              		.size	_ZN10chibios_rt7CondVar9broadcastEv, .-_ZN10chibios_rt7CondVar9broadcastEv
+ 1495 0004 AFF30080 		.section	.text._ZN10chibios_rt7CondVar10broadcastIEv,"ax",%progbits
+ 1495      AFF30080 
+ 1495      AFF30080 
+ 1496              		.align	2
+ 1497              		.p2align 4,,15
+ 1498              		.global	_ZN10chibios_rt7CondVar10broadcastIEv
+ 1499              		.thumb
+ 1500              		.thumb_func
+ 1501              		.type	_ZN10chibios_rt7CondVar10broadcastIEv, %function
+ 1502              	_ZN10chibios_rt7CondVar10broadcastIEv:
+ 1503              		@ args = 0, pretend = 0, frame = 0
+ 1504              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1505              		@ link register save eliminated.
+ 1506 0000 FFF7FEBF 		b	chCondBroadcastI
+ 1507              		.size	_ZN10chibios_rt7CondVar10broadcastIEv, .-_ZN10chibios_rt7CondVar10broadcastIEv
+ 1508 0004 AFF30080 		.section	.text._ZN10chibios_rt7CondVar4waitEv,"ax",%progbits
+ 1508      AFF30080 
+ 1508      AFF30080 
+ 1509              		.align	2
+ 1510              		.p2align 4,,15
+ 1511              		.global	_ZN10chibios_rt7CondVar4waitEv
+ 1512              		.thumb
+ 1513              		.thumb_func
+ 1514              		.type	_ZN10chibios_rt7CondVar4waitEv, %function
+ 1515              	_ZN10chibios_rt7CondVar4waitEv:
+ 1516              		@ args = 0, pretend = 0, frame = 0
+ 1517              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1518              		@ link register save eliminated.
+ 1519 0000 FFF7FEBF 		b	chCondWait
+ 1520              		.size	_ZN10chibios_rt7CondVar4waitEv, .-_ZN10chibios_rt7CondVar4waitEv
+ 1521 0004 AFF30080 		.section	.text._ZN10chibios_rt7CondVar5waitSEv,"ax",%progbits
+ 1521      AFF30080 
+ 1521      AFF30080 
+ 1522              		.align	2
+ 1523              		.p2align 4,,15
+ 1524              		.global	_ZN10chibios_rt7CondVar5waitSEv
+ 1525              		.thumb
+ 1526              		.thumb_func
+ 1527              		.type	_ZN10chibios_rt7CondVar5waitSEv, %function
+ 1528              	_ZN10chibios_rt7CondVar5waitSEv:
+ 1529              		@ args = 0, pretend = 0, frame = 0
+ 1530              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1531              		@ link register save eliminated.
+ 1532 0000 FFF7FEBF 		b	chCondWaitS
+ 1533              		.size	_ZN10chibios_rt7CondVar5waitSEv, .-_ZN10chibios_rt7CondVar5waitSEv
+ 1534 0004 AFF30080 		.section	.text._ZN10chibios_rt7CondVar11waitTimeoutEm,"ax",%progbits
+ 1534      AFF30080 
+ 1534      AFF30080 
+ 1535              		.align	2
+ 1536              		.p2align 4,,15
+ARM GAS  /tmp/cc4xRmdX.s 			page 30
+
+
+ 1537              		.global	_ZN10chibios_rt7CondVar11waitTimeoutEm
+ 1538              		.thumb
+ 1539              		.thumb_func
+ 1540              		.type	_ZN10chibios_rt7CondVar11waitTimeoutEm, %function
+ 1541              	_ZN10chibios_rt7CondVar11waitTimeoutEm:
+ 1542              		@ args = 0, pretend = 0, frame = 0
+ 1543              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1544              		@ link register save eliminated.
+ 1545 0000 FFF7FEBF 		b	chCondWaitTimeout
+ 1546              		.size	_ZN10chibios_rt7CondVar11waitTimeoutEm, .-_ZN10chibios_rt7CondVar11waitTimeoutEm
+ 1547 0004 AFF30080 		.section	.text._ZN10chibios_rt11EvtListener16getAndClearFlagsEv,"ax",%progbits
+ 1547      AFF30080 
+ 1547      AFF30080 
+ 1548              		.align	2
+ 1549              		.p2align 4,,15
+ 1550              		.global	_ZN10chibios_rt11EvtListener16getAndClearFlagsEv
+ 1551              		.thumb
+ 1552              		.thumb_func
+ 1553              		.type	_ZN10chibios_rt11EvtListener16getAndClearFlagsEv, %function
+ 1554              	_ZN10chibios_rt11EvtListener16getAndClearFlagsEv:
+ 1555              		@ args = 0, pretend = 0, frame = 0
+ 1556              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1557              		@ link register save eliminated.
+ 1558 0000 FFF7FEBF 		b	chEvtGetAndClearFlags
+ 1559              		.size	_ZN10chibios_rt11EvtListener16getAndClearFlagsEv, .-_ZN10chibios_rt11EvtListener16getAndClea
+ 1560 0004 AFF30080 		.section	.text._ZN10chibios_rt11EvtListener17getAndClearFlagsIEv,"ax",%progbits
+ 1560      AFF30080 
+ 1560      AFF30080 
+ 1561              		.align	2
+ 1562              		.p2align 4,,15
+ 1563              		.global	_ZN10chibios_rt11EvtListener17getAndClearFlagsIEv
+ 1564              		.thumb
+ 1565              		.thumb_func
+ 1566              		.type	_ZN10chibios_rt11EvtListener17getAndClearFlagsIEv, %function
+ 1567              	_ZN10chibios_rt11EvtListener17getAndClearFlagsIEv:
+ 1568              		@ args = 0, pretend = 0, frame = 0
+ 1569              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1570              		@ link register save eliminated.
+ 1571 0000 FFF7FEBF 		b	chEvtGetAndClearFlagsI
+ 1572              		.size	_ZN10chibios_rt11EvtListener17getAndClearFlagsIEv, .-_ZN10chibios_rt11EvtListener17getAndCle
+ 1573 0004 AFF30080 		.section	.text._ZN10chibios_rt9EvtSourceC2Ev,"ax",%progbits
+ 1573      AFF30080 
+ 1573      AFF30080 
+ 1574              		.align	2
+ 1575              		.p2align 4,,15
+ 1576              		.global	_ZN10chibios_rt9EvtSourceC2Ev
+ 1577              		.thumb
+ 1578              		.thumb_func
+ 1579              		.type	_ZN10chibios_rt9EvtSourceC2Ev, %function
+ 1580              	_ZN10chibios_rt9EvtSourceC2Ev:
+ 1581              		@ args = 0, pretend = 0, frame = 0
+ 1582              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1583              		@ link register save eliminated.
+ 1584 0000 0060     		str	r0, [r0]
+ 1585 0002 7047     		bx	lr
+ 1586              		.size	_ZN10chibios_rt9EvtSourceC2Ev, .-_ZN10chibios_rt9EvtSourceC2Ev
+ 1587              		.global	_ZN10chibios_rt9EvtSourceC1Ev
+ARM GAS  /tmp/cc4xRmdX.s 			page 31
+
+
+ 1588              		.thumb_set _ZN10chibios_rt9EvtSourceC1Ev,_ZN10chibios_rt9EvtSourceC2Ev
+ 1589 0004 AFF30080 		.section	.text._ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl,"ax",%progbits
+ 1589      AFF30080 
+ 1589      AFF30080 
+ 1590              		.align	2
+ 1591              		.p2align 4,,15
+ 1592              		.global	_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+ 1593              		.thumb
+ 1594              		.thumb_func
+ 1595              		.type	_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl, %function
+ 1596              	_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl:
+ 1597              		@ args = 0, pretend = 0, frame = 0
+ 1598              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1599              		@ link register save eliminated.
+ 1600 0000 0123     		movs	r3, #1
+ 1601 0002 03FA02F2 		lsl	r2, r3, r2
+ 1602 0006 FFF7FEBF 		b	chEvtRegisterMask
+ 1603              		.size	_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl, .-_ZN10chibios_rt9EvtSource11reg
+ 1604 000a 00BFAFF3 		.section	.text._ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm,"ax",%progbits
+ 1604      0080
+ 1605              		.align	2
+ 1606              		.p2align 4,,15
+ 1607              		.global	_ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm
+ 1608              		.thumb
+ 1609              		.thumb_func
+ 1610              		.type	_ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm, %function
+ 1611              	_ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm:
+ 1612              		@ args = 0, pretend = 0, frame = 0
+ 1613              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1614              		@ link register save eliminated.
+ 1615 0000 FFF7FEBF 		b	chEvtRegisterMask
+ 1616              		.size	_ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm, .-_ZN10chibios_rt9EvtSource12re
+ 1617 0004 AFF30080 		.section	.text._ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE,"ax",%progbits
+ 1617      AFF30080 
+ 1617      AFF30080 
+ 1618              		.align	2
+ 1619              		.p2align 4,,15
+ 1620              		.global	_ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
+ 1621              		.thumb
+ 1622              		.thumb_func
+ 1623              		.type	_ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE, %function
+ 1624              	_ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE:
+ 1625              		@ args = 0, pretend = 0, frame = 0
+ 1626              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1627              		@ link register save eliminated.
+ 1628 0000 FFF7FEBF 		b	chEvtUnregister
+ 1629              		.size	_ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE, .-_ZN10chibios_rt9EvtSource10unreg
+ 1630 0004 AFF30080 		.section	.text._ZN10chibios_rt9EvtSource14broadcastFlagsEm,"ax",%progbits
+ 1630      AFF30080 
+ 1630      AFF30080 
+ 1631              		.align	2
+ 1632              		.p2align 4,,15
+ 1633              		.global	_ZN10chibios_rt9EvtSource14broadcastFlagsEm
+ 1634              		.thumb
+ 1635              		.thumb_func
+ 1636              		.type	_ZN10chibios_rt9EvtSource14broadcastFlagsEm, %function
+ 1637              	_ZN10chibios_rt9EvtSource14broadcastFlagsEm:
+ARM GAS  /tmp/cc4xRmdX.s 			page 32
+
+
+ 1638              		@ args = 0, pretend = 0, frame = 0
+ 1639              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1640              		@ link register save eliminated.
+ 1641 0000 FFF7FEBF 		b	chEvtBroadcastFlags
+ 1642              		.size	_ZN10chibios_rt9EvtSource14broadcastFlagsEm, .-_ZN10chibios_rt9EvtSource14broadcastFlagsEm
+ 1643 0004 AFF30080 		.section	.text._ZN10chibios_rt9EvtSource15broadcastFlagsIEm,"ax",%progbits
+ 1643      AFF30080 
+ 1643      AFF30080 
+ 1644              		.align	2
+ 1645              		.p2align 4,,15
+ 1646              		.global	_ZN10chibios_rt9EvtSource15broadcastFlagsIEm
+ 1647              		.thumb
+ 1648              		.thumb_func
+ 1649              		.type	_ZN10chibios_rt9EvtSource15broadcastFlagsIEm, %function
+ 1650              	_ZN10chibios_rt9EvtSource15broadcastFlagsIEm:
+ 1651              		@ args = 0, pretend = 0, frame = 0
+ 1652              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1653              		@ link register save eliminated.
+ 1654 0000 FFF7FEBF 		b	chEvtBroadcastFlagsI
+ 1655              		.size	_ZN10chibios_rt9EvtSource15broadcastFlagsIEm, .-_ZN10chibios_rt9EvtSource15broadcastFlagsIEm
+ 1656 0004 AFF30080 		.section	.text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv,"ax",%progbits
+ 1656      AFF30080 
+ 1656      AFF30080 
+ 1657              		.align	2
+ 1658              		.p2align 4,,15
+ 1659              		.global	_ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv
+ 1660              		.thumb
+ 1661              		.thumb_func
+ 1662              		.type	_ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv, %function
+ 1663              	_ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:
+ 1664              		@ args = 4, pretend = 0, frame = 0
+ 1665              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1666 0000 30B5     		push	{r4, r5, lr}
+ 1667 0002 83B0     		sub	sp, sp, #12
+ 1668 0004 069C     		ldr	r4, [sp, #24]
+ 1669 0006 0546     		mov	r5, r0
+ 1670 0008 0094     		str	r4, [sp]
+ 1671 000a FFF7FEFF 		bl	chIQInit
+ 1672 000e 2846     		mov	r0, r5
+ 1673 0010 03B0     		add	sp, sp, #12
+ 1674              		@ sp needed
+ 1675 0012 30BD     		pop	{r4, r5, pc}
+ 1676              		.size	_ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv, .-_ZN10chibios_rt7InQueueC2EPhjPFvP12Gen
+ 1677              		.global	_ZN10chibios_rt7InQueueC1EPhjPFvP12GenericQueueEPv
+ 1678              		.thumb_set _ZN10chibios_rt7InQueueC1EPhjPFvP12GenericQueueEPv,_ZN10chibios_rt7InQueueC2EPhjPFvP12G
+ 1679 0014 AFF30080 		.section	.text._ZN10chibios_rt7InQueue8getFullIEv,"ax",%progbits
+ 1679      AFF30080 
+ 1679      AFF30080 
+ 1680              		.align	2
+ 1681              		.p2align 4,,15
+ 1682              		.global	_ZN10chibios_rt7InQueue8getFullIEv
+ 1683              		.thumb
+ 1684              		.thumb_func
+ 1685              		.type	_ZN10chibios_rt7InQueue8getFullIEv, %function
+ 1686              	_ZN10chibios_rt7InQueue8getFullIEv:
+ 1687              		@ args = 0, pretend = 0, frame = 0
+ 1688              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cc4xRmdX.s 			page 33
+
+
+ 1689              		@ link register save eliminated.
+ 1690 0000 8068     		ldr	r0, [r0, #8]
+ 1691 0002 7047     		bx	lr
+ 1692              		.size	_ZN10chibios_rt7InQueue8getFullIEv, .-_ZN10chibios_rt7InQueue8getFullIEv
+ 1693 0004 AFF30080 		.section	.text._ZN10chibios_rt7InQueue9getEmptyIEv,"ax",%progbits
+ 1693      AFF30080 
+ 1693      AFF30080 
+ 1694              		.align	2
+ 1695              		.p2align 4,,15
+ 1696              		.global	_ZN10chibios_rt7InQueue9getEmptyIEv
+ 1697              		.thumb
+ 1698              		.thumb_func
+ 1699              		.type	_ZN10chibios_rt7InQueue9getEmptyIEv, %function
+ 1700              	_ZN10chibios_rt7InQueue9getEmptyIEv:
+ 1701              		@ args = 0, pretend = 0, frame = 0
+ 1702              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1703              		@ link register save eliminated.
+ 1704 0000 0169     		ldr	r1, [r0, #16]
+ 1705 0002 C268     		ldr	r2, [r0, #12]
+ 1706 0004 8368     		ldr	r3, [r0, #8]
+ 1707 0006 881A     		subs	r0, r1, r2
+ 1708 0008 C01A     		subs	r0, r0, r3
+ 1709 000a 7047     		bx	lr
+ 1710              		.size	_ZN10chibios_rt7InQueue9getEmptyIEv, .-_ZN10chibios_rt7InQueue9getEmptyIEv
+ 1711 000c AFF30080 		.section	.text._ZN10chibios_rt7InQueue8isEmptyIEv,"ax",%progbits
+ 1712              		.align	2
+ 1713              		.p2align 4,,15
+ 1714              		.global	_ZN10chibios_rt7InQueue8isEmptyIEv
+ 1715              		.thumb
+ 1716              		.thumb_func
+ 1717              		.type	_ZN10chibios_rt7InQueue8isEmptyIEv, %function
+ 1718              	_ZN10chibios_rt7InQueue8isEmptyIEv:
+ 1719              		@ args = 0, pretend = 0, frame = 0
+ 1720              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1721              		@ link register save eliminated.
+ 1722 0000 8068     		ldr	r0, [r0, #8]
+ 1723 0002 D0F10100 		rsbs	r0, r0, #1
+ 1724 0006 38BF     		it	cc
+ 1725 0008 0020     		movcc	r0, #0
+ 1726 000a 7047     		bx	lr
+ 1727              		.size	_ZN10chibios_rt7InQueue8isEmptyIEv, .-_ZN10chibios_rt7InQueue8isEmptyIEv
+ 1728 000c AFF30080 		.section	.text._ZN10chibios_rt7InQueue7isFullIEv,"ax",%progbits
+ 1729              		.align	2
+ 1730              		.p2align 4,,15
+ 1731              		.global	_ZN10chibios_rt7InQueue7isFullIEv
+ 1732              		.thumb
+ 1733              		.thumb_func
+ 1734              		.type	_ZN10chibios_rt7InQueue7isFullIEv, %function
+ 1735              	_ZN10chibios_rt7InQueue7isFullIEv:
+ 1736              		@ args = 0, pretend = 0, frame = 0
+ 1737              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1738              		@ link register save eliminated.
+ 1739 0000 4269     		ldr	r2, [r0, #20]
+ 1740 0002 8369     		ldr	r3, [r0, #24]
+ 1741 0004 9A42     		cmp	r2, r3
+ 1742 0006 01D0     		beq	.L179
+ 1743 0008 0020     		movs	r0, #0
+ARM GAS  /tmp/cc4xRmdX.s 			page 34
+
+
+ 1744 000a 7047     		bx	lr
+ 1745              	.L179:
+ 1746 000c 8068     		ldr	r0, [r0, #8]
+ 1747 000e 0030     		adds	r0, r0, #0
+ 1748 0010 18BF     		it	ne
+ 1749 0012 0120     		movne	r0, #1
+ 1750 0014 7047     		bx	lr
+ 1751              		.size	_ZN10chibios_rt7InQueue7isFullIEv, .-_ZN10chibios_rt7InQueue7isFullIEv
+ 1752 0016 00BFAFF3 		.section	.text._ZN10chibios_rt7InQueue6resetIEv,"ax",%progbits
+ 1752      0080AFF3 
+ 1752      0080
+ 1753              		.align	2
+ 1754              		.p2align 4,,15
+ 1755              		.global	_ZN10chibios_rt7InQueue6resetIEv
+ 1756              		.thumb
+ 1757              		.thumb_func
+ 1758              		.type	_ZN10chibios_rt7InQueue6resetIEv, %function
+ 1759              	_ZN10chibios_rt7InQueue6resetIEv:
+ 1760              		@ args = 0, pretend = 0, frame = 0
+ 1761              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1762              		@ link register save eliminated.
+ 1763 0000 FFF7FEBF 		b	chIQResetI
+ 1764              		.size	_ZN10chibios_rt7InQueue6resetIEv, .-_ZN10chibios_rt7InQueue6resetIEv
+ 1765 0004 AFF30080 		.section	.text._ZN10chibios_rt7InQueue4putIEh,"ax",%progbits
+ 1765      AFF30080 
+ 1765      AFF30080 
+ 1766              		.align	2
+ 1767              		.p2align 4,,15
+ 1768              		.global	_ZN10chibios_rt7InQueue4putIEh
+ 1769              		.thumb
+ 1770              		.thumb_func
+ 1771              		.type	_ZN10chibios_rt7InQueue4putIEh, %function
+ 1772              	_ZN10chibios_rt7InQueue4putIEh:
+ 1773              		@ args = 0, pretend = 0, frame = 0
+ 1774              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1775              		@ link register save eliminated.
+ 1776 0000 FFF7FEBF 		b	chIQPutI
+ 1777              		.size	_ZN10chibios_rt7InQueue4putIEh, .-_ZN10chibios_rt7InQueue4putIEh
+ 1778 0004 AFF30080 		.section	.text._ZN10chibios_rt7InQueue3getEv,"ax",%progbits
+ 1778      AFF30080 
+ 1778      AFF30080 
+ 1779              		.align	2
+ 1780              		.p2align 4,,15
+ 1781              		.global	_ZN10chibios_rt7InQueue3getEv
+ 1782              		.thumb
+ 1783              		.thumb_func
+ 1784              		.type	_ZN10chibios_rt7InQueue3getEv, %function
+ 1785              	_ZN10chibios_rt7InQueue3getEv:
+ 1786              		@ args = 0, pretend = 0, frame = 0
+ 1787              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1788              		@ link register save eliminated.
+ 1789 0000 4FF0FF31 		mov	r1, #-1
+ 1790 0004 FFF7FEBF 		b	chIQGetTimeout
+ 1791              		.size	_ZN10chibios_rt7InQueue3getEv, .-_ZN10chibios_rt7InQueue3getEv
+ 1792 0008 AFF30080 		.section	.text._ZN10chibios_rt7InQueue10getTimeoutEm,"ax",%progbits
+ 1792      AFF30080 
+ 1793              		.align	2
+ARM GAS  /tmp/cc4xRmdX.s 			page 35
+
+
+ 1794              		.p2align 4,,15
+ 1795              		.global	_ZN10chibios_rt7InQueue10getTimeoutEm
+ 1796              		.thumb
+ 1797              		.thumb_func
+ 1798              		.type	_ZN10chibios_rt7InQueue10getTimeoutEm, %function
+ 1799              	_ZN10chibios_rt7InQueue10getTimeoutEm:
+ 1800              		@ args = 0, pretend = 0, frame = 0
+ 1801              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1802              		@ link register save eliminated.
+ 1803 0000 FFF7FEBF 		b	chIQGetTimeout
+ 1804              		.size	_ZN10chibios_rt7InQueue10getTimeoutEm, .-_ZN10chibios_rt7InQueue10getTimeoutEm
+ 1805 0004 AFF30080 		.section	.text._ZN10chibios_rt7InQueue11readTimeoutEPhjm,"ax",%progbits
+ 1805      AFF30080 
+ 1805      AFF30080 
+ 1806              		.align	2
+ 1807              		.p2align 4,,15
+ 1808              		.global	_ZN10chibios_rt7InQueue11readTimeoutEPhjm
+ 1809              		.thumb
+ 1810              		.thumb_func
+ 1811              		.type	_ZN10chibios_rt7InQueue11readTimeoutEPhjm, %function
+ 1812              	_ZN10chibios_rt7InQueue11readTimeoutEPhjm:
+ 1813              		@ args = 0, pretend = 0, frame = 0
+ 1814              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1815              		@ link register save eliminated.
+ 1816 0000 FFF7FEBF 		b	chIQReadTimeout
+ 1817              		.size	_ZN10chibios_rt7InQueue11readTimeoutEPhjm, .-_ZN10chibios_rt7InQueue11readTimeoutEPhjm
+ 1818 0004 AFF30080 		.section	.text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv,"ax",%progbits
+ 1818      AFF30080 
+ 1818      AFF30080 
+ 1819              		.align	2
+ 1820              		.p2align 4,,15
+ 1821              		.global	_ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv
+ 1822              		.thumb
+ 1823              		.thumb_func
+ 1824              		.type	_ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv, %function
+ 1825              	_ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:
+ 1826              		@ args = 4, pretend = 0, frame = 0
+ 1827              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1828 0000 30B5     		push	{r4, r5, lr}
+ 1829 0002 83B0     		sub	sp, sp, #12
+ 1830 0004 069C     		ldr	r4, [sp, #24]
+ 1831 0006 0546     		mov	r5, r0
+ 1832 0008 0094     		str	r4, [sp]
+ 1833 000a FFF7FEFF 		bl	chOQInit
+ 1834 000e 2846     		mov	r0, r5
+ 1835 0010 03B0     		add	sp, sp, #12
+ 1836              		@ sp needed
+ 1837 0012 30BD     		pop	{r4, r5, pc}
+ 1838              		.size	_ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv, .-_ZN10chibios_rt8OutQueueC2EPhjPFvP12G
+ 1839              		.global	_ZN10chibios_rt8OutQueueC1EPhjPFvP12GenericQueueEPv
+ 1840              		.thumb_set _ZN10chibios_rt8OutQueueC1EPhjPFvP12GenericQueueEPv,_ZN10chibios_rt8OutQueueC2EPhjPFvP1
+ 1841 0014 AFF30080 		.section	.text._ZN10chibios_rt8OutQueue8getFullIEv,"ax",%progbits
+ 1841      AFF30080 
+ 1841      AFF30080 
+ 1842              		.align	2
+ 1843              		.p2align 4,,15
+ 1844              		.global	_ZN10chibios_rt8OutQueue8getFullIEv
+ARM GAS  /tmp/cc4xRmdX.s 			page 36
+
+
+ 1845              		.thumb
+ 1846              		.thumb_func
+ 1847              		.type	_ZN10chibios_rt8OutQueue8getFullIEv, %function
+ 1848              	_ZN10chibios_rt8OutQueue8getFullIEv:
+ 1849              		@ args = 0, pretend = 0, frame = 0
+ 1850              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1851              		@ link register save eliminated.
+ 1852 0000 0169     		ldr	r1, [r0, #16]
+ 1853 0002 C268     		ldr	r2, [r0, #12]
+ 1854 0004 8368     		ldr	r3, [r0, #8]
+ 1855 0006 881A     		subs	r0, r1, r2
+ 1856 0008 C01A     		subs	r0, r0, r3
+ 1857 000a 7047     		bx	lr
+ 1858              		.size	_ZN10chibios_rt8OutQueue8getFullIEv, .-_ZN10chibios_rt8OutQueue8getFullIEv
+ 1859 000c AFF30080 		.section	.text._ZN10chibios_rt8OutQueue9getEmptyIEv,"ax",%progbits
+ 1860              		.align	2
+ 1861              		.p2align 4,,15
+ 1862              		.global	_ZN10chibios_rt8OutQueue9getEmptyIEv
+ 1863              		.thumb
+ 1864              		.thumb_func
+ 1865              		.type	_ZN10chibios_rt8OutQueue9getEmptyIEv, %function
+ 1866              	_ZN10chibios_rt8OutQueue9getEmptyIEv:
+ 1867              		@ args = 0, pretend = 0, frame = 0
+ 1868              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1869              		@ link register save eliminated.
+ 1870 0000 8068     		ldr	r0, [r0, #8]
+ 1871 0002 7047     		bx	lr
+ 1872              		.size	_ZN10chibios_rt8OutQueue9getEmptyIEv, .-_ZN10chibios_rt8OutQueue9getEmptyIEv
+ 1873 0004 AFF30080 		.section	.text._ZN10chibios_rt8OutQueue8isEmptyIEv,"ax",%progbits
+ 1873      AFF30080 
+ 1873      AFF30080 
+ 1874              		.align	2
+ 1875              		.p2align 4,,15
+ 1876              		.global	_ZN10chibios_rt8OutQueue8isEmptyIEv
+ 1877              		.thumb
+ 1878              		.thumb_func
+ 1879              		.type	_ZN10chibios_rt8OutQueue8isEmptyIEv, %function
+ 1880              	_ZN10chibios_rt8OutQueue8isEmptyIEv:
+ 1881              		@ args = 0, pretend = 0, frame = 0
+ 1882              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1883              		@ link register save eliminated.
+ 1884 0000 4269     		ldr	r2, [r0, #20]
+ 1885 0002 8369     		ldr	r3, [r0, #24]
+ 1886 0004 9A42     		cmp	r2, r3
+ 1887 0006 01D0     		beq	.L191
+ 1888 0008 0020     		movs	r0, #0
+ 1889 000a 7047     		bx	lr
+ 1890              	.L191:
+ 1891 000c 8068     		ldr	r0, [r0, #8]
+ 1892 000e 0030     		adds	r0, r0, #0
+ 1893 0010 18BF     		it	ne
+ 1894 0012 0120     		movne	r0, #1
+ 1895 0014 7047     		bx	lr
+ 1896              		.size	_ZN10chibios_rt8OutQueue8isEmptyIEv, .-_ZN10chibios_rt8OutQueue8isEmptyIEv
+ 1897 0016 00BFAFF3 		.section	.text._ZN10chibios_rt8OutQueue7isFullIEv,"ax",%progbits
+ 1897      0080AFF3 
+ 1897      0080
+ARM GAS  /tmp/cc4xRmdX.s 			page 37
+
+
+ 1898              		.align	2
+ 1899              		.p2align 4,,15
+ 1900              		.global	_ZN10chibios_rt8OutQueue7isFullIEv
+ 1901              		.thumb
+ 1902              		.thumb_func
+ 1903              		.type	_ZN10chibios_rt8OutQueue7isFullIEv, %function
+ 1904              	_ZN10chibios_rt8OutQueue7isFullIEv:
+ 1905              		@ args = 0, pretend = 0, frame = 0
+ 1906              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1907              		@ link register save eliminated.
+ 1908 0000 8068     		ldr	r0, [r0, #8]
+ 1909 0002 D0F10100 		rsbs	r0, r0, #1
+ 1910 0006 38BF     		it	cc
+ 1911 0008 0020     		movcc	r0, #0
+ 1912 000a 7047     		bx	lr
+ 1913              		.size	_ZN10chibios_rt8OutQueue7isFullIEv, .-_ZN10chibios_rt8OutQueue7isFullIEv
+ 1914 000c AFF30080 		.section	.text._ZN10chibios_rt8OutQueue6resetIEv,"ax",%progbits
+ 1915              		.align	2
+ 1916              		.p2align 4,,15
+ 1917              		.global	_ZN10chibios_rt8OutQueue6resetIEv
+ 1918              		.thumb
+ 1919              		.thumb_func
+ 1920              		.type	_ZN10chibios_rt8OutQueue6resetIEv, %function
+ 1921              	_ZN10chibios_rt8OutQueue6resetIEv:
+ 1922              		@ args = 0, pretend = 0, frame = 0
+ 1923              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1924              		@ link register save eliminated.
+ 1925 0000 FFF7FEBF 		b	chOQResetI
+ 1926              		.size	_ZN10chibios_rt8OutQueue6resetIEv, .-_ZN10chibios_rt8OutQueue6resetIEv
+ 1927 0004 AFF30080 		.section	.text._ZN10chibios_rt8OutQueue3putEh,"ax",%progbits
+ 1927      AFF30080 
+ 1927      AFF30080 
+ 1928              		.align	2
+ 1929              		.p2align 4,,15
+ 1930              		.global	_ZN10chibios_rt8OutQueue3putEh
+ 1931              		.thumb
+ 1932              		.thumb_func
+ 1933              		.type	_ZN10chibios_rt8OutQueue3putEh, %function
+ 1934              	_ZN10chibios_rt8OutQueue3putEh:
+ 1935              		@ args = 0, pretend = 0, frame = 0
+ 1936              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1937              		@ link register save eliminated.
+ 1938 0000 4FF0FF32 		mov	r2, #-1
+ 1939 0004 FFF7FEBF 		b	chOQPutTimeout
+ 1940              		.size	_ZN10chibios_rt8OutQueue3putEh, .-_ZN10chibios_rt8OutQueue3putEh
+ 1941 0008 AFF30080 		.section	.text._ZN10chibios_rt8OutQueue10putTimeoutEhm,"ax",%progbits
+ 1941      AFF30080 
+ 1942              		.align	2
+ 1943              		.p2align 4,,15
+ 1944              		.global	_ZN10chibios_rt8OutQueue10putTimeoutEhm
+ 1945              		.thumb
+ 1946              		.thumb_func
+ 1947              		.type	_ZN10chibios_rt8OutQueue10putTimeoutEhm, %function
+ 1948              	_ZN10chibios_rt8OutQueue10putTimeoutEhm:
+ 1949              		@ args = 0, pretend = 0, frame = 0
+ 1950              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1951              		@ link register save eliminated.
+ARM GAS  /tmp/cc4xRmdX.s 			page 38
+
+
+ 1952 0000 FFF7FEBF 		b	chOQPutTimeout
+ 1953              		.size	_ZN10chibios_rt8OutQueue10putTimeoutEhm, .-_ZN10chibios_rt8OutQueue10putTimeoutEhm
+ 1954 0004 AFF30080 		.section	.text._ZN10chibios_rt8OutQueue4getIEv,"ax",%progbits
+ 1954      AFF30080 
+ 1954      AFF30080 
+ 1955              		.align	2
+ 1956              		.p2align 4,,15
+ 1957              		.global	_ZN10chibios_rt8OutQueue4getIEv
+ 1958              		.thumb
+ 1959              		.thumb_func
+ 1960              		.type	_ZN10chibios_rt8OutQueue4getIEv, %function
+ 1961              	_ZN10chibios_rt8OutQueue4getIEv:
+ 1962              		@ args = 0, pretend = 0, frame = 0
+ 1963              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1964              		@ link register save eliminated.
+ 1965 0000 FFF7FEBF 		b	chOQGetI
+ 1966              		.size	_ZN10chibios_rt8OutQueue4getIEv, .-_ZN10chibios_rt8OutQueue4getIEv
+ 1967 0004 AFF30080 		.section	.text._ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm,"ax",%progbits
+ 1967      AFF30080 
+ 1967      AFF30080 
+ 1968              		.align	2
+ 1969              		.p2align 4,,15
+ 1970              		.global	_ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm
+ 1971              		.thumb
+ 1972              		.thumb_func
+ 1973              		.type	_ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm, %function
+ 1974              	_ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm:
+ 1975              		@ args = 0, pretend = 0, frame = 0
+ 1976              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1977              		@ link register save eliminated.
+ 1978 0000 FFF7FEBF 		b	chOQWriteTimeout
+ 1979              		.size	_ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm, .-_ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm
+ 1980 0004 AFF30080 		.section	.text._ZN10chibios_rt7MailboxC2EPll,"ax",%progbits
+ 1980      AFF30080 
+ 1980      AFF30080 
+ 1981              		.align	2
+ 1982              		.p2align 4,,15
+ 1983              		.global	_ZN10chibios_rt7MailboxC2EPll
+ 1984              		.thumb
+ 1985              		.thumb_func
+ 1986              		.type	_ZN10chibios_rt7MailboxC2EPll, %function
+ 1987              	_ZN10chibios_rt7MailboxC2EPll:
+ 1988              		@ args = 0, pretend = 0, frame = 0
+ 1989              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1990 0000 10B5     		push	{r4, lr}
+ 1991 0002 0446     		mov	r4, r0
+ 1992 0004 FFF7FEFF 		bl	chMBInit
+ 1993 0008 2046     		mov	r0, r4
+ 1994 000a 10BD     		pop	{r4, pc}
+ 1995              		.size	_ZN10chibios_rt7MailboxC2EPll, .-_ZN10chibios_rt7MailboxC2EPll
+ 1996              		.global	_ZN10chibios_rt7MailboxC1EPll
+ 1997              		.thumb_set _ZN10chibios_rt7MailboxC1EPll,_ZN10chibios_rt7MailboxC2EPll
+ 1998 000c AFF30080 		.section	.text._ZN10chibios_rt7Mailbox5resetEv,"ax",%progbits
+ 1999              		.align	2
+ 2000              		.p2align 4,,15
+ 2001              		.global	_ZN10chibios_rt7Mailbox5resetEv
+ 2002              		.thumb
+ARM GAS  /tmp/cc4xRmdX.s 			page 39
+
+
+ 2003              		.thumb_func
+ 2004              		.type	_ZN10chibios_rt7Mailbox5resetEv, %function
+ 2005              	_ZN10chibios_rt7Mailbox5resetEv:
+ 2006              		@ args = 0, pretend = 0, frame = 0
+ 2007              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2008              		@ link register save eliminated.
+ 2009 0000 FFF7FEBF 		b	chMBReset
+ 2010              		.size	_ZN10chibios_rt7Mailbox5resetEv, .-_ZN10chibios_rt7Mailbox5resetEv
+ 2011 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox4postElm,"ax",%progbits
+ 2011      AFF30080 
+ 2011      AFF30080 
+ 2012              		.align	2
+ 2013              		.p2align 4,,15
+ 2014              		.global	_ZN10chibios_rt7Mailbox4postElm
+ 2015              		.thumb
+ 2016              		.thumb_func
+ 2017              		.type	_ZN10chibios_rt7Mailbox4postElm, %function
+ 2018              	_ZN10chibios_rt7Mailbox4postElm:
+ 2019              		@ args = 0, pretend = 0, frame = 0
+ 2020              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2021              		@ link register save eliminated.
+ 2022 0000 FFF7FEBF 		b	chMBPost
+ 2023              		.size	_ZN10chibios_rt7Mailbox4postElm, .-_ZN10chibios_rt7Mailbox4postElm
+ 2024 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox5postSElm,"ax",%progbits
+ 2024      AFF30080 
+ 2024      AFF30080 
+ 2025              		.align	2
+ 2026              		.p2align 4,,15
+ 2027              		.global	_ZN10chibios_rt7Mailbox5postSElm
+ 2028              		.thumb
+ 2029              		.thumb_func
+ 2030              		.type	_ZN10chibios_rt7Mailbox5postSElm, %function
+ 2031              	_ZN10chibios_rt7Mailbox5postSElm:
+ 2032              		@ args = 0, pretend = 0, frame = 0
+ 2033              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2034              		@ link register save eliminated.
+ 2035 0000 FFF7FEBF 		b	chMBPostS
+ 2036              		.size	_ZN10chibios_rt7Mailbox5postSElm, .-_ZN10chibios_rt7Mailbox5postSElm
+ 2037 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox5postIEl,"ax",%progbits
+ 2037      AFF30080 
+ 2037      AFF30080 
+ 2038              		.align	2
+ 2039              		.p2align 4,,15
+ 2040              		.global	_ZN10chibios_rt7Mailbox5postIEl
+ 2041              		.thumb
+ 2042              		.thumb_func
+ 2043              		.type	_ZN10chibios_rt7Mailbox5postIEl, %function
+ 2044              	_ZN10chibios_rt7Mailbox5postIEl:
+ 2045              		@ args = 0, pretend = 0, frame = 0
+ 2046              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2047              		@ link register save eliminated.
+ 2048 0000 FFF7FEBF 		b	chMBPostI
+ 2049              		.size	_ZN10chibios_rt7Mailbox5postIEl, .-_ZN10chibios_rt7Mailbox5postIEl
+ 2050 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox9postAheadElm,"ax",%progbits
+ 2050      AFF30080 
+ 2050      AFF30080 
+ 2051              		.align	2
+ARM GAS  /tmp/cc4xRmdX.s 			page 40
+
+
+ 2052              		.p2align 4,,15
+ 2053              		.global	_ZN10chibios_rt7Mailbox9postAheadElm
+ 2054              		.thumb
+ 2055              		.thumb_func
+ 2056              		.type	_ZN10chibios_rt7Mailbox9postAheadElm, %function
+ 2057              	_ZN10chibios_rt7Mailbox9postAheadElm:
+ 2058              		@ args = 0, pretend = 0, frame = 0
+ 2059              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2060              		@ link register save eliminated.
+ 2061 0000 FFF7FEBF 		b	chMBPostAhead
+ 2062              		.size	_ZN10chibios_rt7Mailbox9postAheadElm, .-_ZN10chibios_rt7Mailbox9postAheadElm
+ 2063 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox10postAheadSElm,"ax",%progbits
+ 2063      AFF30080 
+ 2063      AFF30080 
+ 2064              		.align	2
+ 2065              		.p2align 4,,15
+ 2066              		.global	_ZN10chibios_rt7Mailbox10postAheadSElm
+ 2067              		.thumb
+ 2068              		.thumb_func
+ 2069              		.type	_ZN10chibios_rt7Mailbox10postAheadSElm, %function
+ 2070              	_ZN10chibios_rt7Mailbox10postAheadSElm:
+ 2071              		@ args = 0, pretend = 0, frame = 0
+ 2072              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2073              		@ link register save eliminated.
+ 2074 0000 FFF7FEBF 		b	chMBPostAheadS
+ 2075              		.size	_ZN10chibios_rt7Mailbox10postAheadSElm, .-_ZN10chibios_rt7Mailbox10postAheadSElm
+ 2076 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox10postAheadIEl,"ax",%progbits
+ 2076      AFF30080 
+ 2076      AFF30080 
+ 2077              		.align	2
+ 2078              		.p2align 4,,15
+ 2079              		.global	_ZN10chibios_rt7Mailbox10postAheadIEl
+ 2080              		.thumb
+ 2081              		.thumb_func
+ 2082              		.type	_ZN10chibios_rt7Mailbox10postAheadIEl, %function
+ 2083              	_ZN10chibios_rt7Mailbox10postAheadIEl:
+ 2084              		@ args = 0, pretend = 0, frame = 0
+ 2085              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2086              		@ link register save eliminated.
+ 2087 0000 FFF7FEBF 		b	chMBPostAheadI
+ 2088              		.size	_ZN10chibios_rt7Mailbox10postAheadIEl, .-_ZN10chibios_rt7Mailbox10postAheadIEl
+ 2089 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox5fetchEPlm,"ax",%progbits
+ 2089      AFF30080 
+ 2089      AFF30080 
+ 2090              		.align	2
+ 2091              		.p2align 4,,15
+ 2092              		.global	_ZN10chibios_rt7Mailbox5fetchEPlm
+ 2093              		.thumb
+ 2094              		.thumb_func
+ 2095              		.type	_ZN10chibios_rt7Mailbox5fetchEPlm, %function
+ 2096              	_ZN10chibios_rt7Mailbox5fetchEPlm:
+ 2097              		@ args = 0, pretend = 0, frame = 0
+ 2098              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2099              		@ link register save eliminated.
+ 2100 0000 FFF7FEBF 		b	chMBFetch
+ 2101              		.size	_ZN10chibios_rt7Mailbox5fetchEPlm, .-_ZN10chibios_rt7Mailbox5fetchEPlm
+ 2102 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox6fetchSEPlm,"ax",%progbits
+ARM GAS  /tmp/cc4xRmdX.s 			page 41
+
+
+ 2102      AFF30080 
+ 2102      AFF30080 
+ 2103              		.align	2
+ 2104              		.p2align 4,,15
+ 2105              		.global	_ZN10chibios_rt7Mailbox6fetchSEPlm
+ 2106              		.thumb
+ 2107              		.thumb_func
+ 2108              		.type	_ZN10chibios_rt7Mailbox6fetchSEPlm, %function
+ 2109              	_ZN10chibios_rt7Mailbox6fetchSEPlm:
+ 2110              		@ args = 0, pretend = 0, frame = 0
+ 2111              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2112              		@ link register save eliminated.
+ 2113 0000 FFF7FEBF 		b	chMBFetchS
+ 2114              		.size	_ZN10chibios_rt7Mailbox6fetchSEPlm, .-_ZN10chibios_rt7Mailbox6fetchSEPlm
+ 2115 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox6fetchIEPl,"ax",%progbits
+ 2115      AFF30080 
+ 2115      AFF30080 
+ 2116              		.align	2
+ 2117              		.p2align 4,,15
+ 2118              		.global	_ZN10chibios_rt7Mailbox6fetchIEPl
+ 2119              		.thumb
+ 2120              		.thumb_func
+ 2121              		.type	_ZN10chibios_rt7Mailbox6fetchIEPl, %function
+ 2122              	_ZN10chibios_rt7Mailbox6fetchIEPl:
+ 2123              		@ args = 0, pretend = 0, frame = 0
+ 2124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2125              		@ link register save eliminated.
+ 2126 0000 FFF7FEBF 		b	chMBFetchI
+ 2127              		.size	_ZN10chibios_rt7Mailbox6fetchIEPl, .-_ZN10chibios_rt7Mailbox6fetchIEPl
+ 2128 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox13getFreeCountIEv,"ax",%progbits
+ 2128      AFF30080 
+ 2128      AFF30080 
+ 2129              		.align	2
+ 2130              		.p2align 4,,15
+ 2131              		.global	_ZN10chibios_rt7Mailbox13getFreeCountIEv
+ 2132              		.thumb
+ 2133              		.thumb_func
+ 2134              		.type	_ZN10chibios_rt7Mailbox13getFreeCountIEv, %function
+ 2135              	_ZN10chibios_rt7Mailbox13getFreeCountIEv:
+ 2136              		@ args = 0, pretend = 0, frame = 0
+ 2137              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2138              		@ link register save eliminated.
+ 2139 0000 406A     		ldr	r0, [r0, #36]
+ 2140 0002 7047     		bx	lr
+ 2141              		.size	_ZN10chibios_rt7Mailbox13getFreeCountIEv, .-_ZN10chibios_rt7Mailbox13getFreeCountIEv
+ 2142 0004 AFF30080 		.section	.text._ZN10chibios_rt7Mailbox13getUsedCountIEv,"ax",%progbits
+ 2142      AFF30080 
+ 2142      AFF30080 
+ 2143              		.align	2
+ 2144              		.p2align 4,,15
+ 2145              		.global	_ZN10chibios_rt7Mailbox13getUsedCountIEv
+ 2146              		.thumb
+ 2147              		.thumb_func
+ 2148              		.type	_ZN10chibios_rt7Mailbox13getUsedCountIEv, %function
+ 2149              	_ZN10chibios_rt7Mailbox13getUsedCountIEv:
+ 2150              		@ args = 0, pretend = 0, frame = 0
+ 2151              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cc4xRmdX.s 			page 42
+
+
+ 2152              		@ link register save eliminated.
+ 2153 0000 8069     		ldr	r0, [r0, #24]
+ 2154 0002 7047     		bx	lr
+ 2155              		.size	_ZN10chibios_rt7Mailbox13getUsedCountIEv, .-_ZN10chibios_rt7Mailbox13getUsedCountIEv
+ 2156 0004 AFF30080 		.section	.text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE,"ax",%progbits
+ 2156      AFF30080 
+ 2156      AFF30080 
+ 2157              		.align	2
+ 2158              		.p2align 4,,15
+ 2159              		.global	_ZN10chibios_rt10MemoryPoolC2EjPFPvjE
+ 2160              		.thumb
+ 2161              		.thumb_func
+ 2162              		.type	_ZN10chibios_rt10MemoryPoolC2EjPFPvjE, %function
+ 2163              	_ZN10chibios_rt10MemoryPoolC2EjPFPvjE:
+ 2164              		@ args = 0, pretend = 0, frame = 0
+ 2165              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2166 0000 10B5     		push	{r4, lr}
+ 2167 0002 0446     		mov	r4, r0
+ 2168 0004 FFF7FEFF 		bl	chPoolInit
+ 2169 0008 2046     		mov	r0, r4
+ 2170 000a 10BD     		pop	{r4, pc}
+ 2171              		.size	_ZN10chibios_rt10MemoryPoolC2EjPFPvjE, .-_ZN10chibios_rt10MemoryPoolC2EjPFPvjE
+ 2172              		.global	_ZN10chibios_rt10MemoryPoolC1EjPFPvjE
+ 2173              		.thumb_set _ZN10chibios_rt10MemoryPoolC1EjPFPvjE,_ZN10chibios_rt10MemoryPoolC2EjPFPvjE
+ 2174 000c AFF30080 		.section	.text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j,"ax",%progbits
+ 2175              		.align	2
+ 2176              		.p2align 4,,15
+ 2177              		.global	_ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j
+ 2178              		.thumb
+ 2179              		.thumb_func
+ 2180              		.type	_ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j, %function
+ 2181              	_ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:
+ 2182              		@ args = 4, pretend = 0, frame = 0
+ 2183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2184 0000 70B5     		push	{r4, r5, r6, lr}
+ 2185 0002 049D     		ldr	r5, [sp, #16]
+ 2186 0004 1E46     		mov	r6, r3
+ 2187 0006 0446     		mov	r4, r0
+ 2188 0008 FFF7FEFF 		bl	chPoolInit
+ 2189 000c 2046     		mov	r0, r4
+ 2190 000e 3146     		mov	r1, r6
+ 2191 0010 2A46     		mov	r2, r5
+ 2192 0012 FFF7FEFF 		bl	chPoolLoadArray
+ 2193 0016 2046     		mov	r0, r4
+ 2194 0018 70BD     		pop	{r4, r5, r6, pc}
+ 2195              		.size	_ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j, .-_ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j
+ 2196              		.global	_ZN10chibios_rt10MemoryPoolC1EjPFPvjES1_j
+ 2197              		.thumb_set _ZN10chibios_rt10MemoryPoolC1EjPFPvjES1_j,_ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j
+ 2198 001a 00BFAFF3 		.section	.text._ZN10chibios_rt10MemoryPool9loadArrayEPvj,"ax",%progbits
+ 2198      0080
+ 2199              		.align	2
+ 2200              		.p2align 4,,15
+ 2201              		.global	_ZN10chibios_rt10MemoryPool9loadArrayEPvj
+ 2202              		.thumb
+ 2203              		.thumb_func
+ 2204              		.type	_ZN10chibios_rt10MemoryPool9loadArrayEPvj, %function
+ 2205              	_ZN10chibios_rt10MemoryPool9loadArrayEPvj:
+ARM GAS  /tmp/cc4xRmdX.s 			page 43
+
+
+ 2206              		@ args = 0, pretend = 0, frame = 0
+ 2207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2208              		@ link register save eliminated.
+ 2209 0000 FFF7FEBF 		b	chPoolLoadArray
+ 2210              		.size	_ZN10chibios_rt10MemoryPool9loadArrayEPvj, .-_ZN10chibios_rt10MemoryPool9loadArrayEPvj
+ 2211 0004 AFF30080 		.section	.text._ZN10chibios_rt10MemoryPool6allocIEv,"ax",%progbits
+ 2211      AFF30080 
+ 2211      AFF30080 
+ 2212              		.align	2
+ 2213              		.p2align 4,,15
+ 2214              		.global	_ZN10chibios_rt10MemoryPool6allocIEv
+ 2215              		.thumb
+ 2216              		.thumb_func
+ 2217              		.type	_ZN10chibios_rt10MemoryPool6allocIEv, %function
+ 2218              	_ZN10chibios_rt10MemoryPool6allocIEv:
+ 2219              		@ args = 0, pretend = 0, frame = 0
+ 2220              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2221              		@ link register save eliminated.
+ 2222 0000 FFF7FEBF 		b	chPoolAllocI
+ 2223              		.size	_ZN10chibios_rt10MemoryPool6allocIEv, .-_ZN10chibios_rt10MemoryPool6allocIEv
+ 2224 0004 AFF30080 		.section	.text._ZN10chibios_rt10MemoryPool5allocEv,"ax",%progbits
+ 2224      AFF30080 
+ 2224      AFF30080 
+ 2225              		.align	2
+ 2226              		.p2align 4,,15
+ 2227              		.global	_ZN10chibios_rt10MemoryPool5allocEv
+ 2228              		.thumb
+ 2229              		.thumb_func
+ 2230              		.type	_ZN10chibios_rt10MemoryPool5allocEv, %function
+ 2231              	_ZN10chibios_rt10MemoryPool5allocEv:
+ 2232              		@ args = 0, pretend = 0, frame = 0
+ 2233              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2234              		@ link register save eliminated.
+ 2235 0000 FFF7FEBF 		b	chPoolAlloc
+ 2236              		.size	_ZN10chibios_rt10MemoryPool5allocEv, .-_ZN10chibios_rt10MemoryPool5allocEv
+ 2237 0004 AFF30080 		.section	.text._ZN10chibios_rt10MemoryPool4freeEPv,"ax",%progbits
+ 2237      AFF30080 
+ 2237      AFF30080 
+ 2238              		.align	2
+ 2239              		.p2align 4,,15
+ 2240              		.global	_ZN10chibios_rt10MemoryPool4freeEPv
+ 2241              		.thumb
+ 2242              		.thumb_func
+ 2243              		.type	_ZN10chibios_rt10MemoryPool4freeEPv, %function
+ 2244              	_ZN10chibios_rt10MemoryPool4freeEPv:
+ 2245              		@ args = 0, pretend = 0, frame = 0
+ 2246              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2247              		@ link register save eliminated.
+ 2248 0000 FFF7FEBF 		b	chPoolFree
+ 2249              		.size	_ZN10chibios_rt10MemoryPool4freeEPv, .-_ZN10chibios_rt10MemoryPool4freeEPv
+ 2250 0004 AFF30080 		.section	.text._ZN10chibios_rt10MemoryPool5freeIEPv,"ax",%progbits
+ 2250      AFF30080 
+ 2250      AFF30080 
+ 2251              		.align	2
+ 2252              		.p2align 4,,15
+ 2253              		.global	_ZN10chibios_rt10MemoryPool5freeIEPv
+ 2254              		.thumb
+ARM GAS  /tmp/cc4xRmdX.s 			page 44
+
+
+ 2255              		.thumb_func
+ 2256              		.type	_ZN10chibios_rt10MemoryPool5freeIEPv, %function
+ 2257              	_ZN10chibios_rt10MemoryPool5freeIEPv:
+ 2258              		@ args = 0, pretend = 0, frame = 0
+ 2259              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2260              		@ link register save eliminated.
+ 2261 0000 FFF7FEBF 		b	chPoolFreeI
+ 2262              		.size	_ZN10chibios_rt10MemoryPool5freeIEPv, .-_ZN10chibios_rt10MemoryPool5freeIEPv
+ 2263              		.global	_ZTVN10chibios_rt15ThreadReferenceE
+ 2264              		.global	_ZTVN10chibios_rt10BaseThreadE
+ 2265 0004 AFF30080 		.section	.rodata._ZTVN10chibios_rt10BaseThreadE,"a",%progbits
+ 2265      AFF30080 
+ 2265      AFF30080 
+ 2266              		.align	3
+ 2267              		.set	.LANCHOR1,. + 0
+ 2268              		.type	_ZTVN10chibios_rt10BaseThreadE, %object
+ 2269              		.size	_ZTVN10chibios_rt10BaseThreadE, 20
+ 2270              	_ZTVN10chibios_rt10BaseThreadE:
+ 2271 0000 00000000 		.word	0
+ 2272 0004 00000000 		.word	0
+ 2273 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 2274 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 2275 0010 00000000 		.word	_ZN10chibios_rt10BaseThread5startEm
+ 2276 0014 00000000 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 2277              		.align	2
+ 2278              	.LC0:
+ 2279 0000 696E766F 		.ascii	"invoked unimplemented method stop()\000"
+ 2279      6B656420 
+ 2279      756E696D 
+ 2279      706C656D 
+ 2279      656E7465 
+ 2280              	.LC1:
+ 2281 0024 54687265 		.ascii	"ThreadReference, #1\000"
+ 2281      61645265 
+ 2281      66657265 
+ 2281      6E63652C 
+ 2281      20233100 
+ 2282              	.LC2:
+ 2283 0038 54687265 		.ascii	"ThreadReference, #2\000"
+ 2283      61645265 
+ 2283      66657265 
+ 2283      6E63652C 
+ 2283      20233200 
+ 2284              	.LC3:
+ 2285 004c 54687265 		.ascii	"ThreadReference, #3\000"
+ 2285      61645265 
+ 2285      66657265 
+ 2285      6E63652C 
+ 2285      20233300 
+ 2286              	.LC4:
+ 2287 0060 54687265 		.ascii	"ThreadReference, #4\000"
+ 2287      61645265 
+ 2287      66657265 
+ 2287      6E63652C 
+ 2287      20233400 
+ 2288              	.LC5:
+ 2289 0074 54687265 		.ascii	"ThreadReference, #5\000"
+ARM GAS  /tmp/cc4xRmdX.s 			page 45
+
+
+ 2289      61645265 
+ 2289      66657265 
+ 2289      6E63652C 
+ 2289      20233500 
+ 2290              	.LC6:
+ 2291 0088 54687265 		.ascii	"ThreadReference, #6\000"
+ 2291      61645265 
+ 2291      66657265 
+ 2291      6E63652C 
+ 2291      20233600 
+ 2292              	.LC7:
+ 2293 009c 54687265 		.ascii	"ThreadReference, #7\000"
+ 2293      61645265 
+ 2293      66657265 
+ 2293      6E63652C 
+ 2293      20233700 
+ 2294              	.LC8:
+ 2295 00b0 54687265 		.ascii	"ThreadReference, #8\000"
+ 2295      61645265 
+ 2295      66657265 
+ 2295      6E63652C 
+ 2295      20233800 
+ 2296              	.LC9:
+ 2297 00c4 54687265 		.ascii	"ThreadReference, #9\000"
+ 2297      61645265 
+ 2297      66657265 
+ 2297      6E63652C 
+ 2297      20233900 
+ 2298              	.LC10:
+ 2299 00d8 54687265 		.ascii	"ThreadReference, #10\000"
+ 2299      61645265 
+ 2299      66657265 
+ 2299      6E63652C 
+ 2299      20233130 
+ 2300 00ed 000000   		.space	3
+ 2301              	.LC11:
+ 2302 00f0 54687265 		.ascii	"ThreadReference, #11\000"
+ 2302      61645265 
+ 2302      66657265 
+ 2302      6E63652C 
+ 2302      20233131 
+ 2303 0105 000000   		.section	.rodata._ZTVN10chibios_rt15ThreadReferenceE,"a",%progbits
+ 2304              		.align	3
+ 2305              		.set	.LANCHOR0,. + 0
+ 2306              		.type	_ZTVN10chibios_rt15ThreadReferenceE, %object
+ 2307              		.size	_ZTVN10chibios_rt15ThreadReferenceE, 12
+ 2308              	_ZTVN10chibios_rt15ThreadReferenceE:
+ 2309 0000 00000000 		.word	0
+ 2310 0004 00000000 		.word	0
+ 2311 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 2312 000c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cc4xRmdX.s 			page 46
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ch.cpp
+     /tmp/cc4xRmdX.s:16     .text.startup._ZN10chibios_rt10BaseThread4mainEv:00000000 $t
+     /tmp/cc4xRmdX.s:22     .text.startup._ZN10chibios_rt10BaseThread4mainEv:00000000 _ZN10chibios_rt10BaseThread4mainEv
+     /tmp/cc4xRmdX.s:30     .text._ZN10chibios_rt10BaseThread5startEm:00000000 $t
+     /tmp/cc4xRmdX.s:36     .text._ZN10chibios_rt10BaseThread5startEm:00000000 _ZN10chibios_rt10BaseThread5startEm
+     /tmp/cc4xRmdX.s:48     .text._ZN10chibios_rt10BaseThread5startEm:0000000c $d
+     /tmp/cc4xRmdX.s:51     .text._ZN10chibios_rt15ThreadReference4stopEv:00000000 $t
+     /tmp/cc4xRmdX.s:57     .text._ZN10chibios_rt15ThreadReference4stopEv:00000000 _ZN10chibios_rt15ThreadReference4stopEv
+     /tmp/cc4xRmdX.s:66     .text._ZN10chibios_rt15ThreadReference4stopEv:00000008 $d
+     /tmp/cc4xRmdX.s:69     .text._ZN10chibios_rt6System4initEv:00000000 $t
+     /tmp/cc4xRmdX.s:75     .text._ZN10chibios_rt6System4initEv:00000000 _ZN10chibios_rt6System4initEv
+     /tmp/cc4xRmdX.s:82     .text._ZN10chibios_rt6System4lockEv:00000000 $t
+     /tmp/cc4xRmdX.s:88     .text._ZN10chibios_rt6System4lockEv:00000000 _ZN10chibios_rt6System4lockEv
+     /tmp/cc4xRmdX.s:100    .text._ZN10chibios_rt6System6unlockEv:00000000 $t
+     /tmp/cc4xRmdX.s:106    .text._ZN10chibios_rt6System6unlockEv:00000000 _ZN10chibios_rt6System6unlockEv
+     /tmp/cc4xRmdX.s:119    .text._ZN10chibios_rt6System11lockFromIsrEv:00000000 $t
+     /tmp/cc4xRmdX.s:125    .text._ZN10chibios_rt6System11lockFromIsrEv:00000000 _ZN10chibios_rt6System11lockFromIsrEv
+     /tmp/cc4xRmdX.s:137    .text._ZN10chibios_rt6System13unlockFromIsrEv:00000000 $t
+     /tmp/cc4xRmdX.s:143    .text._ZN10chibios_rt6System13unlockFromIsrEv:00000000 _ZN10chibios_rt6System13unlockFromIsrEv
+     /tmp/cc4xRmdX.s:156    .text._ZN10chibios_rt6System7getTimeEv:00000000 $t
+     /tmp/cc4xRmdX.s:162    .text._ZN10chibios_rt6System7getTimeEv:00000000 _ZN10chibios_rt6System7getTimeEv
+     /tmp/cc4xRmdX.s:172    .text._ZN10chibios_rt6System7getTimeEv:00000008 $d
+     /tmp/cc4xRmdX.s:175    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000000 $t
+     /tmp/cc4xRmdX.s:181    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000000 _ZN10chibios_rt6System12isTimeWithinEmm
+     /tmp/cc4xRmdX.s:197    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000014 $d
+     /tmp/cc4xRmdX.s:200    .text._ZN10chibios_rt4Core5allocEj:00000000 $t
+     /tmp/cc4xRmdX.s:206    .text._ZN10chibios_rt4Core5allocEj:00000000 _ZN10chibios_rt4Core5allocEj
+     /tmp/cc4xRmdX.s:213    .text._ZN10chibios_rt4Core6allocIEj:00000000 $t
+     /tmp/cc4xRmdX.s:219    .text._ZN10chibios_rt4Core6allocIEj:00000000 _ZN10chibios_rt4Core6allocIEj
+     /tmp/cc4xRmdX.s:226    .text._ZN10chibios_rt4Core9getStatusEv:00000000 $t
+     /tmp/cc4xRmdX.s:232    .text._ZN10chibios_rt4Core9getStatusEv:00000000 _ZN10chibios_rt4Core9getStatusEv
+     /tmp/cc4xRmdX.s:239    .text._ZN10chibios_rt5Timer4setIEmPFvPvES1_:00000000 $t
+     /tmp/cc4xRmdX.s:245    .text._ZN10chibios_rt5Timer4setIEmPFvPvES1_:00000000 _ZN10chibios_rt5Timer4setIEmPFvPvES1_
+     /tmp/cc4xRmdX.s:252    .text._ZN10chibios_rt5Timer6resetIEv:00000000 $t
+     /tmp/cc4xRmdX.s:258    .text._ZN10chibios_rt5Timer6resetIEv:00000000 _ZN10chibios_rt5Timer6resetIEv
+     /tmp/cc4xRmdX.s:269    .text._ZN10chibios_rt5Timer8isArmedIEv:00000000 $t
+     /tmp/cc4xRmdX.s:275    .text._ZN10chibios_rt5Timer8isArmedIEv:00000000 _ZN10chibios_rt5Timer8isArmedIEv
+     /tmp/cc4xRmdX.s:286    .text._ZN10chibios_rt15ThreadReference7suspendEv:00000000 $t
+     /tmp/cc4xRmdX.s:292    .text._ZN10chibios_rt15ThreadReference7suspendEv:00000000 _ZN10chibios_rt15ThreadReference7suspendEv
+     /tmp/cc4xRmdX.s:328    .text._ZN10chibios_rt15ThreadReference7suspendEv:00000038 $d
+     /tmp/cc4xRmdX.s:332    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000000 $t
+     /tmp/cc4xRmdX.s:338    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000000 _ZN10chibios_rt15ThreadReference8suspendSEv
+     /tmp/cc4xRmdX.s:359    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000020 $d
+     /tmp/cc4xRmdX.s:363    .text._ZN10chibios_rt15ThreadReference6resumeEl:00000000 $t
+     /tmp/cc4xRmdX.s:369    .text._ZN10chibios_rt15ThreadReference6resumeEl:00000000 _ZN10chibios_rt15ThreadReference6resumeEl
+     /tmp/cc4xRmdX.s:406    .text._ZN10chibios_rt15ThreadReference6resumeEl:00000038 $d
+     /tmp/cc4xRmdX.s:409    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000000 $t
+     /tmp/cc4xRmdX.s:415    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000000 _ZN10chibios_rt15ThreadReference7resumeIEl
+     /tmp/cc4xRmdX.s:446    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000030 $d
+     /tmp/cc4xRmdX.s:449    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000000 $t
+     /tmp/cc4xRmdX.s:455    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000000 _ZN10chibios_rt15ThreadReference16requestTerminateEv
+     /tmp/cc4xRmdX.s:473    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000020 $d
+     /tmp/cc4xRmdX.s:476    .text._ZN10chibios_rt15ThreadReference4waitEv:00000000 $t
+     /tmp/cc4xRmdX.s:482    .text._ZN10chibios_rt15ThreadReference4waitEv:00000000 _ZN10chibios_rt15ThreadReference4waitEv
+     /tmp/cc4xRmdX.s:504    .text._ZN10chibios_rt15ThreadReference4waitEv:00000024 $d
+     /tmp/cc4xRmdX.s:507    .text._ZN10chibios_rt15ThreadReference11sendMessageEl:00000000 $t
+ARM GAS  /tmp/cc4xRmdX.s 			page 47
+
+
+     /tmp/cc4xRmdX.s:513    .text._ZN10chibios_rt15ThreadReference11sendMessageEl:00000000 _ZN10chibios_rt15ThreadReference11sendMessageEl
+     /tmp/cc4xRmdX.s:538    .text._ZN10chibios_rt15ThreadReference11sendMessageEl:0000002c $d
+     /tmp/cc4xRmdX.s:541    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000000 $t
+     /tmp/cc4xRmdX.s:547    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000000 _ZN10chibios_rt15ThreadReference16isPendingMessageEv
+     /tmp/cc4xRmdX.s:569    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000020 $d
+     /tmp/cc4xRmdX.s:572    .text._ZN10chibios_rt15ThreadReference10getMessageEv:00000000 $t
+     /tmp/cc4xRmdX.s:578    .text._ZN10chibios_rt15ThreadReference10getMessageEv:00000000 _ZN10chibios_rt15ThreadReference10getMessageEv
+     /tmp/cc4xRmdX.s:596    .text._ZN10chibios_rt15ThreadReference10getMessageEv:00000018 $d
+     /tmp/cc4xRmdX.s:599    .text._ZN10chibios_rt15ThreadReference14releaseMessageEl:00000000 $t
+     /tmp/cc4xRmdX.s:605    .text._ZN10chibios_rt15ThreadReference14releaseMessageEl:00000000 _ZN10chibios_rt15ThreadReference14releaseMessageEl
+     /tmp/cc4xRmdX.s:630    .text._ZN10chibios_rt15ThreadReference14releaseMessageEl:0000002c $d
+     /tmp/cc4xRmdX.s:633    .text._ZN10chibios_rt15ThreadReference12signalEventsEm:00000000 $t
+     /tmp/cc4xRmdX.s:639    .text._ZN10chibios_rt15ThreadReference12signalEventsEm:00000000 _ZN10chibios_rt15ThreadReference12signalEventsEm
+     /tmp/cc4xRmdX.s:664    .text._ZN10chibios_rt15ThreadReference12signalEventsEm:0000002c $d
+     /tmp/cc4xRmdX.s:667    .text._ZN10chibios_rt15ThreadReference13signalEventsIEm:00000000 $t
+     /tmp/cc4xRmdX.s:673    .text._ZN10chibios_rt15ThreadReference13signalEventsIEm:00000000 _ZN10chibios_rt15ThreadReference13signalEventsIEm
+     /tmp/cc4xRmdX.s:698    .text._ZN10chibios_rt15ThreadReference13signalEventsIEm:0000002c $d
+     /tmp/cc4xRmdX.s:701    .text._ZN10chibios_rt10BaseThreadC2Ev:00000000 $t
+     /tmp/cc4xRmdX.s:707    .text._ZN10chibios_rt10BaseThreadC2Ev:00000000 _ZN10chibios_rt10BaseThreadC2Ev
+     /tmp/cc4xRmdX.s:718    .text._ZN10chibios_rt10BaseThreadC2Ev:0000000c $d
+     /tmp/cc4xRmdX.s:707    .text._ZN10chibios_rt10BaseThreadC2Ev:00000000 _ZN10chibios_rt10BaseThreadC1Ev
+     /tmp/cc4xRmdX.s:723    .text._ZN10chibios_rt10_thd_startEPv:00000000 $t
+     /tmp/cc4xRmdX.s:729    .text._ZN10chibios_rt10_thd_startEPv:00000000 _ZN10chibios_rt10_thd_startEPv
+     /tmp/cc4xRmdX.s:739    .text._ZN10chibios_rt10BaseThread7setNameEPKc:00000000 $t
+     /tmp/cc4xRmdX.s:745    .text._ZN10chibios_rt10BaseThread7setNameEPKc:00000000 _ZN10chibios_rt10BaseThread7setNameEPKc
+     /tmp/cc4xRmdX.s:756    .text._ZN10chibios_rt10BaseThread7setNameEPKc:00000008 $d
+     /tmp/cc4xRmdX.s:759    .text._ZN10chibios_rt10BaseThread11setPriorityEm:00000000 $t
+     /tmp/cc4xRmdX.s:765    .text._ZN10chibios_rt10BaseThread11setPriorityEm:00000000 _ZN10chibios_rt10BaseThread11setPriorityEm
+     /tmp/cc4xRmdX.s:772    .text._ZN10chibios_rt10BaseThread4exitEl:00000000 $t
+     /tmp/cc4xRmdX.s:778    .text._ZN10chibios_rt10BaseThread4exitEl:00000000 _ZN10chibios_rt10BaseThread4exitEl
+     /tmp/cc4xRmdX.s:785    .text._ZN10chibios_rt10BaseThread5exitSEl:00000000 $t
+     /tmp/cc4xRmdX.s:791    .text._ZN10chibios_rt10BaseThread5exitSEl:00000000 _ZN10chibios_rt10BaseThread5exitSEl
+     /tmp/cc4xRmdX.s:798    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000000 $t
+     /tmp/cc4xRmdX.s:804    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000000 _ZN10chibios_rt10BaseThread15shouldTerminateEv
+     /tmp/cc4xRmdX.s:816    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000010 $d
+     /tmp/cc4xRmdX.s:819    .text._ZN10chibios_rt10BaseThread5sleepEm:00000000 $t
+     /tmp/cc4xRmdX.s:825    .text._ZN10chibios_rt10BaseThread5sleepEm:00000000 _ZN10chibios_rt10BaseThread5sleepEm
+     /tmp/cc4xRmdX.s:832    .text._ZN10chibios_rt10BaseThread10sleepUntilEm:00000000 $t
+     /tmp/cc4xRmdX.s:838    .text._ZN10chibios_rt10BaseThread10sleepUntilEm:00000000 _ZN10chibios_rt10BaseThread10sleepUntilEm
+     /tmp/cc4xRmdX.s:845    .text._ZN10chibios_rt10BaseThread5yieldEv:00000000 $t
+     /tmp/cc4xRmdX.s:851    .text._ZN10chibios_rt10BaseThread5yieldEv:00000000 _ZN10chibios_rt10BaseThread5yieldEv
+     /tmp/cc4xRmdX.s:858    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000000 $t
+     /tmp/cc4xRmdX.s:864    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000000 _ZN10chibios_rt10BaseThread11waitMessageEv
+     /tmp/cc4xRmdX.s:878    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000014 $d
+     /tmp/cc4xRmdX.s:881    .text._ZN10chibios_rt10BaseThread17getAndClearEventsEm:00000000 $t
+     /tmp/cc4xRmdX.s:887    .text._ZN10chibios_rt10BaseThread17getAndClearEventsEm:00000000 _ZN10chibios_rt10BaseThread17getAndClearEventsEm
+     /tmp/cc4xRmdX.s:894    .text._ZN10chibios_rt10BaseThread9addEventsEm:00000000 $t
+     /tmp/cc4xRmdX.s:900    .text._ZN10chibios_rt10BaseThread9addEventsEm:00000000 _ZN10chibios_rt10BaseThread9addEventsEm
+     /tmp/cc4xRmdX.s:907    .text._ZN10chibios_rt10BaseThread12waitOneEventEm:00000000 $t
+     /tmp/cc4xRmdX.s:913    .text._ZN10chibios_rt10BaseThread12waitOneEventEm:00000000 _ZN10chibios_rt10BaseThread12waitOneEventEm
+     /tmp/cc4xRmdX.s:920    .text._ZN10chibios_rt10BaseThread12waitAnyEventEm:00000000 $t
+     /tmp/cc4xRmdX.s:926    .text._ZN10chibios_rt10BaseThread12waitAnyEventEm:00000000 _ZN10chibios_rt10BaseThread12waitAnyEventEm
+     /tmp/cc4xRmdX.s:933    .text._ZN10chibios_rt10BaseThread13waitAllEventsEm:00000000 $t
+     /tmp/cc4xRmdX.s:939    .text._ZN10chibios_rt10BaseThread13waitAllEventsEm:00000000 _ZN10chibios_rt10BaseThread13waitAllEventsEm
+     /tmp/cc4xRmdX.s:946    .text._ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm:00000000 $t
+     /tmp/cc4xRmdX.s:952    .text._ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm:00000000 _ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
+     /tmp/cc4xRmdX.s:959    .text._ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm:00000000 $t
+ARM GAS  /tmp/cc4xRmdX.s 			page 48
+
+
+     /tmp/cc4xRmdX.s:965    .text._ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm:00000000 _ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
+     /tmp/cc4xRmdX.s:972    .text._ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm:00000000 $t
+     /tmp/cc4xRmdX.s:978    .text._ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm:00000000 _ZN10chibios_rt10BaseThread20waitAllEventsTimeoutEmm
+     /tmp/cc4xRmdX.s:985    .text._ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm:00000000 $t
+     /tmp/cc4xRmdX.s:991    .text._ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm:00000000 _ZN10chibios_rt10BaseThread14dispatchEventsEPKPFvlEm
+     /tmp/cc4xRmdX.s:998    .text._ZN10chibios_rt10BaseThread11unlockMutexEv:00000000 $t
+     /tmp/cc4xRmdX.s:1004   .text._ZN10chibios_rt10BaseThread11unlockMutexEv:00000000 _ZN10chibios_rt10BaseThread11unlockMutexEv
+     /tmp/cc4xRmdX.s:1011   .text._ZN10chibios_rt10BaseThread12unlockMutexSEv:00000000 $t
+     /tmp/cc4xRmdX.s:1017   .text._ZN10chibios_rt10BaseThread12unlockMutexSEv:00000000 _ZN10chibios_rt10BaseThread12unlockMutexSEv
+     /tmp/cc4xRmdX.s:1024   .text._ZN10chibios_rt10BaseThread16unlockAllMutexesEv:00000000 $t
+     /tmp/cc4xRmdX.s:1030   .text._ZN10chibios_rt10BaseThread16unlockAllMutexesEv:00000000 _ZN10chibios_rt10BaseThread16unlockAllMutexesEv
+     /tmp/cc4xRmdX.s:1037   .text._ZN10chibios_rt16CounterSemaphoreC2El:00000000 $t
+     /tmp/cc4xRmdX.s:1043   .text._ZN10chibios_rt16CounterSemaphoreC2El:00000000 _ZN10chibios_rt16CounterSemaphoreC2El
+     /tmp/cc4xRmdX.s:1043   .text._ZN10chibios_rt16CounterSemaphoreC2El:00000000 _ZN10chibios_rt16CounterSemaphoreC1El
+     /tmp/cc4xRmdX.s:1055   .text._ZN10chibios_rt16CounterSemaphore5resetEl:00000000 $t
+     /tmp/cc4xRmdX.s:1061   .text._ZN10chibios_rt16CounterSemaphore5resetEl:00000000 _ZN10chibios_rt16CounterSemaphore5resetEl
+     /tmp/cc4xRmdX.s:1068   .text._ZN10chibios_rt16CounterSemaphore6resetIEl:00000000 $t
+     /tmp/cc4xRmdX.s:1074   .text._ZN10chibios_rt16CounterSemaphore6resetIEl:00000000 _ZN10chibios_rt16CounterSemaphore6resetIEl
+     /tmp/cc4xRmdX.s:1081   .text._ZN10chibios_rt16CounterSemaphore4waitEv:00000000 $t
+     /tmp/cc4xRmdX.s:1087   .text._ZN10chibios_rt16CounterSemaphore4waitEv:00000000 _ZN10chibios_rt16CounterSemaphore4waitEv
+     /tmp/cc4xRmdX.s:1094   .text._ZN10chibios_rt16CounterSemaphore5waitSEv:00000000 $t
+     /tmp/cc4xRmdX.s:1100   .text._ZN10chibios_rt16CounterSemaphore5waitSEv:00000000 _ZN10chibios_rt16CounterSemaphore5waitSEv
+     /tmp/cc4xRmdX.s:1107   .text._ZN10chibios_rt16CounterSemaphore11waitTimeoutEm:00000000 $t
+     /tmp/cc4xRmdX.s:1113   .text._ZN10chibios_rt16CounterSemaphore11waitTimeoutEm:00000000 _ZN10chibios_rt16CounterSemaphore11waitTimeoutEm
+     /tmp/cc4xRmdX.s:1120   .text._ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm:00000000 $t
+     /tmp/cc4xRmdX.s:1126   .text._ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm:00000000 _ZN10chibios_rt16CounterSemaphore12waitTimeoutSEm
+     /tmp/cc4xRmdX.s:1133   .text._ZN10chibios_rt16CounterSemaphore6signalEv:00000000 $t
+     /tmp/cc4xRmdX.s:1139   .text._ZN10chibios_rt16CounterSemaphore6signalEv:00000000 _ZN10chibios_rt16CounterSemaphore6signalEv
+     /tmp/cc4xRmdX.s:1146   .text._ZN10chibios_rt16CounterSemaphore7signalIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1152   .text._ZN10chibios_rt16CounterSemaphore7signalIEv:00000000 _ZN10chibios_rt16CounterSemaphore7signalIEv
+     /tmp/cc4xRmdX.s:1159   .text._ZN10chibios_rt16CounterSemaphore11addCounterIEl:00000000 $t
+     /tmp/cc4xRmdX.s:1165   .text._ZN10chibios_rt16CounterSemaphore11addCounterIEl:00000000 _ZN10chibios_rt16CounterSemaphore11addCounterIEl
+     /tmp/cc4xRmdX.s:1172   .text._ZN10chibios_rt16CounterSemaphore11getCounterIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1178   .text._ZN10chibios_rt16CounterSemaphore11getCounterIEv:00000000 _ZN10chibios_rt16CounterSemaphore11getCounterIEv
+     /tmp/cc4xRmdX.s:1186   .text._ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_:00000000 $t
+     /tmp/cc4xRmdX.s:1192   .text._ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_:00000000 _ZN10chibios_rt16CounterSemaphore10signalWaitEPS0_S1_
+     /tmp/cc4xRmdX.s:1199   .text._ZN10chibios_rt15BinarySemaphoreC2Eb:00000000 $t
+     /tmp/cc4xRmdX.s:1205   .text._ZN10chibios_rt15BinarySemaphoreC2Eb:00000000 _ZN10chibios_rt15BinarySemaphoreC2Eb
+     /tmp/cc4xRmdX.s:1205   .text._ZN10chibios_rt15BinarySemaphoreC2Eb:00000000 _ZN10chibios_rt15BinarySemaphoreC1Eb
+     /tmp/cc4xRmdX.s:1218   .text._ZN10chibios_rt15BinarySemaphore4waitEv:00000000 $t
+     /tmp/cc4xRmdX.s:1224   .text._ZN10chibios_rt15BinarySemaphore4waitEv:00000000 _ZN10chibios_rt15BinarySemaphore4waitEv
+     /tmp/cc4xRmdX.s:1231   .text._ZN10chibios_rt15BinarySemaphore5waitSEv:00000000 $t
+     /tmp/cc4xRmdX.s:1237   .text._ZN10chibios_rt15BinarySemaphore5waitSEv:00000000 _ZN10chibios_rt15BinarySemaphore5waitSEv
+     /tmp/cc4xRmdX.s:1244   .text._ZN10chibios_rt15BinarySemaphore11waitTimeoutEm:00000000 $t
+     /tmp/cc4xRmdX.s:1250   .text._ZN10chibios_rt15BinarySemaphore11waitTimeoutEm:00000000 _ZN10chibios_rt15BinarySemaphore11waitTimeoutEm
+     /tmp/cc4xRmdX.s:1257   .text._ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm:00000000 $t
+     /tmp/cc4xRmdX.s:1263   .text._ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm:00000000 _ZN10chibios_rt15BinarySemaphore12waitTimeoutSEm
+     /tmp/cc4xRmdX.s:1270   .text._ZN10chibios_rt15BinarySemaphore5resetEb:00000000 $t
+     /tmp/cc4xRmdX.s:1276   .text._ZN10chibios_rt15BinarySemaphore5resetEb:00000000 _ZN10chibios_rt15BinarySemaphore5resetEb
+     /tmp/cc4xRmdX.s:1284   .text._ZN10chibios_rt15BinarySemaphore6resetIEb:00000000 $t
+     /tmp/cc4xRmdX.s:1290   .text._ZN10chibios_rt15BinarySemaphore6resetIEb:00000000 _ZN10chibios_rt15BinarySemaphore6resetIEb
+     /tmp/cc4xRmdX.s:1298   .text._ZN10chibios_rt15BinarySemaphore6signalEv:00000000 $t
+     /tmp/cc4xRmdX.s:1304   .text._ZN10chibios_rt15BinarySemaphore6signalEv:00000000 _ZN10chibios_rt15BinarySemaphore6signalEv
+     /tmp/cc4xRmdX.s:1333   .text._ZN10chibios_rt15BinarySemaphore7signalIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1339   .text._ZN10chibios_rt15BinarySemaphore7signalIEv:00000000 _ZN10chibios_rt15BinarySemaphore7signalIEv
+     /tmp/cc4xRmdX.s:1351   .text._ZN10chibios_rt15BinarySemaphore9getStateIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1357   .text._ZN10chibios_rt15BinarySemaphore9getStateIEv:00000000 _ZN10chibios_rt15BinarySemaphore9getStateIEv
+ARM GAS  /tmp/cc4xRmdX.s 			page 49
+
+
+     /tmp/cc4xRmdX.s:1369   .text._ZN10chibios_rt5MutexC2Ev:00000000 $t
+     /tmp/cc4xRmdX.s:1375   .text._ZN10chibios_rt5MutexC2Ev:00000000 _ZN10chibios_rt5MutexC2Ev
+     /tmp/cc4xRmdX.s:1375   .text._ZN10chibios_rt5MutexC2Ev:00000000 _ZN10chibios_rt5MutexC1Ev
+     /tmp/cc4xRmdX.s:1387   .text._ZN10chibios_rt5Mutex7tryLockEv:00000000 $t
+     /tmp/cc4xRmdX.s:1393   .text._ZN10chibios_rt5Mutex7tryLockEv:00000000 _ZN10chibios_rt5Mutex7tryLockEv
+     /tmp/cc4xRmdX.s:1400   .text._ZN10chibios_rt5Mutex8tryLockSEv:00000000 $t
+     /tmp/cc4xRmdX.s:1406   .text._ZN10chibios_rt5Mutex8tryLockSEv:00000000 _ZN10chibios_rt5Mutex8tryLockSEv
+     /tmp/cc4xRmdX.s:1413   .text._ZN10chibios_rt5Mutex4lockEv:00000000 $t
+     /tmp/cc4xRmdX.s:1419   .text._ZN10chibios_rt5Mutex4lockEv:00000000 _ZN10chibios_rt5Mutex4lockEv
+     /tmp/cc4xRmdX.s:1426   .text._ZN10chibios_rt5Mutex5lockSEv:00000000 $t
+     /tmp/cc4xRmdX.s:1432   .text._ZN10chibios_rt5Mutex5lockSEv:00000000 _ZN10chibios_rt5Mutex5lockSEv
+     /tmp/cc4xRmdX.s:1439   .text._ZN10chibios_rt7CondVarC2Ev:00000000 $t
+     /tmp/cc4xRmdX.s:1445   .text._ZN10chibios_rt7CondVarC2Ev:00000000 _ZN10chibios_rt7CondVarC2Ev
+     /tmp/cc4xRmdX.s:1445   .text._ZN10chibios_rt7CondVarC2Ev:00000000 _ZN10chibios_rt7CondVarC1Ev
+     /tmp/cc4xRmdX.s:1457   .text._ZN10chibios_rt7CondVar6signalEv:00000000 $t
+     /tmp/cc4xRmdX.s:1463   .text._ZN10chibios_rt7CondVar6signalEv:00000000 _ZN10chibios_rt7CondVar6signalEv
+     /tmp/cc4xRmdX.s:1470   .text._ZN10chibios_rt7CondVar7signalIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1476   .text._ZN10chibios_rt7CondVar7signalIEv:00000000 _ZN10chibios_rt7CondVar7signalIEv
+     /tmp/cc4xRmdX.s:1483   .text._ZN10chibios_rt7CondVar9broadcastEv:00000000 $t
+     /tmp/cc4xRmdX.s:1489   .text._ZN10chibios_rt7CondVar9broadcastEv:00000000 _ZN10chibios_rt7CondVar9broadcastEv
+     /tmp/cc4xRmdX.s:1496   .text._ZN10chibios_rt7CondVar10broadcastIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1502   .text._ZN10chibios_rt7CondVar10broadcastIEv:00000000 _ZN10chibios_rt7CondVar10broadcastIEv
+     /tmp/cc4xRmdX.s:1509   .text._ZN10chibios_rt7CondVar4waitEv:00000000 $t
+     /tmp/cc4xRmdX.s:1515   .text._ZN10chibios_rt7CondVar4waitEv:00000000 _ZN10chibios_rt7CondVar4waitEv
+     /tmp/cc4xRmdX.s:1522   .text._ZN10chibios_rt7CondVar5waitSEv:00000000 $t
+     /tmp/cc4xRmdX.s:1528   .text._ZN10chibios_rt7CondVar5waitSEv:00000000 _ZN10chibios_rt7CondVar5waitSEv
+     /tmp/cc4xRmdX.s:1535   .text._ZN10chibios_rt7CondVar11waitTimeoutEm:00000000 $t
+     /tmp/cc4xRmdX.s:1541   .text._ZN10chibios_rt7CondVar11waitTimeoutEm:00000000 _ZN10chibios_rt7CondVar11waitTimeoutEm
+     /tmp/cc4xRmdX.s:1548   .text._ZN10chibios_rt11EvtListener16getAndClearFlagsEv:00000000 $t
+     /tmp/cc4xRmdX.s:1554   .text._ZN10chibios_rt11EvtListener16getAndClearFlagsEv:00000000 _ZN10chibios_rt11EvtListener16getAndClearFlagsEv
+     /tmp/cc4xRmdX.s:1561   .text._ZN10chibios_rt11EvtListener17getAndClearFlagsIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1567   .text._ZN10chibios_rt11EvtListener17getAndClearFlagsIEv:00000000 _ZN10chibios_rt11EvtListener17getAndClearFlagsIEv
+     /tmp/cc4xRmdX.s:1574   .text._ZN10chibios_rt9EvtSourceC2Ev:00000000 $t
+     /tmp/cc4xRmdX.s:1580   .text._ZN10chibios_rt9EvtSourceC2Ev:00000000 _ZN10chibios_rt9EvtSourceC2Ev
+     /tmp/cc4xRmdX.s:1580   .text._ZN10chibios_rt9EvtSourceC2Ev:00000000 _ZN10chibios_rt9EvtSourceC1Ev
+     /tmp/cc4xRmdX.s:1590   .text._ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl:00000000 $t
+     /tmp/cc4xRmdX.s:1596   .text._ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl:00000000 _ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+     /tmp/cc4xRmdX.s:1605   .text._ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm:00000000 $t
+     /tmp/cc4xRmdX.s:1611   .text._ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm:00000000 _ZN10chibios_rt9EvtSource12registerMaskEPNS_11EvtListenerEm
+     /tmp/cc4xRmdX.s:1618   .text._ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE:00000000 $t
+     /tmp/cc4xRmdX.s:1624   .text._ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE:00000000 _ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
+     /tmp/cc4xRmdX.s:1631   .text._ZN10chibios_rt9EvtSource14broadcastFlagsEm:00000000 $t
+     /tmp/cc4xRmdX.s:1637   .text._ZN10chibios_rt9EvtSource14broadcastFlagsEm:00000000 _ZN10chibios_rt9EvtSource14broadcastFlagsEm
+     /tmp/cc4xRmdX.s:1644   .text._ZN10chibios_rt9EvtSource15broadcastFlagsIEm:00000000 $t
+     /tmp/cc4xRmdX.s:1650   .text._ZN10chibios_rt9EvtSource15broadcastFlagsIEm:00000000 _ZN10chibios_rt9EvtSource15broadcastFlagsIEm
+     /tmp/cc4xRmdX.s:1657   .text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:00000000 $t
+     /tmp/cc4xRmdX.s:1663   .text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv
+     /tmp/cc4xRmdX.s:1663   .text._ZN10chibios_rt7InQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt7InQueueC1EPhjPFvP12GenericQueueEPv
+     /tmp/cc4xRmdX.s:1680   .text._ZN10chibios_rt7InQueue8getFullIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1686   .text._ZN10chibios_rt7InQueue8getFullIEv:00000000 _ZN10chibios_rt7InQueue8getFullIEv
+     /tmp/cc4xRmdX.s:1694   .text._ZN10chibios_rt7InQueue9getEmptyIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1700   .text._ZN10chibios_rt7InQueue9getEmptyIEv:00000000 _ZN10chibios_rt7InQueue9getEmptyIEv
+     /tmp/cc4xRmdX.s:1712   .text._ZN10chibios_rt7InQueue8isEmptyIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1718   .text._ZN10chibios_rt7InQueue8isEmptyIEv:00000000 _ZN10chibios_rt7InQueue8isEmptyIEv
+     /tmp/cc4xRmdX.s:1729   .text._ZN10chibios_rt7InQueue7isFullIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1735   .text._ZN10chibios_rt7InQueue7isFullIEv:00000000 _ZN10chibios_rt7InQueue7isFullIEv
+     /tmp/cc4xRmdX.s:1753   .text._ZN10chibios_rt7InQueue6resetIEv:00000000 $t
+ARM GAS  /tmp/cc4xRmdX.s 			page 50
+
+
+     /tmp/cc4xRmdX.s:1759   .text._ZN10chibios_rt7InQueue6resetIEv:00000000 _ZN10chibios_rt7InQueue6resetIEv
+     /tmp/cc4xRmdX.s:1766   .text._ZN10chibios_rt7InQueue4putIEh:00000000 $t
+     /tmp/cc4xRmdX.s:1772   .text._ZN10chibios_rt7InQueue4putIEh:00000000 _ZN10chibios_rt7InQueue4putIEh
+     /tmp/cc4xRmdX.s:1779   .text._ZN10chibios_rt7InQueue3getEv:00000000 $t
+     /tmp/cc4xRmdX.s:1785   .text._ZN10chibios_rt7InQueue3getEv:00000000 _ZN10chibios_rt7InQueue3getEv
+     /tmp/cc4xRmdX.s:1793   .text._ZN10chibios_rt7InQueue10getTimeoutEm:00000000 $t
+     /tmp/cc4xRmdX.s:1799   .text._ZN10chibios_rt7InQueue10getTimeoutEm:00000000 _ZN10chibios_rt7InQueue10getTimeoutEm
+     /tmp/cc4xRmdX.s:1806   .text._ZN10chibios_rt7InQueue11readTimeoutEPhjm:00000000 $t
+     /tmp/cc4xRmdX.s:1812   .text._ZN10chibios_rt7InQueue11readTimeoutEPhjm:00000000 _ZN10chibios_rt7InQueue11readTimeoutEPhjm
+     /tmp/cc4xRmdX.s:1819   .text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:00000000 $t
+     /tmp/cc4xRmdX.s:1825   .text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv
+     /tmp/cc4xRmdX.s:1825   .text._ZN10chibios_rt8OutQueueC2EPhjPFvP12GenericQueueEPv:00000000 _ZN10chibios_rt8OutQueueC1EPhjPFvP12GenericQueueEPv
+     /tmp/cc4xRmdX.s:1842   .text._ZN10chibios_rt8OutQueue8getFullIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1848   .text._ZN10chibios_rt8OutQueue8getFullIEv:00000000 _ZN10chibios_rt8OutQueue8getFullIEv
+     /tmp/cc4xRmdX.s:1860   .text._ZN10chibios_rt8OutQueue9getEmptyIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1866   .text._ZN10chibios_rt8OutQueue9getEmptyIEv:00000000 _ZN10chibios_rt8OutQueue9getEmptyIEv
+     /tmp/cc4xRmdX.s:1874   .text._ZN10chibios_rt8OutQueue8isEmptyIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1880   .text._ZN10chibios_rt8OutQueue8isEmptyIEv:00000000 _ZN10chibios_rt8OutQueue8isEmptyIEv
+     /tmp/cc4xRmdX.s:1898   .text._ZN10chibios_rt8OutQueue7isFullIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1904   .text._ZN10chibios_rt8OutQueue7isFullIEv:00000000 _ZN10chibios_rt8OutQueue7isFullIEv
+     /tmp/cc4xRmdX.s:1915   .text._ZN10chibios_rt8OutQueue6resetIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1921   .text._ZN10chibios_rt8OutQueue6resetIEv:00000000 _ZN10chibios_rt8OutQueue6resetIEv
+     /tmp/cc4xRmdX.s:1928   .text._ZN10chibios_rt8OutQueue3putEh:00000000 $t
+     /tmp/cc4xRmdX.s:1934   .text._ZN10chibios_rt8OutQueue3putEh:00000000 _ZN10chibios_rt8OutQueue3putEh
+     /tmp/cc4xRmdX.s:1942   .text._ZN10chibios_rt8OutQueue10putTimeoutEhm:00000000 $t
+     /tmp/cc4xRmdX.s:1948   .text._ZN10chibios_rt8OutQueue10putTimeoutEhm:00000000 _ZN10chibios_rt8OutQueue10putTimeoutEhm
+     /tmp/cc4xRmdX.s:1955   .text._ZN10chibios_rt8OutQueue4getIEv:00000000 $t
+     /tmp/cc4xRmdX.s:1961   .text._ZN10chibios_rt8OutQueue4getIEv:00000000 _ZN10chibios_rt8OutQueue4getIEv
+     /tmp/cc4xRmdX.s:1968   .text._ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm:00000000 $t
+     /tmp/cc4xRmdX.s:1974   .text._ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm:00000000 _ZN10chibios_rt8OutQueue12writeTimeoutEPKhjm
+     /tmp/cc4xRmdX.s:1981   .text._ZN10chibios_rt7MailboxC2EPll:00000000 $t
+     /tmp/cc4xRmdX.s:1987   .text._ZN10chibios_rt7MailboxC2EPll:00000000 _ZN10chibios_rt7MailboxC2EPll
+     /tmp/cc4xRmdX.s:1987   .text._ZN10chibios_rt7MailboxC2EPll:00000000 _ZN10chibios_rt7MailboxC1EPll
+     /tmp/cc4xRmdX.s:1999   .text._ZN10chibios_rt7Mailbox5resetEv:00000000 $t
+     /tmp/cc4xRmdX.s:2005   .text._ZN10chibios_rt7Mailbox5resetEv:00000000 _ZN10chibios_rt7Mailbox5resetEv
+     /tmp/cc4xRmdX.s:2012   .text._ZN10chibios_rt7Mailbox4postElm:00000000 $t
+     /tmp/cc4xRmdX.s:2018   .text._ZN10chibios_rt7Mailbox4postElm:00000000 _ZN10chibios_rt7Mailbox4postElm
+     /tmp/cc4xRmdX.s:2025   .text._ZN10chibios_rt7Mailbox5postSElm:00000000 $t
+     /tmp/cc4xRmdX.s:2031   .text._ZN10chibios_rt7Mailbox5postSElm:00000000 _ZN10chibios_rt7Mailbox5postSElm
+     /tmp/cc4xRmdX.s:2038   .text._ZN10chibios_rt7Mailbox5postIEl:00000000 $t
+     /tmp/cc4xRmdX.s:2044   .text._ZN10chibios_rt7Mailbox5postIEl:00000000 _ZN10chibios_rt7Mailbox5postIEl
+     /tmp/cc4xRmdX.s:2051   .text._ZN10chibios_rt7Mailbox9postAheadElm:00000000 $t
+     /tmp/cc4xRmdX.s:2057   .text._ZN10chibios_rt7Mailbox9postAheadElm:00000000 _ZN10chibios_rt7Mailbox9postAheadElm
+     /tmp/cc4xRmdX.s:2064   .text._ZN10chibios_rt7Mailbox10postAheadSElm:00000000 $t
+     /tmp/cc4xRmdX.s:2070   .text._ZN10chibios_rt7Mailbox10postAheadSElm:00000000 _ZN10chibios_rt7Mailbox10postAheadSElm
+     /tmp/cc4xRmdX.s:2077   .text._ZN10chibios_rt7Mailbox10postAheadIEl:00000000 $t
+     /tmp/cc4xRmdX.s:2083   .text._ZN10chibios_rt7Mailbox10postAheadIEl:00000000 _ZN10chibios_rt7Mailbox10postAheadIEl
+     /tmp/cc4xRmdX.s:2090   .text._ZN10chibios_rt7Mailbox5fetchEPlm:00000000 $t
+     /tmp/cc4xRmdX.s:2096   .text._ZN10chibios_rt7Mailbox5fetchEPlm:00000000 _ZN10chibios_rt7Mailbox5fetchEPlm
+     /tmp/cc4xRmdX.s:2103   .text._ZN10chibios_rt7Mailbox6fetchSEPlm:00000000 $t
+     /tmp/cc4xRmdX.s:2109   .text._ZN10chibios_rt7Mailbox6fetchSEPlm:00000000 _ZN10chibios_rt7Mailbox6fetchSEPlm
+     /tmp/cc4xRmdX.s:2116   .text._ZN10chibios_rt7Mailbox6fetchIEPl:00000000 $t
+     /tmp/cc4xRmdX.s:2122   .text._ZN10chibios_rt7Mailbox6fetchIEPl:00000000 _ZN10chibios_rt7Mailbox6fetchIEPl
+     /tmp/cc4xRmdX.s:2129   .text._ZN10chibios_rt7Mailbox13getFreeCountIEv:00000000 $t
+     /tmp/cc4xRmdX.s:2135   .text._ZN10chibios_rt7Mailbox13getFreeCountIEv:00000000 _ZN10chibios_rt7Mailbox13getFreeCountIEv
+     /tmp/cc4xRmdX.s:2143   .text._ZN10chibios_rt7Mailbox13getUsedCountIEv:00000000 $t
+     /tmp/cc4xRmdX.s:2149   .text._ZN10chibios_rt7Mailbox13getUsedCountIEv:00000000 _ZN10chibios_rt7Mailbox13getUsedCountIEv
+ARM GAS  /tmp/cc4xRmdX.s 			page 51
+
+
+     /tmp/cc4xRmdX.s:2157   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE:00000000 $t
+     /tmp/cc4xRmdX.s:2163   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE:00000000 _ZN10chibios_rt10MemoryPoolC2EjPFPvjE
+     /tmp/cc4xRmdX.s:2163   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjE:00000000 _ZN10chibios_rt10MemoryPoolC1EjPFPvjE
+     /tmp/cc4xRmdX.s:2175   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:00000000 $t
+     /tmp/cc4xRmdX.s:2181   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:00000000 _ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j
+     /tmp/cc4xRmdX.s:2181   .text._ZN10chibios_rt10MemoryPoolC2EjPFPvjES1_j:00000000 _ZN10chibios_rt10MemoryPoolC1EjPFPvjES1_j
+     /tmp/cc4xRmdX.s:2199   .text._ZN10chibios_rt10MemoryPool9loadArrayEPvj:00000000 $t
+     /tmp/cc4xRmdX.s:2205   .text._ZN10chibios_rt10MemoryPool9loadArrayEPvj:00000000 _ZN10chibios_rt10MemoryPool9loadArrayEPvj
+     /tmp/cc4xRmdX.s:2212   .text._ZN10chibios_rt10MemoryPool6allocIEv:00000000 $t
+     /tmp/cc4xRmdX.s:2218   .text._ZN10chibios_rt10MemoryPool6allocIEv:00000000 _ZN10chibios_rt10MemoryPool6allocIEv
+     /tmp/cc4xRmdX.s:2225   .text._ZN10chibios_rt10MemoryPool5allocEv:00000000 $t
+     /tmp/cc4xRmdX.s:2231   .text._ZN10chibios_rt10MemoryPool5allocEv:00000000 _ZN10chibios_rt10MemoryPool5allocEv
+     /tmp/cc4xRmdX.s:2238   .text._ZN10chibios_rt10MemoryPool4freeEPv:00000000 $t
+     /tmp/cc4xRmdX.s:2244   .text._ZN10chibios_rt10MemoryPool4freeEPv:00000000 _ZN10chibios_rt10MemoryPool4freeEPv
+     /tmp/cc4xRmdX.s:2251   .text._ZN10chibios_rt10MemoryPool5freeIEPv:00000000 $t
+     /tmp/cc4xRmdX.s:2257   .text._ZN10chibios_rt10MemoryPool5freeIEPv:00000000 _ZN10chibios_rt10MemoryPool5freeIEPv
+     /tmp/cc4xRmdX.s:2308   .rodata._ZTVN10chibios_rt15ThreadReferenceE:00000000 _ZTVN10chibios_rt15ThreadReferenceE
+     /tmp/cc4xRmdX.s:2270   .rodata._ZTVN10chibios_rt10BaseThreadE:00000000 _ZTVN10chibios_rt10BaseThreadE
+     /tmp/cc4xRmdX.s:2266   .rodata._ZTVN10chibios_rt10BaseThreadE:00000000 $d
+     /tmp/cc4xRmdX.s:2277   .rodata.str1.4:00000000 $d
+     /tmp/cc4xRmdX.s:2304   .rodata._ZTVN10chibios_rt15ThreadReferenceE:00000000 $d
+     /tmp/cc4xRmdX.s:68     .text._ZN10chibios_rt15ThreadReference4stopEv:0000000c $t
+     /tmp/cc4xRmdX.s:174    .text._ZN10chibios_rt6System7getTimeEv:0000000c $t
+     /tmp/cc4xRmdX.s:199    .text._ZN10chibios_rt6System12isTimeWithinEmm:00000018 $t
+     /tmp/cc4xRmdX.s:362    .text._ZN10chibios_rt15ThreadReference8suspendSEv:00000028 $t
+     /tmp/cc4xRmdX.s:408    .text._ZN10chibios_rt15ThreadReference6resumeEl:0000003c $t
+     /tmp/cc4xRmdX.s:448    .text._ZN10chibios_rt15ThreadReference7resumeIEl:00000034 $t
+     /tmp/cc4xRmdX.s:475    .text._ZN10chibios_rt15ThreadReference16requestTerminateEv:00000024 $t
+     /tmp/cc4xRmdX.s:506    .text._ZN10chibios_rt15ThreadReference4waitEv:00000028 $t
+     /tmp/cc4xRmdX.s:571    .text._ZN10chibios_rt15ThreadReference16isPendingMessageEv:00000024 $t
+     /tmp/cc4xRmdX.s:598    .text._ZN10chibios_rt15ThreadReference10getMessageEv:0000001c $t
+     /tmp/cc4xRmdX.s:758    .text._ZN10chibios_rt10BaseThread7setNameEPKc:0000000c $t
+     /tmp/cc4xRmdX.s:818    .text._ZN10chibios_rt10BaseThread15shouldTerminateEv:00000014 $t
+     /tmp/cc4xRmdX.s:880    .text._ZN10chibios_rt10BaseThread11waitMessageEv:00000018 $t
+
+UNDEFINED SYMBOLS
+chDbgPanic
+chSysInit
+dbg_check_lock
+dbg_check_unlock
+dbg_check_lock_from_isr
+dbg_check_unlock_from_isr
+vtlist
+chCoreAlloc
+chCoreAllocI
+chCoreStatus
+chVTSetI
+chVTResetI
+chSchGoSleepS
+rlist
+chSchWakeupS
+chSchReadyI
+chThdTerminate
+chThdWait
+chMsgSend
+chMsgRelease
+chEvtSignal
+ARM GAS  /tmp/cc4xRmdX.s 			page 52
+
+
+chEvtSignalI
+chThdSetPriority
+chThdExit
+chThdExitS
+chThdSleep
+chThdSleepUntil
+chThdYield
+chMsgWait
+chEvtGetAndClearEvents
+chEvtAddEvents
+chEvtWaitOne
+chEvtWaitAny
+chEvtWaitAll
+chEvtWaitOneTimeout
+chEvtWaitAnyTimeout
+chEvtWaitAllTimeout
+chEvtDispatch
+chMtxUnlock
+chMtxUnlockS
+chMtxUnlockAll
+chSemInit
+chSemReset
+chSemResetI
+chSemWait
+chSemWaitS
+chSemWaitTimeout
+chSemWaitTimeoutS
+chSemSignal
+chSemSignalI
+chSemAddCounterI
+chSemSignalWait
+chSchRescheduleS
+chMtxInit
+chMtxTryLock
+chMtxTryLockS
+chMtxLock
+chMtxLockS
+chCondInit
+chCondSignal
+chCondSignalI
+chCondBroadcast
+chCondBroadcastI
+chCondWait
+chCondWaitS
+chCondWaitTimeout
+chEvtGetAndClearFlags
+chEvtGetAndClearFlagsI
+chEvtRegisterMask
+chEvtUnregister
+chEvtBroadcastFlags
+chEvtBroadcastFlagsI
+chIQInit
+chIQResetI
+chIQPutI
+chIQGetTimeout
+chIQReadTimeout
+chOQInit
+ARM GAS  /tmp/cc4xRmdX.s 			page 53
+
+
+chOQResetI
+chOQPutTimeout
+chOQGetI
+chOQWriteTimeout
+chMBInit
+chMBReset
+chMBPost
+chMBPostS
+chMBPostI
+chMBPostAhead
+chMBPostAheadS
+chMBPostAheadI
+chMBFetch
+chMBFetchS
+chMBFetchI
+chPoolInit
+chPoolLoadArray
+chPoolAllocI
+chPoolAlloc
+chPoolFree
+chPoolFreeI

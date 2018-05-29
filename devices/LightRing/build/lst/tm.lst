@@ -1,0 +1,179 @@
+ARM GAS  /tmp/ccr817yS.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"tm.c"
+  15              		.section	.text.tm_start,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.thumb
+  19              		.thumb_func
+  20              		.type	tm_start, %function
+  21              	tm_start:
+  22              		@ args = 0, pretend = 0, frame = 0
+  23              		@ frame_needed = 0, uses_anonymous_args = 0
+  24              		@ link register save eliminated.
+  25 0000 014B     		ldr	r3, .L2
+  26 0002 5B68     		ldr	r3, [r3, #4]
+  27 0004 8360     		str	r3, [r0, #8]
+  28 0006 7047     		bx	lr
+  29              	.L3:
+  30              		.align	2
+  31              	.L2:
+  32 0008 001000E0 		.word	-536866816
+  33              		.size	tm_start, .-tm_start
+  34 000c AFF30080 		.section	.text.tm_stop,"ax",%progbits
+  35              		.align	2
+  36              		.p2align 4,,15
+  37              		.thumb
+  38              		.thumb_func
+  39              		.type	tm_stop, %function
+  40              	tm_stop:
+  41              		@ args = 0, pretend = 0, frame = 0
+  42              		@ frame_needed = 0, uses_anonymous_args = 0
+  43              		@ link register save eliminated.
+  44 0000 084B     		ldr	r3, .L9
+  45 0002 0949     		ldr	r1, .L9+4
+  46 0004 8268     		ldr	r2, [r0, #8]
+  47 0006 5B68     		ldr	r3, [r3, #4]
+  48 0008 0968     		ldr	r1, [r1]
+  49 000a 9B1A     		subs	r3, r3, r2
+  50 000c C268     		ldr	r2, [r0, #12]
+  51 000e 5B1A     		subs	r3, r3, r1
+  52 0010 9342     		cmp	r3, r2
+  53 0012 8360     		str	r3, [r0, #8]
+  54 0014 04D8     		bhi	.L8
+  55 0016 0269     		ldr	r2, [r0, #16]
+  56 0018 9342     		cmp	r3, r2
+  57 001a 38BF     		it	cc
+ARM GAS  /tmp/ccr817yS.s 			page 2
+
+
+  58 001c 0361     		strcc	r3, [r0, #16]
+  59 001e 7047     		bx	lr
+  60              	.L8:
+  61 0020 C360     		str	r3, [r0, #12]
+  62 0022 7047     		bx	lr
+  63              	.L10:
+  64              		.align	2
+  65              	.L9:
+  66 0024 001000E0 		.word	-536866816
+  67 0028 00000000 		.word	.LANCHOR0
+  68              		.size	tm_stop, .-tm_stop
+  69 002c AFF30080 		.section	.text.tmInit,"ax",%progbits
+  70              		.align	2
+  71              		.p2align 4,,15
+  72              		.global	tmInit
+  73              		.thumb
+  74              		.thumb_func
+  75              		.type	tmInit, %function
+  76              	tmInit:
+  77              		@ args = 0, pretend = 0, frame = 24
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79 0000 10B5     		push	{r4, lr}
+  80 0002 0B4C     		ldr	r4, .L12
+  81 0004 86B0     		sub	sp, sp, #24
+  82 0006 0023     		movs	r3, #0
+  83 0008 4FF0FF31 		mov	r1, #-1
+  84 000c 094A     		ldr	r2, .L12+4
+  85 000e 0591     		str	r1, [sp, #20]
+  86 0010 2360     		str	r3, [r4]
+  87 0012 0493     		str	r3, [sp, #16]
+  88 0014 5368     		ldr	r3, [r2, #4]
+  89 0016 0849     		ldr	r1, .L12+8
+  90 0018 084A     		ldr	r2, .L12+12
+  91 001a 01A8     		add	r0, sp, #4
+  92 001c 0393     		str	r3, [sp, #12]
+  93 001e 0191     		str	r1, [sp, #4]
+  94 0020 0292     		str	r2, [sp, #8]
+  95 0022 FFF7FEFF 		bl	tm_stop
+  96 0026 039B     		ldr	r3, [sp, #12]
+  97 0028 2360     		str	r3, [r4]
+  98 002a 06B0     		add	sp, sp, #24
+  99              		@ sp needed
+ 100 002c 10BD     		pop	{r4, pc}
+ 101              	.L13:
+ 102 002e 00BF     		.align	2
+ 103              	.L12:
+ 104 0030 00000000 		.word	.LANCHOR0
+ 105 0034 001000E0 		.word	-536866816
+ 106 0038 00000000 		.word	tm_start
+ 107 003c 00000000 		.word	tm_stop
+ 108              		.size	tmInit, .-tmInit
+ 109              		.section	.text.tmObjectInit,"ax",%progbits
+ 110              		.align	2
+ 111              		.p2align 4,,15
+ 112              		.global	tmObjectInit
+ 113              		.thumb
+ 114              		.thumb_func
+ARM GAS  /tmp/ccr817yS.s 			page 3
+
+
+ 115              		.type	tmObjectInit, %function
+ 116              	tmObjectInit:
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119              		@ link register save eliminated.
+ 120 0000 0649     		ldr	r1, .L15
+ 121 0002 074A     		ldr	r2, .L15+4
+ 122 0004 10B4     		push	{r4}
+ 123 0006 0023     		movs	r3, #0
+ 124 0008 4FF0FF34 		mov	r4, #-1
+ 125 000c 0461     		str	r4, [r0, #16]
+ 126 000e 80E80600 		stmia	r0, {r1, r2}
+ 127 0012 8360     		str	r3, [r0, #8]
+ 128 0014 C360     		str	r3, [r0, #12]
+ 129 0016 5DF8044B 		ldr	r4, [sp], #4
+ 130 001a 7047     		bx	lr
+ 131              	.L16:
+ 132              		.align	2
+ 133              	.L15:
+ 134 001c 00000000 		.word	tm_start
+ 135 0020 00000000 		.word	tm_stop
+ 136              		.size	tmObjectInit, .-tmObjectInit
+ 137 0024 AFF30080 		.section	.bss.measurement_offset,"aw",%nobits
+ 137      AFF30080 
+ 137      AFF30080 
+ 138              		.align	2
+ 139              		.set	.LANCHOR0,. + 0
+ 140              		.type	measurement_offset, %object
+ 141              		.size	measurement_offset, 4
+ 142              	measurement_offset:
+ 143 0000 00000000 		.space	4
+ 144              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccr817yS.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 tm.c
+     /tmp/ccr817yS.s:16     .text.tm_start:00000000 $t
+     /tmp/ccr817yS.s:21     .text.tm_start:00000000 tm_start
+     /tmp/ccr817yS.s:32     .text.tm_start:00000008 $d
+     /tmp/ccr817yS.s:35     .text.tm_stop:00000000 $t
+     /tmp/ccr817yS.s:40     .text.tm_stop:00000000 tm_stop
+     /tmp/ccr817yS.s:66     .text.tm_stop:00000024 $d
+     /tmp/ccr817yS.s:70     .text.tmInit:00000000 $t
+     /tmp/ccr817yS.s:76     .text.tmInit:00000000 tmInit
+     /tmp/ccr817yS.s:104    .text.tmInit:00000030 $d
+     /tmp/ccr817yS.s:110    .text.tmObjectInit:00000000 $t
+     /tmp/ccr817yS.s:116    .text.tmObjectInit:00000000 tmObjectInit
+     /tmp/ccr817yS.s:134    .text.tmObjectInit:0000001c $d
+     /tmp/ccr817yS.s:138    .bss.measurement_offset:00000000 $d
+     /tmp/ccr817yS.s:142    .bss.measurement_offset:00000000 measurement_offset
+     /tmp/ccr817yS.s:34     .text.tm_start:0000000c $t
+     /tmp/ccr817yS.s:69     .text.tm_stop:0000002c $t
+     /tmp/ccr817yS.s:137    .text.tmObjectInit:00000024 $t
+
+NO UNDEFINED SYMBOLS

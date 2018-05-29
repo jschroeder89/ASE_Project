@@ -1,0 +1,1106 @@
+ARM GAS  /tmp/ccXcoiKL.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Odometry.cpp"
+  15              		.section	.text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm,"axG",%progbits,_ZN10chibios_rt16
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.weak	_ZN10chibios_rt16BaseStaticThreadILi512EE5startEm
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN10chibios_rt16BaseStaticThreadILi512EE5startEm, %function
+  22              	_ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 30B5     		push	{r4, r5, lr}
+  26 0002 0D46     		mov	r5, r1
+  27 0004 83B0     		sub	sp, sp, #12
+  28 0006 0446     		mov	r4, r0
+  29 0008 0091     		str	r1, [sp]
+  30 000a 05F10800 		add	r0, r5, #8
+  31 000e 4FF43471 		mov	r1, #720
+  32 0012 054B     		ldr	r3, .L2
+  33 0014 FFF7FEFF 		bl	chThdCreateStatic
+  34 0018 044A     		ldr	r2, .L2+4
+  35 001a 0346     		mov	r3, r0
+  36 001c 6860     		str	r0, [r5, #4]
+  37 001e 2046     		mov	r0, r4
+  38 0020 84E80C00 		stmia	r4, {r2, r3}
+  39 0024 03B0     		add	sp, sp, #12
+  40              		@ sp needed
+  41 0026 30BD     		pop	{r4, r5, pc}
+  42              	.L3:
+  43              		.align	2
+  44              	.L2:
+  45 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+  46 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+  47              		.size	_ZN10chibios_rt16BaseStaticThreadILi512EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi512
+  48              		.section	.text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6,"ax",%progbits
+  49              		.align	2
+  50              		.p2align 4,,15
+  51              		.thumb
+  52              		.thumb_func
+  53              		.type	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6, %function
+  54              	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:
+  55              		@ args = 4, pretend = 12, frame = 8
+  56              		@ frame_needed = 0, uses_anonymous_args = 1
+  57 0000 0EB4     		push	{r1, r2, r3}
+ARM GAS  /tmp/ccXcoiKL.s 			page 2
+
+
+  58 0002 00B5     		push	{lr}
+  59 0004 82B0     		sub	sp, sp, #8
+  60 0006 04AB     		add	r3, sp, #16
+  61 0008 1A46     		mov	r2, r3
+  62 000a 0548     		ldr	r0, .L5
+  63 000c 0549     		ldr	r1, .L5+4
+  64 000e 0193     		str	r3, [sp, #4]
+  65 0010 FFF7FEFF 		bl	chvprintf
+  66 0014 02B0     		add	sp, sp, #8
+  67              		@ sp needed
+  68 0016 5DF804EB 		ldr	lr, [sp], #4
+  69 001a 03B0     		add	sp, sp, #12
+  70 001c 7047     		bx	lr
+  71              	.L6:
+  72 001e 00BF     		.align	2
+  73              	.L5:
+  74 0020 682D0000 		.word	global+11624
+  75 0024 00000000 		.word	.LC0
+  76              		.size	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6, .-_ZL8chprintfP20BaseSequentialStreamPK
+  77              		.global	__aeabi_fmul
+  78              		.global	__aeabi_fadd
+  79 0028 AFF30080 		.section	.text._ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7,"ax",%progbits
+  79      AFF30080 
+  80              		.align	2
+  81              		.p2align 4,,15
+  82              		.thumb
+  83              		.thumb_func
+  84              		.type	_ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7, %function
+  85              	_ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7:
+  86              		@ args = 4, pretend = 0, frame = 16
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  89 0004 85B0     		sub	sp, sp, #20
+  90 0006 4FEA830A 		lsl	r10, r3, #2
+  91 000a 0E9E     		ldr	r6, [sp, #56]
+  92 000c 0023     		movs	r3, #0
+  93 000e 0191     		str	r1, [sp, #4]
+  94 0010 0392     		str	r2, [sp, #12]
+  95 0012 0746     		mov	r7, r0
+  96 0014 4FEA8108 		lsl	r8, r1, #2
+  97 0018 0293     		str	r3, [sp, #8]
+  98              	.L8:
+  99 001a 039D     		ldr	r5, [sp, #12]
+ 100 001c 0024     		movs	r4, #0
+ 101              	.L14:
+ 102 001e 019B     		ldr	r3, [sp, #4]
+ 103 0020 9BB1     		cbz	r3, .L11
+ 104 0022 56F80490 		ldr	r9, [r6, r4]	@ float
+ 105 0026 4FF0000B 		mov	fp, #0
+ 106              	.L12:
+ 107 002a 55F80B10 		ldr	r1, [r5, fp]	@ float
+ 108 002e 57F80B00 		ldr	r0, [r7, fp]	@ float
+ 109 0032 FFF7FEFF 		bl	__aeabi_fmul
+ 110 0036 0146     		mov	r1, r0
+ 111 0038 4846     		mov	r0, r9
+ 112 003a FFF7FEFF 		bl	__aeabi_fadd
+ 113 003e 0BF1040B 		add	fp, fp, #4
+ARM GAS  /tmp/ccXcoiKL.s 			page 3
+
+
+ 114 0042 C345     		cmp	fp, r8
+ 115 0044 8146     		mov	r9, r0
+ 116 0046 3051     		str	r0, [r6, r4]	@ float
+ 117 0048 EFD1     		bne	.L12
+ 118              	.L11:
+ 119 004a 0434     		adds	r4, r4, #4
+ 120 004c 0C2C     		cmp	r4, #12
+ 121 004e 5544     		add	r5, r5, r10
+ 122 0050 E5D1     		bne	.L14
+ 123 0052 029B     		ldr	r3, [sp, #8]
+ 124 0054 4744     		add	r7, r7, r8
+ 125 0056 0133     		adds	r3, r3, #1
+ 126 0058 032B     		cmp	r3, #3
+ 127 005a 0293     		str	r3, [sp, #8]
+ 128 005c 06F10C06 		add	r6, r6, #12
+ 129 0060 DBD1     		bne	.L8
+ 130 0062 05B0     		add	sp, sp, #20
+ 131              		@ sp needed
+ 132 0064 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 133              		.size	_ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7, .-_ZN6Matrix10XdotYtransIfEEv
+ 134 0068 AFF30080 		.section	.text._ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8,"ax",%progbits
+ 134      AFF30080 
+ 135              		.align	2
+ 136              		.p2align 4,,15
+ 137              		.thumb
+ 138              		.thumb_func
+ 139              		.type	_ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8, %function
+ 140              	_ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8:
+ 141              		@ args = 8, pretend = 0, frame = 32
+ 142              		@ frame_needed = 0, uses_anonymous_args = 0
+ 143 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 144 0004 89B0     		sub	sp, sp, #36
+ 145 0006 139C     		ldr	r4, [sp, #76]
+ 146 0008 0492     		str	r2, [sp, #16]
+ 147 000a 8A00     		lsls	r2, r1, #2
+ 148 000c 0692     		str	r2, [sp, #24]
+ 149 000e A400     		lsls	r4, r4, #2
+ 150 0010 0322     		movs	r2, #3
+ 151 0012 129D     		ldr	r5, [sp, #72]
+ 152 0014 0391     		str	r1, [sp, #12]
+ 153 0016 0290     		str	r0, [sp, #8]
+ 154 0018 4FEA8308 		lsl	r8, r3, #2
+ 155 001c 0794     		str	r4, [sp, #28]
+ 156 001e 0592     		str	r2, [sp, #20]
+ 157              	.L20:
+ 158 0020 139C     		ldr	r4, [sp, #76]
+ 159 0022 002C     		cmp	r4, #0
+ 160 0024 2FD0     		beq	.L34
+ 161 0026 029F     		ldr	r7, [sp, #8]
+ 162 0028 069B     		ldr	r3, [sp, #24]
+ 163 002a 0024     		movs	r4, #0
+ 164 002c 0194     		str	r4, [sp, #4]
+ 165 002e 1F44     		add	r7, r7, r3
+ 166              	.L26:
+ 167 0030 039B     		ldr	r3, [sp, #12]
+ 168 0032 B3B1     		cbz	r3, .L23
+ 169 0034 049E     		ldr	r6, [sp, #16]
+ARM GAS  /tmp/ccXcoiKL.s 			page 4
+
+
+ 170 0036 55F80490 		ldr	r9, [r5, r4]	@ float
+ 171 003a DDF808A0 		ldr	r10, [sp, #8]
+ 172 003e 4FF0000B 		mov	fp, #0
+ 173 0042 2644     		add	r6, r6, r4
+ 174              	.L24:
+ 175 0044 56F80B10 		ldr	r1, [r6, fp]	@ float
+ 176 0048 5AF8040B 		ldr	r0, [r10], #4	@ float
+ 177 004c FFF7FEFF 		bl	__aeabi_fmul
+ 178 0050 0146     		mov	r1, r0
+ 179 0052 4846     		mov	r0, r9
+ 180 0054 FFF7FEFF 		bl	__aeabi_fadd
+ 181 0058 5745     		cmp	r7, r10
+ 182 005a 8146     		mov	r9, r0
+ 183 005c 2851     		str	r0, [r5, r4]	@ float
+ 184 005e C344     		add	fp, fp, r8
+ 185 0060 F0D1     		bne	.L24
+ 186              	.L23:
+ 187 0062 019B     		ldr	r3, [sp, #4]
+ 188 0064 139A     		ldr	r2, [sp, #76]
+ 189 0066 0133     		adds	r3, r3, #1
+ 190 0068 9342     		cmp	r3, r2
+ 191 006a 0193     		str	r3, [sp, #4]
+ 192 006c 04F10404 		add	r4, r4, #4
+ 193 0070 DED1     		bne	.L26
+ 194              	.L22:
+ 195 0072 059A     		ldr	r2, [sp, #20]
+ 196 0074 079C     		ldr	r4, [sp, #28]
+ 197 0076 013A     		subs	r2, r2, #1
+ 198 0078 0297     		str	r7, [sp, #8]
+ 199 007a 2544     		add	r5, r5, r4
+ 200 007c 0592     		str	r2, [sp, #20]
+ 201 007e CFD1     		bne	.L20
+ 202 0080 09B0     		add	sp, sp, #36
+ 203              		@ sp needed
+ 204 0082 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 205              	.L34:
+ 206 0086 029F     		ldr	r7, [sp, #8]
+ 207 0088 069A     		ldr	r2, [sp, #24]
+ 208 008a 1744     		add	r7, r7, r2
+ 209 008c F1E7     		b	.L22
+ 210              		.size	_ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8, .-_ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2
+ 211              		.global	__aeabi_f2d
+ 212              		.global	__aeabi_dmul
+ 213              		.global	__aeabi_d2iz
+ 214              		.global	__aeabi_fcmplt
+ 215 008e 00BF     		.section	.text._ZN5amiro8Odometry11getPositionEv,"ax",%progbits
+ 216              		.align	2
+ 217              		.p2align 4,,15
+ 218              		.global	_ZN5amiro8Odometry11getPositionEv
+ 219              		.thumb
+ 220              		.thumb_func
+ 221              		.type	_ZN5amiro8Odometry11getPositionEv, %function
+ 222              	_ZN5amiro8Odometry11getPositionEv:
+ 223              		@ args = 0, pretend = 0, frame = 0
+ 224              		@ frame_needed = 0, uses_anonymous_args = 0
+ 225 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 226 0002 0446     		mov	r4, r0
+ARM GAS  /tmp/ccXcoiKL.s 			page 5
+
+
+ 227 0004 0D46     		mov	r5, r1
+ 228 0006 2023     		movs	r3, #32
+ 229              	@ 58 "../../components/Odometry.cpp" 1
+ 230 0008 83F31188 		msr     BASEPRI, r3
+ 231              	@ 0 "" 2
+ 232              		.thumb
+ 233 000c FFF7FEFF 		bl	dbg_check_lock
+ 234 0010 D5F80803 		ldr	r0, [r5, #776]	@ float
+ 235 0014 FFF7FEFF 		bl	__aeabi_f2d
+ 236 0018 1DA3     		adr	r3, .L40
+ 237 001a D3E90023 		ldrd	r2, [r3]
+ 238 001e FFF7FEFF 		bl	__aeabi_dmul
+ 239 0022 FFF7FEFF 		bl	__aeabi_d2iz
+ 240 0026 2060     		str	r0, [r4]
+ 241 0028 D5F80C03 		ldr	r0, [r5, #780]	@ float
+ 242 002c FFF7FEFF 		bl	__aeabi_f2d
+ 243 0030 17A3     		adr	r3, .L40
+ 244 0032 D3E90023 		ldrd	r2, [r3]
+ 245 0036 FFF7FEFF 		bl	__aeabi_dmul
+ 246 003a FFF7FEFF 		bl	__aeabi_d2iz
+ 247 003e D5F81063 		ldr	r6, [r5, #784]	@ float
+ 248 0042 6060     		str	r0, [r4, #4]
+ 249 0044 3046     		mov	r0, r6
+ 250 0046 FFF7FEFF 		bl	__aeabi_f2d
+ 251 004a 11A3     		adr	r3, .L40
+ 252 004c D3E90023 		ldrd	r2, [r3]
+ 253 0050 FFF7FEFF 		bl	__aeabi_dmul
+ 254 0054 FFF7FEFF 		bl	__aeabi_d2iz
+ 255 0058 0F4D     		ldr	r5, .L40+8
+ 256 005a C217     		asrs	r2, r0, #31
+ 257 005c 85FB0015 		smull	r1, r5, r5, r0
+ 258 0060 0E4F     		ldr	r7, .L40+12
+ 259 0062 0346     		mov	r3, r0
+ 260 0064 C2EB6555 		rsb	r5, r2, r5, asr #21
+ 261 0068 0021     		movs	r1, #0
+ 262 006a 3046     		mov	r0, r6
+ 263 006c 07FB1535 		mls	r5, r7, r5, r3
+ 264 0070 FFF7FEFF 		bl	__aeabi_fcmplt
+ 265 0074 0028     		cmp	r0, #0
+ 266 0076 08BF     		it	eq
+ 267 0078 0027     		moveq	r7, #0
+ 268 007a 3D44     		add	r5, r5, r7
+ 269 007c 6561     		str	r5, [r4, #20]
+ 270 007e FFF7FEFF 		bl	dbg_check_unlock
+ 271 0082 0023     		movs	r3, #0
+ 272              	@ 63 "../../components/Odometry.cpp" 1
+ 273 0084 83F31188 		msr     BASEPRI, r3
+ 274              	@ 0 "" 2
+ 275              		.thumb
+ 276 0088 2046     		mov	r0, r4
+ 277 008a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 278              	.L41:
+ 279 008c AFF30080 		.align	3
+ 280              	.L40:
+ 281 0090 00000000 		.word	0
+ 282 0094 80842E41 		.word	1093567616
+ 283 0098 03177255 		.word	1433540355
+ARM GAS  /tmp/ccXcoiKL.s 			page 6
+
+
+ 284 009c B1DF5F00 		.word	6283185
+ 285              		.size	_ZN5amiro8Odometry11getPositionEv, .-_ZN5amiro8Odometry11getPositionEv
+ 286              		.section	.text._ZN5amiro8Odometry11setPositionEfff,"ax",%progbits
+ 287              		.align	2
+ 288              		.p2align 4,,15
+ 289              		.global	_ZN5amiro8Odometry11setPositionEfff
+ 290              		.thumb
+ 291              		.thumb_func
+ 292              		.type	_ZN5amiro8Odometry11setPositionEfff, %function
+ 293              	_ZN5amiro8Odometry11setPositionEfff:
+ 294              		@ args = 0, pretend = 0, frame = 0
+ 295              		@ frame_needed = 0, uses_anonymous_args = 0
+ 296 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 297 0002 1D46     		mov	r5, r3
+ 298 0004 0446     		mov	r4, r0
+ 299 0006 0E46     		mov	r6, r1
+ 300 0008 1746     		mov	r7, r2
+ 301 000a 2023     		movs	r3, #32
+ 302              	@ 72 "../../components/Odometry.cpp" 1
+ 303 000c 83F31188 		msr     BASEPRI, r3
+ 304              	@ 0 "" 2
+ 305              		.thumb
+ 306 0010 FFF7FEFF 		bl	dbg_check_lock
+ 307 0014 C4F80863 		str	r6, [r4, #776]	@ float
+ 308 0018 C4F80C73 		str	r7, [r4, #780]	@ float
+ 309 001c C4F81053 		str	r5, [r4, #784]	@ float
+ 310 0020 FFF7FEFF 		bl	dbg_check_unlock
+ 311 0024 0023     		movs	r3, #0
+ 312              	@ 76 "../../components/Odometry.cpp" 1
+ 313 0026 83F31188 		msr     BASEPRI, r3
+ 314              	@ 0 "" 2
+ 315              		.thumb
+ 316 002a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 317              		.size	_ZN5amiro8Odometry11setPositionEfff, .-_ZN5amiro8Odometry11setPositionEfff
+ 318 002c AFF30080 		.section	.text._ZN5amiro8Odometry13resetPositionEv,"ax",%progbits
+ 319              		.align	2
+ 320              		.p2align 4,,15
+ 321              		.global	_ZN5amiro8Odometry13resetPositionEv
+ 322              		.thumb
+ 323              		.thumb_func
+ 324              		.type	_ZN5amiro8Odometry13resetPositionEv, %function
+ 325              	_ZN5amiro8Odometry13resetPositionEv:
+ 326              		@ args = 0, pretend = 0, frame = 0
+ 327              		@ frame_needed = 0, uses_anonymous_args = 0
+ 328 0000 10B5     		push	{r4, lr}
+ 329 0002 2023     		movs	r3, #32
+ 330 0004 0446     		mov	r4, r0
+ 331              	@ 72 "../../components/Odometry.cpp" 1
+ 332 0006 83F31188 		msr     BASEPRI, r3
+ 333              	@ 0 "" 2
+ 334              		.thumb
+ 335 000a FFF7FEFF 		bl	dbg_check_lock
+ 336 000e 0023     		movs	r3, #0
+ 337 0010 C4F80833 		str	r3, [r4, #776]	@ float
+ 338 0014 C4F80C33 		str	r3, [r4, #780]	@ float
+ 339 0018 C4F81033 		str	r3, [r4, #784]	@ float
+ 340 001c FFF7FEFF 		bl	dbg_check_unlock
+ARM GAS  /tmp/ccXcoiKL.s 			page 7
+
+
+ 341 0020 0023     		movs	r3, #0
+ 342              	@ 76 "../../components/Odometry.cpp" 1
+ 343 0022 83F31188 		msr     BASEPRI, r3
+ 344              	@ 0 "" 2
+ 345              		.thumb
+ 346 0026 10BD     		pop	{r4, pc}
+ 347              		.size	_ZN5amiro8Odometry13resetPositionEv, .-_ZN5amiro8Odometry13resetPositionEv
+ 348 0028 AFF30080 		.section	.text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE,"ax",%progbits
+ 348      AFF30080 
+ 349              		.align	2
+ 350              		.p2align 4,,15
+ 351              		.global	_ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE
+ 352              		.thumb
+ 353              		.thumb_func
+ 354              		.type	_ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE, %function
+ 355              	_ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:
+ 356              		@ args = 0, pretend = 0, frame = 0
+ 357              		@ frame_needed = 0, uses_anonymous_args = 0
+ 358 0000 70B5     		push	{r4, r5, r6, lr}
+ 359 0002 0446     		mov	r4, r0
+ 360 0004 0D46     		mov	r5, r1
+ 361 0006 1646     		mov	r6, r2
+ 362 0008 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+ 363 000c 1B4B     		ldr	r3, .L50
+ 364 000e C4F8D852 		str	r5, [r4, #728]
+ 365 0012 C4F8DC62 		str	r6, [r4, #732]
+ 366 0016 2360     		str	r3, [r4]
+ 367 0018 04F53870 		add	r0, r4, #736
+ 368 001c FFF7FEFF 		bl	_ZN10chibios_rt9EvtSourceC1Ev
+ 369 0020 174B     		ldr	r3, .L50+4
+ 370 0022 1849     		ldr	r1, .L50+8
+ 371 0024 0025     		movs	r5, #0
+ 372 0026 0022     		movs	r2, #0
+ 373 0028 4FF49660 		mov	r0, #1200
+ 374 002c 3226     		movs	r6, #50
+ 375 002e C4F8EC02 		str	r0, [r4, #748]
+ 376 0032 C4F83823 		str	r2, [r4, #824]
+ 377 0036 C4F83C23 		str	r2, [r4, #828]
+ 378 003a C4F80033 		str	r3, [r4, #768]	@ float
+ 379 003e C4F80433 		str	r3, [r4, #772]	@ float
+ 380 0042 C4F8E462 		str	r6, [r4, #740]
+ 381 0046 C4F8F012 		str	r1, [r4, #752]	@ float
+ 382 004a C4F8F852 		str	r5, [r4, #760]	@ float
+ 383 004e C4F8FC52 		str	r5, [r4, #764]	@ float
+ 384 0052 C4F84053 		str	r5, [r4, #832]	@ float
+ 385 0056 C4F84453 		str	r5, [r4, #836]	@ float
+ 386 005a 2046     		mov	r0, r4
+ 387 005c FFF7FEFF 		bl	_ZN5amiro8Odometry13resetPositionEv
+ 388 0060 04F54573 		add	r3, r4, #788
+ 389 0064 04F54E72 		add	r2, r4, #824
+ 390 0068 9342     		cmp	r3, r2
+ 391 006a 04D0     		beq	.L48
+ 392 006c 2946     		mov	r1, r5
+ 393              	.L47:
+ 394 006e 43F8041B 		str	r1, [r3], #4	@ float
+ 395 0072 9A42     		cmp	r2, r3
+ 396 0074 FBD1     		bne	.L47
+ARM GAS  /tmp/ccXcoiKL.s 			page 8
+
+
+ 397              	.L48:
+ 398 0076 2046     		mov	r0, r4
+ 399 0078 70BD     		pop	{r4, r5, r6, pc}
+ 400              	.L51:
+ 401 007a 00BF     		.align	2
+ 402              	.L50:
+ 403 007c 08000000 		.word	.LANCHOR0+8
+ 404 0080 CDCCCC3D 		.word	1036831949
+ 405 0084 F337333E 		.word	1043544051
+ 406              		.size	_ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE, .-_ZN5amiro8OdometryC2EPNS_15Moto
+ 407              		.global	_ZN5amiro8OdometryC1EPNS_15MotorIncrementsEPNS_8L3G4200DE
+ 408              		.thumb_set _ZN5amiro8OdometryC1EPNS_15MotorIncrementsEPNS_8L3G4200DE,_ZN5amiro8OdometryC2EPNS_15Mo
+ 409 0088 AFF30080 		.section	.text._ZN5amiro8Odometry8setErrorEPf,"ax",%progbits
+ 409      AFF30080 
+ 410              		.align	2
+ 411              		.p2align 4,,15
+ 412              		.global	_ZN5amiro8Odometry8setErrorEPf
+ 413              		.thumb
+ 414              		.thumb_func
+ 415              		.type	_ZN5amiro8Odometry8setErrorEPf, %function
+ 416              	_ZN5amiro8Odometry8setErrorEPf:
+ 417              		@ args = 0, pretend = 0, frame = 0
+ 418              		@ frame_needed = 0, uses_anonymous_args = 0
+ 419 0000 38B5     		push	{r3, r4, r5, lr}
+ 420 0002 0546     		mov	r5, r0
+ 421 0004 0C46     		mov	r4, r1
+ 422 0006 2023     		movs	r3, #32
+ 423              	@ 84 "../../components/Odometry.cpp" 1
+ 424 0008 83F31188 		msr     BASEPRI, r3
+ 425              	@ 0 "" 2
+ 426              		.thumb
+ 427 000c FFF7FEFF 		bl	dbg_check_lock
+ 428 0010 2146     		mov	r1, r4
+ 429 0012 2422     		movs	r2, #36
+ 430 0014 05F54570 		add	r0, r5, #788
+ 431 0018 FFF7FEFF 		bl	memmove
+ 432 001c FFF7FEFF 		bl	dbg_check_unlock
+ 433 0020 0023     		movs	r3, #0
+ 434              	@ 86 "../../components/Odometry.cpp" 1
+ 435 0022 83F31188 		msr     BASEPRI, r3
+ 436              	@ 0 "" 2
+ 437              		.thumb
+ 438 0026 38BD     		pop	{r3, r4, r5, pc}
+ 439              		.size	_ZN5amiro8Odometry8setErrorEPf, .-_ZN5amiro8Odometry8setErrorEPf
+ 440 0028 AFF30080 		.section	.text._ZN5amiro8Odometry10resetErrorEv,"ax",%progbits
+ 440      AFF30080 
+ 441              		.align	2
+ 442              		.p2align 4,,15
+ 443              		.global	_ZN5amiro8Odometry10resetErrorEv
+ 444              		.thumb
+ 445              		.thumb_func
+ 446              		.type	_ZN5amiro8Odometry10resetErrorEv, %function
+ 447              	_ZN5amiro8Odometry10resetErrorEv:
+ 448              		@ args = 0, pretend = 0, frame = 0
+ 449              		@ frame_needed = 0, uses_anonymous_args = 0
+ 450              		@ link register save eliminated.
+ 451 0000 00F54573 		add	r3, r0, #788
+ARM GAS  /tmp/ccXcoiKL.s 			page 9
+
+
+ 452 0004 00F54E70 		add	r0, r0, #824
+ 453 0008 8342     		cmp	r3, r0
+ 454 000a 04D0     		beq	.L54
+ 455 000c 0022     		movs	r2, #0
+ 456              	.L57:
+ 457 000e 43F8042B 		str	r2, [r3], #4	@ float
+ 458 0012 9842     		cmp	r0, r3
+ 459 0014 FBD1     		bne	.L57
+ 460              	.L54:
+ 461 0016 7047     		bx	lr
+ 462              		.size	_ZN5amiro8Odometry10resetErrorEv, .-_ZN5amiro8Odometry10resetErrorEv
+ 463 0018 AFF30080 		.section	.text._ZN5amiro8Odometry14getEventSourceEv,"ax",%progbits
+ 463      AFF30080 
+ 464              		.align	2
+ 465              		.p2align 4,,15
+ 466              		.global	_ZN5amiro8Odometry14getEventSourceEv
+ 467              		.thumb
+ 468              		.thumb_func
+ 469              		.type	_ZN5amiro8Odometry14getEventSourceEv, %function
+ 470              	_ZN5amiro8Odometry14getEventSourceEv:
+ 471              		@ args = 0, pretend = 0, frame = 0
+ 472              		@ frame_needed = 0, uses_anonymous_args = 0
+ 473              		@ link register save eliminated.
+ 474 0000 00F53870 		add	r0, r0, #736
+ 475 0004 7047     		bx	lr
+ 476              		.size	_ZN5amiro8Odometry14getEventSourceEv, .-_ZN5amiro8Odometry14getEventSourceEv
+ 477              		.global	__aeabi_fsub
+ 478              		.global	__aeabi_fdiv
+ 479              		.global	__aeabi_d2f
+ 480              		.global	__aeabi_f2iz
+ 481              		.global	__aeabi_i2f
+ 482 0006 00BFAFF3 		.section	.text._ZN5amiro8Odometry14updateOdometryEv,"ax",%progbits
+ 482      0080AFF3 
+ 482      0080
+ 483              		.align	2
+ 484              		.p2align 4,,15
+ 485              		.global	_ZN5amiro8Odometry14updateOdometryEv
+ 486              		.thumb
+ 487              		.thumb_func
+ 488              		.type	_ZN5amiro8Odometry14updateOdometryEv, %function
+ 489              	_ZN5amiro8Odometry14updateOdometryEv:
+ 490              		@ args = 0, pretend = 0, frame = 288
+ 491              		@ frame_needed = 0, uses_anonymous_args = 0
+ 492 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 493 0004 2023     		movs	r3, #32
+ 494 0006 CBB0     		sub	sp, sp, #300
+ 495 0008 0546     		mov	r5, r0
+ 496              	@ 135 "../../components/Odometry.cpp" 1
+ 497 000a 83F31188 		msr     BASEPRI, r3
+ 498              	@ 0 "" 2
+ 499              		.thumb
+ 500 000e FFF7FEFF 		bl	dbg_check_lock
+ 501 0012 D5F80C33 		ldr	r3, [r5, #780]	@ float
+ 502 0016 0922     		movs	r2, #9
+ 503 0018 0A93     		str	r3, [sp, #40]	@ float
+ 504 001a 05F54573 		add	r3, r5, #788
+ 505 001e D5F808B3 		ldr	fp, [r5, #776]	@ float
+ARM GAS  /tmp/ccXcoiKL.s 			page 10
+
+
+ 506 0022 D5F81083 		ldr	r8, [r5, #784]	@ float
+ 507 0026 0993     		str	r3, [sp, #36]
+ 508 0028 1DAC     		add	r4, sp, #116
+ 509 002a 22B1     		cbz	r2, .L61
+ 510 002c 9200     		lsls	r2, r2, #2
+ 511 002e 2046     		mov	r0, r4
+ 512 0030 0999     		ldr	r1, [sp, #36]
+ 513 0032 FFF7FEFF 		bl	memcpy
+ 514              	.L61:
+ 515 0036 FFF7FEFF 		bl	dbg_check_unlock
+ 516 003a 0023     		movs	r3, #0
+ 517              	@ 143 "../../components/Odometry.cpp" 1
+ 518 003c 83F31188 		msr     BASEPRI, r3
+ 519              	@ 0 "" 2
+ 520              		.thumb
+ 521 0040 D5F8FC72 		ldr	r7, [r5, #764]	@ float
+ 522 0044 D5F8F8C2 		ldr	ip, [r5, #760]	@ float
+ 523 0048 D5F8F462 		ldr	r6, [r5, #756]	@ float
+ 524 004c 6146     		mov	r1, ip
+ 525 004e 3846     		mov	r0, r7
+ 526 0050 CDF80CC0 		str	ip, [sp, #12]
+ 527 0054 FFF7FEFF 		bl	__aeabi_fsub
+ 528 0058 3146     		mov	r1, r6
+ 529 005a FFF7FEFF 		bl	__aeabi_fdiv
+ 530 005e DDF80CC0 		ldr	ip, [sp, #12]
+ 531 0062 0690     		str	r0, [sp, #24]	@ float
+ 532 0064 6146     		mov	r1, ip
+ 533 0066 3846     		mov	r0, r7
+ 534 0068 FFF7FEFF 		bl	__aeabi_fadd
+ 535 006c 4FF07C51 		mov	r1, #1056964608
+ 536 0070 FFF7FEFF 		bl	__aeabi_fmul
+ 537 0074 4FF07C51 		mov	r1, #1056964608
+ 538 0078 8146     		mov	r9, r0
+ 539 007a 0698     		ldr	r0, [sp, #24]	@ float
+ 540 007c FFF7FEFF 		bl	__aeabi_fmul
+ 541 0080 4146     		mov	r1, r8
+ 542 0082 FFF7FEFF 		bl	__aeabi_fadd
+ 543 0086 FFF7FEFF 		bl	__aeabi_f2d
+ 544 008a 0590     		str	r0, [sp, #20]
+ 545 008c 0491     		str	r1, [sp, #16]
+ 546 008e FFF7FEFF 		bl	cos
+ 547 0092 FFF7FEFF 		bl	__aeabi_d2f
+ 548 0096 059A     		ldr	r2, [sp, #20]
+ 549 0098 049B     		ldr	r3, [sp, #16]
+ 550 009a 8246     		mov	r10, r0
+ 551 009c 1946     		mov	r1, r3
+ 552 009e 1046     		mov	r0, r2
+ 553 00a0 FFF7FEFF 		bl	sin
+ 554 00a4 FFF7FEFF 		bl	__aeabi_d2f
+ 555 00a8 5146     		mov	r1, r10
+ 556 00aa 0790     		str	r0, [sp, #28]	@ float
+ 557 00ac 4846     		mov	r0, r9
+ 558 00ae FFF7FEFF 		bl	__aeabi_fmul
+ 559 00b2 0799     		ldr	r1, [sp, #28]	@ float
+ 560 00b4 0890     		str	r0, [sp, #32]	@ float
+ 561 00b6 4846     		mov	r0, r9
+ 562 00b8 FFF7FEFF 		bl	__aeabi_fmul
+ARM GAS  /tmp/ccXcoiKL.s 			page 11
+
+
+ 563 00bc 0899     		ldr	r1, [sp, #32]	@ float
+ 564 00be 8146     		mov	r9, r0
+ 565 00c0 5846     		mov	r0, fp
+ 566 00c2 FFF7FEFF 		bl	__aeabi_fadd
+ 567 00c6 4946     		mov	r1, r9
+ 568 00c8 0B90     		str	r0, [sp, #44]	@ float
+ 569 00ca 0A98     		ldr	r0, [sp, #40]	@ float
+ 570 00cc FFF7FEFF 		bl	__aeabi_fadd
+ 571 00d0 0699     		ldr	r1, [sp, #24]	@ float
+ 572 00d2 8346     		mov	fp, r0
+ 573 00d4 4046     		mov	r0, r8
+ 574 00d6 FFF7FEFF 		bl	__aeabi_fadd
+ 575 00da 089A     		ldr	r2, [sp, #32]	@ float
+ 576 00dc 09F10043 		add	r3, r9, #-2147483648
+ 577 00e0 4FF07E58 		mov	r8, #1065353216
+ 578 00e4 0690     		str	r0, [sp, #24]	@ float
+ 579 00e6 3846     		mov	r0, r7
+ 580 00e8 0027     		movs	r7, #0
+ 581 00ea 2B92     		str	r2, [sp, #172]	@ float
+ 582 00ec 2893     		str	r3, [sp, #160]	@ float
+ 583 00ee 2797     		str	r7, [sp, #156]
+ 584 00f0 2997     		str	r7, [sp, #164]
+ 585 00f2 2C97     		str	r7, [sp, #176]
+ 586 00f4 CDF89880 		str	r8, [sp, #152]	@ float
+ 587 00f8 CDF8A880 		str	r8, [sp, #168]	@ float
+ 588 00fc CDF8B880 		str	r8, [sp, #184]	@ float
+ 589 0100 2D97     		str	r7, [sp, #180]
+ 590 0102 0E97     		str	r7, [sp, #56]
+ 591 0104 0F97     		str	r7, [sp, #60]
+ 592 0106 FFF7FEFF 		bl	__aeabi_f2iz
+ 593 010a 0028     		cmp	r0, #0
+ 594 010c B8BF     		it	lt
+ 595 010e 4042     		rsblt	r0, r0, #0
+ 596 0110 FFF7FEFF 		bl	__aeabi_i2f
+ 597 0114 D5F80413 		ldr	r1, [r5, #772]	@ float
+ 598 0118 FFF7FEFF 		bl	__aeabi_fmul
+ 599 011c DDF80CC0 		ldr	ip, [sp, #12]
+ 600 0120 0D90     		str	r0, [sp, #52]	@ float
+ 601 0122 6046     		mov	r0, ip
+ 602 0124 FFF7FEFF 		bl	__aeabi_f2iz
+ 603 0128 0028     		cmp	r0, #0
+ 604 012a B8BF     		it	lt
+ 605 012c 4042     		rsblt	r0, r0, #0
+ 606 012e FFF7FEFF 		bl	__aeabi_i2f
+ 607 0132 D5F80013 		ldr	r1, [r5, #768]	@ float
+ 608 0136 FFF7FEFF 		bl	__aeabi_fmul
+ 609 013a 3146     		mov	r1, r6
+ 610 013c 1090     		str	r0, [sp, #64]	@ float
+ 611 013e 4846     		mov	r0, r9
+ 612 0140 FFF7FEFF 		bl	__aeabi_fdiv
+ 613 0144 5146     		mov	r1, r10
+ 614 0146 8146     		mov	r9, r0
+ 615 0148 FFF7FEFF 		bl	__aeabi_fadd
+ 616 014c 4FF07C51 		mov	r1, #1056964608
+ 617 0150 FFF7FEFF 		bl	__aeabi_fmul
+ 618 0154 3146     		mov	r1, r6
+ 619 0156 1190     		str	r0, [sp, #68]	@ float
+ARM GAS  /tmp/ccXcoiKL.s 			page 12
+
+
+ 620 0158 0898     		ldr	r0, [sp, #32]	@ float
+ 621 015a FFF7FEFF 		bl	__aeabi_fdiv
+ 622 015e 0799     		ldr	r1, [sp, #28]	@ float
+ 623 0160 0490     		str	r0, [sp, #16]
+ 624 0162 FFF7FEFF 		bl	__aeabi_fadd
+ 625 0166 4FF07C51 		mov	r1, #1056964608
+ 626 016a FFF7FEFF 		bl	__aeabi_fmul
+ 627 016e 049B     		ldr	r3, [sp, #16]
+ 628 0170 1290     		str	r0, [sp, #72]	@ float
+ 629 0172 1946     		mov	r1, r3
+ 630 0174 0798     		ldr	r0, [sp, #28]	@ float
+ 631 0176 FFF7FEFF 		bl	__aeabi_fsub
+ 632 017a 4FF07C51 		mov	r1, #1056964608
+ 633 017e FFF7FEFF 		bl	__aeabi_fmul
+ 634 0182 4946     		mov	r1, r9
+ 635 0184 1390     		str	r0, [sp, #76]	@ float
+ 636 0186 5046     		mov	r0, r10
+ 637 0188 FFF7FEFF 		bl	__aeabi_fsub
+ 638 018c 4FF07C51 		mov	r1, #1056964608
+ 639 0190 FFF7FEFF 		bl	__aeabi_fmul
+ 640 0194 3146     		mov	r1, r6
+ 641 0196 1490     		str	r0, [sp, #80]	@ float
+ 642 0198 4748     		ldr	r0, .L69
+ 643 019a FFF7FEFF 		bl	__aeabi_fdiv
+ 644 019e 3146     		mov	r1, r6
+ 645 01a0 1590     		str	r0, [sp, #84]	@ float
+ 646 01a2 4046     		mov	r0, r8
+ 647 01a4 FFF7FEFF 		bl	__aeabi_fdiv
+ 648 01a8 0326     		movs	r6, #3
+ 649 01aa 0DF1E009 		add	r9, sp, #224
+ 650 01ae 3146     		mov	r1, r6
+ 651 01b0 3346     		mov	r3, r6
+ 652 01b2 1690     		str	r0, [sp, #88]	@ float
+ 653 01b4 2246     		mov	r2, r4
+ 654 01b6 26A8     		add	r0, sp, #152
+ 655 01b8 0DF1BC08 		add	r8, sp, #188
+ 656 01bc 4FF0020A 		mov	r10, #2
+ 657 01c0 CDF80090 		str	r9, [sp]
+ 658 01c4 0196     		str	r6, [sp, #4]
+ 659 01c6 2F97     		str	r7, [sp, #188]
+ 660 01c8 3097     		str	r7, [sp, #192]
+ 661 01ca 3197     		str	r7, [sp, #196]
+ 662 01cc 3297     		str	r7, [sp, #200]
+ 663 01ce 3397     		str	r7, [sp, #204]
+ 664 01d0 3497     		str	r7, [sp, #208]
+ 665 01d2 3597     		str	r7, [sp, #212]
+ 666 01d4 3697     		str	r7, [sp, #216]
+ 667 01d6 3797     		str	r7, [sp, #220]
+ 668 01d8 3897     		str	r7, [sp, #224]
+ 669 01da 3997     		str	r7, [sp, #228]
+ 670 01dc 3A97     		str	r7, [sp, #232]
+ 671 01de 3B97     		str	r7, [sp, #236]
+ 672 01e0 3C97     		str	r7, [sp, #240]
+ 673 01e2 3D97     		str	r7, [sp, #244]
+ 674 01e4 3E97     		str	r7, [sp, #248]
+ 675 01e6 3F97     		str	r7, [sp, #252]
+ 676 01e8 4097     		str	r7, [sp, #256]
+ARM GAS  /tmp/ccXcoiKL.s 			page 13
+
+
+ 677 01ea FFF7FEFF 		bl	_ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8
+ 678 01ee 3146     		mov	r1, r6
+ 679 01f0 4846     		mov	r0, r9
+ 680 01f2 3346     		mov	r3, r6
+ 681 01f4 26AA     		add	r2, sp, #152
+ 682 01f6 0DF15C09 		add	r9, sp, #92
+ 683 01fa CDF80080 		str	r8, [sp]
+ 684 01fe FFF7FEFF 		bl	_ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7
+ 685 0202 41AE     		add	r6, sp, #260
+ 686 0204 11A8     		add	r0, sp, #68
+ 687 0206 0DAA     		add	r2, sp, #52
+ 688 0208 5146     		mov	r1, r10
+ 689 020a 5346     		mov	r3, r10
+ 690 020c 8DE80006 		stmia	sp, {r9, r10}
+ 691 0210 4197     		str	r7, [sp, #260]
+ 692 0212 4297     		str	r7, [sp, #264]
+ 693 0214 4397     		str	r7, [sp, #268]
+ 694 0216 4497     		str	r7, [sp, #272]
+ 695 0218 4597     		str	r7, [sp, #276]
+ 696 021a 4697     		str	r7, [sp, #280]
+ 697 021c 4797     		str	r7, [sp, #284]
+ 698 021e 4897     		str	r7, [sp, #288]
+ 699 0220 4997     		str	r7, [sp, #292]
+ 700 0222 1797     		str	r7, [sp, #92]
+ 701 0224 1897     		str	r7, [sp, #96]
+ 702 0226 1997     		str	r7, [sp, #100]
+ 703 0228 1A97     		str	r7, [sp, #104]
+ 704 022a 1B97     		str	r7, [sp, #108]
+ 705 022c 1C97     		str	r7, [sp, #112]
+ 706 022e FFF7FEFF 		bl	_ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8
+ 707 0232 5146     		mov	r1, r10
+ 708 0234 4846     		mov	r0, r9
+ 709 0236 11AA     		add	r2, sp, #68
+ 710 0238 0096     		str	r6, [sp]
+ 711 023a 5346     		mov	r3, r10
+ 712 023c FFF7FEFF 		bl	_ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7
+ 713              	.L63:
+ 714 0240 F159     		ldr	r1, [r6, r7]	@ float
+ 715 0242 58F80700 		ldr	r0, [r8, r7]	@ float
+ 716 0246 FFF7FEFF 		bl	__aeabi_fadd
+ 717 024a 0146     		mov	r1, r0
+ 718 024c E059     		ldr	r0, [r4, r7]	@ float
+ 719 024e FFF7FEFF 		bl	__aeabi_fadd
+ 720 0252 E051     		str	r0, [r4, r7]	@ float
+ 721 0254 0437     		adds	r7, r7, #4
+ 722 0256 242F     		cmp	r7, #36
+ 723 0258 F2D1     		bne	.L63
+ 724 025a 2023     		movs	r3, #32
+ 725              	@ 72 "../../components/Odometry.cpp" 1
+ 726 025c 83F31188 		msr     BASEPRI, r3
+ 727              	@ 0 "" 2
+ 728              		.thumb
+ 729 0260 FFF7FEFF 		bl	dbg_check_lock
+ 730 0264 0B9B     		ldr	r3, [sp, #44]	@ float
+ 731 0266 069A     		ldr	r2, [sp, #24]	@ float
+ 732 0268 C5F80833 		str	r3, [r5, #776]	@ float
+ 733 026c C5F80CB3 		str	fp, [r5, #780]	@ float
+ARM GAS  /tmp/ccXcoiKL.s 			page 14
+
+
+ 734 0270 C5F81023 		str	r2, [r5, #784]	@ float
+ 735 0274 FFF7FEFF 		bl	dbg_check_unlock
+ 736 0278 0023     		movs	r3, #0
+ 737              	@ 76 "../../components/Odometry.cpp" 1
+ 738 027a 83F31188 		msr     BASEPRI, r3
+ 739              	@ 0 "" 2
+ 740              		.thumb
+ 741 027e 2023     		movs	r3, #32
+ 742              	@ 228 "../../components/Odometry.cpp" 1
+ 743 0280 83F31188 		msr     BASEPRI, r3
+ 744              	@ 0 "" 2
+ 745              		.thumb
+ 746 0284 FFF7FEFF 		bl	dbg_check_lock
+ 747 0288 099E     		ldr	r6, [sp, #36]
+ 748 028a 25AF     		add	r7, sp, #148
+ 749              	.L64:
+ 750 028c 2546     		mov	r5, r4
+ 751 028e 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 752 0290 BD42     		cmp	r5, r7
+ 753 0292 3060     		str	r0, [r6]	@ unaligned
+ 754 0294 7160     		str	r1, [r6, #4]	@ unaligned
+ 755 0296 B260     		str	r2, [r6, #8]	@ unaligned
+ 756 0298 F360     		str	r3, [r6, #12]	@ unaligned
+ 757 029a 2C46     		mov	r4, r5
+ 758 029c 06F11006 		add	r6, r6, #16
+ 759 02a0 F4D1     		bne	.L64
+ 760 02a2 2868     		ldr	r0, [r5]	@ unaligned
+ 761 02a4 3060     		str	r0, [r6]	@ unaligned
+ 762 02a6 FFF7FEFF 		bl	dbg_check_unlock
+ 763 02aa 0023     		movs	r3, #0
+ 764              	@ 230 "../../components/Odometry.cpp" 1
+ 765 02ac 83F31188 		msr     BASEPRI, r3
+ 766              	@ 0 "" 2
+ 767              		.thumb
+ 768 02b0 4BB0     		add	sp, sp, #300
+ 769              		@ sp needed
+ 770 02b2 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 771              	.L70:
+ 772 02b6 00BF     		.align	2
+ 773              	.L69:
+ 774 02b8 000080BF 		.word	-1082130432
+ 775              		.size	_ZN5amiro8Odometry14updateOdometryEv, .-_ZN5amiro8Odometry14updateOdometryEv
+ 776 02bc AFF30080 		.section	.text._ZN5amiro8Odometry23updateWheelBaseDistanceEv,"ax",%progbits
+ 777              		.align	2
+ 778              		.p2align 4,,15
+ 779              		.global	_ZN5amiro8Odometry23updateWheelBaseDistanceEv
+ 780              		.thumb
+ 781              		.thumb_func
+ 782              		.type	_ZN5amiro8Odometry23updateWheelBaseDistanceEv, %function
+ 783              	_ZN5amiro8Odometry23updateWheelBaseDistanceEv:
+ 784              		@ args = 0, pretend = 0, frame = 0
+ 785              		@ frame_needed = 0, uses_anonymous_args = 0
+ 786              		@ link register save eliminated.
+ 787 0000 024B     		ldr	r3, .L72
+ 788 0002 1B68     		ldr	r3, [r3]	@ float
+ 789 0004 C0F8F432 		str	r3, [r0, #756]	@ float
+ 790 0008 7047     		bx	lr
+ARM GAS  /tmp/ccXcoiKL.s 			page 15
+
+
+ 791              	.L73:
+ 792 000a 00BF     		.align	2
+ 793              	.L72:
+ 794 000c 00000000 		.word	_ZN5amiro12MotorControl25actualWheelBaseDistanceSIE
+ 795              		.size	_ZN5amiro8Odometry23updateWheelBaseDistanceEv, .-_ZN5amiro8Odometry23updateWheelBaseDistance
+ 796              		.section	.text._ZN5amiro8Odometry14updateDistanceEv,"ax",%progbits
+ 797              		.align	2
+ 798              		.p2align 4,,15
+ 799              		.global	_ZN5amiro8Odometry14updateDistanceEv
+ 800              		.thumb
+ 801              		.thumb_func
+ 802              		.type	_ZN5amiro8Odometry14updateDistanceEv, %function
+ 803              	_ZN5amiro8Odometry14updateDistanceEv:
+ 804              		@ args = 0, pretend = 0, frame = 0
+ 805              		@ frame_needed = 0, uses_anonymous_args = 0
+ 806 0000 38B5     		push	{r3, r4, r5, lr}
+ 807 0002 0446     		mov	r4, r0
+ 808 0004 00F55075 		add	r5, r0, #832
+ 809 0008 04F54E71 		add	r1, r4, #824
+ 810 000c 2A46     		mov	r2, r5
+ 811 000e D0F8D802 		ldr	r0, [r0, #728]
+ 812 0012 FFF7FEFF 		bl	_ZN5amiro12MotorControl16updateIncrementsEPNS_15MotorIncrementsERA2_lRA2_f
+ 813 0016 2846     		mov	r0, r5
+ 814 0018 04F53E71 		add	r1, r4, #760
+ 815 001c BDE83840 		pop	{r3, r4, r5, lr}
+ 816 0020 FFF7FEBF 		b	_ZN5amiro12MotorControl14updateDistanceERA2_KfRA2_f
+ 817              		.size	_ZN5amiro8Odometry14updateDistanceEv, .-_ZN5amiro8Odometry14updateDistanceEv
+ 818 0024 AFF30080 		.section	.text.startup._ZN5amiro8Odometry4mainEv,"ax",%progbits
+ 818      AFF30080 
+ 818      AFF30080 
+ 819              		.align	2
+ 820              		.p2align 4,,15
+ 821              		.global	_ZN5amiro8Odometry4mainEv
+ 822              		.thumb
+ 823              		.thumb_func
+ 824              		.type	_ZN5amiro8Odometry4mainEv, %function
+ 825              	_ZN5amiro8Odometry4mainEv:
+ 826              		@ args = 0, pretend = 0, frame = 0
+ 827              		@ frame_needed = 0, uses_anonymous_args = 0
+ 828 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 829 0002 0446     		mov	r4, r0
+ 830 0004 FFF7FEFF 		bl	_ZN10chibios_rt6System7getTimeEv
+ 831 0008 0546     		mov	r5, r0
+ 832 000a 1848     		ldr	r0, .L81
+ 833 000c FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread7setNameEPKc
+ 834 0010 174F     		ldr	r7, .L81+4
+ 835 0012 184E     		ldr	r6, .L81+8
+ 836              	.L76:
+ 837 0014 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 838 0018 4FF47A73 		mov	r3, #1000
+ 839 001c 08BB     		cbnz	r0, .L80
+ 840              	.L79:
+ 841 001e D4F8E422 		ldr	r2, [r4, #740]
+ 842 0022 3168     		ldr	r1, [r6]	@ float
+ 843 0024 03FB02F3 		mul	r3, r3, r2
+ 844 0028 013B     		subs	r3, r3, #1
+ 845 002a A7FB0323 		umull	r2, r3, r7, r3
+ARM GAS  /tmp/ccXcoiKL.s 			page 16
+
+
+ 846 002e C4F8F412 		str	r1, [r4, #756]	@ float
+ 847 0032 2046     		mov	r0, r4
+ 848 0034 05EB9315 		add	r5, r5, r3, lsr #6
+ 849 0038 FFF7FEFF 		bl	_ZN5amiro8Odometry14updateDistanceEv
+ 850 003c 2046     		mov	r0, r4
+ 851 003e FFF7FEFF 		bl	_ZN5amiro8Odometry14updateOdometryEv
+ 852 0042 FFF7FEFF 		bl	_ZN10chibios_rt6System7getTimeEv
+ 853 0046 0135     		adds	r5, r5, #1
+ 854 0048 8542     		cmp	r5, r0
+ 855 004a 0B49     		ldr	r1, .L81+12
+ 856 004c 0B48     		ldr	r0, .L81+16
+ 857 004e 0AD3     		bcc	.L77
+ 858 0050 2846     		mov	r0, r5
+ 859 0052 FFF7FEFF 		bl	chThdSleepUntil
+ 860 0056 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 861 005a 4FF47A73 		mov	r3, #1000
+ 862 005e 0028     		cmp	r0, #0
+ 863 0060 DDD0     		beq	.L79
+ 864              	.L80:
+ 865 0062 0120     		movs	r0, #1
+ 866 0064 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 867              	.L77:
+ 868 0066 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6
+ 869 006a D3E7     		b	.L76
+ 870              	.L82:
+ 871              		.align	2
+ 872              	.L81:
+ 873 006c 2C000000 		.word	.LC1
+ 874 0070 D34D6210 		.word	274877907
+ 875 0074 00000000 		.word	_ZN5amiro12MotorControl25actualWheelBaseDistanceSIE
+ 876 0078 00000000 		.word	.LC0
+ 877 007c 682D0000 		.word	global+11624
+ 878              		.size	_ZN5amiro8Odometry4mainEv, .-_ZN5amiro8Odometry4mainEv
+ 879              		.section	.text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE,"a
+ 880              		.align	2
+ 881              		.p2align 4,,15
+ 882              		.thumb
+ 883              		.thumb_func
+ 884              		.type	_GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE, %function
+ 885              	_GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:
+ 886              		@ args = 0, pretend = 0, frame = 0
+ 887              		@ frame_needed = 0, uses_anonymous_args = 0
+ 888              		@ link register save eliminated.
+ 889 0000 024B     		ldr	r3, .L84
+ 890 0002 034A     		ldr	r2, .L84+4
+ 891 0004 1A60     		str	r2, [r3]
+ 892 0006 5A60     		str	r2, [r3, #4]
+ 893 0008 7047     		bx	lr
+ 894              	.L85:
+ 895 000a 00BF     		.align	2
+ 896              	.L84:
+ 897 000c 00000000 		.word	.LANCHOR1
+ 898 0010 A0860100 		.word	100000
+ 899              		.size	_GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE, .-_GLOBAL__sub_I__
+ 900 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 900      AFF30080 
+ 900      AFF30080 
+ARM GAS  /tmp/ccXcoiKL.s 			page 17
+
+
+ 901              		.align	2
+ 902 0000 00000000 		.word	_GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE(target1)
+ 903              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi512EEE
+ 904              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi512EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
+ 905              		.align	3
+ 906              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi512EEE, %object
+ 907              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi512EEE, 20
+ 908              	_ZTVN10chibios_rt16BaseStaticThreadILi512EEE:
+ 909 0000 00000000 		.word	0
+ 910 0004 00000000 		.word	0
+ 911 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 912 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 913 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi512EE5startEm
+ 914              		.global	_ZTVN5amiro8OdometryE
+ 915 0014 00000000 		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 916              		.align	2
+ 917              		.set	.LANCHOR1,. + 0
+ 918              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 919              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 920              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 921 0000 00000000 		.space	8
+ 921      00000000 
+ 922              		.section	.rodata._ZTVN5amiro8OdometryE,"a",%progbits
+ 923              		.align	3
+ 924              		.set	.LANCHOR0,. + 0
+ 925              		.type	_ZTVN5amiro8OdometryE, %object
+ 926              		.size	_ZTVN5amiro8OdometryE, 20
+ 927              	_ZTVN5amiro8OdometryE:
+ 928 0000 00000000 		.word	0
+ 929 0004 00000000 		.word	0
+ 930 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 931 000c 00000000 		.word	_ZN5amiro8Odometry4mainEv
+ 932 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi512EE5startEm
+ 933 0014 00000000 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 934              		.align	2
+ 935              	.LC0:
+ 936 0000 5741524E 		.ascii	"WARNING Odometry: Unable to keep track\015\012\000"
+ 936      494E4720 
+ 936      4F646F6D 
+ 936      65747279 
+ 936      3A20556E 
+ 937 0029 000000   		.space	3
+ 938              	.LC1:
+ 939 002c 4F646F6D 		.ascii	"Odometry\000"
+ 939      65747279 
+ 939      00
+ 940 0035 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccXcoiKL.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Odometry.cpp
+     /tmp/ccXcoiKL.s:16     .text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:00000000 $t
+     /tmp/ccXcoiKL.s:22     .text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi512EE5startEm
+     /tmp/ccXcoiKL.s:45     .text._ZN10chibios_rt16BaseStaticThreadILi512EE5startEm:00000028 $d
+     /tmp/ccXcoiKL.s:49     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000000 $t
+     /tmp/ccXcoiKL.s:54     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6
+     /tmp/ccXcoiKL.s:74     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000020 $d
+     /tmp/ccXcoiKL.s:80     .text._ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7:00000000 $t
+     /tmp/ccXcoiKL.s:85     .text._ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7:00000000 _ZN6Matrix10XdotYtransIfEEvPT_jjS2_jjS2_jj.isra.1.constprop.7
+     /tmp/ccXcoiKL.s:135    .text._ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8:00000000 $t
+     /tmp/ccXcoiKL.s:140    .text._ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8:00000000 _ZN6Matrix5XdotYIfEEvPT_jjS2_jjS2_jj.isra.0.constprop.8
+     /tmp/ccXcoiKL.s:216    .text._ZN5amiro8Odometry11getPositionEv:00000000 $t
+     /tmp/ccXcoiKL.s:222    .text._ZN5amiro8Odometry11getPositionEv:00000000 _ZN5amiro8Odometry11getPositionEv
+     /tmp/ccXcoiKL.s:281    .text._ZN5amiro8Odometry11getPositionEv:00000090 $d
+     /tmp/ccXcoiKL.s:287    .text._ZN5amiro8Odometry11setPositionEfff:00000000 $t
+     /tmp/ccXcoiKL.s:293    .text._ZN5amiro8Odometry11setPositionEfff:00000000 _ZN5amiro8Odometry11setPositionEfff
+     /tmp/ccXcoiKL.s:319    .text._ZN5amiro8Odometry13resetPositionEv:00000000 $t
+     /tmp/ccXcoiKL.s:325    .text._ZN5amiro8Odometry13resetPositionEv:00000000 _ZN5amiro8Odometry13resetPositionEv
+     /tmp/ccXcoiKL.s:349    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 $t
+     /tmp/ccXcoiKL.s:355    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 _ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE
+     /tmp/ccXcoiKL.s:403    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:0000007c $d
+     /tmp/ccXcoiKL.s:355    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 _ZN5amiro8OdometryC1EPNS_15MotorIncrementsEPNS_8L3G4200DE
+     /tmp/ccXcoiKL.s:410    .text._ZN5amiro8Odometry8setErrorEPf:00000000 $t
+     /tmp/ccXcoiKL.s:416    .text._ZN5amiro8Odometry8setErrorEPf:00000000 _ZN5amiro8Odometry8setErrorEPf
+     /tmp/ccXcoiKL.s:441    .text._ZN5amiro8Odometry10resetErrorEv:00000000 $t
+     /tmp/ccXcoiKL.s:447    .text._ZN5amiro8Odometry10resetErrorEv:00000000 _ZN5amiro8Odometry10resetErrorEv
+     /tmp/ccXcoiKL.s:464    .text._ZN5amiro8Odometry14getEventSourceEv:00000000 $t
+     /tmp/ccXcoiKL.s:470    .text._ZN5amiro8Odometry14getEventSourceEv:00000000 _ZN5amiro8Odometry14getEventSourceEv
+     /tmp/ccXcoiKL.s:483    .text._ZN5amiro8Odometry14updateOdometryEv:00000000 $t
+     /tmp/ccXcoiKL.s:489    .text._ZN5amiro8Odometry14updateOdometryEv:00000000 _ZN5amiro8Odometry14updateOdometryEv
+     /tmp/ccXcoiKL.s:774    .text._ZN5amiro8Odometry14updateOdometryEv:000002b8 $d
+     /tmp/ccXcoiKL.s:777    .text._ZN5amiro8Odometry23updateWheelBaseDistanceEv:00000000 $t
+     /tmp/ccXcoiKL.s:783    .text._ZN5amiro8Odometry23updateWheelBaseDistanceEv:00000000 _ZN5amiro8Odometry23updateWheelBaseDistanceEv
+     /tmp/ccXcoiKL.s:794    .text._ZN5amiro8Odometry23updateWheelBaseDistanceEv:0000000c $d
+     /tmp/ccXcoiKL.s:797    .text._ZN5amiro8Odometry14updateDistanceEv:00000000 $t
+     /tmp/ccXcoiKL.s:803    .text._ZN5amiro8Odometry14updateDistanceEv:00000000 _ZN5amiro8Odometry14updateDistanceEv
+     /tmp/ccXcoiKL.s:819    .text.startup._ZN5amiro8Odometry4mainEv:00000000 $t
+     /tmp/ccXcoiKL.s:825    .text.startup._ZN5amiro8Odometry4mainEv:00000000 _ZN5amiro8Odometry4mainEv
+     /tmp/ccXcoiKL.s:873    .text.startup._ZN5amiro8Odometry4mainEv:0000006c $d
+     /tmp/ccXcoiKL.s:880    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 $t
+     /tmp/ccXcoiKL.s:885    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000000 _GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE
+     /tmp/ccXcoiKL.s:897    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:0000000c $d
+     /tmp/ccXcoiKL.s:901    .init_array:00000000 $d
+     /tmp/ccXcoiKL.s:908    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi512EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi512EEE
+     /tmp/ccXcoiKL.s:905    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi512EEE:00000000 $d
+     /tmp/ccXcoiKL.s:927    .rodata._ZTVN5amiro8OdometryE:00000000 _ZTVN5amiro8OdometryE
+     /tmp/ccXcoiKL.s:916    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccXcoiKL.s:920    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccXcoiKL.s:923    .rodata._ZTVN5amiro8OdometryE:00000000 $d
+     /tmp/ccXcoiKL.s:934    .rodata.str1.4:00000000 $d
+     /tmp/ccXcoiKL.s:79     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.6:00000028 $t
+     /tmp/ccXcoiKL.s:409    .text._ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000088 $t
+     /tmp/ccXcoiKL.s:776    .text._ZN5amiro8Odometry14updateOdometryEv:000002bc $t
+     /tmp/ccXcoiKL.s:900    .text.startup._GLOBAL__sub_I__ZN5amiro8OdometryC2EPNS_15MotorIncrementsEPNS_8L3G4200DE:00000014 $t
+
+UNDEFINED SYMBOLS
+ARM GAS  /tmp/ccXcoiKL.s 			page 19
+
+
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+chvprintf
+global
+__aeabi_fmul
+__aeabi_fadd
+__aeabi_f2d
+__aeabi_dmul
+__aeabi_d2iz
+__aeabi_fcmplt
+dbg_check_lock
+dbg_check_unlock
+_ZN10chibios_rt10BaseThreadC2Ev
+_ZN10chibios_rt9EvtSourceC1Ev
+memmove
+__aeabi_fsub
+__aeabi_fdiv
+__aeabi_d2f
+__aeabi_f2iz
+__aeabi_i2f
+memcpy
+cos
+sin
+_ZN5amiro12MotorControl25actualWheelBaseDistanceSIE
+_ZN5amiro12MotorControl16updateIncrementsEPNS_15MotorIncrementsERA2_lRA2_f
+_ZN5amiro12MotorControl14updateDistanceERA2_KfRA2_f
+_ZN10chibios_rt6System7getTimeEv
+_ZN10chibios_rt10BaseThread7setNameEPKc
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+chThdSleepUntil
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv

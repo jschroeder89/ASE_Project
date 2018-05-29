@@ -1,0 +1,686 @@
+ARM GAS  /tmp/ccjSsX1D.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"chqueues.c"
+  15              		.section	.text.qwait,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.thumb
+  19              		.thumb_func
+  20              		.type	qwait, %function
+  21              	qwait:
+  22              		@ args = 0, pretend = 0, frame = 0
+  23              		@ frame_needed = 0, uses_anonymous_args = 0
+  24              		@ link register save eliminated.
+  25 0000 10B4     		push	{r4}
+  26 0002 0246     		mov	r2, r0
+  27 0004 61B1     		cbz	r1, .L2
+  28 0006 094B     		ldr	r3, .L4
+  29 0008 0D20     		movs	r0, #13
+  30 000a 9B69     		ldr	r3, [r3, #24]
+  31 000c 9A62     		str	r2, [r3, #40]
+  32 000e 5468     		ldr	r4, [r2, #4]
+  33 0010 83E81400 		stmia	r3, {r2, r4}
+  34 0014 5360     		str	r3, [r2, #4]
+  35 0016 2360     		str	r3, [r4]
+  36 0018 5DF8044B 		ldr	r4, [sp], #4
+  37 001c FFF7FEBF 		b	chSchGoSleepTimeoutS
+  38              	.L2:
+  39 0020 4FF0FF30 		mov	r0, #-1
+  40 0024 5DF8044B 		ldr	r4, [sp], #4
+  41 0028 7047     		bx	lr
+  42              	.L5:
+  43 002a 00BF     		.align	2
+  44              	.L4:
+  45 002c 00000000 		.word	rlist
+  46              		.size	qwait, .-qwait
+  47              		.section	.text.chIQInit,"ax",%progbits
+  48              		.align	2
+  49              		.p2align 4,,15
+  50              		.global	chIQInit
+  51              		.thumb
+  52              		.thumb_func
+  53              		.type	chIQInit, %function
+  54              	chIQInit:
+  55              		@ args = 4, pretend = 0, frame = 0
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57              		@ link register save eliminated.
+ARM GAS  /tmp/ccjSsX1D.s 			page 2
+
+
+  58 0000 30B4     		push	{r4, r5}
+  59 0002 029C     		ldr	r4, [sp, #8]
+  60 0004 0025     		movs	r5, #0
+  61 0006 0A44     		add	r2, r2, r1
+  62 0008 8560     		str	r5, [r0, #8]
+  63 000a 0462     		str	r4, [r0, #32]
+  64 000c 0261     		str	r2, [r0, #16]
+  65 000e 4060     		str	r0, [r0, #4]
+  66 0010 0060     		str	r0, [r0]
+  67 0012 4161     		str	r1, [r0, #20]
+  68 0014 8161     		str	r1, [r0, #24]
+  69 0016 C160     		str	r1, [r0, #12]
+  70 0018 C361     		str	r3, [r0, #28]
+  71 001a 30BC     		pop	{r4, r5}
+  72 001c 7047     		bx	lr
+  73              		.size	chIQInit, .-chIQInit
+  74 001e 00BF     		.section	.text.chIQResetI,"ax",%progbits
+  75              		.align	2
+  76              		.p2align 4,,15
+  77              		.global	chIQResetI
+  78              		.thumb
+  79              		.thumb_func
+  80              		.type	chIQResetI, %function
+  81              	chIQResetI:
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84 0000 38B5     		push	{r3, r4, r5, lr}
+  85 0002 0446     		mov	r4, r0
+  86 0004 FFF7FEFF 		bl	chDbgCheckClassI
+  87 0008 2068     		ldr	r0, [r4]
+  88 000a E368     		ldr	r3, [r4, #12]
+  89 000c 0022     		movs	r2, #0
+  90 000e A042     		cmp	r0, r4
+  91 0010 A260     		str	r2, [r4, #8]
+  92 0012 6361     		str	r3, [r4, #20]
+  93 0014 A361     		str	r3, [r4, #24]
+  94 0016 0AD0     		beq	.L7
+  95 0018 6FF00105 		mvn	r5, #1
+  96              	.L10:
+  97 001c 0368     		ldr	r3, [r0]
+  98 001e 2360     		str	r3, [r4]
+  99 0020 5C60     		str	r4, [r3, #4]
+ 100 0022 FFF7FEFF 		bl	chSchReadyI
+ 101 0026 8562     		str	r5, [r0, #40]
+ 102 0028 2068     		ldr	r0, [r4]
+ 103 002a A042     		cmp	r0, r4
+ 104 002c F6D1     		bne	.L10
+ 105              	.L7:
+ 106 002e 38BD     		pop	{r3, r4, r5, pc}
+ 107              		.size	chIQResetI, .-chIQResetI
+ 108              		.section	.text.chIQPutI,"ax",%progbits
+ 109              		.align	2
+ 110              		.p2align 4,,15
+ 111              		.global	chIQPutI
+ 112              		.thumb
+ 113              		.thumb_func
+ 114              		.type	chIQPutI, %function
+ARM GAS  /tmp/ccjSsX1D.s 			page 3
+
+
+ 115              	chIQPutI:
+ 116              		@ args = 0, pretend = 0, frame = 0
+ 117              		@ frame_needed = 0, uses_anonymous_args = 0
+ 118 0000 38B5     		push	{r3, r4, r5, lr}
+ 119 0002 0446     		mov	r4, r0
+ 120 0004 0D46     		mov	r5, r1
+ 121 0006 FFF7FEFF 		bl	chDbgCheckClassI
+ 122 000a A269     		ldr	r2, [r4, #24]
+ 123 000c 6369     		ldr	r3, [r4, #20]
+ 124 000e 9342     		cmp	r3, r2
+ 125 0010 A268     		ldr	r2, [r4, #8]
+ 126 0012 1BD0     		beq	.L20
+ 127              	.L14:
+ 128 0014 0132     		adds	r2, r2, #1
+ 129 0016 591C     		adds	r1, r3, #1
+ 130 0018 A260     		str	r2, [r4, #8]
+ 131 001a 6161     		str	r1, [r4, #20]
+ 132 001c 1D70     		strb	r5, [r3]
+ 133 001e 6269     		ldr	r2, [r4, #20]
+ 134 0020 2369     		ldr	r3, [r4, #16]
+ 135 0022 9A42     		cmp	r2, r3
+ 136 0024 0BD2     		bcs	.L15
+ 137 0026 2068     		ldr	r0, [r4]
+ 138 0028 A042     		cmp	r0, r4
+ 139 002a 0DD0     		beq	.L18
+ 140              	.L21:
+ 141 002c 0368     		ldr	r3, [r0]
+ 142 002e 2360     		str	r3, [r4]
+ 143 0030 5C60     		str	r4, [r3, #4]
+ 144 0032 FFF7FEFF 		bl	chSchReadyI
+ 145 0036 0023     		movs	r3, #0
+ 146 0038 8362     		str	r3, [r0, #40]
+ 147 003a 1846     		mov	r0, r3
+ 148 003c 38BD     		pop	{r3, r4, r5, pc}
+ 149              	.L15:
+ 150 003e 2068     		ldr	r0, [r4]
+ 151 0040 E368     		ldr	r3, [r4, #12]
+ 152 0042 A042     		cmp	r0, r4
+ 153 0044 6361     		str	r3, [r4, #20]
+ 154 0046 F1D1     		bne	.L21
+ 155              	.L18:
+ 156 0048 0020     		movs	r0, #0
+ 157 004a 38BD     		pop	{r3, r4, r5, pc}
+ 158              	.L20:
+ 159 004c 002A     		cmp	r2, #0
+ 160 004e E1D0     		beq	.L14
+ 161 0050 6FF00300 		mvn	r0, #3
+ 162 0054 38BD     		pop	{r3, r4, r5, pc}
+ 163              		.size	chIQPutI, .-chIQPutI
+ 164 0056 00BFAFF3 		.section	.text.chIQGetTimeout,"ax",%progbits
+ 164      0080AFF3 
+ 164      0080
+ 165              		.align	2
+ 166              		.p2align 4,,15
+ 167              		.global	chIQGetTimeout
+ 168              		.thumb
+ 169              		.thumb_func
+ARM GAS  /tmp/ccjSsX1D.s 			page 4
+
+
+ 170              		.type	chIQGetTimeout, %function
+ 171              	chIQGetTimeout:
+ 172              		@ args = 0, pretend = 0, frame = 0
+ 173              		@ frame_needed = 0, uses_anonymous_args = 0
+ 174 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 175 0002 0446     		mov	r4, r0
+ 176 0004 0E46     		mov	r6, r1
+ 177 0006 2023     		movs	r3, #32
+ 178              	@ 181 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 179 0008 83F31188 		msr     BASEPRI, r3
+ 180              	@ 0 "" 2
+ 181              		.thumb
+ 182 000c FFF7FEFF 		bl	dbg_check_lock
+ 183 0010 E369     		ldr	r3, [r4, #28]
+ 184 0012 33B1     		cbz	r3, .L25
+ 185 0014 2046     		mov	r0, r4
+ 186 0016 9847     		blx	r3
+ 187 0018 03E0     		b	.L25
+ 188              	.L27:
+ 189 001a FFF7FEFF 		bl	qwait
+ 190 001e 071E     		subs	r7, r0, #0
+ 191 0020 18DB     		blt	.L32
+ 192              	.L25:
+ 193 0022 A568     		ldr	r5, [r4, #8]
+ 194 0024 2046     		mov	r0, r4
+ 195 0026 3146     		mov	r1, r6
+ 196 0028 002D     		cmp	r5, #0
+ 197 002a F6D0     		beq	.L27
+ 198 002c A269     		ldr	r2, [r4, #24]
+ 199 002e 2169     		ldr	r1, [r4, #16]
+ 200 0030 531C     		adds	r3, r2, #1
+ 201 0032 8B42     		cmp	r3, r1
+ 202 0034 A361     		str	r3, [r4, #24]
+ 203 0036 05F1FF35 		add	r5, r5, #-1
+ 204 003a 28BF     		it	cs
+ 205 003c E368     		ldrcs	r3, [r4, #12]
+ 206 003e A560     		str	r5, [r4, #8]
+ 207 0040 1778     		ldrb	r7, [r2]	@ zero_extendqisi2
+ 208 0042 28BF     		it	cs
+ 209 0044 A361     		strcs	r3, [r4, #24]
+ 210 0046 FFF7FEFF 		bl	dbg_check_unlock
+ 211 004a 0023     		movs	r3, #0
+ 212              	@ 198 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 213 004c 83F31188 		msr     BASEPRI, r3
+ 214              	@ 0 "" 2
+ 215              		.thumb
+ 216 0050 3846     		mov	r0, r7
+ 217 0052 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 218              	.L32:
+ 219 0054 FFF7FEFF 		bl	dbg_check_unlock
+ 220 0058 2B46     		mov	r3, r5
+ 221              	@ 188 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 222 005a 83F31188 		msr     BASEPRI, r3
+ 223              	@ 0 "" 2
+ 224              		.thumb
+ 225 005e 3846     		mov	r0, r7
+ 226 0060 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ARM GAS  /tmp/ccjSsX1D.s 			page 5
+
+
+ 227              		.size	chIQGetTimeout, .-chIQGetTimeout
+ 228 0062 00BFAFF3 		.section	.text.chIQReadTimeout,"ax",%progbits
+ 228      0080AFF3 
+ 228      0080AFF3 
+ 228      0080
+ 229              		.align	2
+ 230              		.p2align 4,,15
+ 231              		.global	chIQReadTimeout
+ 232              		.thumb
+ 233              		.thumb_func
+ 234              		.type	chIQReadTimeout, %function
+ 235              	chIQReadTimeout:
+ 236              		@ args = 0, pretend = 0, frame = 0
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+ 238 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 239 0004 0446     		mov	r4, r0
+ 240 0006 1546     		mov	r5, r2
+ 241 0008 0F46     		mov	r7, r1
+ 242 000a 1E46     		mov	r6, r3
+ 243 000c D0F81C80 		ldr	r8, [r0, #28]
+ 244 0010 002A     		cmp	r2, #0
+ 245 0012 3DD0     		beq	.L45
+ 246              	.L34:
+ 247 0014 2023     		movs	r3, #32
+ 248              	@ 233 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 249 0016 83F31188 		msr     BASEPRI, r3
+ 250              	@ 0 "" 2
+ 251              		.thumb
+ 252 001a FFF7FEFF 		bl	dbg_check_lock
+ 253 001e 07EB050A 		add	r10, r7, r5
+ 254 0022 4FF00009 		mov	r9, #0
+ 255 0026 0137     		adds	r7, r7, #1
+ 256              	.L41:
+ 257 0028 B8F1000F 		cmp	r8, #0
+ 258 002c 05D0     		beq	.L37
+ 259 002e 2046     		mov	r0, r4
+ 260 0030 C047     		blx	r8
+ 261 0032 02E0     		b	.L37
+ 262              	.L39:
+ 263 0034 FFF7FEFF 		bl	qwait
+ 264 0038 10BB     		cbnz	r0, .L46
+ 265              	.L37:
+ 266 003a A568     		ldr	r5, [r4, #8]
+ 267 003c 2046     		mov	r0, r4
+ 268 003e 3146     		mov	r1, r6
+ 269 0040 002D     		cmp	r5, #0
+ 270 0042 F7D0     		beq	.L39
+ 271 0044 A369     		ldr	r3, [r4, #24]
+ 272 0046 013D     		subs	r5, r5, #1
+ 273 0048 5A1C     		adds	r2, r3, #1
+ 274 004a A261     		str	r2, [r4, #24]
+ 275 004c A560     		str	r5, [r4, #8]
+ 276 004e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 277 0050 07F8013C 		strb	r3, [r7, #-1]
+ 278 0054 2369     		ldr	r3, [r4, #16]
+ 279 0056 A269     		ldr	r2, [r4, #24]
+ 280 0058 9A42     		cmp	r2, r3
+ARM GAS  /tmp/ccjSsX1D.s 			page 6
+
+
+ 281 005a 24BF     		itt	cs
+ 282 005c E368     		ldrcs	r3, [r4, #12]
+ 283 005e A361     		strcs	r3, [r4, #24]
+ 284 0060 FFF7FEFF 		bl	dbg_check_unlock
+ 285 0064 0023     		movs	r3, #0
+ 286              	@ 250 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 287 0066 83F31188 		msr     BASEPRI, r3
+ 288              	@ 0 "" 2
+ 289              		.thumb
+ 290 006a 5745     		cmp	r7, r10
+ 291 006c 09F10109 		add	r9, r9, #1
+ 292 0070 0BD0     		beq	.L38
+ 293 0072 2023     		movs	r3, #32
+ 294              	@ 255 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 295 0074 83F31188 		msr     BASEPRI, r3
+ 296              	@ 0 "" 2
+ 297              		.thumb
+ 298 0078 FFF7FEFF 		bl	dbg_check_lock
+ 299 007c 0137     		adds	r7, r7, #1
+ 300 007e D3E7     		b	.L41
+ 301              	.L46:
+ 302 0080 FFF7FEFF 		bl	dbg_check_unlock
+ 303 0084 2B46     		mov	r3, r5
+ 304              	@ 240 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 305 0086 83F31188 		msr     BASEPRI, r3
+ 306              	@ 0 "" 2
+ 307              		.thumb
+ 308              	.L38:
+ 309 008a 4846     		mov	r0, r9
+ 310 008c BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 311              	.L45:
+ 312 0090 0148     		ldr	r0, .L47
+ 313 0092 FFF7FEFF 		bl	chDbgPanic
+ 314 0096 BDE7     		b	.L34
+ 315              	.L48:
+ 316              		.align	2
+ 317              	.L47:
+ 318 0098 00000000 		.word	.LC0
+ 319              		.size	chIQReadTimeout, .-chIQReadTimeout
+ 320 009c AFF30080 		.section	.text.chOQInit,"ax",%progbits
+ 321              		.align	2
+ 322              		.p2align 4,,15
+ 323              		.global	chOQInit
+ 324              		.thumb
+ 325              		.thumb_func
+ 326              		.type	chOQInit, %function
+ 327              	chOQInit:
+ 328              		@ args = 4, pretend = 0, frame = 0
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		@ link register save eliminated.
+ 331 0000 30B4     		push	{r4, r5}
+ 332 0002 029C     		ldr	r4, [sp, #8]
+ 333 0004 8D18     		adds	r5, r1, r2
+ 334 0006 0561     		str	r5, [r0, #16]
+ 335 0008 0462     		str	r4, [r0, #32]
+ 336 000a 4060     		str	r0, [r0, #4]
+ 337 000c 0060     		str	r0, [r0]
+ARM GAS  /tmp/ccjSsX1D.s 			page 7
+
+
+ 338 000e 8260     		str	r2, [r0, #8]
+ 339 0010 4161     		str	r1, [r0, #20]
+ 340 0012 8161     		str	r1, [r0, #24]
+ 341 0014 C160     		str	r1, [r0, #12]
+ 342 0016 C361     		str	r3, [r0, #28]
+ 343 0018 30BC     		pop	{r4, r5}
+ 344 001a 7047     		bx	lr
+ 345              		.size	chOQInit, .-chOQInit
+ 346 001c AFF30080 		.section	.text.chOQResetI,"ax",%progbits
+ 347              		.align	2
+ 348              		.p2align 4,,15
+ 349              		.global	chOQResetI
+ 350              		.thumb
+ 351              		.thumb_func
+ 352              		.type	chOQResetI, %function
+ 353              	chOQResetI:
+ 354              		@ args = 0, pretend = 0, frame = 0
+ 355              		@ frame_needed = 0, uses_anonymous_args = 0
+ 356 0000 38B5     		push	{r3, r4, r5, lr}
+ 357 0002 0446     		mov	r4, r0
+ 358 0004 FFF7FEFF 		bl	chDbgCheckClassI
+ 359 0008 E368     		ldr	r3, [r4, #12]
+ 360 000a 2269     		ldr	r2, [r4, #16]
+ 361 000c 2068     		ldr	r0, [r4]
+ 362 000e D21A     		subs	r2, r2, r3
+ 363 0010 A042     		cmp	r0, r4
+ 364 0012 6361     		str	r3, [r4, #20]
+ 365 0014 A361     		str	r3, [r4, #24]
+ 366 0016 A260     		str	r2, [r4, #8]
+ 367 0018 0AD0     		beq	.L50
+ 368 001a 6FF00105 		mvn	r5, #1
+ 369              	.L53:
+ 370 001e 0368     		ldr	r3, [r0]
+ 371 0020 2360     		str	r3, [r4]
+ 372 0022 5C60     		str	r4, [r3, #4]
+ 373 0024 FFF7FEFF 		bl	chSchReadyI
+ 374 0028 8562     		str	r5, [r0, #40]
+ 375 002a 2068     		ldr	r0, [r4]
+ 376 002c A042     		cmp	r0, r4
+ 377 002e F6D1     		bne	.L53
+ 378              	.L50:
+ 379 0030 38BD     		pop	{r3, r4, r5, pc}
+ 380              		.size	chOQResetI, .-chOQResetI
+ 381 0032 00BFAFF3 		.section	.text.chOQPutTimeout,"ax",%progbits
+ 381      0080AFF3 
+ 381      0080AFF3 
+ 381      0080
+ 382              		.align	2
+ 383              		.p2align 4,,15
+ 384              		.global	chOQPutTimeout
+ 385              		.thumb
+ 386              		.thumb_func
+ 387              		.type	chOQPutTimeout, %function
+ 388              	chOQPutTimeout:
+ 389              		@ args = 0, pretend = 0, frame = 0
+ 390              		@ frame_needed = 0, uses_anonymous_args = 0
+ 391 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ARM GAS  /tmp/ccjSsX1D.s 			page 8
+
+
+ 392 0004 2023     		movs	r3, #32
+ 393 0006 0446     		mov	r4, r0
+ 394 0008 8846     		mov	r8, r1
+ 395 000a 1646     		mov	r6, r2
+ 396              	@ 331 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 397 000c 83F31188 		msr     BASEPRI, r3
+ 398              	@ 0 "" 2
+ 399              		.thumb
+ 400 0010 FFF7FEFF 		bl	dbg_check_lock
+ 401 0014 03E0     		b	.L55
+ 402              	.L58:
+ 403 0016 FFF7FEFF 		bl	qwait
+ 404 001a 071E     		subs	r7, r0, #0
+ 405 001c 1DDB     		blt	.L64
+ 406              	.L55:
+ 407 001e A568     		ldr	r5, [r4, #8]
+ 408 0020 2046     		mov	r0, r4
+ 409 0022 3146     		mov	r1, r6
+ 410 0024 002D     		cmp	r5, #0
+ 411 0026 F6D0     		beq	.L58
+ 412 0028 6369     		ldr	r3, [r4, #20]
+ 413 002a 013D     		subs	r5, r5, #1
+ 414 002c 5A1C     		adds	r2, r3, #1
+ 415 002e 6261     		str	r2, [r4, #20]
+ 416 0030 A560     		str	r5, [r4, #8]
+ 417 0032 83F80080 		strb	r8, [r3]
+ 418 0036 2369     		ldr	r3, [r4, #16]
+ 419 0038 6269     		ldr	r2, [r4, #20]
+ 420 003a 9A42     		cmp	r2, r3
+ 421 003c 24BF     		itt	cs
+ 422 003e E368     		ldrcs	r3, [r4, #12]
+ 423 0040 6361     		strcs	r3, [r4, #20]
+ 424 0042 E369     		ldr	r3, [r4, #28]
+ 425 0044 0BB1     		cbz	r3, .L60
+ 426 0046 2046     		mov	r0, r4
+ 427 0048 9847     		blx	r3
+ 428              	.L60:
+ 429 004a FFF7FEFF 		bl	dbg_check_unlock
+ 430 004e 0023     		movs	r3, #0
+ 431              	@ 349 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 432 0050 83F31188 		msr     BASEPRI, r3
+ 433              	@ 0 "" 2
+ 434              		.thumb
+ 435 0054 0020     		movs	r0, #0
+ 436 0056 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 437              	.L64:
+ 438 005a FFF7FEFF 		bl	dbg_check_unlock
+ 439 005e 2B46     		mov	r3, r5
+ 440              	@ 336 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 441 0060 83F31188 		msr     BASEPRI, r3
+ 442              	@ 0 "" 2
+ 443              		.thumb
+ 444 0064 3846     		mov	r0, r7
+ 445 0066 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 446              		.size	chOQPutTimeout, .-chOQPutTimeout
+ 447 006a 00BFAFF3 		.section	.text.chOQGetI,"ax",%progbits
+ 447      0080
+ARM GAS  /tmp/ccjSsX1D.s 			page 9
+
+
+ 448              		.align	2
+ 449              		.p2align 4,,15
+ 450              		.global	chOQGetI
+ 451              		.thumb
+ 452              		.thumb_func
+ 453              		.type	chOQGetI, %function
+ 454              	chOQGetI:
+ 455              		@ args = 0, pretend = 0, frame = 0
+ 456              		@ frame_needed = 0, uses_anonymous_args = 0
+ 457 0000 38B5     		push	{r3, r4, r5, lr}
+ 458 0002 0446     		mov	r4, r0
+ 459 0004 FFF7FEFF 		bl	chDbgCheckClassI
+ 460 0008 6269     		ldr	r2, [r4, #20]
+ 461 000a A369     		ldr	r3, [r4, #24]
+ 462 000c 9A42     		cmp	r2, r3
+ 463 000e A268     		ldr	r2, [r4, #8]
+ 464 0010 16D0     		beq	.L74
+ 465              	.L68:
+ 466 0012 2169     		ldr	r1, [r4, #16]
+ 467 0014 501C     		adds	r0, r2, #1
+ 468 0016 5A1C     		adds	r2, r3, #1
+ 469 0018 A060     		str	r0, [r4, #8]
+ 470 001a A261     		str	r2, [r4, #24]
+ 471 001c 8A42     		cmp	r2, r1
+ 472 001e 1D78     		ldrb	r5, [r3]	@ zero_extendqisi2
+ 473 0020 0BD2     		bcs	.L70
+ 474              	.L71:
+ 475 0022 2068     		ldr	r0, [r4]
+ 476 0024 A042     		cmp	r0, r4
+ 477 0026 06D0     		beq	.L69
+ 478 0028 0368     		ldr	r3, [r0]
+ 479 002a 2360     		str	r3, [r4]
+ 480 002c 5C60     		str	r4, [r3, #4]
+ 481 002e FFF7FEFF 		bl	chSchReadyI
+ 482 0032 0023     		movs	r3, #0
+ 483 0034 8362     		str	r3, [r0, #40]
+ 484              	.L69:
+ 485 0036 2846     		mov	r0, r5
+ 486 0038 38BD     		pop	{r3, r4, r5, pc}
+ 487              	.L70:
+ 488 003a E368     		ldr	r3, [r4, #12]
+ 489 003c A361     		str	r3, [r4, #24]
+ 490 003e F0E7     		b	.L71
+ 491              	.L74:
+ 492 0040 002A     		cmp	r2, #0
+ 493 0042 E6D0     		beq	.L68
+ 494 0044 6FF00200 		mvn	r0, #2
+ 495 0048 38BD     		pop	{r3, r4, r5, pc}
+ 496              		.size	chOQGetI, .-chOQGetI
+ 497 004a 00BFAFF3 		.section	.text.chOQWriteTimeout,"ax",%progbits
+ 497      0080
+ 498              		.align	2
+ 499              		.p2align 4,,15
+ 500              		.global	chOQWriteTimeout
+ 501              		.thumb
+ 502              		.thumb_func
+ 503              		.type	chOQWriteTimeout, %function
+ARM GAS  /tmp/ccjSsX1D.s 			page 10
+
+
+ 504              	chOQWriteTimeout:
+ 505              		@ args = 0, pretend = 0, frame = 0
+ 506              		@ frame_needed = 0, uses_anonymous_args = 0
+ 507 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 508 0004 0446     		mov	r4, r0
+ 509 0006 1746     		mov	r7, r2
+ 510 0008 0E46     		mov	r6, r1
+ 511 000a 9B46     		mov	fp, r3
+ 512 000c D0F81CA0 		ldr	r10, [r0, #28]
+ 513 0010 002A     		cmp	r2, #0
+ 514 0012 3AD0     		beq	.L92
+ 515              	.L76:
+ 516 0014 2023     		movs	r3, #32
+ 517              	@ 413 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 518 0016 83F31188 		msr     BASEPRI, r3
+ 519              	@ 0 "" 2
+ 520              		.thumb
+ 521 001a FFF7FEFF 		bl	dbg_check_lock
+ 522 001e 4FF00009 		mov	r9, #0
+ 523              	.L77:
+ 524 0022 A568     		ldr	r5, [r4, #8]
+ 525 0024 06F10108 		add	r8, r6, #1
+ 526 0028 2046     		mov	r0, r4
+ 527 002a 6A1E     		subs	r2, r5, #1
+ 528 002c FDB1     		cbz	r5, .L80
+ 529 002e 6369     		ldr	r3, [r4, #20]
+ 530 0030 A260     		str	r2, [r4, #8]
+ 531 0032 5A1C     		adds	r2, r3, #1
+ 532 0034 6261     		str	r2, [r4, #20]
+ 533 0036 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
+ 534 0038 1A70     		strb	r2, [r3]
+ 535 003a 2369     		ldr	r3, [r4, #16]
+ 536 003c 6269     		ldr	r2, [r4, #20]
+ 537 003e 9A42     		cmp	r2, r3
+ 538 0040 24BF     		itt	cs
+ 539 0042 E368     		ldrcs	r3, [r4, #12]
+ 540 0044 6361     		strcs	r3, [r4, #20]
+ 541 0046 BAF1000F 		cmp	r10, #0
+ 542 004a 00D0     		beq	.L82
+ 543 004c D047     		blx	r10
+ 544              	.L82:
+ 545 004e FFF7FEFF 		bl	dbg_check_unlock
+ 546 0052 0023     		movs	r3, #0
+ 547              	@ 429 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 548 0054 83F31188 		msr     BASEPRI, r3
+ 549              	@ 0 "" 2
+ 550              		.thumb
+ 551 0058 013F     		subs	r7, r7, #1
+ 552 005a 09F10109 		add	r9, r9, #1
+ 553 005e 11D0     		beq	.L79
+ 554 0060 2023     		movs	r3, #32
+ 555              	@ 433 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 556 0062 83F31188 		msr     BASEPRI, r3
+ 557              	@ 0 "" 2
+ 558              		.thumb
+ 559 0066 FFF7FEFF 		bl	dbg_check_lock
+ 560 006a 4646     		mov	r6, r8
+ARM GAS  /tmp/ccjSsX1D.s 			page 11
+
+
+ 561 006c D9E7     		b	.L77
+ 562              	.L80:
+ 563 006e 2046     		mov	r0, r4
+ 564 0070 5946     		mov	r1, fp
+ 565 0072 FFF7FEFF 		bl	qwait
+ 566 0076 0028     		cmp	r0, #0
+ 567 0078 D3D0     		beq	.L77
+ 568 007a FFF7FEFF 		bl	dbg_check_unlock
+ 569 007e 2B46     		mov	r3, r5
+ 570              	@ 417 "../../../ChibiOS/os/kernel/src/chqueues.c" 1
+ 571 0080 83F31188 		msr     BASEPRI, r3
+ 572              	@ 0 "" 2
+ 573              		.thumb
+ 574              	.L79:
+ 575 0084 4846     		mov	r0, r9
+ 576 0086 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 577              	.L92:
+ 578 008a 0248     		ldr	r0, .L93
+ 579 008c FFF7FEFF 		bl	chDbgPanic
+ 580 0090 C0E7     		b	.L76
+ 581              	.L94:
+ 582 0092 00BF     		.align	2
+ 583              	.L93:
+ 584 0094 14000000 		.word	.LC1
+ 585              		.size	chOQWriteTimeout, .-chOQWriteTimeout
+ 586 0098 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 586      AFF30080 
+ 587              		.align	2
+ 588              	.LC0:
+ 589 0000 22636849 		.ascii	"\"chIQReadTimeout\"()\000"
+ 589      51526561 
+ 589      6454696D 
+ 589      656F7574 
+ 589      22282900 
+ 590              	.LC1:
+ 591 0014 2263684F 		.ascii	"\"chOQWriteTimeout\"()\000"
+ 591      51577269 
+ 591      74655469 
+ 591      6D656F75 
+ 591      74222829 
+ 592 0029 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccjSsX1D.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chqueues.c
+     /tmp/ccjSsX1D.s:16     .text.qwait:00000000 $t
+     /tmp/ccjSsX1D.s:21     .text.qwait:00000000 qwait
+     /tmp/ccjSsX1D.s:45     .text.qwait:0000002c $d
+     /tmp/ccjSsX1D.s:48     .text.chIQInit:00000000 $t
+     /tmp/ccjSsX1D.s:54     .text.chIQInit:00000000 chIQInit
+     /tmp/ccjSsX1D.s:75     .text.chIQResetI:00000000 $t
+     /tmp/ccjSsX1D.s:81     .text.chIQResetI:00000000 chIQResetI
+     /tmp/ccjSsX1D.s:109    .text.chIQPutI:00000000 $t
+     /tmp/ccjSsX1D.s:115    .text.chIQPutI:00000000 chIQPutI
+     /tmp/ccjSsX1D.s:165    .text.chIQGetTimeout:00000000 $t
+     /tmp/ccjSsX1D.s:171    .text.chIQGetTimeout:00000000 chIQGetTimeout
+     /tmp/ccjSsX1D.s:229    .text.chIQReadTimeout:00000000 $t
+     /tmp/ccjSsX1D.s:235    .text.chIQReadTimeout:00000000 chIQReadTimeout
+     /tmp/ccjSsX1D.s:318    .text.chIQReadTimeout:00000098 $d
+     /tmp/ccjSsX1D.s:321    .text.chOQInit:00000000 $t
+     /tmp/ccjSsX1D.s:327    .text.chOQInit:00000000 chOQInit
+     /tmp/ccjSsX1D.s:347    .text.chOQResetI:00000000 $t
+     /tmp/ccjSsX1D.s:353    .text.chOQResetI:00000000 chOQResetI
+     /tmp/ccjSsX1D.s:382    .text.chOQPutTimeout:00000000 $t
+     /tmp/ccjSsX1D.s:388    .text.chOQPutTimeout:00000000 chOQPutTimeout
+     /tmp/ccjSsX1D.s:448    .text.chOQGetI:00000000 $t
+     /tmp/ccjSsX1D.s:454    .text.chOQGetI:00000000 chOQGetI
+     /tmp/ccjSsX1D.s:498    .text.chOQWriteTimeout:00000000 $t
+     /tmp/ccjSsX1D.s:504    .text.chOQWriteTimeout:00000000 chOQWriteTimeout
+     /tmp/ccjSsX1D.s:584    .text.chOQWriteTimeout:00000094 $d
+     /tmp/ccjSsX1D.s:587    .rodata.str1.4:00000000 $d
+     /tmp/ccjSsX1D.s:320    .text.chIQReadTimeout:0000009c $t
+     /tmp/ccjSsX1D.s:586    .text.chOQWriteTimeout:00000098 $t
+
+UNDEFINED SYMBOLS
+chSchGoSleepTimeoutS
+rlist
+chDbgCheckClassI
+chSchReadyI
+dbg_check_lock
+dbg_check_unlock
+chDbgPanic

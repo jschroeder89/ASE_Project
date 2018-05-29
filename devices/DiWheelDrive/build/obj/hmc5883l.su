@@ -1,0 +1,11 @@
+hmc5883l.cpp:14:1:amiro::HMC5883L::~HMC5883L()	0	static
+hmc5883l.cpp:14:1:virtual amiro::HMC5883L::~HMC5883L()	8	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+hmc5883l.cpp:18:1:amiro::HMC5883L::HMC5883L(amiro::I2CDriver*, const amiro::HMC5883L::HMC5883LConfig*)	16	static
+hmc5883l.cpp:27:1:chibios_rt::EvtSource* amiro::HMC5883L::getEventSource()	0	static
+hmc5883l.cpp:61:1:int16_t amiro::HMC5883L::getMagnetization(uint8_t)	16	static
+hmc5883l.cpp:72:1:int32_t amiro::HMC5883L::getMagnetizationGauss(uint8_t)	16	static
+hmc5883l.cpp:141:9:uint8_t amiro::HMC5883L::getCheck()	56	static
+hmc5883l.cpp:170:1:msg_t amiro::HMC5883L::writeConf()	24	static
+hmc5883l.cpp:34:1:virtual msg_t amiro::HMC5883L::main()	40	static
+hmc5883l.cpp:194:1:cpp)	0	static

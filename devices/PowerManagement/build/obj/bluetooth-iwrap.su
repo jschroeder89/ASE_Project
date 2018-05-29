@@ -1,0 +1,7 @@
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 128; tprio_t = long unsigned int]	24	static
+bluetooth-iwrap.cpp:19:1:amiro::BluetoothIwrap::BluetoothIwrap(UARTDriver*)	16	static
+bluetooth-iwrap.cpp:44:7:msg_t amiro::BluetoothIwrap::iwrapReceive()	32	static
+bluetooth-iwrap.cpp:27:7:virtual msg_t amiro::BluetoothIwrap::main()	24	static
+bluetooth-iwrap.cpp:106:7:msg_t amiro::BluetoothIwrap::iwrapTransmit(uint8_t, const uint8_t*, size_t)	40	static
+bluetooth-iwrap.cpp:128:6:void amiro::BluetoothIwrap::bluetoothIwrapSendCommand(const char*)	24	static
+bluetooth-iwrap.cpp:155:1:cpp)	0	static

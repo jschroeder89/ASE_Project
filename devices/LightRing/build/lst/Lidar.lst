@@ -1,0 +1,1135 @@
+ARM GAS  /tmp/cczDV0He.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Lidar.cpp"
+  15              		.section	.text._ZL8chprintfP20BaseSequentialStreamPKcz,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.thumb
+  19              		.thumb_func
+  20              		.type	_ZL8chprintfP20BaseSequentialStreamPKcz, %function
+  21              	_ZL8chprintfP20BaseSequentialStreamPKcz:
+  22              		@ args = 4, pretend = 12, frame = 8
+  23              		@ frame_needed = 0, uses_anonymous_args = 1
+  24 0000 0EB4     		push	{r1, r2, r3}
+  25 0002 00B5     		push	{lr}
+  26 0004 82B0     		sub	sp, sp, #8
+  27 0006 03AB     		add	r3, sp, #12
+  28 0008 53F8041B 		ldr	r1, [r3], #4
+  29 000c 1A46     		mov	r2, r3
+  30 000e 0193     		str	r3, [sp, #4]
+  31 0010 FFF7FEFF 		bl	chvprintf
+  32 0014 02B0     		add	sp, sp, #8
+  33              		@ sp needed
+  34 0016 5DF804EB 		ldr	lr, [sp], #4
+  35 001a 03B0     		add	sp, sp, #12
+  36 001c 7047     		bx	lr
+  37              		.size	_ZL8chprintfP20BaseSequentialStreamPKcz, .-_ZL8chprintfP20BaseSequentialStreamPKcz
+  38 001e 00BF     		.section	.text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm,"axG",%progbits,_ZN10chibios_rt16
+  39              		.align	2
+  40              		.p2align 4,,15
+  41              		.weak	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+  42              		.thumb
+  43              		.thumb_func
+  44              		.type	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, %function
+  45              	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48 0000 30B5     		push	{r4, r5, lr}
+  49 0002 0D46     		mov	r5, r1
+  50 0004 83B0     		sub	sp, sp, #12
+  51 0006 0446     		mov	r4, r0
+  52 0008 0091     		str	r1, [sp]
+  53 000a 05F10800 		add	r0, r5, #8
+  54 000e 4FF4E871 		mov	r1, #464
+  55 0012 054B     		ldr	r3, .L3
+  56 0014 FFF7FEFF 		bl	chThdCreateStatic
+  57 0018 044A     		ldr	r2, .L3+4
+ARM GAS  /tmp/cczDV0He.s 			page 2
+
+
+  58 001a 0346     		mov	r3, r0
+  59 001c 6860     		str	r0, [r5, #4]
+  60 001e 2046     		mov	r0, r4
+  61 0020 84E80C00 		stmia	r4, {r2, r3}
+  62 0024 03B0     		add	sp, sp, #12
+  63              		@ sp needed
+  64 0026 30BD     		pop	{r4, r5, pc}
+  65              	.L4:
+  66              		.align	2
+  67              	.L3:
+  68 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+  69 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+  70              		.size	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi256
+  71              		.section	.text._ZN5amiro5LidarC2EhNS0_5SETUPE,"ax",%progbits
+  72              		.align	2
+  73              		.p2align 4,,15
+  74              		.global	_ZN5amiro5LidarC2EhNS0_5SETUPE
+  75              		.thumb
+  76              		.thumb_func
+  77              		.type	_ZN5amiro5LidarC2EhNS0_5SETUPE, %function
+  78              	_ZN5amiro5LidarC2EhNS0_5SETUPE:
+  79              		@ args = 0, pretend = 0, frame = 0
+  80              		@ frame_needed = 0, uses_anonymous_args = 0
+  81 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  82 0002 0446     		mov	r4, r0
+  83 0004 0D46     		mov	r5, r1
+  84 0006 1646     		mov	r6, r2
+  85 0008 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+  86 000c 104B     		ldr	r3, .L6
+  87 000e FF20     		movs	r0, #255
+  88 0010 1968     		ldr	r1, [r3]	@ unaligned
+  89 0012 1A79     		ldrb	r2, [r3, #4]	@ zero_extendqisi2
+  90 0014 0F4F     		ldr	r7, .L6+4
+  91 0016 0023     		movs	r3, #0
+  92 0018 84F8E101 		strb	r0, [r4, #481]
+  93 001c 84F8E201 		strb	r0, [r4, #482]
+  94 0020 84F8DF51 		strb	r5, [r4, #479]
+  95 0024 C4F8D911 		str	r1, [r4, #473]	@ unaligned
+  96 0028 84F8DD21 		strb	r2, [r4, #477]
+  97 002c 84F8DE31 		strb	r3, [r4, #478]
+  98 0030 84F8E061 		strb	r6, [r4, #480]
+  99 0034 2760     		str	r7, [r4]
+ 100 0036 84F8D831 		strb	r3, [r4, #472]
+ 101 003a A4F8E431 		strh	r3, [r4, #484]	@ movhi
+ 102 003e C4F8E831 		str	r3, [r4, #488]
+ 103 0042 84F8EC31 		strb	r3, [r4, #492]
+ 104 0046 84F8ED31 		strb	r3, [r4, #493]
+ 105 004a 2046     		mov	r0, r4
+ 106 004c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 107              	.L7:
+ 108 004e 00BF     		.align	2
+ 109              	.L6:
+ 110 0050 00000000 		.word	.LANCHOR1
+ 111 0054 08000000 		.word	.LANCHOR0+8
+ 112              		.size	_ZN5amiro5LidarC2EhNS0_5SETUPE, .-_ZN5amiro5LidarC2EhNS0_5SETUPE
+ 113              		.global	_ZN5amiro5LidarC1EhNS0_5SETUPE
+ 114              		.thumb_set _ZN5amiro5LidarC1EhNS0_5SETUPE,_ZN5amiro5LidarC2EhNS0_5SETUPE
+ARM GAS  /tmp/cczDV0He.s 			page 3
+
+
+ 115 0058 AFF30080 		.section	.text._ZN5amiro5LidarD2Ev,"ax",%progbits
+ 115      AFF30080 
+ 116              		.align	2
+ 117              		.p2align 4,,15
+ 118              		.global	_ZN5amiro5LidarD2Ev
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.type	_ZN5amiro5LidarD2Ev, %function
+ 122              	_ZN5amiro5LidarD2Ev:
+ 123              		@ args = 0, pretend = 0, frame = 0
+ 124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 125              		@ link register save eliminated.
+ 126 0000 90F8DF31 		ldrb	r3, [r0, #479]	@ zero_extendqisi2
+ 127 0004 054A     		ldr	r2, .L12
+ 128 0006 032B     		cmp	r3, #3
+ 129 0008 0260     		str	r2, [r0]
+ 130 000a 03D1     		bne	.L9
+ 131 000c 044B     		ldr	r3, .L12+4
+ 132 000e 4FF48022 		mov	r2, #262144
+ 133 0012 1A61     		str	r2, [r3, #16]
+ 134              	.L9:
+ 135 0014 0023     		movs	r3, #0
+ 136 0016 80F8EC31 		strb	r3, [r0, #492]
+ 137 001a 7047     		bx	lr
+ 138              	.L13:
+ 139              		.align	2
+ 140              	.L12:
+ 141 001c 08000000 		.word	.LANCHOR0+8
+ 142 0020 000C0140 		.word	1073810432
+ 143              		.size	_ZN5amiro5LidarD2Ev, .-_ZN5amiro5LidarD2Ev
+ 144              		.global	_ZN5amiro5LidarD1Ev
+ 145              		.thumb_set _ZN5amiro5LidarD1Ev,_ZN5amiro5LidarD2Ev
+ 146 0024 AFF30080 		.section	.text._ZN5amiro5Lidar7getScanERA682_t,"ax",%progbits
+ 146      AFF30080 
+ 146      AFF30080 
+ 147              		.align	2
+ 148              		.p2align 4,,15
+ 149              		.global	_ZN5amiro5Lidar7getScanERA682_t
+ 150              		.thumb
+ 151              		.thumb_func
+ 152              		.type	_ZN5amiro5Lidar7getScanERA682_t, %function
+ 153              	_ZN5amiro5Lidar7getScanERA682_t:
+ 154              		@ args = 0, pretend = 0, frame = 0
+ 155              		@ frame_needed = 0, uses_anonymous_args = 0
+ 156 0000 70B5     		push	{r4, r5, r6, lr}
+ 157 0002 90F8EC41 		ldrb	r4, [r0, #492]	@ zero_extendqisi2
+ 158 0006 0546     		mov	r5, r0
+ 159 0008 0E46     		mov	r6, r1
+ 160 000a 1CB1     		cbz	r4, .L15
+ 161 000c 90F8ED31 		ldrb	r3, [r0, #493]	@ zero_extendqisi2
+ 162 0010 13B1     		cbz	r3, .L20
+ 163 0012 0024     		movs	r4, #0
+ 164              	.L15:
+ 165 0014 2046     		mov	r0, r4
+ 166 0016 70BD     		pop	{r4, r5, r6, pc}
+ 167              	.L20:
+ 168 0018 2023     		movs	r3, #32
+ARM GAS  /tmp/cczDV0He.s 			page 4
+
+
+ 169              	@ 112 "../../components/Lidar.cpp" 1
+ 170 001a 83F31188 		msr     BASEPRI, r3
+ 171              	@ 0 "" 2
+ 172              		.thumb
+ 173 001e FFF7FEFF 		bl	dbg_check_lock
+ 174 0022 0849     		ldr	r1, .L21
+ 175 0024 40F25452 		movw	r2, #1364
+ 176 0028 3046     		mov	r0, r6
+ 177 002a 0026     		movs	r6, #0
+ 178 002c FFF7FEFF 		bl	memcpy
+ 179 0030 85F8EC61 		strb	r6, [r5, #492]
+ 180 0034 FFF7FEFF 		bl	dbg_check_unlock
+ 181 0038 3346     		mov	r3, r6
+ 182              	@ 115 "../../components/Lidar.cpp" 1
+ 183 003a 83F31188 		msr     BASEPRI, r3
+ 184              	@ 0 "" 2
+ 185              		.thumb
+ 186 003e 2046     		mov	r0, r4
+ 187 0040 70BD     		pop	{r4, r5, r6, pc}
+ 188              	.L22:
+ 189 0042 00BF     		.align	2
+ 190              	.L21:
+ 191 0044 00000000 		.word	.LANCHOR2
+ 192              		.size	_ZN5amiro5Lidar7getScanERA682_t, .-_ZN5amiro5Lidar7getScanERA682_t
+ 193 0048 AFF30080 		.section	.text._ZN5amiro5Lidar17getNumberOfValuesEv,"ax",%progbits
+ 193      AFF30080 
+ 194              		.align	2
+ 195              		.p2align 4,,15
+ 196              		.global	_ZN5amiro5Lidar17getNumberOfValuesEv
+ 197              		.thumb
+ 198              		.thumb_func
+ 199              		.type	_ZN5amiro5Lidar17getNumberOfValuesEv, %function
+ 200              	_ZN5amiro5Lidar17getNumberOfValuesEv:
+ 201              		@ args = 0, pretend = 0, frame = 0
+ 202              		@ frame_needed = 0, uses_anonymous_args = 0
+ 203              		@ link register save eliminated.
+ 204 0000 40F2AA20 		movw	r0, #682
+ 205 0004 7047     		bx	lr
+ 206              		.size	_ZN5amiro5Lidar17getNumberOfValuesEv, .-_ZN5amiro5Lidar17getNumberOfValuesEv
+ 207 0006 00BFAFF3 		.section	.text._ZN5amiro5Lidar7getDataERhm,"ax",%progbits
+ 207      0080AFF3 
+ 207      0080
+ 208              		.align	2
+ 209              		.p2align 4,,15
+ 210              		.global	_ZN5amiro5Lidar7getDataERhm
+ 211              		.thumb
+ 212              		.thumb_func
+ 213              		.type	_ZN5amiro5Lidar7getDataERhm, %function
+ 214              	_ZN5amiro5Lidar7getDataERhm:
+ 215              		@ args = 0, pretend = 0, frame = 0
+ 216              		@ frame_needed = 0, uses_anonymous_args = 0
+ 217 0000 38B5     		push	{r3, r4, r5, lr}
+ 218 0002 4FF47A73 		mov	r3, #1000
+ 219 0006 03FB02F2 		mul	r2, r3, r2
+ 220 000a 0C4C     		ldr	r4, .L27
+ 221 000c 531E     		subs	r3, r2, #1
+ 222 000e A4FB0323 		umull	r2, r3, r4, r3
+ARM GAS  /tmp/cczDV0He.s 			page 5
+
+
+ 223 0012 9B09     		lsrs	r3, r3, #6
+ 224 0014 0446     		mov	r4, r0
+ 225 0016 0D46     		mov	r5, r1
+ 226 0018 0948     		ldr	r0, .L27+4
+ 227 001a 591C     		adds	r1, r3, #1
+ 228 001c FFF7FEFF 		bl	chIQGetTimeout
+ 229 0020 821C     		adds	r2, r0, #2
+ 230 0022 012A     		cmp	r2, #1
+ 231 0024 07D9     		bls	.L26
+ 232 0026 2870     		strb	r0, [r5]
+ 233 0028 D4F8E831 		ldr	r3, [r4, #488]
+ 234 002c 0120     		movs	r0, #1
+ 235 002e 0344     		add	r3, r3, r0
+ 236 0030 C4F8E831 		str	r3, [r4, #488]
+ 237 0034 38BD     		pop	{r3, r4, r5, pc}
+ 238              	.L26:
+ 239 0036 0020     		movs	r0, #0
+ 240 0038 38BD     		pop	{r3, r4, r5, pc}
+ 241              	.L28:
+ 242 003a 00BF     		.align	2
+ 243              	.L27:
+ 244 003c D34D6210 		.word	274877907
+ 245 0040 0C000000 		.word	SD2+12
+ 246              		.size	_ZN5amiro5Lidar7getDataERhm, .-_ZN5amiro5Lidar7getDataERhm
+ 247 0044 AFF30080 		.section	.text._ZN5amiro5Lidar15updateSensorValEv,"ax",%progbits
+ 247      AFF30080 
+ 247      AFF30080 
+ 248              		.align	2
+ 249              		.p2align 4,,15
+ 250              		.global	_ZN5amiro5Lidar15updateSensorValEv
+ 251              		.thumb
+ 252              		.thumb_func
+ 253              		.type	_ZN5amiro5Lidar15updateSensorValEv, %function
+ 254              	_ZN5amiro5Lidar15updateSensorValEv:
+ 255              		@ args = 0, pretend = 0, frame = 0
+ 256              		@ frame_needed = 0, uses_anonymous_args = 0
+ 257 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 258 0002 0546     		mov	r5, r0
+ 259 0004 2023     		movs	r3, #32
+ 260              	@ 145 "../../components/Lidar.cpp" 1
+ 261 0006 83F31188 		msr     BASEPRI, r3
+ 262              	@ 0 "" 2
+ 263              		.thumb
+ 264 000a 0024     		movs	r4, #0
+ 265 000c FFF7FEFF 		bl	dbg_check_lock
+ 266 0010 85F8EC41 		strb	r4, [r5, #492]
+ 267 0014 85F8ED41 		strb	r4, [r5, #493]
+ 268 0018 FFF7FEFF 		bl	dbg_check_unlock
+ 269 001c 2346     		mov	r3, r4
+ 270              	@ 150 "../../components/Lidar.cpp" 1
+ 271 001e 83F31188 		msr     BASEPRI, r3
+ 272              	@ 0 "" 2
+ 273              		.thumb
+ 274 0022 784C     		ldr	r4, .L62
+ 275 0024 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 276              	.L30:
+ 277 0028 EBB9     		cbnz	r3, .L57
+ARM GAS  /tmp/cczDV0He.s 			page 6
+
+
+ 278              	.L58:
+ 279 002a 95F8D831 		ldrb	r3, [r5, #472]	@ zero_extendqisi2
+ 280              	.L56:
+ 281 002e 072B     		cmp	r3, #7
+ 282 0030 FDD8     		bhi	.L56
+ 283 0032 DFE803F0 		tbb	[pc, r3]
+ 284              	.L33:
+ 285 0036 90       		.byte	(.L32-.L33)/2
+ 286 0037 AA       		.byte	(.L34-.L33)/2
+ 287 0038 7B       		.byte	(.L35-.L33)/2
+ 288 0039 58       		.byte	(.L36-.L33)/2
+ 289 003a 45       		.byte	(.L37-.L33)/2
+ 290 003b 2A       		.byte	(.L38-.L33)/2
+ 291 003c 1A       		.byte	(.L39-.L33)/2
+ 292 003d 04       		.byte	(.L40-.L33)/2
+ 293              		.align	1
+ 294              	.L40:
+ 295 003e 0023     		movs	r3, #0
+ 296 0040 85F8D831 		strb	r3, [r5, #472]
+ 297 0044 2023     		movs	r3, #32
+ 298              	@ 239 "../../components/Lidar.cpp" 1
+ 299 0046 83F31188 		msr     BASEPRI, r3
+ 300              	@ 0 "" 2
+ 301              		.thumb
+ 302 004a FFF7FEFF 		bl	dbg_check_lock
+ 303 004e 0123     		movs	r3, #1
+ 304 0050 85F8EC31 		strb	r3, [r5, #492]
+ 305 0054 FFF7FEFF 		bl	dbg_check_unlock
+ 306 0058 0023     		movs	r3, #0
+ 307              	@ 242 "../../components/Lidar.cpp" 1
+ 308 005a 83F31188 		msr     BASEPRI, r3
+ 309              	@ 0 "" 2
+ 310              		.thumb
+ 311              	.L59:
+ 312 005e 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 313 0062 002B     		cmp	r3, #0
+ 314 0064 E1D0     		beq	.L58
+ 315              	.L57:
+ 316 0066 0020     		movs	r0, #0
+ 317 0068 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 318              	.L39:
+ 319 006a 2023     		movs	r3, #32
+ 320              	@ 231 "../../components/Lidar.cpp" 1
+ 321 006c 83F31188 		msr     BASEPRI, r3
+ 322              	@ 0 "" 2
+ 323              		.thumb
+ 324 0070 FFF7FEFF 		bl	dbg_check_lock
+ 325 0074 0123     		movs	r3, #1
+ 326 0076 85F8ED31 		strb	r3, [r5, #493]
+ 327 007a FFF7FEFF 		bl	dbg_check_unlock
+ 328 007e 0023     		movs	r3, #0
+ 329              	@ 234 "../../components/Lidar.cpp" 1
+ 330 0080 83F31188 		msr     BASEPRI, r3
+ 331              	@ 0 "" 2
+ 332              		.thumb
+ 333 0084 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 334 0088 CEE7     		b	.L30
+ARM GAS  /tmp/cczDV0He.s 			page 7
+
+
+ 335              	.L38:
+ 336 008a 5F48     		ldr	r0, .L62+4
+ 337 008c 5F49     		ldr	r1, .L62+8
+ 338 008e D5F8E821 		ldr	r2, [r5, #488]
+ 339 0092 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 340 0096 B5F8E431 		ldrh	r3, [r5, #484]
+ 341 009a 5BB1     		cbz	r3, .L53
+ 342 009c 5C4F     		ldr	r7, .L62+12
+ 343 009e 0026     		movs	r6, #0
+ 344              	.L54:
+ 345 00a0 BA5B     		ldrh	r2, [r7, r6]
+ 346 00a2 5948     		ldr	r0, .L62+4
+ 347 00a4 5949     		ldr	r1, .L62+8
+ 348 00a6 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 349 00aa B5F8E431 		ldrh	r3, [r5, #484]
+ 350 00ae 0236     		adds	r6, r6, #2
+ 351 00b0 B342     		cmp	r3, r6
+ 352 00b2 F5D8     		bhi	.L54
+ 353              	.L53:
+ 354 00b4 0723     		movs	r3, #7
+ 355 00b6 85F8D831 		strb	r3, [r5, #472]
+ 356 00ba 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 357 00be B3E7     		b	.L30
+ 358              	.L37:
+ 359 00c0 544B     		ldr	r3, .L62+16
+ 360              	.L51:
+ 361 00c2 9978     		ldrb	r1, [r3, #2]	@ zero_extendqisi2
+ 362 00c4 DA78     		ldrb	r2, [r3, #3]	@ zero_extendqisi2
+ 363 00c6 3039     		subs	r1, r1, #48
+ 364 00c8 303A     		subs	r2, r2, #48
+ 365 00ca 01F03F01 		and	r1, r1, #63
+ 366 00ce 02F03F02 		and	r2, r2, #63
+ 367 00d2 42EA8112 		orr	r2, r2, r1, lsl #6
+ 368 00d6 23F8022F 		strh	r2, [r3, #2]!	@ movhi
+ 369 00da A342     		cmp	r3, r4
+ 370 00dc F1D1     		bne	.L51
+ 371 00de 0723     		movs	r3, #7
+ 372 00e0 85F8D831 		strb	r3, [r5, #472]
+ 373 00e4 A1E7     		b	.L58
+ 374              	.L36:
+ 375 00e6 2846     		mov	r0, r5
+ 376 00e8 05F2E111 		addw	r1, r5, #481
+ 377 00ec C822     		movs	r2, #200
+ 378 00ee FFF7FEFF 		bl	_ZN5amiro5Lidar7getDataERhm
+ 379 00f2 0028     		cmp	r0, #0
+ 380 00f4 5FD0     		beq	.L47
+ 381 00f6 D5F8E031 		ldr	r3, [r5, #480]
+ 382 00fa 474A     		ldr	r2, .L62+20
+ 383 00fc 23F07F43 		bic	r3, r3, #-16777216
+ 384 0100 23F0FF03 		bic	r3, r3, #255
+ 385 0104 9342     		cmp	r3, r2
+ 386 0106 5CD0     		beq	.L60
+ 387 0108 95F8E131 		ldrb	r3, [r5, #481]	@ zero_extendqisi2
+ 388 010c B5F8E421 		ldrh	r2, [r5, #484]
+ 389 0110 0A2B     		cmp	r3, #10
+ 390 0112 6FD0     		beq	.L49
+ 391 0114 3E4F     		ldr	r7, .L62+12
+ARM GAS  /tmp/cczDV0He.s 			page 8
+
+
+ 392 0116 511C     		adds	r1, r2, #1
+ 393 0118 A5F8E411 		strh	r1, [r5, #484]	@ movhi
+ 394 011c BB54     		strb	r3, [r7, r2]
+ 395 011e 95F8E121 		ldrb	r2, [r5, #481]	@ zero_extendqisi2
+ 396 0122 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 397 0126 85F8E221 		strb	r2, [r5, #482]
+ 398 012a 7DE7     		b	.L30
+ 399              	.L35:
+ 400 012c 2846     		mov	r0, r5
+ 401 012e 05F2E111 		addw	r1, r5, #481
+ 402 0132 C822     		movs	r2, #200
+ 403 0134 FFF7FEFF 		bl	_ZN5amiro5Lidar7getDataERhm
+ 404 0138 0028     		cmp	r0, #0
+ 405 013a 3CD0     		beq	.L47
+ 406 013c 95F8E131 		ldrb	r3, [r5, #481]	@ zero_extendqisi2
+ 407 0140 0A2B     		cmp	r3, #10
+ 408 0142 8CD1     		bne	.L59
+ 409 0144 0023     		movs	r3, #0
+ 410 0146 0322     		movs	r2, #3
+ 411 0148 A5F8E431 		strh	r3, [r5, #484]	@ movhi
+ 412 014c 85F8D821 		strb	r2, [r5, #472]
+ 413 0150 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 414 0154 68E7     		b	.L30
+ 415              	.L32:
+ 416 0156 2023     		movs	r3, #32
+ 417              	@ 35 "../../components/Lidar.cpp" 1
+ 418 0158 83F31188 		msr     BASEPRI, r3
+ 419              	@ 0 "" 2
+ 420              		.thumb
+ 421 015c FFF7FEFF 		bl	dbg_check_lock
+ 422 0160 2E48     		ldr	r0, .L62+24
+ 423 0162 FFF7FEFF 		bl	chIQResetI
+ 424 0166 FFF7FEFF 		bl	dbg_check_unlock
+ 425 016a 0023     		movs	r3, #0
+ 426              	@ 37 "../../components/Lidar.cpp" 1
+ 427 016c 83F31188 		msr     BASEPRI, r3
+ 428              	@ 0 "" 2
+ 429              		.thumb
+ 430 0170 2B48     		ldr	r0, .L62+28
+ 431 0172 2C49     		ldr	r1, .L62+32
+ 432 0174 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 433 0178 0023     		movs	r3, #0
+ 434 017a 0122     		movs	r2, #1
+ 435 017c C5F8E831 		str	r3, [r5, #488]
+ 436 0180 85F8D821 		strb	r2, [r5, #472]
+ 437 0184 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 438 0188 4EE7     		b	.L30
+ 439              	.L34:
+ 440 018a 2846     		mov	r0, r5
+ 441 018c 05F2E111 		addw	r1, r5, #481
+ 442 0190 C822     		movs	r2, #200
+ 443 0192 FFF7FEFF 		bl	_ZN5amiro5Lidar7getDataERhm
+ 444 0196 70B1     		cbz	r0, .L47
+ 445 0198 95F8DE31 		ldrb	r3, [r5, #478]	@ zero_extendqisi2
+ 446 019c 95F8E111 		ldrb	r1, [r5, #481]	@ zero_extendqisi2
+ 447 01a0 EA18     		adds	r2, r5, r3
+ 448 01a2 92F8D921 		ldrb	r2, [r2, #473]	@ zero_extendqisi2
+ARM GAS  /tmp/cczDV0He.s 			page 9
+
+
+ 449 01a6 9142     		cmp	r1, r2
+ 450 01a8 14D0     		beq	.L61
+ 451 01aa 0023     		movs	r3, #0
+ 452 01ac 85F8DE31 		strb	r3, [r5, #478]
+ 453 01b0 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 454 01b4 38E7     		b	.L30
+ 455              	.L47:
+ 456 01b6 0623     		movs	r3, #6
+ 457 01b8 85F8D831 		strb	r3, [r5, #472]
+ 458 01bc 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 459 01c0 32E7     		b	.L30
+ 460              	.L60:
+ 461 01c2 0423     		movs	r3, #4
+ 462 01c4 0022     		movs	r2, #0
+ 463 01c6 85F8D831 		strb	r3, [r5, #472]
+ 464 01ca 85F8E221 		strb	r2, [r5, #482]
+ 465 01ce 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 466 01d2 29E7     		b	.L30
+ 467              	.L61:
+ 468 01d4 0133     		adds	r3, r3, #1
+ 469 01d6 DBB2     		uxtb	r3, r3
+ 470 01d8 052B     		cmp	r3, #5
+ 471 01da 85F8DE31 		strb	r3, [r5, #478]
+ 472 01de 7FF43EAF 		bne	.L59
+ 473 01e2 0023     		movs	r3, #0
+ 474 01e4 0222     		movs	r2, #2
+ 475 01e6 85F8DE31 		strb	r3, [r5, #478]
+ 476 01ea 85F8D821 		strb	r2, [r5, #472]
+ 477 01ee 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 478 01f2 19E7     		b	.L30
+ 479              	.L49:
+ 480 01f4 85F8E231 		strb	r3, [r5, #482]
+ 481 01f8 531E     		subs	r3, r2, #1
+ 482 01fa A5F8E431 		strh	r3, [r5, #484]	@ movhi
+ 483 01fe 95F8EC31 		ldrb	r3, [r5, #492]	@ zero_extendqisi2
+ 484 0202 11E7     		b	.L30
+ 485              	.L63:
+ 486              		.align	2
+ 487              	.L62:
+ 488 0204 52050000 		.word	.LANCHOR2+1362
+ 489 0208 D8050000 		.word	global+1496
+ 490 020c 14000000 		.word	.LC2
+ 491 0210 00000000 		.word	.LANCHOR2
+ 492 0214 FEFFFFFF 		.word	.LANCHOR2-2
+ 493 0218 000A0A00 		.word	657920
+ 494 021c 0C000000 		.word	SD2+12
+ 495 0220 00000000 		.word	SD2
+ 496 0224 00000000 		.word	.LC1
+ 497              		.size	_ZN5amiro5Lidar15updateSensorValEv, .-_ZN5amiro5Lidar15updateSensorValEv
+ 498 0228 AFF30080 		.section	.text._ZN5amiro5Lidar9printDataEv,"ax",%progbits
+ 498      AFF30080 
+ 499              		.align	2
+ 500              		.p2align 4,,15
+ 501              		.global	_ZN5amiro5Lidar9printDataEv
+ 502              		.thumb
+ 503              		.thumb_func
+ 504              		.type	_ZN5amiro5Lidar9printDataEv, %function
+ARM GAS  /tmp/cczDV0He.s 			page 10
+
+
+ 505              	_ZN5amiro5Lidar9printDataEv:
+ 506              		@ args = 0, pretend = 0, frame = 8
+ 507              		@ frame_needed = 0, uses_anonymous_args = 0
+ 508 0000 70B5     		push	{r4, r5, r6, lr}
+ 509 0002 82B0     		sub	sp, sp, #8
+ 510 0004 FF24     		movs	r4, #255
+ 511 0006 02AD     		add	r5, sp, #8
+ 512 0008 0646     		mov	r6, r0
+ 513 000a 05F8014D 		strb	r4, [r5, #-1]!
+ 514 000e 0BE0     		b	.L69
+ 515              	.L73:
+ 516 0010 0A2C     		cmp	r4, #10
+ 517 0012 9DF80720 		ldrb	r2, [sp, #7]	@ zero_extendqisi2
+ 518 0016 01D1     		bne	.L67
+ 519 0018 0A2A     		cmp	r2, #10
+ 520 001a 12D0     		beq	.L64
+ 521              	.L67:
+ 522 001c 0A48     		ldr	r0, .L74
+ 523 001e 0B49     		ldr	r1, .L74+4
+ 524 0020 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 525 0024 9DF80740 		ldrb	r4, [sp, #7]	@ zero_extendqisi2
+ 526              	.L69:
+ 527 0028 3046     		mov	r0, r6
+ 528 002a 2946     		mov	r1, r5
+ 529 002c C822     		movs	r2, #200
+ 530 002e FFF7FEFF 		bl	_ZN5amiro5Lidar7getDataERhm
+ 531 0032 0028     		cmp	r0, #0
+ 532 0034 ECD1     		bne	.L73
+ 533 0036 0448     		ldr	r0, .L74
+ 534 0038 0549     		ldr	r1, .L74+8
+ 535 003a 9DF80720 		ldrb	r2, [sp, #7]	@ zero_extendqisi2
+ 536 003e FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 537              	.L64:
+ 538 0042 02B0     		add	sp, sp, #8
+ 539              		@ sp needed
+ 540 0044 70BD     		pop	{r4, r5, r6, pc}
+ 541              	.L75:
+ 542 0046 00BF     		.align	2
+ 543              	.L74:
+ 544 0048 D8050000 		.word	global+1496
+ 545 004c 18000000 		.word	.LC3
+ 546 0050 1C000000 		.word	.LC4
+ 547              		.size	_ZN5amiro5Lidar9printDataEv, .-_ZN5amiro5Lidar9printDataEv
+ 548 0054 AFF30080 		.section	.text._ZN5amiro5Lidar15checkDataStringEPKc,"ax",%progbits
+ 548      AFF30080 
+ 548      AFF30080 
+ 549              		.align	2
+ 550              		.p2align 4,,15
+ 551              		.global	_ZN5amiro5Lidar15checkDataStringEPKc
+ 552              		.thumb
+ 553              		.thumb_func
+ 554              		.type	_ZN5amiro5Lidar15checkDataStringEPKc, %function
+ 555              	_ZN5amiro5Lidar15checkDataStringEPKc:
+ 556              		@ args = 0, pretend = 0, frame = 8
+ 557              		@ frame_needed = 0, uses_anonymous_args = 0
+ 558 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 559 0004 83B0     		sub	sp, sp, #12
+ARM GAS  /tmp/cczDV0He.s 			page 11
+
+
+ 560 0006 FF25     		movs	r5, #255
+ 561 0008 02AE     		add	r6, sp, #8
+ 562 000a 0746     		mov	r7, r0
+ 563 000c 8946     		mov	r9, r1
+ 564 000e 06F8015D 		strb	r5, [r6, #-1]!
+ 565 0012 0124     		movs	r4, #1
+ 566 0014 4FF00008 		mov	r8, #0
+ 567              	.L81:
+ 568 0018 3846     		mov	r0, r7
+ 569 001a 3146     		mov	r1, r6
+ 570 001c C822     		movs	r2, #200
+ 571 001e FFF7FEFF 		bl	_ZN5amiro5Lidar7getDataERhm
+ 572 0022 88B1     		cbz	r0, .L82
+ 573 0024 0A2D     		cmp	r5, #10
+ 574 0026 9DF80750 		ldrb	r5, [sp, #7]	@ zero_extendqisi2
+ 575 002a 12D0     		beq	.L78
+ 576 002c 0123     		movs	r3, #1
+ 577              	.L79:
+ 578 002e 08F10102 		add	r2, r8, #1
+ 579 0032 34B1     		cbz	r4, .L80
+ 580 0034 19F80840 		ldrb	r4, [r9, r8]	@ zero_extendqisi2
+ 581 0038 5FFA82F8 		uxtb	r8, r2
+ 582 003c 621B     		subs	r2, r4, r5
+ 583 003e 5442     		rsbs	r4, r2, #0
+ 584 0040 5441     		adcs	r4, r4, r2
+ 585              	.L80:
+ 586 0042 002B     		cmp	r3, #0
+ 587 0044 E8D1     		bne	.L81
+ 588 0046 00E0     		b	.L77
+ 589              	.L82:
+ 590 0048 0446     		mov	r4, r0
+ 591              	.L77:
+ 592 004a 2046     		mov	r0, r4
+ 593 004c 03B0     		add	sp, sp, #12
+ 594              		@ sp needed
+ 595 004e BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 596              	.L78:
+ 597 0052 B5F10A03 		subs	r3, r5, #10
+ 598 0056 18BF     		it	ne
+ 599 0058 0123     		movne	r3, #1
+ 600 005a E8E7     		b	.L79
+ 601              		.size	_ZN5amiro5Lidar15checkDataStringEPKc, .-_ZN5amiro5Lidar15checkDataStringEPKc
+ 602 005c AFF30080 		.section	.text.startup._ZN5amiro5Lidar4mainEv,"ax",%progbits
+ 603              		.align	2
+ 604              		.p2align 4,,15
+ 605              		.global	_ZN5amiro5Lidar4mainEv
+ 606              		.thumb
+ 607              		.thumb_func
+ 608              		.type	_ZN5amiro5Lidar4mainEv, %function
+ 609              	_ZN5amiro5Lidar4mainEv:
+ 610              		@ args = 0, pretend = 0, frame = 16
+ 611              		@ frame_needed = 0, uses_anonymous_args = 0
+ 612 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 613 0002 90F8DF31 		ldrb	r3, [r0, #479]	@ zero_extendqisi2
+ 614 0006 85B0     		sub	sp, sp, #20
+ 615 0008 032B     		cmp	r3, #3
+ 616 000a 0446     		mov	r4, r0
+ARM GAS  /tmp/cczDV0He.s 			page 12
+
+
+ 617 000c 0AD1     		bne	.L90
+ 618 000e 3B4B     		ldr	r3, .L106
+ 619 0010 0422     		movs	r2, #4
+ 620 0012 1A61     		str	r2, [r3, #16]
+ 621 0014 41F28830 		movw	r0, #5000
+ 622 0018 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 623 001c 94F8E031 		ldrb	r3, [r4, #480]	@ zero_extendqisi2
+ 624 0020 002B     		cmp	r3, #0
+ 625 0022 35D1     		bne	.L103
+ 626              	.L90:
+ 627 0024 4FF47A73 		mov	r3, #1000
+ 628 0028 04F50175 		add	r5, r4, #516
+ 629 002c 0022     		movs	r2, #0
+ 630 002e 2846     		mov	r0, r5
+ 631 0030 C4F8FC21 		str	r2, [r4, #508]
+ 632 0034 C4F80832 		str	r3, [r4, #520]
+ 633 0038 6946     		mov	r1, sp
+ 634 003a 0122     		movs	r2, #1
+ 635 003c C4F80452 		str	r5, [r4, #516]
+ 636 0040 04F5F877 		add	r7, r4, #496
+ 637 0044 FFF7FEFF 		bl	_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+ 638 0048 3846     		mov	r0, r7
+ 639 004a FFF7FEFF 		bl	evtStart
+ 640 004e 2C48     		ldr	r0, .L106+4
+ 641 0050 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread7setNameEPKc
+ 642              	.L94:
+ 643 0054 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 644 0058 80B9     		cbnz	r0, .L105
+ 645              	.L97:
+ 646 005a 4FF0FF30 		mov	r0, #-1
+ 647 005e FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread12waitOneEventEm
+ 648 0062 0228     		cmp	r0, #2
+ 649 0064 F6D1     		bne	.L94
+ 650 0066 94F8E031 		ldrb	r3, [r4, #480]	@ zero_extendqisi2
+ 651 006a 002B     		cmp	r3, #0
+ 652 006c F2D0     		beq	.L94
+ 653 006e 2046     		mov	r0, r4
+ 654 0070 FFF7FEFF 		bl	_ZN5amiro5Lidar15updateSensorValEv
+ 655 0074 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 656 0078 0028     		cmp	r0, #0
+ 657 007a EED0     		beq	.L97
+ 658              	.L105:
+ 659 007c 3846     		mov	r0, r7
+ 660 007e FFF7FEFF 		bl	evtStop
+ 661 0082 2846     		mov	r0, r5
+ 662 0084 6946     		mov	r1, sp
+ 663 0086 FFF7FEFF 		bl	_ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
+ 664 008a 0020     		movs	r0, #0
+ 665              	.L93:
+ 666 008c 05B0     		add	sp, sp, #20
+ 667              		@ sp needed
+ 668 008e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 669              	.L103:
+ 670 0090 2023     		movs	r3, #32
+ 671              	@ 35 "../../components/Lidar.cpp" 1
+ 672 0092 83F31188 		msr     BASEPRI, r3
+ 673              	@ 0 "" 2
+ARM GAS  /tmp/cczDV0He.s 			page 13
+
+
+ 674              		.thumb
+ 675 0096 FFF7FEFF 		bl	dbg_check_lock
+ 676 009a 1A48     		ldr	r0, .L106+8
+ 677 009c FFF7FEFF 		bl	chIQResetI
+ 678 00a0 FFF7FEFF 		bl	dbg_check_unlock
+ 679 00a4 0023     		movs	r3, #0
+ 680              	@ 37 "../../components/Lidar.cpp" 1
+ 681 00a6 83F31188 		msr     BASEPRI, r3
+ 682              	@ 0 "" 2
+ 683              		.thumb
+ 684 00aa 1748     		ldr	r0, .L106+12
+ 685 00ac 1749     		ldr	r1, .L106+16
+ 686 00ae FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 687 00b2 2046     		mov	r0, r4
+ 688 00b4 1649     		ldr	r1, .L106+20
+ 689 00b6 FFF7FEFF 		bl	_ZN5amiro5Lidar15checkDataStringEPKc
+ 690 00ba A0B1     		cbz	r0, .L92
+ 691 00bc 1549     		ldr	r1, .L106+24
+ 692 00be 1648     		ldr	r0, .L106+28
+ 693 00c0 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 694 00c4 1048     		ldr	r0, .L106+12
+ 695 00c6 FFF7FEFF 		bl	sdStop
+ 696 00ca 144A     		ldr	r2, .L106+32
+ 697 00cc 0023     		movs	r3, #0
+ 698 00ce 6946     		mov	r1, sp
+ 699 00d0 0D48     		ldr	r0, .L106+12
+ 700 00d2 0092     		str	r2, [sp]
+ 701 00d4 ADF80430 		strh	r3, [sp, #4]	@ movhi
+ 702 00d8 ADF80630 		strh	r3, [sp, #6]	@ movhi
+ 703 00dc ADF80830 		strh	r3, [sp, #8]	@ movhi
+ 704 00e0 FFF7FEFF 		bl	sdStart
+ 705 00e4 9EE7     		b	.L90
+ 706              	.L92:
+ 707 00e6 0C48     		ldr	r0, .L106+28
+ 708 00e8 0D49     		ldr	r1, .L106+36
+ 709 00ea FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 710 00ee 034B     		ldr	r3, .L106
+ 711 00f0 4FF48022 		mov	r2, #262144
+ 712 00f4 1A61     		str	r2, [r3, #16]
+ 713 00f6 4FF0FF30 		mov	r0, #-1
+ 714 00fa C7E7     		b	.L93
+ 715              	.L107:
+ 716              		.align	2
+ 717              	.L106:
+ 718 00fc 000C0140 		.word	1073810432
+ 719 0100 8C000000 		.word	.LC9
+ 720 0104 0C000000 		.word	SD2+12
+ 721 0108 00000000 		.word	SD2
+ 722 010c 28000000 		.word	.LC5
+ 723 0110 34000000 		.word	.LC6
+ 724 0114 44000000 		.word	.LC7
+ 725 0118 D8050000 		.word	global+1496
+ 726 011c 90D00300 		.word	250000
+ 727 0120 5C000000 		.word	.LC8
+ 728              		.size	_ZN5amiro5Lidar4mainEv, .-_ZN5amiro5Lidar4mainEv
+ 729 0124 AFF30080 		.section	.text._ZN5amiro5Lidar12printDetailsEv,"ax",%progbits
+ 729      AFF30080 
+ARM GAS  /tmp/cczDV0He.s 			page 14
+
+
+ 729      AFF30080 
+ 730              		.align	2
+ 731              		.p2align 4,,15
+ 732              		.global	_ZN5amiro5Lidar12printDetailsEv
+ 733              		.thumb
+ 734              		.thumb_func
+ 735              		.type	_ZN5amiro5Lidar12printDetailsEv, %function
+ 736              	_ZN5amiro5Lidar12printDetailsEv:
+ 737              		@ args = 0, pretend = 0, frame = 0
+ 738              		@ frame_needed = 0, uses_anonymous_args = 0
+ 739 0000 10B5     		push	{r4, lr}
+ 740 0002 0749     		ldr	r1, .L109
+ 741 0004 0446     		mov	r4, r0
+ 742 0006 0748     		ldr	r0, .L109+4
+ 743 0008 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 744 000c 0648     		ldr	r0, .L109+8
+ 745 000e 0749     		ldr	r1, .L109+12
+ 746 0010 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 747 0014 2046     		mov	r0, r4
+ 748 0016 BDE81040 		pop	{r4, lr}
+ 749 001a FFF7FEBF 		b	_ZN5amiro5Lidar9printDataEv
+ 750              	.L110:
+ 751 001e 00BF     		.align	2
+ 752              	.L109:
+ 753 0020 94000000 		.word	.LC10
+ 754 0024 D8050000 		.word	global+1496
+ 755 0028 00000000 		.word	SD2
+ 756 002c AC000000 		.word	.LC11
+ 757              		.size	_ZN5amiro5Lidar12printDetailsEv, .-_ZN5amiro5Lidar12printDetailsEv
+ 758              		.section	.text._ZN5amiro5Lidar18printSpecificationEv,"ax",%progbits
+ 759              		.align	2
+ 760              		.p2align 4,,15
+ 761              		.global	_ZN5amiro5Lidar18printSpecificationEv
+ 762              		.thumb
+ 763              		.thumb_func
+ 764              		.type	_ZN5amiro5Lidar18printSpecificationEv, %function
+ 765              	_ZN5amiro5Lidar18printSpecificationEv:
+ 766              		@ args = 0, pretend = 0, frame = 0
+ 767              		@ frame_needed = 0, uses_anonymous_args = 0
+ 768 0000 10B5     		push	{r4, lr}
+ 769 0002 0749     		ldr	r1, .L112
+ 770 0004 0446     		mov	r4, r0
+ 771 0006 0748     		ldr	r0, .L112+4
+ 772 0008 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 773 000c 0648     		ldr	r0, .L112+8
+ 774 000e 0749     		ldr	r1, .L112+12
+ 775 0010 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 776 0014 2046     		mov	r0, r4
+ 777 0016 BDE81040 		pop	{r4, lr}
+ 778 001a FFF7FEBF 		b	_ZN5amiro5Lidar9printDataEv
+ 779              	.L113:
+ 780 001e 00BF     		.align	2
+ 781              	.L112:
+ 782 0020 B0000000 		.word	.LC12
+ 783 0024 D8050000 		.word	global+1496
+ 784 0028 00000000 		.word	SD2
+ 785 002c D0000000 		.word	.LC13
+ARM GAS  /tmp/cczDV0He.s 			page 15
+
+
+ 786              		.size	_ZN5amiro5Lidar18printSpecificationEv, .-_ZN5amiro5Lidar18printSpecificationEv
+ 787              		.section	.text._ZN5amiro5Lidar16printInformationEv,"ax",%progbits
+ 788              		.align	2
+ 789              		.p2align 4,,15
+ 790              		.global	_ZN5amiro5Lidar16printInformationEv
+ 791              		.thumb
+ 792              		.thumb_func
+ 793              		.type	_ZN5amiro5Lidar16printInformationEv, %function
+ 794              	_ZN5amiro5Lidar16printInformationEv:
+ 795              		@ args = 0, pretend = 0, frame = 0
+ 796              		@ frame_needed = 0, uses_anonymous_args = 0
+ 797 0000 10B5     		push	{r4, lr}
+ 798 0002 0749     		ldr	r1, .L115
+ 799 0004 0446     		mov	r4, r0
+ 800 0006 0748     		ldr	r0, .L115+4
+ 801 0008 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 802 000c 0648     		ldr	r0, .L115+8
+ 803 000e 0749     		ldr	r1, .L115+12
+ 804 0010 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 805 0014 2046     		mov	r0, r4
+ 806 0016 BDE81040 		pop	{r4, lr}
+ 807 001a FFF7FEBF 		b	_ZN5amiro5Lidar9printDataEv
+ 808              	.L116:
+ 809 001e 00BF     		.align	2
+ 810              	.L115:
+ 811 0020 D4000000 		.word	.LC14
+ 812 0024 D8050000 		.word	global+1496
+ 813 0028 00000000 		.word	SD2
+ 814 002c F0000000 		.word	.LC15
+ 815              		.size	_ZN5amiro5Lidar16printInformationEv, .-_ZN5amiro5Lidar16printInformationEv
+ 816              		.section	.text.startup._GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE,"ax",%progbits
+ 817              		.align	2
+ 818              		.p2align 4,,15
+ 819              		.thumb
+ 820              		.thumb_func
+ 821              		.type	_GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE, %function
+ 822              	_GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE:
+ 823              		@ args = 0, pretend = 0, frame = 0
+ 824              		@ frame_needed = 0, uses_anonymous_args = 0
+ 825              		@ link register save eliminated.
+ 826 0000 024B     		ldr	r3, .L118
+ 827 0002 034A     		ldr	r2, .L118+4
+ 828 0004 1A60     		str	r2, [r3]
+ 829 0006 5A60     		str	r2, [r3, #4]
+ 830 0008 7047     		bx	lr
+ 831              	.L119:
+ 832 000a 00BF     		.align	2
+ 833              	.L118:
+ 834 000c 00000000 		.word	.LANCHOR3
+ 835 0010 A0860100 		.word	100000
+ 836              		.size	_GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE, .-_GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE
+ 837 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 837      AFF30080 
+ 837      AFF30080 
+ 838              		.align	2
+ 839 0000 00000000 		.word	_GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE(target1)
+ 840              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+ARM GAS  /tmp/cczDV0He.s 			page 16
+
+
+ 841              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
+ 842              		.align	3
+ 843              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, %object
+ 844              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, 20
+ 845              	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE:
+ 846 0000 00000000 		.word	0
+ 847 0004 00000000 		.word	0
+ 848 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 849 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 850 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 851              		.global	_ZTVN5amiro5LidarE
+ 852              		.global	_ZN5amiro5Lidar11scannedDataE
+ 853 0014 00000000 		.section	.rodata
+ 854              		.align	2
+ 855              		.set	.LANCHOR1,. + 0
+ 856              	.LC0:
+ 857 0000 0A       		.byte	10
+ 858 0001 39       		.byte	57
+ 859 0002 39       		.byte	57
+ 860 0003 62       		.byte	98
+ 861 0004 0A       		.byte	10
+ 862 0005 000000   		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 863              		.align	2
+ 864              		.set	.LANCHOR3,. + 0
+ 865              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 866              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 867              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 868 0000 00000000 		.space	8
+ 868      00000000 
+ 869              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 870              		.align	2
+ 871              	.LC1:
+ 872 0000 4D533030 		.ascii	"MS0044072500001\012\000"
+ 872      34343037 
+ 872      32353030 
+ 872      3030310A 
+ 872      00
+ 873 0011 000000   		.space	3
+ 874              	.LC2:
+ 875 0014 0A256400 		.ascii	"\012%d\000"
+ 876              	.LC3:
+ 877 0018 256300   		.ascii	"%c\000"
+ 878 001b 00       		.space	1
+ 879              	.LC4:
+ 880 001c 54494D45 		.ascii	"TIMEOUT\012\000"
+ 880      4F55540A 
+ 880      00
+ 881 0025 000000   		.space	3
+ 882              	.LC5:
+ 883 0028 53533235 		.ascii	"SS250000\012\000"
+ 883      30303030 
+ 883      0A00
+ 884 0032 0000     		.space	2
+ 885              	.LC6:
+ 886 0034 53533235 		.ascii	"SS250000\01200P\012\012\000"
+ 886      30303030 
+ 886      0A303050 
+ARM GAS  /tmp/cczDV0He.s 			page 17
+
+
+ 886      0A0A00
+ 887 0043 00       		.space	1
+ 888              	.LC7:
+ 889 0044 4C696461 		.ascii	"Lidar speed switch OK\012\000"
+ 889      72207370 
+ 889      65656420 
+ 889      73776974 
+ 889      6368204F 
+ 890 005b 00       		.space	1
+ 891              	.LC8:
+ 892 005c 4C696461 		.ascii	"Lidar speed switch NOT OK: Terminating Lidar \012\000"
+ 892      72207370 
+ 892      65656420 
+ 892      73776974 
+ 892      6368204E 
+ 893 008b 00       		.space	1
+ 894              	.LC9:
+ 895 008c 4C696461 		.ascii	"Lidar\000"
+ 895      7200
+ 896 0092 0000     		.space	2
+ 897              	.LC10:
+ 898 0094 5072696E 		.ascii	"Print sensor details:\012\000"
+ 898      74207365 
+ 898      6E736F72 
+ 898      20646574 
+ 898      61696C73 
+ 899 00ab 00       		.space	1
+ 900              	.LC11:
+ 901 00ac 56560A00 		.ascii	"VV\012\000"
+ 902              	.LC12:
+ 903 00b0 5072696E 		.ascii	"Print sensor specification:\012\000"
+ 903      74207365 
+ 903      6E736F72 
+ 903      20737065 
+ 903      63696669 
+ 904 00cd 000000   		.space	3
+ 905              	.LC13:
+ 906 00d0 50500A00 		.ascii	"PP\012\000"
+ 907              	.LC14:
+ 908 00d4 5072696E 		.ascii	"Print sensor information:\012\000"
+ 908      74207365 
+ 908      6E736F72 
+ 908      20696E66 
+ 908      6F726D61 
+ 909 00ef 00       		.space	1
+ 910              	.LC15:
+ 911 00f0 49490A00 		.ascii	"II\012\000"
+ 912              		.section	.bss._ZN5amiro5Lidar11scannedDataE,"aw",%nobits
+ 913              		.align	2
+ 914              		.set	.LANCHOR2,. + 0
+ 915              		.type	_ZN5amiro5Lidar11scannedDataE, %object
+ 916              		.size	_ZN5amiro5Lidar11scannedDataE, 1365
+ 917              	_ZN5amiro5Lidar11scannedDataE:
+ 918 0000 00000000 		.space	1365
+ 918      00000000 
+ 918      00000000 
+ 918      00000000 
+ARM GAS  /tmp/cczDV0He.s 			page 18
+
+
+ 918      00000000 
+ 919 0555 000000   		.section	.rodata._ZTVN5amiro5LidarE,"a",%progbits
+ 920              		.align	3
+ 921              		.set	.LANCHOR0,. + 0
+ 922              		.type	_ZTVN5amiro5LidarE, %object
+ 923              		.size	_ZTVN5amiro5LidarE, 20
+ 924              	_ZTVN5amiro5LidarE:
+ 925 0000 00000000 		.word	0
+ 926 0004 00000000 		.word	0
+ 927 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 928 000c 00000000 		.word	_ZN5amiro5Lidar4mainEv
+ 929 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 930 0014 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cczDV0He.s 			page 19
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Lidar.cpp
+     /tmp/cczDV0He.s:16     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 $t
+     /tmp/cczDV0He.s:21     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz
+     /tmp/cczDV0He.s:39     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/cczDV0He.s:45     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/cczDV0He.s:68     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/cczDV0He.s:72     .text._ZN5amiro5LidarC2EhNS0_5SETUPE:00000000 $t
+     /tmp/cczDV0He.s:78     .text._ZN5amiro5LidarC2EhNS0_5SETUPE:00000000 _ZN5amiro5LidarC2EhNS0_5SETUPE
+     /tmp/cczDV0He.s:110    .text._ZN5amiro5LidarC2EhNS0_5SETUPE:00000050 $d
+     /tmp/cczDV0He.s:78     .text._ZN5amiro5LidarC2EhNS0_5SETUPE:00000000 _ZN5amiro5LidarC1EhNS0_5SETUPE
+     /tmp/cczDV0He.s:116    .text._ZN5amiro5LidarD2Ev:00000000 $t
+     /tmp/cczDV0He.s:122    .text._ZN5amiro5LidarD2Ev:00000000 _ZN5amiro5LidarD2Ev
+     /tmp/cczDV0He.s:141    .text._ZN5amiro5LidarD2Ev:0000001c $d
+     /tmp/cczDV0He.s:122    .text._ZN5amiro5LidarD2Ev:00000000 _ZN5amiro5LidarD1Ev
+     /tmp/cczDV0He.s:147    .text._ZN5amiro5Lidar7getScanERA682_t:00000000 $t
+     /tmp/cczDV0He.s:153    .text._ZN5amiro5Lidar7getScanERA682_t:00000000 _ZN5amiro5Lidar7getScanERA682_t
+     /tmp/cczDV0He.s:191    .text._ZN5amiro5Lidar7getScanERA682_t:00000044 $d
+     /tmp/cczDV0He.s:194    .text._ZN5amiro5Lidar17getNumberOfValuesEv:00000000 $t
+     /tmp/cczDV0He.s:200    .text._ZN5amiro5Lidar17getNumberOfValuesEv:00000000 _ZN5amiro5Lidar17getNumberOfValuesEv
+     /tmp/cczDV0He.s:208    .text._ZN5amiro5Lidar7getDataERhm:00000000 $t
+     /tmp/cczDV0He.s:214    .text._ZN5amiro5Lidar7getDataERhm:00000000 _ZN5amiro5Lidar7getDataERhm
+     /tmp/cczDV0He.s:244    .text._ZN5amiro5Lidar7getDataERhm:0000003c $d
+     /tmp/cczDV0He.s:248    .text._ZN5amiro5Lidar15updateSensorValEv:00000000 $t
+     /tmp/cczDV0He.s:254    .text._ZN5amiro5Lidar15updateSensorValEv:00000000 _ZN5amiro5Lidar15updateSensorValEv
+     /tmp/cczDV0He.s:285    .text._ZN5amiro5Lidar15updateSensorValEv:00000036 $d
+     /tmp/cczDV0He.s:293    .text._ZN5amiro5Lidar15updateSensorValEv:0000003e $t
+     /tmp/cczDV0He.s:488    .text._ZN5amiro5Lidar15updateSensorValEv:00000204 $d
+     /tmp/cczDV0He.s:499    .text._ZN5amiro5Lidar9printDataEv:00000000 $t
+     /tmp/cczDV0He.s:505    .text._ZN5amiro5Lidar9printDataEv:00000000 _ZN5amiro5Lidar9printDataEv
+     /tmp/cczDV0He.s:544    .text._ZN5amiro5Lidar9printDataEv:00000048 $d
+     /tmp/cczDV0He.s:549    .text._ZN5amiro5Lidar15checkDataStringEPKc:00000000 $t
+     /tmp/cczDV0He.s:555    .text._ZN5amiro5Lidar15checkDataStringEPKc:00000000 _ZN5amiro5Lidar15checkDataStringEPKc
+     /tmp/cczDV0He.s:603    .text.startup._ZN5amiro5Lidar4mainEv:00000000 $t
+     /tmp/cczDV0He.s:609    .text.startup._ZN5amiro5Lidar4mainEv:00000000 _ZN5amiro5Lidar4mainEv
+     /tmp/cczDV0He.s:718    .text.startup._ZN5amiro5Lidar4mainEv:000000fc $d
+     /tmp/cczDV0He.s:730    .text._ZN5amiro5Lidar12printDetailsEv:00000000 $t
+     /tmp/cczDV0He.s:736    .text._ZN5amiro5Lidar12printDetailsEv:00000000 _ZN5amiro5Lidar12printDetailsEv
+     /tmp/cczDV0He.s:753    .text._ZN5amiro5Lidar12printDetailsEv:00000020 $d
+     /tmp/cczDV0He.s:759    .text._ZN5amiro5Lidar18printSpecificationEv:00000000 $t
+     /tmp/cczDV0He.s:765    .text._ZN5amiro5Lidar18printSpecificationEv:00000000 _ZN5amiro5Lidar18printSpecificationEv
+     /tmp/cczDV0He.s:782    .text._ZN5amiro5Lidar18printSpecificationEv:00000020 $d
+     /tmp/cczDV0He.s:788    .text._ZN5amiro5Lidar16printInformationEv:00000000 $t
+     /tmp/cczDV0He.s:794    .text._ZN5amiro5Lidar16printInformationEv:00000000 _ZN5amiro5Lidar16printInformationEv
+     /tmp/cczDV0He.s:811    .text._ZN5amiro5Lidar16printInformationEv:00000020 $d
+     /tmp/cczDV0He.s:817    .text.startup._GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE:00000000 $t
+     /tmp/cczDV0He.s:822    .text.startup._GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE:00000000 _GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE
+     /tmp/cczDV0He.s:834    .text.startup._GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE:0000000c $d
+     /tmp/cczDV0He.s:838    .init_array:00000000 $d
+     /tmp/cczDV0He.s:845    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/cczDV0He.s:842    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/cczDV0He.s:924    .rodata._ZTVN5amiro5LidarE:00000000 _ZTVN5amiro5LidarE
+     /tmp/cczDV0He.s:917    .bss._ZN5amiro5Lidar11scannedDataE:00000000 _ZN5amiro5Lidar11scannedDataE
+     /tmp/cczDV0He.s:854    .rodata:00000000 $d
+     /tmp/cczDV0He.s:863    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/cczDV0He.s:867    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/cczDV0He.s:870    .rodata.str1.4:00000000 $d
+ARM GAS  /tmp/cczDV0He.s 			page 20
+
+
+     /tmp/cczDV0He.s:913    .bss._ZN5amiro5Lidar11scannedDataE:00000000 $d
+     /tmp/cczDV0He.s:920    .rodata._ZTVN5amiro5LidarE:00000000 $d
+     /tmp/cczDV0He.s:115    .text._ZN5amiro5LidarC2EhNS0_5SETUPE:00000058 $t
+     /tmp/cczDV0He.s:146    .text._ZN5amiro5LidarD2Ev:00000024 $t
+     /tmp/cczDV0He.s:193    .text._ZN5amiro5Lidar7getScanERA682_t:00000048 $t
+     /tmp/cczDV0He.s:247    .text._ZN5amiro5Lidar7getDataERhm:00000044 $t
+     /tmp/cczDV0He.s:498    .text._ZN5amiro5Lidar15updateSensorValEv:00000228 $t
+     /tmp/cczDV0He.s:548    .text._ZN5amiro5Lidar9printDataEv:00000054 $t
+     /tmp/cczDV0He.s:729    .text.startup._ZN5amiro5Lidar4mainEv:00000124 $t
+     /tmp/cczDV0He.s:837    .text.startup._GLOBAL__sub_I__ZN5amiro5Lidar11scannedDataE:00000014 $t
+
+UNDEFINED SYMBOLS
+chvprintf
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+_ZN10chibios_rt10BaseThreadC2Ev
+dbg_check_lock
+memcpy
+dbg_check_unlock
+chIQGetTimeout
+SD2
+chIQResetI
+global
+_ZN10chibios_rt10BaseThread5sleepEm
+_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+evtStart
+_ZN10chibios_rt10BaseThread7setNameEPKc
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+_ZN10chibios_rt10BaseThread12waitOneEventEm
+evtStop
+_ZN10chibios_rt9EvtSource10unregisterEPNS_11EvtListenerE
+sdStop
+sdStart
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv

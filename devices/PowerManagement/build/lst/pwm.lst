@@ -1,0 +1,420 @@
+ARM GAS  /tmp/ccXRZWaa.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"pwm.c"
+  17              		.section	.text.pwmInit,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	pwmInit
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	pwmInit, %function
+  24              	pwmInit:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 FFF7FEBF 		b	pwm_lld_init
+  29              		.size	pwmInit, .-pwmInit
+  30 0004 AFF30080 		.section	.text.pwmObjectInit,"ax",%progbits
+  30      AFF30080 
+  30      AFF30080 
+  31              		.align	2
+  32              		.p2align 4,,15
+  33              		.global	pwmObjectInit
+  34              		.thumb
+  35              		.thumb_func
+  36              		.type	pwmObjectInit, %function
+  37              	pwmObjectInit:
+  38              		@ args = 0, pretend = 0, frame = 0
+  39              		@ frame_needed = 0, uses_anonymous_args = 0
+  40              		@ link register save eliminated.
+  41 0000 0122     		movs	r2, #1
+  42 0002 0023     		movs	r3, #0
+  43 0004 0270     		strb	r2, [r0]
+  44 0006 4360     		str	r3, [r0, #4]
+  45 0008 7047     		bx	lr
+  46              		.size	pwmObjectInit, .-pwmObjectInit
+  47 000a 00BFAFF3 		.section	.text.pwmStart,"ax",%progbits
+  47      0080
+  48              		.align	2
+  49              		.p2align 4,,15
+  50              		.global	pwmStart
+  51              		.thumb
+  52              		.thumb_func
+  53              		.type	pwmStart, %function
+  54              	pwmStart:
+ARM GAS  /tmp/ccXRZWaa.s 			page 2
+
+
+  55              		@ args = 0, pretend = 0, frame = 0
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57 0000 38B5     		push	{r3, r4, r5, lr}
+  58 0002 0446     		mov	r4, r0
+  59 0004 0D46     		mov	r5, r1
+  60 0006 D0B1     		cbz	r0, .L4
+  61 0008 C9B1     		cbz	r1, .L4
+  62              	.L5:
+  63 000a 2023     		movs	r3, #32
+  64              	@ 103 "../../../ChibiOS/os/hal/src/pwm.c" 1
+  65 000c 83F31188 		msr     BASEPRI, r3
+  66              	@ 0 "" 2
+  67              		.thumb
+  68 0010 FFF7FEFF 		bl	dbg_check_lock
+  69 0014 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+  70 0016 013B     		subs	r3, r3, #1
+  71 0018 012B     		cmp	r3, #1
+  72 001a 02D9     		bls	.L6
+  73 001c 0A48     		ldr	r0, .L11
+  74 001e FFF7FEFF 		bl	chDbgPanic
+  75              	.L6:
+  76 0022 AB88     		ldrh	r3, [r5, #4]
+  77 0024 2381     		strh	r3, [r4, #8]	@ movhi
+  78 0026 2046     		mov	r0, r4
+  79 0028 6560     		str	r5, [r4, #4]
+  80 002a FFF7FEFF 		bl	pwm_lld_start
+  81 002e 0223     		movs	r3, #2
+  82 0030 2370     		strb	r3, [r4]
+  83 0032 FFF7FEFF 		bl	dbg_check_unlock
+  84 0036 0023     		movs	r3, #0
+  85              	@ 110 "../../../ChibiOS/os/hal/src/pwm.c" 1
+  86 0038 83F31188 		msr     BASEPRI, r3
+  87              	@ 0 "" 2
+  88              		.thumb
+  89 003c 38BD     		pop	{r3, r4, r5, pc}
+  90              	.L4:
+  91 003e 0348     		ldr	r0, .L11+4
+  92 0040 FFF7FEFF 		bl	chDbgPanic
+  93 0044 E1E7     		b	.L5
+  94              	.L12:
+  95 0046 00BF     		.align	2
+  96              	.L11:
+  97 0048 10000000 		.word	.LC1
+  98 004c 00000000 		.word	.LC0
+  99              		.size	pwmStart, .-pwmStart
+ 100              		.section	.text.pwmStop,"ax",%progbits
+ 101              		.align	2
+ 102              		.p2align 4,,15
+ 103              		.global	pwmStop
+ 104              		.thumb
+ 105              		.thumb_func
+ 106              		.type	pwmStop, %function
+ 107              	pwmStop:
+ 108              		@ args = 0, pretend = 0, frame = 0
+ 109              		@ frame_needed = 0, uses_anonymous_args = 0
+ 110 0000 10B5     		push	{r4, lr}
+ 111 0002 0446     		mov	r4, r0
+ARM GAS  /tmp/ccXRZWaa.s 			page 3
+
+
+ 112 0004 B0B1     		cbz	r0, .L16
+ 113              	.L14:
+ 114 0006 2023     		movs	r3, #32
+ 115              	@ 124 "../../../ChibiOS/os/hal/src/pwm.c" 1
+ 116 0008 83F31188 		msr     BASEPRI, r3
+ 117              	@ 0 "" 2
+ 118              		.thumb
+ 119 000c FFF7FEFF 		bl	dbg_check_lock
+ 120 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 121 0012 013B     		subs	r3, r3, #1
+ 122 0014 012B     		cmp	r3, #1
+ 123 0016 02D9     		bls	.L15
+ 124 0018 0848     		ldr	r0, .L17
+ 125 001a FFF7FEFF 		bl	chDbgPanic
+ 126              	.L15:
+ 127 001e 2046     		mov	r0, r4
+ 128 0020 FFF7FEFF 		bl	pwm_lld_stop
+ 129 0024 0123     		movs	r3, #1
+ 130 0026 2370     		strb	r3, [r4]
+ 131 0028 FFF7FEFF 		bl	dbg_check_unlock
+ 132 002c 0023     		movs	r3, #0
+ 133              	@ 129 "../../../ChibiOS/os/hal/src/pwm.c" 1
+ 134 002e 83F31188 		msr     BASEPRI, r3
+ 135              	@ 0 "" 2
+ 136              		.thumb
+ 137 0032 10BD     		pop	{r4, pc}
+ 138              	.L16:
+ 139 0034 0248     		ldr	r0, .L17+4
+ 140 0036 FFF7FEFF 		bl	chDbgPanic
+ 141 003a E4E7     		b	.L14
+ 142              	.L18:
+ 143              		.align	2
+ 144              	.L17:
+ 145 003c 2C000000 		.word	.LC3
+ 146 0040 20000000 		.word	.LC2
+ 147              		.size	pwmStop, .-pwmStop
+ 148 0044 AFF30080 		.section	.text.pwmChangePeriod,"ax",%progbits
+ 148      AFF30080 
+ 148      AFF30080 
+ 149              		.align	2
+ 150              		.p2align 4,,15
+ 151              		.global	pwmChangePeriod
+ 152              		.thumb
+ 153              		.thumb_func
+ 154              		.type	pwmChangePeriod, %function
+ 155              	pwmChangePeriod:
+ 156              		@ args = 0, pretend = 0, frame = 0
+ 157              		@ frame_needed = 0, uses_anonymous_args = 0
+ 158 0000 38B5     		push	{r3, r4, r5, lr}
+ 159 0002 0446     		mov	r4, r0
+ 160 0004 0D46     		mov	r5, r1
+ 161 0006 A8B1     		cbz	r0, .L25
+ 162              	.L20:
+ 163 0008 2023     		movs	r3, #32
+ 164              	@ 151 "../../../ChibiOS/os/hal/src/pwm.c" 1
+ 165 000a 83F31188 		msr     BASEPRI, r3
+ 166              	@ 0 "" 2
+ARM GAS  /tmp/ccXRZWaa.s 			page 4
+
+
+ 167              		.thumb
+ 168 000e FFF7FEFF 		bl	dbg_check_lock
+ 169 0012 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 170 0014 022B     		cmp	r3, #2
+ 171 0016 02D0     		beq	.L21
+ 172 0018 0848     		ldr	r0, .L26
+ 173 001a FFF7FEFF 		bl	chDbgPanic
+ 174              	.L21:
+ 175 001e 2369     		ldr	r3, [r4, #16]
+ 176 0020 2581     		strh	r5, [r4, #8]	@ movhi
+ 177 0022 6A1E     		subs	r2, r5, #1
+ 178 0024 92B2     		uxth	r2, r2
+ 179 0026 DA62     		str	r2, [r3, #44]
+ 180 0028 FFF7FEFF 		bl	dbg_check_unlock
+ 181 002c 0023     		movs	r3, #0
+ 182              	@ 155 "../../../ChibiOS/os/hal/src/pwm.c" 1
+ 183 002e 83F31188 		msr     BASEPRI, r3
+ 184              	@ 0 "" 2
+ 185              		.thumb
+ 186 0032 38BD     		pop	{r3, r4, r5, pc}
+ 187              	.L25:
+ 188 0034 0248     		ldr	r0, .L26+4
+ 189 0036 FFF7FEFF 		bl	chDbgPanic
+ 190 003a E5E7     		b	.L20
+ 191              	.L27:
+ 192              		.align	2
+ 193              	.L26:
+ 194 003c 50000000 		.word	.LC5
+ 195 0040 3C000000 		.word	.LC4
+ 196              		.size	pwmChangePeriod, .-pwmChangePeriod
+ 197              		.section	.text.pwmEnableChannel,"ax",%progbits
+ 198              		.align	2
+ 199              		.p2align 4,,15
+ 200              		.global	pwmEnableChannel
+ 201              		.thumb
+ 202              		.thumb_func
+ 203              		.type	pwmEnableChannel, %function
+ 204              	pwmEnableChannel:
+ 205              		@ args = 0, pretend = 0, frame = 0
+ 206              		@ frame_needed = 0, uses_anonymous_args = 0
+ 207 0000 70B5     		push	{r4, r5, r6, lr}
+ 208 0002 0446     		mov	r4, r0
+ 209 0004 0D46     		mov	r5, r1
+ 210 0006 1646     		mov	r6, r2
+ 211 0008 B8B1     		cbz	r0, .L29
+ 212 000a 0329     		cmp	r1, #3
+ 213 000c 15D8     		bhi	.L29
+ 214              	.L30:
+ 215 000e 2023     		movs	r3, #32
+ 216              	@ 179 "../../../ChibiOS/os/hal/src/pwm.c" 1
+ 217 0010 83F31188 		msr     BASEPRI, r3
+ 218              	@ 0 "" 2
+ 219              		.thumb
+ 220 0014 FFF7FEFF 		bl	dbg_check_lock
+ 221 0018 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 222 001a 022B     		cmp	r3, #2
+ 223 001c 02D0     		beq	.L31
+ARM GAS  /tmp/ccXRZWaa.s 			page 5
+
+
+ 224 001e 0948     		ldr	r0, .L38
+ 225 0020 FFF7FEFF 		bl	chDbgPanic
+ 226              	.L31:
+ 227 0024 2046     		mov	r0, r4
+ 228 0026 2946     		mov	r1, r5
+ 229 0028 3246     		mov	r2, r6
+ 230 002a FFF7FEFF 		bl	pwm_lld_enable_channel
+ 231 002e FFF7FEFF 		bl	dbg_check_unlock
+ 232 0032 0023     		movs	r3, #0
+ 233              	@ 183 "../../../ChibiOS/os/hal/src/pwm.c" 1
+ 234 0034 83F31188 		msr     BASEPRI, r3
+ 235              	@ 0 "" 2
+ 236              		.thumb
+ 237 0038 70BD     		pop	{r4, r5, r6, pc}
+ 238              	.L29:
+ 239 003a 0348     		ldr	r0, .L38+4
+ 240 003c FFF7FEFF 		bl	chDbgPanic
+ 241 0040 E5E7     		b	.L30
+ 242              	.L39:
+ 243 0042 00BF     		.align	2
+ 244              	.L38:
+ 245 0044 80000000 		.word	.LC7
+ 246 0048 68000000 		.word	.LC6
+ 247              		.size	pwmEnableChannel, .-pwmEnableChannel
+ 248 004c AFF30080 		.section	.text.pwmDisableChannel,"ax",%progbits
+ 249              		.align	2
+ 250              		.p2align 4,,15
+ 251              		.global	pwmDisableChannel
+ 252              		.thumb
+ 253              		.thumb_func
+ 254              		.type	pwmDisableChannel, %function
+ 255              	pwmDisableChannel:
+ 256              		@ args = 0, pretend = 0, frame = 0
+ 257              		@ frame_needed = 0, uses_anonymous_args = 0
+ 258 0000 38B5     		push	{r3, r4, r5, lr}
+ 259 0002 0446     		mov	r4, r0
+ 260 0004 0D46     		mov	r5, r1
+ 261 0006 B0B1     		cbz	r0, .L41
+ 262 0008 0329     		cmp	r1, #3
+ 263 000a 14D8     		bhi	.L41
+ 264              	.L42:
+ 265 000c 2023     		movs	r3, #32
+ 266              	@ 205 "../../../ChibiOS/os/hal/src/pwm.c" 1
+ 267 000e 83F31188 		msr     BASEPRI, r3
+ 268              	@ 0 "" 2
+ 269              		.thumb
+ 270 0012 FFF7FEFF 		bl	dbg_check_lock
+ 271 0016 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 272 0018 022B     		cmp	r3, #2
+ 273 001a 02D0     		beq	.L43
+ 274 001c 0848     		ldr	r0, .L50
+ 275 001e FFF7FEFF 		bl	chDbgPanic
+ 276              	.L43:
+ 277 0022 2046     		mov	r0, r4
+ 278 0024 2946     		mov	r1, r5
+ 279 0026 FFF7FEFF 		bl	pwm_lld_disable_channel
+ 280 002a FFF7FEFF 		bl	dbg_check_unlock
+ARM GAS  /tmp/ccXRZWaa.s 			page 6
+
+
+ 281 002e 0023     		movs	r3, #0
+ 282              	@ 209 "../../../ChibiOS/os/hal/src/pwm.c" 1
+ 283 0030 83F31188 		msr     BASEPRI, r3
+ 284              	@ 0 "" 2
+ 285              		.thumb
+ 286 0034 38BD     		pop	{r3, r4, r5, pc}
+ 287              	.L41:
+ 288 0036 0348     		ldr	r0, .L50+4
+ 289 0038 FFF7FEFF 		bl	chDbgPanic
+ 290 003c E6E7     		b	.L42
+ 291              	.L51:
+ 292 003e 00BF     		.align	2
+ 293              	.L50:
+ 294 0040 98000000 		.word	.LC8
+ 295 0044 68000000 		.word	.LC6
+ 296              		.size	pwmDisableChannel, .-pwmDisableChannel
+ 297 0048 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 297      AFF30080 
+ 298              		.align	2
+ 299              	.LC0:
+ 300 0000 2270776D 		.ascii	"\"pwmStart\"()\000"
+ 300      53746172 
+ 300      74222829 
+ 300      00
+ 301 000d 000000   		.space	3
+ 302              	.LC1:
+ 303 0010 70776D53 		.ascii	"pwmStart(), #1\000"
+ 303      74617274 
+ 303      28292C20 
+ 303      233100
+ 304 001f 00       		.space	1
+ 305              	.LC2:
+ 306 0020 2270776D 		.ascii	"\"pwmStop\"()\000"
+ 306      53746F70 
+ 306      22282900 
+ 307              	.LC3:
+ 308 002c 70776D53 		.ascii	"pwmStop(), #1\000"
+ 308      746F7028 
+ 308      292C2023 
+ 308      3100
+ 309 003a 0000     		.space	2
+ 310              	.LC4:
+ 311 003c 2270776D 		.ascii	"\"pwmChangePeriod\"()\000"
+ 311      4368616E 
+ 311      67655065 
+ 311      72696F64 
+ 311      22282900 
+ 312              	.LC5:
+ 313 0050 70776D43 		.ascii	"pwmChangePeriod(), #1\000"
+ 313      68616E67 
+ 313      65506572 
+ 313      696F6428 
+ 313      292C2023 
+ 314 0066 0000     		.space	2
+ 315              	.LC6:
+ 316 0068 2270776D 		.ascii	"\"pwmEnableChannel\"()\000"
+ 316      456E6162 
+ARM GAS  /tmp/ccXRZWaa.s 			page 7
+
+
+ 316      6C654368 
+ 316      616E6E65 
+ 316      6C222829 
+ 317 007d 000000   		.space	3
+ 318              	.LC7:
+ 319 0080 70776D45 		.ascii	"pwmEnableChannel(), #1\000"
+ 319      6E61626C 
+ 319      65436861 
+ 319      6E6E656C 
+ 319      28292C20 
+ 320 0097 00       		.space	1
+ 321              	.LC8:
+ 322 0098 70776D44 		.ascii	"pwmDisableChannel(), #1\000"
+ 322      69736162 
+ 322      6C654368 
+ 322      616E6E65 
+ 322      6C28292C 
+ 323              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccXRZWaa.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 pwm.c
+     /tmp/ccXRZWaa.s:18     .text.pwmInit:00000000 $t
+     /tmp/ccXRZWaa.s:24     .text.pwmInit:00000000 pwmInit
+     /tmp/ccXRZWaa.s:31     .text.pwmObjectInit:00000000 $t
+     /tmp/ccXRZWaa.s:37     .text.pwmObjectInit:00000000 pwmObjectInit
+     /tmp/ccXRZWaa.s:48     .text.pwmStart:00000000 $t
+     /tmp/ccXRZWaa.s:54     .text.pwmStart:00000000 pwmStart
+     /tmp/ccXRZWaa.s:97     .text.pwmStart:00000048 $d
+     /tmp/ccXRZWaa.s:101    .text.pwmStop:00000000 $t
+     /tmp/ccXRZWaa.s:107    .text.pwmStop:00000000 pwmStop
+     /tmp/ccXRZWaa.s:145    .text.pwmStop:0000003c $d
+     /tmp/ccXRZWaa.s:149    .text.pwmChangePeriod:00000000 $t
+     /tmp/ccXRZWaa.s:155    .text.pwmChangePeriod:00000000 pwmChangePeriod
+     /tmp/ccXRZWaa.s:194    .text.pwmChangePeriod:0000003c $d
+     /tmp/ccXRZWaa.s:198    .text.pwmEnableChannel:00000000 $t
+     /tmp/ccXRZWaa.s:204    .text.pwmEnableChannel:00000000 pwmEnableChannel
+     /tmp/ccXRZWaa.s:245    .text.pwmEnableChannel:00000044 $d
+     /tmp/ccXRZWaa.s:249    .text.pwmDisableChannel:00000000 $t
+     /tmp/ccXRZWaa.s:255    .text.pwmDisableChannel:00000000 pwmDisableChannel
+     /tmp/ccXRZWaa.s:294    .text.pwmDisableChannel:00000040 $d
+     /tmp/ccXRZWaa.s:298    .rodata.str1.4:00000000 $d
+     /tmp/ccXRZWaa.s:148    .text.pwmStop:00000044 $t
+     /tmp/ccXRZWaa.s:323    .text.pwmChangePeriod:00000044 $t
+     /tmp/ccXRZWaa.s:248    .text.pwmEnableChannel:0000004c $t
+     /tmp/ccXRZWaa.s:297    .text.pwmDisableChannel:00000048 $t
+
+UNDEFINED SYMBOLS
+pwm_lld_init
+dbg_check_lock
+chDbgPanic
+pwm_lld_start
+dbg_check_unlock
+pwm_lld_stop
+pwm_lld_enable_channel
+pwm_lld_disable_channel

@@ -1,0 +1,5 @@
+chcore_v7m.c:65:6:SVCallVector	0	static
+chcore_v7m.c:120:6:_port_init	8	static
+chcore_v7m.c:150:6:_port_irq_epilogue	0	static
+chcore_v7m.c:47:1:SysTickVector	8	static
+chcore_v7m.c:252:6:_port_thread_start	8	static

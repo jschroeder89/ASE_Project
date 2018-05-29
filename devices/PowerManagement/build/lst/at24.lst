@@ -1,0 +1,455 @@
+ARM GAS  /tmp/ccbybdCg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"at24.cpp"
+  17              		.section	.text._ZN5amiro4AT245closeEPv,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_ZN5amiro4AT245closeEPv
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_ZN5amiro4AT245closeEPv, %function
+  24              	_ZN5amiro4AT245closeEPv:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 0020     		movs	r0, #0
+  29 0002 7047     		bx	lr
+  30              		.size	_ZN5amiro4AT245closeEPv, .-_ZN5amiro4AT245closeEPv
+  31 0004 AFF30080 		.section	.text._ZN5amiro4AT245writeEPvPKhj,"ax",%progbits
+  31      AFF30080 
+  31      AFF30080 
+  32              		.align	2
+  33              		.p2align 4,,15
+  34              		.global	_ZN5amiro4AT245writeEPvPKhj
+  35              		.thumb
+  36              		.thumb_func
+  37              		.type	_ZN5amiro4AT245writeEPvPKhj, %function
+  38              	_ZN5amiro4AT245writeEPvPKhj:
+  39              		@ args = 0, pretend = 0, frame = 32
+  40              		@ frame_needed = 0, uses_anonymous_args = 0
+  41 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  42 0004 89B0     		sub	sp, sp, #36
+  43 0006 8368     		ldr	r3, [r0, #8]
+  44 0008 0392     		str	r2, [sp, #12]
+  45 000a 0293     		str	r3, [sp, #8]
+  46 000c 039B     		ldr	r3, [sp, #12]
+  47 000e 027C     		ldrb	r2, [r0, #16]	@ zero_extendqisi2
+  48 0010 8346     		mov	fp, r0
+  49 0012 002B     		cmp	r3, #0
+  50 0014 00F08580 		beq	.L12
+  51 0018 029B     		ldr	r3, [sp, #8]
+  52 001a 013A     		subs	r2, r2, #1
+  53 001c 03F00708 		and	r8, r3, #7
+  54 0020 08EA0208 		and	r8, r8, r2
+  55 0024 0022     		movs	r2, #0
+ARM GAS  /tmp/ccbybdCg.s 			page 2
+
+
+  56 0026 4260     		str	r2, [r0, #4]
+  57 0028 DBF80C20 		ldr	r2, [fp, #12]
+  58 002c 039B     		ldr	r3, [sp, #12]
+  59 002e 0193     		str	r3, [sp, #4]
+  60 0030 802A     		cmp	r2, #128
+  61 0032 C8F10808 		rsb	r8, r8, #8
+  62 0036 66D9     		bls	.L13
+  63              	.L31:
+  64 0038 029B     		ldr	r3, [sp, #8]
+  65 003a 1A0A     		lsrs	r2, r3, #8
+  66 003c 8DF81420 		strb	r2, [sp, #20]
+  67 0040 0226     		movs	r6, #2
+  68 0042 0122     		movs	r2, #1
+  69              	.L4:
+  70 0044 08AB     		add	r3, sp, #32
+  71 0046 1A44     		add	r2, r2, r3
+  72 0048 019B     		ldr	r3, [sp, #4]
+  73 004a 4345     		cmp	r3, r8
+  74 004c 38BF     		it	cc
+  75 004e 9846     		movcc	r8, r3
+  76 0050 029B     		ldr	r3, [sp, #8]
+  77 0052 02F80C3C 		strb	r3, [r2, #-12]
+  78 0056 0D46     		mov	r5, r1
+  79 0058 B8F1000F 		cmp	r8, #0
+  80 005c 0BD0     		beq	.L5
+  81              	.L6:
+  82 005e 15F8010B 		ldrb	r0, [r5], #1	@ zero_extendqisi2
+  83 0062 08AA     		add	r2, sp, #32
+  84 0064 6B1A     		subs	r3, r5, r1
+  85 0066 3244     		add	r2, r2, r6
+  86 0068 DBB2     		uxtb	r3, r3
+  87 006a 0136     		adds	r6, r6, #1
+  88 006c 9845     		cmp	r8, r3
+  89 006e 02F80C0C 		strb	r0, [r2, #-12]
+  90 0072 F6B2     		uxtb	r6, r6
+  91 0074 F3D8     		bhi	.L6
+  92              	.L5:
+  93 0076 BBF81220 		ldrh	r2, [fp, #18]
+  94 007a 002A     		cmp	r2, #0
+  95 007c 34D0     		beq	.L7
+  96 007e 0024     		movs	r4, #0
+  97 0080 0BF11809 		add	r9, fp, #24
+  98 0084 AA46     		mov	r10, r5
+  99 0086 0AE0     		b	.L9
+ 100              	.L30:
+ 101 0088 37F00403 		bics	r3, r7, #4
+ 102 008c 3ED1     		bne	.L8
+ 103 008e FFF7FEFF 		bl	chThdSleep
+ 104 0092 0134     		adds	r4, r4, #1
+ 105 0094 BBF81230 		ldrh	r3, [fp, #18]
+ 106 0098 A4B2     		uxth	r4, r4
+ 107 009a A342     		cmp	r3, r4
+ 108 009c 36D9     		bls	.L8
+ 109              	.L9:
+ 110 009e DBF81400 		ldr	r0, [fp, #20]
+ 111 00a2 0368     		ldr	r3, [r0]
+ 112 00a4 DB69     		ldr	r3, [r3, #28]
+ARM GAS  /tmp/ccbybdCg.s 			page 3
+
+
+ 113 00a6 9847     		blx	r3
+ 114 00a8 DBF81400 		ldr	r0, [fp, #20]
+ 115 00ac 05AA     		add	r2, sp, #20
+ 116 00ae 0368     		ldr	r3, [r0]
+ 117 00b0 CBF81C20 		str	r2, [fp, #28]
+ 118 00b4 0022     		movs	r2, #0
+ 119 00b6 4946     		mov	r1, r9
+ 120 00b8 CBF82820 		str	r2, [fp, #40]
+ 121 00bc 5B69     		ldr	r3, [r3, #20]
+ 122 00be CBF82060 		str	r6, [fp, #32]
+ 123 00c2 4FF0FF32 		mov	r2, #-1
+ 124 00c6 9847     		blx	r3
+ 125 00c8 0546     		mov	r5, r0
+ 126 00ca DBF81400 		ldr	r0, [fp, #20]
+ 127 00ce 0268     		ldr	r2, [r0]
+ 128 00d0 1369     		ldr	r3, [r2, #16]
+ 129 00d2 9847     		blx	r3
+ 130 00d4 0746     		mov	r7, r0
+ 131 00d6 DBF81400 		ldr	r0, [fp, #20]
+ 132 00da 0268     		ldr	r2, [r0]
+ 133 00dc 136A     		ldr	r3, [r2, #32]
+ 134 00de 9847     		blx	r3
+ 135 00e0 0120     		movs	r0, #1
+ 136 00e2 002D     		cmp	r5, #0
+ 137 00e4 D0D1     		bne	.L30
+ 138 00e6 5546     		mov	r5, r10
+ 139              	.L7:
+ 140 00e8 029B     		ldr	r3, [sp, #8]
+ 141 00ea 4344     		add	r3, r3, r8
+ 142 00ec 0293     		str	r3, [sp, #8]
+ 143 00ee 019B     		ldr	r3, [sp, #4]
+ 144 00f0 B3EB0803 		subs	r3, r3, r8
+ 145 00f4 0193     		str	r3, [sp, #4]
+ 146 00f6 0BD0     		beq	.L10
+ 147 00f8 DBF80C20 		ldr	r2, [fp, #12]
+ 148 00fc 802A     		cmp	r2, #128
+ 149 00fe 2946     		mov	r1, r5
+ 150 0100 4FF00808 		mov	r8, #8
+ 151 0104 98D8     		bhi	.L31
+ 152              	.L13:
+ 153 0106 0022     		movs	r2, #0
+ 154 0108 0126     		movs	r6, #1
+ 155 010a 9BE7     		b	.L4
+ 156              	.L8:
+ 157 010c CBF80470 		str	r7, [fp, #4]
+ 158              	.L10:
+ 159 0110 029B     		ldr	r3, [sp, #8]
+ 160 0112 CBF80830 		str	r3, [fp, #8]
+ 161 0116 019A     		ldr	r2, [sp, #4]
+ 162 0118 039B     		ldr	r3, [sp, #12]
+ 163 011a 981A     		subs	r0, r3, r2
+ 164 011c 09B0     		add	sp, sp, #36
+ 165              		@ sp needed
+ 166 011e BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 167              	.L12:
+ 168 0122 0398     		ldr	r0, [sp, #12]
+ 169 0124 09B0     		add	sp, sp, #36
+ARM GAS  /tmp/ccbybdCg.s 			page 4
+
+
+ 170              		@ sp needed
+ 171 0126 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 172              		.size	_ZN5amiro4AT245writeEPvPKhj, .-_ZN5amiro4AT245writeEPvPKhj
+ 173 012a 00BFAFF3 		.section	.text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE,"ax",%progbits
+ 173      0080
+ 174              		.align	2
+ 175              		.p2align 4,,15
+ 176              		.global	_ZN5amiro4AT24C2EjhtPNS_9I2CDriverE
+ 177              		.thumb
+ 178              		.thumb_func
+ 179              		.type	_ZN5amiro4AT24C2EjhtPNS_9I2CDriverE, %function
+ 180              	_ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:
+ 181              		@ args = 4, pretend = 0, frame = 0
+ 182              		@ frame_needed = 0, uses_anonymous_args = 0
+ 183 0000 70B5     		push	{r4, r5, r6, lr}
+ 184 0002 84B0     		sub	sp, sp, #16
+ 185 0004 1646     		mov	r6, r2
+ 186 0006 089C     		ldr	r4, [sp, #32]
+ 187 0008 0093     		str	r3, [sp]
+ 188 000a 5025     		movs	r5, #80
+ 189 000c 0A46     		mov	r2, r1
+ 190 000e 0294     		str	r4, [sp, #8]
+ 191 0010 3346     		mov	r3, r6
+ 192 0012 0195     		str	r5, [sp, #4]
+ 193 0014 0349     		ldr	r1, .L33
+ 194 0016 0446     		mov	r4, r0
+ 195 0018 FFF7FEFF 		bl	_ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+ 196 001c 2046     		mov	r0, r4
+ 197 001e 04B0     		add	sp, sp, #16
+ 198              		@ sp needed
+ 199 0020 70BD     		pop	{r4, r5, r6, pc}
+ 200              	.L34:
+ 201 0022 00BF     		.align	2
+ 202              	.L33:
+ 203 0024 00000000 		.word	.LANCHOR0
+ 204              		.size	_ZN5amiro4AT24C2EjhtPNS_9I2CDriverE, .-_ZN5amiro4AT24C2EjhtPNS_9I2CDriverE
+ 205              		.global	_ZN5amiro4AT24C1EjhtPNS_9I2CDriverE
+ 206              		.thumb_set _ZN5amiro4AT24C1EjhtPNS_9I2CDriverE,_ZN5amiro4AT24C2EjhtPNS_9I2CDriverE
+ 207 0028 AFF30080 		.section	.text._ZN5amiro4AT24D2Ev,"ax",%progbits
+ 207      AFF30080 
+ 208              		.align	2
+ 209              		.p2align 4,,15
+ 210              		.global	_ZN5amiro4AT24D2Ev
+ 211              		.thumb
+ 212              		.thumb_func
+ 213              		.type	_ZN5amiro4AT24D2Ev, %function
+ 214              	_ZN5amiro4AT24D2Ev:
+ 215              		@ args = 0, pretend = 0, frame = 0
+ 216              		@ frame_needed = 0, uses_anonymous_args = 0
+ 217 0000 10B5     		push	{r4, lr}
+ 218 0002 0446     		mov	r4, r0
+ 219 0004 FFF7FEFF 		bl	_ZN5amiro6EEPROMD2Ev
+ 220 0008 2046     		mov	r0, r4
+ 221 000a 10BD     		pop	{r4, pc}
+ 222              		.size	_ZN5amiro4AT24D2Ev, .-_ZN5amiro4AT24D2Ev
+ 223              		.global	_ZN5amiro4AT24D1Ev
+ 224              		.thumb_set _ZN5amiro4AT24D1Ev,_ZN5amiro4AT24D2Ev
+ARM GAS  /tmp/ccbybdCg.s 			page 5
+
+
+ 225 000c AFF30080 		.section	.text._ZN5amiro4AT248poll_ackEPv,"ax",%progbits
+ 226              		.align	2
+ 227              		.p2align 4,,15
+ 228              		.global	_ZN5amiro4AT248poll_ackEPv
+ 229              		.thumb
+ 230              		.thumb_func
+ 231              		.type	_ZN5amiro4AT248poll_ackEPv, %function
+ 232              	_ZN5amiro4AT248poll_ackEPv:
+ 233              		@ args = 0, pretend = 0, frame = 16
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+ 235 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 236 0004 84B0     		sub	sp, sp, #16
+ 237 0006 028B     		ldrh	r2, [r0, #24]
+ 238 0008 438A     		ldrh	r3, [r0, #18]
+ 239 000a ADF80420 		strh	r2, [sp, #4]	@ movhi
+ 240 000e 00A9     		add	r1, sp, #0
+ 241 0010 0222     		movs	r2, #2
+ 242 0012 0646     		mov	r6, r0
+ 243 0014 4469     		ldr	r4, [r0, #20]
+ 244 0016 0291     		str	r1, [sp, #8]
+ 245 0018 0392     		str	r2, [sp, #12]
+ 246 001a 0025     		movs	r5, #0
+ 247 001c 53B9     		cbnz	r3, .L42
+ 248 001e 21E0     		b	.L39
+ 249              	.L46:
+ 250 0020 38F00403 		bics	r3, r8, #4
+ 251 0024 23D1     		bne	.L41
+ 252 0026 FFF7FEFF 		bl	chThdSleep
+ 253 002a 0135     		adds	r5, r5, #1
+ 254 002c 738A     		ldrh	r3, [r6, #18]
+ 255 002e ADB2     		uxth	r5, r5
+ 256 0030 AB42     		cmp	r3, r5
+ 257 0032 1CD9     		bls	.L41
+ 258              	.L42:
+ 259 0034 2368     		ldr	r3, [r4]
+ 260 0036 2046     		mov	r0, r4
+ 261 0038 DB69     		ldr	r3, [r3, #28]
+ 262 003a 9847     		blx	r3
+ 263 003c 2368     		ldr	r3, [r4]
+ 264 003e 01A9     		add	r1, sp, #4
+ 265 0040 9B69     		ldr	r3, [r3, #24]
+ 266 0042 4FF0FF32 		mov	r2, #-1
+ 267 0046 2046     		mov	r0, r4
+ 268 0048 9847     		blx	r3
+ 269 004a 0746     		mov	r7, r0
+ 270 004c 7069     		ldr	r0, [r6, #20]
+ 271 004e 0268     		ldr	r2, [r0]
+ 272 0050 1369     		ldr	r3, [r2, #16]
+ 273 0052 9847     		blx	r3
+ 274 0054 2368     		ldr	r3, [r4]
+ 275 0056 8046     		mov	r8, r0
+ 276 0058 1B6A     		ldr	r3, [r3, #32]
+ 277 005a 2046     		mov	r0, r4
+ 278 005c 9847     		blx	r3
+ 279 005e 0120     		movs	r0, #1
+ 280 0060 002F     		cmp	r7, #0
+ 281 0062 DDD1     		bne	.L46
+ARM GAS  /tmp/ccbybdCg.s 			page 6
+
+
+ 282              	.L39:
+ 283 0064 0027     		movs	r7, #0
+ 284 0066 3846     		mov	r0, r7
+ 285 0068 04B0     		add	sp, sp, #16
+ 286              		@ sp needed
+ 287 006a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 288              	.L41:
+ 289 006e 3846     		mov	r0, r7
+ 290 0070 C6F80480 		str	r8, [r6, #4]
+ 291 0074 04B0     		add	sp, sp, #16
+ 292              		@ sp needed
+ 293 0076 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 294              		.size	_ZN5amiro4AT248poll_ackEPv, .-_ZN5amiro4AT248poll_ackEPv
+ 295              		.section	.text._ZN5amiro4AT244readEPvPhj,"ax",%progbits
+ 296              		.align	2
+ 297              		.p2align 4,,15
+ 298              		.global	_ZN5amiro4AT244readEPvPhj
+ 299              		.thumb
+ 300              		.thumb_func
+ 301              		.type	_ZN5amiro4AT244readEPvPhj, %function
+ 302              	_ZN5amiro4AT244readEPvPhj:
+ 303              		@ args = 0, pretend = 0, frame = 8
+ 304              		@ frame_needed = 0, uses_anonymous_args = 0
+ 305 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 306 0004 1546     		mov	r5, r2
+ 307 0006 82B0     		sub	sp, sp, #8
+ 308 0008 0446     		mov	r4, r0
+ 309 000a 0F46     		mov	r7, r1
+ 310 000c 002A     		cmp	r2, #0
+ 311 000e 2CD0     		beq	.L52
+ 312 0010 C268     		ldr	r2, [r0, #12]
+ 313 0012 0023     		movs	r3, #0
+ 314 0014 802A     		cmp	r2, #128
+ 315 0016 4360     		str	r3, [r0, #4]
+ 316 0018 2BD8     		bhi	.L50
+ 317 001a 1A46     		mov	r2, r3
+ 318 001c 8368     		ldr	r3, [r0, #8]
+ 319 001e 4FF00108 		mov	r8, #1
+ 320              	.L51:
+ 321 0022 02A9     		add	r1, sp, #8
+ 322 0024 0A44     		add	r2, r2, r1
+ 323 0026 2046     		mov	r0, r4
+ 324 0028 02F8043C 		strb	r3, [r2, #-4]
+ 325 002c FFF7FEFF 		bl	_ZN5amiro4AT248poll_ackEPv
+ 326 0030 0646     		mov	r6, r0
+ 327 0032 D0B9     		cbnz	r0, .L52
+ 328 0034 6069     		ldr	r0, [r4, #20]
+ 329 0036 0368     		ldr	r3, [r0]
+ 330 0038 DB69     		ldr	r3, [r3, #28]
+ 331 003a 9847     		blx	r3
+ 332 003c 6069     		ldr	r0, [r4, #20]
+ 333 003e 6762     		str	r7, [r4, #36]
+ 334 0040 0368     		ldr	r3, [r0]
+ 335 0042 C4F82080 		str	r8, [r4, #32]
+ 336 0046 01AA     		add	r2, sp, #4
+ 337 0048 E261     		str	r2, [r4, #28]
+ 338 004a A562     		str	r5, [r4, #40]
+ARM GAS  /tmp/ccbybdCg.s 			page 7
+
+
+ 339 004c 5B69     		ldr	r3, [r3, #20]
+ 340 004e 04F11801 		add	r1, r4, #24
+ 341 0052 4FF0FF32 		mov	r2, #-1
+ 342 0056 9847     		blx	r3
+ 343 0058 98B9     		cbnz	r0, .L55
+ 344 005a 6069     		ldr	r0, [r4, #20]
+ 345 005c 0368     		ldr	r3, [r0]
+ 346 005e 1B6A     		ldr	r3, [r3, #32]
+ 347 0060 9847     		blx	r3
+ 348 0062 2846     		mov	r0, r5
+ 349 0064 02B0     		add	sp, sp, #8
+ 350              		@ sp needed
+ 351 0066 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 352              	.L52:
+ 353 006a 0020     		movs	r0, #0
+ 354              	.L54:
+ 355 006c 02B0     		add	sp, sp, #8
+ 356              		@ sp needed
+ 357 006e BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 358              	.L50:
+ 359 0072 8368     		ldr	r3, [r0, #8]
+ 360 0074 1A0A     		lsrs	r2, r3, #8
+ 361 0076 8DF80420 		strb	r2, [sp, #4]
+ 362 007a 4FF00208 		mov	r8, #2
+ 363 007e 0122     		movs	r2, #1
+ 364 0080 CFE7     		b	.L51
+ 365              	.L55:
+ 366 0082 6069     		ldr	r0, [r4, #20]
+ 367 0084 0368     		ldr	r3, [r0]
+ 368 0086 1B69     		ldr	r3, [r3, #16]
+ 369 0088 9847     		blx	r3
+ 370 008a 6369     		ldr	r3, [r4, #20]
+ 371 008c 6060     		str	r0, [r4, #4]
+ 372 008e 1A68     		ldr	r2, [r3]
+ 373 0090 1846     		mov	r0, r3
+ 374 0092 136A     		ldr	r3, [r2, #32]
+ 375 0094 9847     		blx	r3
+ 376 0096 3046     		mov	r0, r6
+ 377 0098 E8E7     		b	.L54
+ 378              		.size	_ZN5amiro4AT244readEPvPhj, .-_ZN5amiro4AT244readEPvPhj
+ 379 009a 00BFAFF3 		.section	.rodata._ZN5amiroL36eeprom_at24_base_file_stream_methodsE,"a",%progbits
+ 379      0080
+ 380              		.align	2
+ 381              		.set	.LANCHOR0,. + 0
+ 382              		.type	_ZN5amiroL36eeprom_at24_base_file_stream_methodsE, %object
+ 383              		.size	_ZN5amiroL36eeprom_at24_base_file_stream_methodsE, 36
+ 384              	_ZN5amiroL36eeprom_at24_base_file_stream_methodsE:
+ 385 0000 00000000 		.word	_ZN5amiro4AT245writeEPvPKhj
+ 386 0004 00000000 		.word	_ZN5amiro4AT244readEPvPhj
+ 387 0008 00000000 		.word	0
+ 388 000c 00000000 		.word	0
+ 389 0010 00000000 		.word	_ZN5amiro4AT245closeEPv
+ 390 0014 00000000 		.word	_ZN5amiro6EEPROM8geterrorEPv
+ 391 0018 00000000 		.word	_ZN5amiro6EEPROM7getsizeEPv
+ 392 001c 00000000 		.word	_ZN5amiro6EEPROM11getpositionEPv
+ 393 0020 00000000 		.word	_ZN5amiro6EEPROM5lseekEPvm
+ 394              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccbybdCg.s 			page 8
+
+
+ARM GAS  /tmp/ccbybdCg.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 at24.cpp
+     /tmp/ccbybdCg.s:18     .text._ZN5amiro4AT245closeEPv:00000000 $t
+     /tmp/ccbybdCg.s:24     .text._ZN5amiro4AT245closeEPv:00000000 _ZN5amiro4AT245closeEPv
+     /tmp/ccbybdCg.s:32     .text._ZN5amiro4AT245writeEPvPKhj:00000000 $t
+     /tmp/ccbybdCg.s:38     .text._ZN5amiro4AT245writeEPvPKhj:00000000 _ZN5amiro4AT245writeEPvPKhj
+     /tmp/ccbybdCg.s:174    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000000 $t
+     /tmp/ccbybdCg.s:180    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000000 _ZN5amiro4AT24C2EjhtPNS_9I2CDriverE
+     /tmp/ccbybdCg.s:203    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000024 $d
+     /tmp/ccbybdCg.s:180    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000000 _ZN5amiro4AT24C1EjhtPNS_9I2CDriverE
+     /tmp/ccbybdCg.s:208    .text._ZN5amiro4AT24D2Ev:00000000 $t
+     /tmp/ccbybdCg.s:214    .text._ZN5amiro4AT24D2Ev:00000000 _ZN5amiro4AT24D2Ev
+     /tmp/ccbybdCg.s:214    .text._ZN5amiro4AT24D2Ev:00000000 _ZN5amiro4AT24D1Ev
+     /tmp/ccbybdCg.s:226    .text._ZN5amiro4AT248poll_ackEPv:00000000 $t
+     /tmp/ccbybdCg.s:232    .text._ZN5amiro4AT248poll_ackEPv:00000000 _ZN5amiro4AT248poll_ackEPv
+     /tmp/ccbybdCg.s:296    .text._ZN5amiro4AT244readEPvPhj:00000000 $t
+     /tmp/ccbybdCg.s:302    .text._ZN5amiro4AT244readEPvPhj:00000000 _ZN5amiro4AT244readEPvPhj
+     /tmp/ccbybdCg.s:380    .rodata._ZN5amiroL36eeprom_at24_base_file_stream_methodsE:00000000 $d
+     /tmp/ccbybdCg.s:384    .rodata._ZN5amiroL36eeprom_at24_base_file_stream_methodsE:00000000 _ZN5amiroL36eeprom_at24_base_file_stream_methodsE
+     /tmp/ccbybdCg.s:207    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000028 $t
+
+UNDEFINED SYMBOLS
+chThdSleep
+_ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+_ZN5amiro6EEPROMD2Ev
+_ZN5amiro6EEPROM8geterrorEPv
+_ZN5amiro6EEPROM7getsizeEPv
+_ZN5amiro6EEPROM11getpositionEPv
+_ZN5amiro6EEPROM5lseekEPvm

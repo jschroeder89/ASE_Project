@@ -1,0 +1,16 @@
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 512; tprio_t = long unsigned int]	24	static
+chprintf.h:69:20:)	12	static
+Matrix.h:58:8:void Matrix::XdotYtrans(T*, Matrix::uint, Matrix::uint, T*, Matrix::uint, Matrix::uint, T*, Matrix::uint, Matrix::uint) [with T = float; Matrix::uint = unsigned int]	56	static
+Matrix.h:24:8:void Matrix::XdotY(T*, Matrix::uint, Matrix::uint, T*, Matrix::uint, Matrix::uint, T*, Matrix::uint, Matrix::uint) [with T = float; Matrix::uint = unsigned int]	72	static
+Odometry.cpp:55:17:types::position amiro::Odometry::getPosition()	24	static
+Odometry.cpp:71:6:void amiro::Odometry::setPosition(float, float, float)	24	static
+Odometry.cpp:79:6:void amiro::Odometry::resetPosition()	8	static
+Odometry.cpp:21:1:amiro::Odometry::Odometry(amiro::MotorIncrements*, amiro::L3G4200D*)	16	static
+Odometry.cpp:83:6:void amiro::Odometry::setError(float*)	16	static
+Odometry.cpp:89:6:void amiro::Odometry::resetError()	0	static
+Odometry.cpp:93:12:chibios_rt::EvtSource* amiro::Odometry::getEventSource()	0	static
+Odometry.cpp:129:6:void amiro::Odometry::updateOdometry()	336	static
+Odometry.cpp:234:6:void amiro::Odometry::updateWheelBaseDistance()	0	static
+Odometry.cpp:238:6:void amiro::Odometry::updateDistance()	16	static
+Odometry.cpp:97:7:virtual msg_t amiro::Odometry::main()	24	static
+Odometry.cpp:250:1:cpp)	0	static

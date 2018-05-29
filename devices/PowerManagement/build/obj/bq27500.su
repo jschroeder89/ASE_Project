@@ -1,0 +1,28 @@
+bq27500.cpp:20:1:amiro::BQ27500::Driver::~Driver()	0	static
+BaseSensor.hpp:23:13:amiro::BaseSensor<Init_t, Calib_t>::~BaseSensor() [with Init_t = amiro::BQ27500::InitData; Calib_t = amiro::BQ27500::CalibData]	0	static
+BaseSensor.hpp:41:26:msg_t amiro::BaseSensor<Init_t, Calib_t>::init(Init_t*) [with Init_t = amiro::BQ27500::InitData; Calib_t = amiro::BQ27500::CalibData; msg_t = long int]	0	static
+BaseSensor.hpp:66:19:msg_t amiro::BaseSensor<Init_t, Calib_t>::hibernate() [with Init_t = amiro::BQ27500::InitData; Calib_t = amiro::BQ27500::CalibData; msg_t = long int]	0	static
+BaseSensor.hpp:80:19:msg_t amiro::BaseSensor<Init_t, Calib_t>::calibration(Calib_t*) [with Init_t = amiro::BQ27500::InitData; Calib_t = amiro::BQ27500::CalibData; msg_t = long int]	0	static
+BaseSensor.hpp:98:19:msg_t amiro::BaseSensor<Init_t, Calib_t>::selftest() [with Init_t = amiro::BQ27500::InitData; Calib_t = amiro::BQ27500::CalibData; msg_t = long int]	0	static
+bq27500.cpp:20:1:virtual amiro::BQ27500::Driver::~Driver()	8	static
+BaseSensor.hpp:23:13:amiro::BaseSensor<Init_t, Calib_t>::~BaseSensor() [with Init_t = amiro::BQ27500::InitData; Calib_t = amiro::BQ27500::CalibData]	8	static
+bq27500.cpp:276:1:virtual msg_t amiro::BQ27500::Driver::main()	16	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+chprintf.h:69:20:)	12	static
+bq27500.cpp:30:1:virtual msg_t amiro::BQ27500::Driver::init(amiro::BQ27500::InitData*)	8	static
+bq27500.cpp:15:1:amiro::BQ27500::Driver::Driver(amiro::I2CDriver&, const GPIO_TypeDef&, uint8_t, const GPIO_TypeDef&, uint8_t)	32	static
+bq27500.cpp:24:1:chibios_rt::EvtSource* amiro::BQ27500::Driver::getEventSource()	0	static
+bq27500.cpp:258:1:bool amiro::BQ27500::Driver::isBatteryGood() const	0	static
+bq27500.cpp:264:1:bool amiro::BQ27500::Driver::isBatteryLow() const	0	static
+bq27500.cpp:270:1:const amiro::BQ27500::Driver::UpdateData& amiro::BQ27500::Driver::getStatus() const	0	static
+bq27500.cpp:290:1:msg_t amiro::BQ27500::Driver::stdCommand(amiro::BQ27500::Driver::StandardCommand, uint16_t&)	40	static
+bq27500.cpp:37:1:virtual msg_t amiro::BQ27500::Driver::update()	24	static
+bq27500.cpp:314:1:msg_t amiro::BQ27500::Driver::readName()	32	static
+bq27500.cpp:335:1:msg_t amiro::BQ27500::Driver::subCommand(amiro::BQ27500::Driver::ControlSubcommand, uint16_t*)	40	static
+bq27500.cpp:50:1:virtual msg_t amiro::BQ27500::Driver::wakeup()	8	static
+bq27500.cpp:57:1:virtual msg_t amiro::BQ27500::Driver::hibernate()	8	static
+bq27500.cpp:371:1:msg_t amiro::BQ27500::Driver::extCommand(amiro::BQ27500::Driver::ExtendedCommand, amiro::BQ27500::Driver::ExtendedCommandAccess, uint8_t*, uint8_t, uint8_t)	64	static
+bq27500.cpp:84:1:virtual msg_t amiro::BQ27500::Driver::selftest()	80	static
+bq27500.cpp:416:1:msg_t amiro::BQ27500::Driver::readDataFlashBlock(amiro::BQ27500::Driver::DataFlashBlock&, amiro::BQ27500::Driver::DataFlashSubClassID, uint8_t)	32	static
+bq27500.cpp:65:1:virtual msg_t amiro::BQ27500::Driver::calibration(amiro::BQ27500::CalibData*)	56	static
+bq27500.cpp:427:1:cpp)	0	static

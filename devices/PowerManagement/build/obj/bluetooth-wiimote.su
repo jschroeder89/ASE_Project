@@ -1,0 +1,18 @@
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 128; tprio_t = long unsigned int]	24	static
+bluetooth-wiimote.cpp:16:1:amiro::BluetoothWiimote::BluetoothWiimote(amiro::BLUETOOTH*, uint8_t)	16	static
+bluetooth-wiimote.cpp:82:7:msg_t amiro::BluetoothWiimote::wiimoteTransmit(const uint8_t*, size_t)	12	static
+bluetooth-wiimote.cpp:40:7:msg_t amiro::BluetoothWiimote::wiimoteReceive()	24	static
+bluetooth-wiimote.cpp:27:7:virtual msg_t amiro::BluetoothWiimote::main()	8	static
+bluetooth-wiimote.cpp:93:6:void amiro::BluetoothWiimote::bluetoothWiimoteStart(uint8_t)	16	static
+bluetooth-wiimote.cpp:103:6:void amiro::BluetoothWiimote::bluetoothWiimoteStop()	0	static
+bluetooth-wiimote.cpp:109:6:bool amiro::BluetoothWiimote::bluetoothWiimoteIsConnected()	0	static
+bluetooth-wiimote.cpp:116:6:void amiro::BluetoothWiimote::bluetoothWiimoteListen(const char*)	0	static
+bluetooth-wiimote.cpp:120:6:void amiro::BluetoothWiimote::bluetoothWiimoteConnect(const char*)	0	static
+bluetooth-wiimote.cpp:124:6:void amiro::BluetoothWiimote::bluetoothWiimoteDisconnect(const char*)	0	static
+bluetooth-wiimote.cpp:128:35:amiro::BluetoothWiimote::Accelerometer* amiro::BluetoothWiimote::getAccelerometer()	0	static
+bluetooth-wiimote.cpp:132:29:amiro::BluetoothWiimote::Buttons* amiro::BluetoothWiimote::getButtons()	0	static
+bluetooth-wiimote.cpp:143:6:void amiro::BluetoothWiimote::bluetoothWiimoteLedVibrate(uint8_t, uint8_t)	24	static
+bluetooth-wiimote.cpp:151:6:void amiro::BluetoothWiimote::bluetoothWiimoteStatusInfo()	16	static
+bluetooth-wiimote.cpp:159:6:void amiro::BluetoothWiimote::bluetoothWiimoteDataBtn()	16	static
+bluetooth-wiimote.cpp:167:6:void amiro::BluetoothWiimote::bluetoothWiimoteDataBtnAcc()	16	static
+bluetooth-wiimote.cpp:170:1:cpp)	0	static

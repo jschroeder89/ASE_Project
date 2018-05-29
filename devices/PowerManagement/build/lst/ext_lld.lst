@@ -1,0 +1,283 @@
+ARM GAS  /tmp/cc9qoGer.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"ext_lld.c"
+  17              		.section	.text.ext_lld_init,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	ext_lld_init
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	ext_lld_init, %function
+  24              	ext_lld_init:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 0148     		ldr	r0, .L2
+  29 0002 FFF7FEBF 		b	extObjectInit
+  30              	.L3:
+  31 0006 00BF     		.align	2
+  32              	.L2:
+  33 0008 00000000 		.word	.LANCHOR0
+  34              		.size	ext_lld_init, .-ext_lld_init
+  35 000c AFF30080 		.section	.text.ext_lld_stop,"ax",%progbits
+  36              		.align	2
+  37              		.p2align 4,,15
+  38              		.global	ext_lld_stop
+  39              		.thumb
+  40              		.thumb_func
+  41              		.type	ext_lld_stop, %function
+  42              	ext_lld_stop:
+  43              		@ args = 0, pretend = 0, frame = 0
+  44              		@ frame_needed = 0, uses_anonymous_args = 0
+  45 0000 08B5     		push	{r3, lr}
+  46 0002 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+  47 0004 022B     		cmp	r3, #2
+  48 0006 07D0     		beq	.L7
+  49              	.L5:
+  50 0008 054B     		ldr	r3, .L8
+  51 000a 0022     		movs	r2, #0
+  52 000c 4FF0FF31 		mov	r1, #-1
+  53 0010 5A60     		str	r2, [r3, #4]
+  54 0012 1A60     		str	r2, [r3]
+  55 0014 5961     		str	r1, [r3, #20]
+  56 0016 08BD     		pop	{r3, pc}
+  57              	.L7:
+ARM GAS  /tmp/cc9qoGer.s 			page 2
+
+
+  58 0018 FFF7FEFF 		bl	ext_lld_exti_irq_disable
+  59 001c F4E7     		b	.L5
+  60              	.L9:
+  61 001e 00BF     		.align	2
+  62              	.L8:
+  63 0020 003C0140 		.word	1073822720
+  64              		.size	ext_lld_stop, .-ext_lld_stop
+  65 0024 AFF30080 		.section	.text.ext_lld_channel_enable,"ax",%progbits
+  65      AFF30080 
+  65      AFF30080 
+  66              		.align	2
+  67              		.p2align 4,,15
+  68              		.global	ext_lld_channel_enable
+  69              		.thumb
+  70              		.thumb_func
+  71              		.type	ext_lld_channel_enable, %function
+  72              	ext_lld_channel_enable:
+  73              		@ args = 0, pretend = 0, frame = 0
+  74              		@ frame_needed = 0, uses_anonymous_args = 0
+  75              		@ link register save eliminated.
+  76 0000 0F29     		cmp	r1, #15
+  77 0002 F0B4     		push	{r4, r5, r6, r7}
+  78 0004 20D9     		bls	.L11
+  79 0006 4368     		ldr	r3, [r0, #4]
+  80 0008 53F83100 		ldr	r0, [r3, r1, lsl #3]
+  81 000c C207     		lsls	r2, r0, #31
+  82 000e 34D5     		bpl	.L13
+  83              	.L19:
+  84 0010 224C     		ldr	r4, .L20
+  85 0012 0122     		movs	r2, #1
+  86 0014 A568     		ldr	r5, [r4, #8]
+  87 0016 8A40     		lsls	r2, r2, r1
+  88 0018 1543     		orrs	r5, r5, r2
+  89 001a A560     		str	r5, [r4, #8]
+  90 001c D443     		mvns	r4, r2
+  91              	.L14:
+  92 001e 10F0020F 		tst	r0, #2
+  93 0022 1E48     		ldr	r0, .L20
+  94 0024 03EBC101 		add	r1, r3, r1, lsl #3
+  95 0028 C568     		ldr	r5, [r0, #12]
+  96 002a 4B68     		ldr	r3, [r1, #4]
+  97 002c 14BF     		ite	ne
+  98 002e 1543     		orrne	r5, r2, r5
+  99 0030 2540     		andeq	r5, r4, r5
+ 100 0032 C560     		str	r5, [r0, #12]
+ 101 0034 4BB3     		cbz	r3, .L17
+ 102 0036 194B     		ldr	r3, .L20
+ 103 0038 1968     		ldr	r1, [r3]
+ 104 003a 0A43     		orrs	r2, r2, r1
+ 105 003c 1A60     		str	r2, [r3]
+ 106 003e 5A68     		ldr	r2, [r3, #4]
+ 107 0040 1440     		ands	r4, r4, r2
+ 108 0042 5C60     		str	r4, [r3, #4]
+ 109 0044 F0BC     		pop	{r4, r5, r6, r7}
+ 110 0046 7047     		bx	lr
+ 111              	.L11:
+ 112 0048 21F00302 		bic	r2, r1, #3
+ARM GAS  /tmp/cc9qoGer.s 			page 3
+
+
+ 113 004c 4368     		ldr	r3, [r0, #4]
+ 114 004e 02F18042 		add	r2, r2, #1073741824
+ 115 0052 02F59C32 		add	r2, r2, #79872
+ 116 0056 53F83100 		ldr	r0, [r3, r1, lsl #3]
+ 117 005a 9768     		ldr	r7, [r2, #8]
+ 118 005c 01F00304 		and	r4, r1, #3
+ 119 0060 A400     		lsls	r4, r4, #2
+ 120 0062 0F25     		movs	r5, #15
+ 121 0064 A540     		lsls	r5, r5, r4
+ 122 0066 C0F30316 		ubfx	r6, r0, #4, #4
+ 123 006a 27EA0505 		bic	r5, r7, r5
+ 124 006e 06FA04F4 		lsl	r4, r6, r4
+ 125 0072 2C43     		orrs	r4, r4, r5
+ 126 0074 9460     		str	r4, [r2, #8]
+ 127 0076 C207     		lsls	r2, r0, #31
+ 128 0078 CAD4     		bmi	.L19
+ 129              	.L13:
+ 130 007a 084D     		ldr	r5, .L20
+ 131 007c 0122     		movs	r2, #1
+ 132 007e AE68     		ldr	r6, [r5, #8]
+ 133 0080 8A40     		lsls	r2, r2, r1
+ 134 0082 D443     		mvns	r4, r2
+ 135 0084 2640     		ands	r6, r6, r4
+ 136 0086 AE60     		str	r6, [r5, #8]
+ 137 0088 C9E7     		b	.L14
+ 138              	.L17:
+ 139 008a 044B     		ldr	r3, .L20
+ 140 008c 5968     		ldr	r1, [r3, #4]
+ 141 008e 0A43     		orrs	r2, r2, r1
+ 142 0090 5A60     		str	r2, [r3, #4]
+ 143 0092 1A68     		ldr	r2, [r3]
+ 144 0094 1440     		ands	r4, r4, r2
+ 145 0096 1C60     		str	r4, [r3]
+ 146 0098 F0BC     		pop	{r4, r5, r6, r7}
+ 147 009a 7047     		bx	lr
+ 148              	.L21:
+ 149              		.align	2
+ 150              	.L20:
+ 151 009c 003C0140 		.word	1073822720
+ 152              		.size	ext_lld_channel_enable, .-ext_lld_channel_enable
+ 153              		.section	.text.ext_lld_channel_disable,"ax",%progbits
+ 154              		.align	2
+ 155              		.p2align 4,,15
+ 156              		.global	ext_lld_channel_disable
+ 157              		.thumb
+ 158              		.thumb_func
+ 159              		.type	ext_lld_channel_disable, %function
+ 160              	ext_lld_channel_disable:
+ 161              		@ args = 0, pretend = 0, frame = 0
+ 162              		@ frame_needed = 0, uses_anonymous_args = 0
+ 163              		@ link register save eliminated.
+ 164 0000 094B     		ldr	r3, .L23
+ 165 0002 0122     		movs	r2, #1
+ 166 0004 1868     		ldr	r0, [r3]
+ 167 0006 02FA01F1 		lsl	r1, r2, r1
+ 168 000a CA43     		mvns	r2, r1
+ 169 000c 1040     		ands	r0, r0, r2
+ARM GAS  /tmp/cc9qoGer.s 			page 4
+
+
+ 170 000e 1860     		str	r0, [r3]
+ 171 0010 5868     		ldr	r0, [r3, #4]
+ 172 0012 1040     		ands	r0, r0, r2
+ 173 0014 5860     		str	r0, [r3, #4]
+ 174 0016 9868     		ldr	r0, [r3, #8]
+ 175 0018 1040     		ands	r0, r0, r2
+ 176 001a 9860     		str	r0, [r3, #8]
+ 177 001c D868     		ldr	r0, [r3, #12]
+ 178 001e 0240     		ands	r2, r2, r0
+ 179 0020 DA60     		str	r2, [r3, #12]
+ 180 0022 5961     		str	r1, [r3, #20]
+ 181 0024 7047     		bx	lr
+ 182              	.L24:
+ 183 0026 00BF     		.align	2
+ 184              	.L23:
+ 185 0028 003C0140 		.word	1073822720
+ 186              		.size	ext_lld_channel_disable, .-ext_lld_channel_disable
+ 187 002c AFF30080 		.section	.text.ext_lld_start,"ax",%progbits
+ 188              		.align	2
+ 189              		.p2align 4,,15
+ 190              		.global	ext_lld_start
+ 191              		.thumb
+ 192              		.thumb_func
+ 193              		.type	ext_lld_start, %function
+ 194              	ext_lld_start:
+ 195              		@ args = 0, pretend = 0, frame = 0
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+ 197 0000 38B5     		push	{r3, r4, r5, lr}
+ 198 0002 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 199 0004 012B     		cmp	r3, #1
+ 200 0006 0546     		mov	r5, r0
+ 201 0008 14D0     		beq	.L31
+ 202              	.L26:
+ 203 000a 0024     		movs	r4, #0
+ 204 000c 04E0     		b	.L30
+ 205              	.L33:
+ 206 000e 0134     		adds	r4, r4, #1
+ 207 0010 FFF7FEFF 		bl	ext_lld_channel_enable
+ 208 0014 172C     		cmp	r4, #23
+ 209 0016 0CD0     		beq	.L32
+ 210              	.L30:
+ 211 0018 6B68     		ldr	r3, [r5, #4]
+ 212 001a 53F83430 		ldr	r3, [r3, r4, lsl #3]
+ 213 001e 13F0040F 		tst	r3, #4
+ 214 0022 2146     		mov	r1, r4
+ 215 0024 2846     		mov	r0, r5
+ 216 0026 F2D1     		bne	.L33
+ 217 0028 0134     		adds	r4, r4, #1
+ 218 002a FFF7FEFF 		bl	ext_lld_channel_disable
+ 219 002e 172C     		cmp	r4, #23
+ 220 0030 F2D1     		bne	.L30
+ 221              	.L32:
+ 222 0032 38BD     		pop	{r3, r4, r5, pc}
+ 223              	.L31:
+ 224 0034 FFF7FEFF 		bl	ext_lld_exti_irq_enable
+ 225 0038 E7E7     		b	.L26
+ 226              		.size	ext_lld_start, .-ext_lld_start
+ARM GAS  /tmp/cc9qoGer.s 			page 5
+
+
+ 227              		.global	EXTD1
+ 228 003a 00BFAFF3 		.section	.bss.EXTD1,"aw",%nobits
+ 228      0080
+ 229              		.align	2
+ 230              		.set	.LANCHOR0,. + 0
+ 231              		.type	EXTD1, %object
+ 232              		.size	EXTD1, 8
+ 233              	EXTD1:
+ 234 0000 00000000 		.space	8
+ 234      00000000 
+ 235              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cc9qoGer.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ext_lld.c
+     /tmp/cc9qoGer.s:18     .text.ext_lld_init:00000000 $t
+     /tmp/cc9qoGer.s:24     .text.ext_lld_init:00000000 ext_lld_init
+     /tmp/cc9qoGer.s:33     .text.ext_lld_init:00000008 $d
+     /tmp/cc9qoGer.s:36     .text.ext_lld_stop:00000000 $t
+     /tmp/cc9qoGer.s:42     .text.ext_lld_stop:00000000 ext_lld_stop
+     /tmp/cc9qoGer.s:63     .text.ext_lld_stop:00000020 $d
+     /tmp/cc9qoGer.s:66     .text.ext_lld_channel_enable:00000000 $t
+     /tmp/cc9qoGer.s:72     .text.ext_lld_channel_enable:00000000 ext_lld_channel_enable
+     /tmp/cc9qoGer.s:151    .text.ext_lld_channel_enable:0000009c $d
+     /tmp/cc9qoGer.s:154    .text.ext_lld_channel_disable:00000000 $t
+     /tmp/cc9qoGer.s:160    .text.ext_lld_channel_disable:00000000 ext_lld_channel_disable
+     /tmp/cc9qoGer.s:185    .text.ext_lld_channel_disable:00000028 $d
+     /tmp/cc9qoGer.s:188    .text.ext_lld_start:00000000 $t
+     /tmp/cc9qoGer.s:194    .text.ext_lld_start:00000000 ext_lld_start
+     /tmp/cc9qoGer.s:233    .bss.EXTD1:00000000 EXTD1
+     /tmp/cc9qoGer.s:229    .bss.EXTD1:00000000 $d
+     /tmp/cc9qoGer.s:35     .text.ext_lld_init:0000000c $t
+     /tmp/cc9qoGer.s:65     .text.ext_lld_stop:00000024 $t
+     /tmp/cc9qoGer.s:187    .text.ext_lld_channel_disable:0000002c $t
+
+UNDEFINED SYMBOLS
+extObjectInit
+ext_lld_exti_irq_disable
+ext_lld_exti_irq_enable

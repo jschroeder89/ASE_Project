@@ -1,0 +1,140 @@
+ARM GAS  /tmp/cc2L8Ze6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"FSIOPowerManagement.cpp"
+  17              		.section	.text._ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth, %function
+  24              	_ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 0F2A     		cmp	r2, #15
+  28 0002 70B5     		push	{r4, r5, r6, lr}
+  29 0004 0446     		mov	r4, r0
+  30 0006 0D46     		mov	r5, r1
+  31 0008 01D9     		bls	.L10
+  32 000a 2020     		movs	r0, #32
+  33 000c 70BD     		pop	{r4, r5, r6, pc}
+  34              	.L10:
+  35 000e 0679     		ldrb	r6, [r0, #4]	@ zero_extendqisi2
+  36 0010 012E     		cmp	r6, #1
+  37 0012 01D0     		beq	.L11
+  38 0014 0820     		movs	r0, #8
+  39 0016 70BD     		pop	{r4, r5, r6, pc}
+  40              	.L11:
+  41 0018 0068     		ldr	r0, [r0]
+  42 001a 0368     		ldr	r3, [r0]
+  43 001c 5100     		lsls	r1, r2, #1
+  44 001e 1B6A     		ldr	r3, [r3, #32]
+  45 0020 1431     		adds	r1, r1, #20
+  46 0022 9847     		blx	r3
+  47 0024 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+  48 0026 0BB9     		cbnz	r3, .L12
+  49 0028 3046     		mov	r0, r6
+  50 002a 70BD     		pop	{r4, r5, r6, pc}
+  51              	.L12:
+  52 002c 2068     		ldr	r0, [r4]
+  53 002e 0368     		ldr	r3, [r0]
+  54 0030 2946     		mov	r1, r5
+  55 0032 5B68     		ldr	r3, [r3, #4]
+  56 0034 0222     		movs	r2, #2
+  57 0036 9847     		blx	r3
+ARM GAS  /tmp/cc2L8Ze6.s 			page 2
+
+
+  58 0038 0228     		cmp	r0, #2
+  59 003a 0CBF     		ite	eq
+  60 003c 0020     		moveq	r0, #0
+  61 003e 0820     		movne	r0, #8
+  62 0040 70BD     		pop	{r4, r5, r6, pc}
+  63              		.size	_ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth, .-_ZN5amiro12fileSystem
+  64 0042 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth,"ax",%progbits
+  64      0080AFF3 
+  64      0080AFF3 
+  64      0080
+  65              		.align	2
+  66              		.p2align 4,,15
+  67              		.global	_ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth
+  68              		.thumb
+  69              		.thumb_func
+  70              		.type	_ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth, %function
+  71              	_ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth:
+  72              		@ args = 0, pretend = 0, frame = 8
+  73              		@ frame_needed = 0, uses_anonymous_args = 0
+  74 0000 30B5     		push	{r4, r5, lr}
+  75 0002 83B0     		sub	sp, sp, #12
+  76 0004 0F2A     		cmp	r2, #15
+  77 0006 0446     		mov	r4, r0
+  78 0008 ADF80610 		strh	r1, [sp, #6]	@ movhi
+  79 000c 02D9     		bls	.L21
+  80 000e 2020     		movs	r0, #32
+  81              	.L14:
+  82 0010 03B0     		add	sp, sp, #12
+  83              		@ sp needed
+  84 0012 30BD     		pop	{r4, r5, pc}
+  85              	.L21:
+  86 0014 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+  87 0016 012D     		cmp	r5, #1
+  88 0018 02D0     		beq	.L22
+  89 001a 0820     		movs	r0, #8
+  90 001c 03B0     		add	sp, sp, #12
+  91              		@ sp needed
+  92 001e 30BD     		pop	{r4, r5, pc}
+  93              	.L22:
+  94 0020 0068     		ldr	r0, [r0]
+  95 0022 0368     		ldr	r3, [r0]
+  96 0024 5100     		lsls	r1, r2, #1
+  97 0026 1B6A     		ldr	r3, [r3, #32]
+  98 0028 1431     		adds	r1, r1, #20
+  99 002a 9847     		blx	r3
+ 100 002c 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 101 002e 0BB9     		cbnz	r3, .L23
+ 102 0030 2846     		mov	r0, r5
+ 103 0032 EDE7     		b	.L14
+ 104              	.L23:
+ 105 0034 2068     		ldr	r0, [r4]
+ 106 0036 0368     		ldr	r3, [r0]
+ 107 0038 0DF10601 		add	r1, sp, #6
+ 108 003c 1B68     		ldr	r3, [r3]
+ 109 003e 0222     		movs	r2, #2
+ 110 0040 9847     		blx	r3
+ 111 0042 0228     		cmp	r0, #2
+ARM GAS  /tmp/cc2L8Ze6.s 			page 3
+
+
+ 112 0044 0CBF     		ite	eq
+ 113 0046 0020     		moveq	r0, #0
+ 114 0048 0820     		movne	r0, #8
+ 115 004a E1E7     		b	.L14
+ 116              		.size	_ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth, .-_ZN5amiro12fileSystemI
+ 117 004c AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cc2L8Ze6.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 FSIOPowerManagement.cpp
+     /tmp/cc2L8Ze6.s:18     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth:00000000 $t
+     /tmp/cc2L8Ze6.s:24     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth:00000000 _ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth
+     /tmp/cc2L8Ze6.s:65     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth:00000000 $t
+     /tmp/cc2L8Ze6.s:71     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth:00000000 _ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth
+
+NO UNDEFINED SYMBOLS

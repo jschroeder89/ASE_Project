@@ -1,0 +1,283 @@
+ARM GAS  /tmp/ccAdGIGy.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"board.c"
+  15              		.section	.text.__early_init,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	__early_init
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	__early_init, %function
+  22              	__early_init:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 FFF7FEBF 		b	stm32_clock_init
+  27              		.size	__early_init, .-__early_init
+  28 0004 AFF30080 		.section	.text.boardInit,"ax",%progbits
+  28      AFF30080 
+  28      AFF30080 
+  29              		.align	2
+  30              		.p2align 4,,15
+  31              		.global	boardInit
+  32              		.thumb
+  33              		.thumb_func
+  34              		.type	boardInit, %function
+  35              	boardInit:
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38              		@ link register save eliminated.
+  39 0000 014B     		ldr	r3, .L3
+  40 0002 024A     		ldr	r2, .L3+4
+  41 0004 5A60     		str	r2, [r3, #4]
+  42 0006 7047     		bx	lr
+  43              	.L4:
+  44              		.align	2
+  45              	.L3:
+  46 0008 00000140 		.word	1073807360
+  47 000c 10000002 		.word	33554448
+  48              		.size	boardInit, .-boardInit
+  49              		.section	.text.boardRequestShutdown,"ax",%progbits
+  50              		.align	2
+  51              		.p2align 4,,15
+  52              		.global	boardRequestShutdown
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	boardRequestShutdown, %function
+ARM GAS  /tmp/ccAdGIGy.s 			page 2
+
+
+  56              	boardRequestShutdown:
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  60 0000 024B     		ldr	r3, .L6
+  61 0002 4FF48042 		mov	r2, #16384
+  62 0006 5A61     		str	r2, [r3, #20]
+  63 0008 7047     		bx	lr
+  64              	.L7:
+  65 000a 00BF     		.align	2
+  66              	.L6:
+  67 000c 00100140 		.word	1073811456
+  68              		.size	boardRequestShutdown, .-boardRequestShutdown
+  69              		.section	.text.boardStandby,"ax",%progbits
+  70              		.align	2
+  71              		.p2align 4,,15
+  72              		.global	boardStandby
+  73              		.thumb
+  74              		.thumb_func
+  75              		.type	boardStandby, %function
+  76              	boardStandby:
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79 0000 08B5     		push	{r3, lr}
+  80 0002 0E4B     		ldr	r3, .L9
+  81 0004 4FF48042 		mov	r2, #16384
+  82 0008 1A61     		str	r2, [r3, #16]
+  83 000a 2023     		movs	r3, #32
+  84              	@ 54 "../../boards/LightRing/board.c" 1
+  85 000c 83F31188 		msr     BASEPRI, r3
+  86              	@ 0 "" 2
+  87              		.thumb
+  88 0010 FFF7FEFF 		bl	dbg_check_lock
+  89 0014 0A49     		ldr	r1, .L9+4
+  90 0016 0B4B     		ldr	r3, .L9+8
+  91 0018 0869     		ldr	r0, [r1, #16]
+  92 001a 0B4A     		ldr	r2, .L9+12
+  93 001c 40F00400 		orr	r0, r0, #4
+  94 0020 0861     		str	r0, [r1, #16]
+  95 0022 1968     		ldr	r1, [r3]
+  96 0024 41F00E01 		orr	r1, r1, #14
+  97 0028 1960     		str	r1, [r3]
+  98 002a 9388     		ldrh	r3, [r2, #4]
+  99 002c 23F00203 		bic	r3, r3, #2
+ 100 0030 1B04     		lsls	r3, r3, #16
+ 101 0032 1B0C     		lsrs	r3, r3, #16
+ 102 0034 9380     		strh	r3, [r2, #4]	@ movhi
+ 103              	@ 299 "../../../ChibiOS/os/ports/common/ARMCMx/CMSIS/include/core_cmInstr.h" 1
+ 104 0036 30BF     		wfi
+ 105              	@ 0 "" 2
+ 106              		.thumb
+ 107 0038 08BD     		pop	{r3, pc}
+ 108              	.L10:
+ 109 003a 00BF     		.align	2
+ 110              	.L9:
+ 111 003c 00100140 		.word	1073811456
+ 112 0040 00ED00E0 		.word	-536810240
+ARM GAS  /tmp/ccAdGIGy.s 			page 3
+
+
+ 113 0044 00700040 		.word	1073770496
+ 114 0048 00280040 		.word	1073752064
+ 115              		.size	boardStandby, .-boardStandby
+ 116 004c AFF30080 		.section	.text.boardClearI2CBus,"ax",%progbits
+ 117              		.align	2
+ 118              		.p2align 4,,15
+ 119              		.global	boardClearI2CBus
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.type	boardClearI2CBus, %function
+ 123              	boardClearI2CBus:
+ 124              		@ args = 0, pretend = 0, frame = 0
+ 125              		@ frame_needed = 0, uses_anonymous_args = 0
+ 126 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 127 0004 0125     		movs	r5, #1
+ 128 0006 05FA00F4 		lsl	r4, r5, r0
+ 129 000a 05FA01F8 		lsl	r8, r5, r1
+ 130 000e 324E     		ldr	r6, .L17
+ 131 0010 2146     		mov	r1, r4
+ 132 0012 3046     		mov	r0, r6
+ 133 0014 0722     		movs	r2, #7
+ 134 0016 FFF7FEFF 		bl	_pal_lld_setgroupmode
+ 135 001a 4146     		mov	r1, r8
+ 136 001c 0722     		movs	r2, #7
+ 137 001e 3046     		mov	r0, r6
+ 138 0020 FFF7FEFF 		bl	_pal_lld_setgroupmode
+ 139 0024 C6F81080 		str	r8, [r6, #16]
+ 140 0028 2846     		mov	r0, r5
+ 141 002a 7461     		str	r4, [r6, #20]
+ 142 002c FFF7FEFF 		bl	chThdSleep
+ 143 0030 2846     		mov	r0, r5
+ 144 0032 3461     		str	r4, [r6, #16]
+ 145 0034 FFF7FEFF 		bl	chThdSleep
+ 146 0038 2846     		mov	r0, r5
+ 147 003a C6F81480 		str	r8, [r6, #20]
+ 148 003e FFF7FEFF 		bl	chThdSleep
+ 149 0042 2846     		mov	r0, r5
+ 150 0044 7461     		str	r4, [r6, #20]
+ 151 0046 FFF7FEFF 		bl	chThdSleep
+ 152 004a C6F81080 		str	r8, [r6, #16]
+ 153 004e 2846     		mov	r0, r5
+ 154 0050 FFF7FEFF 		bl	chThdSleep
+ 155 0054 0927     		movs	r7, #9
+ 156              	.L13:
+ 157 0056 0120     		movs	r0, #1
+ 158 0058 3461     		str	r4, [r6, #16]
+ 159 005a FFF7FEFF 		bl	chThdSleep
+ 160 005e 7461     		str	r4, [r6, #20]
+ 161 0060 0120     		movs	r0, #1
+ 162 0062 FFF7FEFF 		bl	chThdSleep
+ 163 0066 7B1E     		subs	r3, r7, #1
+ 164 0068 13F0FF07 		ands	r7, r3, #255
+ 165 006c 1A4D     		ldr	r5, .L17
+ 166 006e F2D1     		bne	.L13
+ 167 0070 0120     		movs	r0, #1
+ 168 0072 2C61     		str	r4, [r5, #16]
+ 169 0074 FFF7FEFF 		bl	chThdSleep
+ARM GAS  /tmp/ccAdGIGy.s 			page 4
+
+
+ 170 0078 0120     		movs	r0, #1
+ 171 007a C5F81480 		str	r8, [r5, #20]
+ 172 007e FFF7FEFF 		bl	chThdSleep
+ 173 0082 0120     		movs	r0, #1
+ 174 0084 6C61     		str	r4, [r5, #20]
+ 175 0086 FFF7FEFF 		bl	chThdSleep
+ 176 008a 0120     		movs	r0, #1
+ 177 008c 2C61     		str	r4, [r5, #16]
+ 178 008e FFF7FEFF 		bl	chThdSleep
+ 179 0092 0120     		movs	r0, #1
+ 180 0094 C5F81080 		str	r8, [r5, #16]
+ 181 0098 FFF7FEFF 		bl	chThdSleep
+ 182 009c 6C61     		str	r4, [r5, #20]
+ 183 009e 0120     		movs	r0, #1
+ 184 00a0 FFF7FEFF 		bl	chThdSleep
+ 185 00a4 0A26     		movs	r6, #10
+ 186              	.L15:
+ 187 00a6 0120     		movs	r0, #1
+ 188 00a8 6C61     		str	r4, [r5, #20]
+ 189 00aa FFF7FEFF 		bl	chThdSleep
+ 190 00ae 2C61     		str	r4, [r5, #16]
+ 191 00b0 0120     		movs	r0, #1
+ 192 00b2 FFF7FEFF 		bl	chThdSleep
+ 193 00b6 731E     		subs	r3, r6, #1
+ 194 00b8 13F0FF06 		ands	r6, r3, #255
+ 195 00bc F3D1     		bne	.L15
+ 196 00be 2146     		mov	r1, r4
+ 197 00c0 0548     		ldr	r0, .L17
+ 198 00c2 1122     		movs	r2, #17
+ 199 00c4 FFF7FEFF 		bl	_pal_lld_setgroupmode
+ 200 00c8 4146     		mov	r1, r8
+ 201 00ca 0348     		ldr	r0, .L17
+ 202 00cc 1122     		movs	r2, #17
+ 203 00ce BDE8F041 		pop	{r4, r5, r6, r7, r8, lr}
+ 204 00d2 FFF7FEBF 		b	_pal_lld_setgroupmode
+ 205              	.L18:
+ 206 00d6 00BF     		.align	2
+ 207              	.L17:
+ 208 00d8 000C0140 		.word	1073810432
+ 209              		.size	boardClearI2CBus, .-boardClearI2CBus
+ 210              		.global	pal_default_config
+ 211 00dc AFF30080 		.section	.rodata.pal_default_config,"a",%progbits
+ 212              		.align	2
+ 213              		.type	pal_default_config, %object
+ 214              		.size	pal_default_config, 84
+ 215              	pal_default_config:
+ 216 0000 FFFF0000 		.word	65535
+ 217 0004 888BB3B8 		.word	-1196192888
+ 218 0008 B8488B88 		.word	-2004137800
+ 219 000c FBFF0000 		.word	65531
+ 220 0010 88834887 		.word	-2025290872
+ 221 0014 88FFB3B4 		.word	-1263272056
+ 222 0018 FFFF0000 		.word	65535
+ 223 001c 88888388 		.word	-2004645752
+ 224 0020 88448887 		.word	-2021112696
+ 225 0024 FBFF0000 		.word	65531
+ 226 0028 44878888 		.word	-2004318396
+ARM GAS  /tmp/ccAdGIGy.s 			page 5
+
+
+ 227 002c 88888888 		.word	-2004318072
+ 228 0030 FFFF0000 		.word	65535
+ 229 0034 88888888 		.word	-2004318072
+ 230 0038 88888888 		.word	-2004318072
+ 231 003c FFFF0000 		.word	65535
+ 232 0040 88888888 		.word	-2004318072
+ 233 0044 88888888 		.word	-2004318072
+ 234 0048 FFFF0000 		.word	65535
+ 235 004c 88888888 		.word	-2004318072
+ 236 0050 88888888 		.word	-2004318072
+ 237              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccAdGIGy.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 board.c
+     /tmp/ccAdGIGy.s:16     .text.__early_init:00000000 $t
+     /tmp/ccAdGIGy.s:22     .text.__early_init:00000000 __early_init
+     /tmp/ccAdGIGy.s:29     .text.boardInit:00000000 $t
+     /tmp/ccAdGIGy.s:35     .text.boardInit:00000000 boardInit
+     /tmp/ccAdGIGy.s:46     .text.boardInit:00000008 $d
+     /tmp/ccAdGIGy.s:50     .text.boardRequestShutdown:00000000 $t
+     /tmp/ccAdGIGy.s:56     .text.boardRequestShutdown:00000000 boardRequestShutdown
+     /tmp/ccAdGIGy.s:67     .text.boardRequestShutdown:0000000c $d
+     /tmp/ccAdGIGy.s:70     .text.boardStandby:00000000 $t
+     /tmp/ccAdGIGy.s:76     .text.boardStandby:00000000 boardStandby
+     /tmp/ccAdGIGy.s:111    .text.boardStandby:0000003c $d
+     /tmp/ccAdGIGy.s:117    .text.boardClearI2CBus:00000000 $t
+     /tmp/ccAdGIGy.s:123    .text.boardClearI2CBus:00000000 boardClearI2CBus
+     /tmp/ccAdGIGy.s:208    .text.boardClearI2CBus:000000d8 $d
+     /tmp/ccAdGIGy.s:215    .rodata.pal_default_config:00000000 pal_default_config
+     /tmp/ccAdGIGy.s:212    .rodata.pal_default_config:00000000 $d
+     /tmp/ccAdGIGy.s:116    .text.boardStandby:0000004c $t
+     /tmp/ccAdGIGy.s:211    .text.boardClearI2CBus:000000dc $t
+
+UNDEFINED SYMBOLS
+stm32_clock_init
+dbg_check_lock
+_pal_lld_setgroupmode
+chThdSleep

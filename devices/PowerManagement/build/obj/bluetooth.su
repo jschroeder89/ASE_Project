@@ -1,0 +1,12 @@
+bluetooth.cpp:14:1:amiro::BLUETOOTH::BLUETOOTH(UARTDriver*)	8	static
+bluetooth.cpp:27:6:void amiro::BLUETOOTH::bluetoothReset()	16	static
+bluetooth.cpp:20:6:void amiro::BLUETOOTH::bluetoothStart()	16	static
+bluetooth.cpp:35:6:void amiro::BLUETOOTH::bluetoothEnableMux()	0	static
+bluetooth.cpp:39:6:void amiro::BLUETOOTH::bluetoothDisableMux()	0	static
+bluetooth.cpp:43:6:void amiro::BLUETOOTH::bluetoothDiscoverDevices()	8	static
+bluetooth.cpp:48:6:void amiro::BLUETOOTH::bluetoothListAllConnections()	0	static
+bluetooth.cpp:52:6:void amiro::BLUETOOTH::bluetoothSetName(const char*)	24	dynamic
+bluetooth.cpp:60:6:void amiro::BLUETOOTH::bluetoothSetPin(const char*)	24	dynamic
+bluetooth.cpp:68:6:void amiro::BLUETOOTH::bluetoothCloseConnection(uint8_t)	16	static
+bluetooth.cpp:76:6:void amiro::BLUETOOTH::bluetoothSendCommand(const char*)	0	static
+bluetooth.cpp:80:6:bool amiro::BLUETOOTH::bluetoothIsMuxMode()	0	static

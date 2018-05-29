@@ -1,0 +1,4 @@
+tm.c:69:13:tm_start	0	static
+tm.c:81:13:tm_stop	0	static
+tm.c:104:6:tmInit	32	static
+tm.c:124:6:tmObjectInit	4	static

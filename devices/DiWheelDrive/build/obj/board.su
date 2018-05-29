@@ -1,0 +1,8 @@
+board.c:28:6:__early_init	0	static
+board.c:36:6:boardInit	0	static
+board.c:52:13:boardWriteIoPower	0	static
+board.c:63:13:boardWriteLed	0	static
+board.c:68:13:boardRequestShutdown	0	static
+board.c:73:13:boardStandby	8	static
+board.c:92:13:boardWakeup	16	static
+board.c:99:13:boardClearI2CBus	24	static

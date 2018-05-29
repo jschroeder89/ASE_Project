@@ -1,0 +1,20 @@
+ControllerAreaNetworkRx.cpp:214:7:virtual msg_t amiro::ControllerAreaNetworkRx::receiveMessage(CANRxFrame*)	0	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 128; tprio_t = long unsigned int]	24	static
+ControllerAreaNetworkRx.cpp:18:1:amiro::ControllerAreaNetworkRx::ControllerAreaNetworkRx(CANDriver*, uint8_t)	16	static
+ControllerAreaNetworkRx.cpp:33:1:amiro::ControllerAreaNetworkRx::~ControllerAreaNetworkRx()	0	static
+ControllerAreaNetworkRx.cpp:33:1:virtual amiro::ControllerAreaNetworkRx::~ControllerAreaNetworkRx()	8	static
+ControllerAreaNetworkRx.cpp:40:7:msg_t amiro::ControllerAreaNetworkRx::receiveSensorVal(CANRxFrame*)	4	static
+ControllerAreaNetworkRx.cpp:181:7:virtual msg_t amiro::ControllerAreaNetworkRx::main()	40	static
+ControllerAreaNetworkRx.cpp:143:10:uint16_t amiro::ControllerAreaNetworkRx::getProximityRingValue(int)	0	static
+ControllerAreaNetworkRx.cpp:147:6:void amiro::ControllerAreaNetworkRx::getActualSpeed(types::kinematic&)	0	static
+ControllerAreaNetworkRx.cpp:152:17:types::position amiro::ControllerAreaNetworkRx::getOdometry()	12	static
+ControllerAreaNetworkRx.cpp:156:15:types::power_status& amiro::ControllerAreaNetworkRx::getPowerStatus()	0	static
+ControllerAreaNetworkRx.cpp:160:9:uint8_t amiro::ControllerAreaNetworkRx::getRobotID()	0	static
+ControllerAreaNetworkRx.cpp:164:9:int32_t amiro::ControllerAreaNetworkRx::getMagnetometerValue(int)	0	static
+ControllerAreaNetworkRx.cpp:169:9:int16_t amiro::ControllerAreaNetworkRx::getGyroscopeValue(int)	0	static
+ControllerAreaNetworkRx.cpp:175:10:uint16_t amiro::ControllerAreaNetworkRx::getProximityFloorValue(int)	0	static
+ControllerAreaNetworkRx.cpp:221:5:int amiro::ControllerAreaNetworkRx::decodeBoardId(CANRxFrame*)	0	static
+ControllerAreaNetworkRx.cpp:225:5:int amiro::ControllerAreaNetworkRx::decodeDeviceId(CANRxFrame*)	0	static
+ControllerAreaNetworkRx.cpp:229:5:int amiro::ControllerAreaNetworkRx::decodeIndexId(CANRxFrame*)	0	static
+ControllerAreaNetworkRx.cpp:235:5:int amiro::ControllerAreaNetworkRx::rxCmdShell(CANRxFrame*)	0	static
+ControllerAreaNetworkRx.cpp:237:1:cpp)	0	static

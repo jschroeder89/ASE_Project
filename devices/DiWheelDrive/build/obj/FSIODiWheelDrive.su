@@ -1,0 +1,14 @@
+FSIODiWheelDrive.cpp:7:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::getVcnl4020Offset(uint16_t*, uint8_t)	16	static
+FSIODiWheelDrive.cpp:39:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::setVcnl4020Offset(uint16_t, uint8_t)	24	static
+FSIODiWheelDrive.cpp:72:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::setwheelfactor(float)	24	static
+FSIODiWheelDrive.cpp:100:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::getWheelFactor(float*)	16	static
+FSIODiWheelDrive.cpp:128:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::setiGain(float)	24	static
+FSIODiWheelDrive.cpp:156:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::getiGain(float*)	16	static
+FSIODiWheelDrive.cpp:186:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::setdGain(float)	24	static
+FSIODiWheelDrive.cpp:214:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::getdGain(float*)	16	static
+FSIODiWheelDrive.cpp:244:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::setpGain(int)	24	static
+FSIODiWheelDrive.cpp:272:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::getpGain(int*)	16	static
+FSIODiWheelDrive.cpp:301:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::getEd(float*)	16	static
+FSIODiWheelDrive.cpp:328:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::setEd(float)	24	static
+FSIODiWheelDrive.cpp:355:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::getEb(float*)	16	static
+FSIODiWheelDrive.cpp:382:1:msg_t amiro::fileSystemIo::FSIODiWheelDrive::setEb(float)	24	static

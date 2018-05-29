@@ -1,0 +1,6 @@
+at24.cpp:264:1:static uint32_t amiro::AT24::close(void*)	0	static
+at24.cpp:92:1:static size_t amiro::AT24::write(void*, const uint8_t*, size_t)	72	static
+at24.cpp:29:1:amiro::AT24::AT24(size_t, uint8_t, uint16_t, amiro::I2CDriver*)	32	static
+at24.cpp:35:1:amiro::AT24::~AT24()	8	static
+at24.cpp:41:1:static msg_t amiro::AT24::poll_ack(void*)	40	static
+at24.cpp:200:1:static size_t amiro::AT24::read(void*, uint8_t*, size_t)	32	static

@@ -1,0 +1,194 @@
+ARM GAS  /tmp/ccYdMv7e.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"syscalls.c"
+  15              		.section	.text._read_r,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_read_r
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_read_r, %function
+  22              	_read_r:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 1623     		movs	r3, #22
+  27 0002 0360     		str	r3, [r0]
+  28 0004 4FF0FF30 		mov	r0, #-1
+  29 0008 7047     		bx	lr
+  30              		.size	_read_r, .-_read_r
+  31 000a 00BFAFF3 		.section	.text._lseek_r,"ax",%progbits
+  31      0080
+  32              		.align	2
+  33              		.p2align 4,,15
+  34              		.global	_lseek_r
+  35              		.thumb
+  36              		.thumb_func
+  37              		.type	_lseek_r, %function
+  38              	_lseek_r:
+  39              		@ args = 0, pretend = 0, frame = 0
+  40              		@ frame_needed = 0, uses_anonymous_args = 0
+  41              		@ link register save eliminated.
+  42 0000 0020     		movs	r0, #0
+  43 0002 7047     		bx	lr
+  44              		.size	_lseek_r, .-_lseek_r
+  45 0004 AFF30080 		.section	.text._write_r,"ax",%progbits
+  45      AFF30080 
+  45      AFF30080 
+  46              		.align	2
+  47              		.p2align 4,,15
+  48              		.global	_write_r
+  49              		.thumb
+  50              		.thumb_func
+  51              		.type	_write_r, %function
+  52              	_write_r:
+  53              		@ args = 0, pretend = 0, frame = 0
+  54              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccYdMv7e.s 			page 2
+
+
+  55              		@ link register save eliminated.
+  56 0000 1846     		mov	r0, r3
+  57 0002 7047     		bx	lr
+  58              		.size	_write_r, .-_write_r
+  59 0004 AFF30080 		.section	.text._close_r,"ax",%progbits
+  59      AFF30080 
+  59      AFF30080 
+  60              		.align	2
+  61              		.p2align 4,,15
+  62              		.global	_close_r
+  63              		.thumb
+  64              		.thumb_func
+  65              		.type	_close_r, %function
+  66              	_close_r:
+  67              		@ args = 0, pretend = 0, frame = 0
+  68              		@ frame_needed = 0, uses_anonymous_args = 0
+  69              		@ link register save eliminated.
+  70 0000 0020     		movs	r0, #0
+  71 0002 7047     		bx	lr
+  72              		.size	_close_r, .-_close_r
+  73 0004 AFF30080 		.section	.text._sbrk_r,"ax",%progbits
+  73      AFF30080 
+  73      AFF30080 
+  74              		.align	2
+  75              		.p2align 4,,15
+  76              		.global	_sbrk_r
+  77              		.thumb
+  78              		.thumb_func
+  79              		.type	_sbrk_r, %function
+  80              	_sbrk_r:
+  81              		@ args = 0, pretend = 0, frame = 0
+  82              		@ frame_needed = 0, uses_anonymous_args = 0
+  83 0000 38B5     		push	{r3, r4, r5, lr}
+  84 0002 0C1E     		subs	r4, r1, #0
+  85 0004 0546     		mov	r5, r0
+  86 0006 09DD     		ble	.L10
+  87              	.L6:
+  88 0008 2046     		mov	r0, r4
+  89 000a FFF7FEFF 		bl	chCoreAlloc
+  90 000e 00B1     		cbz	r0, .L11
+  91 0010 38BD     		pop	{r3, r4, r5, pc}
+  92              	.L11:
+  93 0012 0C23     		movs	r3, #12
+  94 0014 2B60     		str	r3, [r5]
+  95 0016 4FF0FF30 		mov	r0, #-1
+  96 001a 38BD     		pop	{r3, r4, r5, pc}
+  97              	.L10:
+  98 001c 0148     		ldr	r0, .L12
+  99 001e FFF7FEFF 		bl	chDbgPanic
+ 100 0022 F1E7     		b	.L6
+ 101              	.L13:
+ 102              		.align	2
+ 103              	.L12:
+ 104 0024 00000000 		.word	.LC0
+ 105              		.size	_sbrk_r, .-_sbrk_r
+ 106 0028 AFF30080 		.section	.text._fstat_r,"ax",%progbits
+ 106      AFF30080 
+ARM GAS  /tmp/ccYdMv7e.s 			page 3
+
+
+ 107              		.align	2
+ 108              		.p2align 4,,15
+ 109              		.global	_fstat_r
+ 110              		.thumb
+ 111              		.thumb_func
+ 112              		.type	_fstat_r, %function
+ 113              	_fstat_r:
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116 0000 10B5     		push	{r4, lr}
+ 117 0002 1046     		mov	r0, r2
+ 118 0004 1446     		mov	r4, r2
+ 119 0006 0021     		movs	r1, #0
+ 120 0008 3C22     		movs	r2, #60
+ 121 000a FFF7FEFF 		bl	memset
+ 122 000e 4FF40053 		mov	r3, #8192
+ 123 0012 6360     		str	r3, [r4, #4]
+ 124 0014 0020     		movs	r0, #0
+ 125 0016 10BD     		pop	{r4, pc}
+ 126              		.size	_fstat_r, .-_fstat_r
+ 127 0018 AFF30080 		.section	.text._isatty_r,"ax",%progbits
+ 127      AFF30080 
+ 128              		.align	2
+ 129              		.p2align 4,,15
+ 130              		.global	_isatty_r
+ 131              		.thumb
+ 132              		.thumb_func
+ 133              		.type	_isatty_r, %function
+ 134              	_isatty_r:
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 0, uses_anonymous_args = 0
+ 137              		@ link register save eliminated.
+ 138 0000 0120     		movs	r0, #1
+ 139 0002 7047     		bx	lr
+ 140              		.size	_isatty_r, .-_isatty_r
+ 141 0004 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 141      AFF30080 
+ 141      AFF30080 
+ 142              		.align	2
+ 143              	.LC0:
+ 144 0000 225F7362 		.ascii	"\"_sbrk_r\"()\000"
+ 144      726B5F72 
+ 144      22282900 
+ 145              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccYdMv7e.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 syscalls.c
+     /tmp/ccYdMv7e.s:16     .text._read_r:00000000 $t
+     /tmp/ccYdMv7e.s:22     .text._read_r:00000000 _read_r
+     /tmp/ccYdMv7e.s:32     .text._lseek_r:00000000 $t
+     /tmp/ccYdMv7e.s:38     .text._lseek_r:00000000 _lseek_r
+     /tmp/ccYdMv7e.s:46     .text._write_r:00000000 $t
+     /tmp/ccYdMv7e.s:52     .text._write_r:00000000 _write_r
+     /tmp/ccYdMv7e.s:60     .text._close_r:00000000 $t
+     /tmp/ccYdMv7e.s:66     .text._close_r:00000000 _close_r
+     /tmp/ccYdMv7e.s:74     .text._sbrk_r:00000000 $t
+     /tmp/ccYdMv7e.s:80     .text._sbrk_r:00000000 _sbrk_r
+     /tmp/ccYdMv7e.s:104    .text._sbrk_r:00000024 $d
+     /tmp/ccYdMv7e.s:107    .text._fstat_r:00000000 $t
+     /tmp/ccYdMv7e.s:113    .text._fstat_r:00000000 _fstat_r
+     /tmp/ccYdMv7e.s:128    .text._isatty_r:00000000 $t
+     /tmp/ccYdMv7e.s:134    .text._isatty_r:00000000 _isatty_r
+     /tmp/ccYdMv7e.s:142    .rodata.str1.4:00000000 $d
+     /tmp/ccYdMv7e.s:106    .text._sbrk_r:00000028 $t
+
+UNDEFINED SYMBOLS
+chCoreAlloc
+chDbgPanic
+memset

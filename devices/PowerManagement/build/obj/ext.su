@@ -1,0 +1,7 @@
+ext.c:68:6:extInit	0	static
+ext.c:80:6:extObjectInit	0	static
+ext.c:96:6:extStart	16	static
+ext.c:116:6:extStop	8	static
+ext.c:137:6:extChannelEnable	16	static
+ext.c:160:6:extChannelDisable	16	static
+ext.c:191:6:extSetChannelModeI	16	static

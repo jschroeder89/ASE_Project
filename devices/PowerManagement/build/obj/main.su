@@ -1,0 +1,53 @@
+I2CDriver.hpp:30:13:amiro::I2CDriver::~I2CDriver()	0	static
+pca9544.tpp:41:1:msg_t amiro::PCA9544<ignore_deselect>::deselect() [with bool ignore_deselect = true; msg_t = long int]	0	static
+ltc4412.hpp:18:11:amiro::BaseLTC4412::~BaseLTC4412()	0	static
+bq24103a.hpp:16:11:amiro::BaseBQ24103A::~BaseBQ24103A()	0	static
+main.cpp:55:6:void shutdownTimeoutISR(void*)	0	static
+ltc4412.hpp:49:11:amiro::LTC4412<STAT_PadGrp, STAT_Pad>::~LTC4412() [with unsigned int STAT_PadGrp = 1073874944u; unsigned char STAT_Pad = 8u]	0	static
+bq24103a.hpp:39:11:amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::~BQ24103A() [with unsigned int EN_PadGrp = 1073874944u; long unsigned int EN_Pad = 3ul; unsigned int STAT_PadGrp = 1073874944u; long unsigned int STAT_Pad = 0ul]	0	static
+bq24103a.hpp:39:11:amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::~BQ24103A() [with unsigned int EN_PadGrp = 1073875968u; long unsigned int EN_Pad = 2ul; unsigned int STAT_PadGrp = 1073873920u; long unsigned int STAT_Pad = 4ul]	0	static
+ltc4412.hpp:52:8:bool amiro::LTC4412<STAT_PadGrp, STAT_Pad>::isPluggedIn() const [with unsigned int STAT_PadGrp = 1073874944u; unsigned char STAT_Pad = 8u]	0	static
+bq24103a.hpp:52:8:bool amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::isEnabled() const [with unsigned int EN_PadGrp = 1073875968u; long unsigned int EN_Pad = 2ul; unsigned int STAT_PadGrp = 1073873920u; long unsigned int STAT_Pad = 4ul]	0	static
+bq24103a.hpp:57:8:bool amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::isCharging() const [with unsigned int EN_PadGrp = 1073875968u; long unsigned int EN_Pad = 2ul; unsigned int STAT_PadGrp = 1073873920u; long unsigned int STAT_Pad = 4ul]	0	static
+bq24103a.hpp:52:8:bool amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::isEnabled() const [with unsigned int EN_PadGrp = 1073874944u; long unsigned int EN_Pad = 3ul; unsigned int STAT_PadGrp = 1073874944u; long unsigned int STAT_Pad = 0ul]	0	static
+bq24103a.hpp:57:8:bool amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::isCharging() const [with unsigned int EN_PadGrp = 1073874944u; long unsigned int EN_Pad = 3ul; unsigned int STAT_PadGrp = 1073874944u; long unsigned int STAT_Pad = 0ul]	0	static
+I2CDriver.hpp:30:13:virtual amiro::I2CDriver::~I2CDriver()	8	static
+ltc4412.hpp:18:11:virtual amiro::BaseLTC4412::~BaseLTC4412()	8	static
+bq24103a.hpp:16:11:virtual amiro::BaseBQ24103A::~BaseBQ24103A()	8	static
+ltc4412.hpp:49:11:amiro::LTC4412<STAT_PadGrp, STAT_Pad>::~LTC4412() [with unsigned int STAT_PadGrp = 1073874944u; unsigned char STAT_Pad = 8u]	8	static
+bq24103a.hpp:39:11:amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::~BQ24103A() [with unsigned int EN_PadGrp = 1073874944u; long unsigned int EN_Pad = 3ul; unsigned int STAT_PadGrp = 1073874944u; long unsigned int STAT_Pad = 0ul]	8	static
+bq24103a.hpp:39:11:amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::~BQ24103A() [with unsigned int EN_PadGrp = 1073875968u; long unsigned int EN_Pad = 2ul; unsigned int STAT_PadGrp = 1073873920u; long unsigned int STAT_Pad = 4ul]	8	static
+bq24103a.hpp:42:8:void amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::enable(bool) [with unsigned int EN_PadGrp = 1073874944u; long unsigned int EN_Pad = 3ul; unsigned int STAT_PadGrp = 1073874944u; long unsigned int STAT_Pad = 0ul]	16	static
+bq24103a.hpp:42:8:void amiro::BQ24103A<EN_PadGrp, EN_Pad, STAT_PadGrp, STAT_Pad>::enable(bool) [with unsigned int EN_PadGrp = 1073875968u; long unsigned int EN_Pad = 2ul; unsigned int STAT_PadGrp = 1073873920u; long unsigned int STAT_Pad = 4ul]	16	static
+chprintf.h:69:20:)	12	static
+main.cpp:451:6:void shellRequestShutdown(BaseSequentialStream*, int, char**)	16	static
+main.cpp:494:6:void shellRequestResetMemory(BaseSequentialStream*, int, char**)	8	static
+main.cpp:505:6:void shellRequestGetBoardId(BaseSequentialStream*, int, char**)	16	static
+main.cpp:531:6:void shellRequestGetMemoryData(BaseSequentialStream*, int, char**)	40	dynamic
+main.cpp:669:6:void shellRequestResetVcnlOffset(BaseSequentialStream*, int, char**)	24	static
+main.cpp:688:6:void shellRequestGetVcnlOffset(BaseSequentialStream*, int, char**)	24	static
+main.cpp:784:6:void shellRequestPrintVCNL(BaseSequentialStream*, int, char**)	48	static
+main.cpp:733:6:void shellRequestCalib(BaseSequentialStream*, int, char**)	8	static
+main.cpp:739:6:void shellRequestGetRobotId(BaseSequentialStream*, int, char**)	8	static
+main.cpp:747:6:void shellRequestGetSystemLoad(BaseSequentialStream*, int, char**)	40	static
+main.cpp:861:6:void shellRequestWiiSteering(BaseSequentialStream*, int, char**)	16	static
+pca9544.hpp:35:13:amiro::PCA9544<ignore_deselect>::~PCA9544() [with bool ignore_deselect = true]	8	static
+pca9544.hpp:35:13:amiro::PCA9544<ignore_deselect>::~PCA9544() [with bool ignore_deselect = true]	8	static
+pca9544.tpp:20:1:msg_t amiro::PCA9544<ignore_deselect>::select(uint8_t) [with bool ignore_deselect = true; msg_t = long int; uint8_t = unsigned char]	24	static
+main.cpp:836:6:void shellRequestGetBootloaderInfo(BaseSequentialStream*, int, char**)	16	static
+main.cpp:516:6:void shellRequestSetBoardId(BaseSequentialStream*, int, char**)	16	static
+main.cpp:766:6:void shellRequestSetCharging(BaseSequentialStream*, int, char**)	16	static
+main.cpp:825:6:void shellSwitchBoardCmd(BaseSequentialStream*, int, char**)	16	static
+main.cpp:645:6:void shellRequestSetVcnlOffset(BaseSequentialStream*, int, char**)	24	static
+main.cpp:717:6:void shellRequestGetVcnl(BaseSequentialStream*, int, char**)	40	static
+global.hpp:150:3:amiro::Global::Global()	64	static
+main.cpp:61:6:void systemStop()	16	static
+main.cpp:140:6:void systemShutdown()	40	static
+main.cpp:205:6:void boardPeripheryCheck(BaseSequentialStream*)	40	static
+main.cpp:711:6:void shellRequestCheck(BaseSequentialStream*, int, char**)	8	static
+main.cpp:918:6:void charger_logic()	8	static
+main.cpp:930:6:void init_powermonitor(amiro::INA219::Driver&, float, float, uint16_t)	40	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+main.cpp:963:5:int main()	64	static
+main.cpp:1251:1:cpp)	8	static
+global.hpp:203:3:amiro::Global::~Global()	24	static

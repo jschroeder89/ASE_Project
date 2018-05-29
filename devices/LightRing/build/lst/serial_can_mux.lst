@@ -1,0 +1,925 @@
+ARM GAS  /tmp/cckyYTmp.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"serial_can_mux.cpp"
+  15              		.section	.text.NVIC_SystemReset,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.thumb
+  19              		.thumb_func
+  20              		.type	NVIC_SystemReset, %function
+  21              	NVIC_SystemReset:
+  22              		@ Volatile: function does not return.
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26              	@ 343 "../../../ChibiOS/os/ports/common/ARMCMx/CMSIS/include/core_cmInstr.h" 1
+  27 0000 BFF34F8F 		dsb
+  28              	@ 0 "" 2
+  29              		.thumb
+  30 0004 044A     		ldr	r2, .L4
+  31 0006 054B     		ldr	r3, .L4+4
+  32 0008 D168     		ldr	r1, [r2, #12]
+  33 000a 01F4E061 		and	r1, r1, #1792
+  34 000e 0B43     		orrs	r3, r3, r1
+  35 0010 D360     		str	r3, [r2, #12]
+  36              	@ 343 "../../../ChibiOS/os/ports/common/ARMCMx/CMSIS/include/core_cmInstr.h" 1
+  37 0012 BFF34F8F 		dsb
+  38              	@ 0 "" 2
+  39              		.thumb
+  40              	.L2:
+  41 0016 FEE7     		b	.L2
+  42              	.L5:
+  43              		.align	2
+  44              	.L4:
+  45 0018 00ED00E0 		.word	-536810240
+  46 001c 0400FA05 		.word	100270084
+  47              		.size	NVIC_SystemReset, .-NVIC_SystemReset
+  48              		.section	.text._ZN5amiro12SerialCanMuxD2Ev,"ax",%progbits
+  49              		.align	2
+  50              		.p2align 4,,15
+  51              		.global	_ZN5amiro12SerialCanMuxD2Ev
+  52              		.thumb
+  53              		.thumb_func
+  54              		.type	_ZN5amiro12SerialCanMuxD2Ev, %function
+  55              	_ZN5amiro12SerialCanMuxD2Ev:
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cckyYTmp.s 			page 2
+
+
+  58              		@ link register save eliminated.
+  59 0000 014B     		ldr	r3, .L7
+  60 0002 0360     		str	r3, [r0]
+  61 0004 7047     		bx	lr
+  62              	.L8:
+  63 0006 00BF     		.align	2
+  64              	.L7:
+  65 0008 08000000 		.word	.LANCHOR0+8
+  66              		.size	_ZN5amiro12SerialCanMuxD2Ev, .-_ZN5amiro12SerialCanMuxD2Ev
+  67              		.global	_ZN5amiro12SerialCanMuxD1Ev
+  68              		.thumb_set _ZN5amiro12SerialCanMuxD1Ev,_ZN5amiro12SerialCanMuxD2Ev
+  69 000c AFF30080 		.section	.text._ZN5amiro12SerialCanMuxD0Ev,"ax",%progbits
+  70              		.align	2
+  71              		.p2align 4,,15
+  72              		.global	_ZN5amiro12SerialCanMuxD0Ev
+  73              		.thumb
+  74              		.thumb_func
+  75              		.type	_ZN5amiro12SerialCanMuxD0Ev, %function
+  76              	_ZN5amiro12SerialCanMuxD0Ev:
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79 0000 10B5     		push	{r4, lr}
+  80 0002 034B     		ldr	r3, .L10
+  81 0004 0446     		mov	r4, r0
+  82 0006 0360     		str	r3, [r0]
+  83 0008 FFF7FEFF 		bl	_ZdlPv
+  84 000c 2046     		mov	r0, r4
+  85 000e 10BD     		pop	{r4, pc}
+  86              	.L11:
+  87              		.align	2
+  88              	.L10:
+  89 0010 08000000 		.word	.LANCHOR0+8
+  90              		.size	_ZN5amiro12SerialCanMuxD0Ev, .-_ZN5amiro12SerialCanMuxD0Ev
+  91 0014 AFF30080 		.section	.text._ZL8chprintfP20BaseSequentialStreamPKcz,"ax",%progbits
+  91      AFF30080 
+  91      AFF30080 
+  92              		.align	2
+  93              		.p2align 4,,15
+  94              		.thumb
+  95              		.thumb_func
+  96              		.type	_ZL8chprintfP20BaseSequentialStreamPKcz, %function
+  97              	_ZL8chprintfP20BaseSequentialStreamPKcz:
+  98              		@ args = 4, pretend = 12, frame = 8
+  99              		@ frame_needed = 0, uses_anonymous_args = 1
+ 100 0000 0EB4     		push	{r1, r2, r3}
+ 101 0002 00B5     		push	{lr}
+ 102 0004 82B0     		sub	sp, sp, #8
+ 103 0006 03AB     		add	r3, sp, #12
+ 104 0008 53F8041B 		ldr	r1, [r3], #4
+ 105 000c 1A46     		mov	r2, r3
+ 106 000e 0193     		str	r3, [sp, #4]
+ 107 0010 FFF7FEFF 		bl	chvprintf
+ 108 0014 02B0     		add	sp, sp, #8
+ 109              		@ sp needed
+ 110 0016 5DF804EB 		ldr	lr, [sp], #4
+ 111 001a 03B0     		add	sp, sp, #12
+ 112 001c 7047     		bx	lr
+ARM GAS  /tmp/cckyYTmp.s 			page 3
+
+
+ 113              		.size	_ZL8chprintfP20BaseSequentialStreamPKcz, .-_ZL8chprintfP20BaseSequentialStreamPKcz
+ 114 001e 00BF     		.section	.text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh,"ax",%progbits
+ 115              		.align	2
+ 116              		.p2align 4,,15
+ 117              		.global	_ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
+ 118              		.thumb
+ 119              		.thumb_func
+ 120              		.type	_ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh, %function
+ 121              	_ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124              		@ link register save eliminated.
+ 125 0000 2DE9F003 		push	{r4, r5, r6, r7, r8, r9}
+ 126 0004 114D     		ldr	r5, .L14
+ 127 0006 077E     		ldrb	r7, [r0, #24]	@ zero_extendqisi2
+ 128 0008 DFF84490 		ldr	r9, .L14+4
+ 129 000c 0646     		mov	r6, r0
+ 130 000e B5F80080 		ldrh	r8, [r5]	@ unaligned
+ 131 0012 95F802C0 		ldrb	ip, [r5, #2]	@ zero_extendqisi2
+ 132 0016 46F8049B 		str	r9, [r6], #4
+ 133 001a 0025     		movs	r5, #0
+ 134 001c 07F0CF07 		and	r7, r7, #207
+ 135 0020 65F30307 		bfi	r7, r5, #0, #4
+ 136 0024 A0F80480 		strh	r8, [r0, #4]	@ unaligned
+ 137 0028 86F802C0 		strb	ip, [r6, #2]
+ 138 002c 4375     		strb	r3, [r0, #21]
+ 139 002e 0776     		strb	r7, [r0, #24]
+ 140 0030 8562     		str	r5, [r0, #40]
+ 141 0032 C562     		str	r5, [r0, #44]
+ 142 0034 0563     		str	r5, [r0, #48]
+ 143 0036 4563     		str	r5, [r0, #52]
+ 144 0038 C571     		strb	r5, [r0, #7]
+ 145 003a 0572     		strb	r5, [r0, #8]
+ 146 003c C160     		str	r1, [r0, #12]
+ 147 003e 0261     		str	r2, [r0, #16]
+ 148 0040 0375     		strb	r3, [r0, #20]
+ 149 0042 8375     		strb	r3, [r0, #22]
+ 150 0044 BDE8F003 		pop	{r4, r5, r6, r7, r8, r9}
+ 151 0048 7047     		bx	lr
+ 152              	.L15:
+ 153 004a 00BF     		.align	2
+ 154              	.L14:
+ 155 004c 00000000 		.word	.LANCHOR1
+ 156 0050 08000000 		.word	.LANCHOR0+8
+ 157              		.size	_ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh, .-_ZN5amiro12SerialCanMuxC2EP12Serial
+ 158              		.global	_ZN5amiro12SerialCanMuxC1EP12SerialDriverP9CANDriverh
+ 159              		.thumb_set _ZN5amiro12SerialCanMuxC1EP12SerialDriverP9CANDriverh,_ZN5amiro12SerialCanMuxC2EP12Seri
+ 160 0054 AFF30080 		.section	.text._ZN5amiro12SerialCanMux13restartSystemEv,"ax",%progbits
+ 160      AFF30080 
+ 160      AFF30080 
+ 161              		.align	2
+ 162              		.p2align 4,,15
+ 163              		.global	_ZN5amiro12SerialCanMux13restartSystemEv
+ 164              		.thumb
+ 165              		.thumb_func
+ 166              		.type	_ZN5amiro12SerialCanMux13restartSystemEv, %function
+ 167              	_ZN5amiro12SerialCanMux13restartSystemEv:
+ARM GAS  /tmp/cckyYTmp.s 			page 4
+
+
+ 168              		@ Volatile: function does not return.
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171 0000 08B5     		push	{r3, lr}
+ 172 0002 FFF7FEFF 		bl	NVIC_SystemReset
+ 173              		.size	_ZN5amiro12SerialCanMux13restartSystemEv, .-_ZN5amiro12SerialCanMux13restartSystemEv
+ 174 0006 00BFAFF3 		.section	.text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj,"ax",%progbits
+ 174      0080AFF3 
+ 174      0080
+ 175              		.align	2
+ 176              		.p2align 4,,15
+ 177              		.global	_ZN5amiro12SerialCanMux19checkByteForBLResetEPhj
+ 178              		.thumb
+ 179              		.thumb_func
+ 180              		.type	_ZN5amiro12SerialCanMux19checkByteForBLResetEPhj, %function
+ 181              	_ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:
+ 182              		@ args = 0, pretend = 0, frame = 0
+ 183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 184 0000 70B5     		push	{r4, r5, r6, lr}
+ 185 0002 0446     		mov	r4, r0
+ 186 0004 C379     		ldrb	r3, [r0, #7]	@ zero_extendqisi2
+ 187 0006 3AB3     		cbz	r2, .L19
+ 188 0008 022B     		cmp	r3, #2
+ 189 000a 0D78     		ldrb	r5, [r1]	@ zero_extendqisi2
+ 190 000c 28D8     		bhi	.L20
+ 191 000e 0A44     		add	r2, r2, r1
+ 192 0010 561E     		subs	r6, r2, #1
+ 193 0012 0020     		movs	r0, #0
+ 194 0014 06E0     		b	.L21
+ 195              	.L22:
+ 196 0016 E071     		strb	r0, [r4, #7]
+ 197 0018 2072     		strb	r0, [r4, #8]
+ 198 001a 0023     		movs	r3, #0
+ 199              	.L23:
+ 200 001c B142     		cmp	r1, r6
+ 201 001e 1BD0     		beq	.L19
+ 202 0020 11F8015F 		ldrb	r5, [r1, #1]!	@ zero_extendqisi2
+ 203              	.L21:
+ 204 0024 E218     		adds	r2, r4, r3
+ 205 0026 1279     		ldrb	r2, [r2, #4]	@ zero_extendqisi2
+ 206 0028 AA42     		cmp	r2, r5
+ 207 002a F4D1     		bne	.L22
+ 208 002c 0133     		adds	r3, r3, #1
+ 209 002e DBB2     		uxtb	r3, r3
+ 210 0030 032B     		cmp	r3, #3
+ 211 0032 E371     		strb	r3, [r4, #7]
+ 212 0034 F2D1     		bne	.L23
+ 213 0036 E068     		ldr	r0, [r4, #12]
+ 214 0038 1149     		ldr	r1, .L28
+ 215 003a FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 216 003e 1424     		movs	r4, #20
+ 217              	.L25:
+ 218 0040 6420     		movs	r0, #100
+ 219 0042 FFF7FEFF 		bl	chThdSleep
+ 220 0046 6420     		movs	r0, #100
+ 221 0048 FFF7FEFF 		bl	chThdSleep
+ 222 004c 631E     		subs	r3, r4, #1
+ARM GAS  /tmp/cckyYTmp.s 			page 5
+
+
+ 223 004e 13F0FF04 		ands	r4, r3, #255
+ 224 0052 F5D1     		bne	.L25
+ 225              	.L27:
+ 226 0054 FFF7FEFF 		bl	NVIC_SystemReset
+ 227              	.L19:
+ 228 0058 181C     		adds	r0, r3, #0
+ 229 005a 18BF     		it	ne
+ 230 005c 0120     		movne	r0, #1
+ 231 005e 70BD     		pop	{r4, r5, r6, pc}
+ 232              	.L20:
+ 233 0060 037A     		ldrb	r3, [r0, #8]	@ zero_extendqisi2
+ 234 0062 0849     		ldr	r1, .L28+4
+ 235 0064 E218     		adds	r2, r4, r3
+ 236 0066 0133     		adds	r3, r3, #1
+ 237 0068 C068     		ldr	r0, [r0, #12]
+ 238 006a D571     		strb	r5, [r2, #7]
+ 239 006c 2A46     		mov	r2, r5
+ 240 006e 2372     		strb	r3, [r4, #8]
+ 241 0070 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 242 0074 4FF4FA60 		mov	r0, #2000
+ 243 0078 FFF7FEFF 		bl	chThdSleep
+ 244 007c EAE7     		b	.L27
+ 245              	.L29:
+ 246 007e 00BF     		.align	2
+ 247              	.L28:
+ 248 0080 00000000 		.word	.LC1
+ 249 0084 14000000 		.word	.LC2
+ 250              		.size	_ZN5amiro12SerialCanMux19checkByteForBLResetEPhj, .-_ZN5amiro12SerialCanMux19checkByteForBLR
+ 251 0088 AFF30080 		.section	.text._ZN5amiro12SerialCanMux10sendViaCanEmPhj,"ax",%progbits
+ 251      AFF30080 
+ 252              		.align	2
+ 253              		.p2align 4,,15
+ 254              		.global	_ZN5amiro12SerialCanMux10sendViaCanEmPhj
+ 255              		.thumb
+ 256              		.thumb_func
+ 257              		.type	_ZN5amiro12SerialCanMux10sendViaCanEmPhj, %function
+ 258              	_ZN5amiro12SerialCanMux10sendViaCanEmPhj:
+ 259              		@ args = 0, pretend = 0, frame = 0
+ 260              		@ frame_needed = 0, uses_anonymous_args = 0
+ 261 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 262 0004 047D     		ldrb	r4, [r0, #20]	@ zero_extendqisi2
+ 263 0006 0546     		mov	r5, r0
+ 264 0008 808B     		ldrh	r0, [r0, #28]
+ 265 000a 44EAC101 		orr	r1, r4, r1, lsl #3
+ 266 000e 61F30A00 		bfi	r0, r1, #0, #11
+ 267 0012 1F46     		mov	r7, r3
+ 268 0014 9046     		mov	r8, r2
+ 269 0016 A883     		strh	r0, [r5, #28]	@ movhi
+ 270 0018 5BB3     		cbz	r3, .L34
+ 271 001a 05F1200A 		add	r10, r5, #32
+ 272 001e 05F11809 		add	r9, r5, #24
+ 273 0022 03F00F0B 		and	fp, r3, #15
+ 274 0026 0021     		movs	r1, #0
+ 275 0028 02E0     		b	.L35
+ 276              	.L38:
+ 277 002a A742     		cmp	r7, r4
+ 278 002c 21D9     		bls	.L34
+ARM GAS  /tmp/cckyYTmp.s 			page 6
+
+
+ 279 002e 2146     		mov	r1, r4
+ 280              	.L35:
+ 281 0030 01F10804 		add	r4, r1, #8
+ 282 0034 A742     		cmp	r7, r4
+ 283 0036 28BF     		it	cs
+ 284 0038 0822     		movcs	r2, #8
+ 285 003a 2E7E     		ldrb	r6, [r5, #24]	@ zero_extendqisi2
+ 286 003c 34BF     		ite	cc
+ 287 003e 5B46     		movcc	r3, fp
+ 288 0040 1346     		movcs	r3, r2
+ 289 0042 63F30306 		bfi	r6, r3, #0, #4
+ 290 0046 38BF     		it	cc
+ 291 0048 5A46     		movcc	r2, fp
+ 292 004a 4144     		add	r1, r1, r8
+ 293 004c 2E76     		strb	r6, [r5, #24]
+ 294 004e 5046     		mov	r0, r10
+ 295 0050 FFF7FEFF 		bl	memcpy
+ 296 0054 2869     		ldr	r0, [r5, #16]
+ 297 0056 0321     		movs	r1, #3
+ 298 0058 4A46     		mov	r2, r9
+ 299 005a 4FF0FF33 		mov	r3, #-1
+ 300 005e FFF7FEFF 		bl	canTransmit
+ 301 0062 0BF1080B 		add	fp, fp, #8
+ 302 0066 0BF00F0B 		and	fp, fp, #15
+ 303 006a 0028     		cmp	r0, #0
+ 304 006c DDD0     		beq	.L38
+ 305 006e BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 306              	.L34:
+ 307 0072 0020     		movs	r0, #0
+ 308 0074 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 309              		.size	_ZN5amiro12SerialCanMux10sendViaCanEmPhj, .-_ZN5amiro12SerialCanMux10sendViaCanEmPhj
+ 310 0078 AFF30080 		.section	.text._ZN5amiro12SerialCanMux5writeEPKhj,"ax",%progbits
+ 310      AFF30080 
+ 311              		.align	2
+ 312              		.p2align 4,,15
+ 313              		.global	_ZN5amiro12SerialCanMux5writeEPKhj
+ 314              		.thumb
+ 315              		.thumb_func
+ 316              		.type	_ZN5amiro12SerialCanMux5writeEPKhj, %function
+ 317              	_ZN5amiro12SerialCanMux5writeEPKhj:
+ 318              		@ args = 0, pretend = 0, frame = 0
+ 319              		@ frame_needed = 0, uses_anonymous_args = 0
+ 320 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 321 0004 837D     		ldrb	r3, [r0, #22]	@ zero_extendqisi2
+ 322 0006 067D     		ldrb	r6, [r0, #20]	@ zero_extendqisi2
+ 323 0008 0F46     		mov	r7, r1
+ 324 000a 9E42     		cmp	r6, r3
+ 325 000c 1546     		mov	r5, r2
+ 326 000e 12D0     		beq	.L46
+ 327 0010 817D     		ldrb	r1, [r0, #22]	@ zero_extendqisi2
+ 328 0012 2B46     		mov	r3, r5
+ 329 0014 01F00701 		and	r1, r1, #7
+ 330 0018 3A46     		mov	r2, r7
+ 331 001a 41F07801 		orr	r1, r1, #120
+ 332 001e FFF7FEFF 		bl	_ZN5amiro12SerialCanMux10sendViaCanEmPhj
+ 333 0022 0446     		mov	r4, r0
+ 334 0024 0120     		movs	r0, #1
+ARM GAS  /tmp/cckyYTmp.s 			page 7
+
+
+ 335 0026 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 336 002a 002C     		cmp	r4, #0
+ 337 002c 18BF     		it	ne
+ 338 002e 0025     		movne	r5, #0
+ 339 0030 2846     		mov	r0, r5
+ 340 0032 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 341              	.L46:
+ 342 0036 C068     		ldr	r0, [r0, #12]
+ 343 0038 4FF0FF33 		mov	r3, #-1
+ 344 003c 3030     		adds	r0, r0, #48
+ 345 003e BDE8F041 		pop	{r4, r5, r6, r7, r8, lr}
+ 346 0042 FFF7FEBF 		b	chOQWriteTimeout
+ 347              		.size	_ZN5amiro12SerialCanMux5writeEPKhj, .-_ZN5amiro12SerialCanMux5writeEPKhj
+ 348 0046 00BFAFF3 		.section	.text._ZN5amiro12SerialCanMux4readEPhj,"ax",%progbits
+ 348      0080AFF3 
+ 348      0080
+ 349              		.align	2
+ 350              		.p2align 4,,15
+ 351              		.global	_ZN5amiro12SerialCanMux4readEPhj
+ 352              		.thumb
+ 353              		.thumb_func
+ 354              		.type	_ZN5amiro12SerialCanMux4readEPhj, %function
+ 355              	_ZN5amiro12SerialCanMux4readEPhj:
+ 356              		@ args = 0, pretend = 0, frame = 0
+ 357              		@ frame_needed = 0, uses_anonymous_args = 0
+ 358 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 359 0002 0446     		mov	r4, r0
+ 360 0004 C068     		ldr	r0, [r0, #12]
+ 361 0006 04F12805 		add	r5, r4, #40
+ 362 000a 4FF0FF33 		mov	r3, #-1
+ 363 000e 0F46     		mov	r7, r1
+ 364 0010 0C30     		adds	r0, r0, #12
+ 365 0012 2946     		mov	r1, r5
+ 366 0014 FFF7FEFF 		bl	chIQReadTimeout
+ 367 0018 0646     		mov	r6, r0
+ 368 001a 3246     		mov	r2, r6
+ 369 001c 2046     		mov	r0, r4
+ 370 001e 2946     		mov	r1, r5
+ 371 0020 FFF7FEFF 		bl	_ZN5amiro12SerialCanMux19checkByteForBLResetEPhj
+ 372 0024 637D     		ldrb	r3, [r4, #21]	@ zero_extendqisi2
+ 373 0026 227D     		ldrb	r2, [r4, #20]	@ zero_extendqisi2
+ 374 0028 9A42     		cmp	r2, r3
+ 375 002a 0BD0     		beq	.L48
+ 376 002c 617D     		ldrb	r1, [r4, #21]	@ zero_extendqisi2
+ 377 002e 2A46     		mov	r2, r5
+ 378 0030 01F00701 		and	r1, r1, #7
+ 379 0034 41F07001 		orr	r1, r1, #112
+ 380 0038 2046     		mov	r0, r4
+ 381 003a 3346     		mov	r3, r6
+ 382 003c FFF7FEFF 		bl	_ZN5amiro12SerialCanMux10sendViaCanEmPhj
+ 383 0040 3046     		mov	r0, r6
+ 384 0042 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 385              	.L48:
+ 386 0044 3846     		mov	r0, r7
+ 387 0046 2946     		mov	r1, r5
+ 388 0048 3246     		mov	r2, r6
+ 389 004a FFF7FEFF 		bl	memcpy
+ARM GAS  /tmp/cckyYTmp.s 			page 8
+
+
+ 390 004e 3046     		mov	r0, r6
+ 391 0050 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 392              		.size	_ZN5amiro12SerialCanMux4readEPhj, .-_ZN5amiro12SerialCanMux4readEPhj
+ 393 0052 00BFAFF3 		.section	.text._ZN5amiro12SerialCanMux3putEh,"ax",%progbits
+ 393      0080AFF3 
+ 393      0080AFF3 
+ 393      0080
+ 394              		.align	2
+ 395              		.p2align 4,,15
+ 396              		.global	_ZN5amiro12SerialCanMux3putEh
+ 397              		.thumb
+ 398              		.thumb_func
+ 399              		.type	_ZN5amiro12SerialCanMux3putEh, %function
+ 400              	_ZN5amiro12SerialCanMux3putEh:
+ 401              		@ args = 0, pretend = 0, frame = 8
+ 402              		@ frame_needed = 0, uses_anonymous_args = 0
+ 403 0000 10B5     		push	{r4, lr}
+ 404 0002 827D     		ldrb	r2, [r0, #22]	@ zero_extendqisi2
+ 405 0004 047D     		ldrb	r4, [r0, #20]	@ zero_extendqisi2
+ 406 0006 82B0     		sub	sp, sp, #8
+ 407 0008 9442     		cmp	r4, r2
+ 408 000a 8DF80710 		strb	r1, [sp, #7]
+ 409 000e 10D0     		beq	.L51
+ 410 0010 817D     		ldrb	r1, [r0, #22]	@ zero_extendqisi2
+ 411 0012 0DF10702 		add	r2, sp, #7
+ 412 0016 01F00701 		and	r1, r1, #7
+ 413 001a 41F07801 		orr	r1, r1, #120
+ 414 001e 0123     		movs	r3, #1
+ 415 0020 FFF7FEFF 		bl	_ZN5amiro12SerialCanMux10sendViaCanEmPhj
+ 416 0024 0446     		mov	r4, r0
+ 417 0026 0120     		movs	r0, #1
+ 418 0028 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 419 002c 2046     		mov	r0, r4
+ 420 002e 02B0     		add	sp, sp, #8
+ 421              		@ sp needed
+ 422 0030 10BD     		pop	{r4, pc}
+ 423              	.L51:
+ 424 0032 C068     		ldr	r0, [r0, #12]
+ 425 0034 9DF80710 		ldrb	r1, [sp, #7]	@ zero_extendqisi2
+ 426 0038 4FF0FF32 		mov	r2, #-1
+ 427 003c 3030     		adds	r0, r0, #48
+ 428 003e FFF7FEFF 		bl	chOQPutTimeout
+ 429 0042 0446     		mov	r4, r0
+ 430 0044 2046     		mov	r0, r4
+ 431 0046 02B0     		add	sp, sp, #8
+ 432              		@ sp needed
+ 433 0048 10BD     		pop	{r4, pc}
+ 434              		.size	_ZN5amiro12SerialCanMux3putEh, .-_ZN5amiro12SerialCanMux3putEh
+ 435 004a 00BFAFF3 		.section	.text._ZN5amiro12SerialCanMux3getEv,"ax",%progbits
+ 435      0080
+ 436              		.align	2
+ 437              		.p2align 4,,15
+ 438              		.global	_ZN5amiro12SerialCanMux3getEv
+ 439              		.thumb
+ 440              		.thumb_func
+ 441              		.type	_ZN5amiro12SerialCanMux3getEv, %function
+ 442              	_ZN5amiro12SerialCanMux3getEv:
+ARM GAS  /tmp/cckyYTmp.s 			page 9
+
+
+ 443              		@ args = 0, pretend = 0, frame = 8
+ 444              		@ frame_needed = 0, uses_anonymous_args = 0
+ 445 0000 70B5     		push	{r4, r5, r6, lr}
+ 446 0002 0446     		mov	r4, r0
+ 447 0004 C068     		ldr	r0, [r0, #12]
+ 448 0006 82B0     		sub	sp, sp, #8
+ 449 0008 4FF0FF31 		mov	r1, #-1
+ 450 000c 0C30     		adds	r0, r0, #12
+ 451 000e FFF7FEFF 		bl	chIQGetTimeout
+ 452 0012 02AD     		add	r5, sp, #8
+ 453 0014 05F8010D 		strb	r0, [r5, #-1]!
+ 454 0018 0122     		movs	r2, #1
+ 455 001a 0646     		mov	r6, r0
+ 456 001c 2946     		mov	r1, r5
+ 457 001e 2046     		mov	r0, r4
+ 458 0020 FFF7FEFF 		bl	_ZN5amiro12SerialCanMux19checkByteForBLResetEPhj
+ 459 0024 637D     		ldrb	r3, [r4, #21]	@ zero_extendqisi2
+ 460 0026 227D     		ldrb	r2, [r4, #20]	@ zero_extendqisi2
+ 461 0028 9A42     		cmp	r2, r3
+ 462 002a 09D0     		beq	.L54
+ 463 002c 617D     		ldrb	r1, [r4, #21]	@ zero_extendqisi2
+ 464 002e 2A46     		mov	r2, r5
+ 465 0030 01F00701 		and	r1, r1, #7
+ 466 0034 41F07001 		orr	r1, r1, #112
+ 467 0038 2046     		mov	r0, r4
+ 468 003a 0123     		movs	r3, #1
+ 469 003c FFF7FEFF 		bl	_ZN5amiro12SerialCanMux10sendViaCanEmPhj
+ 470              	.L54:
+ 471 0040 3046     		mov	r0, r6
+ 472 0042 02B0     		add	sp, sp, #8
+ 473              		@ sp needed
+ 474 0044 70BD     		pop	{r4, r5, r6, pc}
+ 475              		.size	_ZN5amiro12SerialCanMux3getEv, .-_ZN5amiro12SerialCanMux3getEv
+ 476 0046 00BFAFF3 		.section	.text._ZN5amiro12SerialCanMux14convCan2SerialEPhj,"ax",%progbits
+ 476      0080AFF3 
+ 476      0080
+ 477              		.align	2
+ 478              		.p2align 4,,15
+ 479              		.global	_ZN5amiro12SerialCanMux14convCan2SerialEPhj
+ 480              		.thumb
+ 481              		.thumb_func
+ 482              		.type	_ZN5amiro12SerialCanMux14convCan2SerialEPhj, %function
+ 483              	_ZN5amiro12SerialCanMux14convCan2SerialEPhj:
+ 484              		@ args = 0, pretend = 0, frame = 0
+ 485              		@ frame_needed = 0, uses_anonymous_args = 0
+ 486 0000 70B5     		push	{r4, r5, r6, lr}
+ 487 0002 2023     		movs	r3, #32
+ 488 0004 0546     		mov	r5, r0
+ 489 0006 0C46     		mov	r4, r1
+ 490 0008 1646     		mov	r6, r2
+ 491              	@ 174 "../../components/serial_reset/serial_can_mux.cpp" 1
+ 492 000a 83F31188 		msr     BASEPRI, r3
+ 493              	@ 0 "" 2
+ 494              		.thumb
+ 495 000e FFF7FEFF 		bl	dbg_check_lock
+ 496 0012 3EB1     		cbz	r6, .L57
+ 497 0014 2644     		add	r6, r6, r4
+ARM GAS  /tmp/cckyYTmp.s 			page 10
+
+
+ 498              	.L58:
+ 499 0016 14F8011B 		ldrb	r1, [r4], #1	@ zero_extendqisi2
+ 500 001a E868     		ldr	r0, [r5, #12]
+ 501 001c FFF7FEFF 		bl	sdIncomingDataI
+ 502 0020 B442     		cmp	r4, r6
+ 503 0022 F8D1     		bne	.L58
+ 504              	.L57:
+ 505 0024 FFF7FEFF 		bl	dbg_check_unlock
+ 506 0028 0023     		movs	r3, #0
+ 507              	@ 177 "../../components/serial_reset/serial_can_mux.cpp" 1
+ 508 002a 83F31188 		msr     BASEPRI, r3
+ 509              	@ 0 "" 2
+ 510              		.thumb
+ 511 002e 70BD     		pop	{r4, r5, r6, pc}
+ 512              		.size	_ZN5amiro12SerialCanMux14convCan2SerialEPhj, .-_ZN5amiro12SerialCanMux14convCan2SerialEPhj
+ 513              		.section	.text._ZN5amiro12SerialCanMux13sendSwitchCmdEh,"ax",%progbits
+ 514              		.align	2
+ 515              		.p2align 4,,15
+ 516              		.global	_ZN5amiro12SerialCanMux13sendSwitchCmdEh
+ 517              		.thumb
+ 518              		.thumb_func
+ 519              		.type	_ZN5amiro12SerialCanMux13sendSwitchCmdEh, %function
+ 520              	_ZN5amiro12SerialCanMux13sendSwitchCmdEh:
+ 521              		@ args = 0, pretend = 0, frame = 0
+ 522              		@ frame_needed = 0, uses_anonymous_args = 0
+ 523 0000 38B5     		push	{r3, r4, r5, lr}
+ 524 0002 037D     		ldrb	r3, [r0, #20]	@ zero_extendqisi2
+ 525 0004 0446     		mov	r4, r0
+ 526 0006 8B42     		cmp	r3, r1
+ 527 0008 0D46     		mov	r5, r1
+ 528 000a 55D0     		beq	.L69
+ 529 000c 837D     		ldrb	r3, [r0, #22]	@ zero_extendqisi2
+ 530 000e C068     		ldr	r0, [r0, #12]
+ 531 0010 9942     		cmp	r1, r3
+ 532 0012 3FD0     		beq	.L70
+ 533 0014 2B49     		ldr	r1, .L73
+ 534 0016 2A46     		mov	r2, r5
+ 535 0018 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 536              	.L62:
+ 537 001c 237D     		ldrb	r3, [r4, #20]	@ zero_extendqisi2
+ 538 001e AB42     		cmp	r3, r5
+ 539 0020 37D0     		beq	.L60
+ 540 0022 A27D     		ldrb	r2, [r4, #22]	@ zero_extendqisi2
+ 541 0024 9542     		cmp	r5, r2
+ 542 0026 16D0     		beq	.L65
+ 543 0028 A07D     		ldrb	r0, [r4, #22]	@ zero_extendqisi2
+ 544 002a 05F00701 		and	r1, r5, #7
+ 545 002e A28B     		ldrh	r2, [r4, #28]
+ 546 0030 237E     		ldrb	r3, [r4, #24]	@ zero_extendqisi2
+ 547 0032 41F07001 		orr	r1, r1, #112
+ 548 0036 40EAC101 		orr	r1, r0, r1, lsl #3
+ 549 003a 61F30A02 		bfi	r2, r1, #0, #11
+ 550 003e 6FF30303 		bfc	r3, #0, #4
+ 551 0042 A283     		strh	r2, [r4, #28]	@ movhi
+ 552 0044 2376     		strb	r3, [r4, #24]
+ 553 0046 2069     		ldr	r0, [r4, #16]
+ 554 0048 0123     		movs	r3, #1
+ARM GAS  /tmp/cckyYTmp.s 			page 11
+
+
+ 555 004a 0321     		movs	r1, #3
+ 556 004c 04F11802 		add	r2, r4, #24
+ 557 0050 FFF7FEFF 		bl	canTransmit
+ 558 0054 237D     		ldrb	r3, [r4, #20]	@ zero_extendqisi2
+ 559              	.L65:
+ 560 0056 A27D     		ldrb	r2, [r4, #22]	@ zero_extendqisi2
+ 561 0058 9A42     		cmp	r2, r3
+ 562 005a 2BD0     		beq	.L71
+ 563 005c A37D     		ldrb	r3, [r4, #22]	@ zero_extendqisi2
+ 564 005e A27D     		ldrb	r2, [r4, #22]	@ zero_extendqisi2
+ 565 0060 9D42     		cmp	r5, r3
+ 566 0062 1BD0     		beq	.L72
+ 567 0064 02F00702 		and	r2, r2, #7
+ 568 0068 A38B     		ldrh	r3, [r4, #28]
+ 569 006a 42F07002 		orr	r2, r2, #112
+ 570 006e 45EAC205 		orr	r5, r5, r2, lsl #3
+ 571 0072 65F30A03 		bfi	r3, r5, #0, #11
+ 572 0076 A383     		strh	r3, [r4, #28]	@ movhi
+ 573              	.L68:
+ 574 0078 237E     		ldrb	r3, [r4, #24]	@ zero_extendqisi2
+ 575 007a 2069     		ldr	r0, [r4, #16]
+ 576 007c 6FF30303 		bfc	r3, #0, #4
+ 577 0080 2376     		strb	r3, [r4, #24]
+ 578 0082 0321     		movs	r1, #3
+ 579 0084 0123     		movs	r3, #1
+ 580 0086 04F11802 		add	r2, r4, #24
+ 581 008a FFF7FEFF 		bl	canTransmit
+ 582 008e 237D     		ldrb	r3, [r4, #20]	@ zero_extendqisi2
+ 583 0090 A375     		strb	r3, [r4, #22]
+ 584              	.L60:
+ 585 0092 38BD     		pop	{r3, r4, r5, pc}
+ 586              	.L70:
+ 587 0094 0C49     		ldr	r1, .L73+4
+ 588 0096 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 589 009a BFE7     		b	.L62
+ 590              	.L72:
+ 591 009c A17D     		ldrb	r1, [r4, #22]	@ zero_extendqisi2
+ 592 009e 02F00702 		and	r2, r2, #7
+ 593 00a2 A38B     		ldrh	r3, [r4, #28]
+ 594 00a4 42F07002 		orr	r2, r2, #112
+ 595 00a8 41EAC202 		orr	r2, r1, r2, lsl #3
+ 596 00ac 62F30A03 		bfi	r3, r2, #0, #11
+ 597 00b0 A383     		strh	r3, [r4, #28]	@ movhi
+ 598 00b2 E1E7     		b	.L68
+ 599              	.L71:
+ 600 00b4 6575     		strb	r5, [r4, #21]
+ 601 00b6 38BD     		pop	{r3, r4, r5, pc}
+ 602              	.L69:
+ 603 00b8 C068     		ldr	r0, [r0, #12]
+ 604 00ba 0449     		ldr	r1, .L73+8
+ 605 00bc FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 606 00c0 ACE7     		b	.L62
+ 607              	.L74:
+ 608 00c2 00BF     		.align	2
+ 609              	.L73:
+ 610 00c4 68000000 		.word	.LC5
+ 611 00c8 4C000000 		.word	.LC4
+ARM GAS  /tmp/cckyYTmp.s 			page 12
+
+
+ 612 00cc 34000000 		.word	.LC3
+ 613              		.size	_ZN5amiro12SerialCanMux13sendSwitchCmdEh, .-_ZN5amiro12SerialCanMux13sendSwitchCmdEh
+ 614              		.section	.text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh,"ax",%progbits
+ 615              		.align	2
+ 616              		.p2align 4,,15
+ 617              		.global	_ZN5amiro12SerialCanMux12rcvSwitchCmdEh
+ 618              		.thumb
+ 619              		.thumb_func
+ 620              		.type	_ZN5amiro12SerialCanMux12rcvSwitchCmdEh, %function
+ 621              	_ZN5amiro12SerialCanMux12rcvSwitchCmdEh:
+ 622              		@ args = 0, pretend = 0, frame = 0
+ 623              		@ frame_needed = 0, uses_anonymous_args = 0
+ 624 0000 70B5     		push	{r4, r5, r6, lr}
+ 625 0002 067D     		ldrb	r6, [r0, #20]	@ zero_extendqisi2
+ 626 0004 0446     		mov	r4, r0
+ 627 0006 8E42     		cmp	r6, r1
+ 628 0008 0D46     		mov	r5, r1
+ 629 000a 0FD0     		beq	.L79
+ 630 000c 437D     		ldrb	r3, [r0, #21]	@ zero_extendqisi2
+ 631 000e C068     		ldr	r0, [r0, #12]
+ 632 0010 9E42     		cmp	r6, r3
+ 633 0012 05D0     		beq	.L78
+ 634 0014 0849     		ldr	r1, .L80
+ 635 0016 2A46     		mov	r2, r5
+ 636 0018 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 637 001c 6575     		strb	r5, [r4, #21]
+ 638 001e 70BD     		pop	{r4, r5, r6, pc}
+ 639              	.L78:
+ 640 0020 0649     		ldr	r1, .L80+4
+ 641 0022 2A46     		mov	r2, r5
+ 642 0024 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 643 0028 A575     		strb	r5, [r4, #22]
+ 644 002a 70BD     		pop	{r4, r5, r6, pc}
+ 645              	.L79:
+ 646 002c C068     		ldr	r0, [r0, #12]
+ 647 002e 0449     		ldr	r1, .L80+8
+ 648 0030 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 649 0034 6675     		strb	r6, [r4, #21]
+ 650 0036 70BD     		pop	{r4, r5, r6, pc}
+ 651              	.L81:
+ 652              		.align	2
+ 653              	.L80:
+ 654 0038 A0000000 		.word	.LC7
+ 655 003c C4000000 		.word	.LC8
+ 656 0040 8C000000 		.word	.LC6
+ 657              		.size	_ZN5amiro12SerialCanMux12rcvSwitchCmdEh, .-_ZN5amiro12SerialCanMux12rcvSwitchCmdEh
+ 658 0044 AFF30080 		.section	.text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh,"ax",%
+ 658      AFF30080 
+ 658      AFF30080 
+ 659              		.align	2
+ 660              		.p2align 4,,15
+ 661              		.thumb
+ 662              		.thumb_func
+ 663              		.type	_GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh, %function
+ 664              	_GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:
+ 665              		@ args = 0, pretend = 0, frame = 0
+ 666              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cckyYTmp.s 			page 13
+
+
+ 667              		@ link register save eliminated.
+ 668 0000 024B     		ldr	r3, .L83
+ 669 0002 034A     		ldr	r2, .L83+4
+ 670 0004 1A60     		str	r2, [r3]
+ 671 0006 5A60     		str	r2, [r3, #4]
+ 672 0008 7047     		bx	lr
+ 673              	.L84:
+ 674 000a 00BF     		.align	2
+ 675              	.L83:
+ 676 000c 00000000 		.word	.LANCHOR2
+ 677 0010 A0860100 		.word	100000
+ 678              		.size	_GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh, .-_GLOBAL__sub_I__ZN5a
+ 679 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 679      AFF30080 
+ 679      AFF30080 
+ 680              		.align	2
+ 681 0000 00000000 		.word	_GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh(target1)
+ 682              		.weak	_ZTVN10chibios_rt29BaseSequentialStreamInterfaceE
+ 683              		.section	.rodata._ZTVN10chibios_rt29BaseSequentialStreamInterfaceE,"aG",%progbits,_ZTVN10chibios_r
+ 684              		.align	3
+ 685              		.type	_ZTVN10chibios_rt29BaseSequentialStreamInterfaceE, %object
+ 686              		.size	_ZTVN10chibios_rt29BaseSequentialStreamInterfaceE, 24
+ 687              	_ZTVN10chibios_rt29BaseSequentialStreamInterfaceE:
+ 688 0000 00000000 		.word	0
+ 689 0004 00000000 		.word	0
+ 690 0008 00000000 		.word	__cxa_pure_virtual
+ 691 000c 00000000 		.word	__cxa_pure_virtual
+ 692 0010 00000000 		.word	__cxa_pure_virtual
+ 693 0014 00000000 		.word	__cxa_pure_virtual
+ 694              		.global	_ZTVN5amiro12SerialCanMuxE
+ 695              		.section	.rodata
+ 696              		.align	2
+ 697              		.set	.LANCHOR1,. + 0
+ 698              	.LC0:
+ 699 0000 02       		.byte	2
+ 700 0001 FF       		.byte	-1
+ 701 0002 00       		.byte	0
+ 702 0003 00       		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 703              		.align	2
+ 704              		.set	.LANCHOR2,. + 0
+ 705              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 706              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 707              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 708 0000 00000000 		.space	8
+ 708      00000000 
+ 709              		.section	.rodata._ZTVN5amiro12SerialCanMuxE,"a",%progbits
+ 710              		.align	3
+ 711              		.set	.LANCHOR0,. + 0
+ 712              		.type	_ZTVN5amiro12SerialCanMuxE, %object
+ 713              		.size	_ZTVN5amiro12SerialCanMuxE, 32
+ 714              	_ZTVN5amiro12SerialCanMuxE:
+ 715 0000 00000000 		.word	0
+ 716 0004 00000000 		.word	0
+ 717 0008 00000000 		.word	_ZN5amiro12SerialCanMux5writeEPKhj
+ 718 000c 00000000 		.word	_ZN5amiro12SerialCanMux4readEPhj
+ 719 0010 00000000 		.word	_ZN5amiro12SerialCanMux3putEh
+ 720 0014 00000000 		.word	_ZN5amiro12SerialCanMux3getEv
+ARM GAS  /tmp/cckyYTmp.s 			page 14
+
+
+ 721 0018 00000000 		.word	_ZN5amiro12SerialCanMuxD1Ev
+ 722 001c 00000000 		.word	_ZN5amiro12SerialCanMuxD0Ev
+ 723              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 724              		.align	2
+ 725              	.LC1:
+ 726 0000 0A0A446F 		.ascii	"\012\012Do reset ...\012\012\000"
+ 726      20726573 
+ 726      6574202E 
+ 726      2E2E0A0A 
+ 726      00
+ 727 0011 000000   		.space	3
+ 728              	.LC2:
+ 729 0014 0A0A4174 		.ascii	"\012\012At device %x: Do reset ...\012\012\000"
+ 729      20646576 
+ 729      69636520 
+ 729      25783A20 
+ 729      446F2072 
+ 730 0033 00       		.space	1
+ 731              	.LC3:
+ 732 0034 53746179 		.ascii	"Stay at the same shell\012\000"
+ 732      20617420 
+ 732      74686520 
+ 732      73616D65 
+ 732      20736865 
+ 733              	.LC4:
+ 734 004c 53776974 		.ascii	"Switch to the own shell\012\000"
+ 734      63682074 
+ 734      6F207468 
+ 734      65206F77 
+ 734      6E207368 
+ 735 0065 000000   		.space	3
+ 736              	.LC5:
+ 737 0068 53776974 		.ascii	"Switch to the shell on board %d\012\000"
+ 737      63682074 
+ 737      6F207468 
+ 737      65207368 
+ 737      656C6C20 
+ 738 0089 000000   		.space	3
+ 739              	.LC6:
+ 740 008c 0A526574 		.ascii	"\012Return own shell\012\012\000"
+ 740      75726E20 
+ 740      6F776E20 
+ 740      7368656C 
+ 740      6C0A0A00 
+ 741              	.LC7:
+ 742 00a0 0A537769 		.ascii	"\012Switch to the shell on board %d\012\000"
+ 742      74636820 
+ 742      746F2074 
+ 742      68652073 
+ 742      68656C6C 
+ 743 00c2 0000     		.space	2
+ 744              	.LC8:
+ 745 00c4 0A536865 		.ascii	"\012Shell shown in board %d\012\012\000"
+ 745      6C6C2073 
+ 745      686F776E 
+ 745      20696E20 
+ 745      626F6172 
+ARM GAS  /tmp/cckyYTmp.s 			page 15
+
+
+ 746 00df 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cckyYTmp.s 			page 16
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 serial_can_mux.cpp
+     /tmp/cckyYTmp.s:16     .text.NVIC_SystemReset:00000000 $t
+     /tmp/cckyYTmp.s:21     .text.NVIC_SystemReset:00000000 NVIC_SystemReset
+     /tmp/cckyYTmp.s:45     .text.NVIC_SystemReset:00000018 $d
+     /tmp/cckyYTmp.s:49     .text._ZN5amiro12SerialCanMuxD2Ev:00000000 $t
+     /tmp/cckyYTmp.s:55     .text._ZN5amiro12SerialCanMuxD2Ev:00000000 _ZN5amiro12SerialCanMuxD2Ev
+     /tmp/cckyYTmp.s:65     .text._ZN5amiro12SerialCanMuxD2Ev:00000008 $d
+     /tmp/cckyYTmp.s:55     .text._ZN5amiro12SerialCanMuxD2Ev:00000000 _ZN5amiro12SerialCanMuxD1Ev
+     /tmp/cckyYTmp.s:70     .text._ZN5amiro12SerialCanMuxD0Ev:00000000 $t
+     /tmp/cckyYTmp.s:76     .text._ZN5amiro12SerialCanMuxD0Ev:00000000 _ZN5amiro12SerialCanMuxD0Ev
+     /tmp/cckyYTmp.s:89     .text._ZN5amiro12SerialCanMuxD0Ev:00000010 $d
+     /tmp/cckyYTmp.s:92     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 $t
+     /tmp/cckyYTmp.s:97     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz
+     /tmp/cckyYTmp.s:115    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 $t
+     /tmp/cckyYTmp.s:121    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 _ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
+     /tmp/cckyYTmp.s:155    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:0000004c $d
+     /tmp/cckyYTmp.s:121    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 _ZN5amiro12SerialCanMuxC1EP12SerialDriverP9CANDriverh
+     /tmp/cckyYTmp.s:161    .text._ZN5amiro12SerialCanMux13restartSystemEv:00000000 $t
+     /tmp/cckyYTmp.s:167    .text._ZN5amiro12SerialCanMux13restartSystemEv:00000000 _ZN5amiro12SerialCanMux13restartSystemEv
+     /tmp/cckyYTmp.s:175    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000000 $t
+     /tmp/cckyYTmp.s:181    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000000 _ZN5amiro12SerialCanMux19checkByteForBLResetEPhj
+     /tmp/cckyYTmp.s:248    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000080 $d
+     /tmp/cckyYTmp.s:252    .text._ZN5amiro12SerialCanMux10sendViaCanEmPhj:00000000 $t
+     /tmp/cckyYTmp.s:258    .text._ZN5amiro12SerialCanMux10sendViaCanEmPhj:00000000 _ZN5amiro12SerialCanMux10sendViaCanEmPhj
+     /tmp/cckyYTmp.s:311    .text._ZN5amiro12SerialCanMux5writeEPKhj:00000000 $t
+     /tmp/cckyYTmp.s:317    .text._ZN5amiro12SerialCanMux5writeEPKhj:00000000 _ZN5amiro12SerialCanMux5writeEPKhj
+     /tmp/cckyYTmp.s:349    .text._ZN5amiro12SerialCanMux4readEPhj:00000000 $t
+     /tmp/cckyYTmp.s:355    .text._ZN5amiro12SerialCanMux4readEPhj:00000000 _ZN5amiro12SerialCanMux4readEPhj
+     /tmp/cckyYTmp.s:394    .text._ZN5amiro12SerialCanMux3putEh:00000000 $t
+     /tmp/cckyYTmp.s:400    .text._ZN5amiro12SerialCanMux3putEh:00000000 _ZN5amiro12SerialCanMux3putEh
+     /tmp/cckyYTmp.s:436    .text._ZN5amiro12SerialCanMux3getEv:00000000 $t
+     /tmp/cckyYTmp.s:442    .text._ZN5amiro12SerialCanMux3getEv:00000000 _ZN5amiro12SerialCanMux3getEv
+     /tmp/cckyYTmp.s:477    .text._ZN5amiro12SerialCanMux14convCan2SerialEPhj:00000000 $t
+     /tmp/cckyYTmp.s:483    .text._ZN5amiro12SerialCanMux14convCan2SerialEPhj:00000000 _ZN5amiro12SerialCanMux14convCan2SerialEPhj
+     /tmp/cckyYTmp.s:514    .text._ZN5amiro12SerialCanMux13sendSwitchCmdEh:00000000 $t
+     /tmp/cckyYTmp.s:520    .text._ZN5amiro12SerialCanMux13sendSwitchCmdEh:00000000 _ZN5amiro12SerialCanMux13sendSwitchCmdEh
+     /tmp/cckyYTmp.s:610    .text._ZN5amiro12SerialCanMux13sendSwitchCmdEh:000000c4 $d
+     /tmp/cckyYTmp.s:615    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000000 $t
+     /tmp/cckyYTmp.s:621    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000000 _ZN5amiro12SerialCanMux12rcvSwitchCmdEh
+     /tmp/cckyYTmp.s:654    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000038 $d
+     /tmp/cckyYTmp.s:659    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 $t
+     /tmp/cckyYTmp.s:664    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 _GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
+     /tmp/cckyYTmp.s:676    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:0000000c $d
+     /tmp/cckyYTmp.s:680    .init_array:00000000 $d
+     /tmp/cckyYTmp.s:687    .rodata._ZTVN10chibios_rt29BaseSequentialStreamInterfaceE:00000000 _ZTVN10chibios_rt29BaseSequentialStreamInterfaceE
+     /tmp/cckyYTmp.s:684    .rodata._ZTVN10chibios_rt29BaseSequentialStreamInterfaceE:00000000 $d
+     /tmp/cckyYTmp.s:714    .rodata._ZTVN5amiro12SerialCanMuxE:00000000 _ZTVN5amiro12SerialCanMuxE
+     /tmp/cckyYTmp.s:696    .rodata:00000000 $d
+     /tmp/cckyYTmp.s:703    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/cckyYTmp.s:707    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/cckyYTmp.s:710    .rodata._ZTVN5amiro12SerialCanMuxE:00000000 $d
+     /tmp/cckyYTmp.s:724    .rodata.str1.4:00000000 $d
+     /tmp/cckyYTmp.s:69     .text._ZN5amiro12SerialCanMuxD2Ev:0000000c $t
+     /tmp/cckyYTmp.s:91     .text._ZN5amiro12SerialCanMuxD0Ev:00000014 $t
+     /tmp/cckyYTmp.s:160    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000054 $t
+     /tmp/cckyYTmp.s:251    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000088 $t
+ARM GAS  /tmp/cckyYTmp.s 			page 17
+
+
+     /tmp/cckyYTmp.s:658    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000044 $t
+     /tmp/cckyYTmp.s:679    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000014 $t
+
+UNDEFINED SYMBOLS
+_ZdlPv
+chvprintf
+chThdSleep
+memcpy
+canTransmit
+_ZN10chibios_rt10BaseThread5sleepEm
+chOQWriteTimeout
+chIQReadTimeout
+chOQPutTimeout
+chIQGetTimeout
+dbg_check_lock
+sdIncomingDataI
+dbg_check_unlock
+__cxa_pure_virtual

@@ -1,0 +1,417 @@
+ARM GAS  /tmp/ccL59eKR.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"bluetooth-connector.cpp"
+  17              		.section	.text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh, %function
+  24              	_ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 38B5     		push	{r3, r4, r5, lr}
+  28 0002 0446     		mov	r4, r0
+  29 0004 0D46     		mov	r5, r1
+  30 0006 8068     		ldr	r0, [r0, #8]
+  31 0008 0749     		ldr	r1, .L4
+  32 000a FFF7FEFF 		bl	strstr
+  33 000e 28B1     		cbz	r0, .L2
+  34 0010 6068     		ldr	r0, [r4, #4]
+  35 0012 2946     		mov	r1, r5
+  36 0014 BDE83840 		pop	{r3, r4, r5, lr}
+  37 0018 FFF7FEBF 		b	_ZN5amiro15BluetoothSerial20bluetoothSerialStartEh
+  38              	.L2:
+  39 001c 6068     		ldr	r0, [r4, #4]
+  40 001e 2946     		mov	r1, r5
+  41 0020 BDE83840 		pop	{r3, r4, r5, lr}
+  42 0024 FFF7FEBF 		b	_ZN5amiro16BluetoothWiimote21bluetoothWiimoteStartEh
+  43              	.L5:
+  44              		.align	2
+  45              	.L4:
+  46 0028 00000000 		.word	.LC0
+  47              		.size	_ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh, .-_ZN5amiro18BluetoothConnector
+  48 002c AFF30080 		.section	.text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv,"ax",%progbits
+  49              		.align	2
+  50              		.p2align 4,,15
+  51              		.global	_ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv
+  52              		.thumb
+  53              		.thumb_func
+  54              		.type	_ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv, %function
+  55              	_ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccL59eKR.s 			page 2
+
+
+  58 0000 10B5     		push	{r4, lr}
+  59 0002 0849     		ldr	r1, .L8
+  60 0004 0446     		mov	r4, r0
+  61 0006 8068     		ldr	r0, [r0, #8]
+  62 0008 FFF7FEFF 		bl	strstr
+  63 000c 20B1     		cbz	r0, .L7
+  64 000e 6068     		ldr	r0, [r4, #4]
+  65 0010 BDE81040 		pop	{r4, lr}
+  66 0014 FFF7FEBF 		b	_ZN5amiro15BluetoothSerial19bluetoothSerialStopEv
+  67              	.L7:
+  68 0018 6068     		ldr	r0, [r4, #4]
+  69 001a BDE81040 		pop	{r4, lr}
+  70 001e FFF7FEBF 		b	_ZN5amiro16BluetoothWiimote20bluetoothWiimoteStopEv
+  71              	.L9:
+  72 0022 00BF     		.align	2
+  73              	.L8:
+  74 0024 00000000 		.word	.LC0
+  75              		.size	_ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv, .-_ZN5amiro18BluetoothConnect
+  76 0028 AFF30080 		.section	.text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc,"ax",%progbits
+  76      AFF30080 
+  77              		.align	2
+  78              		.p2align 4,,15
+  79              		.global	_ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc
+  80              		.thumb
+  81              		.thumb_func
+  82              		.type	_ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc, %function
+  83              	_ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86              		@ link register save eliminated.
+  87 0000 10B4     		push	{r4}
+  88 0002 80E80E00 		stmia	r0, {r1, r2, r3}
+  89 0006 5DF8044B 		ldr	r4, [sp], #4
+  90 000a 7047     		bx	lr
+  91              		.size	_ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc, .-_ZN5amiro18BluetoothConnectorC2EPNS_
+  92              		.global	_ZN5amiro18BluetoothConnectorC1EPNS_9BLUETOOTHEPvPKc
+  93              		.thumb_set _ZN5amiro18BluetoothConnectorC1EPNS_9BLUETOOTHEPvPKc,_ZN5amiro18BluetoothConnectorC2EPN
+  94 000c AFF30080 		.section	.text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc,"ax",%progbits
+  95              		.align	2
+  96              		.p2align 4,,15
+  97              		.global	_ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc
+  98              		.thumb
+  99              		.thumb_func
+ 100              		.type	_ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc, %function
+ 101              	_ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:
+ 102              		@ args = 0, pretend = 0, frame = 0
+ 103              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 105 0002 0C46     		mov	r4, r1
+ 106 0004 0646     		mov	r6, r0
+ 107 0006 2649     		ldr	r1, .L21
+ 108 0008 2046     		mov	r0, r4
+ 109 000a FFF7FEFF 		bl	strstr
+ 110 000e 3568     		ldr	r5, [r6]
+ 111 0010 20B3     		cbz	r0, .L19
+ 112 0012 D5F84C38 		ldr	r3, [r5, #2124]
+ 113 0016 1BB3     		cbz	r3, .L17
+ARM GAS  /tmp/ccL59eKR.s 			page 3
+
+
+ 114 0018 2249     		ldr	r1, .L21+4
+ 115              	.L18:
+ 116 001a 2B46     		mov	r3, r5
+ 117 001c 0022     		movs	r2, #0
+ 118              	.L13:
+ 119 001e D3F88847 		ldr	r4, [r3, #1928]
+ 120 0022 1C33     		adds	r3, r3, #28
+ 121 0024 1CB1     		cbz	r4, .L20
+ 122 0026 0132     		adds	r2, r2, #1
+ 123 0028 082A     		cmp	r2, #8
+ 124 002a F8D1     		bne	.L13
+ 125 002c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 126              	.L20:
+ 127 002e C2EBC202 		rsb	r2, r2, r2, lsl #3
+ 128 0032 9200     		lsls	r2, r2, #2
+ 129 0034 02F5F162 		add	r2, r2, #1928
+ 130 0038 AB18     		adds	r3, r5, r2
+ 131 003a A950     		str	r1, [r5, r2]	@ unaligned
+ 132 003c 1A4F     		ldr	r7, .L21+8
+ 133 003e 1B48     		ldr	r0, .L21+12
+ 134 0040 5E60     		str	r6, [r3, #4]	@ unaligned
+ 135 0042 FF22     		movs	r2, #255
+ 136 0044 1C73     		strb	r4, [r3, #12]
+ 137 0046 5C73     		strb	r4, [r3, #13]
+ 138 0048 9C73     		strb	r4, [r3, #14]
+ 139 004a DC73     		strb	r4, [r3, #15]
+ 140 004c 1C75     		strb	r4, [r3, #20]
+ 141 004e 5C75     		strb	r4, [r3, #21]
+ 142 0050 9C75     		strb	r4, [r3, #22]
+ 143 0052 DC75     		strb	r4, [r3, #23]
+ 144 0054 9F60     		str	r7, [r3, #8]	@ unaligned
+ 145 0056 1861     		str	r0, [r3, #16]	@ unaligned
+ 146 0058 1A76     		strb	r2, [r3, #24]
+ 147 005a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 148              	.L19:
+ 149 005c 2146     		mov	r1, r4
+ 150 005e DCE7     		b	.L18
+ 151              	.L17:
+ 152 0060 104C     		ldr	r4, .L21+4
+ 153 0062 1148     		ldr	r0, .L21+8
+ 154 0064 1149     		ldr	r1, .L21+12
+ 155 0066 C5F85068 		str	r6, [r5, #2128]	@ unaligned
+ 156 006a FF22     		movs	r2, #255
+ 157 006c 85F85838 		strb	r3, [r5, #2136]
+ 158 0070 85F85938 		strb	r3, [r5, #2137]
+ 159 0074 85F85A38 		strb	r3, [r5, #2138]
+ 160 0078 85F85B38 		strb	r3, [r5, #2139]
+ 161 007c 85F86038 		strb	r3, [r5, #2144]
+ 162 0080 85F86138 		strb	r3, [r5, #2145]
+ 163 0084 85F86238 		strb	r3, [r5, #2146]
+ 164 0088 85F86338 		strb	r3, [r5, #2147]
+ 165 008c C5F84C48 		str	r4, [r5, #2124]	@ unaligned
+ 166 0090 C5F85408 		str	r0, [r5, #2132]	@ unaligned
+ 167 0094 C5F85C18 		str	r1, [r5, #2140]	@ unaligned
+ 168 0098 85F86428 		strb	r2, [r5, #2148]
+ 169 009c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 170              	.L22:
+ARM GAS  /tmp/ccL59eKR.s 			page 4
+
+
+ 171 009e 00BF     		.align	2
+ 172              	.L21:
+ 173 00a0 10000000 		.word	.LC2
+ 174 00a4 08000000 		.word	.LC1
+ 175 00a8 00000000 		.word	_ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh
+ 176 00ac 00000000 		.word	_ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv
+ 177              		.size	_ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc, .-_ZN5amiro18BluetoothConnector
+ 178              		.section	.text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc,"ax",%progbits
+ 179              		.align	2
+ 180              		.p2align 4,,15
+ 181              		.global	_ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc
+ 182              		.thumb
+ 183              		.thumb_func
+ 184              		.type	_ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc, %function
+ 185              	_ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:
+ 186              		@ args = 0, pretend = 0, frame = 0
+ 187              		@ frame_needed = 1, uses_anonymous_args = 0
+ 188 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 189 0004 8146     		mov	r9, r0
+ 190 0006 00AF     		add	r7, sp, #0
+ 191 0008 0846     		mov	r0, r1
+ 192 000a 0D46     		mov	r5, r1
+ 193 000c FFF7FEFF 		bl	strlen
+ 194 0010 1830     		adds	r0, r0, #24
+ 195 0012 20F00702 		bic	r2, r0, #7
+ 196 0016 244B     		ldr	r3, .L35
+ 197 0018 ADEB020D 		sub	sp, sp, r2
+ 198 001c 1868     		ldr	r0, [r3]	@ unaligned
+ 199 001e 0090     		str	r0, [sp]	@ unaligned
+ 200 0020 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
+ 201 0022 8DF80430 		strb	r3, [sp, #4]
+ 202 0026 0DF10500 		add	r0, sp, #5
+ 203 002a 2946     		mov	r1, r5
+ 204 002c FFF7FEFF 		bl	strcpy
+ 205 0030 D9F80080 		ldr	r8, [r9]
+ 206 0034 EA46     		mov	r10, sp
+ 207 0036 4446     		mov	r4, r8
+ 208 0038 08F1E006 		add	r6, r8, #224
+ 209              	.L29:
+ 210 003c D4F88807 		ldr	r0, [r4, #1928]
+ 211 0040 2946     		mov	r1, r5
+ 212 0042 FFF7FEFF 		bl	strstr
+ 213 0046 18B1     		cbz	r0, .L24
+ 214 0048 94F8A037 		ldrb	r3, [r4, #1952]	@ zero_extendqisi2
+ 215 004c FF2B     		cmp	r3, #255
+ 216 004e 05D0     		beq	.L34
+ 217              	.L24:
+ 218 0050 1C34     		adds	r4, r4, #28
+ 219 0052 B442     		cmp	r4, r6
+ 220 0054 F2D1     		bne	.L29
+ 221 0056 BD46     		mov	sp, r7
+ 222              		@ sp needed
+ 223 0058 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 224              	.L34:
+ 225 005c D9F80830 		ldr	r3, [r9, #8]
+ 226 0060 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 227 0062 532B     		cmp	r3, #83
+ARM GAS  /tmp/ccL59eKR.s 			page 5
+
+
+ 228 0064 1AD0     		beq	.L26
+ 229 0066 572B     		cmp	r3, #87
+ 230 0068 0DD1     		bne	.L25
+ 231 006a 5046     		mov	r0, r10
+ 232 006c FFF7FEFF 		bl	strlen
+ 233 0070 0E4B     		ldr	r3, .L35+4
+ 234 0072 0546     		mov	r5, r0
+ 235              	.L33:
+ 236 0074 07CB     		ldmia	r3!, {r0, r1, r2}
+ 237 0076 0AEB0504 		add	r4, r10, r5
+ 238 007a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 239 007c 4AF80500 		str	r0, [r10, r5]	@ unaligned
+ 240 0080 2373     		strb	r3, [r4, #12]
+ 241 0082 6160     		str	r1, [r4, #4]	@ unaligned
+ 242 0084 A260     		str	r2, [r4, #8]	@ unaligned
+ 243              	.L25:
+ 244 0086 4046     		mov	r0, r8
+ 245 0088 5146     		mov	r1, r10
+ 246 008a FFF7FEFF 		bl	_ZN5amiro14BluetoothIwrap25bluetoothIwrapSendCommandEPKc
+ 247 008e 4FF47A70 		mov	r0, #1000
+ 248 0092 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 249 0096 BD46     		mov	sp, r7
+ 250              		@ sp needed
+ 251 0098 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 252              	.L26:
+ 253 009c 5046     		mov	r0, r10
+ 254 009e FFF7FEFF 		bl	strlen
+ 255 00a2 034B     		ldr	r3, .L35+8
+ 256 00a4 0546     		mov	r5, r0
+ 257 00a6 E5E7     		b	.L33
+ 258              	.L36:
+ 259              		.align	2
+ 260              	.L35:
+ 261 00a8 14000000 		.word	.LC3
+ 262 00ac 2C000000 		.word	.LC5
+ 263 00b0 1C000000 		.word	.LC4
+ 264              		.size	_ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc, .-_ZN5amiro18BluetoothConnecto
+ 265 00b4 AFF30080 		.section	.text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc,"ax",%progbits
+ 265      AFF30080 
+ 265      AFF30080 
+ 266              		.align	2
+ 267              		.p2align 4,,15
+ 268              		.global	_ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc
+ 269              		.thumb
+ 270              		.thumb_func
+ 271              		.type	_ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc, %function
+ 272              	_ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:
+ 273              		@ args = 0, pretend = 0, frame = 8
+ 274              		@ frame_needed = 0, uses_anonymous_args = 0
+ 275 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 276 0002 174B     		ldr	r3, .L48
+ 277 0004 0246     		mov	r2, r0
+ 278 0006 0D46     		mov	r5, r1
+ 279 0008 93E80300 		ldmia	r3, {r0, r1}
+ 280 000c 83B0     		sub	sp, sp, #12
+ 281 000e 1768     		ldr	r7, [r2]
+ 282 0010 0090     		str	r0, [sp]
+ARM GAS  /tmp/ccL59eKR.s 			page 6
+
+
+ 283 0012 0B0C     		lsrs	r3, r1, #16
+ 284 0014 ADF80410 		strh	r1, [sp, #4]	@ movhi
+ 285 0018 8DF80630 		strb	r3, [sp, #6]
+ 286 001c 3C46     		mov	r4, r7
+ 287 001e 07F1E006 		add	r6, r7, #224
+ 288              	.L40:
+ 289 0022 D4F88807 		ldr	r0, [r4, #1928]
+ 290 0026 2946     		mov	r1, r5
+ 291 0028 FFF7FEFF 		bl	strstr
+ 292 002c 18B1     		cbz	r0, .L38
+ 293 002e 94F8A037 		ldrb	r3, [r4, #1952]	@ zero_extendqisi2
+ 294 0032 FF2B     		cmp	r3, #255
+ 295 0034 04D1     		bne	.L47
+ 296              	.L38:
+ 297 0036 1C34     		adds	r4, r4, #28
+ 298 0038 B442     		cmp	r4, r6
+ 299 003a F2D1     		bne	.L40
+ 300 003c 03B0     		add	sp, sp, #12
+ 301              		@ sp needed
+ 302 003e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 303              	.L47:
+ 304 0040 3033     		adds	r3, r3, #48
+ 305 0042 0022     		movs	r2, #0
+ 306 0044 3846     		mov	r0, r7
+ 307 0046 6946     		mov	r1, sp
+ 308 0048 8DF80630 		strb	r3, [sp, #6]
+ 309 004c 8DF80720 		strb	r2, [sp, #7]
+ 310 0050 FFF7FEFF 		bl	_ZN5amiro14BluetoothIwrap25bluetoothIwrapSendCommandEPKc
+ 311 0054 4FF4FA60 		mov	r0, #2000
+ 312 0058 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 313 005c 03B0     		add	sp, sp, #12
+ 314              		@ sp needed
+ 315 005e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 316              	.L49:
+ 317              		.align	2
+ 318              	.L48:
+ 319 0060 3C000000 		.word	.LC6
+ 320              		.size	_ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc, .-_ZN5amiro18BluetoothConne
+ 321 0064 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 321      AFF30080 
+ 321      AFF30080 
+ 322              		.align	2
+ 323              	.LC0:
+ 324 0000 53455249 		.ascii	"SERIAL\000"
+ 324      414C00
+ 325 0007 00       		.space	1
+ 326              	.LC1:
+ 327 0008 66726565 		.ascii	"free\000"
+ 327      00
+ 328 000d 000000   		.space	3
+ 329              	.LC2:
+ 330 0010 414C4C00 		.ascii	"ALL\000"
+ 331              	.LC3:
+ 332 0014 43414C4C 		.ascii	"CALL \000"
+ 332      2000
+ 333 001a 0000     		.space	2
+ 334              	.LC4:
+ARM GAS  /tmp/ccL59eKR.s 			page 7
+
+
+ 335 001c 20313130 		.ascii	" 1101 RFCOMM\000"
+ 335      31205246 
+ 335      434F4D4D 
+ 335      00
+ 336 0029 000000   		.space	3
+ 337              	.LC5:
+ 338 002c 20303031 		.ascii	" 0013 L2CAP \000"
+ 338      33204C32 
+ 338      43415020 
+ 338      00
+ 339 0039 000000   		.space	3
+ 340              	.LC6:
+ 341 003c 434C4F53 		.ascii	"CLOSE \000"
+ 341      452000
+ 342 0043 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccL59eKR.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 bluetooth-connector.cpp
+     /tmp/ccL59eKR.s:18     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:00000000 $t
+     /tmp/ccL59eKR.s:24     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:00000000 _ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh
+     /tmp/ccL59eKR.s:46     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:00000028 $d
+     /tmp/ccL59eKR.s:49     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000000 $t
+     /tmp/ccL59eKR.s:55     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000000 _ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv
+     /tmp/ccL59eKR.s:74     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000024 $d
+     /tmp/ccL59eKR.s:77     .text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:00000000 $t
+     /tmp/ccL59eKR.s:83     .text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:00000000 _ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc
+     /tmp/ccL59eKR.s:83     .text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:00000000 _ZN5amiro18BluetoothConnectorC1EPNS_9BLUETOOTHEPvPKc
+     /tmp/ccL59eKR.s:95     .text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:00000000 $t
+     /tmp/ccL59eKR.s:101    .text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:00000000 _ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc
+     /tmp/ccL59eKR.s:173    .text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:000000a0 $d
+     /tmp/ccL59eKR.s:179    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:00000000 $t
+     /tmp/ccL59eKR.s:185    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:00000000 _ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc
+     /tmp/ccL59eKR.s:261    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:000000a8 $d
+     /tmp/ccL59eKR.s:266    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000000 $t
+     /tmp/ccL59eKR.s:272    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000000 _ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc
+     /tmp/ccL59eKR.s:319    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000060 $d
+     /tmp/ccL59eKR.s:322    .rodata.str1.4:00000000 $d
+     /tmp/ccL59eKR.s:48     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:0000002c $t
+     /tmp/ccL59eKR.s:76     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000028 $t
+     /tmp/ccL59eKR.s:265    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:000000b4 $t
+     /tmp/ccL59eKR.s:321    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000064 $t
+
+UNDEFINED SYMBOLS
+strstr
+_ZN5amiro15BluetoothSerial20bluetoothSerialStartEh
+_ZN5amiro16BluetoothWiimote21bluetoothWiimoteStartEh
+_ZN5amiro15BluetoothSerial19bluetoothSerialStopEv
+_ZN5amiro16BluetoothWiimote20bluetoothWiimoteStopEv
+strlen
+strcpy
+_ZN5amiro14BluetoothIwrap25bluetoothIwrapSendCommandEPKc
+_ZN10chibios_rt10BaseThread5sleepEm

@@ -1,0 +1,10 @@
+LightRing.cpp:118:6:virtual void amiro::LightRing::periodicBroadcast()	0	static
+LightRing.h:15:9:amiro::LightRing::~LightRing()	8	static
+LightRing.h:15:9:virtual amiro::LightRing::~LightRing()	8	static
+LightRing.cpp:100:17:virtual chibios_rt::ThreadReference amiro::LightRing::start(tprio_t)	32	static
+LightRing.cpp:16:1:amiro::LightRing::LightRing(CANDriver*, amiro::TLC5947*, amiro::fileSystemIo::FSIOLightRing*)	24	static
+LightRing.cpp:24:6:void amiro::LightRing::setLightBrightness(int)	8	static
+LightRing.cpp:29:6:void amiro::LightRing::setLightColor(int, amiro::Color)	24	static
+LightRing.cpp:34:7:virtual msg_t amiro::LightRing::receiveMessage(CANRxFrame*)	32	static
+LightRing.cpp:107:1:msg_t amiro::LightRing::terminate()	16	static
+LightRing.cpp:120:1:cpp)	0	static

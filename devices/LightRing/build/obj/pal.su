@@ -1,0 +1,3 @@
+pal.c:77:14:palReadBus	8	static
+pal.c:103:6:palWriteBus	16	static
+pal.c:127:6:palSetBusMode	16	static

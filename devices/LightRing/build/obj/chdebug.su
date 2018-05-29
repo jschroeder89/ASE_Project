@@ -1,0 +1,14 @@
+chdebug.c:81:6:dbg_check_disable	8	static
+chdebug.c:92:6:dbg_check_suspend	8	static
+chdebug.c:103:6:dbg_check_enable	8	static
+chdebug.c:114:6:dbg_check_lock	8	static
+chdebug.c:126:6:dbg_check_unlock	8	static
+chdebug.c:138:6:dbg_check_lock_from_isr	8	static
+chdebug.c:150:6:dbg_check_unlock_from_isr	8	static
+chdebug.c:162:6:dbg_check_enter_isr	8	static
+chdebug.c:176:6:dbg_check_leave_isr	8	static
+chdebug.c:193:6:chDbgCheckClassI	8	static
+chdebug.c:207:6:chDbgCheckClassS	8	static
+chdebug.c:229:6:_trace_init	0	static
+chdebug.c:242:6:dbg_trace	4	static
+chdebug.c:271:6:chDbgPanic	8	static

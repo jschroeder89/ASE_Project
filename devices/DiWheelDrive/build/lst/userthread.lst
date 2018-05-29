@@ -1,0 +1,1388 @@
+ARM GAS  /tmp/ccUCyIgk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"userthread.cpp"
+  15              		.section	.text._ZN5amiro10UserThreadD2Ev,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro10UserThreadD2Ev
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro10UserThreadD2Ev, %function
+  22              	_ZN5amiro10UserThreadD2Ev:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 014B     		ldr	r3, .L2
+  27 0002 0360     		str	r3, [r0]
+  28 0004 7047     		bx	lr
+  29              	.L3:
+  30 0006 00BF     		.align	2
+  31              	.L2:
+  32 0008 08000000 		.word	.LANCHOR0+8
+  33              		.size	_ZN5amiro10UserThreadD2Ev, .-_ZN5amiro10UserThreadD2Ev
+  34              		.global	_ZN5amiro10UserThreadD1Ev
+  35              		.thumb_set _ZN5amiro10UserThreadD1Ev,_ZN5amiro10UserThreadD2Ev
+  36 000c AFF30080 		.section	.text._ZN5amiro10UserThreadD0Ev,"ax",%progbits
+  37              		.align	2
+  38              		.p2align 4,,15
+  39              		.global	_ZN5amiro10UserThreadD0Ev
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	_ZN5amiro10UserThreadD0Ev, %function
+  43              	_ZN5amiro10UserThreadD0Ev:
+  44              		@ args = 0, pretend = 0, frame = 0
+  45              		@ frame_needed = 0, uses_anonymous_args = 0
+  46 0000 10B5     		push	{r4, lr}
+  47 0002 034B     		ldr	r3, .L5
+  48 0004 0446     		mov	r4, r0
+  49 0006 0360     		str	r3, [r0]
+  50 0008 FFF7FEFF 		bl	_ZdlPv
+  51 000c 2046     		mov	r0, r4
+  52 000e 10BD     		pop	{r4, pc}
+  53              	.L6:
+  54              		.align	2
+  55              	.L5:
+  56 0010 08000000 		.word	.LANCHOR0+8
+  57              		.size	_ZN5amiro10UserThreadD0Ev, .-_ZN5amiro10UserThreadD0Ev
+ARM GAS  /tmp/ccUCyIgk.s 			page 2
+
+
+  58 0014 AFF30080 		.section	.text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm,"axG",%progbits,_ZN10chibios_rt1
+  58      AFF30080 
+  58      AFF30080 
+  59              		.align	2
+  60              		.p2align 4,,15
+  61              		.weak	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm, %function
+  65              	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68 0000 30B5     		push	{r4, r5, lr}
+  69 0002 0D46     		mov	r5, r1
+  70 0004 83B0     		sub	sp, sp, #12
+  71 0006 0446     		mov	r4, r0
+  72 0008 0091     		str	r1, [sp]
+  73 000a 05F10800 		add	r0, r5, #8
+  74 000e 4FF49A61 		mov	r1, #1232
+  75 0012 054B     		ldr	r3, .L8
+  76 0014 FFF7FEFF 		bl	chThdCreateStatic
+  77 0018 044A     		ldr	r2, .L8+4
+  78 001a 0346     		mov	r3, r0
+  79 001c 6860     		str	r0, [r5, #4]
+  80 001e 2046     		mov	r0, r4
+  81 0020 84E80C00 		stmia	r4, {r2, r3}
+  82 0024 03B0     		add	sp, sp, #12
+  83              		@ sp needed
+  84 0026 30BD     		pop	{r4, r5, pc}
+  85              	.L9:
+  86              		.align	2
+  87              	.L8:
+  88 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+  89 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+  90              		.size	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi10
+  91              		.section	.text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1,"ax",%progbits
+  92              		.align	2
+  93              		.p2align 4,,15
+  94              		.thumb
+  95              		.thumb_func
+  96              		.type	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1, %function
+  97              	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1:
+  98              		@ args = 4, pretend = 12, frame = 8
+  99              		@ frame_needed = 0, uses_anonymous_args = 1
+ 100 0000 0EB4     		push	{r1, r2, r3}
+ 101 0002 00B5     		push	{lr}
+ 102 0004 82B0     		sub	sp, sp, #8
+ 103 0006 03AB     		add	r3, sp, #12
+ 104 0008 53F8041B 		ldr	r1, [r3], #4
+ 105 000c 0448     		ldr	r0, .L11
+ 106 000e 1A46     		mov	r2, r3
+ 107 0010 0193     		str	r3, [sp, #4]
+ 108 0012 FFF7FEFF 		bl	chvprintf
+ 109 0016 02B0     		add	sp, sp, #8
+ 110              		@ sp needed
+ 111 0018 5DF804EB 		ldr	lr, [sp], #4
+ 112 001c 03B0     		add	sp, sp, #12
+ARM GAS  /tmp/ccUCyIgk.s 			page 3
+
+
+ 113 001e 7047     		bx	lr
+ 114              	.L12:
+ 115              		.align	2
+ 116              	.L11:
+ 117 0020 00000000 		.word	SD1
+ 118              		.size	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1, .-_ZL8chprintfP20BaseSequentialStreamPK
+ 119 0024 AFF30080 		.section	.text._Z14discriminationi,"ax",%progbits
+ 119      AFF30080 
+ 119      AFF30080 
+ 120              		.align	2
+ 121              		.p2align 4,,15
+ 122              		.global	_Z14discriminationi
+ 123              		.thumb
+ 124              		.thumb_func
+ 125              		.type	_Z14discriminationi, %function
+ 126              	_Z14discriminationi:
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129              		@ link register save eliminated.
+ 130 0000 B0F57A5F 		cmp	r0, #16000
+ 131 0004 ACBF     		ite	ge
+ 132 0006 0220     		movge	r0, #2
+ 133 0008 0020     		movlt	r0, #0
+ 134 000a 7047     		bx	lr
+ 135              		.size	_Z14discriminationi, .-_Z14discriminationi
+ 136 000c AFF30080 		.section	.text._Z12copyRpmSpeedRA2_KiRA2_i,"ax",%progbits
+ 137              		.align	2
+ 138              		.p2align 4,,15
+ 139              		.global	_Z12copyRpmSpeedRA2_KiRA2_i
+ 140              		.thumb
+ 141              		.thumb_func
+ 142              		.type	_Z12copyRpmSpeedRA2_KiRA2_i, %function
+ 143              	_Z12copyRpmSpeedRA2_KiRA2_i:
+ 144              		@ args = 0, pretend = 0, frame = 0
+ 145              		@ frame_needed = 0, uses_anonymous_args = 0
+ 146              		@ link register save eliminated.
+ 147 0000 0368     		ldr	r3, [r0]
+ 148 0002 0B60     		str	r3, [r1]
+ 149 0004 4368     		ldr	r3, [r0, #4]
+ 150 0006 4B60     		str	r3, [r1, #4]
+ 151 0008 7047     		bx	lr
+ 152              		.size	_Z12copyRpmSpeedRA2_KiRA2_i, .-_Z12copyRpmSpeedRA2_KiRA2_i
+ 153              		.global	__aeabi_i2f
+ 154              		.global	__aeabi_fmul
+ 155              		.global	__aeabi_fdiv
+ 156 000a 00BFAFF3 		.section	.text._Z13fuzzyficationiRA3_f,"ax",%progbits
+ 156      0080
+ 157              		.align	2
+ 158              		.p2align 4,,15
+ 159              		.global	_Z13fuzzyficationiRA3_f
+ 160              		.thumb
+ 161              		.thumb_func
+ 162              		.type	_Z13fuzzyficationiRA3_f, %function
+ 163              	_Z13fuzzyficationiRA3_f:
+ 164              		@ args = 0, pretend = 0, frame = 0
+ 165              		@ frame_needed = 0, uses_anonymous_args = 0
+ 166 0000 B0F5805F 		cmp	r0, #4096
+ARM GAS  /tmp/ccUCyIgk.s 			page 4
+
+
+ 167 0004 38B5     		push	{r3, r4, r5, lr}
+ 168 0006 0546     		mov	r5, r0
+ 169 0008 0C46     		mov	r4, r1
+ 170 000a 1CDB     		blt	.L27
+ 171 000c B0F5C04F 		cmp	r0, #24576
+ 172 0010 12DC     		bgt	.L28
+ 173 0012 B0F5605F 		cmp	r0, #14336
+ 174 0016 1DDA     		bge	.L21
+ 175 0018 B0F5C05F 		cmp	r0, #6144
+ 176 001c 30DD     		ble	.L22
+ 177 001e 0023     		movs	r3, #0
+ 178 0020 0B60     		str	r3, [r1]	@ float
+ 179              	.L23:
+ 180 0022 A5F58050 		sub	r0, r5, #4096
+ 181 0026 FFF7FEFF 		bl	__aeabi_i2f
+ 182 002a 1B49     		ldr	r1, .L29
+ 183 002c FFF7FEFF 		bl	__aeabi_fdiv
+ 184 0030 0023     		movs	r3, #0
+ 185 0032 6060     		str	r0, [r4, #4]	@ float
+ 186 0034 A360     		str	r3, [r4, #8]	@ float
+ 187 0036 38BD     		pop	{r3, r4, r5, pc}
+ 188              	.L28:
+ 189 0038 0023     		movs	r3, #0
+ 190 003a 4FF07E52 		mov	r2, #1065353216
+ 191 003e 0B60     		str	r3, [r1]	@ float
+ 192 0040 4B60     		str	r3, [r1, #4]	@ float
+ 193 0042 8A60     		str	r2, [r1, #8]	@ float
+ 194 0044 38BD     		pop	{r3, r4, r5, pc}
+ 195              	.L27:
+ 196 0046 0023     		movs	r3, #0
+ 197 0048 4FF07E52 		mov	r2, #1065353216
+ 198 004c 0A60     		str	r2, [r1]	@ float
+ 199 004e 4B60     		str	r3, [r1, #4]	@ float
+ 200 0050 8B60     		str	r3, [r1, #8]	@ float
+ 201 0052 38BD     		pop	{r3, r4, r5, pc}
+ 202              	.L21:
+ 203 0054 0023     		movs	r3, #0
+ 204 0056 B0F5C04F 		cmp	r0, #24576
+ 205 005a 0B60     		str	r3, [r1]	@ float
+ 206 005c 1AD0     		beq	.L24
+ 207 005e A0F5C040 		sub	r0, r0, #24576
+ 208 0062 FFF7FEFF 		bl	__aeabi_i2f
+ 209 0066 0D49     		ldr	r1, .L29+4
+ 210 0068 FFF7FEFF 		bl	__aeabi_fdiv
+ 211 006c 6060     		str	r0, [r4, #4]	@ float
+ 212              	.L25:
+ 213 006e A5F52050 		sub	r0, r5, #10240
+ 214 0072 FFF7FEFF 		bl	__aeabi_i2f
+ 215 0076 0A49     		ldr	r1, .L29+8
+ 216 0078 FFF7FEFF 		bl	__aeabi_fdiv
+ 217 007c A060     		str	r0, [r4, #8]	@ float
+ 218 007e 38BD     		pop	{r3, r4, r5, pc}
+ 219              	.L22:
+ 220 0080 A0F5C050 		sub	r0, r0, #6144
+ 221 0084 FFF7FEFF 		bl	__aeabi_i2f
+ 222 0088 4FF03A41 		mov	r1, #-1174405120
+ 223 008c FFF7FEFF 		bl	__aeabi_fmul
+ARM GAS  /tmp/ccUCyIgk.s 			page 5
+
+
+ 224 0090 2060     		str	r0, [r4]	@ float
+ 225 0092 C6E7     		b	.L23
+ 226              	.L24:
+ 227 0094 4B60     		str	r3, [r1, #4]	@ float
+ 228 0096 EAE7     		b	.L25
+ 229              	.L30:
+ 230              		.align	2
+ 231              	.L29:
+ 232 0098 00002046 		.word	1176502272
+ 233 009c 000020C6 		.word	-970981376
+ 234 00a0 00006046 		.word	1180696576
+ 235              		.size	_Z13fuzzyficationiRA3_f, .-_Z13fuzzyficationiRA3_f
+ 236              		.global	__aeabi_fcmpgt
+ 237 00a4 AFF30080 		.section	.text._Z9getMemberRA3_f,"ax",%progbits
+ 237      AFF30080 
+ 237      AFF30080 
+ 238              		.align	2
+ 239              		.p2align 4,,15
+ 240              		.global	_Z9getMemberRA3_f
+ 241              		.thumb
+ 242              		.thumb_func
+ 243              		.type	_Z9getMemberRA3_f, %function
+ 244              	_Z9getMemberRA3_f:
+ 245              		@ args = 0, pretend = 0, frame = 0
+ 246              		@ frame_needed = 0, uses_anonymous_args = 0
+ 247 0000 70B5     		push	{r4, r5, r6, lr}
+ 248 0002 4568     		ldr	r5, [r0, #4]	@ float
+ 249 0004 0668     		ldr	r6, [r0]	@ float
+ 250 0006 0446     		mov	r4, r0
+ 251 0008 2946     		mov	r1, r5
+ 252 000a 3046     		mov	r0, r6
+ 253 000c FFF7FEFF 		bl	__aeabi_fcmpgt
+ 254 0010 40B1     		cbz	r0, .L38
+ 255 0012 3046     		mov	r0, r6
+ 256 0014 A168     		ldr	r1, [r4, #8]	@ float
+ 257 0016 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 258 001a 0028     		cmp	r0, #0
+ 259 001c 14BF     		ite	ne
+ 260 001e 0020     		movne	r0, #0
+ 261 0020 0220     		moveq	r0, #2
+ 262 0022 70BD     		pop	{r4, r5, r6, pc}
+ 263              	.L38:
+ 264 0024 2846     		mov	r0, r5
+ 265 0026 A168     		ldr	r1, [r4, #8]	@ float
+ 266 0028 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 267 002c 0028     		cmp	r0, #0
+ 268 002e 14BF     		ite	ne
+ 269 0030 0120     		movne	r0, #1
+ 270 0032 0220     		moveq	r0, #2
+ 271 0034 70BD     		pop	{r4, r5, r6, pc}
+ 272              		.size	_Z9getMemberRA3_f, .-_Z9getMemberRA3_f
+ 273 0036 00BFAFF3 		.section	.text._Z15defuzzyficationRA4_11colorMemberRA2_i,"ax",%progbits
+ 273      0080AFF3 
+ 273      0080
+ 274              		.align	2
+ 275              		.p2align 4,,15
+ 276              		.global	_Z15defuzzyficationRA4_11colorMemberRA2_i
+ARM GAS  /tmp/ccUCyIgk.s 			page 6
+
+
+ 277              		.thumb
+ 278              		.thumb_func
+ 279              		.type	_Z15defuzzyficationRA4_11colorMemberRA2_i, %function
+ 280              	_Z15defuzzyficationRA4_11colorMemberRA2_i:
+ 281              		@ args = 0, pretend = 0, frame = 0
+ 282              		@ frame_needed = 0, uses_anonymous_args = 0
+ 283              		@ link register save eliminated.
+ 284 0000 10B4     		push	{r4}
+ 285 0002 C378     		ldrb	r3, [r0, #3]	@ zero_extendqisi2
+ 286 0004 8478     		ldrb	r4, [r0, #2]	@ zero_extendqisi2
+ 287 0006 0278     		ldrb	r2, [r0]	@ zero_extendqisi2
+ 288 0008 9C42     		cmp	r4, r3
+ 289 000a 13D0     		beq	.L78
+ 290              	.L41:
+ 291 000c 43B9     		cbnz	r3, .L43
+ 292              	.L82:
+ 293 000e 002A     		cmp	r2, #0
+ 294 0010 38D0     		beq	.L79
+ 295 0012 012A     		cmp	r2, #1
+ 296 0014 4CD0     		beq	.L80
+ 297 0016 022A     		cmp	r2, #2
+ 298 0018 24D0     		beq	.L81
+ 299              	.L39:
+ 300 001a 5DF8044B 		ldr	r4, [sp], #4
+ 301 001e 7047     		bx	lr
+ 302              	.L43:
+ 303 0020 8AB9     		cbnz	r2, .L45
+ 304 0022 012B     		cmp	r3, #1
+ 305 0024 34D1     		bne	.L46
+ 306 0026 264B     		ldr	r3, .L86
+ 307 0028 5DF8044B 		ldr	r4, [sp], #4
+ 308 002c 0CCB     		ldmia	r3, {r2, r3}
+ 309 002e 81E80C00 		stmia	r1, {r2, r3}
+ 310 0032 7047     		bx	lr
+ 311              	.L78:
+ 312 0034 9442     		cmp	r4, r2
+ 313 0036 E9D1     		bne	.L41
+ 314 0038 4278     		ldrb	r2, [r0, #1]	@ zero_extendqisi2
+ 315 003a A242     		cmp	r2, r4
+ 316 003c 0ED0     		beq	.L49
+ 317 003e 2246     		mov	r2, r4
+ 318 0040 002B     		cmp	r3, #0
+ 319 0042 EDD1     		bne	.L43
+ 320 0044 E3E7     		b	.L82
+ 321              	.L45:
+ 322 0046 54B3     		cbz	r4, .L83
+ 323 0048 4078     		ldrb	r0, [r0, #1]	@ zero_extendqisi2
+ 324 004a B0B1     		cbz	r0, .L51
+ 325 004c 012B     		cmp	r3, #1
+ 326 004e 0ED0     		beq	.L84
+ 327 0050 012A     		cmp	r2, #1
+ 328 0052 12D0     		beq	.L51
+ 329 0054 012C     		cmp	r4, #1
+ 330 0056 30D0     		beq	.L85
+ 331 0058 0128     		cmp	r0, #1
+ 332 005a 0ED0     		beq	.L51
+ 333              	.L49:
+ARM GAS  /tmp/ccUCyIgk.s 			page 7
+
+
+ 334 005c 0023     		movs	r3, #0
+ 335 005e 0B60     		str	r3, [r1]
+ 336 0060 4B60     		str	r3, [r1, #4]
+ 337 0062 DAE7     		b	.L39
+ 338              	.L81:
+ 339 0064 1422     		movs	r2, #20
+ 340 0066 3223     		movs	r3, #50
+ 341 0068 81E80C00 		stmia	r1, {r2, r3}
+ 342 006c D5E7     		b	.L39
+ 343              	.L84:
+ 344 006e 012A     		cmp	r2, #1
+ 345 0070 18D1     		bne	.L50
+ 346 0072 012C     		cmp	r4, #1
+ 347 0074 16D0     		beq	.L50
+ 348 0076 0128     		cmp	r0, #1
+ 349 0078 CFD1     		bne	.L39
+ 350              	.L51:
+ 351 007a 124B     		ldr	r3, .L86+4
+ 352 007c 0CCB     		ldmia	r3, {r2, r3}
+ 353 007e 81E80C00 		stmia	r1, {r2, r3}
+ 354 0082 CAE7     		b	.L39
+ 355              	.L79:
+ 356 0084 1E23     		movs	r3, #30
+ 357 0086 0B60     		str	r3, [r1]
+ 358 0088 4B60     		str	r3, [r1, #4]
+ 359 008a 5DF8044B 		ldr	r4, [sp], #4
+ 360 008e 7047     		bx	lr
+ 361              	.L46:
+ 362 0090 022B     		cmp	r3, #2
+ 363 0092 C2D1     		bne	.L39
+ 364 0094 0C4B     		ldr	r3, .L86+8
+ 365 0096 0CCB     		ldmia	r3, {r2, r3}
+ 366 0098 81E80C00 		stmia	r1, {r2, r3}
+ 367 009c BDE7     		b	.L39
+ 368              	.L83:
+ 369 009e 4378     		ldrb	r3, [r0, #1]	@ zero_extendqisi2
+ 370 00a0 002B     		cmp	r3, #0
+ 371 00a2 DBD0     		beq	.L49
+ 372              	.L50:
+ 373 00a4 6FF01302 		mvn	r2, #19
+ 374 00a8 1423     		movs	r3, #20
+ 375 00aa 81E80C00 		stmia	r1, {r2, r3}
+ 376 00ae B4E7     		b	.L39
+ 377              	.L80:
+ 378 00b0 1E22     		movs	r2, #30
+ 379 00b2 3223     		movs	r3, #50
+ 380 00b4 81E80C00 		stmia	r1, {r2, r3}
+ 381 00b8 AFE7     		b	.L39
+ 382              	.L85:
+ 383 00ba 0128     		cmp	r0, #1
+ 384 00bc F2D1     		bne	.L50
+ 385 00be CDE7     		b	.L49
+ 386              	.L87:
+ 387              		.align	2
+ 388              	.L86:
+ 389 00c0 00000000 		.word	.LANCHOR1
+ 390 00c4 00000000 		.word	.LANCHOR3
+ARM GAS  /tmp/ccUCyIgk.s 			page 8
+
+
+ 391 00c8 00000000 		.word	.LANCHOR2
+ 392              		.size	_Z15defuzzyficationRA4_11colorMemberRA2_i, .-_Z15defuzzyficationRA4_11colorMemberRA2_i
+ 393 00cc AFF30080 		.section	.text._Z11memberToLed11colorMember,"ax",%progbits
+ 394              		.align	2
+ 395              		.p2align 4,,15
+ 396              		.global	_Z11memberToLed11colorMember
+ 397              		.thumb
+ 398              		.thumb_func
+ 399              		.type	_Z11memberToLed11colorMember, %function
+ 400              	_Z11memberToLed11colorMember:
+ 401              		@ args = 0, pretend = 0, frame = 0
+ 402              		@ frame_needed = 0, uses_anonymous_args = 0
+ 403 0000 0129     		cmp	r1, #1
+ 404 0002 10B5     		push	{r4, lr}
+ 405 0004 0446     		mov	r4, r0
+ 406 0006 11D0     		beq	.L90
+ 407 0008 0BD3     		bcc	.L91
+ 408 000a 0229     		cmp	r1, #2
+ 409 000c 04D0     		beq	.L92
+ 410 000e 8F21     		movs	r1, #143
+ 411 0010 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 412 0014 2046     		mov	r0, r4
+ 413 0016 10BD     		pop	{r4, pc}
+ 414              	.L92:
+ 415 0018 7721     		movs	r1, #119
+ 416 001a FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 417 001e 2046     		mov	r0, r4
+ 418 0020 10BD     		pop	{r4, pc}
+ 419              	.L91:
+ 420 0022 3721     		movs	r1, #55
+ 421 0024 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 422 0028 2046     		mov	r0, r4
+ 423 002a 10BD     		pop	{r4, pc}
+ 424              	.L90:
+ 425 002c 9121     		movs	r1, #145
+ 426 002e FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 427 0032 2046     		mov	r0, r4
+ 428 0034 10BD     		pop	{r4, pc}
+ 429              		.size	_Z11memberToLed11colorMember, .-_Z11memberToLed11colorMember
+ 430 0036 00BFAFF3 		.section	.text._Z13lineFollowingRA4_iRA2_i,"ax",%progbits
+ 430      0080AFF3 
+ 430      0080
+ 431              		.align	2
+ 432              		.p2align 4,,15
+ 433              		.global	_Z13lineFollowingRA4_iRA2_i
+ 434              		.thumb
+ 435              		.thumb_func
+ 436              		.type	_Z13lineFollowingRA4_iRA2_i, %function
+ 437              	_Z13lineFollowingRA4_iRA2_i:
+ 438              		@ args = 0, pretend = 0, frame = 56
+ 439              		@ frame_needed = 0, uses_anonymous_args = 0
+ 440 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 441 0002 8FB0     		sub	sp, sp, #60
+ 442 0004 0446     		mov	r4, r0
+ 443 0006 0F46     		mov	r7, r1
+ 444 0008 8068     		ldr	r0, [r0, #8]
+ 445 000a 02A9     		add	r1, sp, #8
+ARM GAS  /tmp/ccUCyIgk.s 			page 9
+
+
+ 446 000c FFF7FEFF 		bl	_Z13fuzzyficationiRA3_f
+ 447 0010 E068     		ldr	r0, [r4, #12]
+ 448 0012 05A9     		add	r1, sp, #20
+ 449 0014 FFF7FEFF 		bl	_Z13fuzzyficationiRA3_f
+ 450 0018 2068     		ldr	r0, [r4]
+ 451 001a 08A9     		add	r1, sp, #32
+ 452 001c FFF7FEFF 		bl	_Z13fuzzyficationiRA3_f
+ 453 0020 6068     		ldr	r0, [r4, #4]
+ 454 0022 0BA9     		add	r1, sp, #44
+ 455 0024 FFF7FEFF 		bl	_Z13fuzzyficationiRA3_f
+ 456 0028 029D     		ldr	r5, [sp, #8]	@ float
+ 457 002a 039C     		ldr	r4, [sp, #12]	@ float
+ 458 002c 2846     		mov	r0, r5
+ 459 002e 2146     		mov	r1, r4
+ 460 0030 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 461 0034 0028     		cmp	r0, #0
+ 462 0036 6CD0     		beq	.L120
+ 463 0038 2846     		mov	r0, r5
+ 464 003a 0499     		ldr	r1, [sp, #16]	@ float
+ 465 003c FFF7FEFF 		bl	__aeabi_fcmpgt
+ 466 0040 0028     		cmp	r0, #0
+ 467 0042 14BF     		ite	ne
+ 468 0044 0024     		movne	r4, #0
+ 469 0046 0224     		moveq	r4, #2
+ 470              	.L98:
+ 471 0048 059E     		ldr	r6, [sp, #20]	@ float
+ 472 004a 069D     		ldr	r5, [sp, #24]	@ float
+ 473 004c 3046     		mov	r0, r6
+ 474 004e 2946     		mov	r1, r5
+ 475 0050 8DF80640 		strb	r4, [sp, #6]
+ 476 0054 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 477 0058 0028     		cmp	r0, #0
+ 478 005a 75D0     		beq	.L121
+ 479 005c 3046     		mov	r0, r6
+ 480 005e 0799     		ldr	r1, [sp, #28]	@ float
+ 481 0060 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 482 0064 0028     		cmp	r0, #0
+ 483 0066 14BF     		ite	ne
+ 484 0068 0023     		movne	r3, #0
+ 485 006a 0223     		moveq	r3, #2
+ 486              	.L101:
+ 487 006c 089E     		ldr	r6, [sp, #32]	@ float
+ 488 006e 099D     		ldr	r5, [sp, #36]	@ float
+ 489 0070 3046     		mov	r0, r6
+ 490 0072 2946     		mov	r1, r5
+ 491 0074 8DF80730 		strb	r3, [sp, #7]
+ 492 0078 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 493 007c 0028     		cmp	r0, #0
+ 494 007e 5AD0     		beq	.L122
+ 495 0080 3046     		mov	r0, r6
+ 496 0082 0A99     		ldr	r1, [sp, #40]	@ float
+ 497 0084 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 498 0088 0028     		cmp	r0, #0
+ 499 008a 14BF     		ite	ne
+ 500 008c 0023     		movne	r3, #0
+ 501 008e 0223     		moveq	r3, #2
+ 502              	.L104:
+ARM GAS  /tmp/ccUCyIgk.s 			page 10
+
+
+ 503 0090 0B9E     		ldr	r6, [sp, #44]	@ float
+ 504 0092 0C9D     		ldr	r5, [sp, #48]	@ float
+ 505 0094 3046     		mov	r0, r6
+ 506 0096 2946     		mov	r1, r5
+ 507 0098 8DF80430 		strb	r3, [sp, #4]
+ 508 009c FFF7FEFF 		bl	__aeabi_fcmpgt
+ 509 00a0 0028     		cmp	r0, #0
+ 510 00a2 3FD0     		beq	.L123
+ 511 00a4 3046     		mov	r0, r6
+ 512 00a6 0D99     		ldr	r1, [sp, #52]	@ float
+ 513 00a8 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 514 00ac 0028     		cmp	r0, #0
+ 515 00ae 14BF     		ite	ne
+ 516 00b0 0023     		movne	r3, #0
+ 517 00b2 0223     		moveq	r3, #2
+ 518              	.L107:
+ 519 00b4 2146     		mov	r1, r4
+ 520 00b6 6846     		mov	r0, sp
+ 521 00b8 8DF80530 		strb	r3, [sp, #5]
+ 522 00bc FFF7FEFF 		bl	_Z11memberToLed11colorMember
+ 523 00c0 6A46     		mov	r2, sp
+ 524 00c2 2648     		ldr	r0, .L124
+ 525 00c4 0621     		movs	r1, #6
+ 526 00c6 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 527 00ca 6846     		mov	r0, sp
+ 528 00cc 9DF80710 		ldrb	r1, [sp, #7]	@ zero_extendqisi2
+ 529 00d0 FFF7FEFF 		bl	_Z11memberToLed11colorMember
+ 530 00d4 6A46     		mov	r2, sp
+ 531 00d6 2148     		ldr	r0, .L124
+ 532 00d8 0721     		movs	r1, #7
+ 533 00da FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 534 00de 6846     		mov	r0, sp
+ 535 00e0 9DF80410 		ldrb	r1, [sp, #4]	@ zero_extendqisi2
+ 536 00e4 FFF7FEFF 		bl	_Z11memberToLed11colorMember
+ 537 00e8 6A46     		mov	r2, sp
+ 538 00ea 1C48     		ldr	r0, .L124
+ 539 00ec 0021     		movs	r1, #0
+ 540 00ee FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 541 00f2 6846     		mov	r0, sp
+ 542 00f4 9DF80510 		ldrb	r1, [sp, #5]	@ zero_extendqisi2
+ 543 00f8 FFF7FEFF 		bl	_Z11memberToLed11colorMember
+ 544 00fc 6A46     		mov	r2, sp
+ 545 00fe 1748     		ldr	r0, .L124
+ 546 0100 0121     		movs	r1, #1
+ 547 0102 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 548 0106 3946     		mov	r1, r7
+ 549 0108 01A8     		add	r0, sp, #4
+ 550 010a FFF7FEFF 		bl	_Z15defuzzyficationRA4_11colorMemberRA2_i
+ 551 010e 0FB0     		add	sp, sp, #60
+ 552              		@ sp needed
+ 553 0110 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 554              	.L120:
+ 555 0112 2046     		mov	r0, r4
+ 556 0114 0499     		ldr	r1, [sp, #16]	@ float
+ 557 0116 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 558 011a 0028     		cmp	r0, #0
+ 559 011c 14BF     		ite	ne
+ARM GAS  /tmp/ccUCyIgk.s 			page 11
+
+
+ 560 011e 0124     		movne	r4, #1
+ 561 0120 0224     		moveq	r4, #2
+ 562 0122 91E7     		b	.L98
+ 563              	.L123:
+ 564 0124 2846     		mov	r0, r5
+ 565 0126 0D99     		ldr	r1, [sp, #52]	@ float
+ 566 0128 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 567 012c 0028     		cmp	r0, #0
+ 568 012e 14BF     		ite	ne
+ 569 0130 0123     		movne	r3, #1
+ 570 0132 0223     		moveq	r3, #2
+ 571 0134 BEE7     		b	.L107
+ 572              	.L122:
+ 573 0136 2846     		mov	r0, r5
+ 574 0138 0A99     		ldr	r1, [sp, #40]	@ float
+ 575 013a FFF7FEFF 		bl	__aeabi_fcmpgt
+ 576 013e 0028     		cmp	r0, #0
+ 577 0140 14BF     		ite	ne
+ 578 0142 0123     		movne	r3, #1
+ 579 0144 0223     		moveq	r3, #2
+ 580 0146 A3E7     		b	.L104
+ 581              	.L121:
+ 582 0148 2846     		mov	r0, r5
+ 583 014a 0799     		ldr	r1, [sp, #28]	@ float
+ 584 014c FFF7FEFF 		bl	__aeabi_fcmpgt
+ 585 0150 0028     		cmp	r0, #0
+ 586 0152 14BF     		ite	ne
+ 587 0154 0123     		movne	r3, #1
+ 588 0156 0223     		moveq	r3, #2
+ 589 0158 88E7     		b	.L101
+ 590              	.L125:
+ 591 015a 00BF     		.align	2
+ 592              	.L124:
+ 593 015c A02D0000 		.word	global+11680
+ 594              		.size	_Z13lineFollowingRA4_iRA2_i, .-_Z13lineFollowingRA4_iRA2_i
+ 595              		.section	.text._Z11setRpmSpeedRA2_Ki,"ax",%progbits
+ 596              		.align	2
+ 597              		.p2align 4,,15
+ 598              		.global	_Z11setRpmSpeedRA2_Ki
+ 599              		.thumb
+ 600              		.thumb_func
+ 601              		.type	_Z11setRpmSpeedRA2_Ki, %function
+ 602              	_Z11setRpmSpeedRA2_Ki:
+ 603              		@ args = 0, pretend = 0, frame = 0
+ 604              		@ frame_needed = 0, uses_anonymous_args = 0
+ 605              		@ link register save eliminated.
+ 606 0000 044B     		ldr	r3, .L127
+ 607 0002 90E80600 		ldmia	r0, {r1, r2}
+ 608 0006 0448     		ldr	r0, .L127+4
+ 609 0008 03FB01F1 		mul	r1, r3, r1
+ 610 000c 03FB02F2 		mul	r2, r3, r2
+ 611 0010 FFF7FEBF 		b	_ZN5amiro12MotorControl12setTargetRPMEll
+ 612              	.L128:
+ 613              		.align	2
+ 614              	.L127:
+ 615 0014 40420F00 		.word	1000000
+ 616 0018 F8220000 		.word	global+8952
+ARM GAS  /tmp/ccUCyIgk.s 			page 12
+
+
+ 617              		.size	_Z11setRpmSpeedRA2_Ki, .-_Z11setRpmSpeedRA2_Ki
+ 618 001c AFF30080 		.section	.text._Z13getNextPolicyv,"ax",%progbits
+ 619              		.align	2
+ 620              		.p2align 4,,15
+ 621              		.global	_Z13getNextPolicyv
+ 622              		.thumb
+ 623              		.thumb_func
+ 624              		.type	_Z13getNextPolicyv, %function
+ 625              	_Z13getNextPolicyv:
+ 626              		@ args = 0, pretend = 0, frame = 0
+ 627              		@ frame_needed = 0, uses_anonymous_args = 0
+ 628              		@ link register save eliminated.
+ 629 0000 054B     		ldr	r3, .L132
+ 630 0002 0649     		ldr	r1, .L132+4
+ 631 0004 1A68     		ldr	r2, [r3]
+ 632 0006 0C2A     		cmp	r2, #12
+ 633 0008 D2BF     		itee	le
+ 634 000a 501C     		addle	r0, r2, #1
+ 635 000c 0420     		movgt	r0, #4
+ 636 000e 0322     		movgt	r2, #3
+ 637 0010 1860     		str	r0, [r3]
+ 638 0012 885C     		ldrb	r0, [r1, r2]	@ zero_extendqisi2
+ 639 0014 7047     		bx	lr
+ 640              	.L133:
+ 641 0016 00BF     		.align	2
+ 642              	.L132:
+ 643 0018 00000000 		.word	.LANCHOR4
+ 644 001c 00000000 		.word	.LANCHOR5
+ 645              		.size	_Z13getNextPolicyv, .-_Z13getNextPolicyv
+ 646              		.section	.text._Z13wallFollowingRA2_i,"ax",%progbits
+ 647              		.align	2
+ 648              		.p2align 4,,15
+ 649              		.global	_Z13wallFollowingRA2_i
+ 650              		.thumb
+ 651              		.thumb_func
+ 652              		.type	_Z13wallFollowingRA2_i, %function
+ 653              	_Z13wallFollowingRA2_i:
+ 654              		@ args = 0, pretend = 0, frame = 0
+ 655              		@ frame_needed = 0, uses_anonymous_args = 0
+ 656 0000 38B5     		push	{r3, r4, r5, lr}
+ 657 0002 0321     		movs	r1, #3
+ 658 0004 0446     		mov	r4, r0
+ 659 0006 0948     		ldr	r0, .L137
+ 660 0008 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 661 000c 0421     		movs	r1, #4
+ 662 000e 0546     		mov	r5, r0
+ 663 0010 0648     		ldr	r0, .L137
+ 664 0012 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 665 0016 8542     		cmp	r5, r0
+ 666 0018 8DBF     		iteet	hi
+ 667 001a 054B     		ldrhi	r3, .L137+4
+ 668 001c 6FF01302 		mvnls	r2, #19
+ 669 0020 1423     		movls	r3, #20
+ 670 0022 0CCB     		ldmiahi	r3, {r2, r3}
+ 671 0024 84E80C00 		stmia	r4, {r2, r3}
+ 672 0028 38BD     		pop	{r3, r4, r5, pc}
+ 673              	.L138:
+ARM GAS  /tmp/ccUCyIgk.s 			page 13
+
+
+ 674 002a 00BF     		.align	2
+ 675              	.L137:
+ 676 002c 382F0000 		.word	global+12088
+ 677 0030 00000000 		.word	.LANCHOR3
+ 678              		.size	_Z13wallFollowingRA2_i, .-_Z13wallFollowingRA2_i
+ 679 0034 AFF30080 		.section	.text.startup._ZN5amiro10UserThread4mainEv,"ax",%progbits
+ 679      AFF30080 
+ 679      AFF30080 
+ 680              		.align	2
+ 681              		.p2align 4,,15
+ 682              		.global	_ZN5amiro10UserThread4mainEv
+ 683              		.thumb
+ 684              		.thumb_func
+ 685              		.type	_ZN5amiro10UserThread4mainEv, %function
+ 686              	_ZN5amiro10UserThread4mainEv:
+ 687              		@ args = 0, pretend = 0, frame = 16
+ 688              		@ frame_needed = 0, uses_anonymous_args = 0
+ 689 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 690 0004 0024     		movs	r4, #0
+ 691 0006 86B0     		sub	sp, sp, #24
+ 692 0008 0494     		str	r4, [sp, #16]
+ 693 000a 0594     		str	r4, [sp, #20]
+ 694              	.L141:
+ 695 000c 0721     		movs	r1, #7
+ 696 000e 03A8     		add	r0, sp, #12
+ 697 0010 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 698 0014 2146     		mov	r1, r4
+ 699 0016 9B48     		ldr	r0, .L167
+ 700 0018 03AA     		add	r2, sp, #12
+ 701 001a 0134     		adds	r4, r4, #1
+ 702 001c FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 703 0020 082C     		cmp	r4, #8
+ 704 0022 F3D1     		bne	.L141
+ 705 0024 DFF86C82 		ldr	r8, .L167+16
+ 706 0028 4FF00009 		mov	r9, #0
+ 707 002c 88F80090 		strb	r9, [r8]
+ 708 0030 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 709 0034 944F     		ldr	r7, .L167+4
+ 710 0036 0446     		mov	r4, r0
+ 711 0038 0028     		cmp	r0, #0
+ 712 003a 40F0DE80 		bne	.L163
+ 713              	.L157:
+ 714 003e 9348     		ldr	r0, .L167+8
+ 715 0040 0221     		movs	r1, #2
+ 716 0042 FFF7FEFF 		bl	_ZN5amiro9LIS331DLH20getAccelerationForceEh
+ 717 0046 924A     		ldr	r2, .L167+12
+ 718 0048 10F5617F 		cmn	r0, #900
+ 719 004c 1080     		strh	r0, [r2]	@ movhi
+ 720 004e 77DA     		bge	.L143
+ 721 0050 98F80030 		ldrb	r3, [r8]	@ zero_extendqisi2
+ 722 0054 8F4D     		ldr	r5, .L167+16
+ 723 0056 002B     		cmp	r3, #0
+ 724 0058 40F0E180 		bne	.L164
+ 725 005c 0123     		movs	r3, #1
+ 726 005e 2B70     		strb	r3, [r5]
+ 727              	.L145:
+ 728 0060 0721     		movs	r1, #7
+ARM GAS  /tmp/ccUCyIgk.s 			page 14
+
+
+ 729 0062 03A8     		add	r0, sp, #12
+ 730 0064 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 731 0068 03AA     		add	r2, sp, #12
+ 732 006a 8648     		ldr	r0, .L167
+ 733 006c 0421     		movs	r1, #4
+ 734 006e FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 735 0072 0721     		movs	r1, #7
+ 736 0074 03A8     		add	r0, sp, #12
+ 737 0076 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 738 007a 03AA     		add	r2, sp, #12
+ 739 007c 8148     		ldr	r0, .L167
+ 740 007e 0521     		movs	r1, #5
+ 741 0080 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 742 0084 8F21     		movs	r1, #143
+ 743 0086 03A8     		add	r0, sp, #12
+ 744 0088 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 745 008c 03AA     		add	r2, sp, #12
+ 746 008e 7D48     		ldr	r0, .L167
+ 747 0090 0621     		movs	r1, #6
+ 748 0092 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 749 0096 8F21     		movs	r1, #143
+ 750 0098 03A8     		add	r0, sp, #12
+ 751 009a FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 752 009e 03AA     		add	r2, sp, #12
+ 753 00a0 7848     		ldr	r0, .L167
+ 754 00a2 0721     		movs	r1, #7
+ 755 00a4 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 756 00a8 8F21     		movs	r1, #143
+ 757 00aa 03A8     		add	r0, sp, #12
+ 758 00ac FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 759 00b0 03AA     		add	r2, sp, #12
+ 760 00b2 7448     		ldr	r0, .L167
+ 761 00b4 0021     		movs	r1, #0
+ 762 00b6 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 763 00ba 8F21     		movs	r1, #143
+ 764 00bc 03A8     		add	r0, sp, #12
+ 765 00be FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 766 00c2 03AA     		add	r2, sp, #12
+ 767 00c4 6F48     		ldr	r0, .L167
+ 768 00c6 0121     		movs	r1, #1
+ 769 00c8 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 770 00cc 0721     		movs	r1, #7
+ 771 00ce 03A8     		add	r0, sp, #12
+ 772 00d0 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 773 00d4 03AA     		add	r2, sp, #12
+ 774 00d6 6B48     		ldr	r0, .L167
+ 775 00d8 0221     		movs	r1, #2
+ 776 00da FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 777 00de 0721     		movs	r1, #7
+ 778 00e0 03A8     		add	r0, sp, #12
+ 779 00e2 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 780 00e6 03AA     		add	r2, sp, #12
+ 781 00e8 0321     		movs	r1, #3
+ 782 00ea 6648     		ldr	r0, .L167
+ 783 00ec FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 784 00f0 4FF47A70 		mov	r0, #1000
+ 785 00f4 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ARM GAS  /tmp/ccUCyIgk.s 			page 15
+
+
+ 786 00f8 0721     		movs	r1, #7
+ 787 00fa 03A8     		add	r0, sp, #12
+ 788 00fc FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 789 0100 03AA     		add	r2, sp, #12
+ 790 0102 6048     		ldr	r0, .L167
+ 791 0104 0621     		movs	r1, #6
+ 792 0106 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 793 010a 0721     		movs	r1, #7
+ 794 010c 03A8     		add	r0, sp, #12
+ 795 010e FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 796 0112 03AA     		add	r2, sp, #12
+ 797 0114 5B48     		ldr	r0, .L167
+ 798 0116 0721     		movs	r1, #7
+ 799 0118 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 800 011c 0721     		movs	r1, #7
+ 801 011e 03A8     		add	r0, sp, #12
+ 802 0120 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 803 0124 03AA     		add	r2, sp, #12
+ 804 0126 5748     		ldr	r0, .L167
+ 805 0128 0021     		movs	r1, #0
+ 806 012a FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 807 012e 0721     		movs	r1, #7
+ 808 0130 03A8     		add	r0, sp, #12
+ 809 0132 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 810 0136 5348     		ldr	r0, .L167
+ 811 0138 0121     		movs	r1, #1
+ 812 013a 03AA     		add	r2, sp, #12
+ 813 013c FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+ 814              	.L143:
+ 815 0140 98F80030 		ldrb	r3, [r8]	@ zero_extendqisi2
+ 816 0144 002B     		cmp	r3, #0
+ 817 0146 4FD0     		beq	.L146
+ 818 0148 534D     		ldr	r5, .L167+20
+ 819 014a DFF874A1 		ldr	r10, .L167+60
+ 820 014e 534E     		ldr	r6, .L167+24
+ 821 0150 0024     		movs	r4, #0
+ 822              	.L148:
+ 823 0152 2846     		mov	r0, r5
+ 824 0154 FFF7FEFF 		bl	_ZN5amiro8VCNL402015getAmbientLightEv
+ 825 0158 4AF80400 		str	r0, [r10, r4]
+ 826 015c 2846     		mov	r0, r5
+ 827 015e FFF7FEFF 		bl	_ZN5amiro8VCNL402026getProximityScaledWoOffsetEv
+ 828 0162 3051     		str	r0, [r6, r4]
+ 829 0164 0434     		adds	r4, r4, #4
+ 830 0166 102C     		cmp	r4, #16
+ 831 0168 05F50075 		add	r5, r5, #512
+ 832 016c F1D1     		bne	.L148
+ 833 016e 4C4C     		ldr	r4, .L167+28
+ 834 0170 4C4D     		ldr	r5, .L167+32
+ 835              	.L150:
+ 836 0172 2046     		mov	r0, r4
+ 837 0174 FFF7FEFF 		bl	_ZN5amiro8VCNL402026getProximityScaledWoOffsetEv
+ 838 0178 04F50074 		add	r4, r4, #512
+ 839 017c BC42     		cmp	r4, r7
+ 840 017e 45F8040F 		str	r0, [r5, #4]!
+ 841 0182 F6D1     		bne	.L150
+ 842 0184 96E80F00 		ldmia	r6, {r0, r1, r2, r3}
+ARM GAS  /tmp/ccUCyIgk.s 			page 16
+
+
+ 843 0188 8DE80300 		stmia	sp, {r0, r1}
+ 844 018c 4648     		ldr	r0, .L167+36
+ 845 018e 4749     		ldr	r1, .L167+40
+ 846 0190 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1
+ 847 0194 B9F1000F 		cmp	r9, #0
+ 848 0198 33D1     		bne	.L151
+ 849 019a 4048     		ldr	r0, .L167+24
+ 850 019c 04A9     		add	r1, sp, #16
+ 851 019e FFF7FEFF 		bl	_Z13lineFollowingRA4_iRA2_i
+ 852              	.L152:
+ 853 01a2 0121     		movs	r1, #1
+ 854 01a4 4248     		ldr	r0, .L167+44
+ 855 01a6 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 856 01aa 0321     		movs	r1, #3
+ 857 01ac 4048     		ldr	r0, .L167+44
+ 858 01ae FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 859 01b2 0421     		movs	r1, #4
+ 860 01b4 0446     		mov	r4, r0
+ 861 01b6 3E48     		ldr	r0, .L167+44
+ 862 01b8 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 863 01bc 2246     		mov	r2, r4
+ 864 01be 0346     		mov	r3, r0
+ 865 01c0 3C49     		ldr	r1, .L167+48
+ 866 01c2 3948     		ldr	r0, .L167+36
+ 867 01c4 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1
+ 868 01c8 3948     		ldr	r0, .L167+44
+ 869 01ca 0321     		movs	r1, #3
+ 870 01cc FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 871 01d0 B0F5167F 		cmp	r0, #600
+ 872 01d4 2AD3     		bcc	.L165
+ 873              	.L153:
+ 874 01d6 3648     		ldr	r0, .L167+44
+ 875 01d8 0321     		movs	r1, #3
+ 876 01da FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 877 01de B0F5966F 		cmp	r0, #1200
+ 878 01e2 37D3     		bcc	.L166
+ 879              	.L156:
+ 880 01e4 4FF00109 		mov	r9, #1
+ 881              	.L146:
+ 882 01e8 3F20     		movs	r0, #63
+ 883 01ea FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 884 01ee FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 885 01f2 0446     		mov	r4, r0
+ 886 01f4 0028     		cmp	r0, #0
+ 887 01f6 3FF422AF 		beq	.L157
+ 888              	.L163:
+ 889 01fa 0020     		movs	r0, #0
+ 890 01fc 06B0     		add	sp, sp, #24
+ 891              		@ sp needed
+ 892 01fe BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 893              	.L151:
+ 894 0202 04A8     		add	r0, sp, #16
+ 895 0204 FFF7FEFF 		bl	_Z13wallFollowingRA2_i
+ 896 0208 2B4B     		ldr	r3, .L167+52
+ 897 020a 0499     		ldr	r1, [sp, #16]
+ 898 020c 059A     		ldr	r2, [sp, #20]
+ 899 020e 03FB01F1 		mul	r1, r3, r1
+ARM GAS  /tmp/ccUCyIgk.s 			page 17
+
+
+ 900 0212 03FB02F2 		mul	r2, r3, r2
+ 901 0216 2948     		ldr	r0, .L167+56
+ 902 0218 FFF7FEFF 		bl	_ZN5amiro12MotorControl12setTargetRPMEll
+ 903 021c C1E7     		b	.L152
+ 904              	.L164:
+ 905 021e 2146     		mov	r1, r4
+ 906 0220 2246     		mov	r2, r4
+ 907 0222 2648     		ldr	r0, .L167+56
+ 908 0224 2C70     		strb	r4, [r5]
+ 909 0226 FFF7FEFF 		bl	_ZN5amiro12MotorControl12setTargetRPMEll
+ 910 022a 19E7     		b	.L145
+ 911              	.L165:
+ 912 022c 2048     		ldr	r0, .L167+44
+ 913 022e 0421     		movs	r1, #4
+ 914 0230 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 915 0234 B0F5167F 		cmp	r0, #600
+ 916 0238 CDD2     		bcs	.L153
+ 917 023a 1F4B     		ldr	r3, .L167+52
+ 918 023c 0499     		ldr	r1, [sp, #16]
+ 919 023e 059A     		ldr	r2, [sp, #20]
+ 920 0240 03FB01F1 		mul	r1, r3, r1
+ 921 0244 03FB02F2 		mul	r2, r3, r2
+ 922 0248 1C48     		ldr	r0, .L167+56
+ 923 024a FFF7FEFF 		bl	_ZN5amiro12MotorControl12setTargetRPMEll
+ 924 024e 4FF00009 		mov	r9, #0
+ 925 0252 C9E7     		b	.L146
+ 926              	.L166:
+ 927 0254 1648     		ldr	r0, .L167+44
+ 928 0256 0421     		movs	r1, #4
+ 929 0258 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+ 930 025c B0F5966F 		cmp	r0, #1200
+ 931 0260 C0D2     		bcs	.L156
+ 932 0262 0598     		ldr	r0, [sp, #20]
+ 933 0264 0499     		ldr	r1, [sp, #16]
+ 934 0266 144B     		ldr	r3, .L167+52
+ 935 0268 0222     		movs	r2, #2
+ 936 026a 91FBF2F1 		sdiv	r1, r1, r2
+ 937 026e 90FBF2F2 		sdiv	r2, r0, r2
+ 938 0272 03FB01F1 		mul	r1, r3, r1
+ 939 0276 03FB02F2 		mul	r2, r3, r2
+ 940 027a 1048     		ldr	r0, .L167+56
+ 941 027c FFF7FEFF 		bl	_ZN5amiro12MotorControl12setTargetRPMEll
+ 942 0280 B2E7     		b	.L146
+ 943              	.L168:
+ 944 0282 00BF     		.align	2
+ 945              	.L167:
+ 946 0284 A02D0000 		.word	global+11680
+ 947 0288 481A0000 		.word	global+6728
+ 948 028c 981C0000 		.word	global+7320
+ 949 0290 00000000 		.word	.LANCHOR7
+ 950 0294 00000000 		.word	.LANCHOR6
+ 951 0298 48020000 		.word	global+584
+ 952 029c 00000000 		.word	.LANCHOR9
+ 953 02a0 480A0000 		.word	global+2632
+ 954 02a4 FCFFFFFF 		.word	.LANCHOR10-4
+ 955 02a8 00000000 		.word	SD1
+ 956 02ac 00000000 		.word	.LC0
+ARM GAS  /tmp/ccUCyIgk.s 			page 18
+
+
+ 957 02b0 382F0000 		.word	global+12088
+ 958 02b4 20000000 		.word	.LC1
+ 959 02b8 40420F00 		.word	1000000
+ 960 02bc F8220000 		.word	global+8952
+ 961 02c0 00000000 		.word	.LANCHOR8
+ 962              		.size	_ZN5amiro10UserThread4mainEv, .-_ZN5amiro10UserThread4mainEv
+ 963 02c4 AFF30080 		.section	.text._ZN5amiro10UserThreadC2Ev,"ax",%progbits
+ 963      AFF30080 
+ 963      AFF30080 
+ 964              		.align	2
+ 965              		.p2align 4,,15
+ 966              		.global	_ZN5amiro10UserThreadC2Ev
+ 967              		.thumb
+ 968              		.thumb_func
+ 969              		.type	_ZN5amiro10UserThreadC2Ev, %function
+ 970              	_ZN5amiro10UserThreadC2Ev:
+ 971              		@ args = 0, pretend = 0, frame = 0
+ 972              		@ frame_needed = 0, uses_anonymous_args = 0
+ 973 0000 10B5     		push	{r4, lr}
+ 974 0002 0446     		mov	r4, r0
+ 975 0004 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+ 976 0008 014B     		ldr	r3, .L170
+ 977 000a 2046     		mov	r0, r4
+ 978 000c 2360     		str	r3, [r4]
+ 979 000e 10BD     		pop	{r4, pc}
+ 980              	.L171:
+ 981              		.align	2
+ 982              	.L170:
+ 983 0010 08000000 		.word	.LANCHOR0+8
+ 984              		.size	_ZN5amiro10UserThreadC2Ev, .-_ZN5amiro10UserThreadC2Ev
+ 985              		.global	_ZN5amiro10UserThreadC1Ev
+ 986              		.thumb_set _ZN5amiro10UserThreadC1Ev,_ZN5amiro10UserThreadC2Ev
+ 987 0014 AFF30080 		.section	.text.startup._GLOBAL__sub_I_policy,"ax",%progbits
+ 987      AFF30080 
+ 987      AFF30080 
+ 988              		.align	2
+ 989              		.p2align 4,,15
+ 990              		.thumb
+ 991              		.thumb_func
+ 992              		.type	_GLOBAL__sub_I_policy, %function
+ 993              	_GLOBAL__sub_I_policy:
+ 994              		@ args = 0, pretend = 0, frame = 0
+ 995              		@ frame_needed = 0, uses_anonymous_args = 0
+ 996              		@ link register save eliminated.
+ 997 0000 F0B4     		push	{r4, r5, r6, r7}
+ 998 0002 0A49     		ldr	r1, .L173
+ 999 0004 0A4D     		ldr	r5, .L173+4
+ 1000 0006 0B4E     		ldr	r6, .L173+8
+ 1001 0008 0B4C     		ldr	r4, .L173+12
+ 1002 000a 0C4B     		ldr	r3, .L173+16
+ 1003 000c 3220     		movs	r0, #50
+ 1004 000e 1422     		movs	r2, #20
+ 1005 0010 6FF01307 		mvn	r7, #19
+ 1006 0014 4FF01E0C 		mov	ip, #30
+ 1007 0018 2E60     		str	r6, [r5]
+ 1008 001a 6E60     		str	r6, [r5, #4]
+ 1009 001c 84E80110 		stmia	r4, {r0, ip}
+ARM GAS  /tmp/ccUCyIgk.s 			page 19
+
+
+ 1010 0020 83E88400 		stmia	r3, {r2, r7}
+ 1011 0024 F0BC     		pop	{r4, r5, r6, r7}
+ 1012 0026 81E80500 		stmia	r1, {r0, r2}
+ 1013 002a 7047     		bx	lr
+ 1014              	.L174:
+ 1015              		.align	2
+ 1016              	.L173:
+ 1017 002c 00000000 		.word	.LANCHOR2
+ 1018 0030 00000000 		.word	.LANCHOR11
+ 1019 0034 A0860100 		.word	100000
+ 1020 0038 00000000 		.word	.LANCHOR1
+ 1021 003c 00000000 		.word	.LANCHOR3
+ 1022              		.size	_GLOBAL__sub_I_policy, .-_GLOBAL__sub_I_policy
+ 1023              		.section	.init_array,"aw",%init_array
+ 1024              		.align	2
+ 1025 0000 00000000 		.word	_GLOBAL__sub_I_policy(target1)
+ 1026              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE
+ 1027              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE,"aG",%progbits,_ZTVN10chibios_rt16B
+ 1028              		.align	3
+ 1029              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE, %object
+ 1030              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE, 20
+ 1031              	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:
+ 1032 0000 00000000 		.word	0
+ 1033 0004 00000000 		.word	0
+ 1034 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 1035 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 1036 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+ 1037              		.global	_ZTVN5amiro10UserThreadE
+ 1038              		.global	vcnl4020ObstacleProximity
+ 1039              		.global	vcnl4020Proximity
+ 1040              		.global	vcnl4020AmbientLight
+ 1041              		.global	colorcycle
+ 1042              		.global	policyCounter
+ 1043              		.global	running
+ 1044              		.global	accel_z
+ 1045              		.global	policy
+ 1046 0014 00000000 		.section	.bss.policyCounter,"aw",%nobits
+ 1047              		.align	2
+ 1048              		.set	.LANCHOR4,. + 0
+ 1049              		.type	policyCounter, %object
+ 1050              		.size	policyCounter, 4
+ 1051              	policyCounter:
+ 1052 0000 00000000 		.space	4
+ 1053              		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 1054              		.align	2
+ 1055              		.set	.LANCHOR11,. + 0
+ 1056              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 1057              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 1058              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 1059 0000 00000000 		.space	8
+ 1059      00000000 
+ 1060              		.section	.bss.vcnl4020ObstacleProximity,"aw",%nobits
+ 1061              		.align	2
+ 1062              		.set	.LANCHOR10,. + 0
+ 1063              		.type	vcnl4020ObstacleProximity, %object
+ 1064              		.size	vcnl4020ObstacleProximity, 32
+ 1065              	vcnl4020ObstacleProximity:
+ARM GAS  /tmp/ccUCyIgk.s 			page 20
+
+
+ 1066 0000 00000000 		.space	32
+ 1066      00000000 
+ 1066      00000000 
+ 1066      00000000 
+ 1066      00000000 
+ 1067              		.section	.bss._ZL12rpmHardRight,"aw",%nobits
+ 1068              		.align	2
+ 1069              		.set	.LANCHOR2,. + 0
+ 1070              		.type	_ZL12rpmHardRight, %object
+ 1071              		.size	_ZL12rpmHardRight, 8
+ 1072              	_ZL12rpmHardRight:
+ 1073 0000 00000000 		.space	8
+ 1073      00000000 
+ 1074              		.section	.bss.running,"aw",%nobits
+ 1075              		.set	.LANCHOR6,. + 0
+ 1076              		.type	running, %object
+ 1077              		.size	running, 1
+ 1078              	running:
+ 1079 0000 00       		.space	1
+ 1080              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 1081              		.align	2
+ 1082              	.LC0:
+ 1083 0000 30782530 		.ascii	"0x%04X 0x%04X 0x%04X 0x%04X\012\000"
+ 1083      34582030 
+ 1083      78253034 
+ 1083      58203078 
+ 1083      25303458 
+ 1084 001d 000000   		.space	3
+ 1085              	.LC1:
+ 1086 0020 25303464 		.ascii	"%04d  %04d \012\000"
+ 1086      20202530 
+ 1086      3464200A 
+ 1086      00
+ 1087 002d 000000   		.section	.bss.vcnl4020AmbientLight,"aw",%nobits
+ 1088              		.align	2
+ 1089              		.set	.LANCHOR8,. + 0
+ 1090              		.type	vcnl4020AmbientLight, %object
+ 1091              		.size	vcnl4020AmbientLight, 16
+ 1092              	vcnl4020AmbientLight:
+ 1093 0000 00000000 		.space	16
+ 1093      00000000 
+ 1093      00000000 
+ 1093      00000000 
+ 1094              		.section	.bss._ZL12rpmSoftRight,"aw",%nobits
+ 1095              		.align	2
+ 1096              		.set	.LANCHOR1,. + 0
+ 1097              		.type	_ZL12rpmSoftRight, %object
+ 1098              		.size	_ZL12rpmSoftRight, 8
+ 1099              	_ZL12rpmSoftRight:
+ 1100 0000 00000000 		.space	8
+ 1100      00000000 
+ 1101              		.section	.bss.colorcycle,"aw",%nobits
+ 1102              		.align	2
+ 1103              		.type	colorcycle, %object
+ 1104              		.size	colorcycle, 4
+ 1105              	colorcycle:
+ 1106 0000 00000000 		.space	4
+ARM GAS  /tmp/ccUCyIgk.s 			page 21
+
+
+ 1107              		.section	.bss.accel_z,"aw",%nobits
+ 1108              		.align	1
+ 1109              		.set	.LANCHOR7,. + 0
+ 1110              		.type	accel_z, %object
+ 1111              		.size	accel_z, 2
+ 1112              	accel_z:
+ 1113 0000 0000     		.space	2
+ 1114              		.section	.rodata._ZTVN5amiro10UserThreadE,"a",%progbits
+ 1115              		.align	3
+ 1116              		.set	.LANCHOR0,. + 0
+ 1117              		.type	_ZTVN5amiro10UserThreadE, %object
+ 1118              		.size	_ZTVN5amiro10UserThreadE, 28
+ 1119              	_ZTVN5amiro10UserThreadE:
+ 1120 0000 00000000 		.word	0
+ 1121 0004 00000000 		.word	0
+ 1122 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 1123 000c 00000000 		.word	_ZN5amiro10UserThread4mainEv
+ 1124 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+ 1125 0014 00000000 		.word	_ZN5amiro10UserThreadD1Ev
+ 1126 0018 00000000 		.word	_ZN5amiro10UserThreadD0Ev
+ 1127 001c 00000000 		.section	.data.policy,"aw",%progbits
+ 1128              		.align	2
+ 1129              		.set	.LANCHOR5,. + 0
+ 1130              		.type	policy, %object
+ 1131              		.size	policy, 13
+ 1132              	policy:
+ 1133 0000 02       		.byte	2
+ 1134 0001 01       		.byte	1
+ 1135 0002 01       		.byte	1
+ 1136 0003 02       		.byte	2
+ 1137 0004 01       		.byte	1
+ 1138 0005 02       		.byte	2
+ 1139 0006 01       		.byte	1
+ 1140 0007 02       		.byte	2
+ 1141 0008 02       		.byte	2
+ 1142 0009 01       		.byte	1
+ 1143 000a 02       		.byte	2
+ 1144 000b 01       		.byte	1
+ 1145 000c 02       		.byte	2
+ 1146 000d 000000   		.section	.bss.vcnl4020Proximity,"aw",%nobits
+ 1147              		.align	2
+ 1148              		.set	.LANCHOR9,. + 0
+ 1149              		.type	vcnl4020Proximity, %object
+ 1150              		.size	vcnl4020Proximity, 16
+ 1151              	vcnl4020Proximity:
+ 1152 0000 00000000 		.space	16
+ 1152      00000000 
+ 1152      00000000 
+ 1152      00000000 
+ 1153              		.section	.bss._ZL12rpmTurnRight,"aw",%nobits
+ 1154              		.align	2
+ 1155              		.set	.LANCHOR3,. + 0
+ 1156              		.type	_ZL12rpmTurnRight, %object
+ 1157              		.size	_ZL12rpmTurnRight, 8
+ 1158              	_ZL12rpmTurnRight:
+ 1159 0000 00000000 		.space	8
+ 1159      00000000 
+ARM GAS  /tmp/ccUCyIgk.s 			page 22
+
+
+ 1160              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccUCyIgk.s 			page 23
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 userthread.cpp
+     /tmp/ccUCyIgk.s:16     .text._ZN5amiro10UserThreadD2Ev:00000000 $t
+     /tmp/ccUCyIgk.s:22     .text._ZN5amiro10UserThreadD2Ev:00000000 _ZN5amiro10UserThreadD2Ev
+     /tmp/ccUCyIgk.s:32     .text._ZN5amiro10UserThreadD2Ev:00000008 $d
+     /tmp/ccUCyIgk.s:22     .text._ZN5amiro10UserThreadD2Ev:00000000 _ZN5amiro10UserThreadD1Ev
+     /tmp/ccUCyIgk.s:37     .text._ZN5amiro10UserThreadD0Ev:00000000 $t
+     /tmp/ccUCyIgk.s:43     .text._ZN5amiro10UserThreadD0Ev:00000000 _ZN5amiro10UserThreadD0Ev
+     /tmp/ccUCyIgk.s:56     .text._ZN5amiro10UserThreadD0Ev:00000010 $d
+     /tmp/ccUCyIgk.s:59     .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000000 $t
+     /tmp/ccUCyIgk.s:65     .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+     /tmp/ccUCyIgk.s:88     .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000028 $d
+     /tmp/ccUCyIgk.s:92     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1:00000000 $t
+     /tmp/ccUCyIgk.s:97     .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1
+     /tmp/ccUCyIgk.s:117    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1:00000020 $d
+     /tmp/ccUCyIgk.s:120    .text._Z14discriminationi:00000000 $t
+     /tmp/ccUCyIgk.s:126    .text._Z14discriminationi:00000000 _Z14discriminationi
+     /tmp/ccUCyIgk.s:137    .text._Z12copyRpmSpeedRA2_KiRA2_i:00000000 $t
+     /tmp/ccUCyIgk.s:143    .text._Z12copyRpmSpeedRA2_KiRA2_i:00000000 _Z12copyRpmSpeedRA2_KiRA2_i
+     /tmp/ccUCyIgk.s:157    .text._Z13fuzzyficationiRA3_f:00000000 $t
+     /tmp/ccUCyIgk.s:163    .text._Z13fuzzyficationiRA3_f:00000000 _Z13fuzzyficationiRA3_f
+     /tmp/ccUCyIgk.s:232    .text._Z13fuzzyficationiRA3_f:00000098 $d
+     /tmp/ccUCyIgk.s:238    .text._Z9getMemberRA3_f:00000000 $t
+     /tmp/ccUCyIgk.s:244    .text._Z9getMemberRA3_f:00000000 _Z9getMemberRA3_f
+     /tmp/ccUCyIgk.s:274    .text._Z15defuzzyficationRA4_11colorMemberRA2_i:00000000 $t
+     /tmp/ccUCyIgk.s:280    .text._Z15defuzzyficationRA4_11colorMemberRA2_i:00000000 _Z15defuzzyficationRA4_11colorMemberRA2_i
+     /tmp/ccUCyIgk.s:389    .text._Z15defuzzyficationRA4_11colorMemberRA2_i:000000c0 $d
+     /tmp/ccUCyIgk.s:394    .text._Z11memberToLed11colorMember:00000000 $t
+     /tmp/ccUCyIgk.s:400    .text._Z11memberToLed11colorMember:00000000 _Z11memberToLed11colorMember
+     /tmp/ccUCyIgk.s:431    .text._Z13lineFollowingRA4_iRA2_i:00000000 $t
+     /tmp/ccUCyIgk.s:437    .text._Z13lineFollowingRA4_iRA2_i:00000000 _Z13lineFollowingRA4_iRA2_i
+     /tmp/ccUCyIgk.s:593    .text._Z13lineFollowingRA4_iRA2_i:0000015c $d
+     /tmp/ccUCyIgk.s:596    .text._Z11setRpmSpeedRA2_Ki:00000000 $t
+     /tmp/ccUCyIgk.s:602    .text._Z11setRpmSpeedRA2_Ki:00000000 _Z11setRpmSpeedRA2_Ki
+     /tmp/ccUCyIgk.s:615    .text._Z11setRpmSpeedRA2_Ki:00000014 $d
+     /tmp/ccUCyIgk.s:619    .text._Z13getNextPolicyv:00000000 $t
+     /tmp/ccUCyIgk.s:625    .text._Z13getNextPolicyv:00000000 _Z13getNextPolicyv
+     /tmp/ccUCyIgk.s:643    .text._Z13getNextPolicyv:00000018 $d
+     /tmp/ccUCyIgk.s:647    .text._Z13wallFollowingRA2_i:00000000 $t
+     /tmp/ccUCyIgk.s:653    .text._Z13wallFollowingRA2_i:00000000 _Z13wallFollowingRA2_i
+     /tmp/ccUCyIgk.s:676    .text._Z13wallFollowingRA2_i:0000002c $d
+     /tmp/ccUCyIgk.s:680    .text.startup._ZN5amiro10UserThread4mainEv:00000000 $t
+     /tmp/ccUCyIgk.s:686    .text.startup._ZN5amiro10UserThread4mainEv:00000000 _ZN5amiro10UserThread4mainEv
+     /tmp/ccUCyIgk.s:946    .text.startup._ZN5amiro10UserThread4mainEv:00000284 $d
+     /tmp/ccUCyIgk.s:964    .text._ZN5amiro10UserThreadC2Ev:00000000 $t
+     /tmp/ccUCyIgk.s:970    .text._ZN5amiro10UserThreadC2Ev:00000000 _ZN5amiro10UserThreadC2Ev
+     /tmp/ccUCyIgk.s:983    .text._ZN5amiro10UserThreadC2Ev:00000010 $d
+     /tmp/ccUCyIgk.s:970    .text._ZN5amiro10UserThreadC2Ev:00000000 _ZN5amiro10UserThreadC1Ev
+     /tmp/ccUCyIgk.s:988    .text.startup._GLOBAL__sub_I_policy:00000000 $t
+     /tmp/ccUCyIgk.s:993    .text.startup._GLOBAL__sub_I_policy:00000000 _GLOBAL__sub_I_policy
+     /tmp/ccUCyIgk.s:1017   .text.startup._GLOBAL__sub_I_policy:0000002c $d
+     /tmp/ccUCyIgk.s:1024   .init_array:00000000 $d
+     /tmp/ccUCyIgk.s:1031   .rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi1024EEE
+     /tmp/ccUCyIgk.s:1028   .rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:00000000 $d
+     /tmp/ccUCyIgk.s:1119   .rodata._ZTVN5amiro10UserThreadE:00000000 _ZTVN5amiro10UserThreadE
+     /tmp/ccUCyIgk.s:1065   .bss.vcnl4020ObstacleProximity:00000000 vcnl4020ObstacleProximity
+     /tmp/ccUCyIgk.s:1151   .bss.vcnl4020Proximity:00000000 vcnl4020Proximity
+ARM GAS  /tmp/ccUCyIgk.s 			page 24
+
+
+     /tmp/ccUCyIgk.s:1092   .bss.vcnl4020AmbientLight:00000000 vcnl4020AmbientLight
+     /tmp/ccUCyIgk.s:1105   .bss.colorcycle:00000000 colorcycle
+     /tmp/ccUCyIgk.s:1051   .bss.policyCounter:00000000 policyCounter
+     /tmp/ccUCyIgk.s:1078   .bss.running:00000000 running
+     /tmp/ccUCyIgk.s:1112   .bss.accel_z:00000000 accel_z
+     /tmp/ccUCyIgk.s:1132   .data.policy:00000000 policy
+     /tmp/ccUCyIgk.s:1047   .bss.policyCounter:00000000 $d
+     /tmp/ccUCyIgk.s:1054   .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccUCyIgk.s:1058   .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccUCyIgk.s:1061   .bss.vcnl4020ObstacleProximity:00000000 $d
+     /tmp/ccUCyIgk.s:1068   .bss._ZL12rpmHardRight:00000000 $d
+     /tmp/ccUCyIgk.s:1072   .bss._ZL12rpmHardRight:00000000 _ZL12rpmHardRight
+     /tmp/ccUCyIgk.s:1079   .bss.running:00000000 $d
+     /tmp/ccUCyIgk.s:1081   .rodata.str1.4:00000000 $d
+     /tmp/ccUCyIgk.s:1088   .bss.vcnl4020AmbientLight:00000000 $d
+     /tmp/ccUCyIgk.s:1095   .bss._ZL12rpmSoftRight:00000000 $d
+     /tmp/ccUCyIgk.s:1099   .bss._ZL12rpmSoftRight:00000000 _ZL12rpmSoftRight
+     /tmp/ccUCyIgk.s:1102   .bss.colorcycle:00000000 $d
+     /tmp/ccUCyIgk.s:1108   .bss.accel_z:00000000 $d
+     /tmp/ccUCyIgk.s:1115   .rodata._ZTVN5amiro10UserThreadE:00000000 $d
+     /tmp/ccUCyIgk.s:1128   .data.policy:00000000 $d
+     /tmp/ccUCyIgk.s:1147   .bss.vcnl4020Proximity:00000000 $d
+     /tmp/ccUCyIgk.s:1154   .bss._ZL12rpmTurnRight:00000000 $d
+     /tmp/ccUCyIgk.s:1158   .bss._ZL12rpmTurnRight:00000000 _ZL12rpmTurnRight
+     /tmp/ccUCyIgk.s:36     .text._ZN5amiro10UserThreadD2Ev:0000000c $t
+     /tmp/ccUCyIgk.s:58     .text._ZN5amiro10UserThreadD0Ev:00000014 $t
+     /tmp/ccUCyIgk.s:119    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.1:00000024 $t
+     /tmp/ccUCyIgk.s:237    .text._Z13fuzzyficationiRA3_f:000000a4 $t
+     /tmp/ccUCyIgk.s:393    .text._Z15defuzzyficationRA4_11colorMemberRA2_i:000000cc $t
+     /tmp/ccUCyIgk.s:618    .text._Z11setRpmSpeedRA2_Ki:0000001c $t
+     /tmp/ccUCyIgk.s:679    .text._Z13wallFollowingRA2_i:00000034 $t
+     /tmp/ccUCyIgk.s:963    .text.startup._ZN5amiro10UserThread4mainEv:000002c4 $t
+     /tmp/ccUCyIgk.s:987    .text._ZN5amiro10UserThreadC2Ev:00000014 $t
+
+UNDEFINED SYMBOLS
+_ZdlPv
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+chvprintf
+SD1
+__aeabi_i2f
+__aeabi_fmul
+__aeabi_fdiv
+__aeabi_fcmpgt
+_ZN5amiro5ColorC1ENS0_11GlobalColorE
+_ZN5amiro23ControllerAreaNetworkTx13setLightColorEiNS_5ColorE
+global
+_ZN5amiro12MotorControl12setTargetRPMEll
+_ZN5amiro23ControllerAreaNetworkRx21getProximityRingValueEi
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+_ZN5amiro9LIS331DLH20getAccelerationForceEh
+_ZN10chibios_rt10BaseThread5sleepEm
+_ZN5amiro8VCNL402015getAmbientLightEv
+_ZN5amiro8VCNL402026getProximityScaledWoOffsetEv
+_ZN10chibios_rt10BaseThreadC2Ev
+_ZN10chibios_rt15ThreadReference4stopEv
+ARM GAS  /tmp/ccUCyIgk.s 			page 25
+
+
+_ZN10chibios_rt10BaseThread4mainEv

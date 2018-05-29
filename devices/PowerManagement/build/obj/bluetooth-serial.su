@@ -1,0 +1,12 @@
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 128; tprio_t = long unsigned int]	24	static
+bluetooth-serial.cpp:16:1:amiro::BluetoothSerial::BluetoothSerial(amiro::BLUETOOTH*, uint8_t)	16	static
+bluetooth-serial.cpp:40:7:msg_t amiro::BluetoothSerial::serialReceive()	32	static
+bluetooth-serial.cpp:27:7:virtual msg_t amiro::BluetoothSerial::main()	8	static
+bluetooth-serial.cpp:63:7:msg_t amiro::BluetoothSerial::serialTransmit(const uint8_t*, size_t)	12	static
+bluetooth-serial.cpp:74:6:void amiro::BluetoothSerial::bluetoothSerialStart(uint8_t)	16	static
+bluetooth-serial.cpp:84:6:void amiro::BluetoothSerial::bluetoothSerialStop()	0	static
+bluetooth-serial.cpp:90:6:bool amiro::BluetoothSerial::bluetoothSerialIsConnected()	0	static
+bluetooth-serial.cpp:97:6:void amiro::BluetoothSerial::bluetoothSerialListen(const char*)	0	static
+bluetooth-serial.cpp:101:6:void amiro::BluetoothSerial::bluetoothSerialConnect(const char*)	0	static
+bluetooth-serial.cpp:105:6:void amiro::BluetoothSerial::bluetoothSerialDisconnect(const char*)	0	static
+bluetooth-serial.cpp:107:1:cpp)	0	static

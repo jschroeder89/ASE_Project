@@ -1,0 +1,8 @@
+bluetooth-descriptor.cpp:11:1:amiro::BluetoothDescriptor::BluetoothDescriptor()	8	static
+bluetooth-descriptor.cpp:18:6:void amiro::BluetoothDescriptor::bluetoothDescriptorSetLinkId(uint8_t)	0	static
+bluetooth-descriptor.cpp:22:6:void amiro::BluetoothDescriptor::bluetoothDescriptorSetPayloadLength(size_t)	0	static
+bluetooth-descriptor.cpp:26:9:uint8_t amiro::BluetoothDescriptor::bluetoothDescriptorGetLinkId()	0	static
+bluetooth-descriptor.cpp:30:8:size_t amiro::BluetoothDescriptor::bluetoothDescriptorGetBufferLength()	0	static
+bluetooth-descriptor.cpp:34:8:size_t amiro::BluetoothDescriptor::bluetoothDescriptorGetPayloadLength()	0	static
+bluetooth-descriptor.cpp:38:10:uint8_t* amiro::BluetoothDescriptor::bluetoothDescriptorGetBuffer()	0	static
+bluetooth-descriptor.cpp:42:10:uint8_t* amiro::BluetoothDescriptor::bluetoothDescriptorGetPayload()	0	static

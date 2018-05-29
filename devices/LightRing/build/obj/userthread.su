@@ -1,0 +1,6 @@
+userthread.cpp:14:1:amiro::UserThread::~UserThread()	0	static
+userthread.cpp:14:1:virtual amiro::UserThread::~UserThread()	8	static
+userthread.cpp:19:1:virtual msg_t amiro::UserThread::main()	8	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 1024; tprio_t = long unsigned int]	24	static
+userthread.cpp:9:1:amiro::UserThread::UserThread()	8	static
+userthread.cpp:32:1:cpp)	0	static

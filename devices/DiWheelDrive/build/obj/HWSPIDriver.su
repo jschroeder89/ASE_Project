@@ -1,0 +1,6 @@
+HWSPIDriver.cpp:15:1:amiro::HWSPIDriver::~HWSPIDriver()	0	static
+HWSPIDriver.cpp:15:1:virtual amiro::HWSPIDriver::~HWSPIDriver()	8	static
+HWSPIDriver.cpp:8:1:amiro::HWSPIDriver::HWSPIDriver(SPIDriver*, const SPIConfig*)	4	static
+HWSPIDriver.cpp:22:1:void amiro::HWSPIDriver::exchange(uint8_t*, const uint8_t*, size_t)	24	static
+HWSPIDriver.cpp:33:1:void amiro::HWSPIDriver::read(uint8_t*, size_t)	16	static
+HWSPIDriver.cpp:44:1:void amiro::HWSPIDriver::write(const uint8_t*, size_t)	16	static

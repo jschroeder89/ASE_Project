@@ -1,0 +1,12 @@
+PowerManagement.cpp:24:7:virtual msg_t amiro::PowerManagement::receiveMessage(CANRxFrame*)	16	static
+PowerManagement.cpp:68:7:virtual msg_t amiro::PowerManagement::updateSensorVal()	16	static
+PowerManagement.cpp:118:6:virtual void amiro::PowerManagement::periodicBroadcast()	40	static
+PowerManagement.h:15:9:amiro::PowerManagement::~PowerManagement()	8	static
+PowerManagement.h:15:9:virtual amiro::PowerManagement::~PowerManagement()	8	static
+PowerManagement.cpp:163:17:virtual chibios_rt::ThreadReference amiro::PowerManagement::start(tprio_t)	32	static
+PowerManagement.cpp:16:1:amiro::PowerManagement::PowerManagement(CANDriver*)	16	static
+PowerManagement.cpp:153:6:void amiro::PowerManagement::calibrateProximityRingValues()	16	static
+PowerManagement.cpp:141:6:virtual void amiro::PowerManagement::calibrate()	0	static
+PowerManagement.cpp:170:1:types::power_status& amiro::PowerManagement::getPowerStatus()	0	static
+PowerManagement.cpp:175:7:msg_t amiro::PowerManagement::terminate()	16	static
+PowerManagement.cpp:184:1:cpp)	0	static

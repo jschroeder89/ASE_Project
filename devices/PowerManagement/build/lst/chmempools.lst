@@ -1,0 +1,291 @@
+ARM GAS  /tmp/cc1lI7di.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chmempools.c"
+  17              		.section	.text.chPoolInit,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	chPoolInit
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	chPoolInit, %function
+  24              	chPoolInit:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 70B5     		push	{r4, r5, r6, lr}
+  28 0002 0446     		mov	r4, r0
+  29 0004 0D46     		mov	r5, r1
+  30 0006 1646     		mov	r6, r2
+  31 0008 08B1     		cbz	r0, .L2
+  32 000a 0329     		cmp	r1, #3
+  33 000c 02D8     		bhi	.L3
+  34              	.L2:
+  35 000e 0348     		ldr	r0, .L8
+  36 0010 FFF7FEFF 		bl	chDbgPanic
+  37              	.L3:
+  38 0014 0023     		movs	r3, #0
+  39 0016 84E86800 		stmia	r4, {r3, r5, r6}
+  40 001a 70BD     		pop	{r4, r5, r6, pc}
+  41              	.L9:
+  42              		.align	2
+  43              	.L8:
+  44 001c 00000000 		.word	.LC0
+  45              		.size	chPoolInit, .-chPoolInit
+  46              		.section	.text.chPoolAllocI,"ax",%progbits
+  47              		.align	2
+  48              		.p2align 4,,15
+  49              		.global	chPoolAllocI
+  50              		.thumb
+  51              		.thumb_func
+  52              		.type	chPoolAllocI, %function
+  53              	chPoolAllocI:
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+  56 0000 10B5     		push	{r4, lr}
+  57 0002 0446     		mov	r4, r0
+ARM GAS  /tmp/cc1lI7di.s 			page 2
+
+
+  58 0004 FFF7FEFF 		bl	chDbgCheckClassI
+  59 0008 4CB1     		cbz	r4, .L17
+  60              	.L11:
+  61 000a 2068     		ldr	r0, [r4]
+  62 000c 10B1     		cbz	r0, .L12
+  63 000e 0368     		ldr	r3, [r0]
+  64 0010 2360     		str	r3, [r4]
+  65 0012 10BD     		pop	{r4, pc}
+  66              	.L12:
+  67 0014 A368     		ldr	r3, [r4, #8]
+  68 0016 0BB1     		cbz	r3, .L13
+  69 0018 6068     		ldr	r0, [r4, #4]
+  70 001a 9847     		blx	r3
+  71              	.L13:
+  72 001c 10BD     		pop	{r4, pc}
+  73              	.L17:
+  74 001e 0248     		ldr	r0, .L18
+  75 0020 FFF7FEFF 		bl	chDbgPanic
+  76 0024 F1E7     		b	.L11
+  77              	.L19:
+  78 0026 00BF     		.align	2
+  79              	.L18:
+  80 0028 10000000 		.word	.LC1
+  81              		.size	chPoolAllocI, .-chPoolAllocI
+  82 002c AFF30080 		.section	.text.chPoolAlloc,"ax",%progbits
+  83              		.align	2
+  84              		.p2align 4,,15
+  85              		.global	chPoolAlloc
+  86              		.thumb
+  87              		.thumb_func
+  88              		.type	chPoolAlloc, %function
+  89              	chPoolAlloc:
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92 0000 10B5     		push	{r4, lr}
+  93 0002 2023     		movs	r3, #32
+  94 0004 0446     		mov	r4, r0
+  95              	@ 131 "../../../ChibiOS/os/kernel/src/chmempools.c" 1
+  96 0006 83F31188 		msr     BASEPRI, r3
+  97              	@ 0 "" 2
+  98              		.thumb
+  99 000a FFF7FEFF 		bl	dbg_check_lock
+ 100 000e 2046     		mov	r0, r4
+ 101 0010 FFF7FEFF 		bl	chPoolAllocI
+ 102 0014 0446     		mov	r4, r0
+ 103 0016 FFF7FEFF 		bl	dbg_check_unlock
+ 104 001a 0023     		movs	r3, #0
+ 105              	@ 133 "../../../ChibiOS/os/kernel/src/chmempools.c" 1
+ 106 001c 83F31188 		msr     BASEPRI, r3
+ 107              	@ 0 "" 2
+ 108              		.thumb
+ 109 0020 2046     		mov	r0, r4
+ 110 0022 10BD     		pop	{r4, pc}
+ 111              		.size	chPoolAlloc, .-chPoolAlloc
+ 112 0024 AFF30080 		.section	.text.chPoolFreeI,"ax",%progbits
+ 112      AFF30080 
+ 112      AFF30080 
+ARM GAS  /tmp/cc1lI7di.s 			page 3
+
+
+ 113              		.align	2
+ 114              		.p2align 4,,15
+ 115              		.global	chPoolFreeI
+ 116              		.thumb
+ 117              		.thumb_func
+ 118              		.type	chPoolFreeI, %function
+ 119              	chPoolFreeI:
+ 120              		@ args = 0, pretend = 0, frame = 0
+ 121              		@ frame_needed = 0, uses_anonymous_args = 0
+ 122 0000 38B5     		push	{r3, r4, r5, lr}
+ 123 0002 0446     		mov	r4, r0
+ 124 0004 0D46     		mov	r5, r1
+ 125 0006 FFF7FEFF 		bl	chDbgCheckClassI
+ 126 000a 24B1     		cbz	r4, .L22
+ 127 000c 1DB1     		cbz	r5, .L22
+ 128 000e 2368     		ldr	r3, [r4]
+ 129 0010 2B60     		str	r3, [r5]
+ 130 0012 2560     		str	r5, [r4]
+ 131 0014 38BD     		pop	{r3, r4, r5, pc}
+ 132              	.L22:
+ 133 0016 0348     		ldr	r0, .L27
+ 134 0018 FFF7FEFF 		bl	chDbgPanic
+ 135 001c 2368     		ldr	r3, [r4]
+ 136 001e 2B60     		str	r3, [r5]
+ 137 0020 2560     		str	r5, [r4]
+ 138 0022 38BD     		pop	{r3, r4, r5, pc}
+ 139              	.L28:
+ 140              		.align	2
+ 141              	.L27:
+ 142 0024 24000000 		.word	.LC2
+ 143              		.size	chPoolFreeI, .-chPoolFreeI
+ 144 0028 AFF30080 		.section	.text.chPoolFree,"ax",%progbits
+ 144      AFF30080 
+ 145              		.align	2
+ 146              		.p2align 4,,15
+ 147              		.global	chPoolFree
+ 148              		.thumb
+ 149              		.thumb_func
+ 150              		.type	chPoolFree, %function
+ 151              	chPoolFree:
+ 152              		@ args = 0, pretend = 0, frame = 0
+ 153              		@ frame_needed = 0, uses_anonymous_args = 0
+ 154 0000 38B5     		push	{r3, r4, r5, lr}
+ 155 0002 0546     		mov	r5, r0
+ 156 0004 0C46     		mov	r4, r1
+ 157 0006 2023     		movs	r3, #32
+ 158              	@ 173 "../../../ChibiOS/os/kernel/src/chmempools.c" 1
+ 159 0008 83F31188 		msr     BASEPRI, r3
+ 160              	@ 0 "" 2
+ 161              		.thumb
+ 162 000c FFF7FEFF 		bl	dbg_check_lock
+ 163 0010 2846     		mov	r0, r5
+ 164 0012 2146     		mov	r1, r4
+ 165 0014 FFF7FEFF 		bl	chPoolFreeI
+ 166 0018 FFF7FEFF 		bl	dbg_check_unlock
+ 167 001c 0023     		movs	r3, #0
+ 168              	@ 175 "../../../ChibiOS/os/kernel/src/chmempools.c" 1
+ARM GAS  /tmp/cc1lI7di.s 			page 4
+
+
+ 169 001e 83F31188 		msr     BASEPRI, r3
+ 170              	@ 0 "" 2
+ 171              		.thumb
+ 172 0022 38BD     		pop	{r3, r4, r5, pc}
+ 173              		.size	chPoolFree, .-chPoolFree
+ 174 0024 AFF30080 		.section	.text.chPoolLoadArray,"ax",%progbits
+ 174      AFF30080 
+ 174      AFF30080 
+ 175              		.align	2
+ 176              		.p2align 4,,15
+ 177              		.global	chPoolLoadArray
+ 178              		.thumb
+ 179              		.thumb_func
+ 180              		.type	chPoolLoadArray, %function
+ 181              	chPoolLoadArray:
+ 182              		@ args = 0, pretend = 0, frame = 0
+ 183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 184 0000 70B5     		push	{r4, r5, r6, lr}
+ 185 0002 0646     		mov	r6, r0
+ 186 0004 0D46     		mov	r5, r1
+ 187 0006 1446     		mov	r4, r2
+ 188 0008 28B1     		cbz	r0, .L31
+ 189 000a 42B9     		cbnz	r2, .L33
+ 190 000c 0948     		ldr	r0, .L39
+ 191 000e BDE87040 		pop	{r4, r5, r6, lr}
+ 192 0012 FFF7FEBF 		b	chDbgPanic
+ 193              	.L31:
+ 194 0016 0748     		ldr	r0, .L39
+ 195 0018 FFF7FEFF 		bl	chDbgPanic
+ 196 001c 44B1     		cbz	r4, .L30
+ 197              	.L33:
+ 198 001e 2946     		mov	r1, r5
+ 199 0020 3046     		mov	r0, r6
+ 200 0022 FFF7FEFF 		bl	chPoolFree
+ 201 0026 7368     		ldr	r3, [r6, #4]
+ 202 0028 013C     		subs	r4, r4, #1
+ 203 002a 1D44     		add	r5, r5, r3
+ 204 002c F7D1     		bne	.L33
+ 205 002e 70BD     		pop	{r4, r5, r6, pc}
+ 206              	.L30:
+ 207 0030 70BD     		pop	{r4, r5, r6, pc}
+ 208              	.L40:
+ 209 0032 00BF     		.align	2
+ 210              	.L39:
+ 211 0034 34000000 		.word	.LC3
+ 212              		.size	chPoolLoadArray, .-chPoolLoadArray
+ 213 0038 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 213      AFF30080 
+ 214              		.align	2
+ 215              	.LC0:
+ 216 0000 22636850 		.ascii	"\"chPoolInit\"()\000"
+ 216      6F6F6C49 
+ 216      6E697422 
+ 216      282900
+ 217 000f 00       		.space	1
+ 218              	.LC1:
+ 219 0010 22636850 		.ascii	"\"chPoolAllocI\"()\000"
+ARM GAS  /tmp/cc1lI7di.s 			page 5
+
+
+ 219      6F6F6C41 
+ 219      6C6C6F63 
+ 219      49222829 
+ 219      00
+ 220 0021 000000   		.space	3
+ 221              	.LC2:
+ 222 0024 22636850 		.ascii	"\"chPoolFreeI\"()\000"
+ 222      6F6F6C46 
+ 222      72656549 
+ 222      22282900 
+ 223              	.LC3:
+ 224 0034 22636850 		.ascii	"\"chPoolLoadArray\"()\000"
+ 224      6F6F6C4C 
+ 224      6F616441 
+ 224      72726179 
+ 224      22282900 
+ 225              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cc1lI7di.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chmempools.c
+     /tmp/cc1lI7di.s:18     .text.chPoolInit:00000000 $t
+     /tmp/cc1lI7di.s:24     .text.chPoolInit:00000000 chPoolInit
+     /tmp/cc1lI7di.s:44     .text.chPoolInit:0000001c $d
+     /tmp/cc1lI7di.s:47     .text.chPoolAllocI:00000000 $t
+     /tmp/cc1lI7di.s:53     .text.chPoolAllocI:00000000 chPoolAllocI
+     /tmp/cc1lI7di.s:80     .text.chPoolAllocI:00000028 $d
+     /tmp/cc1lI7di.s:83     .text.chPoolAlloc:00000000 $t
+     /tmp/cc1lI7di.s:89     .text.chPoolAlloc:00000000 chPoolAlloc
+     /tmp/cc1lI7di.s:113    .text.chPoolFreeI:00000000 $t
+     /tmp/cc1lI7di.s:119    .text.chPoolFreeI:00000000 chPoolFreeI
+     /tmp/cc1lI7di.s:142    .text.chPoolFreeI:00000024 $d
+     /tmp/cc1lI7di.s:145    .text.chPoolFree:00000000 $t
+     /tmp/cc1lI7di.s:151    .text.chPoolFree:00000000 chPoolFree
+     /tmp/cc1lI7di.s:175    .text.chPoolLoadArray:00000000 $t
+     /tmp/cc1lI7di.s:181    .text.chPoolLoadArray:00000000 chPoolLoadArray
+     /tmp/cc1lI7di.s:211    .text.chPoolLoadArray:00000034 $d
+     /tmp/cc1lI7di.s:214    .rodata.str1.4:00000000 $d
+     /tmp/cc1lI7di.s:82     .text.chPoolAllocI:0000002c $t
+     /tmp/cc1lI7di.s:144    .text.chPoolFreeI:00000028 $t
+     /tmp/cc1lI7di.s:213    .text.chPoolLoadArray:00000038 $t
+
+UNDEFINED SYMBOLS
+chDbgPanic
+chDbgCheckClassI
+dbg_check_lock
+dbg_check_unlock

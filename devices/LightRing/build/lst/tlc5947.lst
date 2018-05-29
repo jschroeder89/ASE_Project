@@ -1,0 +1,605 @@
+ARM GAS  /tmp/ccavZk36.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"tlc5947.cpp"
+  15              		.section	.text._ZN5amiro7TLC5947D2Ev,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro7TLC5947D2Ev
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro7TLC5947D2Ev, %function
+  22              	_ZN5amiro7TLC5947D2Ev:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 014B     		ldr	r3, .L2
+  27 0002 0360     		str	r3, [r0]
+  28 0004 7047     		bx	lr
+  29              	.L3:
+  30 0006 00BF     		.align	2
+  31              	.L2:
+  32 0008 08000000 		.word	.LANCHOR0+8
+  33              		.size	_ZN5amiro7TLC5947D2Ev, .-_ZN5amiro7TLC5947D2Ev
+  34              		.global	_ZN5amiro7TLC5947D1Ev
+  35              		.thumb_set _ZN5amiro7TLC5947D1Ev,_ZN5amiro7TLC5947D2Ev
+  36 000c AFF30080 		.section	.text._ZN5amiro7TLC5947D0Ev,"ax",%progbits
+  37              		.align	2
+  38              		.p2align 4,,15
+  39              		.global	_ZN5amiro7TLC5947D0Ev
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	_ZN5amiro7TLC5947D0Ev, %function
+  43              	_ZN5amiro7TLC5947D0Ev:
+  44              		@ args = 0, pretend = 0, frame = 0
+  45              		@ frame_needed = 0, uses_anonymous_args = 0
+  46 0000 10B5     		push	{r4, lr}
+  47 0002 034B     		ldr	r3, .L5
+  48 0004 0446     		mov	r4, r0
+  49 0006 0360     		str	r3, [r0]
+  50 0008 FFF7FEFF 		bl	_ZdlPv
+  51 000c 2046     		mov	r0, r4
+  52 000e 10BD     		pop	{r4, pc}
+  53              	.L6:
+  54              		.align	2
+  55              	.L5:
+  56 0010 08000000 		.word	.LANCHOR0+8
+  57              		.size	_ZN5amiro7TLC5947D0Ev, .-_ZN5amiro7TLC5947D0Ev
+ARM GAS  /tmp/ccavZk36.s 			page 2
+
+
+  58 0014 AFF30080 		.section	.text.startup._ZN5amiro7TLC59474mainEv,"ax",%progbits
+  58      AFF30080 
+  58      AFF30080 
+  59              		.align	2
+  60              		.p2align 4,,15
+  61              		.global	_ZN5amiro7TLC59474mainEv
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	_ZN5amiro7TLC59474mainEv, %function
+  65              	_ZN5amiro7TLC59474mainEv:
+  66              		@ args = 0, pretend = 0, frame = 80
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  69 0004 95B0     		sub	sp, sp, #84
+  70 0006 0190     		str	r0, [sp, #4]
+  71 0008 5748     		ldr	r0, .L16
+  72 000a FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread7setNameEPKc
+  73 000e 574F     		ldr	r7, .L16+4
+  74 0010 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+  75 0014 0028     		cmp	r0, #0
+  76 0016 40F0A380 		bne	.L15
+  77              	.L13:
+  78 001a 019B     		ldr	r3, [sp, #4]
+  79 001c 0DF12C0B 		add	fp, sp, #44
+  80 0020 D3F8BC61 		ldr	r6, [r3, #444]
+  81 0024 03F5D279 		add	r9, r3, #420
+  82 0028 0DF15008 		add	r8, sp, #80
+  83 002c 0DF1140A 		add	r10, sp, #20
+  84              	.L12:
+  85 0030 4946     		mov	r1, r9
+  86 0032 02A8     		add	r0, sp, #8
+  87 0034 FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+  88 0038 09F10301 		add	r1, r9, #3
+  89 003c 03A8     		add	r0, sp, #12
+  90 003e FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+  91 0042 02A9     		add	r1, sp, #8
+  92 0044 04A8     		add	r0, sp, #16
+  93 0046 FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+  94 004a 04A8     		add	r0, sp, #16
+  95 004c FFF7FEFF 		bl	_ZN5amiro5Color7getBlueEv
+  96 0050 00FB06F0 		mul	r0, r0, r6
+  97 0054 00EB4000 		add	r0, r0, r0, lsl #1
+  98 0058 0301     		lsls	r3, r0, #4
+  99 005a 87FB0315 		smull	r1, r5, r7, r3
+ 100 005e DB17     		asrs	r3, r3, #31
+ 101 0060 C3EBE515 		rsb	r5, r3, r5, asr #7
+ 102 0064 02A9     		add	r1, sp, #8
+ 103 0066 04A8     		add	r0, sp, #16
+ 104 0068 0595     		str	r5, [sp, #20]
+ 105 006a FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+ 106 006e 04A8     		add	r0, sp, #16
+ 107 0070 FFF7FEFF 		bl	_ZN5amiro5Color8getGreenEv
+ 108 0074 00FB06F0 		mul	r0, r0, r6
+ 109 0078 0301     		lsls	r3, r0, #4
+ 110 007a 87FB0324 		smull	r2, r4, r7, r3
+ 111 007e DB17     		asrs	r3, r3, #31
+ 112 0080 C3EB6414 		rsb	r4, r3, r4, asr #5
+ARM GAS  /tmp/ccavZk36.s 			page 3
+
+
+ 113 0084 02A9     		add	r1, sp, #8
+ 114 0086 04A8     		add	r0, sp, #16
+ 115 0088 0694     		str	r4, [sp, #24]
+ 116 008a FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+ 117 008e 04A8     		add	r0, sp, #16
+ 118 0090 FFF7FEFF 		bl	_ZN5amiro5Color6getRedEv
+ 119 0094 00FB06F0 		mul	r0, r0, r6
+ 120 0098 0301     		lsls	r3, r0, #4
+ 121 009a 87FB0312 		smull	r1, r2, r7, r3
+ 122 009e DB17     		asrs	r3, r3, #31
+ 123 00a0 C3EB6213 		rsb	r3, r3, r2, asr #5
+ 124 00a4 03A9     		add	r1, sp, #12
+ 125 00a6 04A8     		add	r0, sp, #16
+ 126 00a8 0793     		str	r3, [sp, #28]
+ 127 00aa FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+ 128 00ae 04A8     		add	r0, sp, #16
+ 129 00b0 FFF7FEFF 		bl	_ZN5amiro5Color7getBlueEv
+ 130 00b4 00FB06F0 		mul	r0, r0, r6
+ 131 00b8 00EB4000 		add	r0, r0, r0, lsl #1
+ 132 00bc 0301     		lsls	r3, r0, #4
+ 133 00be 87FB0312 		smull	r1, r2, r7, r3
+ 134 00c2 DB17     		asrs	r3, r3, #31
+ 135 00c4 C3EBE213 		rsb	r3, r3, r2, asr #7
+ 136 00c8 03A9     		add	r1, sp, #12
+ 137 00ca 04A8     		add	r0, sp, #16
+ 138 00cc 0893     		str	r3, [sp, #32]
+ 139 00ce FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+ 140 00d2 04A8     		add	r0, sp, #16
+ 141 00d4 FFF7FEFF 		bl	_ZN5amiro5Color8getGreenEv
+ 142 00d8 00FB06F0 		mul	r0, r0, r6
+ 143 00dc 0301     		lsls	r3, r0, #4
+ 144 00de 87FB0312 		smull	r1, r2, r7, r3
+ 145 00e2 DB17     		asrs	r3, r3, #31
+ 146 00e4 C3EB6213 		rsb	r3, r3, r2, asr #5
+ 147 00e8 03A9     		add	r1, sp, #12
+ 148 00ea 04A8     		add	r0, sp, #16
+ 149 00ec 0993     		str	r3, [sp, #36]
+ 150 00ee FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+ 151 00f2 04A8     		add	r0, sp, #16
+ 152 00f4 FFF7FEFF 		bl	_ZN5amiro5Color6getRedEv
+ 153 00f8 00FB06F0 		mul	r0, r0, r6
+ 154 00fc 0301     		lsls	r3, r0, #4
+ 155 00fe 87FB0312 		smull	r1, r2, r7, r3
+ 156 0102 DB17     		asrs	r3, r3, #31
+ 157 0104 C3EB6213 		rsb	r3, r3, r2, asr #5
+ 158 0108 0A93     		str	r3, [sp, #40]
+ 159 010a 0022     		movs	r2, #0
+ 160 010c 5B46     		mov	r3, fp
+ 161              	.L10:
+ 162 010e 2901     		lsls	r1, r5, #4
+ 163 0110 0832     		adds	r2, r2, #8
+ 164 0112 41EA2421 		orr	r1, r1, r4, asr #8
+ 165 0116 2D11     		asrs	r5, r5, #4
+ 166 0118 182A     		cmp	r2, #24
+ 167 011a 9C70     		strb	r4, [r3, #2]
+ 168 011c 5970     		strb	r1, [r3, #1]
+ 169 011e 1D70     		strb	r5, [r3]
+ARM GAS  /tmp/ccavZk36.s 			page 4
+
+
+ 170 0120 03F10303 		add	r3, r3, #3
+ 171 0124 05D0     		beq	.L9
+ 172 0126 0AEB0201 		add	r1, r10, r2
+ 173 012a 4C68     		ldr	r4, [r1, #4]
+ 174 012c 52F80A50 		ldr	r5, [r2, r10]
+ 175 0130 EDE7     		b	.L10
+ 176              	.L9:
+ 177 0132 0BF1090B 		add	fp, fp, #9
+ 178 0136 C345     		cmp	fp, r8
+ 179 0138 09F10609 		add	r9, r9, #6
+ 180 013c 7FF478AF 		bne	.L12
+ 181 0140 019B     		ldr	r3, [sp, #4]
+ 182 0142 0BA9     		add	r1, sp, #44
+ 183 0144 D3F89801 		ldr	r0, [r3, #408]
+ 184 0148 2422     		movs	r2, #36
+ 185 014a FFF7FEFF 		bl	_ZN5amiro11HWSPIDriver5writeEPKhj
+ 186 014e 4FF0FF30 		mov	r0, #-1
+ 187 0152 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread12waitAnyEventEm
+ 188 0156 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 189 015a 0028     		cmp	r0, #0
+ 190 015c 3FF45DAF 		beq	.L13
+ 191              	.L15:
+ 192 0160 0120     		movs	r0, #1
+ 193 0162 15B0     		add	sp, sp, #84
+ 194              		@ sp needed
+ 195 0164 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 196              	.L17:
+ 197              		.align	2
+ 198              	.L16:
+ 199 0168 00000000 		.word	.LC0
+ 200 016c 1F85EB51 		.word	1374389535
+ 201              		.size	_ZN5amiro7TLC59474mainEv, .-_ZN5amiro7TLC59474mainEv
+ 202              		.section	.text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm,"axG",%progbits,_ZN10chibios_rt16
+ 203              		.align	2
+ 204              		.p2align 4,,15
+ 205              		.weak	_ZN10chibios_rt16BaseStaticThreadILi192EE5startEm
+ 206              		.thumb
+ 207              		.thumb_func
+ 208              		.type	_ZN10chibios_rt16BaseStaticThreadILi192EE5startEm, %function
+ 209              	_ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:
+ 210              		@ args = 0, pretend = 0, frame = 0
+ 211              		@ frame_needed = 0, uses_anonymous_args = 0
+ 212 0000 30B5     		push	{r4, r5, lr}
+ 213 0002 0D46     		mov	r5, r1
+ 214 0004 83B0     		sub	sp, sp, #12
+ 215 0006 0446     		mov	r4, r0
+ 216 0008 0091     		str	r1, [sp]
+ 217 000a 05F10800 		add	r0, r5, #8
+ 218 000e 4FF4C871 		mov	r1, #400
+ 219 0012 054B     		ldr	r3, .L19
+ 220 0014 FFF7FEFF 		bl	chThdCreateStatic
+ 221 0018 044A     		ldr	r2, .L19+4
+ 222 001a 0346     		mov	r3, r0
+ 223 001c 6860     		str	r0, [r5, #4]
+ 224 001e 2046     		mov	r0, r4
+ 225 0020 84E80C00 		stmia	r4, {r2, r3}
+ 226 0024 03B0     		add	sp, sp, #12
+ARM GAS  /tmp/ccavZk36.s 			page 5
+
+
+ 227              		@ sp needed
+ 228 0026 30BD     		pop	{r4, r5, pc}
+ 229              	.L20:
+ 230              		.align	2
+ 231              	.L19:
+ 232 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+ 233 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+ 234              		.size	_ZN10chibios_rt16BaseStaticThreadILi192EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi192
+ 235              		.section	.text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi,"ax",%progbits
+ 236              		.align	2
+ 237              		.p2align 4,,15
+ 238              		.global	_ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi
+ 239              		.thumb
+ 240              		.thumb_func
+ 241              		.type	_ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi, %function
+ 242              	_ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 246 0004 0646     		mov	r6, r0
+ 247 0006 0C46     		mov	r4, r1
+ 248 0008 1746     		mov	r7, r2
+ 249 000a 9846     		mov	r8, r3
+ 250 000c FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+ 251 0010 124B     		ldr	r3, .L27
+ 252 0012 06F5D275 		add	r5, r6, #420
+ 253 0016 C6F89841 		str	r4, [r6, #408]
+ 254 001a C6F89C71 		str	r7, [r6, #412]
+ 255 001e C6F8A081 		str	r8, [r6, #416]
+ 256 0022 3360     		str	r3, [r6]
+ 257 0024 2C46     		mov	r4, r5
+ 258 0026 06F5DE77 		add	r7, r6, #444
+ 259              	.L23:
+ 260 002a 2046     		mov	r0, r4
+ 261 002c 0334     		adds	r4, r4, #3
+ 262 002e FFF7FEFF 		bl	_ZN5amiro5ColorC1Ev
+ 263 0032 BC42     		cmp	r4, r7
+ 264 0034 F9D1     		bne	.L23
+ 265 0036 0024     		movs	r4, #0
+ 266 0038 C6F8BC41 		str	r4, [r6, #444]
+ 267 003c 03E0     		b	.L25
+ 268              	.L26:
+ 269 003e 04F2A714 		addw	r4, r4, #423
+ 270 0042 3519     		adds	r5, r6, r4
+ 271 0044 1C46     		mov	r4, r3
+ 272              	.L25:
+ 273 0046 2846     		mov	r0, r5
+ 274 0048 0721     		movs	r1, #7
+ 275 004a FFF7FEFF 		bl	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 276 004e E31C     		adds	r3, r4, #3
+ 277 0050 182B     		cmp	r3, #24
+ 278 0052 F4D1     		bne	.L26
+ 279 0054 3046     		mov	r0, r6
+ 280 0056 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 281              	.L28:
+ 282 005a 00BF     		.align	2
+ 283              	.L27:
+ARM GAS  /tmp/ccavZk36.s 			page 6
+
+
+ 284 005c 08000000 		.word	.LANCHOR0+8
+ 285              		.size	_ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi, .-_ZN5amiro7TLC5947C2EPNS_11HWSPIDri
+ 286              		.global	_ZN5amiro7TLC5947C1EPNS_11HWSPIDriverEP12GPIO_TypeDefi
+ 287              		.thumb_set _ZN5amiro7TLC5947C1EPNS_11HWSPIDriverEP12GPIO_TypeDefi,_ZN5amiro7TLC5947C2EPNS_11HWSPID
+ 288              		.section	.text._ZN5amiro7TLC59477disableEv,"ax",%progbits
+ 289              		.align	2
+ 290              		.p2align 4,,15
+ 291              		.global	_ZN5amiro7TLC59477disableEv
+ 292              		.thumb
+ 293              		.thumb_func
+ 294              		.type	_ZN5amiro7TLC59477disableEv, %function
+ 295              	_ZN5amiro7TLC59477disableEv:
+ 296              		@ args = 0, pretend = 0, frame = 0
+ 297              		@ frame_needed = 0, uses_anonymous_args = 0
+ 298              		@ link register save eliminated.
+ 299 0000 D0F8A031 		ldr	r3, [r0, #416]
+ 300 0004 0122     		movs	r2, #1
+ 301 0006 02FA03F3 		lsl	r3, r2, r3
+ 302 000a D0F89C21 		ldr	r2, [r0, #412]
+ 303 000e 1361     		str	r3, [r2, #16]
+ 304 0010 7047     		bx	lr
+ 305              		.size	_ZN5amiro7TLC59477disableEv, .-_ZN5amiro7TLC59477disableEv
+ 306 0012 00BFAFF3 		.section	.text._ZN5amiro7TLC59476enableEv,"ax",%progbits
+ 306      0080AFF3 
+ 306      0080AFF3 
+ 306      0080
+ 307              		.align	2
+ 308              		.p2align 4,,15
+ 309              		.global	_ZN5amiro7TLC59476enableEv
+ 310              		.thumb
+ 311              		.thumb_func
+ 312              		.type	_ZN5amiro7TLC59476enableEv, %function
+ 313              	_ZN5amiro7TLC59476enableEv:
+ 314              		@ args = 0, pretend = 0, frame = 0
+ 315              		@ frame_needed = 0, uses_anonymous_args = 0
+ 316              		@ link register save eliminated.
+ 317 0000 D0F8A031 		ldr	r3, [r0, #416]
+ 318 0004 0122     		movs	r2, #1
+ 319 0006 1033     		adds	r3, r3, #16
+ 320 0008 02FA03F3 		lsl	r3, r2, r3
+ 321 000c D0F89C21 		ldr	r2, [r0, #412]
+ 322 0010 1361     		str	r3, [r2, #16]
+ 323 0012 7047     		bx	lr
+ 324              		.size	_ZN5amiro7TLC59476enableEv, .-_ZN5amiro7TLC59476enableEv
+ 325 0014 AFF30080 		.section	.text._ZN5amiro7TLC594713setBrightnessEi,"ax",%progbits
+ 325      AFF30080 
+ 325      AFF30080 
+ 326              		.align	2
+ 327              		.p2align 4,,15
+ 328              		.global	_ZN5amiro7TLC594713setBrightnessEi
+ 329              		.thumb
+ 330              		.thumb_func
+ 331              		.type	_ZN5amiro7TLC594713setBrightnessEi, %function
+ 332              	_ZN5amiro7TLC594713setBrightnessEi:
+ 333              		@ args = 0, pretend = 0, frame = 0
+ 334              		@ frame_needed = 0, uses_anonymous_args = 0
+ 335              		@ link register save eliminated.
+ARM GAS  /tmp/ccavZk36.s 			page 7
+
+
+ 336 0000 0029     		cmp	r1, #0
+ 337 0002 07DB     		blt	.L35
+ 338 0004 6429     		cmp	r1, #100
+ 339 0006 C6BF     		itte	gt
+ 340 0008 6423     		movgt	r3, #100
+ 341 000a C0F8BC31 		strgt	r3, [r0, #444]
+ 342 000e C0F8BC11 		strle	r1, [r0, #444]
+ 343 0012 7047     		bx	lr
+ 344              	.L35:
+ 345 0014 0023     		movs	r3, #0
+ 346 0016 C0F8BC31 		str	r3, [r0, #444]
+ 347 001a 7047     		bx	lr
+ 348              		.size	_ZN5amiro7TLC594713setBrightnessEi, .-_ZN5amiro7TLC594713setBrightnessEi
+ 349 001c AFF30080 		.section	.text._ZN5amiro7TLC59478setColorEiNS_5ColorE,"ax",%progbits
+ 350              		.align	2
+ 351              		.p2align 4,,15
+ 352              		.global	_ZN5amiro7TLC59478setColorEiNS_5ColorE
+ 353              		.thumb
+ 354              		.thumb_func
+ 355              		.type	_ZN5amiro7TLC59478setColorEiNS_5ColorE, %function
+ 356              	_ZN5amiro7TLC59478setColorEiNS_5ColorE:
+ 357              		@ args = 0, pretend = 0, frame = 0
+ 358              		@ frame_needed = 0, uses_anonymous_args = 0
+ 359              		@ link register save eliminated.
+ 360 0000 01EB4101 		add	r1, r1, r1, lsl #1
+ 361 0004 0844     		add	r0, r0, r1
+ 362 0006 00F5D270 		add	r0, r0, #420
+ 363 000a 1146     		mov	r1, r2
+ 364 000c FFF7FEBF 		b	_ZN5amiro5ColoraSERKS0_
+ 365              		.size	_ZN5amiro7TLC59478setColorEiNS_5ColorE, .-_ZN5amiro7TLC59478setColorEiNS_5ColorE
+ 366              		.section	.text._ZN5amiro7TLC59476updateEv,"ax",%progbits
+ 367              		.align	2
+ 368              		.p2align 4,,15
+ 369              		.global	_ZN5amiro7TLC59476updateEv
+ 370              		.thumb
+ 371              		.thumb_func
+ 372              		.type	_ZN5amiro7TLC59476updateEv, %function
+ 373              	_ZN5amiro7TLC59476updateEv:
+ 374              		@ args = 0, pretend = 0, frame = 0
+ 375              		@ frame_needed = 0, uses_anonymous_args = 0
+ 376              		@ link register save eliminated.
+ 377 0000 0121     		movs	r1, #1
+ 378 0002 FFF7FEBF 		b	_ZN10chibios_rt15ThreadReference12signalEventsEm
+ 379              		.size	_ZN5amiro7TLC59476updateEv, .-_ZN5amiro7TLC59476updateEv
+ 380 0006 00BFAFF3 		.section	.text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi,"ax",%progbits
+ 380      0080AFF3 
+ 380      0080
+ 381              		.align	2
+ 382              		.p2align 4,,15
+ 383              		.global	_ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi
+ 384              		.thumb
+ 385              		.thumb_func
+ 386              		.type	_ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi, %function
+ 387              	_ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:
+ 388              		@ args = 0, pretend = 0, frame = 0
+ 389              		@ frame_needed = 0, uses_anonymous_args = 0
+ 390 0000 10B5     		push	{r4, lr}
+ARM GAS  /tmp/ccavZk36.s 			page 8
+
+
+ 391 0002 0846     		mov	r0, r1
+ 392 0004 1446     		mov	r4, r2
+ 393 0006 FFF7FEFF 		bl	_ZN5amiro5Color6getRedEv
+ 394 000a 04FB00F0 		mul	r0, r4, r0
+ 395 000e 044B     		ldr	r3, .L39
+ 396 0010 0201     		lsls	r2, r0, #4
+ 397 0012 83FB0210 		smull	r1, r0, r3, r2
+ 398 0016 D217     		asrs	r2, r2, #31
+ 399 0018 C2EB6010 		rsb	r0, r2, r0, asr #5
+ 400 001c 10BD     		pop	{r4, pc}
+ 401              	.L40:
+ 402 001e 00BF     		.align	2
+ 403              	.L39:
+ 404 0020 1F85EB51 		.word	1374389535
+ 405              		.size	_ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi, .-_ZNK5amiro7TLC594721caluclateRedGra
+ 406 0024 AFF30080 		.section	.text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi,"ax",%progbits
+ 406      AFF30080 
+ 406      AFF30080 
+ 407              		.align	2
+ 408              		.p2align 4,,15
+ 409              		.global	_ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi
+ 410              		.thumb
+ 411              		.thumb_func
+ 412              		.type	_ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi, %function
+ 413              	_ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:
+ 414              		@ args = 0, pretend = 0, frame = 0
+ 415              		@ frame_needed = 0, uses_anonymous_args = 0
+ 416 0000 10B5     		push	{r4, lr}
+ 417 0002 0846     		mov	r0, r1
+ 418 0004 1446     		mov	r4, r2
+ 419 0006 FFF7FEFF 		bl	_ZN5amiro5Color8getGreenEv
+ 420 000a 04FB00F0 		mul	r0, r4, r0
+ 421 000e 044B     		ldr	r3, .L42
+ 422 0010 0201     		lsls	r2, r0, #4
+ 423 0012 83FB0210 		smull	r1, r0, r3, r2
+ 424 0016 D217     		asrs	r2, r2, #31
+ 425 0018 C2EB6010 		rsb	r0, r2, r0, asr #5
+ 426 001c 10BD     		pop	{r4, pc}
+ 427              	.L43:
+ 428 001e 00BF     		.align	2
+ 429              	.L42:
+ 430 0020 1F85EB51 		.word	1374389535
+ 431              		.size	_ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi, .-_ZNK5amiro7TLC594723caluclateGree
+ 432 0024 AFF30080 		.section	.text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi,"ax",%progbits
+ 432      AFF30080 
+ 432      AFF30080 
+ 433              		.align	2
+ 434              		.p2align 4,,15
+ 435              		.global	_ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi
+ 436              		.thumb
+ 437              		.thumb_func
+ 438              		.type	_ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi, %function
+ 439              	_ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:
+ 440              		@ args = 0, pretend = 0, frame = 0
+ 441              		@ frame_needed = 0, uses_anonymous_args = 0
+ 442 0000 10B5     		push	{r4, lr}
+ 443 0002 0846     		mov	r0, r1
+ARM GAS  /tmp/ccavZk36.s 			page 9
+
+
+ 444 0004 1446     		mov	r4, r2
+ 445 0006 FFF7FEFF 		bl	_ZN5amiro5Color7getBlueEv
+ 446 000a 04FB00F0 		mul	r0, r4, r0
+ 447 000e 054B     		ldr	r3, .L45
+ 448 0010 00EB4000 		add	r0, r0, r0, lsl #1
+ 449 0014 0201     		lsls	r2, r0, #4
+ 450 0016 83FB0210 		smull	r1, r0, r3, r2
+ 451 001a D217     		asrs	r2, r2, #31
+ 452 001c C2EBE010 		rsb	r0, r2, r0, asr #7
+ 453 0020 10BD     		pop	{r4, pc}
+ 454              	.L46:
+ 455 0022 00BF     		.align	2
+ 456              	.L45:
+ 457 0024 1F85EB51 		.word	1374389535
+ 458              		.size	_ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi, .-_ZNK5amiro7TLC594722caluclateBlueG
+ 459              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi192EEE
+ 460 0028 AFF30080 		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi192EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
+ 460      AFF30080 
+ 461              		.align	3
+ 462              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi192EEE, %object
+ 463              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi192EEE, 20
+ 464              	_ZTVN10chibios_rt16BaseStaticThreadILi192EEE:
+ 465 0000 00000000 		.word	0
+ 466 0004 00000000 		.word	0
+ 467 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 468 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 469 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi192EE5startEm
+ 470              		.global	_ZTVN5amiro7TLC5947E
+ 471 0014 00000000 		.section	.rodata._ZTVN5amiro7TLC5947E,"a",%progbits
+ 472              		.align	3
+ 473              		.set	.LANCHOR0,. + 0
+ 474              		.type	_ZTVN5amiro7TLC5947E, %object
+ 475              		.size	_ZTVN5amiro7TLC5947E, 28
+ 476              	_ZTVN5amiro7TLC5947E:
+ 477 0000 00000000 		.word	0
+ 478 0004 00000000 		.word	0
+ 479 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 480 000c 00000000 		.word	_ZN5amiro7TLC59474mainEv
+ 481 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi192EE5startEm
+ 482 0014 00000000 		.word	_ZN5amiro7TLC5947D1Ev
+ 483 0018 00000000 		.word	_ZN5amiro7TLC5947D0Ev
+ 484 001c 00000000 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 485              		.align	2
+ 486              	.LC0:
+ 487 0000 546C6335 		.ascii	"Tlc5947\000"
+ 487      39343700 
+ 488              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccavZk36.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 tlc5947.cpp
+     /tmp/ccavZk36.s:16     .text._ZN5amiro7TLC5947D2Ev:00000000 $t
+     /tmp/ccavZk36.s:22     .text._ZN5amiro7TLC5947D2Ev:00000000 _ZN5amiro7TLC5947D2Ev
+     /tmp/ccavZk36.s:32     .text._ZN5amiro7TLC5947D2Ev:00000008 $d
+     /tmp/ccavZk36.s:22     .text._ZN5amiro7TLC5947D2Ev:00000000 _ZN5amiro7TLC5947D1Ev
+     /tmp/ccavZk36.s:37     .text._ZN5amiro7TLC5947D0Ev:00000000 $t
+     /tmp/ccavZk36.s:43     .text._ZN5amiro7TLC5947D0Ev:00000000 _ZN5amiro7TLC5947D0Ev
+     /tmp/ccavZk36.s:56     .text._ZN5amiro7TLC5947D0Ev:00000010 $d
+     /tmp/ccavZk36.s:59     .text.startup._ZN5amiro7TLC59474mainEv:00000000 $t
+     /tmp/ccavZk36.s:65     .text.startup._ZN5amiro7TLC59474mainEv:00000000 _ZN5amiro7TLC59474mainEv
+     /tmp/ccavZk36.s:199    .text.startup._ZN5amiro7TLC59474mainEv:00000168 $d
+     /tmp/ccavZk36.s:203    .text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:00000000 $t
+     /tmp/ccavZk36.s:209    .text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi192EE5startEm
+     /tmp/ccavZk36.s:232    .text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:00000028 $d
+     /tmp/ccavZk36.s:236    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:00000000 $t
+     /tmp/ccavZk36.s:242    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:00000000 _ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi
+     /tmp/ccavZk36.s:284    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:0000005c $d
+     /tmp/ccavZk36.s:242    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:00000000 _ZN5amiro7TLC5947C1EPNS_11HWSPIDriverEP12GPIO_TypeDefi
+     /tmp/ccavZk36.s:289    .text._ZN5amiro7TLC59477disableEv:00000000 $t
+     /tmp/ccavZk36.s:295    .text._ZN5amiro7TLC59477disableEv:00000000 _ZN5amiro7TLC59477disableEv
+     /tmp/ccavZk36.s:307    .text._ZN5amiro7TLC59476enableEv:00000000 $t
+     /tmp/ccavZk36.s:313    .text._ZN5amiro7TLC59476enableEv:00000000 _ZN5amiro7TLC59476enableEv
+     /tmp/ccavZk36.s:326    .text._ZN5amiro7TLC594713setBrightnessEi:00000000 $t
+     /tmp/ccavZk36.s:332    .text._ZN5amiro7TLC594713setBrightnessEi:00000000 _ZN5amiro7TLC594713setBrightnessEi
+     /tmp/ccavZk36.s:350    .text._ZN5amiro7TLC59478setColorEiNS_5ColorE:00000000 $t
+     /tmp/ccavZk36.s:356    .text._ZN5amiro7TLC59478setColorEiNS_5ColorE:00000000 _ZN5amiro7TLC59478setColorEiNS_5ColorE
+     /tmp/ccavZk36.s:367    .text._ZN5amiro7TLC59476updateEv:00000000 $t
+     /tmp/ccavZk36.s:373    .text._ZN5amiro7TLC59476updateEv:00000000 _ZN5amiro7TLC59476updateEv
+     /tmp/ccavZk36.s:381    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000000 $t
+     /tmp/ccavZk36.s:387    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000000 _ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi
+     /tmp/ccavZk36.s:404    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000020 $d
+     /tmp/ccavZk36.s:407    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000000 $t
+     /tmp/ccavZk36.s:413    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000000 _ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi
+     /tmp/ccavZk36.s:430    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000020 $d
+     /tmp/ccavZk36.s:433    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000000 $t
+     /tmp/ccavZk36.s:439    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000000 _ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi
+     /tmp/ccavZk36.s:457    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000024 $d
+     /tmp/ccavZk36.s:464    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi192EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi192EEE
+     /tmp/ccavZk36.s:461    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi192EEE:00000000 $d
+     /tmp/ccavZk36.s:476    .rodata._ZTVN5amiro7TLC5947E:00000000 _ZTVN5amiro7TLC5947E
+     /tmp/ccavZk36.s:472    .rodata._ZTVN5amiro7TLC5947E:00000000 $d
+     /tmp/ccavZk36.s:485    .rodata.str1.4:00000000 $d
+     /tmp/ccavZk36.s:36     .text._ZN5amiro7TLC5947D2Ev:0000000c $t
+     /tmp/ccavZk36.s:58     .text._ZN5amiro7TLC5947D0Ev:00000014 $t
+     /tmp/ccavZk36.s:406    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000024 $t
+     /tmp/ccavZk36.s:432    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000024 $t
+     /tmp/ccavZk36.s:460    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000028 $t
+
+UNDEFINED SYMBOLS
+_ZdlPv
+_ZN10chibios_rt10BaseThread7setNameEPKc
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+_ZN5amiro5ColorC1ERKS0_
+_ZN5amiro5Color7getBlueEv
+_ZN5amiro5Color8getGreenEv
+_ZN5amiro5Color6getRedEv
+ARM GAS  /tmp/ccavZk36.s 			page 11
+
+
+_ZN5amiro11HWSPIDriver5writeEPKhj
+_ZN10chibios_rt10BaseThread12waitAnyEventEm
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+_ZN10chibios_rt10BaseThreadC2Ev
+_ZN5amiro5ColorC1Ev
+_ZN5amiro5ColoraSENS0_11GlobalColorE
+_ZN5amiro5ColoraSERKS0_
+_ZN10chibios_rt15ThreadReference12signalEventsEm
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv

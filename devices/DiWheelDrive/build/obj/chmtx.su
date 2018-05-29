@@ -1,0 +1,8 @@
+chmtx.c:86:6:chMtxInit	8	static
+chmtx.c:121:6:chMtxLockS	24	static
+chmtx.c:103:6:chMtxLock	8	static
+chmtx.c:234:8:chMtxTryLockS	8	static
+chmtx.c:206:8:chMtxTryLock	8	static
+chmtx.c:257:8:chMtxUnlock	16	static
+chmtx.c:317:8:chMtxUnlockS	16	static
+chmtx.c:374:6:chMtxUnlockAll	16	static

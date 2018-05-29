@@ -1,0 +1,742 @@
+ARM GAS  /tmp/ccjkNQhh.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"adconverter.cpp"
+  17              		.section	.text._ZN5amiro11ADConverterD2Ev,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_ZN5amiro11ADConverterD2Ev
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_ZN5amiro11ADConverterD2Ev, %function
+  24              	_ZN5amiro11ADConverterD2Ev:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 014B     		ldr	r3, .L2
+  29 0002 0360     		str	r3, [r0]
+  30 0004 7047     		bx	lr
+  31              	.L3:
+  32 0006 00BF     		.align	2
+  33              	.L2:
+  34 0008 08000000 		.word	.LANCHOR0+8
+  35              		.size	_ZN5amiro11ADConverterD2Ev, .-_ZN5amiro11ADConverterD2Ev
+  36              		.global	_ZN5amiro11ADConverterD1Ev
+  37              		.thumb_set _ZN5amiro11ADConverterD1Ev,_ZN5amiro11ADConverterD2Ev
+  38 000c AFF30080 		.section	.text._ZN5amiro11ADConverterD0Ev,"ax",%progbits
+  39              		.align	2
+  40              		.p2align 4,,15
+  41              		.global	_ZN5amiro11ADConverterD0Ev
+  42              		.thumb
+  43              		.thumb_func
+  44              		.type	_ZN5amiro11ADConverterD0Ev, %function
+  45              	_ZN5amiro11ADConverterD0Ev:
+  46              		@ args = 0, pretend = 0, frame = 0
+  47              		@ frame_needed = 0, uses_anonymous_args = 0
+  48 0000 10B5     		push	{r4, lr}
+  49 0002 034B     		ldr	r3, .L5
+  50 0004 0360     		str	r3, [r0]
+  51 0006 0446     		mov	r4, r0
+  52 0008 FFF7FEFF 		bl	_ZdlPv
+  53 000c 2046     		mov	r0, r4
+  54 000e 10BD     		pop	{r4, pc}
+  55              	.L6:
+  56              		.align	2
+  57              	.L5:
+ARM GAS  /tmp/ccjkNQhh.s 			page 2
+
+
+  58 0010 08000000 		.word	.LANCHOR0+8
+  59              		.size	_ZN5amiro11ADConverterD0Ev, .-_ZN5amiro11ADConverterD0Ev
+  60 0014 AFF30080 		.section	.text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm,"axG",%progbits,_ZN10chibios_rt16
+  60      AFF30080 
+  60      AFF30080 
+  61              		.align	2
+  62              		.p2align 4,,15
+  63              		.weak	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+  64              		.thumb
+  65              		.thumb_func
+  66              		.type	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, %function
+  67              	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70 0000 30B5     		push	{r4, r5, lr}
+  71 0002 83B0     		sub	sp, sp, #12
+  72 0004 0D46     		mov	r5, r1
+  73 0006 0446     		mov	r4, r0
+  74 0008 0091     		str	r1, [sp]
+  75 000a 05F10800 		add	r0, r5, #8
+  76 000e 4FF41671 		mov	r1, #600
+  77 0012 054B     		ldr	r3, .L8
+  78 0014 FFF7FEFF 		bl	chThdCreateStatic
+  79 0018 044A     		ldr	r2, .L8+4
+  80 001a 6860     		str	r0, [r5, #4]
+  81 001c 0346     		mov	r3, r0
+  82 001e 2046     		mov	r0, r4
+  83 0020 84E80C00 		stmia	r4, {r2, r3}
+  84 0024 03B0     		add	sp, sp, #12
+  85              		@ sp needed
+  86 0026 30BD     		pop	{r4, r5, pc}
+  87              	.L9:
+  88              		.align	2
+  89              	.L8:
+  90 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+  91 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+  92              		.size	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi256
+  93              		.section	.text._Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t,"ax",%progbits
+  94              		.align	2
+  95              		.p2align 4,,15
+  96              		.global	_Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t
+  97              		.thumb
+  98              		.thumb_func
+  99              		.type	_Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t, %function
+ 100              	_Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t:
+ 101              		@ args = 0, pretend = 0, frame = 0
+ 102              		@ frame_needed = 0, uses_anonymous_args = 0
+ 103 0000 0229     		cmp	r1, #2
+ 104 0002 10B5     		push	{r4, lr}
+ 105 0004 0446     		mov	r4, r0
+ 106 0006 00D0     		beq	.L17
+ 107 0008 10BD     		pop	{r4, pc}
+ 108              	.L17:
+ 109 000a 2023     		movs	r3, #32
+ 110              	@ 17 "../../components/power/adconverter.cpp" 1
+ 111 000c 83F31188 		msr     BASEPRI, r3
+ 112              	@ 0 "" 2
+ARM GAS  /tmp/ccjkNQhh.s 			page 3
+
+
+ 113              		.thumb
+ 114 0010 FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 115 0014 6069     		ldr	r0, [r4, #20]
+ 116 0016 20B1     		cbz	r0, .L12
+ 117 0018 0121     		movs	r1, #1
+ 118 001a FFF7FEFF 		bl	chEvtSignalI
+ 119 001e 0023     		movs	r3, #0
+ 120 0020 6361     		str	r3, [r4, #20]
+ 121              	.L12:
+ 122 0022 FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 123 0026 0023     		movs	r3, #0
+ 124              	@ 22 "../../components/power/adconverter.cpp" 1
+ 125 0028 83F31188 		msr     BASEPRI, r3
+ 126              	@ 0 "" 2
+ 127              		.thumb
+ 128 002c 10BD     		pop	{r4, pc}
+ 129              		.size	_Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t, .-_Z20adcVsysErrorCallbackP9ADCDriver10adce
+ 130 002e 00BF     		.section	.text._ZN5amiro11ADConverter14enableWatchdogEb.part.1,"ax",%progbits
+ 131              		.align	2
+ 132              		.p2align 4,,15
+ 133              		.thumb
+ 134              		.thumb_func
+ 135              		.type	_ZN5amiro11ADConverter14enableWatchdogEb.part.1, %function
+ 136              	_ZN5amiro11ADConverter14enableWatchdogEb.part.1:
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 139              		@ link register save eliminated.
+ 140 0000 D0F86432 		ldr	r3, [r0, #612]
+ 141 0004 0449     		ldr	r1, .L19
+ 142 0006 DA68     		ldr	r2, [r3, #12]
+ 143 0008 9960     		str	r1, [r3, #8]
+ 144 000a 42F40002 		orr	r2, r2, #8388608
+ 145 000e 42F04002 		orr	r2, r2, #64
+ 146 0012 DA60     		str	r2, [r3, #12]
+ 147 0014 7047     		bx	lr
+ 148              	.L20:
+ 149 0016 00BF     		.align	2
+ 150              	.L19:
+ 151 0018 00000000 		.word	_Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t
+ 152              		.size	_ZN5amiro11ADConverter14enableWatchdogEb.part.1, .-_ZN5amiro11ADConverter14enableWatchdogEb.
+ 153 001c AFF30080 		.section	.text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2,"ax",%progbits
+ 154              		.align	2
+ 155              		.p2align 4,,15
+ 156              		.thumb
+ 157              		.thumb_func
+ 158              		.type	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2, %function
+ 159              	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2:
+ 160              		@ args = 4, pretend = 12, frame = 8
+ 161              		@ frame_needed = 0, uses_anonymous_args = 1
+ 162 0000 0EB4     		push	{r1, r2, r3}
+ 163 0002 00B5     		push	{lr}
+ 164 0004 82B0     		sub	sp, sp, #8
+ 165 0006 03AA     		add	r2, sp, #12
+ 166 0008 0548     		ldr	r0, .L22
+ 167 000a 52F8041B 		ldr	r1, [r2], #4
+ 168 000e 0192     		str	r2, [sp, #4]
+ 169 0010 FFF7FEFF 		bl	chvprintf
+ARM GAS  /tmp/ccjkNQhh.s 			page 4
+
+
+ 170 0014 02B0     		add	sp, sp, #8
+ 171              		@ sp needed
+ 172 0016 5DF804EB 		ldr	lr, [sp], #4
+ 173 001a 03B0     		add	sp, sp, #12
+ 174 001c 7047     		bx	lr
+ 175              	.L23:
+ 176 001e 00BF     		.align	2
+ 177              	.L22:
+ 178 0020 F0360000 		.word	global+14064
+ 179              		.size	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2, .-_ZL8chprintfP20BaseSequentialStreamPK
+ 180 0024 AFF30080 		.section	.text._Z16adcTimerCallbackP6Thread,"ax",%progbits
+ 180      AFF30080 
+ 180      AFF30080 
+ 181              		.align	2
+ 182              		.p2align 4,,15
+ 183              		.global	_Z16adcTimerCallbackP6Thread
+ 184              		.thumb
+ 185              		.thumb_func
+ 186              		.type	_Z16adcTimerCallbackP6Thread, %function
+ 187              	_Z16adcTimerCallbackP6Thread:
+ 188              		@ args = 0, pretend = 0, frame = 0
+ 189              		@ frame_needed = 0, uses_anonymous_args = 0
+ 190              		@ link register save eliminated.
+ 191 0000 10B1     		cbz	r0, .L24
+ 192 0002 0221     		movs	r1, #2
+ 193 0004 FFF7FEBF 		b	chEvtSignal
+ 194              	.L24:
+ 195 0008 7047     		bx	lr
+ 196              		.size	_Z16adcTimerCallbackP6Thread, .-_Z16adcTimerCallbackP6Thread
+ 197 000a 00BFAFF3 		.section	.text._ZN5amiro11ADConverter6uV2AdcEm,"ax",%progbits
+ 197      0080
+ 198              		.align	2
+ 199              		.p2align 4,,15
+ 200              		.global	_ZN5amiro11ADConverter6uV2AdcEm
+ 201              		.thumb
+ 202              		.thumb_func
+ 203              		.type	_ZN5amiro11ADConverter6uV2AdcEm, %function
+ 204              	_ZN5amiro11ADConverter6uV2AdcEm:
+ 205              		@ args = 0, pretend = 0, frame = 0
+ 206              		@ frame_needed = 0, uses_anonymous_args = 0
+ 207 0000 38B5     		push	{r3, r4, r5, lr}
+ 208 0002 174C     		ldr	r4, .L27
+ 209 0004 D4F88833 		ldr	r3, [r4, #904]
+ 210 0008 0546     		mov	r5, r0
+ 211 000a DB68     		ldr	r3, [r3, #12]
+ 212 000c 04F56270 		add	r0, r4, #904
+ 213 0010 9847     		blx	r3
+ 214 0012 05EE105A 		fmsr	s10, r5	@ int
+ 215 0016 DFED137A 		flds	s15, .L27+4
+ 216 001a B4F80C36 		ldrh	r3, [r4, #1548]
+ 217 001e DFED125A 		flds	s11, .L27+8
+ 218 0022 9FED127A 		flds	s14, .L27+12
+ 219 0026 F8EE456A 		fuitos	s13, s10
+ 220 002a C3F3CC03 		ubfx	r3, r3, #3, #13
+ 221 002e C6EEA76A 		fdivs	s13, s13, s15
+ 222 0032 C3EB4312 		rsb	r2, r3, r3, lsl #5
+ 223 0036 03EB8203 		add	r3, r3, r2, lsl #2
+ARM GAS  /tmp/ccjkNQhh.s 			page 5
+
+
+ 224 003a 5B01     		lsls	r3, r3, #5
+ 225 003c 05EE103A 		fmsr	s10, r3	@ int
+ 226 0040 B8EEC56A 		fsitos	s12, s10
+ 227 0044 C6EEA56A 		fdivs	s13, s13, s11
+ 228 0048 C6EE277A 		fdivs	s15, s12, s15
+ 229 004c C6EEA77A 		fdivs	s15, s13, s15
+ 230 0050 67EE877A 		fmuls	s15, s15, s14
+ 231 0054 FCEEE77A 		ftouizs	s15, s15
+ 232 0058 17EE900A 		fmrs	r0, s15	@ int
+ 233 005c 80B2     		uxth	r0, r0
+ 234 005e 38BD     		pop	{r3, r4, r5, pc}
+ 235              	.L28:
+ 236              		.align	2
+ 237              	.L27:
+ 238 0060 00000000 		.word	global
+ 239 0064 00247449 		.word	1232348160
+ 240 0068 5C8FAA40 		.word	1084919644
+ 241 006c 00008045 		.word	1166016512
+ 242              		.size	_ZN5amiro11ADConverter6uV2AdcEm, .-_ZN5amiro11ADConverter6uV2AdcEm
+ 243              		.section	.text._ZN5amiro11ADConverter6adc2uVEt,"ax",%progbits
+ 244              		.align	2
+ 245              		.p2align 4,,15
+ 246              		.global	_ZN5amiro11ADConverter6adc2uVEt
+ 247              		.thumb
+ 248              		.thumb_func
+ 249              		.type	_ZN5amiro11ADConverter6adc2uVEt, %function
+ 250              	_ZN5amiro11ADConverter6adc2uVEt:
+ 251              		@ args = 0, pretend = 0, frame = 0
+ 252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 253 0000 38B5     		push	{r3, r4, r5, lr}
+ 254 0002 154C     		ldr	r4, .L30
+ 255 0004 D4F88833 		ldr	r3, [r4, #904]
+ 256 0008 0546     		mov	r5, r0
+ 257 000a DB68     		ldr	r3, [r3, #12]
+ 258 000c 04F56270 		add	r0, r4, #904
+ 259 0010 9847     		blx	r3
+ 260 0012 B4F80C36 		ldrh	r3, [r4, #1548]
+ 261 0016 DFED117A 		flds	s15, .L30+4
+ 262 001a DFED116A 		flds	s13, .L30+8
+ 263 001e C3F3CC03 		ubfx	r3, r3, #3, #13
+ 264 0022 C3EB4312 		rsb	r2, r3, r3, lsl #5
+ 265 0026 03EB8203 		add	r3, r3, r2, lsl #2
+ 266 002a 5B01     		lsls	r3, r3, #5
+ 267 002c 07EE103A 		fmsr	s14, r3	@ int
+ 268 0030 B8EEC77A 		fsitos	s14, s14
+ 269 0034 06EE105A 		fmsr	s12, r5	@ int
+ 270 0038 87EE277A 		fdivs	s14, s14, s15
+ 271 003c BBEECA6A 		vcvt.f32.u32	s12, s12, #12
+ 272 0040 26EE077A 		fmuls	s14, s12, s14
+ 273 0044 27EE267A 		fmuls	s14, s14, s13
+ 274 0048 67EE277A 		fmuls	s15, s14, s15
+ 275 004c FCEEE77A 		ftouizs	s15, s15
+ 276 0050 17EE900A 		fmrs	r0, s15	@ int
+ 277 0054 38BD     		pop	{r3, r4, r5, pc}
+ 278              	.L31:
+ 279 0056 00BF     		.align	2
+ 280              	.L30:
+ARM GAS  /tmp/ccjkNQhh.s 			page 6
+
+
+ 281 0058 00000000 		.word	global
+ 282 005c 00247449 		.word	1232348160
+ 283 0060 5C8FAA40 		.word	1084919644
+ 284              		.size	_ZN5amiro11ADConverter6adc2uVEt, .-_ZN5amiro11ADConverter6adc2uVEt
+ 285 0064 AFF30080 		.section	.text._ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm,"ax",%progbits
+ 285      AFF30080 
+ 285      AFF30080 
+ 286              		.align	2
+ 287              		.p2align 4,,15
+ 288              		.global	_ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm
+ 289              		.thumb
+ 290              		.thumb_func
+ 291              		.type	_ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm, %function
+ 292              	_ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm:
+ 293              		@ args = 0, pretend = 0, frame = 0
+ 294              		@ frame_needed = 0, uses_anonymous_args = 0
+ 295 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 296 0002 0446     		mov	r4, r0
+ 297 0004 1F46     		mov	r7, r3
+ 298 0006 0D46     		mov	r5, r1
+ 299 0008 1646     		mov	r6, r2
+ 300 000a FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+ 301 000e 054B     		ldr	r3, .L33
+ 302 0010 C4F86052 		str	r5, [r4, #608]
+ 303 0014 C4F86462 		str	r6, [r4, #612]
+ 304 0018 C4F86872 		str	r7, [r4, #616]
+ 305 001c 2360     		str	r3, [r4]
+ 306 001e 2046     		mov	r0, r4
+ 307 0020 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 308              	.L34:
+ 309 0022 00BF     		.align	2
+ 310              	.L33:
+ 311 0024 08000000 		.word	.LANCHOR0+8
+ 312              		.size	_ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm, .-_ZN5amiro11ADConverterC2ER9ADC
+ 313              		.global	_ZN5amiro11ADConverterC1ER9ADCDriverR18ADCConversionGroupm
+ 314              		.thumb_set _ZN5amiro11ADConverterC1ER9ADCDriverR18ADCConversionGroupm,_ZN5amiro11ADConverterC2ER9A
+ 315 0028 AFF30080 		.section	.text._ZN5amiro11ADConverter14enableWatchdogEb,"ax",%progbits
+ 315      AFF30080 
+ 316              		.align	2
+ 317              		.p2align 4,,15
+ 318              		.global	_ZN5amiro11ADConverter14enableWatchdogEb
+ 319              		.thumb
+ 320              		.thumb_func
+ 321              		.type	_ZN5amiro11ADConverter14enableWatchdogEb, %function
+ 322              	_ZN5amiro11ADConverter14enableWatchdogEb:
+ 323              		@ args = 0, pretend = 0, frame = 0
+ 324              		@ frame_needed = 0, uses_anonymous_args = 0
+ 325              		@ link register save eliminated.
+ 326 0000 49B9     		cbnz	r1, .L37
+ 327 0002 D0F86432 		ldr	r3, [r0, #612]
+ 328 0006 DA68     		ldr	r2, [r3, #12]
+ 329 0008 9960     		str	r1, [r3, #8]
+ 330 000a 22F40002 		bic	r2, r2, #8388608
+ 331 000e 22F04002 		bic	r2, r2, #64
+ 332 0012 DA60     		str	r2, [r3, #12]
+ 333 0014 7047     		bx	lr
+ 334              	.L37:
+ARM GAS  /tmp/ccjkNQhh.s 			page 7
+
+
+ 335 0016 FFF7FEBF 		b	_ZN5amiro11ADConverter14enableWatchdogEb.part.1
+ 336              		.size	_ZN5amiro11ADConverter14enableWatchdogEb, .-_ZN5amiro11ADConverter14enableWatchdogEb
+ 337              		.global	__aeabi_f2d
+ 338 001a 00BFAFF3 		.section	.text.startup._ZN5amiro11ADConverter4mainEv,"ax",%progbits
+ 338      0080
+ 339              		.align	2
+ 340              		.p2align 4,,15
+ 341              		.global	_ZN5amiro11ADConverter4mainEv
+ 342              		.thumb
+ 343              		.thumb_func
+ 344              		.type	_ZN5amiro11ADConverter4mainEv, %function
+ 345              	_ZN5amiro11ADConverter4mainEv:
+ 346              		@ args = 0, pretend = 0, frame = 0
+ 347              		@ frame_needed = 0, uses_anonymous_args = 0
+ 348 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+ 349 0004 0446     		mov	r4, r0
+ 350 0006 0023     		movs	r3, #0
+ 351 0008 00F52570 		add	r0, r0, #660
+ 352 000c 0122     		movs	r2, #1
+ 353 000e 2DED028B 		fstmfdd	sp!, {d8}
+ 354 0012 04F51B71 		add	r1, r4, #620
+ 355 0016 C4F88C32 		str	r3, [r4, #652]
+ 356 001a C4F89822 		str	r2, [r4, #664]
+ 357 001e C4F89402 		str	r0, [r4, #660]
+ 358 0022 C4F87C02 		str	r0, [r4, #636]
+ 359 0026 FFF7FEFF 		bl	_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+ 360 002a 2046     		mov	r0, r4
+ 361 002c FFF7FEFF 		bl	_ZN5amiro11ADConverter14enableWatchdogEb.part.1
+ 362 0030 D4F86802 		ldr	r0, [r4, #616]
+ 363 0034 D4F86452 		ldr	r5, [r4, #612]
+ 364 0038 FFF7FEFF 		bl	_ZN5amiro11ADConverter6uV2AdcEm
+ 365 003c B0F5805F 		cmp	r0, #4096
+ 366 0040 C0F0D280 		bcc	.L54
+ 367 0044 40F6FF72 		movw	r2, #4095
+ 368              	.L39:
+ 369 0048 D4F86412 		ldr	r1, [r4, #612]
+ 370 004c D4F86002 		ldr	r0, [r4, #608]
+ 371 0050 6368     		ldr	r3, [r4, #4]
+ 372 0052 AA83     		strh	r2, [r5, #28]	@ movhi
+ 373 0054 0022     		movs	r2, #0
+ 374 0056 CA83     		strh	r2, [r1, #30]	@ movhi
+ 375 0058 4361     		str	r3, [r0, #20]
+ 376 005a 664A     		ldr	r2, .L58
+ 377 005c 664E     		ldr	r6, .L58+4
+ 378 005e 9FED678A 		flds	s16, .L58+8
+ 379 0062 0123     		movs	r3, #1
+ 380 0064 FFF7FEFF 		bl	adcStartConversion
+ 381              	.L44:
+ 382 0068 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 383 006c 0546     		mov	r5, r0
+ 384 006e 0028     		cmp	r0, #0
+ 385 0070 6CD1     		bne	.L55
+ 386              	.L50:
+ 387 0072 4FF0FF30 		mov	r0, #-1
+ 388 0076 4FF47A71 		mov	r1, #1000
+ 389 007a FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
+ 390 007e 0128     		cmp	r0, #1
+ARM GAS  /tmp/ccjkNQhh.s 			page 8
+
+
+ 391 0080 6AD0     		beq	.L42
+ 392 0082 0228     		cmp	r0, #2
+ 393 0084 F0D1     		bne	.L44
+ 394 0086 04F52070 		add	r0, r4, #640
+ 395 008a FFF7FEFF 		bl	evtStop
+ 396 008e D4F86412 		ldr	r1, [r4, #612]
+ 397 0092 584A     		ldr	r2, .L58
+ 398 0094 D4F86002 		ldr	r0, [r4, #608]
+ 399 0098 0D70     		strb	r5, [r1]
+ 400 009a 0123     		movs	r3, #1
+ 401 009c A2F15C07 		sub	r7, r2, #92
+ 402 00a0 FFF7FEFF 		bl	adcConvert
+ 403 00a4 D4F86432 		ldr	r3, [r4, #612]
+ 404 00a8 4FF00108 		mov	r8, #1
+ 405 00ac 83F80080 		strb	r8, [r3]
+ 406 00b0 2046     		mov	r0, r4
+ 407 00b2 FFF7FEFF 		bl	_ZN5amiro11ADConverter14enableWatchdogEb.part.1
+ 408 00b6 D4F86802 		ldr	r0, [r4, #616]
+ 409 00ba B7F85C90 		ldrh	r9, [r7, #92]
+ 410 00be FFF7FEFF 		bl	_ZN5amiro11ADConverter6uV2AdcEm
+ 411 00c2 8145     		cmp	r9, r0
+ 412 00c4 B7F85C00 		ldrh	r0, [r7, #92]
+ 413 00c8 5AD9     		bls	.L46
+ 414 00ca FFF7FEFF 		bl	_ZN5amiro11ADConverter6adc2uVEt
+ 415 00ce 07EE100A 		fmsr	s14, r0	@ int
+ 416 00d2 F8EE477A 		fuitos	s15, s14
+ 417 00d6 40F6FF77 		movw	r7, #4095
+ 418 00da C7EE887A 		fdivs	s15, s15, s16
+ 419 00de 17EE900A 		fmrs	r0, s15
+ 420 00e2 FFF7FEFF 		bl	__aeabi_f2d
+ 421 00e6 0246     		mov	r2, r0
+ 422 00e8 0B46     		mov	r3, r1
+ 423 00ea 4548     		ldr	r0, .L58+12
+ 424 00ec 4549     		ldr	r1, .L58+16
+ 425 00ee FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2
+ 426 00f2 4548     		ldr	r0, .L58+20
+ 427 00f4 FFF7FEFF 		bl	_ZN5amiro15PowerManagement14getPowerStatusEv
+ 428 00f8 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 429 00fa 43F01003 		orr	r3, r3, #16
+ 430 00fe 0370     		strb	r3, [r0]
+ 431 0100 3068     		ldr	r0, [r6]
+ 432 0102 0368     		ldr	r3, [r0]
+ 433 0104 4146     		mov	r1, r8
+ 434 0106 9B68     		ldr	r3, [r3, #8]
+ 435 0108 9847     		blx	r3
+ 436 010a 404B     		ldr	r3, .L58+24
+ 437 010c 1868     		ldr	r0, [r3]
+ 438 010e 0368     		ldr	r3, [r0]
+ 439 0110 4146     		mov	r1, r8
+ 440 0112 9B68     		ldr	r3, [r3, #8]
+ 441 0114 9847     		blx	r3
+ 442 0116 D4F86452 		ldr	r5, [r4, #612]
+ 443 011a D4F86802 		ldr	r0, [r4, #616]
+ 444 011e AF83     		strh	r7, [r5, #28]	@ movhi
+ 445 0120 FFF7FEFF 		bl	_ZN5amiro11ADConverter6uV2AdcEm
+ 446 0124 B0F5805F 		cmp	r0, #4096
+ 447 0128 54D3     		bcc	.L56
+ARM GAS  /tmp/ccjkNQhh.s 			page 9
+
+
+ 448 012a 3846     		mov	r0, r7
+ 449              	.L47:
+ 450 012c D4F86412 		ldr	r1, [r4, #612]
+ 451 0130 E883     		strh	r0, [r5, #30]	@ movhi
+ 452              	.L48:
+ 453 0132 D4F86002 		ldr	r0, [r4, #608]
+ 454 0136 6368     		ldr	r3, [r4, #4]
+ 455 0138 4361     		str	r3, [r0, #20]
+ 456 013a 2E4A     		ldr	r2, .L58
+ 457 013c 0123     		movs	r3, #1
+ 458 013e FFF7FEFF 		bl	adcStartConversion
+ 459 0142 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 460 0146 0546     		mov	r5, r0
+ 461 0148 0028     		cmp	r0, #0
+ 462 014a 92D0     		beq	.L50
+ 463              	.L55:
+ 464 014c BDEC028B 		fldmfdd	sp!, {d8}
+ 465 0150 6FF00100 		mvn	r0, #1
+ 466 0154 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 467              	.L42:
+ 468 0158 3068     		ldr	r0, [r6]
+ 469 015a 0368     		ldr	r3, [r0]
+ 470 015c 2946     		mov	r1, r5
+ 471 015e 9B68     		ldr	r3, [r3, #8]
+ 472 0160 9847     		blx	r3
+ 473 0162 2A4B     		ldr	r3, .L58+24
+ 474 0164 1868     		ldr	r0, [r3]
+ 475 0166 0368     		ldr	r3, [r0]
+ 476 0168 2946     		mov	r1, r5
+ 477 016a 9B68     		ldr	r3, [r3, #8]
+ 478 016c 9847     		blx	r3
+ 479 016e 2046     		mov	r0, r4
+ 480 0170 2946     		mov	r1, r5
+ 481 0172 FFF7FEFF 		bl	_ZN5amiro11ADConverter14enableWatchdogEb
+ 482 0176 04F52070 		add	r0, r4, #640
+ 483 017a FFF7FEFF 		bl	evtStart
+ 484 017e 73E7     		b	.L44
+ 485              	.L46:
+ 486 0180 FFF7FEFF 		bl	_ZN5amiro11ADConverter6adc2uVEt
+ 487 0184 07EE100A 		fmsr	s14, r0	@ int
+ 488 0188 F8EE477A 		fuitos	s15, s14
+ 489 018c C7EE887A 		fdivs	s15, s15, s16
+ 490 0190 17EE900A 		fmrs	r0, s15
+ 491 0194 FFF7FEFF 		bl	__aeabi_f2d
+ 492 0198 0246     		mov	r2, r0
+ 493 019a 0B46     		mov	r3, r1
+ 494 019c 1848     		ldr	r0, .L58+12
+ 495 019e 1C49     		ldr	r1, .L58+28
+ 496 01a0 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2
+ 497 01a4 1848     		ldr	r0, .L58+20
+ 498 01a6 FFF7FEFF 		bl	_ZN5amiro15PowerManagement14getPowerStatusEv
+ 499 01aa 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 500 01ac 65F30413 		bfi	r3, r5, #4, #1
+ 501 01b0 0370     		strb	r3, [r0]
+ 502 01b2 D4F86802 		ldr	r0, [r4, #616]
+ 503 01b6 D4F86452 		ldr	r5, [r4, #612]
+ 504 01ba FFF7FEFF 		bl	_ZN5amiro11ADConverter6uV2AdcEm
+ARM GAS  /tmp/ccjkNQhh.s 			page 10
+
+
+ 505 01be B0F5805F 		cmp	r0, #4096
+ 506 01c2 0CD3     		bcc	.L57
+ 507 01c4 40F6FF70 		movw	r0, #4095
+ 508              	.L49:
+ 509 01c8 D4F86412 		ldr	r1, [r4, #612]
+ 510 01cc A883     		strh	r0, [r5, #28]	@ movhi
+ 511 01ce 0023     		movs	r3, #0
+ 512 01d0 CB83     		strh	r3, [r1, #30]	@ movhi
+ 513 01d2 AEE7     		b	.L48
+ 514              	.L56:
+ 515 01d4 D4F86802 		ldr	r0, [r4, #616]
+ 516 01d8 FFF7FEFF 		bl	_ZN5amiro11ADConverter6uV2AdcEm
+ 517 01dc A6E7     		b	.L47
+ 518              	.L57:
+ 519 01de D4F86802 		ldr	r0, [r4, #616]
+ 520 01e2 FFF7FEFF 		bl	_ZN5amiro11ADConverter6uV2AdcEm
+ 521 01e6 EFE7     		b	.L49
+ 522              	.L54:
+ 523 01e8 D4F86802 		ldr	r0, [r4, #616]
+ 524 01ec FFF7FEFF 		bl	_ZN5amiro11ADConverter6uV2AdcEm
+ 525 01f0 0246     		mov	r2, r0
+ 526 01f2 29E7     		b	.L39
+ 527              	.L59:
+ 528              		.align	2
+ 529              	.L58:
+ 530 01f4 5C000000 		.word	global+92
+ 531 01f8 80150000 		.word	global+5504
+ 532 01fc 00247449 		.word	1232348160
+ 533 0200 F0360000 		.word	global+14064
+ 534 0204 00000000 		.word	.LC0
+ 535 0208 28370000 		.word	global+14120
+ 536 020c 84150000 		.word	global+5508
+ 537 0210 20000000 		.word	.LC1
+ 538              		.size	_ZN5amiro11ADConverter4mainEv, .-_ZN5amiro11ADConverter4mainEv
+ 539 0214 AFF30080 		.section	.text.startup._GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t,"ax",%progbi
+ 539      AFF30080 
+ 539      AFF30080 
+ 540              		.align	2
+ 541              		.p2align 4,,15
+ 542              		.thumb
+ 543              		.thumb_func
+ 544              		.type	_GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t, %function
+ 545              	_GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t:
+ 546              		@ args = 0, pretend = 0, frame = 0
+ 547              		@ frame_needed = 0, uses_anonymous_args = 0
+ 548              		@ link register save eliminated.
+ 549 0000 024B     		ldr	r3, .L61
+ 550 0002 034A     		ldr	r2, .L61+4
+ 551 0004 1A60     		str	r2, [r3]
+ 552 0006 5A60     		str	r2, [r3, #4]
+ 553 0008 7047     		bx	lr
+ 554              	.L62:
+ 555 000a 00BF     		.align	2
+ 556              	.L61:
+ 557 000c 00000000 		.word	.LANCHOR1
+ 558 0010 A0860100 		.word	100000
+ 559              		.size	_GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t, .-_GLOBAL__sub_I__Z20adcVsys
+ARM GAS  /tmp/ccjkNQhh.s 			page 11
+
+
+ 560 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 560      AFF30080 
+ 560      AFF30080 
+ 561              		.align	2
+ 562 0000 00000000 		.word	_GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t(target1)
+ 563              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+ 564              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
+ 565              		.align	3
+ 566              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, %object
+ 567              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, 20
+ 568              	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE:
+ 569 0000 00000000 		.word	0
+ 570 0004 00000000 		.word	0
+ 571 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 572 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 573 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 574              		.global	_ZTVN5amiro11ADConverterE
+ 575 0014 00000000 		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 576              		.align	2
+ 577              		.set	.LANCHOR1,. + 0
+ 578              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 579              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 580              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 581 0000 00000000 		.space	8
+ 581      00000000 
+ 582              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 583              		.align	2
+ 584              	.LC0:
+ 585 0000 2566203E 		.ascii	"%f > 9V detected: now charging\012\000"
+ 585      20395620 
+ 585      64657465 
+ 585      63746564 
+ 585      3A206E6F 
+ 586              	.LC1:
+ 587 0020 2566203C 		.ascii	"%f < 9V detected: not charging\012\000"
+ 587      20395620 
+ 587      64657465 
+ 587      63746564 
+ 587      3A206E6F 
+ 588              		.section	.rodata._ZTVN5amiro11ADConverterE,"a",%progbits
+ 589              		.align	3
+ 590              		.set	.LANCHOR0,. + 0
+ 591              		.type	_ZTVN5amiro11ADConverterE, %object
+ 592              		.size	_ZTVN5amiro11ADConverterE, 28
+ 593              	_ZTVN5amiro11ADConverterE:
+ 594 0000 00000000 		.word	0
+ 595 0004 00000000 		.word	0
+ 596 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 597 000c 00000000 		.word	_ZN5amiro11ADConverter4mainEv
+ 598 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 599 0014 00000000 		.word	_ZN5amiro11ADConverterD1Ev
+ 600 0018 00000000 		.word	_ZN5amiro11ADConverterD0Ev
+ 601 001c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccjkNQhh.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 adconverter.cpp
+     /tmp/ccjkNQhh.s:18     .text._ZN5amiro11ADConverterD2Ev:00000000 $t
+     /tmp/ccjkNQhh.s:24     .text._ZN5amiro11ADConverterD2Ev:00000000 _ZN5amiro11ADConverterD2Ev
+     /tmp/ccjkNQhh.s:34     .text._ZN5amiro11ADConverterD2Ev:00000008 $d
+     /tmp/ccjkNQhh.s:24     .text._ZN5amiro11ADConverterD2Ev:00000000 _ZN5amiro11ADConverterD1Ev
+     /tmp/ccjkNQhh.s:39     .text._ZN5amiro11ADConverterD0Ev:00000000 $t
+     /tmp/ccjkNQhh.s:45     .text._ZN5amiro11ADConverterD0Ev:00000000 _ZN5amiro11ADConverterD0Ev
+     /tmp/ccjkNQhh.s:58     .text._ZN5amiro11ADConverterD0Ev:00000010 $d
+     /tmp/ccjkNQhh.s:61     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/ccjkNQhh.s:67     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/ccjkNQhh.s:90     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/ccjkNQhh.s:94     .text._Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t:00000000 $t
+     /tmp/ccjkNQhh.s:100    .text._Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t:00000000 _Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t
+     /tmp/ccjkNQhh.s:131    .text._ZN5amiro11ADConverter14enableWatchdogEb.part.1:00000000 $t
+     /tmp/ccjkNQhh.s:136    .text._ZN5amiro11ADConverter14enableWatchdogEb.part.1:00000000 _ZN5amiro11ADConverter14enableWatchdogEb.part.1
+     /tmp/ccjkNQhh.s:151    .text._ZN5amiro11ADConverter14enableWatchdogEb.part.1:00000018 $d
+     /tmp/ccjkNQhh.s:154    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2:00000000 $t
+     /tmp/ccjkNQhh.s:159    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2
+     /tmp/ccjkNQhh.s:178    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2:00000020 $d
+     /tmp/ccjkNQhh.s:181    .text._Z16adcTimerCallbackP6Thread:00000000 $t
+     /tmp/ccjkNQhh.s:187    .text._Z16adcTimerCallbackP6Thread:00000000 _Z16adcTimerCallbackP6Thread
+     /tmp/ccjkNQhh.s:198    .text._ZN5amiro11ADConverter6uV2AdcEm:00000000 $t
+     /tmp/ccjkNQhh.s:204    .text._ZN5amiro11ADConverter6uV2AdcEm:00000000 _ZN5amiro11ADConverter6uV2AdcEm
+     /tmp/ccjkNQhh.s:238    .text._ZN5amiro11ADConverter6uV2AdcEm:00000060 $d
+     /tmp/ccjkNQhh.s:244    .text._ZN5amiro11ADConverter6adc2uVEt:00000000 $t
+     /tmp/ccjkNQhh.s:250    .text._ZN5amiro11ADConverter6adc2uVEt:00000000 _ZN5amiro11ADConverter6adc2uVEt
+     /tmp/ccjkNQhh.s:281    .text._ZN5amiro11ADConverter6adc2uVEt:00000058 $d
+     /tmp/ccjkNQhh.s:286    .text._ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm:00000000 $t
+     /tmp/ccjkNQhh.s:292    .text._ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm:00000000 _ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm
+     /tmp/ccjkNQhh.s:311    .text._ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm:00000024 $d
+     /tmp/ccjkNQhh.s:292    .text._ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm:00000000 _ZN5amiro11ADConverterC1ER9ADCDriverR18ADCConversionGroupm
+     /tmp/ccjkNQhh.s:316    .text._ZN5amiro11ADConverter14enableWatchdogEb:00000000 $t
+     /tmp/ccjkNQhh.s:322    .text._ZN5amiro11ADConverter14enableWatchdogEb:00000000 _ZN5amiro11ADConverter14enableWatchdogEb
+     /tmp/ccjkNQhh.s:339    .text.startup._ZN5amiro11ADConverter4mainEv:00000000 $t
+     /tmp/ccjkNQhh.s:345    .text.startup._ZN5amiro11ADConverter4mainEv:00000000 _ZN5amiro11ADConverter4mainEv
+     /tmp/ccjkNQhh.s:530    .text.startup._ZN5amiro11ADConverter4mainEv:000001f4 $d
+     /tmp/ccjkNQhh.s:540    .text.startup._GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t:00000000 $t
+     /tmp/ccjkNQhh.s:545    .text.startup._GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t:00000000 _GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t
+     /tmp/ccjkNQhh.s:557    .text.startup._GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t:0000000c $d
+     /tmp/ccjkNQhh.s:561    .init_array:00000000 $d
+     /tmp/ccjkNQhh.s:568    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/ccjkNQhh.s:565    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/ccjkNQhh.s:593    .rodata._ZTVN5amiro11ADConverterE:00000000 _ZTVN5amiro11ADConverterE
+     /tmp/ccjkNQhh.s:576    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccjkNQhh.s:580    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccjkNQhh.s:583    .rodata.str1.4:00000000 $d
+     /tmp/ccjkNQhh.s:589    .rodata._ZTVN5amiro11ADConverterE:00000000 $d
+     /tmp/ccjkNQhh.s:38     .text._ZN5amiro11ADConverterD2Ev:0000000c $t
+     /tmp/ccjkNQhh.s:60     .text._ZN5amiro11ADConverterD0Ev:00000014 $t
+     /tmp/ccjkNQhh.s:153    .text._ZN5amiro11ADConverter14enableWatchdogEb.part.1:0000001c $t
+     /tmp/ccjkNQhh.s:180    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.2:00000024 $t
+     /tmp/ccjkNQhh.s:285    .text._ZN5amiro11ADConverter6adc2uVEt:00000064 $t
+     /tmp/ccjkNQhh.s:315    .text._ZN5amiro11ADConverterC2ER9ADCDriverR18ADCConversionGroupm:00000028 $t
+     /tmp/ccjkNQhh.s:539    .text.startup._ZN5amiro11ADConverter4mainEv:00000214 $t
+     /tmp/ccjkNQhh.s:560    .text.startup._GLOBAL__sub_I__Z20adcVsysErrorCallbackP9ADCDriver10adcerror_t:00000014 $t
+
+ARM GAS  /tmp/ccjkNQhh.s 			page 13
+
+
+UNDEFINED SYMBOLS
+_ZdlPv
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+dbg_check_lock_from_isr
+chEvtSignalI
+dbg_check_unlock_from_isr
+chvprintf
+global
+chEvtSignal
+_ZN10chibios_rt10BaseThreadC2Ev
+__aeabi_f2d
+_ZN10chibios_rt9EvtSource11registerOneEPNS_11EvtListenerEl
+adcStartConversion
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+_ZN10chibios_rt10BaseThread19waitOneEventTimeoutEmm
+evtStop
+adcConvert
+_ZN5amiro15PowerManagement14getPowerStatusEv
+evtStart
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv

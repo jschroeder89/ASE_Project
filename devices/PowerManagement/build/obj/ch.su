@@ -1,0 +1,134 @@
+ch.cpp:261:9:virtual msg_t chibios_rt::BaseThread::main()	0	static
+ch.cpp:266:19:virtual chibios_rt::ThreadReference chibios_rt::BaseThread::start(tprio_t)	0	static
+ch.cpp:107:8:virtual void chibios_rt::ThreadReference::stop()	0	static
+ch.cpp:31:8:static void chibios_rt::System::init()	0	static
+ch.cpp:36:8:static void chibios_rt::System::lock()	0	static
+ch.cpp:41:8:static void chibios_rt::System::unlock()	8	static
+ch.cpp:46:8:static void chibios_rt::System::lockFromIsr()	0	static
+ch.cpp:51:8:static void chibios_rt::System::unlockFromIsr()	8	static
+ch.cpp:56:13:static systime_t chibios_rt::System::getTime()	0	static
+ch.cpp:61:8:static bool chibios_rt::System::isTimeWithin(systime_t, systime_t)	0	static
+ch.cpp:69:9:static void* chibios_rt::Core::alloc(size_t)	0	static
+ch.cpp:74:9:static void* chibios_rt::Core::allocI(size_t)	0	static
+ch.cpp:79:10:static size_t chibios_rt::Core::getStatus()	0	static
+ch.cpp:87:8:void chibios_rt::Timer::setI(systime_t, vtfunc_t, void*)	0	static
+ch.cpp:92:8:void chibios_rt::Timer::resetI()	0	static
+ch.cpp:98:8:bool chibios_rt::Timer::isArmedI()	0	static
+ch.cpp:112:9:msg_t chibios_rt::ThreadReference::suspend()	8	static
+ch.cpp:129:9:msg_t chibios_rt::ThreadReference::suspendS()	8	static
+ch.cpp:140:8:void chibios_rt::ThreadReference::resume(msg_t)	16	static
+ch.cpp:157:8:void chibios_rt::ThreadReference::resumeI(msg_t)	16	static
+ch.cpp:171:8:void chibios_rt::ThreadReference::requestTerminate()	8	static
+ch.cpp:181:11:msg_t chibios_rt::ThreadReference::wait()	8	static
+ch.cpp:194:9:msg_t chibios_rt::ThreadReference::sendMessage(msg_t)	16	static
+ch.cpp:203:8:bool chibios_rt::ThreadReference::isPendingMessage()	8	static
+ch.cpp:212:9:msg_t chibios_rt::ThreadReference::getMessage()	8	static
+ch.cpp:221:8:void chibios_rt::ThreadReference::releaseMessage(msg_t)	16	static
+ch.cpp:232:10:void chibios_rt::ThreadReference::signalEvents(eventmask_t)	16	static
+ch.cpp:241:10:void chibios_rt::ThreadReference::signalEventsI(eventmask_t)	16	static
+ch.cpp:257:3:chibios_rt::BaseThread::BaseThread()	0	static
+ch.cpp:273:9:msg_t chibios_rt::_thd_start(void*)	8	static
+ch.cpp:278:8:static void chibios_rt::BaseThread::setName(const char*)	0	static
+ch.cpp:283:11:static tprio_t chibios_rt::BaseThread::setPriority(tprio_t)	0	static
+ch.cpp:288:8:static void chibios_rt::BaseThread::exit(msg_t)	0	static
+ch.cpp:293:8:static void chibios_rt::BaseThread::exitS(msg_t)	0	static
+ch.cpp:298:8:static bool chibios_rt::BaseThread::shouldTerminate()	0	static
+ch.cpp:303:8:static void chibios_rt::BaseThread::sleep(systime_t)	0	static
+ch.cpp:308:8:static void chibios_rt::BaseThread::sleepUntil(systime_t)	0	static
+ch.cpp:313:8:static void chibios_rt::BaseThread::yield()	0	static
+ch.cpp:319:19:static chibios_rt::ThreadReference chibios_rt::BaseThread::waitMessage()	8	static
+ch.cpp:327:15:static eventmask_t chibios_rt::BaseThread::getAndClearEvents(eventmask_t)	0	static
+ch.cpp:332:15:static eventmask_t chibios_rt::BaseThread::addEvents(eventmask_t)	0	static
+ch.cpp:337:15:static eventmask_t chibios_rt::BaseThread::waitOneEvent(eventmask_t)	0	static
+ch.cpp:342:15:static eventmask_t chibios_rt::BaseThread::waitAnyEvent(eventmask_t)	0	static
+ch.cpp:347:15:static eventmask_t chibios_rt::BaseThread::waitAllEvents(eventmask_t)	0	static
+ch.cpp:353:15:static eventmask_t chibios_rt::BaseThread::waitOneEventTimeout(eventmask_t, systime_t)	0	static
+ch.cpp:359:15:static eventmask_t chibios_rt::BaseThread::waitAnyEventTimeout(eventmask_t, systime_t)	0	static
+ch.cpp:365:15:static eventmask_t chibios_rt::BaseThread::waitAllEventsTimeout(eventmask_t, systime_t)	0	static
+ch.cpp:372:8:static void chibios_rt::BaseThread::dispatchEvents(void (* const*)(eventid_t), eventmask_t)	0	static
+ch.cpp:380:8:static void chibios_rt::BaseThread::unlockMutex()	0	static
+ch.cpp:385:8:static void chibios_rt::BaseThread::unlockMutexS()	0	static
+ch.cpp:390:8:static void chibios_rt::BaseThread::unlockAllMutexes()	0	static
+ch.cpp:400:3:chibios_rt::CounterSemaphore::CounterSemaphore(cnt_t)	8	static
+ch.cpp:405:8:void chibios_rt::CounterSemaphore::reset(cnt_t)	0	static
+ch.cpp:410:8:void chibios_rt::CounterSemaphore::resetI(cnt_t)	0	static
+ch.cpp:415:9:msg_t chibios_rt::CounterSemaphore::wait()	0	static
+ch.cpp:420:9:msg_t chibios_rt::CounterSemaphore::waitS()	0	static
+ch.cpp:425:9:msg_t chibios_rt::CounterSemaphore::waitTimeout(systime_t)	0	static
+ch.cpp:430:9:msg_t chibios_rt::CounterSemaphore::waitTimeoutS(systime_t)	0	static
+ch.cpp:435:8:void chibios_rt::CounterSemaphore::signal()	0	static
+ch.cpp:440:8:void chibios_rt::CounterSemaphore::signalI()	0	static
+ch.cpp:445:8:void chibios_rt::CounterSemaphore::addCounterI(cnt_t)	0	static
+ch.cpp:450:9:cnt_t chibios_rt::CounterSemaphore::getCounterI()	0	static
+ch.cpp:456:9:static msg_t chibios_rt::CounterSemaphore::signalWait(chibios_rt::CounterSemaphore*, chibios_rt::CounterSemaphore*)	0	static
+ch.cpp:466:3:chibios_rt::BinarySemaphore::BinarySemaphore(bool)	8	static
+ch.cpp:471:9:msg_t chibios_rt::BinarySemaphore::wait()	0	static
+ch.cpp:476:9:msg_t chibios_rt::BinarySemaphore::waitS()	0	static
+ch.cpp:481:9:msg_t chibios_rt::BinarySemaphore::waitTimeout(systime_t)	0	static
+ch.cpp:486:9:msg_t chibios_rt::BinarySemaphore::waitTimeoutS(systime_t)	0	static
+ch.cpp:491:8:void chibios_rt::BinarySemaphore::reset(bool)	0	static
+ch.cpp:496:8:void chibios_rt::BinarySemaphore::resetI(bool)	0	static
+ch.cpp:501:8:void chibios_rt::BinarySemaphore::signal()	8	static
+ch.cpp:506:8:void chibios_rt::BinarySemaphore::signalI()	0	static
+ch.cpp:511:8:bool chibios_rt::BinarySemaphore::getStateI()	0	static
+ch.cpp:521:3:chibios_rt::Mutex::Mutex()	8	static
+ch.cpp:526:8:bool chibios_rt::Mutex::tryLock()	0	static
+ch.cpp:531:8:bool chibios_rt::Mutex::tryLockS()	0	static
+ch.cpp:536:8:void chibios_rt::Mutex::lock()	0	static
+ch.cpp:541:8:void chibios_rt::Mutex::lockS()	0	static
+ch.cpp:550:3:chibios_rt::CondVar::CondVar()	8	static
+ch.cpp:555:8:void chibios_rt::CondVar::signal()	0	static
+ch.cpp:560:8:void chibios_rt::CondVar::signalI()	0	static
+ch.cpp:565:8:void chibios_rt::CondVar::broadcast()	0	static
+ch.cpp:570:8:void chibios_rt::CondVar::broadcastI()	0	static
+ch.cpp:575:9:msg_t chibios_rt::CondVar::wait()	0	static
+ch.cpp:580:9:msg_t chibios_rt::CondVar::waitS()	0	static
+ch.cpp:586:9:msg_t chibios_rt::CondVar::waitTimeout(systime_t)	0	static
+ch.cpp:598:15:flagsmask_t chibios_rt::EvtListener::getAndClearFlags()	0	static
+ch.cpp:603:15:flagsmask_t chibios_rt::EvtListener::getAndClearFlagsI()	0	static
+ch.cpp:611:3:chibios_rt::EvtSource::EvtSource()	0	static
+ch.cpp:616:8:void chibios_rt::EvtSource::registerOne(chibios_rt::EvtListener*, eventid_t)	0	static
+ch.cpp:622:8:void chibios_rt::EvtSource::registerMask(chibios_rt::EvtListener*, eventmask_t)	0	static
+ch.cpp:628:8:void chibios_rt::EvtSource::unregister(chibios_rt::EvtListener*)	0	static
+ch.cpp:633:8:void chibios_rt::EvtSource::broadcastFlags(flagsmask_t)	0	static
+ch.cpp:638:8:void chibios_rt::EvtSource::broadcastFlagsI(flagsmask_t)	0	static
+ch.cpp:648:3:chibios_rt::InQueue::InQueue(uint8_t*, size_t, qnotify_t, void*)	16	static
+ch.cpp:653:10:size_t chibios_rt::InQueue::getFullI()	0	static
+ch.cpp:658:10:size_t chibios_rt::InQueue::getEmptyI()	0	static
+ch.cpp:663:8:bool chibios_rt::InQueue::isEmptyI()	0	static
+ch.cpp:668:8:bool chibios_rt::InQueue::isFullI()	0	static
+ch.cpp:673:8:void chibios_rt::InQueue::resetI()	0	static
+ch.cpp:678:9:msg_t chibios_rt::InQueue::putI(uint8_t)	0	static
+ch.cpp:683:9:msg_t chibios_rt::InQueue::get()	0	static
+ch.cpp:688:9:msg_t chibios_rt::InQueue::getTimeout(systime_t)	0	static
+ch.cpp:693:10:size_t chibios_rt::InQueue::readTimeout(uint8_t*, size_t, systime_t)	0	static
+ch.cpp:701:3:chibios_rt::OutQueue::OutQueue(uint8_t*, size_t, qnotify_t, void*)	16	static
+ch.cpp:706:10:size_t chibios_rt::OutQueue::getFullI()	0	static
+ch.cpp:711:10:size_t chibios_rt::OutQueue::getEmptyI()	0	static
+ch.cpp:716:8:bool chibios_rt::OutQueue::isEmptyI()	0	static
+ch.cpp:721:8:bool chibios_rt::OutQueue::isFullI()	0	static
+ch.cpp:726:8:void chibios_rt::OutQueue::resetI()	0	static
+ch.cpp:731:9:msg_t chibios_rt::OutQueue::put(uint8_t)	0	static
+ch.cpp:736:9:msg_t chibios_rt::OutQueue::putTimeout(uint8_t, systime_t)	0	static
+ch.cpp:741:9:msg_t chibios_rt::OutQueue::getI()	0	static
+ch.cpp:746:10:size_t chibios_rt::OutQueue::writeTimeout(const uint8_t*, size_t, systime_t)	0	static
+ch.cpp:757:3:chibios_rt::Mailbox::Mailbox(msg_t*, cnt_t)	8	static
+ch.cpp:762:8:void chibios_rt::Mailbox::reset()	0	static
+ch.cpp:767:9:msg_t chibios_rt::Mailbox::post(msg_t, systime_t)	0	static
+ch.cpp:772:9:msg_t chibios_rt::Mailbox::postS(msg_t, systime_t)	0	static
+ch.cpp:777:9:msg_t chibios_rt::Mailbox::postI(msg_t)	0	static
+ch.cpp:782:9:msg_t chibios_rt::Mailbox::postAhead(msg_t, systime_t)	0	static
+ch.cpp:787:9:msg_t chibios_rt::Mailbox::postAheadS(msg_t, systime_t)	0	static
+ch.cpp:792:9:msg_t chibios_rt::Mailbox::postAheadI(msg_t)	0	static
+ch.cpp:797:9:msg_t chibios_rt::Mailbox::fetch(msg_t*, systime_t)	0	static
+ch.cpp:802:9:msg_t chibios_rt::Mailbox::fetchS(msg_t*, systime_t)	0	static
+ch.cpp:807:9:msg_t chibios_rt::Mailbox::fetchI(msg_t*)	0	static
+ch.cpp:812:9:cnt_t chibios_rt::Mailbox::getFreeCountI()	0	static
+ch.cpp:817:9:cnt_t chibios_rt::Mailbox::getUsedCountI()	0	static
+ch.cpp:827:3:chibios_rt::MemoryPool::MemoryPool(size_t, memgetfunc_t)	8	static
+ch.cpp:832:3:chibios_rt::MemoryPool::MemoryPool(size_t, memgetfunc_t, void*, size_t)	16	static
+ch.cpp:839:8:void chibios_rt::MemoryPool::loadArray(void*, size_t)	0	static
+ch.cpp:844:9:void* chibios_rt::MemoryPool::allocI()	0	static
+ch.cpp:849:9:void* chibios_rt::MemoryPool::alloc()	0	static
+ch.cpp:854:8:void chibios_rt::MemoryPool::free(void*)	0	static
+ch.cpp:859:8:void chibios_rt::MemoryPool::freeI(void*)	0	static

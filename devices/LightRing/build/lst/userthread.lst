@@ -1,0 +1,259 @@
+ARM GAS  /tmp/ccg4z1kW.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"userthread.cpp"
+  15              		.section	.text._ZN5amiro10UserThreadD2Ev,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro10UserThreadD2Ev
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro10UserThreadD2Ev, %function
+  22              	_ZN5amiro10UserThreadD2Ev:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 014B     		ldr	r3, .L2
+  27 0002 0360     		str	r3, [r0]
+  28 0004 7047     		bx	lr
+  29              	.L3:
+  30 0006 00BF     		.align	2
+  31              	.L2:
+  32 0008 08000000 		.word	.LANCHOR0+8
+  33              		.size	_ZN5amiro10UserThreadD2Ev, .-_ZN5amiro10UserThreadD2Ev
+  34              		.global	_ZN5amiro10UserThreadD1Ev
+  35              		.thumb_set _ZN5amiro10UserThreadD1Ev,_ZN5amiro10UserThreadD2Ev
+  36 000c AFF30080 		.section	.text._ZN5amiro10UserThreadD0Ev,"ax",%progbits
+  37              		.align	2
+  38              		.p2align 4,,15
+  39              		.global	_ZN5amiro10UserThreadD0Ev
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	_ZN5amiro10UserThreadD0Ev, %function
+  43              	_ZN5amiro10UserThreadD0Ev:
+  44              		@ args = 0, pretend = 0, frame = 0
+  45              		@ frame_needed = 0, uses_anonymous_args = 0
+  46 0000 10B5     		push	{r4, lr}
+  47 0002 034B     		ldr	r3, .L5
+  48 0004 0446     		mov	r4, r0
+  49 0006 0360     		str	r3, [r0]
+  50 0008 FFF7FEFF 		bl	_ZdlPv
+  51 000c 2046     		mov	r0, r4
+  52 000e 10BD     		pop	{r4, pc}
+  53              	.L6:
+  54              		.align	2
+  55              	.L5:
+  56 0010 08000000 		.word	.LANCHOR0+8
+  57              		.size	_ZN5amiro10UserThreadD0Ev, .-_ZN5amiro10UserThreadD0Ev
+ARM GAS  /tmp/ccg4z1kW.s 			page 2
+
+
+  58 0014 AFF30080 		.section	.text.startup._ZN5amiro10UserThread4mainEv,"ax",%progbits
+  58      AFF30080 
+  58      AFF30080 
+  59              		.align	2
+  60              		.p2align 4,,15
+  61              		.global	_ZN5amiro10UserThread4mainEv
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	_ZN5amiro10UserThread4mainEv, %function
+  65              	_ZN5amiro10UserThread4mainEv:
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68 0000 08B5     		push	{r3, lr}
+  69 0002 03E0     		b	.L8
+  70              	.L9:
+  71 0004 4FF47A70 		mov	r0, #1000
+  72 0008 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+  73              	.L8:
+  74 000c FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+  75 0010 0028     		cmp	r0, #0
+  76 0012 F7D0     		beq	.L9
+  77 0014 0020     		movs	r0, #0
+  78 0016 08BD     		pop	{r3, pc}
+  79              		.size	_ZN5amiro10UserThread4mainEv, .-_ZN5amiro10UserThread4mainEv
+  80 0018 AFF30080 		.section	.text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm,"axG",%progbits,_ZN10chibios_rt1
+  80      AFF30080 
+  81              		.align	2
+  82              		.p2align 4,,15
+  83              		.weak	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+  84              		.thumb
+  85              		.thumb_func
+  86              		.type	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm, %function
+  87              	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:
+  88              		@ args = 0, pretend = 0, frame = 0
+  89              		@ frame_needed = 0, uses_anonymous_args = 0
+  90 0000 30B5     		push	{r4, r5, lr}
+  91 0002 0D46     		mov	r5, r1
+  92 0004 83B0     		sub	sp, sp, #12
+  93 0006 0446     		mov	r4, r0
+  94 0008 0091     		str	r1, [sp]
+  95 000a 05F10800 		add	r0, r5, #8
+  96 000e 4FF49A61 		mov	r1, #1232
+  97 0012 054B     		ldr	r3, .L12
+  98 0014 FFF7FEFF 		bl	chThdCreateStatic
+  99 0018 044A     		ldr	r2, .L12+4
+ 100 001a 0346     		mov	r3, r0
+ 101 001c 6860     		str	r0, [r5, #4]
+ 102 001e 2046     		mov	r0, r4
+ 103 0020 84E80C00 		stmia	r4, {r2, r3}
+ 104 0024 03B0     		add	sp, sp, #12
+ 105              		@ sp needed
+ 106 0026 30BD     		pop	{r4, r5, pc}
+ 107              	.L13:
+ 108              		.align	2
+ 109              	.L12:
+ 110 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+ 111 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+ARM GAS  /tmp/ccg4z1kW.s 			page 3
+
+
+ 112              		.size	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi10
+ 113              		.section	.text._ZN5amiro10UserThreadC2Ev,"ax",%progbits
+ 114              		.align	2
+ 115              		.p2align 4,,15
+ 116              		.global	_ZN5amiro10UserThreadC2Ev
+ 117              		.thumb
+ 118              		.thumb_func
+ 119              		.type	_ZN5amiro10UserThreadC2Ev, %function
+ 120              	_ZN5amiro10UserThreadC2Ev:
+ 121              		@ args = 0, pretend = 0, frame = 0
+ 122              		@ frame_needed = 0, uses_anonymous_args = 0
+ 123 0000 10B5     		push	{r4, lr}
+ 124 0002 0446     		mov	r4, r0
+ 125 0004 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+ 126 0008 014B     		ldr	r3, .L15
+ 127 000a 2046     		mov	r0, r4
+ 128 000c 2360     		str	r3, [r4]
+ 129 000e 10BD     		pop	{r4, pc}
+ 130              	.L16:
+ 131              		.align	2
+ 132              	.L15:
+ 133 0010 08000000 		.word	.LANCHOR0+8
+ 134              		.size	_ZN5amiro10UserThreadC2Ev, .-_ZN5amiro10UserThreadC2Ev
+ 135              		.global	_ZN5amiro10UserThreadC1Ev
+ 136              		.thumb_set _ZN5amiro10UserThreadC1Ev,_ZN5amiro10UserThreadC2Ev
+ 137 0014 AFF30080 		.section	.text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev,"ax",%progbits
+ 137      AFF30080 
+ 137      AFF30080 
+ 138              		.align	2
+ 139              		.p2align 4,,15
+ 140              		.thumb
+ 141              		.thumb_func
+ 142              		.type	_GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev, %function
+ 143              	_GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:
+ 144              		@ args = 0, pretend = 0, frame = 0
+ 145              		@ frame_needed = 0, uses_anonymous_args = 0
+ 146              		@ link register save eliminated.
+ 147 0000 024B     		ldr	r3, .L18
+ 148 0002 034A     		ldr	r2, .L18+4
+ 149 0004 1A60     		str	r2, [r3]
+ 150 0006 5A60     		str	r2, [r3, #4]
+ 151 0008 7047     		bx	lr
+ 152              	.L19:
+ 153 000a 00BF     		.align	2
+ 154              	.L18:
+ 155 000c 00000000 		.word	.LANCHOR1
+ 156 0010 A0860100 		.word	100000
+ 157              		.size	_GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev, .-_GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev
+ 158 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 158      AFF30080 
+ 158      AFF30080 
+ 159              		.align	2
+ 160 0000 00000000 		.word	_GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev(target1)
+ 161              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE
+ 162              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE,"aG",%progbits,_ZTVN10chibios_rt16B
+ 163              		.align	3
+ 164              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE, %object
+ARM GAS  /tmp/ccg4z1kW.s 			page 4
+
+
+ 165              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE, 20
+ 166              	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:
+ 167 0000 00000000 		.word	0
+ 168 0004 00000000 		.word	0
+ 169 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 170 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 171 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+ 172              		.global	_ZTVN5amiro10UserThreadE
+ 173 0014 00000000 		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 174              		.align	2
+ 175              		.set	.LANCHOR1,. + 0
+ 176              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 177              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 178              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 179 0000 00000000 		.space	8
+ 179      00000000 
+ 180              		.section	.rodata._ZTVN5amiro10UserThreadE,"a",%progbits
+ 181              		.align	3
+ 182              		.set	.LANCHOR0,. + 0
+ 183              		.type	_ZTVN5amiro10UserThreadE, %object
+ 184              		.size	_ZTVN5amiro10UserThreadE, 28
+ 185              	_ZTVN5amiro10UserThreadE:
+ 186 0000 00000000 		.word	0
+ 187 0004 00000000 		.word	0
+ 188 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 189 000c 00000000 		.word	_ZN5amiro10UserThread4mainEv
+ 190 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+ 191 0014 00000000 		.word	_ZN5amiro10UserThreadD1Ev
+ 192 0018 00000000 		.word	_ZN5amiro10UserThreadD0Ev
+ 193 001c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccg4z1kW.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 userthread.cpp
+     /tmp/ccg4z1kW.s:16     .text._ZN5amiro10UserThreadD2Ev:00000000 $t
+     /tmp/ccg4z1kW.s:22     .text._ZN5amiro10UserThreadD2Ev:00000000 _ZN5amiro10UserThreadD2Ev
+     /tmp/ccg4z1kW.s:32     .text._ZN5amiro10UserThreadD2Ev:00000008 $d
+     /tmp/ccg4z1kW.s:22     .text._ZN5amiro10UserThreadD2Ev:00000000 _ZN5amiro10UserThreadD1Ev
+     /tmp/ccg4z1kW.s:37     .text._ZN5amiro10UserThreadD0Ev:00000000 $t
+     /tmp/ccg4z1kW.s:43     .text._ZN5amiro10UserThreadD0Ev:00000000 _ZN5amiro10UserThreadD0Ev
+     /tmp/ccg4z1kW.s:56     .text._ZN5amiro10UserThreadD0Ev:00000010 $d
+     /tmp/ccg4z1kW.s:59     .text.startup._ZN5amiro10UserThread4mainEv:00000000 $t
+     /tmp/ccg4z1kW.s:65     .text.startup._ZN5amiro10UserThread4mainEv:00000000 _ZN5amiro10UserThread4mainEv
+     /tmp/ccg4z1kW.s:81     .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000000 $t
+     /tmp/ccg4z1kW.s:87     .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+     /tmp/ccg4z1kW.s:110    .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000028 $d
+     /tmp/ccg4z1kW.s:114    .text._ZN5amiro10UserThreadC2Ev:00000000 $t
+     /tmp/ccg4z1kW.s:120    .text._ZN5amiro10UserThreadC2Ev:00000000 _ZN5amiro10UserThreadC2Ev
+     /tmp/ccg4z1kW.s:133    .text._ZN5amiro10UserThreadC2Ev:00000010 $d
+     /tmp/ccg4z1kW.s:120    .text._ZN5amiro10UserThreadC2Ev:00000000 _ZN5amiro10UserThreadC1Ev
+     /tmp/ccg4z1kW.s:138    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:00000000 $t
+     /tmp/ccg4z1kW.s:143    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:00000000 _GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev
+     /tmp/ccg4z1kW.s:155    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:0000000c $d
+     /tmp/ccg4z1kW.s:159    .init_array:00000000 $d
+     /tmp/ccg4z1kW.s:166    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi1024EEE
+     /tmp/ccg4z1kW.s:163    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:00000000 $d
+     /tmp/ccg4z1kW.s:185    .rodata._ZTVN5amiro10UserThreadE:00000000 _ZTVN5amiro10UserThreadE
+     /tmp/ccg4z1kW.s:174    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccg4z1kW.s:178    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccg4z1kW.s:181    .rodata._ZTVN5amiro10UserThreadE:00000000 $d
+     /tmp/ccg4z1kW.s:36     .text._ZN5amiro10UserThreadD2Ev:0000000c $t
+     /tmp/ccg4z1kW.s:58     .text._ZN5amiro10UserThreadD0Ev:00000014 $t
+     /tmp/ccg4z1kW.s:137    .text._ZN5amiro10UserThreadC2Ev:00000014 $t
+     /tmp/ccg4z1kW.s:158    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:00000014 $t
+
+UNDEFINED SYMBOLS
+_ZdlPv
+_ZN10chibios_rt10BaseThread5sleepEm
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+_ZN10chibios_rt10BaseThreadC2Ev
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv

@@ -1,0 +1,124 @@
+ARM GAS  /tmp/ccrnfYpC.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"MotorIncrements.cpp"
+  15              		.section	.text._ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_, %function
+  22              	_ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 70B4     		push	{r4, r5, r6}
+  27 0002 0024     		movs	r4, #0
+  28 0004 0126     		movs	r6, #1
+  29 0006 4FF48035 		mov	r5, #65536
+  30 000a 4672     		strb	r6, [r0, #9]
+  31 000c C560     		str	r5, [r0, #12]
+  32 000e 0472     		strb	r4, [r0, #8]
+  33 0010 8472     		strb	r4, [r0, #10]
+  34 0012 80E80600 		stmia	r0, {r1, r2}
+  35 0016 70BC     		pop	{r4, r5, r6}
+  36 0018 7047     		bx	lr
+  37              		.size	_ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_, .-_ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_
+  38              		.global	_ZN5amiro15MotorIncrementsC1EP9QEIDriverS2_
+  39              		.thumb_set _ZN5amiro15MotorIncrementsC1EP9QEIDriverS2_,_ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_
+  40 001a 00BFAFF3 		.section	.text._ZN5amiro15MotorIncrements5startEv,"ax",%progbits
+  40      0080
+  41              		.align	2
+  42              		.p2align 4,,15
+  43              		.global	_ZN5amiro15MotorIncrements5startEv
+  44              		.thumb
+  45              		.thumb_func
+  46              		.type	_ZN5amiro15MotorIncrements5startEv, %function
+  47              	_ZN5amiro15MotorIncrements5startEv:
+  48              		@ args = 0, pretend = 0, frame = 0
+  49              		@ frame_needed = 0, uses_anonymous_args = 0
+  50 0000 38B5     		push	{r3, r4, r5, lr}
+  51 0002 00F10805 		add	r5, r0, #8
+  52 0006 0446     		mov	r4, r0
+  53 0008 2946     		mov	r1, r5
+  54 000a 0068     		ldr	r0, [r0]
+  55 000c FFF7FEFF 		bl	qeiStart
+  56 0010 2946     		mov	r1, r5
+ARM GAS  /tmp/ccrnfYpC.s 			page 2
+
+
+  57 0012 6068     		ldr	r0, [r4, #4]
+  58 0014 FFF7FEFF 		bl	qeiStart
+  59 0018 2068     		ldr	r0, [r4]
+  60 001a FFF7FEFF 		bl	qeiEnable
+  61 001e 6068     		ldr	r0, [r4, #4]
+  62 0020 BDE83840 		pop	{r3, r4, r5, lr}
+  63 0024 FFF7FEBF 		b	qeiEnable
+  64              		.size	_ZN5amiro15MotorIncrements5startEv, .-_ZN5amiro15MotorIncrements5startEv
+  65 0028 AFF30080 		.section	.text._ZN5amiro15MotorIncrements14qeiGetPositionEi,"ax",%progbits
+  65      AFF30080 
+  66              		.align	2
+  67              		.p2align 4,,15
+  68              		.global	_ZN5amiro15MotorIncrements14qeiGetPositionEi
+  69              		.thumb
+  70              		.thumb_func
+  71              		.type	_ZN5amiro15MotorIncrements14qeiGetPositionEi, %function
+  72              	_ZN5amiro15MotorIncrements14qeiGetPositionEi:
+  73              		@ args = 0, pretend = 0, frame = 0
+  74              		@ frame_needed = 0, uses_anonymous_args = 0
+  75              		@ link register save eliminated.
+  76 0000 50F82130 		ldr	r3, [r0, r1, lsl #2]
+  77 0004 9B68     		ldr	r3, [r3, #8]
+  78 0006 586A     		ldr	r0, [r3, #36]
+  79 0008 7047     		bx	lr
+  80              		.size	_ZN5amiro15MotorIncrements14qeiGetPositionEi, .-_ZN5amiro15MotorIncrements14qeiGetPositionEi
+  81 000a 00BFAFF3 		.section	.text._ZN5amiro15MotorIncrements17getQeiConfigRangeEv,"ax",%progbits
+  81      0080
+  82              		.align	2
+  83              		.p2align 4,,15
+  84              		.global	_ZN5amiro15MotorIncrements17getQeiConfigRangeEv
+  85              		.thumb
+  86              		.thumb_func
+  87              		.type	_ZN5amiro15MotorIncrements17getQeiConfigRangeEv, %function
+  88              	_ZN5amiro15MotorIncrements17getQeiConfigRangeEv:
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		@ link register save eliminated.
+  92 0000 C068     		ldr	r0, [r0, #12]
+  93 0002 7047     		bx	lr
+  94              		.size	_ZN5amiro15MotorIncrements17getQeiConfigRangeEv, .-_ZN5amiro15MotorIncrements17getQeiConfigR
+  95 0004 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+  95      AFF30080 
+  95      AFF30080 
+ARM GAS  /tmp/ccrnfYpC.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 MotorIncrements.cpp
+     /tmp/ccrnfYpC.s:16     .text._ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_:00000000 $t
+     /tmp/ccrnfYpC.s:22     .text._ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_:00000000 _ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_
+     /tmp/ccrnfYpC.s:22     .text._ZN5amiro15MotorIncrementsC2EP9QEIDriverS2_:00000000 _ZN5amiro15MotorIncrementsC1EP9QEIDriverS2_
+     /tmp/ccrnfYpC.s:41     .text._ZN5amiro15MotorIncrements5startEv:00000000 $t
+     /tmp/ccrnfYpC.s:47     .text._ZN5amiro15MotorIncrements5startEv:00000000 _ZN5amiro15MotorIncrements5startEv
+     /tmp/ccrnfYpC.s:66     .text._ZN5amiro15MotorIncrements14qeiGetPositionEi:00000000 $t
+     /tmp/ccrnfYpC.s:72     .text._ZN5amiro15MotorIncrements14qeiGetPositionEi:00000000 _ZN5amiro15MotorIncrements14qeiGetPositionEi
+     /tmp/ccrnfYpC.s:82     .text._ZN5amiro15MotorIncrements17getQeiConfigRangeEv:00000000 $t
+     /tmp/ccrnfYpC.s:88     .text._ZN5amiro15MotorIncrements17getQeiConfigRangeEv:00000000 _ZN5amiro15MotorIncrements17getQeiConfigRangeEv
+
+UNDEFINED SYMBOLS
+qeiStart
+qeiEnable

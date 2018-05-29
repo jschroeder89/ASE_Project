@@ -1,0 +1,5 @@
+memstreams.c:66:14:put	4	static
+memstreams.c:76:14:get	0	static
+memstreams.c:56:15:reads	16	static
+memstreams.c:46:15:writes	16	static
+memstreams.c:103:6:msObjectInit	8	static

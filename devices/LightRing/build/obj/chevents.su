@@ -1,0 +1,17 @@
+chevents.c:85:6:chEvtRegisterMask	24	static
+chevents.c:111:6:chEvtUnregister	16	static
+chevents.c:136:13:chEvtGetAndClearEvents	8	static
+chevents.c:157:13:chEvtAddEvents	8	static
+chevents.c:209:13:chEvtGetAndClearFlags	16	static
+chevents.c:251:6:chEvtSignalI	16	static
+chevents.c:184:6:chEvtBroadcastFlagsI	16	static
+chevents.c:229:6:chEvtSignal	16	static
+chevents.c:278:6:chEvtBroadcastFlags	16	static
+chevents.c:297:13:chEvtGetAndClearFlagsI	0	static
+chevents.c:315:6:chEvtDispatch	32	static
+chevents.c:350:13:chEvtWaitOne	16	static
+chevents.c:379:13:chEvtWaitAny	16	static
+chevents.c:407:13:chEvtWaitAll	16	static
+chevents.c:446:13:chEvtWaitOneTimeout	24	static
+chevents.c:489:13:chEvtWaitAnyTimeout	24	static
+chevents.c:530:13:chEvtWaitAllTimeout	16	static

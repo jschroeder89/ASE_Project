@@ -1,0 +1,2 @@
+chregistry.c:117:9:chRegFirstThread	8	static
+chregistry.c:140:9:chRegNextThread	16	static

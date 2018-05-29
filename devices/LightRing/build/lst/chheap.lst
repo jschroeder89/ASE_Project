@@ -1,0 +1,381 @@
+ARM GAS  /tmp/ccRZjEta.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"chheap.c"
+  15              		.section	.text._heap_init,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_heap_init
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_heap_init, %function
+  22              	_heap_init:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 044B     		ldr	r3, .L2
+  27 0002 0549     		ldr	r1, .L2+4
+  28 0004 0022     		movs	r2, #0
+  29 0006 03F11000 		add	r0, r3, #16
+  30 000a 1960     		str	r1, [r3]
+  31 000c 9A60     		str	r2, [r3, #8]
+  32 000e DA60     		str	r2, [r3, #12]
+  33 0010 FFF7FEBF 		b	chMtxInit
+  34              	.L3:
+  35              		.align	2
+  36              	.L2:
+  37 0014 00000000 		.word	.LANCHOR0
+  38 0018 00000000 		.word	chCoreAlloc
+  39              		.size	_heap_init, .-_heap_init
+  40 001c AFF30080 		.section	.text.chHeapInit,"ax",%progbits
+  41              		.align	2
+  42              		.p2align 4,,15
+  43              		.global	chHeapInit
+  44              		.thumb
+  45              		.thumb_func
+  46              		.type	chHeapInit, %function
+  47              	chHeapInit:
+  48              		@ args = 0, pretend = 0, frame = 0
+  49              		@ frame_needed = 0, uses_anonymous_args = 0
+  50 0000 70B5     		push	{r4, r5, r6, lr}
+  51 0002 1646     		mov	r6, r2
+  52 0004 4A07     		lsls	r2, r1, #29
+  53 0006 0C46     		mov	r4, r1
+  54 0008 0546     		mov	r5, r0
+  55 000a 01D1     		bne	.L5
+  56 000c 7307     		lsls	r3, r6, #29
+  57 000e 02D0     		beq	.L6
+ARM GAS  /tmp/ccRZjEta.s 			page 2
+
+
+  58              	.L5:
+  59 0010 0748     		ldr	r0, .L11
+  60 0012 FFF7FEFF 		bl	chDbgPanic
+  61              	.L6:
+  62 0016 0023     		movs	r3, #0
+  63 0018 083E     		subs	r6, r6, #8
+  64 001a AC60     		str	r4, [r5, #8]
+  65 001c 2B60     		str	r3, [r5]
+  66 001e EB60     		str	r3, [r5, #12]
+  67 0020 84E84800 		stmia	r4, {r3, r6}
+  68 0024 05F11000 		add	r0, r5, #16
+  69 0028 BDE87040 		pop	{r4, r5, r6, lr}
+  70 002c FFF7FEBF 		b	chMtxInit
+  71              	.L12:
+  72              		.align	2
+  73              	.L11:
+  74 0030 00000000 		.word	.LC0
+  75              		.size	chHeapInit, .-chHeapInit
+  76 0034 AFF30080 		.section	.text.chHeapAlloc,"ax",%progbits
+  76      AFF30080 
+  76      AFF30080 
+  77              		.align	2
+  78              		.p2align 4,,15
+  79              		.global	chHeapAlloc
+  80              		.thumb
+  81              		.thumb_func
+  82              		.type	chHeapAlloc, %function
+  83              	chHeapAlloc:
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  87 0002 1E4E     		ldr	r6, .L28
+  88 0004 0731     		adds	r1, r1, #7
+  89 0006 0028     		cmp	r0, #0
+  90 0008 18BF     		it	ne
+  91 000a 0646     		movne	r6, r0
+  92 000c 06F11000 		add	r0, r6, #16
+  93 0010 21F00705 		bic	r5, r1, #7
+  94 0014 06F10804 		add	r4, r6, #8
+  95 0018 FFF7FEFF 		bl	chMtxLock
+  96 001c 03E0     		b	.L15
+  97              	.L20:
+  98 001e 5A68     		ldr	r2, [r3, #4]
+  99 0020 9542     		cmp	r5, r2
+ 100 0022 11D9     		bls	.L27
+ 101 0024 1C46     		mov	r4, r3
+ 102              	.L15:
+ 103 0026 2368     		ldr	r3, [r4]
+ 104 0028 002B     		cmp	r3, #0
+ 105 002a F8D1     		bne	.L20
+ 106 002c FFF7FEFF 		bl	chMtxUnlock
+ 107 0030 3368     		ldr	r3, [r6]
+ 108 0032 0BB3     		cbz	r3, .L22
+ 109 0034 05F10800 		add	r0, r5, #8
+ 110 0038 9847     		blx	r3
+ 111 003a E8B1     		cbz	r0, .L22
+ 112 003c 0660     		str	r6, [r0]
+ARM GAS  /tmp/ccRZjEta.s 			page 3
+
+
+ 113 003e 4560     		str	r5, [r0, #4]
+ 114 0040 00F10804 		add	r4, r0, #8
+ 115              	.L19:
+ 116 0044 2046     		mov	r0, r4
+ 117 0046 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 118              	.L27:
+ 119 0048 05F10801 		add	r1, r5, #8
+ 120 004c 9142     		cmp	r1, r2
+ 121 004e 08D9     		bls	.L17
+ 122 0050 1A68     		ldr	r2, [r3]
+ 123 0052 2260     		str	r2, [r4]
+ 124              	.L18:
+ 125 0054 1C46     		mov	r4, r3
+ 126 0056 44F8086B 		str	r6, [r4], #8
+ 127 005a FFF7FEFF 		bl	chMtxUnlock
+ 128 005e 2046     		mov	r0, r4
+ 129 0060 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 130              	.L17:
+ 131 0062 6FF00700 		mvn	r0, #7
+ 132 0066 1F68     		ldr	r7, [r3]
+ 133 0068 401B     		subs	r0, r0, r5
+ 134 006a 1044     		add	r0, r0, r2
+ 135 006c 5A18     		adds	r2, r3, r1
+ 136 006e 5F50     		str	r7, [r3, r1]
+ 137 0070 5060     		str	r0, [r2, #4]
+ 138 0072 2260     		str	r2, [r4]
+ 139 0074 5D60     		str	r5, [r3, #4]
+ 140 0076 EDE7     		b	.L18
+ 141              	.L22:
+ 142 0078 0024     		movs	r4, #0
+ 143 007a E3E7     		b	.L19
+ 144              	.L29:
+ 145              		.align	2
+ 146              	.L28:
+ 147 007c 00000000 		.word	.LANCHOR0
+ 148              		.size	chHeapAlloc, .-chHeapAlloc
+ 149              		.section	.text.chHeapFree,"ax",%progbits
+ 150              		.align	2
+ 151              		.p2align 4,,15
+ 152              		.global	chHeapFree
+ 153              		.thumb
+ 154              		.thumb_func
+ 155              		.type	chHeapFree, %function
+ 156              	chHeapFree:
+ 157              		@ args = 0, pretend = 0, frame = 0
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 159 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 160 0002 0746     		mov	r7, r0
+ 161 0004 0028     		cmp	r0, #0
+ 162 0006 57D0     		beq	.L44
+ 163              	.L31:
+ 164 0008 57F8086C 		ldr	r6, [r7, #-8]
+ 165 000c A7F10805 		sub	r5, r7, #8
+ 166 0010 06F11000 		add	r0, r6, #16
+ 167 0014 FFF7FEFF 		bl	chMtxLock
+ 168 0018 0836     		adds	r6, r6, #8
+ 169 001a 3446     		mov	r4, r6
+ARM GAS  /tmp/ccRZjEta.s 			page 4
+
+
+ 170              	.L39:
+ 171 001c AC42     		cmp	r4, r5
+ 172 001e 04D8     		bhi	.L32
+ 173 0020 6368     		ldr	r3, [r4, #4]
+ 174 0022 0833     		adds	r3, r3, #8
+ 175 0024 2344     		add	r3, r3, r4
+ 176 0026 9D42     		cmp	r5, r3
+ 177 0028 0BD3     		bcc	.L45
+ 178              	.L32:
+ 179 002a B442     		cmp	r4, r6
+ 180 002c 0ED0     		beq	.L33
+ 181              	.L46:
+ 182 002e AC42     		cmp	r4, r5
+ 183 0030 0CD3     		bcc	.L33
+ 184 0032 2468     		ldr	r4, [r4]
+ 185 0034 AC42     		cmp	r4, r5
+ 186 0036 F8D8     		bhi	.L32
+ 187 0038 6368     		ldr	r3, [r4, #4]
+ 188 003a 0833     		adds	r3, r3, #8
+ 189 003c 2344     		add	r3, r3, r4
+ 190 003e 9D42     		cmp	r5, r3
+ 191 0040 F3D2     		bcs	.L32
+ 192              	.L45:
+ 193 0042 1F48     		ldr	r0, .L49
+ 194 0044 FFF7FEFF 		bl	chDbgPanic
+ 195 0048 B442     		cmp	r4, r6
+ 196 004a F0D1     		bne	.L46
+ 197              	.L33:
+ 198 004c 2368     		ldr	r3, [r4]
+ 199 004e 1BB1     		cbz	r3, .L35
+ 200 0050 9D42     		cmp	r5, r3
+ 201 0052 01D3     		bcc	.L35
+ 202 0054 1C46     		mov	r4, r3
+ 203 0056 E1E7     		b	.L39
+ 204              	.L35:
+ 205 0058 57F8042C 		ldr	r2, [r7, #-4]
+ 206 005c 47F8083C 		str	r3, [r7, #-8]
+ 207 0060 2560     		str	r5, [r4]
+ 208 0062 02F10803 		add	r3, r2, #8
+ 209 0066 57F8080C 		ldr	r0, [r7, #-8]
+ 210 006a E918     		adds	r1, r5, r3
+ 211 006c 8142     		cmp	r1, r0
+ 212 006e 09D0     		beq	.L47
+ 213 0070 6368     		ldr	r3, [r4, #4]
+ 214 0072 03F10802 		add	r2, r3, #8
+ 215 0076 2244     		add	r2, r2, r4
+ 216 0078 9542     		cmp	r5, r2
+ 217 007a 11D0     		beq	.L48
+ 218              	.L38:
+ 219 007c BDE8F840 		pop	{r3, r4, r5, r6, r7, lr}
+ 220 0080 FFF7FEBF 		b	chMtxUnlock
+ 221              	.L47:
+ 222 0084 4968     		ldr	r1, [r1, #4]
+ 223 0086 EB58     		ldr	r3, [r5, r3]
+ 224 0088 0A44     		add	r2, r2, r1
+ 225 008a 0832     		adds	r2, r2, #8
+ 226 008c 47F8042C 		str	r2, [r7, #-4]
+ARM GAS  /tmp/ccRZjEta.s 			page 5
+
+
+ 227 0090 47F8083C 		str	r3, [r7, #-8]
+ 228 0094 6368     		ldr	r3, [r4, #4]
+ 229 0096 03F10802 		add	r2, r3, #8
+ 230 009a 2244     		add	r2, r2, r4
+ 231 009c 9542     		cmp	r5, r2
+ 232 009e EDD1     		bne	.L38
+ 233              	.L48:
+ 234 00a0 57F8041C 		ldr	r1, [r7, #-4]
+ 235 00a4 57F8082C 		ldr	r2, [r7, #-8]
+ 236 00a8 0B44     		add	r3, r3, r1
+ 237 00aa 0833     		adds	r3, r3, #8
+ 238 00ac 84E80C00 		stmia	r4, {r2, r3}
+ 239 00b0 BDE8F840 		pop	{r3, r4, r5, r6, r7, lr}
+ 240 00b4 FFF7FEBF 		b	chMtxUnlock
+ 241              	.L44:
+ 242 00b8 0248     		ldr	r0, .L49+4
+ 243 00ba FFF7FEFF 		bl	chDbgPanic
+ 244 00be A3E7     		b	.L31
+ 245              	.L50:
+ 246              		.align	2
+ 247              	.L49:
+ 248 00c0 20000000 		.word	.LC2
+ 249 00c4 10000000 		.word	.LC1
+ 250              		.size	chHeapFree, .-chHeapFree
+ 251 00c8 AFF30080 		.section	.text.chHeapStatus,"ax",%progbits
+ 251      AFF30080 
+ 252              		.align	2
+ 253              		.p2align 4,,15
+ 254              		.global	chHeapStatus
+ 255              		.thumb
+ 256              		.thumb_func
+ 257              		.type	chHeapStatus, %function
+ 258              	chHeapStatus:
+ 259              		@ args = 0, pretend = 0, frame = 0
+ 260              		@ frame_needed = 0, uses_anonymous_args = 0
+ 261 0000 38B5     		push	{r3, r4, r5, lr}
+ 262 0002 0E4C     		ldr	r4, .L64
+ 263 0004 0D46     		mov	r5, r1
+ 264 0006 0028     		cmp	r0, #0
+ 265 0008 18BF     		it	ne
+ 266 000a 0446     		movne	r4, r0
+ 267 000c 04F11000 		add	r0, r4, #16
+ 268 0010 FFF7FEFF 		bl	chMtxLock
+ 269 0014 A368     		ldr	r3, [r4, #8]
+ 270 0016 6BB1     		cbz	r3, .L57
+ 271 0018 0022     		movs	r2, #0
+ 272 001a 1446     		mov	r4, r2
+ 273              	.L54:
+ 274 001c 5868     		ldr	r0, [r3, #4]
+ 275 001e 1B68     		ldr	r3, [r3]
+ 276 0020 0134     		adds	r4, r4, #1
+ 277 0022 0244     		add	r2, r2, r0
+ 278 0024 002B     		cmp	r3, #0
+ 279 0026 F9D1     		bne	.L54
+ 280              	.L53:
+ 281 0028 05B1     		cbz	r5, .L55
+ 282 002a 2A60     		str	r2, [r5]
+ARM GAS  /tmp/ccRZjEta.s 			page 6
+
+
+ 283              	.L55:
+ 284 002c FFF7FEFF 		bl	chMtxUnlock
+ 285 0030 2046     		mov	r0, r4
+ 286 0032 38BD     		pop	{r3, r4, r5, pc}
+ 287              	.L57:
+ 288 0034 1A46     		mov	r2, r3
+ 289 0036 1C46     		mov	r4, r3
+ 290 0038 F6E7     		b	.L53
+ 291              	.L65:
+ 292 003a 00BF     		.align	2
+ 293              	.L64:
+ 294 003c 00000000 		.word	.LANCHOR0
+ 295              		.size	chHeapStatus, .-chHeapStatus
+ 296              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 297              		.align	2
+ 298              	.LC0:
+ 299 0000 22636848 		.ascii	"\"chHeapInit\"()\000"
+ 299      65617049 
+ 299      6E697422 
+ 299      282900
+ 300 000f 00       		.space	1
+ 301              	.LC1:
+ 302 0010 22636848 		.ascii	"\"chHeapFree\"()\000"
+ 302      65617046 
+ 302      72656522 
+ 302      282900
+ 303 001f 00       		.space	1
+ 304              	.LC2:
+ 305 0020 63684865 		.ascii	"chHeapFree(), #1\000"
+ 305      61704672 
+ 305      65652829 
+ 305      2C202331 
+ 305      00
+ 306 0031 000000   		.section	.bss.default_heap,"aw",%nobits
+ 307              		.align	3
+ 308              		.set	.LANCHOR0,. + 0
+ 309              		.type	default_heap, %object
+ 310              		.size	default_heap, 32
+ 311              	default_heap:
+ 312 0000 00000000 		.space	32
+ 312      00000000 
+ 312      00000000 
+ 312      00000000 
+ 312      00000000 
+ 313              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccRZjEta.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chheap.c
+     /tmp/ccRZjEta.s:16     .text._heap_init:00000000 $t
+     /tmp/ccRZjEta.s:22     .text._heap_init:00000000 _heap_init
+     /tmp/ccRZjEta.s:37     .text._heap_init:00000014 $d
+     /tmp/ccRZjEta.s:41     .text.chHeapInit:00000000 $t
+     /tmp/ccRZjEta.s:47     .text.chHeapInit:00000000 chHeapInit
+     /tmp/ccRZjEta.s:74     .text.chHeapInit:00000030 $d
+     /tmp/ccRZjEta.s:77     .text.chHeapAlloc:00000000 $t
+     /tmp/ccRZjEta.s:83     .text.chHeapAlloc:00000000 chHeapAlloc
+     /tmp/ccRZjEta.s:147    .text.chHeapAlloc:0000007c $d
+     /tmp/ccRZjEta.s:150    .text.chHeapFree:00000000 $t
+     /tmp/ccRZjEta.s:156    .text.chHeapFree:00000000 chHeapFree
+     /tmp/ccRZjEta.s:248    .text.chHeapFree:000000c0 $d
+     /tmp/ccRZjEta.s:252    .text.chHeapStatus:00000000 $t
+     /tmp/ccRZjEta.s:258    .text.chHeapStatus:00000000 chHeapStatus
+     /tmp/ccRZjEta.s:294    .text.chHeapStatus:0000003c $d
+     /tmp/ccRZjEta.s:297    .rodata.str1.4:00000000 $d
+     /tmp/ccRZjEta.s:307    .bss.default_heap:00000000 $d
+     /tmp/ccRZjEta.s:311    .bss.default_heap:00000000 default_heap
+     /tmp/ccRZjEta.s:40     .text._heap_init:0000001c $t
+     /tmp/ccRZjEta.s:76     .text.chHeapInit:00000034 $t
+     /tmp/ccRZjEta.s:251    .text.chHeapFree:000000c8 $t
+
+UNDEFINED SYMBOLS
+chMtxInit
+chCoreAlloc
+chDbgPanic
+chMtxLock
+chMtxUnlock

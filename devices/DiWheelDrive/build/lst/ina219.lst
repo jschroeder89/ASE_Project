@@ -1,0 +1,1454 @@
+ARM GAS  /tmp/ccmv678u.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"ina219.cpp"
+  15              		.section	.text._ZN5amiro6INA2196DriverD2Ev,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro6INA2196DriverD2Ev
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro6INA2196DriverD2Ev, %function
+  22              	_ZN5amiro6INA2196DriverD2Ev:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 0249     		ldr	r1, .L2
+  27 0002 034A     		ldr	r2, .L2+4
+  28 0004 8160     		str	r1, [r0, #8]
+  29 0006 0260     		str	r2, [r0]
+  30 0008 7047     		bx	lr
+  31              	.L3:
+  32 000a 00BF     		.align	2
+  33              	.L2:
+  34 000c 34000000 		.word	.LANCHOR0+52
+  35 0010 08000000 		.word	_ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE+8
+  36              		.size	_ZN5amiro6INA2196DriverD2Ev, .-_ZN5amiro6INA2196DriverD2Ev
+  37              		.global	_ZN5amiro6INA2196DriverD1Ev
+  38              		.thumb_set _ZN5amiro6INA2196DriverD1Ev,_ZN5amiro6INA2196DriverD2Ev
+  39              		.global	__aeabi_i2f
+  40              		.global	__aeabi_fdiv
+  41              		.global	__aeabi_fcmplt
+  42              		.global	__aeabi_f2uiz
+  43              		.global	__aeabi_fcmpgt
+  44              		.global	__aeabi_fmul
+  45              		.global	__aeabi_fcmple
+  46              		.global	__aeabi_fcmpeq
+  47 0014 AFF30080 		.section	.text._ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE,"ax",%progbits
+  47      AFF30080 
+  47      AFF30080 
+  48              		.align	2
+  49              		.p2align 4,,15
+  50              		.global	_ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE
+  51              		.thumb
+  52              		.thumb_func
+  53              		.type	_ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE, %function
+  54              	_ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE:
+  55              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccmv678u.s 			page 2
+
+
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+  58 0004 0C46     		mov	r4, r1
+  59 0006 0029     		cmp	r1, #0
+  60 0008 6DD0     		beq	.L17
+  61 000a 0E89     		ldrh	r6, [r1, #8]
+  62 000c 3046     		mov	r0, r6
+  63 000e FFF7FEFF 		bl	__aeabi_i2f
+  64 0012 6768     		ldr	r7, [r4, #4]	@ float
+  65 0014 0546     		mov	r5, r0
+  66 0016 3549     		ldr	r1, .L33
+  67 0018 3846     		mov	r0, r7
+  68 001a FFF7FEFF 		bl	__aeabi_fdiv
+  69 001e 8046     		mov	r8, r0
+  70 0020 4146     		mov	r1, r8
+  71 0022 2846     		mov	r0, r5
+  72 0024 FFF7FEFF 		bl	__aeabi_fcmplt
+  73 0028 0028     		cmp	r0, #0
+  74 002a 4DD0     		beq	.L27
+  75 002c 4046     		mov	r0, r8
+  76              	.L31:
+  77 002e FFF7FEFF 		bl	__aeabi_f2uiz
+  78 0032 86B2     		uxth	r6, r0
+  79 0034 3046     		mov	r0, r6
+  80 0036 FFF7FEFF 		bl	__aeabi_i2f
+  81 003a 0546     		mov	r5, r0
+  82              	.L8:
+  83 003c 2768     		ldr	r7, [r4]	@ float
+  84 003e 2946     		mov	r1, r5
+  85 0040 3846     		mov	r0, r7
+  86 0042 FFF7FEFF 		bl	__aeabi_fmul
+  87 0046 0146     		mov	r1, r0
+  88 0048 2948     		ldr	r0, .L33+4
+  89 004a FFF7FEFF 		bl	__aeabi_fdiv
+  90 004e FFF7FEFF 		bl	__aeabi_f2uiz
+  91 0052 E37A     		ldrb	r3, [r4, #11]	@ zero_extendqisi2
+  92 0054 2549     		ldr	r1, .L33
+  93 0056 C3F3C103 		ubfx	r3, r3, #3, #2
+  94 005a 013B     		subs	r3, r3, #1
+  95 005c 022B     		cmp	r3, #2
+  96 005e 98BF     		it	ls
+  97 0060 244A     		ldrls	r2, .L33+8
+  98 0062 1FFA80F9 		uxth	r9, r0
+  99 0066 2846     		mov	r0, r5
+ 100 0068 94BF     		ite	ls
+ 101 006a 52F82380 		ldrls	r8, [r2, r3, lsl #2]	@ float
+ 102 006e DFF88C80 		ldrhi	r8, .L33+16
+ 103 0072 FFF7FEFF 		bl	__aeabi_fmul
+ 104 0076 0546     		mov	r5, r0
+ 105 0078 2946     		mov	r1, r5
+ 106 007a 4046     		mov	r0, r8
+ 107 007c FFF7FEFF 		bl	__aeabi_fcmple
+ 108 0080 0028     		cmp	r0, #0
+ 109 0082 2ED0     		beq	.L28
+ 110 0084 4FF07E50 		mov	r0, #1065353216
+ 111              	.L11:
+ 112 0088 3946     		mov	r1, r7
+ARM GAS  /tmp/ccmv678u.s 			page 3
+
+
+ 113 008a FFF7FEFF 		bl	__aeabi_fdiv
+ 114 008e 0021     		movs	r1, #0
+ 115 0090 FFF7FEFF 		bl	__aeabi_fcmpeq
+ 116 0094 20B9     		cbnz	r0, .L13
+ 117 0096 4046     		mov	r0, r8
+ 118 0098 3946     		mov	r1, r7
+ 119 009a FFF7FEFF 		bl	__aeabi_fdiv
+ 120 009e 0546     		mov	r5, r0
+ 121              	.L13:
+ 122 00a0 3946     		mov	r1, r7
+ 123 00a2 2846     		mov	r0, r5
+ 124 00a4 FFF7FEFF 		bl	__aeabi_fmul
+ 125 00a8 0746     		mov	r7, r0
+ 126 00aa 3946     		mov	r1, r7
+ 127 00ac 4046     		mov	r0, r8
+ 128 00ae FFF7FEFF 		bl	__aeabi_fcmple
+ 129 00b2 00B9     		cbnz	r0, .L15
+ 130 00b4 B846     		mov	r8, r7
+ 131              	.L15:
+ 132 00b6 E560     		str	r5, [r4, #12]	@ float
+ 133 00b8 C4F81080 		str	r8, [r4, #16]	@ float
+ 134 00bc A682     		strh	r6, [r4, #20]	@ movhi
+ 135 00be A4F81690 		strh	r9, [r4, #22]	@ movhi
+ 136 00c2 0020     		movs	r0, #0
+ 137 00c4 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 138              	.L27:
+ 139 00c8 3846     		mov	r0, r7
+ 140 00ca 0B49     		ldr	r1, .L33+12
+ 141 00cc FFF7FEFF 		bl	__aeabi_fdiv
+ 142 00d0 0746     		mov	r7, r0
+ 143 00d2 3946     		mov	r1, r7
+ 144 00d4 2846     		mov	r0, r5
+ 145 00d6 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 146 00da 0028     		cmp	r0, #0
+ 147 00dc AED0     		beq	.L8
+ 148 00de 3846     		mov	r0, r7
+ 149 00e0 A5E7     		b	.L31
+ 150              	.L28:
+ 151 00e2 0020     		movs	r0, #0
+ 152 00e4 D0E7     		b	.L11
+ 153              	.L17:
+ 154 00e6 8020     		movs	r0, #128
+ 155 00e8 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 156              	.L34:
+ 157              		.align	2
+ 158              	.L33:
+ 159 00ec B136063D 		.word	1023817393
+ 160 00f0 00002047 		.word	1193279488
+ 161 00f4 00000000 		.word	.LANCHOR1
+ 162 00f8 BD37863B 		.word	998651837
+ 163 00fc 0AD7233D 		.word	1025758986
+ 164              		.size	_ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE, .-_ZN5amiro6INA2196Driver11calibratio
+ 165              		.section	.text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev,"axG",%progbits,_ZN5
+ 166              		.align	2
+ 167              		.p2align 4,,15
+ 168              		.weak	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev
+ 169              		.thumb
+ARM GAS  /tmp/ccmv678u.s 			page 4
+
+
+ 170              		.thumb_func
+ 171              		.type	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev, %function
+ 172              	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev:
+ 173              		@ args = 0, pretend = 0, frame = 0
+ 174              		@ frame_needed = 0, uses_anonymous_args = 0
+ 175              		@ link register save eliminated.
+ 176 0000 014B     		ldr	r3, .L36
+ 177 0002 0360     		str	r3, [r0]
+ 178 0004 7047     		bx	lr
+ 179              	.L37:
+ 180 0006 00BF     		.align	2
+ 181              	.L36:
+ 182 0008 08000000 		.word	_ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE+8
+ 183              		.size	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev, .-_ZN5amiro10BaseSensorINS_6
+ 184              		.weak	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED1Ev
+ 185              		.thumb_set _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED1Ev,_ZN5amiro10BaseSensorINS
+ 186 000c AFF30080 		.section	.text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_,"axG",%progbit
+ 187              		.align	2
+ 188              		.p2align 4,,15
+ 189              		.weak	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_
+ 190              		.thumb
+ 191              		.thumb_func
+ 192              		.type	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_, %function
+ 193              	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_:
+ 194              		@ args = 0, pretend = 0, frame = 0
+ 195              		@ frame_needed = 0, uses_anonymous_args = 0
+ 196              		@ link register save eliminated.
+ 197 0000 FF20     		movs	r0, #255
+ 198 0002 7047     		bx	lr
+ 199              		.size	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_, .-_ZN5amiro10BaseSenso
+ 200 0004 AFF30080 		.section	.text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv,"axG",%progb
+ 200      AFF30080 
+ 200      AFF30080 
+ 201              		.align	2
+ 202              		.p2align 4,,15
+ 203              		.weak	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv
+ 204              		.thumb
+ 205              		.thumb_func
+ 206              		.type	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv, %function
+ 207              	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv:
+ 208              		@ args = 0, pretend = 0, frame = 0
+ 209              		@ frame_needed = 0, uses_anonymous_args = 0
+ 210              		@ link register save eliminated.
+ 211 0000 FF20     		movs	r0, #255
+ 212 0002 7047     		bx	lr
+ 213              		.size	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv, .-_ZN5amiro10BaseSen
+ 214 0004 AFF30080 		.section	.text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_,"axG",
+ 214      AFF30080 
+ 214      AFF30080 
+ 215              		.align	2
+ 216              		.p2align 4,,15
+ 217              		.weak	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_
+ 218              		.thumb
+ 219              		.thumb_func
+ 220              		.type	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_, %function
+ 221              	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_:
+ 222              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccmv678u.s 			page 5
+
+
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224              		@ link register save eliminated.
+ 225 0000 FF20     		movs	r0, #255
+ 226 0002 7047     		bx	lr
+ 227              		.size	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_, .-_ZN5amiro10B
+ 228 0004 AFF30080 		.section	.text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv,"axG",%progbi
+ 228      AFF30080 
+ 228      AFF30080 
+ 229              		.align	2
+ 230              		.p2align 4,,15
+ 231              		.weak	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv
+ 232              		.thumb
+ 233              		.thumb_func
+ 234              		.type	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv, %function
+ 235              	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv:
+ 236              		@ args = 0, pretend = 0, frame = 0
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+ 238              		@ link register save eliminated.
+ 239 0000 FF20     		movs	r0, #255
+ 240 0002 7047     		bx	lr
+ 241              		.size	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv, .-_ZN5amiro10BaseSens
+ 242 0004 AFF30080 		.section	.text._ZN5amiro6INA2196DriverD0Ev,"ax",%progbits
+ 242      AFF30080 
+ 242      AFF30080 
+ 243              		.align	2
+ 244              		.p2align 4,,15
+ 245              		.global	_ZN5amiro6INA2196DriverD0Ev
+ 246              		.thumb
+ 247              		.thumb_func
+ 248              		.type	_ZN5amiro6INA2196DriverD0Ev, %function
+ 249              	_ZN5amiro6INA2196DriverD0Ev:
+ 250              		@ args = 0, pretend = 0, frame = 0
+ 251              		@ frame_needed = 0, uses_anonymous_args = 0
+ 252 0000 10B5     		push	{r4, lr}
+ 253 0002 044A     		ldr	r2, .L43
+ 254 0004 044B     		ldr	r3, .L43+4
+ 255 0006 0446     		mov	r4, r0
+ 256 0008 8260     		str	r2, [r0, #8]
+ 257 000a 0360     		str	r3, [r0]
+ 258 000c FFF7FEFF 		bl	_ZdlPv
+ 259 0010 2046     		mov	r0, r4
+ 260 0012 10BD     		pop	{r4, pc}
+ 261              	.L44:
+ 262              		.align	2
+ 263              	.L43:
+ 264 0014 34000000 		.word	.LANCHOR0+52
+ 265 0018 08000000 		.word	_ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE+8
+ 266              		.size	_ZN5amiro6INA2196DriverD0Ev, .-_ZN5amiro6INA2196DriverD0Ev
+ 267 001c AFF30080 		.section	.text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev,"axG",%progbits,_ZN5
+ 268              		.align	2
+ 269              		.p2align 4,,15
+ 270              		.weak	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev
+ 271              		.thumb
+ 272              		.thumb_func
+ 273              		.type	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev, %function
+ 274              	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev:
+ 275              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccmv678u.s 			page 6
+
+
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277 0000 10B5     		push	{r4, lr}
+ 278 0002 034B     		ldr	r3, .L46
+ 279 0004 0446     		mov	r4, r0
+ 280 0006 0360     		str	r3, [r0]
+ 281 0008 FFF7FEFF 		bl	_ZdlPv
+ 282 000c 2046     		mov	r0, r4
+ 283 000e 10BD     		pop	{r4, pc}
+ 284              	.L47:
+ 285              		.align	2
+ 286              	.L46:
+ 287 0010 08000000 		.word	_ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE+8
+ 288              		.size	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev, .-_ZN5amiro10BaseSensorINS_6
+ 289 0014 AFF30080 		.section	.text.startup._ZN5amiro6INA2196Driver4mainEv,"ax",%progbits
+ 289      AFF30080 
+ 289      AFF30080 
+ 290              		.align	2
+ 291              		.p2align 4,,15
+ 292              		.global	_ZN5amiro6INA2196Driver4mainEv
+ 293              		.thumb
+ 294              		.thumb_func
+ 295              		.type	_ZN5amiro6INA2196Driver4mainEv, %function
+ 296              	_ZN5amiro6INA2196Driver4mainEv:
+ 297              		@ args = 0, pretend = 0, frame = 0
+ 298              		@ frame_needed = 0, uses_anonymous_args = 0
+ 299 0000 10B5     		push	{r4, lr}
+ 300 0002 0446     		mov	r4, r0
+ 301 0004 07E0     		b	.L49
+ 302              	.L50:
+ 303 0006 2368     		ldr	r3, [r4]
+ 304 0008 2046     		mov	r0, r4
+ 305 000a DB68     		ldr	r3, [r3, #12]
+ 306 000c 9847     		blx	r3
+ 307 000e 4FF47A70 		mov	r0, #1000
+ 308 0012 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 309              	.L49:
+ 310 0016 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 311 001a 0028     		cmp	r0, #0
+ 312 001c F3D0     		beq	.L50
+ 313 001e 0020     		movs	r0, #0
+ 314 0020 10BD     		pop	{r4, pc}
+ 315              		.size	_ZN5amiro6INA2196Driver4mainEv, .-_ZN5amiro6INA2196Driver4mainEv
+ 316              		.thumb_set .LTHUNK0,_ZN5amiro6INA2196Driver4mainEv
+ 317 0022 00BFAFF3 		.section	.text._ZThn8_N5amiro6INA2196Driver4mainEv,"ax",%progbits
+ 317      0080AFF3 
+ 317      0080AFF3 
+ 317      0080
+ 318              		.align	2
+ 319              		.p2align 4,,15
+ 320              		.global	_ZThn8_N5amiro6INA2196Driver4mainEv
+ 321              		.thumb
+ 322              		.thumb_func
+ 323              		.type	_ZThn8_N5amiro6INA2196Driver4mainEv, %function
+ 324              	_ZThn8_N5amiro6INA2196Driver4mainEv:
+ 325              		@ args = 0, pretend = 0, frame = 0
+ 326              		@ frame_needed = 0, uses_anonymous_args = 0
+ 327 0000 A0F10800 		sub	r0, r0, #8
+ARM GAS  /tmp/ccmv678u.s 			page 7
+
+
+ 328 0004 FFF7FEBF 		b	.LTHUNK0
+ 329              		.size	_ZThn8_N5amiro6INA2196Driver4mainEv, .-_ZThn8_N5amiro6INA2196Driver4mainEv
+ 330 0008 AFF30080 		.section	.text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm,"axG",%progbits,_ZN10chibios_rt16
+ 330      AFF30080 
+ 331              		.align	2
+ 332              		.p2align 4,,15
+ 333              		.weak	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 334              		.thumb
+ 335              		.thumb_func
+ 336              		.type	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, %function
+ 337              	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:
+ 338              		@ args = 0, pretend = 0, frame = 0
+ 339              		@ frame_needed = 0, uses_anonymous_args = 0
+ 340 0000 30B5     		push	{r4, r5, lr}
+ 341 0002 0D46     		mov	r5, r1
+ 342 0004 83B0     		sub	sp, sp, #12
+ 343 0006 0446     		mov	r4, r0
+ 344 0008 0091     		str	r1, [sp]
+ 345 000a 05F10800 		add	r0, r5, #8
+ 346 000e 4FF4E871 		mov	r1, #464
+ 347 0012 054B     		ldr	r3, .L52
+ 348 0014 FFF7FEFF 		bl	chThdCreateStatic
+ 349 0018 044A     		ldr	r2, .L52+4
+ 350 001a 0346     		mov	r3, r0
+ 351 001c 6860     		str	r0, [r5, #4]
+ 352 001e 2046     		mov	r0, r4
+ 353 0020 84E80C00 		stmia	r4, {r2, r3}
+ 354 0024 03B0     		add	sp, sp, #12
+ 355              		@ sp needed
+ 356 0026 30BD     		pop	{r4, r5, pc}
+ 357              	.L53:
+ 358              		.align	2
+ 359              	.L52:
+ 360 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+ 361 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+ 362              		.size	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi256
+ 363              		.section	.text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3,"ax",%progbits
+ 364              		.align	2
+ 365              		.p2align 4,,15
+ 366              		.thumb
+ 367              		.thumb_func
+ 368              		.type	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3, %function
+ 369              	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3:
+ 370              		@ args = 4, pretend = 12, frame = 8
+ 371              		@ frame_needed = 0, uses_anonymous_args = 1
+ 372 0000 0EB4     		push	{r1, r2, r3}
+ 373 0002 00B5     		push	{lr}
+ 374 0004 82B0     		sub	sp, sp, #8
+ 375 0006 03AB     		add	r3, sp, #12
+ 376 0008 53F8041B 		ldr	r1, [r3], #4
+ 377 000c 0448     		ldr	r0, .L55
+ 378 000e 1A46     		mov	r2, r3
+ 379 0010 0193     		str	r3, [sp, #4]
+ 380 0012 FFF7FEFF 		bl	chvprintf
+ 381 0016 02B0     		add	sp, sp, #8
+ 382              		@ sp needed
+ 383 0018 5DF804EB 		ldr	lr, [sp], #4
+ARM GAS  /tmp/ccmv678u.s 			page 8
+
+
+ 384 001c 03B0     		add	sp, sp, #12
+ 385 001e 7047     		bx	lr
+ 386              	.L56:
+ 387              		.align	2
+ 388              	.L55:
+ 389 0020 682D0000 		.word	global+11624
+ 390              		.size	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3, .-_ZL8chprintfP20BaseSequentialStreamPK
+ 391 0024 AFF30080 		.section	.text._ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh,"ax",%progbits
+ 391      AFF30080 
+ 391      AFF30080 
+ 392              		.align	2
+ 393              		.p2align 4,,15
+ 394              		.global	_ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh
+ 395              		.thumb
+ 396              		.thumb_func
+ 397              		.type	_ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh, %function
+ 398              	_ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:
+ 399              		@ args = 0, pretend = 0, frame = 0
+ 400              		@ frame_needed = 0, uses_anonymous_args = 0
+ 401 0000 1D4B     		ldr	r3, .L58
+ 402 0002 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 403 0006 0446     		mov	r4, r0
+ 404 0008 40F8083B 		str	r3, [r0], #8
+ 405 000c 0F46     		mov	r7, r1
+ 406 000e 9046     		mov	r8, r2
+ 407 0010 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+ 408 0014 94F8F931 		ldrb	r3, [r4, #505]	@ zero_extendqisi2
+ 409 0018 0326     		movs	r6, #3
+ 410 001a 43F03803 		orr	r3, r3, #56
+ 411 001e 84F8F931 		strb	r3, [r4, #505]
+ 412 0022 B4F8F801 		ldrh	r0, [r4, #504]
+ 413 0026 154B     		ldr	r3, .L58+4
+ 414 0028 66F3CA10 		bfi	r0, r6, #7, #4
+ 415 002c 0546     		mov	r5, r0
+ 416 002e 66F3C605 		bfi	r5, r6, #3, #4
+ 417 0032 EDB2     		uxtb	r5, r5
+ 418 0034 03F10801 		add	r1, r3, #8
+ 419 0038 03F13402 		add	r2, r3, #52
+ 420 003c 45F00705 		orr	r5, r5, #7
+ 421 0040 0023     		movs	r3, #0
+ 422 0042 A4F8F801 		strh	r0, [r4, #504]	@ movhi
+ 423 0046 A4F8FC31 		strh	r3, [r4, #508]	@ movhi
+ 424 004a 84F8F851 		strb	r5, [r4, #504]
+ 425 004e C4F8E071 		str	r7, [r4, #480]
+ 426 0052 A4F8E481 		strh	r8, [r4, #484]	@ movhi
+ 427 0056 2160     		str	r1, [r4]
+ 428 0058 A260     		str	r2, [r4, #8]
+ 429 005a C4F8E831 		str	r3, [r4, #488]
+ 430 005e C4F8EC31 		str	r3, [r4, #492]
+ 431 0062 C4F8F031 		str	r3, [r4, #496]
+ 432 0066 C4F8F431 		str	r3, [r4, #500]
+ 433 006a A4F8FA31 		strh	r3, [r4, #506]	@ movhi
+ 434 006e A4F8FE31 		strh	r3, [r4, #510]	@ movhi
+ 435 0072 2046     		mov	r0, r4
+ 436 0074 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 437              	.L59:
+ 438              		.align	2
+ARM GAS  /tmp/ccmv678u.s 			page 9
+
+
+ 439              	.L58:
+ 440 0078 08000000 		.word	_ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE+8
+ 441 007c 00000000 		.word	.LANCHOR0
+ 442              		.size	_ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh, .-_ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh
+ 443              		.global	_ZN5amiro6INA2196DriverC1ERNS_9I2CDriverEh
+ 444              		.thumb_set _ZN5amiro6INA2196DriverC1ERNS_9I2CDriverEh,_ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh
+ 445              		.section	.text._ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt,"ax",%progbits
+ 446              		.align	2
+ 447              		.p2align 4,,15
+ 448              		.global	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 449              		.thumb
+ 450              		.thumb_func
+ 451              		.type	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt, %function
+ 452              	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt:
+ 453              		@ args = 0, pretend = 0, frame = 16
+ 454              		@ frame_needed = 0, uses_anonymous_args = 0
+ 455 0000 70B5     		push	{r4, r5, r6, lr}
+ 456 0002 0446     		mov	r4, r0
+ 457 0004 86B0     		sub	sp, sp, #24
+ 458 0006 D0F8E001 		ldr	r0, [r0, #480]
+ 459 000a 06AB     		add	r3, sp, #24
+ 460 000c 0568     		ldr	r5, [r0]
+ 461 000e 05AE     		add	r6, sp, #20
+ 462 0010 03F8091D 		strb	r1, [r3, #-9]!
+ 463 0014 C4F8F061 		str	r6, [r4, #496]
+ 464 0018 0221     		movs	r1, #2
+ 465 001a 0126     		movs	r6, #1
+ 466 001c C4F8E831 		str	r3, [r4, #488]
+ 467 0020 EB69     		ldr	r3, [r5, #28]
+ 468 0022 C4F8EC61 		str	r6, [r4, #492]
+ 469 0026 C4F8F411 		str	r1, [r4, #500]
+ 470 002a 1646     		mov	r6, r2
+ 471 002c 9847     		blx	r3
+ 472 002e D4F8E001 		ldr	r0, [r4, #480]
+ 473 0032 04F5F271 		add	r1, r4, #484
+ 474 0036 0368     		ldr	r3, [r0]
+ 475 0038 4FF0FF32 		mov	r2, #-1
+ 476 003c 5B69     		ldr	r3, [r3, #20]
+ 477 003e 9847     		blx	r3
+ 478 0040 0546     		mov	r5, r0
+ 479 0042 D4F8E001 		ldr	r0, [r4, #480]
+ 480 0046 0368     		ldr	r3, [r0]
+ 481 0048 1B6A     		ldr	r3, [r3, #32]
+ 482 004a 9847     		blx	r3
+ 483 004c 6DB9     		cbnz	r5, .L61
+ 484 004e 9DF81410 		ldrb	r1, [sp, #20]	@ zero_extendqisi2
+ 485 0052 9DF81530 		ldrb	r3, [sp, #21]	@ zero_extendqisi2
+ 486 0056 9DF80F20 		ldrb	r2, [sp, #15]	@ zero_extendqisi2
+ 487 005a 43EA0123 		orr	r3, r3, r1, lsl #8
+ 488 005e 052A     		cmp	r2, #5
+ 489 0060 3380     		strh	r3, [r6]	@ movhi
+ 490 0062 13D0     		beq	.L63
+ 491 0064 2846     		mov	r0, r5
+ 492 0066 06B0     		add	sp, sp, #24
+ 493              		@ sp needed
+ 494 0068 70BD     		pop	{r4, r5, r6, pc}
+ 495              	.L61:
+ARM GAS  /tmp/ccmv678u.s 			page 10
+
+
+ 496 006a D4F8E001 		ldr	r0, [r4, #480]
+ 497 006e 0368     		ldr	r3, [r0]
+ 498 0070 1B69     		ldr	r3, [r3, #16]
+ 499 0072 9847     		blx	r3
+ 500 0074 0095     		str	r5, [sp]
+ 501 0076 0190     		str	r0, [sp, #4]
+ 502 0078 0749     		ldr	r1, .L64
+ 503 007a 0848     		ldr	r0, .L64+4
+ 504 007c 084A     		ldr	r2, .L64+8
+ 505 007e 40F25D13 		movw	r3, #349
+ 506 0082 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3
+ 507 0086 2846     		mov	r0, r5
+ 508 0088 06B0     		add	sp, sp, #24
+ 509              		@ sp needed
+ 510 008a 70BD     		pop	{r4, r5, r6, pc}
+ 511              	.L63:
+ 512 008c 23F00103 		bic	r3, r3, #1
+ 513 0090 2846     		mov	r0, r5
+ 514 0092 3380     		strh	r3, [r6]	@ movhi
+ 515 0094 06B0     		add	sp, sp, #24
+ 516              		@ sp needed
+ 517 0096 70BD     		pop	{r4, r5, r6, pc}
+ 518              	.L65:
+ 519              		.align	2
+ 520              	.L64:
+ 521 0098 00000000 		.word	.LC0
+ 522 009c 682D0000 		.word	global+11624
+ 523 00a0 34000000 		.word	.LC1
+ 524              		.size	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt, .-_ZN5amiro6INA2196Driver12r
+ 525 00a4 AFF30080 		.section	.text._ZN5amiro6INA2196Driver6updateEv,"ax",%progbits
+ 525      AFF30080 
+ 525      AFF30080 
+ 526              		.align	2
+ 527              		.p2align 4,,15
+ 528              		.global	_ZN5amiro6INA2196Driver6updateEv
+ 529              		.thumb
+ 530              		.thumb_func
+ 531              		.type	_ZN5amiro6INA2196Driver6updateEv, %function
+ 532              	_ZN5amiro6INA2196Driver6updateEv:
+ 533              		@ args = 0, pretend = 0, frame = 0
+ 534              		@ frame_needed = 0, uses_anonymous_args = 0
+ 535 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 536 0004 0023     		movs	r3, #0
+ 537 0006 00F5FE78 		add	r8, r0, #508
+ 538 000a A0F8FE31 		strh	r3, [r0, #510]	@ movhi
+ 539 000e 4246     		mov	r2, r8
+ 540 0010 0221     		movs	r1, #2
+ 541 0012 0446     		mov	r4, r0
+ 542 0014 00F5FF77 		add	r7, r0, #510
+ 543 0018 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 544 001c 3A46     		mov	r2, r7
+ 545 001e 0546     		mov	r5, r0
+ 546 0020 0321     		movs	r1, #3
+ 547 0022 2046     		mov	r0, r4
+ 548 0024 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 549 0028 0543     		orrs	r5, r5, r0
+ 550 002a 0EE0     		b	.L67
+ARM GAS  /tmp/ccmv678u.s 			page 11
+
+
+ 551              	.L68:
+ 552 002c FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 553 0030 0221     		movs	r1, #2
+ 554 0032 4246     		mov	r2, r8
+ 555 0034 2046     		mov	r0, r4
+ 556 0036 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 557 003a 0321     		movs	r1, #3
+ 558 003c 0646     		mov	r6, r0
+ 559 003e 3A46     		mov	r2, r7
+ 560 0040 2046     		mov	r0, r4
+ 561 0042 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 562 0046 3043     		orrs	r0, r0, r6
+ 563 0048 0543     		orrs	r5, r5, r0
+ 564              	.L67:
+ 565 004a 94F8FC31 		ldrb	r3, [r4, #508]	@ zero_extendqisi2
+ 566 004e 0A20     		movs	r0, #10
+ 567 0050 9B07     		lsls	r3, r3, #30
+ 568 0052 EBD5     		bpl	.L68
+ 569 0054 B4F8FE31 		ldrh	r3, [r4, #510]
+ 570 0058 002B     		cmp	r3, #0
+ 571 005a E7D0     		beq	.L68
+ 572 005c 002D     		cmp	r5, #0
+ 573 005e E5D1     		bne	.L68
+ 574 0060 2846     		mov	r0, r5
+ 575 0062 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 576              		.size	_ZN5amiro6INA2196Driver6updateEv, .-_ZN5amiro6INA2196Driver6updateEv
+ 577 0066 00BFAFF3 		.section	.text._ZN5amiro6INA2196Driver14readBusVoltageEv,"axG",%progbits,_ZN5amiro6INA2196Driver14
+ 577      0080AFF3 
+ 577      0080
+ 578              		.align	2
+ 579              		.p2align 4,,15
+ 580              		.weak	_ZN5amiro6INA2196Driver14readBusVoltageEv
+ 581              		.thumb
+ 582              		.thumb_func
+ 583              		.type	_ZN5amiro6INA2196Driver14readBusVoltageEv, %function
+ 584              	_ZN5amiro6INA2196Driver14readBusVoltageEv:
+ 585              		@ args = 0, pretend = 0, frame = 8
+ 586              		@ frame_needed = 0, uses_anonymous_args = 0
+ 587 0000 00B5     		push	{lr}
+ 588 0002 83B0     		sub	sp, sp, #12
+ 589 0004 01AA     		add	r2, sp, #4
+ 590 0006 0221     		movs	r1, #2
+ 591 0008 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 592 000c BDF80420 		ldrh	r2, [sp, #4]
+ 593 0010 4FF47A63 		mov	r3, #4000
+ 594 0014 C2F3CC02 		ubfx	r2, r2, #3, #13
+ 595 0018 03FB02F2 		mul	r2, r3, r2
+ 596 001c 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+ 597 0020 0020     		movs	r0, #0
+ 598 0022 C3F34003 		ubfx	r3, r3, #1, #1
+ 599 0026 62F31800 		bfi	r0, r2, #0, #25
+ 600 002a 63F39E70 		bfi	r0, r3, #30, #1
+ 601 002e 63F3DF70 		bfi	r0, r3, #31, #1
+ 602 0032 03B0     		add	sp, sp, #12
+ 603              		@ sp needed
+ 604 0034 5DF804FB 		ldr	pc, [sp], #4
+ 605              		.size	_ZN5amiro6INA2196Driver14readBusVoltageEv, .-_ZN5amiro6INA2196Driver14readBusVoltageEv
+ARM GAS  /tmp/ccmv678u.s 			page 12
+
+
+ 606 0038 AFF30080 		.section	.text._ZN5amiro6INA2196Driver19readShuntVoltage_uVEv,"axG",%progbits,_ZN5amiro6INA2196Dri
+ 606      AFF30080 
+ 607              		.align	2
+ 608              		.p2align 4,,15
+ 609              		.weak	_ZN5amiro6INA2196Driver19readShuntVoltage_uVEv
+ 610              		.thumb
+ 611              		.thumb_func
+ 612              		.type	_ZN5amiro6INA2196Driver19readShuntVoltage_uVEv, %function
+ 613              	_ZN5amiro6INA2196Driver19readShuntVoltage_uVEv:
+ 614              		@ args = 0, pretend = 0, frame = 8
+ 615              		@ frame_needed = 0, uses_anonymous_args = 0
+ 616 0000 10B5     		push	{r4, lr}
+ 617 0002 82B0     		sub	sp, sp, #8
+ 618 0004 0023     		movs	r3, #0
+ 619 0006 02AA     		add	r2, sp, #8
+ 620 0008 22F8023D 		strh	r3, [r2, #-2]!	@ movhi
+ 621 000c 0446     		mov	r4, r0
+ 622 000e 0121     		movs	r1, #1
+ 623 0010 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 624 0014 94F8F931 		ldrb	r3, [r4, #505]	@ zero_extendqisi2
+ 625 0018 C3F3C103 		ubfx	r3, r3, #3, #2
+ 626 001c 022B     		cmp	r3, #2
+ 627 001e 2DD0     		beq	.L78
+ 628 0020 032B     		cmp	r3, #3
+ 629 0022 1DD0     		beq	.L79
+ 630 0024 012B     		cmp	r3, #1
+ 631 0026 0DD0     		beq	.L91
+ 632 0028 BDF80600 		ldrh	r0, [sp, #6]
+ 633 002c 10F4704F 		tst	r0, #61440
+ 634 0030 0CBF     		ite	eq
+ 635 0032 0A23     		moveq	r3, #10
+ 636 0034 6FF00903 		mvnne	r3, #9
+ 637 0038 C0F30B00 		ubfx	r0, r0, #0, #12
+ 638 003c 00FB03F0 		mul	r0, r0, r3
+ 639 0040 02B0     		add	sp, sp, #8
+ 640              		@ sp needed
+ 641 0042 10BD     		pop	{r4, pc}
+ 642              	.L91:
+ 643 0044 BDF80600 		ldrh	r0, [sp, #6]
+ 644 0048 10F4604F 		tst	r0, #57344
+ 645 004c 0CBF     		ite	eq
+ 646 004e 0A23     		moveq	r3, #10
+ 647 0050 6FF00903 		mvnne	r3, #9
+ 648 0054 C0F30C00 		ubfx	r0, r0, #0, #13
+ 649 0058 00FB03F0 		mul	r0, r0, r3
+ 650 005c 02B0     		add	sp, sp, #8
+ 651              		@ sp needed
+ 652 005e 10BD     		pop	{r4, pc}
+ 653              	.L79:
+ 654 0060 BDF80600 		ldrh	r0, [sp, #6]
+ 655 0064 10F4004F 		tst	r0, #32768
+ 656 0068 0CBF     		ite	eq
+ 657 006a 0A23     		moveq	r3, #10
+ 658 006c 6FF00903 		mvnne	r3, #9
+ 659 0070 C0F30E00 		ubfx	r0, r0, #0, #15
+ 660 0074 00FB03F0 		mul	r0, r0, r3
+ 661 0078 02B0     		add	sp, sp, #8
+ARM GAS  /tmp/ccmv678u.s 			page 13
+
+
+ 662              		@ sp needed
+ 663 007a 10BD     		pop	{r4, pc}
+ 664              	.L78:
+ 665 007c BDF80600 		ldrh	r0, [sp, #6]
+ 666 0080 10F4404F 		tst	r0, #49152
+ 667 0084 0CBF     		ite	eq
+ 668 0086 0A23     		moveq	r3, #10
+ 669 0088 6FF00903 		mvnne	r3, #9
+ 670 008c C0F30D00 		ubfx	r0, r0, #0, #14
+ 671 0090 00FB03F0 		mul	r0, r0, r3
+ 672 0094 02B0     		add	sp, sp, #8
+ 673              		@ sp needed
+ 674 0096 10BD     		pop	{r4, pc}
+ 675              		.size	_ZN5amiro6INA2196Driver19readShuntVoltage_uVEv, .-_ZN5amiro6INA2196Driver19readShuntVoltage_
+ 676 0098 AFF30080 		.section	.text._ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt,"ax",%progbits
+ 676      AFF30080 
+ 677              		.align	2
+ 678              		.p2align 4,,15
+ 679              		.global	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+ 680              		.thumb
+ 681              		.thumb_func
+ 682              		.type	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt, %function
+ 683              	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt:
+ 684              		@ args = 0, pretend = 0, frame = 8
+ 685              		@ frame_needed = 0, uses_anonymous_args = 0
+ 686 0000 30B5     		push	{r4, r5, lr}
+ 687 0002 1388     		ldrh	r3, [r2]
+ 688 0004 85B0     		sub	sp, sp, #20
+ 689 0006 0446     		mov	r4, r0
+ 690 0008 1A0A     		lsrs	r2, r3, #8
+ 691 000a D0F8E001 		ldr	r0, [r0, #480]
+ 692 000e 8DF80D20 		strb	r2, [sp, #13]
+ 693 0012 8DF80C10 		strb	r1, [sp, #12]
+ 694 0016 8DF80E30 		strb	r3, [sp, #14]
+ 695 001a 0368     		ldr	r3, [r0]
+ 696 001c 03AA     		add	r2, sp, #12
+ 697 001e C4F8E821 		str	r2, [r4, #488]
+ 698 0022 0321     		movs	r1, #3
+ 699 0024 0022     		movs	r2, #0
+ 700 0026 C4F8EC11 		str	r1, [r4, #492]
+ 701 002a C4F8F421 		str	r2, [r4, #500]
+ 702 002e DB69     		ldr	r3, [r3, #28]
+ 703 0030 9847     		blx	r3
+ 704 0032 D4F8E001 		ldr	r0, [r4, #480]
+ 705 0036 04F5F271 		add	r1, r4, #484
+ 706 003a 0368     		ldr	r3, [r0]
+ 707 003c 4FF0FF32 		mov	r2, #-1
+ 708 0040 5B69     		ldr	r3, [r3, #20]
+ 709 0042 9847     		blx	r3
+ 710 0044 0546     		mov	r5, r0
+ 711 0046 D4F8E001 		ldr	r0, [r4, #480]
+ 712 004a 0368     		ldr	r3, [r0]
+ 713 004c 1B6A     		ldr	r3, [r3, #32]
+ 714 004e 9847     		blx	r3
+ 715 0050 6DB1     		cbz	r5, .L93
+ 716 0052 D4F8E001 		ldr	r0, [r4, #480]
+ 717 0056 0368     		ldr	r3, [r0]
+ARM GAS  /tmp/ccmv678u.s 			page 14
+
+
+ 718 0058 1B69     		ldr	r3, [r3, #16]
+ 719 005a 9847     		blx	r3
+ 720 005c 0095     		str	r5, [sp]
+ 721 005e 0190     		str	r0, [sp, #4]
+ 722 0060 0449     		ldr	r1, .L97
+ 723 0062 0548     		ldr	r0, .L97+4
+ 724 0064 054A     		ldr	r2, .L97+8
+ 725 0066 4FF4BA73 		mov	r3, #372
+ 726 006a FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3
+ 727              	.L93:
+ 728 006e 2846     		mov	r0, r5
+ 729 0070 05B0     		add	sp, sp, #20
+ 730              		@ sp needed
+ 731 0072 30BD     		pop	{r4, r5, pc}
+ 732              	.L98:
+ 733              		.align	2
+ 734              	.L97:
+ 735 0074 00000000 		.word	.LC0
+ 736 0078 682D0000 		.word	global+11624
+ 737 007c 34000000 		.word	.LC1
+ 738              		.size	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt, .-_ZN5amiro6INA2196Driver1
+ 739              		.section	.text._ZN5amiro6INA2196Driver4initEPNS0_8InitDataE,"ax",%progbits
+ 740              		.align	2
+ 741              		.p2align 4,,15
+ 742              		.global	_ZN5amiro6INA2196Driver4initEPNS0_8InitDataE
+ 743              		.thumb
+ 744              		.thumb_func
+ 745              		.type	_ZN5amiro6INA2196Driver4initEPNS0_8InitDataE, %function
+ 746              	_ZN5amiro6INA2196Driver4initEPNS0_8InitDataE:
+ 747              		@ args = 0, pretend = 0, frame = 8
+ 748              		@ frame_needed = 0, uses_anonymous_args = 0
+ 749 0000 70B5     		push	{r4, r5, r6, lr}
+ 750 0002 0C46     		mov	r4, r1
+ 751 0004 82B0     		sub	sp, sp, #8
+ 752 0006 0646     		mov	r6, r0
+ 753 0008 51B1     		cbz	r1, .L102
+ 754 000a 0B88     		ldrh	r3, [r1]
+ 755 000c 02AD     		add	r5, sp, #8
+ 756 000e C3F30D03 		ubfx	r3, r3, #0, #14
+ 757 0012 25F8023D 		strh	r3, [r5, #-2]!	@ movhi
+ 758 0016 2A46     		mov	r2, r5
+ 759 0018 0021     		movs	r1, #0
+ 760 001a FFF7FEFF 		bl	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+ 761 001e 10B1     		cbz	r0, .L103
+ 762              	.L102:
+ 763 0020 8020     		movs	r0, #128
+ 764              	.L101:
+ 765 0022 02B0     		add	sp, sp, #8
+ 766              		@ sp needed
+ 767 0024 70BD     		pop	{r4, r5, r6, pc}
+ 768              	.L103:
+ 769 0026 2388     		ldrh	r3, [r4]
+ 770 0028 2A46     		mov	r2, r5
+ 771 002a C3F30D03 		ubfx	r3, r3, #0, #14
+ 772 002e A6F8F831 		strh	r3, [r6, #504]	@ movhi
+ 773 0032 6388     		ldrh	r3, [r4, #2]
+ 774 0034 3046     		mov	r0, r6
+ARM GAS  /tmp/ccmv678u.s 			page 15
+
+
+ 775 0036 23F00103 		bic	r3, r3, #1
+ 776 003a 0521     		movs	r1, #5
+ 777 003c ADF80630 		strh	r3, [sp, #6]	@ movhi
+ 778 0040 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+ 779 0044 0028     		cmp	r0, #0
+ 780 0046 EBD1     		bne	.L102
+ 781 0048 A288     		ldrh	r2, [r4, #4]
+ 782 004a 3368     		ldr	r3, [r6]
+ 783 004c A6F8FA21 		strh	r2, [r6, #506]	@ movhi
+ 784 0050 DB68     		ldr	r3, [r3, #12]
+ 785 0052 3046     		mov	r0, r6
+ 786 0054 9847     		blx	r3
+ 787 0056 E4E7     		b	.L101
+ 788              		.size	_ZN5amiro6INA2196Driver4initEPNS0_8InitDataE, .-_ZN5amiro6INA2196Driver4initEPNS0_8InitDataE
+ 789 0058 AFF30080 		.section	.text._ZN5amiro6INA2196Driver6wakeupEv,"ax",%progbits
+ 789      AFF30080 
+ 790              		.align	2
+ 791              		.p2align 4,,15
+ 792              		.global	_ZN5amiro6INA2196Driver6wakeupEv
+ 793              		.thumb
+ 794              		.thumb_func
+ 795              		.type	_ZN5amiro6INA2196Driver6wakeupEv, %function
+ 796              	_ZN5amiro6INA2196Driver6wakeupEv:
+ 797              		@ args = 0, pretend = 0, frame = 0
+ 798              		@ frame_needed = 0, uses_anonymous_args = 0
+ 799 0000 10B5     		push	{r4, lr}
+ 800 0002 00F5FC72 		add	r2, r0, #504
+ 801 0006 0021     		movs	r1, #0
+ 802 0008 0446     		mov	r4, r0
+ 803 000a FFF7FEFF 		bl	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+ 804 000e 08B1     		cbz	r0, .L107
+ 805 0010 8020     		movs	r0, #128
+ 806 0012 10BD     		pop	{r4, pc}
+ 807              	.L107:
+ 808 0014 2368     		ldr	r3, [r4]
+ 809 0016 2046     		mov	r0, r4
+ 810 0018 DB68     		ldr	r3, [r3, #12]
+ 811 001a 9847     		blx	r3
+ 812 001c 10BD     		pop	{r4, pc}
+ 813              		.size	_ZN5amiro6INA2196Driver6wakeupEv, .-_ZN5amiro6INA2196Driver6wakeupEv
+ 814              		.section	.text._ZN5amiro6INA2196Driver9hibernateEv,"ax",%progbits
+ 815              		.align	2
+ 816              		.p2align 4,,15
+ 817              		.global	_ZN5amiro6INA2196Driver9hibernateEv
+ 818              		.thumb
+ 819              		.thumb_func
+ 820              		.type	_ZN5amiro6INA2196Driver9hibernateEv, %function
+ 821              	_ZN5amiro6INA2196Driver9hibernateEv:
+ 822              		@ args = 0, pretend = 0, frame = 8
+ 823              		@ frame_needed = 0, uses_anonymous_args = 0
+ 824 0000 00B5     		push	{lr}
+ 825 0002 B0F8F811 		ldrh	r1, [r0, #504]
+ 826 0006 83B0     		sub	sp, sp, #12
+ 827 0008 0B46     		mov	r3, r1
+ 828 000a 02AA     		add	r2, sp, #8
+ 829 000c 6FF30203 		bfc	r3, #0, #3
+ 830 0010 ADF80410 		strh	r1, [sp, #4]	@ movhi
+ARM GAS  /tmp/ccmv678u.s 			page 16
+
+
+ 831 0014 02F8043D 		strb	r3, [r2, #-4]!
+ 832 0018 0021     		movs	r1, #0
+ 833 001a FFF7FEFF 		bl	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+ 834 001e 0028     		cmp	r0, #0
+ 835 0020 14BF     		ite	ne
+ 836 0022 8020     		movne	r0, #128
+ 837 0024 0020     		moveq	r0, #0
+ 838 0026 03B0     		add	sp, sp, #12
+ 839              		@ sp needed
+ 840 0028 5DF804FB 		ldr	pc, [sp], #4
+ 841              		.size	_ZN5amiro6INA2196Driver9hibernateEv, .-_ZN5amiro6INA2196Driver9hibernateEv
+ 842 002c AFF30080 		.section	.text._ZN5amiro6INA2196Driver5resetEv,"ax",%progbits
+ 843              		.align	2
+ 844              		.p2align 4,,15
+ 845              		.global	_ZN5amiro6INA2196Driver5resetEv
+ 846              		.thumb
+ 847              		.thumb_func
+ 848              		.type	_ZN5amiro6INA2196Driver5resetEv, %function
+ 849              	_ZN5amiro6INA2196Driver5resetEv:
+ 850              		@ args = 0, pretend = 0, frame = 8
+ 851              		@ frame_needed = 0, uses_anonymous_args = 0
+ 852 0000 00B5     		push	{lr}
+ 853 0002 83B0     		sub	sp, sp, #12
+ 854 0004 4FF40043 		mov	r3, #32768
+ 855 0008 02AA     		add	r2, sp, #8
+ 856 000a 22F8023D 		strh	r3, [r2, #-2]!	@ movhi
+ 857 000e 0021     		movs	r1, #0
+ 858 0010 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+ 859 0014 0028     		cmp	r0, #0
+ 860 0016 14BF     		ite	ne
+ 861 0018 8020     		movne	r0, #128
+ 862 001a 0020     		moveq	r0, #0
+ 863 001c 03B0     		add	sp, sp, #12
+ 864              		@ sp needed
+ 865 001e 5DF804FB 		ldr	pc, [sp], #4
+ 866              		.size	_ZN5amiro6INA2196Driver5resetEv, .-_ZN5amiro6INA2196Driver5resetEv
+ 867              		.global	__aeabi_f2d
+ 868              		.global	__aeabi_ui2f
+ 869 0022 00BFAFF3 		.section	.text._ZN5amiro6INA2196Driver8selftestEv,"ax",%progbits
+ 869      0080AFF3 
+ 869      0080AFF3 
+ 869      0080
+ 870              		.align	2
+ 871              		.p2align 4,,15
+ 872              		.global	_ZN5amiro6INA2196Driver8selftestEv
+ 873              		.thumb
+ 874              		.thumb_func
+ 875              		.type	_ZN5amiro6INA2196Driver8selftestEv, %function
+ 876              	_ZN5amiro6INA2196Driver8selftestEv:
+ 877              		@ args = 0, pretend = 0, frame = 24
+ 878              		@ frame_needed = 0, uses_anonymous_args = 0
+ 879 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 880 0004 0023     		movs	r3, #0
+ 881 0006 87B0     		sub	sp, sp, #28
+ 882 0008 1946     		mov	r1, r3
+ 883 000a 03AA     		add	r2, sp, #12
+ 884 000c 0746     		mov	r7, r0
+ARM GAS  /tmp/ccmv678u.s 			page 17
+
+
+ 885 000e ADF80E30 		strh	r3, [sp, #14]	@ movhi
+ 886 0012 ADF81230 		strh	r3, [sp, #18]	@ movhi
+ 887 0016 ADF81430 		strh	r3, [sp, #20]	@ movhi
+ 888 001a ADF81630 		strh	r3, [sp, #22]	@ movhi
+ 889 001e FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 890 0022 0121     		movs	r1, #1
+ 891 0024 0446     		mov	r4, r0
+ 892 0026 0DF10E02 		add	r2, sp, #14
+ 893 002a 3846     		mov	r0, r7
+ 894 002c FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 895 0030 0221     		movs	r1, #2
+ 896 0032 0443     		orrs	r4, r4, r0
+ 897 0034 04AA     		add	r2, sp, #16
+ 898 0036 3846     		mov	r0, r7
+ 899 0038 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 900 003c 0321     		movs	r1, #3
+ 901 003e 0443     		orrs	r4, r4, r0
+ 902 0040 0DF11202 		add	r2, sp, #18
+ 903 0044 3846     		mov	r0, r7
+ 904 0046 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 905 004a 0421     		movs	r1, #4
+ 906 004c 0443     		orrs	r4, r4, r0
+ 907 004e 05AA     		add	r2, sp, #20
+ 908 0050 3846     		mov	r0, r7
+ 909 0052 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 910 0056 0DF11602 		add	r2, sp, #22
+ 911 005a 0443     		orrs	r4, r4, r0
+ 912 005c 0521     		movs	r1, #5
+ 913 005e 3846     		mov	r0, r7
+ 914 0060 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 915 0064 0443     		orrs	r4, r4, r0
+ 916 0066 04D0     		beq	.L139
+ 917              	.L123:
+ 918 0068 8126     		movs	r6, #129
+ 919              	.L137:
+ 920 006a 3046     		mov	r0, r6
+ 921 006c 07B0     		add	sp, sp, #28
+ 922              		@ sp needed
+ 923 006e BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 924              	.L139:
+ 925 0072 BDF80C30 		ldrh	r3, [sp, #12]
+ 926 0076 7BB9     		cbnz	r3, .L117
+ 927 0078 BDF80E30 		ldrh	r3, [sp, #14]
+ 928 007c 63B9     		cbnz	r3, .L117
+ 929 007e BDF81030 		ldrh	r3, [sp, #16]
+ 930 0082 4BB9     		cbnz	r3, .L117
+ 931 0084 BDF81230 		ldrh	r3, [sp, #18]
+ 932 0088 33B9     		cbnz	r3, .L117
+ 933 008a BDF81430 		ldrh	r3, [sp, #20]
+ 934 008e 1BB9     		cbnz	r3, .L117
+ 935 0090 BDF81630 		ldrh	r3, [sp, #22]
+ 936 0094 002B     		cmp	r3, #0
+ 937 0096 E7D0     		beq	.L123
+ 938              	.L117:
+ 939 0098 4FF40043 		mov	r3, #32768
+ 940 009c 0DF11808 		add	r8, sp, #24
+ 941 00a0 28F8103D 		strh	r3, [r8, #-16]!	@ movhi
+ARM GAS  /tmp/ccmv678u.s 			page 18
+
+
+ 942 00a4 4246     		mov	r2, r8
+ 943 00a6 3846     		mov	r0, r7
+ 944 00a8 0021     		movs	r1, #0
+ 945 00aa FFF7FEFF 		bl	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+ 946 00ae 0446     		mov	r4, r0
+ 947 00b0 20B1     		cbz	r0, .L140
+ 948 00b2 8226     		movs	r6, #130
+ 949 00b4 3046     		mov	r0, r6
+ 950 00b6 07B0     		add	sp, sp, #28
+ 951              		@ sp needed
+ 952 00b8 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 953              	.L140:
+ 954 00bc 4246     		mov	r2, r8
+ 955 00be 3846     		mov	r0, r7
+ 956 00c0 2146     		mov	r1, r4
+ 957 00c2 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 958 00c6 0325     		movs	r5, #3
+ 959 00c8 4FF46053 		mov	r3, #14336	@ movhi
+ 960 00cc 65F3CA13 		bfi	r3, r5, #7, #4
+ 961 00d0 65F3C603 		bfi	r3, r5, #3, #4
+ 962 00d4 43F00703 		orr	r3, r3, #7
+ 963 00d8 BDF80820 		ldrh	r2, [sp, #8]
+ 964 00dc 9BB2     		uxth	r3, r3
+ 965 00de 9342     		cmp	r3, r2
+ 966 00e0 18BF     		it	ne
+ 967 00e2 8326     		movne	r6, #131
+ 968 00e4 C1D1     		bne	.L137
+ 969 00e6 2146     		mov	r1, r4
+ 970 00e8 03AA     		add	r2, sp, #12
+ 971 00ea 3846     		mov	r0, r7
+ 972 00ec FFF7FEFF 		bl	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+ 973 00f0 08B1     		cbz	r0, .L141
+ 974 00f2 8426     		movs	r6, #132
+ 975 00f4 B9E7     		b	.L137
+ 976              	.L141:
+ 977 00f6 0DF11602 		add	r2, sp, #22
+ 978 00fa 3846     		mov	r0, r7
+ 979 00fc 0521     		movs	r1, #5
+ 980 00fe FFF7FEFF 		bl	_ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+ 981 0102 0646     		mov	r6, r0
+ 982 0104 08B1     		cbz	r0, .L142
+ 983 0106 8526     		movs	r6, #133
+ 984 0108 AFE7     		b	.L137
+ 985              	.L142:
+ 986 010a 3146     		mov	r1, r6
+ 987 010c 4246     		mov	r2, r8
+ 988 010e 3846     		mov	r0, r7
+ 989 0110 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 990 0114 BDF80830 		ldrh	r3, [sp, #8]
+ 991 0118 BDF80C20 		ldrh	r2, [sp, #12]
+ 992 011c 9A42     		cmp	r2, r3
+ 993 011e 18BF     		it	ne
+ 994 0120 8626     		movne	r6, #134
+ 995 0122 A2D1     		bne	.L137
+ 996 0124 4246     		mov	r2, r8
+ 997 0126 3846     		mov	r0, r7
+ 998 0128 0521     		movs	r1, #5
+ARM GAS  /tmp/ccmv678u.s 			page 19
+
+
+ 999 012a ADF80860 		strh	r6, [sp, #8]	@ movhi
+ 1000 012e FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 1001 0132 BDF80830 		ldrh	r3, [sp, #8]
+ 1002 0136 BDF81620 		ldrh	r2, [sp, #22]
+ 1003 013a 23F00103 		bic	r3, r3, #1
+ 1004 013e 9BB2     		uxth	r3, r3
+ 1005 0140 9A42     		cmp	r2, r3
+ 1006 0142 18BF     		it	ne
+ 1007 0144 8726     		movne	r6, #135
+ 1008 0146 90D1     		bne	.L137
+ 1009 0148 3846     		mov	r0, r7
+ 1010 014a FFF7FEFF 		bl	_ZN5amiro6INA2196Driver14readBusVoltageEv
+ 1011 014e 2946     		mov	r1, r5
+ 1012 0150 8146     		mov	r9, r0
+ 1013 0152 0DF10602 		add	r2, sp, #6
+ 1014 0156 3846     		mov	r0, r7
+ 1015 0158 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 1016              	.L119:
+ 1017 015c 19F0804F 		tst	r9, #1073741824
+ 1018 0160 4FF00A00 		mov	r0, #10
+ 1019 0164 02D0     		beq	.L120
+ 1020 0166 BDF80630 		ldrh	r3, [sp, #6]
+ 1021 016a 63B9     		cbnz	r3, .L143
+ 1022              	.L120:
+ 1023 016c FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 1024 0170 3846     		mov	r0, r7
+ 1025 0172 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver14readBusVoltageEv
+ 1026 0176 0321     		movs	r1, #3
+ 1027 0178 8146     		mov	r9, r0
+ 1028 017a 0DF10602 		add	r2, sp, #6
+ 1029 017e 3846     		mov	r0, r7
+ 1030 0180 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 1031 0184 EAE7     		b	.L119
+ 1032              	.L143:
+ 1033 0186 3846     		mov	r0, r7
+ 1034 0188 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver19readShuntVoltage_uVEv
+ 1035 018c FFF7FEFF 		bl	__aeabi_i2f
+ 1036 0190 2949     		ldr	r1, .L144
+ 1037 0192 FFF7FEFF 		bl	__aeabi_fdiv
+ 1038 0196 FFF7FEFF 		bl	__aeabi_f2d
+ 1039 019a 0246     		mov	r2, r0
+ 1040 019c 0B46     		mov	r3, r1
+ 1041 019e 2748     		ldr	r0, .L144+4
+ 1042 01a0 2749     		ldr	r1, .L144+8
+ 1043 01a2 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3
+ 1044 01a6 29F07E40 		bic	r0, r9, #-33554432
+ 1045 01aa FFF7FEFF 		bl	__aeabi_i2f
+ 1046 01ae 2249     		ldr	r1, .L144
+ 1047 01b0 FFF7FEFF 		bl	__aeabi_fdiv
+ 1048 01b4 FFF7FEFF 		bl	__aeabi_f2d
+ 1049 01b8 0B46     		mov	r3, r1
+ 1050 01ba 0246     		mov	r2, r0
+ 1051 01bc 2149     		ldr	r1, .L144+12
+ 1052 01be 1F48     		ldr	r0, .L144+4
+ 1053 01c0 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3
+ 1054 01c4 4FF00009 		mov	r9, #0
+ 1055 01c8 0321     		movs	r1, #3
+ARM GAS  /tmp/ccmv678u.s 			page 20
+
+
+ 1056 01ca 4246     		mov	r2, r8
+ 1057 01cc 3846     		mov	r0, r7
+ 1058 01ce ADF80890 		strh	r9, [sp, #8]	@ movhi
+ 1059 01d2 FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 1060 01d6 BDF80830 		ldrh	r3, [sp, #8]
+ 1061 01da 1422     		movs	r2, #20
+ 1062 01dc 02FB03F3 		mul	r3, r2, r3
+ 1063 01e0 B7F8FA01 		ldrh	r0, [r7, #506]
+ 1064 01e4 00FB03F0 		mul	r0, r0, r3
+ 1065 01e8 FFF7FEFF 		bl	__aeabi_ui2f
+ 1066 01ec 1249     		ldr	r1, .L144
+ 1067 01ee FFF7FEFF 		bl	__aeabi_fdiv
+ 1068 01f2 FFF7FEFF 		bl	__aeabi_f2d
+ 1069 01f6 0B46     		mov	r3, r1
+ 1070 01f8 0246     		mov	r2, r0
+ 1071 01fa 1349     		ldr	r1, .L144+16
+ 1072 01fc 0F48     		ldr	r0, .L144+4
+ 1073 01fe FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3
+ 1074 0202 4246     		mov	r2, r8
+ 1075 0204 0421     		movs	r1, #4
+ 1076 0206 3846     		mov	r0, r7
+ 1077 0208 ADF80890 		strh	r9, [sp, #8]	@ movhi
+ 1078 020c FFF7FEFF 		bl	_ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+ 1079 0210 BDF90830 		ldrsh	r3, [sp, #8]
+ 1080 0214 B7F8FA01 		ldrh	r0, [r7, #506]
+ 1081 0218 00FB03F0 		mul	r0, r0, r3
+ 1082 021c FFF7FEFF 		bl	__aeabi_i2f
+ 1083 0220 0549     		ldr	r1, .L144
+ 1084 0222 FFF7FEFF 		bl	__aeabi_fdiv
+ 1085 0226 FFF7FEFF 		bl	__aeabi_f2d
+ 1086 022a 0246     		mov	r2, r0
+ 1087 022c 0B46     		mov	r3, r1
+ 1088 022e 0348     		ldr	r0, .L144+4
+ 1089 0230 0649     		ldr	r1, .L144+20
+ 1090 0232 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3
+ 1091 0236 18E7     		b	.L137
+ 1092              	.L145:
+ 1093              		.align	2
+ 1094              	.L144:
+ 1095 0238 00247449 		.word	1232348160
+ 1096 023c 682D0000 		.word	global+11624
+ 1097 0240 58000000 		.word	.LC2
+ 1098 0244 70000000 		.word	.LC3
+ 1099 0248 88000000 		.word	.LC4
+ 1100 024c A0000000 		.word	.LC5
+ 1101              		.size	_ZN5amiro6INA2196Driver8selftestEv, .-_ZN5amiro6INA2196Driver8selftestEv
+ 1102              		.section	.text.startup._GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh,"ax",%progbits
+ 1103              		.align	2
+ 1104              		.p2align 4,,15
+ 1105              		.thumb
+ 1106              		.thumb_func
+ 1107              		.type	_GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh, %function
+ 1108              	_GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:
+ 1109              		@ args = 0, pretend = 0, frame = 0
+ 1110              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1111              		@ link register save eliminated.
+ 1112 0000 024B     		ldr	r3, .L147
+ARM GAS  /tmp/ccmv678u.s 			page 21
+
+
+ 1113 0002 034A     		ldr	r2, .L147+4
+ 1114 0004 1A60     		str	r2, [r3]
+ 1115 0006 5A60     		str	r2, [r3, #4]
+ 1116 0008 7047     		bx	lr
+ 1117              	.L148:
+ 1118 000a 00BF     		.align	2
+ 1119              	.L147:
+ 1120 000c 00000000 		.word	.LANCHOR2
+ 1121 0010 A0860100 		.word	100000
+ 1122              		.size	_GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh, .-_GLOBAL__sub_I__ZN5amiro6INA219
+ 1123 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 1123      AFF30080 
+ 1123      AFF30080 
+ 1124              		.align	2
+ 1125 0000 00000000 		.word	_GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh(target1)
+ 1126              		.weak	_ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE
+ 1127              		.section	.rodata._ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE,"aG",%progbits,_ZTV
+ 1128              		.align	3
+ 1129              		.type	_ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE, %object
+ 1130              		.size	_ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE, 40
+ 1131              	_ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE:
+ 1132 0000 00000000 		.word	0
+ 1133 0004 00000000 		.word	0
+ 1134 0008 00000000 		.word	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED1Ev
+ 1135 000c 00000000 		.word	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev
+ 1136 0010 00000000 		.word	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_
+ 1137 0014 00000000 		.word	__cxa_pure_virtual
+ 1138 0018 00000000 		.word	__cxa_pure_virtual
+ 1139 001c 00000000 		.word	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv
+ 1140 0020 00000000 		.word	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_
+ 1141 0024 00000000 		.word	_ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv
+ 1142              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+ 1143              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
+ 1144              		.align	3
+ 1145              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, %object
+ 1146              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, 20
+ 1147              	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE:
+ 1148 0000 00000000 		.word	0
+ 1149 0004 00000000 		.word	0
+ 1150 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 1151 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 1152 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 1153              		.global	_ZTVN5amiro6INA2196DriverE
+ 1154 0014 00000000 		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 1155              		.align	2
+ 1156              		.set	.LANCHOR2,. + 0
+ 1157              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 1158              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 1159              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 1160 0000 00000000 		.space	8
+ 1160      00000000 
+ 1161              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 1162              		.align	2
+ 1163              	.LC0:
+ 1164 0000 25732825 		.ascii	"%s(%d): ERROR: i2c transmit failed (%d | 0x%08X)\012"
+ 1164      64293A20 
+ 1164      4552524F 
+ARM GAS  /tmp/ccmv678u.s 			page 22
+
+
+ 1164      523A2069 
+ 1164      32632074 
+ 1165 0031 00       		.ascii	"\000"
+ 1166 0032 0000     		.space	2
+ 1167              	.LC1:
+ 1168 0034 2E2E2F2E 		.ascii	"../../components/power/ina219.cpp\000"
+ 1168      2E2F636F 
+ 1168      6D706F6E 
+ 1168      656E7473 
+ 1168      2F706F77 
+ 1169 0056 0000     		.space	2
+ 1170              	.LC2:
+ 1171 0058 7368756E 		.ascii	"shunt voltage : %fV\012\000"
+ 1171      7420766F 
+ 1171      6C746167 
+ 1171      65203A20 
+ 1171      2566560A 
+ 1172 006d 000000   		.space	3
+ 1173              	.LC3:
+ 1174 0070 62757320 		.ascii	"bus voltage   : %fV\012\000"
+ 1174      766F6C74 
+ 1174      61676520 
+ 1174      20203A20 
+ 1174      2566560A 
+ 1175 0085 000000   		.space	3
+ 1176              	.LC4:
+ 1177 0088 706F7765 		.ascii	"power         : %fW\012\000"
+ 1177      72202020 
+ 1177      20202020 
+ 1177      20203A20 
+ 1177      2566570A 
+ 1178 009d 000000   		.space	3
+ 1179              	.LC5:
+ 1180 00a0 63757272 		.ascii	"current       : %fA\012\000"
+ 1180      656E7420 
+ 1180      20202020 
+ 1180      20203A20 
+ 1180      2566410A 
+ 1181 00b5 000000   		.section	.rodata.CSWTCH.31,"a",%progbits
+ 1182              		.align	2
+ 1183              		.set	.LANCHOR1,. + 0
+ 1184              		.type	CSWTCH.31, %object
+ 1185              		.size	CSWTCH.31, 12
+ 1186              	CSWTCH.31:
+ 1187 0000 0AD7A33D 		.word	1034147594
+ 1188 0004 0AD7233E 		.word	1042536202
+ 1189 0008 0AD7A33E 		.word	1050924810
+ 1190              		.section	.rodata._ZTVN5amiro6INA2196DriverE,"a",%progbits
+ 1191              		.align	3
+ 1192              		.set	.LANCHOR0,. + 0
+ 1193              		.type	_ZTVN5amiro6INA2196DriverE, %object
+ 1194              		.size	_ZTVN5amiro6INA2196DriverE, 64
+ 1195              	_ZTVN5amiro6INA2196DriverE:
+ 1196 0000 00000000 		.word	0
+ 1197 0004 00000000 		.word	0
+ 1198 0008 00000000 		.word	_ZN5amiro6INA2196DriverD1Ev
+ 1199 000c 00000000 		.word	_ZN5amiro6INA2196DriverD0Ev
+ARM GAS  /tmp/ccmv678u.s 			page 23
+
+
+ 1200 0010 00000000 		.word	_ZN5amiro6INA2196Driver4initEPNS0_8InitDataE
+ 1201 0014 00000000 		.word	_ZN5amiro6INA2196Driver6updateEv
+ 1202 0018 00000000 		.word	_ZN5amiro6INA2196Driver6wakeupEv
+ 1203 001c 00000000 		.word	_ZN5amiro6INA2196Driver9hibernateEv
+ 1204 0020 00000000 		.word	_ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE
+ 1205 0024 00000000 		.word	_ZN5amiro6INA2196Driver8selftestEv
+ 1206 0028 00000000 		.word	_ZN5amiro6INA2196Driver4mainEv
+ 1207 002c F8FFFFFF 		.word	-8
+ 1208 0030 00000000 		.word	0
+ 1209 0034 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 1210 0038 00000000 		.word	_ZThn8_N5amiro6INA2196Driver4mainEv
+ 1211 003c 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 1212              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccmv678u.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ina219.cpp
+     /tmp/ccmv678u.s:16     .text._ZN5amiro6INA2196DriverD2Ev:00000000 $t
+     /tmp/ccmv678u.s:22     .text._ZN5amiro6INA2196DriverD2Ev:00000000 _ZN5amiro6INA2196DriverD2Ev
+     /tmp/ccmv678u.s:34     .text._ZN5amiro6INA2196DriverD2Ev:0000000c $d
+     /tmp/ccmv678u.s:1131   .rodata._ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE:00000000 _ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE
+     /tmp/ccmv678u.s:22     .text._ZN5amiro6INA2196DriverD2Ev:00000000 _ZN5amiro6INA2196DriverD1Ev
+     /tmp/ccmv678u.s:48     .text._ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE:00000000 $t
+     /tmp/ccmv678u.s:54     .text._ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE:00000000 _ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE
+     /tmp/ccmv678u.s:159    .text._ZN5amiro6INA2196Driver11calibrationEPNS0_9CalibDataE:000000ec $d
+     /tmp/ccmv678u.s:166    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev:00000000 $t
+     /tmp/ccmv678u.s:172    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev:00000000 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev
+     /tmp/ccmv678u.s:182    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev:00000008 $d
+     /tmp/ccmv678u.s:172    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev:00000000 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED1Ev
+     /tmp/ccmv678u.s:187    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_:00000000 $t
+     /tmp/ccmv678u.s:193    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_:00000000 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE4initEPS2_
+     /tmp/ccmv678u.s:201    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv:00000000 $t
+     /tmp/ccmv678u.s:207    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv:00000000 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE9hibernateEv
+     /tmp/ccmv678u.s:215    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_:00000000 $t
+     /tmp/ccmv678u.s:221    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_:00000000 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE11calibrationEPS3_
+     /tmp/ccmv678u.s:229    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv:00000000 $t
+     /tmp/ccmv678u.s:235    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv:00000000 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEE8selftestEv
+     /tmp/ccmv678u.s:243    .text._ZN5amiro6INA2196DriverD0Ev:00000000 $t
+     /tmp/ccmv678u.s:249    .text._ZN5amiro6INA2196DriverD0Ev:00000000 _ZN5amiro6INA2196DriverD0Ev
+     /tmp/ccmv678u.s:264    .text._ZN5amiro6INA2196DriverD0Ev:00000014 $d
+     /tmp/ccmv678u.s:268    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev:00000000 $t
+     /tmp/ccmv678u.s:274    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev:00000000 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev
+     /tmp/ccmv678u.s:287    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev:00000010 $d
+     /tmp/ccmv678u.s:290    .text.startup._ZN5amiro6INA2196Driver4mainEv:00000000 $t
+     /tmp/ccmv678u.s:296    .text.startup._ZN5amiro6INA2196Driver4mainEv:00000000 _ZN5amiro6INA2196Driver4mainEv
+     /tmp/ccmv678u.s:296    .text.startup._ZN5amiro6INA2196Driver4mainEv:00000000 .LTHUNK0
+     /tmp/ccmv678u.s:318    .text._ZThn8_N5amiro6INA2196Driver4mainEv:00000000 $t
+     /tmp/ccmv678u.s:324    .text._ZThn8_N5amiro6INA2196Driver4mainEv:00000000 _ZThn8_N5amiro6INA2196Driver4mainEv
+     /tmp/ccmv678u.s:331    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/ccmv678u.s:337    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/ccmv678u.s:360    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/ccmv678u.s:364    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3:00000000 $t
+     /tmp/ccmv678u.s:369    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3
+     /tmp/ccmv678u.s:389    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3:00000020 $d
+     /tmp/ccmv678u.s:392    .text._ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:00000000 $t
+     /tmp/ccmv678u.s:398    .text._ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:00000000 _ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh
+     /tmp/ccmv678u.s:440    .text._ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:00000078 $d
+     /tmp/ccmv678u.s:398    .text._ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:00000000 _ZN5amiro6INA2196DriverC1ERNS_9I2CDriverEh
+     /tmp/ccmv678u.s:446    .text._ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt:00000000 $t
+     /tmp/ccmv678u.s:452    .text._ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt:00000000 _ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt
+     /tmp/ccmv678u.s:521    .text._ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt:00000098 $d
+     /tmp/ccmv678u.s:526    .text._ZN5amiro6INA2196Driver6updateEv:00000000 $t
+     /tmp/ccmv678u.s:532    .text._ZN5amiro6INA2196Driver6updateEv:00000000 _ZN5amiro6INA2196Driver6updateEv
+     /tmp/ccmv678u.s:578    .text._ZN5amiro6INA2196Driver14readBusVoltageEv:00000000 $t
+     /tmp/ccmv678u.s:584    .text._ZN5amiro6INA2196Driver14readBusVoltageEv:00000000 _ZN5amiro6INA2196Driver14readBusVoltageEv
+     /tmp/ccmv678u.s:607    .text._ZN5amiro6INA2196Driver19readShuntVoltage_uVEv:00000000 $t
+     /tmp/ccmv678u.s:613    .text._ZN5amiro6INA2196Driver19readShuntVoltage_uVEv:00000000 _ZN5amiro6INA2196Driver19readShuntVoltage_uVEv
+     /tmp/ccmv678u.s:677    .text._ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt:00000000 $t
+     /tmp/ccmv678u.s:683    .text._ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt:00000000 _ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt
+     /tmp/ccmv678u.s:735    .text._ZN5amiro6INA2196Driver13writeRegisterENS1_15RegisterAddressERKt:00000074 $d
+     /tmp/ccmv678u.s:740    .text._ZN5amiro6INA2196Driver4initEPNS0_8InitDataE:00000000 $t
+     /tmp/ccmv678u.s:746    .text._ZN5amiro6INA2196Driver4initEPNS0_8InitDataE:00000000 _ZN5amiro6INA2196Driver4initEPNS0_8InitDataE
+ARM GAS  /tmp/ccmv678u.s 			page 25
+
+
+     /tmp/ccmv678u.s:790    .text._ZN5amiro6INA2196Driver6wakeupEv:00000000 $t
+     /tmp/ccmv678u.s:796    .text._ZN5amiro6INA2196Driver6wakeupEv:00000000 _ZN5amiro6INA2196Driver6wakeupEv
+     /tmp/ccmv678u.s:815    .text._ZN5amiro6INA2196Driver9hibernateEv:00000000 $t
+     /tmp/ccmv678u.s:821    .text._ZN5amiro6INA2196Driver9hibernateEv:00000000 _ZN5amiro6INA2196Driver9hibernateEv
+     /tmp/ccmv678u.s:843    .text._ZN5amiro6INA2196Driver5resetEv:00000000 $t
+     /tmp/ccmv678u.s:849    .text._ZN5amiro6INA2196Driver5resetEv:00000000 _ZN5amiro6INA2196Driver5resetEv
+     /tmp/ccmv678u.s:870    .text._ZN5amiro6INA2196Driver8selftestEv:00000000 $t
+     /tmp/ccmv678u.s:876    .text._ZN5amiro6INA2196Driver8selftestEv:00000000 _ZN5amiro6INA2196Driver8selftestEv
+     /tmp/ccmv678u.s:1095   .text._ZN5amiro6INA2196Driver8selftestEv:00000238 $d
+     /tmp/ccmv678u.s:1103   .text.startup._GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:00000000 $t
+     /tmp/ccmv678u.s:1108   .text.startup._GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:00000000 _GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh
+     /tmp/ccmv678u.s:1120   .text.startup._GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:0000000c $d
+     /tmp/ccmv678u.s:1124   .init_array:00000000 $d
+     /tmp/ccmv678u.s:1128   .rodata._ZTVN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEEE:00000000 $d
+     /tmp/ccmv678u.s:1147   .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/ccmv678u.s:1144   .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/ccmv678u.s:1195   .rodata._ZTVN5amiro6INA2196DriverE:00000000 _ZTVN5amiro6INA2196DriverE
+     /tmp/ccmv678u.s:1155   .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccmv678u.s:1159   .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccmv678u.s:1162   .rodata.str1.4:00000000 $d
+     /tmp/ccmv678u.s:1182   .rodata.CSWTCH.31:00000000 $d
+     /tmp/ccmv678u.s:1186   .rodata.CSWTCH.31:00000000 CSWTCH.31
+     /tmp/ccmv678u.s:1191   .rodata._ZTVN5amiro6INA2196DriverE:00000000 $d
+     /tmp/ccmv678u.s:47     .text._ZN5amiro6INA2196DriverD2Ev:00000014 $t
+     /tmp/ccmv678u.s:186    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED2Ev:0000000c $t
+     /tmp/ccmv678u.s:267    .text._ZN5amiro6INA2196DriverD0Ev:0000001c $t
+     /tmp/ccmv678u.s:289    .text._ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED0Ev:00000014 $t
+     /tmp/ccmv678u.s:391    .text._ZL8chprintfP20BaseSequentialStreamPKcz.constprop.3:00000024 $t
+     /tmp/ccmv678u.s:525    .text._ZN5amiro6INA2196Driver12readRegisterENS1_15RegisterAddressERt:000000a4 $t
+     /tmp/ccmv678u.s:1123   .text.startup._GLOBAL__sub_I__ZN5amiro6INA2196DriverC2ERNS_9I2CDriverEh:00000014 $t
+                           .group:00000000 _ZN5amiro10BaseSensorINS_6INA2198InitDataENS1_9CalibDataEED5Ev
+
+UNDEFINED SYMBOLS
+__aeabi_i2f
+__aeabi_fdiv
+__aeabi_fcmplt
+__aeabi_f2uiz
+__aeabi_fcmpgt
+__aeabi_fmul
+__aeabi_fcmple
+__aeabi_fcmpeq
+_ZdlPv
+_ZN10chibios_rt10BaseThread5sleepEm
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+chvprintf
+global
+_ZN10chibios_rt10BaseThreadC2Ev
+__aeabi_f2d
+__aeabi_ui2f
+__cxa_pure_virtual
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv

@@ -1,0 +1,3 @@
+hal.c:68:6:halInit	8	static
+hal.c:174:8:halIsCounterWithin	0	static
+hal.c:193:6:halPolledDelay	0	static

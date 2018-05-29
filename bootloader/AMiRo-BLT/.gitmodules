@@ -1,0 +1,3 @@
+[submodule "Host/stm32flash"]
+	path = Host/Source/stm32flash
+	url = https://git.code.sf.net/p/stm32flash/code

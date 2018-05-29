@@ -1,0 +1,138 @@
+ARM GAS  /tmp/ccibf34k.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Debug.c"
+  15              		.section	.text.haltErrorCode,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	haltErrorCode
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	haltErrorCode, %function
+  22              	haltErrorCode:
+  23              		@ args = 0, pretend = 0, frame = 32
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 30B5     		push	{r4, r5, lr}
+  26 0002 244D     		ldr	r5, .L21
+  27 0004 89B0     		sub	sp, sp, #36
+  28 0006 01AC     		add	r4, sp, #4
+  29 0008 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+  30 000a 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+  31 000c 95E80700 		ldmia	r5, {r0, r1, r2}
+  32 0010 03C4     		stmia	r4!, {r0, r1}
+  33 0012 214B     		ldr	r3, .L21+4
+  34 0014 2280     		strh	r2, [r4]	@ movhi
+  35 0016 9A69     		ldr	r2, [r3, #24]
+  36 0018 2520     		movs	r0, #37
+  37 001a 42F48042 		orr	r2, r2, #16384
+  38 001e 9A61     		str	r2, [r3, #24]
+  39 0020 C021     		movs	r1, #192
+  40 0022 FFF7FEFF 		bl	nvicEnableVector
+  41 0026 1D48     		ldr	r0, .L21+8
+  42 0028 0021     		movs	r1, #0
+  43 002a D0F8D420 		ldr	r2, [r0, #212]
+  44 002e 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+  45 0032 9181     		strh	r1, [r2, #12]	@ movhi
+  46 0034 1182     		strh	r1, [r2, #16]	@ movhi
+  47 0036 9182     		strh	r1, [r2, #20]	@ movhi
+  48 0038 9189     		ldrh	r1, [r2, #12]
+  49 003a 0225     		movs	r5, #2
+  50 003c 89B2     		uxth	r1, r1
+  51 003e 41F40051 		orr	r1, r1, #8192
+  52 0042 41F00801 		orr	r1, r1, #8
+  53 0046 9181     		strh	r1, [r2, #12]	@ movhi
+  54 0048 148A     		ldrh	r4, [r2, #16]
+  55 004a 4FF49C71 		mov	r1, #312
+  56 004e A4B2     		uxth	r4, r4
+  57 0050 44F44054 		orr	r4, r4, #12288
+ARM GAS  /tmp/ccibf34k.s 			page 2
+
+
+  58 0054 0572     		strb	r5, [r0, #8]
+  59 0056 1482     		strh	r4, [r2, #16]	@ movhi
+  60 0058 1181     		strh	r1, [r2, #8]	@ movhi
+  61 005a 01A9     		add	r1, sp, #4
+  62 005c 3BB1     		cbz	r3, .L7
+  63              	.L8:
+  64 005e 9380     		strh	r3, [r2, #4]	@ movhi
+  65              	.L6:
+  66 0060 1388     		ldrh	r3, [r2]
+  67 0062 5C06     		lsls	r4, r3, #25
+  68 0064 FCD5     		bpl	.L6
+  69 0066 11F8013F 		ldrb	r3, [r1, #1]!	@ zero_extendqisi2
+  70 006a 002B     		cmp	r3, #0
+  71 006c F7D1     		bne	.L8
+  72              	.L7:
+  73 006e 0C4B     		ldr	r3, .L21+12
+  74 0070 1968     		ldr	r1, [r3]
+  75 0072 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+  76 0074 3BB1     		cbz	r3, .L4
+  77              	.L12:
+  78 0076 9380     		strh	r3, [r2, #4]	@ movhi
+  79              	.L11:
+  80 0078 1388     		ldrh	r3, [r2]
+  81 007a 5806     		lsls	r0, r3, #25
+  82 007c FCD5     		bpl	.L11
+  83 007e 11F8013F 		ldrb	r3, [r1, #1]!	@ zero_extendqisi2
+  84 0082 002B     		cmp	r3, #0
+  85 0084 F7D1     		bne	.L12
+  86              	.L4:
+  87 0086 0A23     		movs	r3, #10
+  88 0088 9380     		strh	r3, [r2, #4]	@ movhi
+  89              	.L9:
+  90 008a 1388     		ldrh	r3, [r2]
+  91 008c 5B06     		lsls	r3, r3, #25
+  92 008e FCD5     		bpl	.L9
+  93 0090 09B0     		add	sp, sp, #36
+  94              		@ sp needed
+  95 0092 30BD     		pop	{r4, r5, pc}
+  96              	.L22:
+  97              		.align	2
+  98              	.L21:
+  99 0094 00000000 		.word	.LC0
+ 100 0098 00100240 		.word	1073876992
+ 101 009c 00000000 		.word	SD1
+ 102 00a0 00000000 		.word	dbg_panic_msg
+ 103              		.size	haltErrorCode, .-haltErrorCode
+ 104 00a4 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 104      AFF30080 
+ 104      AFF30080 
+ 105              		.align	2
+ 106              	.LC0:
+ 107 0000 0A537973 		.ascii	"\012System halt! Error Code:\000\000"
+ 107      74656D20 
+ 107      68616C74 
+ 107      21204572 
+ 107      726F7220 
+ 108 001b 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccibf34k.s 			page 3
+
+
+ARM GAS  /tmp/ccibf34k.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Debug.c
+     /tmp/ccibf34k.s:16     .text.haltErrorCode:00000000 $t
+     /tmp/ccibf34k.s:22     .text.haltErrorCode:00000000 haltErrorCode
+     /tmp/ccibf34k.s:99     .text.haltErrorCode:00000094 $d
+     /tmp/ccibf34k.s:105    .rodata.str1.4:00000000 $d
+     /tmp/ccibf34k.s:104    .text.haltErrorCode:000000a4 $t
+
+UNDEFINED SYMBOLS
+nvicEnableVector
+SD1
+dbg_panic_msg

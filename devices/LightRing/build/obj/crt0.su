@@ -1,0 +1,2 @@
+crt0.c:234:6:__early_init	0	static
+crt0.c:246:6:__late_init	0	static

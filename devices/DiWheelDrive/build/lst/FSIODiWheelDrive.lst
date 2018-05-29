@@ -1,0 +1,762 @@
+ARM GAS  /tmp/cc9BspSb.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"FSIODiWheelDrive.cpp"
+  15              		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth, %function
+  22              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 072A     		cmp	r2, #7
+  26 0002 70B5     		push	{r4, r5, r6, lr}
+  27 0004 0446     		mov	r4, r0
+  28 0006 0D46     		mov	r5, r1
+  29 0008 01D9     		bls	.L10
+  30 000a 2020     		movs	r0, #32
+  31 000c 70BD     		pop	{r4, r5, r6, pc}
+  32              	.L10:
+  33 000e 0679     		ldrb	r6, [r0, #4]	@ zero_extendqisi2
+  34 0010 012E     		cmp	r6, #1
+  35 0012 01D0     		beq	.L11
+  36 0014 0820     		movs	r0, #8
+  37 0016 70BD     		pop	{r4, r5, r6, pc}
+  38              	.L11:
+  39 0018 0068     		ldr	r0, [r0]
+  40 001a 5100     		lsls	r1, r2, #1
+  41 001c 0368     		ldr	r3, [r0]
+  42 001e 1431     		adds	r1, r1, #20
+  43 0020 1B6A     		ldr	r3, [r3, #32]
+  44 0022 9847     		blx	r3
+  45 0024 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+  46 0026 0BB9     		cbnz	r3, .L12
+  47 0028 3046     		mov	r0, r6
+  48 002a 70BD     		pop	{r4, r5, r6, pc}
+  49              	.L12:
+  50 002c 2068     		ldr	r0, [r4]
+  51 002e 2946     		mov	r1, r5
+  52 0030 0368     		ldr	r3, [r0]
+  53 0032 0222     		movs	r2, #2
+  54 0034 5B68     		ldr	r3, [r3, #4]
+  55 0036 9847     		blx	r3
+  56 0038 0228     		cmp	r0, #2
+  57 003a 0CBF     		ite	eq
+ARM GAS  /tmp/cc9BspSb.s 			page 2
+
+
+  58 003c 0020     		moveq	r0, #0
+  59 003e 0820     		movne	r0, #8
+  60 0040 70BD     		pop	{r4, r5, r6, pc}
+  61              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth, .-_ZN5amiro12fileSystemIo1
+  62 0042 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth,"ax",%progbits
+  62      0080AFF3 
+  62      0080AFF3 
+  62      0080
+  63              		.align	2
+  64              		.p2align 4,,15
+  65              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth
+  66              		.thumb
+  67              		.thumb_func
+  68              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth, %function
+  69              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth:
+  70              		@ args = 0, pretend = 0, frame = 8
+  71              		@ frame_needed = 0, uses_anonymous_args = 0
+  72 0000 30B5     		push	{r4, r5, lr}
+  73 0002 072A     		cmp	r2, #7
+  74 0004 83B0     		sub	sp, sp, #12
+  75 0006 0446     		mov	r4, r0
+  76 0008 ADF80610 		strh	r1, [sp, #6]	@ movhi
+  77 000c 02D9     		bls	.L21
+  78 000e 2020     		movs	r0, #32
+  79              	.L14:
+  80 0010 03B0     		add	sp, sp, #12
+  81              		@ sp needed
+  82 0012 30BD     		pop	{r4, r5, pc}
+  83              	.L21:
+  84 0014 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+  85 0016 012D     		cmp	r5, #1
+  86 0018 02D0     		beq	.L22
+  87 001a 0820     		movs	r0, #8
+  88 001c 03B0     		add	sp, sp, #12
+  89              		@ sp needed
+  90 001e 30BD     		pop	{r4, r5, pc}
+  91              	.L22:
+  92 0020 0068     		ldr	r0, [r0]
+  93 0022 5100     		lsls	r1, r2, #1
+  94 0024 0368     		ldr	r3, [r0]
+  95 0026 1431     		adds	r1, r1, #20
+  96 0028 1B6A     		ldr	r3, [r3, #32]
+  97 002a 9847     		blx	r3
+  98 002c 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+  99 002e 0BB9     		cbnz	r3, .L23
+ 100 0030 2846     		mov	r0, r5
+ 101 0032 EDE7     		b	.L14
+ 102              	.L23:
+ 103 0034 2068     		ldr	r0, [r4]
+ 104 0036 0DF10601 		add	r1, sp, #6
+ 105 003a 0368     		ldr	r3, [r0]
+ 106 003c 0222     		movs	r2, #2
+ 107 003e 1B68     		ldr	r3, [r3]
+ 108 0040 9847     		blx	r3
+ 109 0042 0228     		cmp	r0, #2
+ 110 0044 0CBF     		ite	eq
+ 111 0046 0020     		moveq	r0, #0
+ARM GAS  /tmp/cc9BspSb.s 			page 3
+
+
+ 112 0048 0820     		movne	r0, #8
+ 113 004a E1E7     		b	.L14
+ 114              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth, .-_ZN5amiro12fileSystemIo16
+ 115 004c AFF30080 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf,"ax",%progbits
+ 116              		.align	2
+ 117              		.p2align 4,,15
+ 118              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf, %function
+ 122              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf:
+ 123              		@ args = 0, pretend = 0, frame = 8
+ 124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 125 0000 30B5     		push	{r4, r5, lr}
+ 126 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 127 0004 83B0     		sub	sp, sp, #12
+ 128 0006 012D     		cmp	r5, #1
+ 129 0008 0446     		mov	r4, r0
+ 130 000a 0191     		str	r1, [sp, #4]	@ float
+ 131 000c 02D0     		beq	.L31
+ 132 000e 0820     		movs	r0, #8
+ 133 0010 03B0     		add	sp, sp, #12
+ 134              		@ sp needed
+ 135 0012 30BD     		pop	{r4, r5, pc}
+ 136              	.L31:
+ 137 0014 0068     		ldr	r0, [r0]
+ 138 0016 2421     		movs	r1, #36
+ 139 0018 0368     		ldr	r3, [r0]
+ 140 001a 1B6A     		ldr	r3, [r3, #32]
+ 141 001c 9847     		blx	r3
+ 142 001e 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 143 0020 022B     		cmp	r3, #2
+ 144 0022 02D8     		bhi	.L32
+ 145 0024 2846     		mov	r0, r5
+ 146 0026 03B0     		add	sp, sp, #12
+ 147              		@ sp needed
+ 148 0028 30BD     		pop	{r4, r5, pc}
+ 149              	.L32:
+ 150 002a 2068     		ldr	r0, [r4]
+ 151 002c 01A9     		add	r1, sp, #4
+ 152 002e 0368     		ldr	r3, [r0]
+ 153 0030 0422     		movs	r2, #4
+ 154 0032 1B68     		ldr	r3, [r3]
+ 155 0034 9847     		blx	r3
+ 156 0036 0428     		cmp	r0, #4
+ 157 0038 0CBF     		ite	eq
+ 158 003a 0020     		moveq	r0, #0
+ 159 003c 0820     		movne	r0, #8
+ 160 003e 03B0     		add	sp, sp, #12
+ 161              		@ sp needed
+ 162 0040 30BD     		pop	{r4, r5, pc}
+ 163              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf, .-_ZN5amiro12fileSystemIo16FSIO
+ 164 0042 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf,"ax",%progbits
+ 164      0080AFF3 
+ 164      0080AFF3 
+ 164      0080
+ 165              		.align	2
+ARM GAS  /tmp/cc9BspSb.s 			page 4
+
+
+ 166              		.p2align 4,,15
+ 167              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf
+ 168              		.thumb
+ 169              		.thumb_func
+ 170              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf, %function
+ 171              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf:
+ 172              		@ args = 0, pretend = 0, frame = 0
+ 173              		@ frame_needed = 0, uses_anonymous_args = 0
+ 174 0000 70B5     		push	{r4, r5, r6, lr}
+ 175 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 176 0004 0446     		mov	r4, r0
+ 177 0006 012D     		cmp	r5, #1
+ 178 0008 0E46     		mov	r6, r1
+ 179 000a 01D0     		beq	.L40
+ 180 000c 0820     		movs	r0, #8
+ 181 000e 70BD     		pop	{r4, r5, r6, pc}
+ 182              	.L40:
+ 183 0010 0068     		ldr	r0, [r0]
+ 184 0012 2421     		movs	r1, #36
+ 185 0014 0368     		ldr	r3, [r0]
+ 186 0016 1B6A     		ldr	r3, [r3, #32]
+ 187 0018 9847     		blx	r3
+ 188 001a 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 189 001c 022B     		cmp	r3, #2
+ 190 001e 01D8     		bhi	.L41
+ 191 0020 2846     		mov	r0, r5
+ 192 0022 70BD     		pop	{r4, r5, r6, pc}
+ 193              	.L41:
+ 194 0024 2068     		ldr	r0, [r4]
+ 195 0026 3146     		mov	r1, r6
+ 196 0028 0368     		ldr	r3, [r0]
+ 197 002a 0422     		movs	r2, #4
+ 198 002c 5B68     		ldr	r3, [r3, #4]
+ 199 002e 9847     		blx	r3
+ 200 0030 0428     		cmp	r0, #4
+ 201 0032 0CBF     		ite	eq
+ 202 0034 0020     		moveq	r0, #0
+ 203 0036 0820     		movne	r0, #8
+ 204 0038 70BD     		pop	{r4, r5, r6, pc}
+ 205              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf, .-_ZN5amiro12fileSystemIo16FSI
+ 206 003a 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf,"ax",%progbits
+ 206      0080
+ 207              		.align	2
+ 208              		.p2align 4,,15
+ 209              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf
+ 210              		.thumb
+ 211              		.thumb_func
+ 212              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf, %function
+ 213              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf:
+ 214              		@ args = 0, pretend = 0, frame = 8
+ 215              		@ frame_needed = 0, uses_anonymous_args = 0
+ 216 0000 30B5     		push	{r4, r5, lr}
+ 217 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 218 0004 83B0     		sub	sp, sp, #12
+ 219 0006 012D     		cmp	r5, #1
+ 220 0008 0446     		mov	r4, r0
+ 221 000a 0191     		str	r1, [sp, #4]	@ float
+ARM GAS  /tmp/cc9BspSb.s 			page 5
+
+
+ 222 000c 02D0     		beq	.L49
+ 223 000e 0820     		movs	r0, #8
+ 224 0010 03B0     		add	sp, sp, #12
+ 225              		@ sp needed
+ 226 0012 30BD     		pop	{r4, r5, pc}
+ 227              	.L49:
+ 228 0014 0068     		ldr	r0, [r0]
+ 229 0016 2821     		movs	r1, #40
+ 230 0018 0368     		ldr	r3, [r0]
+ 231 001a 1B6A     		ldr	r3, [r3, #32]
+ 232 001c 9847     		blx	r3
+ 233 001e 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 234 0020 022B     		cmp	r3, #2
+ 235 0022 02D8     		bhi	.L50
+ 236 0024 2846     		mov	r0, r5
+ 237 0026 03B0     		add	sp, sp, #12
+ 238              		@ sp needed
+ 239 0028 30BD     		pop	{r4, r5, pc}
+ 240              	.L50:
+ 241 002a 2068     		ldr	r0, [r4]
+ 242 002c 01A9     		add	r1, sp, #4
+ 243 002e 0368     		ldr	r3, [r0]
+ 244 0030 0422     		movs	r2, #4
+ 245 0032 1B68     		ldr	r3, [r3]
+ 246 0034 9847     		blx	r3
+ 247 0036 0428     		cmp	r0, #4
+ 248 0038 0CBF     		ite	eq
+ 249 003a 0020     		moveq	r0, #0
+ 250 003c 0820     		movne	r0, #8
+ 251 003e 03B0     		add	sp, sp, #12
+ 252              		@ sp needed
+ 253 0040 30BD     		pop	{r4, r5, pc}
+ 254              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf, .-_ZN5amiro12fileSystemIo16FSIODiWheel
+ 255 0042 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf,"ax",%progbits
+ 255      0080AFF3 
+ 255      0080AFF3 
+ 255      0080
+ 256              		.align	2
+ 257              		.p2align 4,,15
+ 258              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf
+ 259              		.thumb
+ 260              		.thumb_func
+ 261              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf, %function
+ 262              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf:
+ 263              		@ args = 0, pretend = 0, frame = 0
+ 264              		@ frame_needed = 0, uses_anonymous_args = 0
+ 265 0000 70B5     		push	{r4, r5, r6, lr}
+ 266 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 267 0004 0446     		mov	r4, r0
+ 268 0006 012D     		cmp	r5, #1
+ 269 0008 0E46     		mov	r6, r1
+ 270 000a 01D0     		beq	.L58
+ 271 000c 0820     		movs	r0, #8
+ 272 000e 70BD     		pop	{r4, r5, r6, pc}
+ 273              	.L58:
+ 274 0010 0068     		ldr	r0, [r0]
+ 275 0012 2821     		movs	r1, #40
+ARM GAS  /tmp/cc9BspSb.s 			page 6
+
+
+ 276 0014 0368     		ldr	r3, [r0]
+ 277 0016 1B6A     		ldr	r3, [r3, #32]
+ 278 0018 9847     		blx	r3
+ 279 001a 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 280 001c 022B     		cmp	r3, #2
+ 281 001e 01D8     		bhi	.L59
+ 282 0020 2846     		mov	r0, r5
+ 283 0022 70BD     		pop	{r4, r5, r6, pc}
+ 284              	.L59:
+ 285 0024 2068     		ldr	r0, [r4]
+ 286 0026 3146     		mov	r1, r6
+ 287 0028 0368     		ldr	r3, [r0]
+ 288 002a 0422     		movs	r2, #4
+ 289 002c 5B68     		ldr	r3, [r3, #4]
+ 290 002e 9847     		blx	r3
+ 291 0030 0428     		cmp	r0, #4
+ 292 0032 0CBF     		ite	eq
+ 293 0034 0020     		moveq	r0, #0
+ 294 0036 0820     		movne	r0, #8
+ 295 0038 70BD     		pop	{r4, r5, r6, pc}
+ 296              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf, .-_ZN5amiro12fileSystemIo16FSIODiWhee
+ 297 003a 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf,"ax",%progbits
+ 297      0080
+ 298              		.align	2
+ 299              		.p2align 4,,15
+ 300              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf
+ 301              		.thumb
+ 302              		.thumb_func
+ 303              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf, %function
+ 304              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf:
+ 305              		@ args = 0, pretend = 0, frame = 8
+ 306              		@ frame_needed = 0, uses_anonymous_args = 0
+ 307 0000 30B5     		push	{r4, r5, lr}
+ 308 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 309 0004 83B0     		sub	sp, sp, #12
+ 310 0006 012D     		cmp	r5, #1
+ 311 0008 0446     		mov	r4, r0
+ 312 000a 0191     		str	r1, [sp, #4]	@ float
+ 313 000c 02D0     		beq	.L67
+ 314 000e 0820     		movs	r0, #8
+ 315 0010 03B0     		add	sp, sp, #12
+ 316              		@ sp needed
+ 317 0012 30BD     		pop	{r4, r5, pc}
+ 318              	.L67:
+ 319 0014 0068     		ldr	r0, [r0]
+ 320 0016 3021     		movs	r1, #48
+ 321 0018 0368     		ldr	r3, [r0]
+ 322 001a 1B6A     		ldr	r3, [r3, #32]
+ 323 001c 9847     		blx	r3
+ 324 001e 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 325 0020 022B     		cmp	r3, #2
+ 326 0022 02D8     		bhi	.L68
+ 327 0024 2846     		mov	r0, r5
+ 328 0026 03B0     		add	sp, sp, #12
+ 329              		@ sp needed
+ 330 0028 30BD     		pop	{r4, r5, pc}
+ 331              	.L68:
+ARM GAS  /tmp/cc9BspSb.s 			page 7
+
+
+ 332 002a 2068     		ldr	r0, [r4]
+ 333 002c 01A9     		add	r1, sp, #4
+ 334 002e 0368     		ldr	r3, [r0]
+ 335 0030 0422     		movs	r2, #4
+ 336 0032 1B68     		ldr	r3, [r3]
+ 337 0034 9847     		blx	r3
+ 338 0036 0428     		cmp	r0, #4
+ 339 0038 0CBF     		ite	eq
+ 340 003a 0020     		moveq	r0, #0
+ 341 003c 0820     		movne	r0, #8
+ 342 003e 03B0     		add	sp, sp, #12
+ 343              		@ sp needed
+ 344 0040 30BD     		pop	{r4, r5, pc}
+ 345              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf, .-_ZN5amiro12fileSystemIo16FSIODiWheel
+ 346 0042 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf,"ax",%progbits
+ 346      0080AFF3 
+ 346      0080AFF3 
+ 346      0080
+ 347              		.align	2
+ 348              		.p2align 4,,15
+ 349              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf
+ 350              		.thumb
+ 351              		.thumb_func
+ 352              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf, %function
+ 353              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf:
+ 354              		@ args = 0, pretend = 0, frame = 0
+ 355              		@ frame_needed = 0, uses_anonymous_args = 0
+ 356 0000 70B5     		push	{r4, r5, r6, lr}
+ 357 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 358 0004 0446     		mov	r4, r0
+ 359 0006 012D     		cmp	r5, #1
+ 360 0008 0E46     		mov	r6, r1
+ 361 000a 01D0     		beq	.L76
+ 362 000c 0820     		movs	r0, #8
+ 363 000e 70BD     		pop	{r4, r5, r6, pc}
+ 364              	.L76:
+ 365 0010 0068     		ldr	r0, [r0]
+ 366 0012 3021     		movs	r1, #48
+ 367 0014 0368     		ldr	r3, [r0]
+ 368 0016 1B6A     		ldr	r3, [r3, #32]
+ 369 0018 9847     		blx	r3
+ 370 001a 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 371 001c 022B     		cmp	r3, #2
+ 372 001e 01D8     		bhi	.L77
+ 373 0020 2846     		mov	r0, r5
+ 374 0022 70BD     		pop	{r4, r5, r6, pc}
+ 375              	.L77:
+ 376 0024 2068     		ldr	r0, [r4]
+ 377 0026 3146     		mov	r1, r6
+ 378 0028 0368     		ldr	r3, [r0]
+ 379 002a 0422     		movs	r2, #4
+ 380 002c 5B68     		ldr	r3, [r3, #4]
+ 381 002e 9847     		blx	r3
+ 382 0030 0428     		cmp	r0, #4
+ 383 0032 0CBF     		ite	eq
+ 384 0034 0020     		moveq	r0, #0
+ 385 0036 0820     		movne	r0, #8
+ARM GAS  /tmp/cc9BspSb.s 			page 8
+
+
+ 386 0038 70BD     		pop	{r4, r5, r6, pc}
+ 387              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf, .-_ZN5amiro12fileSystemIo16FSIODiWhee
+ 388 003a 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi,"ax",%progbits
+ 388      0080
+ 389              		.align	2
+ 390              		.p2align 4,,15
+ 391              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi
+ 392              		.thumb
+ 393              		.thumb_func
+ 394              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi, %function
+ 395              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi:
+ 396              		@ args = 0, pretend = 0, frame = 8
+ 397              		@ frame_needed = 0, uses_anonymous_args = 0
+ 398 0000 30B5     		push	{r4, r5, lr}
+ 399 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 400 0004 83B0     		sub	sp, sp, #12
+ 401 0006 012D     		cmp	r5, #1
+ 402 0008 0446     		mov	r4, r0
+ 403 000a 0191     		str	r1, [sp, #4]
+ 404 000c 02D0     		beq	.L85
+ 405 000e 0820     		movs	r0, #8
+ 406 0010 03B0     		add	sp, sp, #12
+ 407              		@ sp needed
+ 408 0012 30BD     		pop	{r4, r5, pc}
+ 409              	.L85:
+ 410 0014 0068     		ldr	r0, [r0]
+ 411 0016 2C21     		movs	r1, #44
+ 412 0018 0368     		ldr	r3, [r0]
+ 413 001a 1B6A     		ldr	r3, [r3, #32]
+ 414 001c 9847     		blx	r3
+ 415 001e 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 416 0020 022B     		cmp	r3, #2
+ 417 0022 02D8     		bhi	.L86
+ 418 0024 2846     		mov	r0, r5
+ 419 0026 03B0     		add	sp, sp, #12
+ 420              		@ sp needed
+ 421 0028 30BD     		pop	{r4, r5, pc}
+ 422              	.L86:
+ 423 002a 2068     		ldr	r0, [r4]
+ 424 002c 01A9     		add	r1, sp, #4
+ 425 002e 0368     		ldr	r3, [r0]
+ 426 0030 0422     		movs	r2, #4
+ 427 0032 1B68     		ldr	r3, [r3]
+ 428 0034 9847     		blx	r3
+ 429 0036 0428     		cmp	r0, #4
+ 430 0038 0CBF     		ite	eq
+ 431 003a 0020     		moveq	r0, #0
+ 432 003c 0820     		movne	r0, #8
+ 433 003e 03B0     		add	sp, sp, #12
+ 434              		@ sp needed
+ 435 0040 30BD     		pop	{r4, r5, pc}
+ 436              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi, .-_ZN5amiro12fileSystemIo16FSIODiWheel
+ 437 0042 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi,"ax",%progbits
+ 437      0080AFF3 
+ 437      0080AFF3 
+ 437      0080
+ 438              		.align	2
+ARM GAS  /tmp/cc9BspSb.s 			page 9
+
+
+ 439              		.p2align 4,,15
+ 440              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi
+ 441              		.thumb
+ 442              		.thumb_func
+ 443              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi, %function
+ 444              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi:
+ 445              		@ args = 0, pretend = 0, frame = 0
+ 446              		@ frame_needed = 0, uses_anonymous_args = 0
+ 447 0000 70B5     		push	{r4, r5, r6, lr}
+ 448 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 449 0004 0446     		mov	r4, r0
+ 450 0006 012D     		cmp	r5, #1
+ 451 0008 0E46     		mov	r6, r1
+ 452 000a 01D0     		beq	.L94
+ 453 000c 0820     		movs	r0, #8
+ 454 000e 70BD     		pop	{r4, r5, r6, pc}
+ 455              	.L94:
+ 456 0010 0068     		ldr	r0, [r0]
+ 457 0012 2C21     		movs	r1, #44
+ 458 0014 0368     		ldr	r3, [r0]
+ 459 0016 1B6A     		ldr	r3, [r3, #32]
+ 460 0018 9847     		blx	r3
+ 461 001a 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 462 001c 022B     		cmp	r3, #2
+ 463 001e 01D8     		bhi	.L95
+ 464 0020 2846     		mov	r0, r5
+ 465 0022 70BD     		pop	{r4, r5, r6, pc}
+ 466              	.L95:
+ 467 0024 2068     		ldr	r0, [r4]
+ 468 0026 3146     		mov	r1, r6
+ 469 0028 0368     		ldr	r3, [r0]
+ 470 002a 0422     		movs	r2, #4
+ 471 002c 5B68     		ldr	r3, [r3, #4]
+ 472 002e 9847     		blx	r3
+ 473 0030 0428     		cmp	r0, #4
+ 474 0032 0CBF     		ite	eq
+ 475 0034 0020     		moveq	r0, #0
+ 476 0036 0820     		movne	r0, #8
+ 477 0038 70BD     		pop	{r4, r5, r6, pc}
+ 478              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi, .-_ZN5amiro12fileSystemIo16FSIODiWhee
+ 479 003a 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf,"ax",%progbits
+ 479      0080
+ 480              		.align	2
+ 481              		.p2align 4,,15
+ 482              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf
+ 483              		.thumb
+ 484              		.thumb_func
+ 485              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf, %function
+ 486              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf:
+ 487              		@ args = 0, pretend = 0, frame = 0
+ 488              		@ frame_needed = 0, uses_anonymous_args = 0
+ 489 0000 70B5     		push	{r4, r5, r6, lr}
+ 490 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 491 0004 0446     		mov	r4, r0
+ 492 0006 012D     		cmp	r5, #1
+ 493 0008 0E46     		mov	r6, r1
+ 494 000a 01D0     		beq	.L103
+ARM GAS  /tmp/cc9BspSb.s 			page 10
+
+
+ 495 000c 0820     		movs	r0, #8
+ 496 000e 70BD     		pop	{r4, r5, r6, pc}
+ 497              	.L103:
+ 498 0010 0068     		ldr	r0, [r0]
+ 499 0012 1C21     		movs	r1, #28
+ 500 0014 0368     		ldr	r3, [r0]
+ 501 0016 1B6A     		ldr	r3, [r3, #32]
+ 502 0018 9847     		blx	r3
+ 503 001a 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 504 001c 012B     		cmp	r3, #1
+ 505 001e 0AD9     		bls	.L100
+ 506 0020 2068     		ldr	r0, [r4]
+ 507 0022 3146     		mov	r1, r6
+ 508 0024 0368     		ldr	r3, [r0]
+ 509 0026 0422     		movs	r2, #4
+ 510 0028 5B68     		ldr	r3, [r3, #4]
+ 511 002a 9847     		blx	r3
+ 512 002c 0428     		cmp	r0, #4
+ 513 002e 0CBF     		ite	eq
+ 514 0030 0020     		moveq	r0, #0
+ 515 0032 0820     		movne	r0, #8
+ 516 0034 70BD     		pop	{r4, r5, r6, pc}
+ 517              	.L100:
+ 518 0036 2846     		mov	r0, r5
+ 519 0038 70BD     		pop	{r4, r5, r6, pc}
+ 520              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf, .-_ZN5amiro12fileSystemIo16FSIODiWheelDr
+ 521 003a 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf,"ax",%progbits
+ 521      0080
+ 522              		.align	2
+ 523              		.p2align 4,,15
+ 524              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf
+ 525              		.thumb
+ 526              		.thumb_func
+ 527              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf, %function
+ 528              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf:
+ 529              		@ args = 0, pretend = 0, frame = 8
+ 530              		@ frame_needed = 0, uses_anonymous_args = 0
+ 531 0000 30B5     		push	{r4, r5, lr}
+ 532 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 533 0004 83B0     		sub	sp, sp, #12
+ 534 0006 012D     		cmp	r5, #1
+ 535 0008 0446     		mov	r4, r0
+ 536 000a 0191     		str	r1, [sp, #4]	@ float
+ 537 000c 02D0     		beq	.L111
+ 538 000e 0820     		movs	r0, #8
+ 539 0010 03B0     		add	sp, sp, #12
+ 540              		@ sp needed
+ 541 0012 30BD     		pop	{r4, r5, pc}
+ 542              	.L111:
+ 543 0014 0068     		ldr	r0, [r0]
+ 544 0016 1C21     		movs	r1, #28
+ 545 0018 0368     		ldr	r3, [r0]
+ 546 001a 1B6A     		ldr	r3, [r3, #32]
+ 547 001c 9847     		blx	r3
+ 548 001e 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 549 0020 012B     		cmp	r3, #1
+ 550 0022 0BD9     		bls	.L108
+ARM GAS  /tmp/cc9BspSb.s 			page 11
+
+
+ 551 0024 2068     		ldr	r0, [r4]
+ 552 0026 01A9     		add	r1, sp, #4
+ 553 0028 0368     		ldr	r3, [r0]
+ 554 002a 0422     		movs	r2, #4
+ 555 002c 1B68     		ldr	r3, [r3]
+ 556 002e 9847     		blx	r3
+ 557 0030 0428     		cmp	r0, #4
+ 558 0032 0CBF     		ite	eq
+ 559 0034 0020     		moveq	r0, #0
+ 560 0036 0820     		movne	r0, #8
+ 561 0038 03B0     		add	sp, sp, #12
+ 562              		@ sp needed
+ 563 003a 30BD     		pop	{r4, r5, pc}
+ 564              	.L108:
+ 565 003c 2846     		mov	r0, r5
+ 566 003e 03B0     		add	sp, sp, #12
+ 567              		@ sp needed
+ 568 0040 30BD     		pop	{r4, r5, pc}
+ 569              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf, .-_ZN5amiro12fileSystemIo16FSIODiWheelDri
+ 570 0042 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf,"ax",%progbits
+ 570      0080AFF3 
+ 570      0080AFF3 
+ 570      0080
+ 571              		.align	2
+ 572              		.p2align 4,,15
+ 573              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf
+ 574              		.thumb
+ 575              		.thumb_func
+ 576              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf, %function
+ 577              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf:
+ 578              		@ args = 0, pretend = 0, frame = 0
+ 579              		@ frame_needed = 0, uses_anonymous_args = 0
+ 580 0000 70B5     		push	{r4, r5, r6, lr}
+ 581 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 582 0004 0446     		mov	r4, r0
+ 583 0006 012D     		cmp	r5, #1
+ 584 0008 0E46     		mov	r6, r1
+ 585 000a 01D0     		beq	.L119
+ 586 000c 0820     		movs	r0, #8
+ 587 000e 70BD     		pop	{r4, r5, r6, pc}
+ 588              	.L119:
+ 589 0010 0068     		ldr	r0, [r0]
+ 590 0012 2021     		movs	r1, #32
+ 591 0014 0368     		ldr	r3, [r0]
+ 592 0016 1B6A     		ldr	r3, [r3, #32]
+ 593 0018 9847     		blx	r3
+ 594 001a 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 595 001c 012B     		cmp	r3, #1
+ 596 001e 0AD9     		bls	.L116
+ 597 0020 2068     		ldr	r0, [r4]
+ 598 0022 3146     		mov	r1, r6
+ 599 0024 0368     		ldr	r3, [r0]
+ 600 0026 0422     		movs	r2, #4
+ 601 0028 5B68     		ldr	r3, [r3, #4]
+ 602 002a 9847     		blx	r3
+ 603 002c 0428     		cmp	r0, #4
+ 604 002e 0CBF     		ite	eq
+ARM GAS  /tmp/cc9BspSb.s 			page 12
+
+
+ 605 0030 0020     		moveq	r0, #0
+ 606 0032 0820     		movne	r0, #8
+ 607 0034 70BD     		pop	{r4, r5, r6, pc}
+ 608              	.L116:
+ 609 0036 2846     		mov	r0, r5
+ 610 0038 70BD     		pop	{r4, r5, r6, pc}
+ 611              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf, .-_ZN5amiro12fileSystemIo16FSIODiWheelDr
+ 612 003a 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf,"ax",%progbits
+ 612      0080
+ 613              		.align	2
+ 614              		.p2align 4,,15
+ 615              		.global	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf
+ 616              		.thumb
+ 617              		.thumb_func
+ 618              		.type	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf, %function
+ 619              	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf:
+ 620              		@ args = 0, pretend = 0, frame = 8
+ 621              		@ frame_needed = 0, uses_anonymous_args = 0
+ 622 0000 30B5     		push	{r4, r5, lr}
+ 623 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 624 0004 83B0     		sub	sp, sp, #12
+ 625 0006 012D     		cmp	r5, #1
+ 626 0008 0446     		mov	r4, r0
+ 627 000a 0191     		str	r1, [sp, #4]	@ float
+ 628 000c 02D0     		beq	.L127
+ 629 000e 0820     		movs	r0, #8
+ 630 0010 03B0     		add	sp, sp, #12
+ 631              		@ sp needed
+ 632 0012 30BD     		pop	{r4, r5, pc}
+ 633              	.L127:
+ 634 0014 0068     		ldr	r0, [r0]
+ 635 0016 2021     		movs	r1, #32
+ 636 0018 0368     		ldr	r3, [r0]
+ 637 001a 1B6A     		ldr	r3, [r3, #32]
+ 638 001c 9847     		blx	r3
+ 639 001e 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 640 0020 012B     		cmp	r3, #1
+ 641 0022 0BD9     		bls	.L124
+ 642 0024 2068     		ldr	r0, [r4]
+ 643 0026 01A9     		add	r1, sp, #4
+ 644 0028 0368     		ldr	r3, [r0]
+ 645 002a 0422     		movs	r2, #4
+ 646 002c 1B68     		ldr	r3, [r3]
+ 647 002e 9847     		blx	r3
+ 648 0030 0428     		cmp	r0, #4
+ 649 0032 0CBF     		ite	eq
+ 650 0034 0020     		moveq	r0, #0
+ 651 0036 0820     		movne	r0, #8
+ 652 0038 03B0     		add	sp, sp, #12
+ 653              		@ sp needed
+ 654 003a 30BD     		pop	{r4, r5, pc}
+ 655              	.L124:
+ 656 003c 2846     		mov	r0, r5
+ 657 003e 03B0     		add	sp, sp, #12
+ 658              		@ sp needed
+ 659 0040 30BD     		pop	{r4, r5, pc}
+ 660              		.size	_ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf, .-_ZN5amiro12fileSystemIo16FSIODiWheelDri
+ARM GAS  /tmp/cc9BspSb.s 			page 13
+
+
+ 661 0042 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 661      0080AFF3 
+ 661      0080AFF3 
+ 661      0080
+ARM GAS  /tmp/cc9BspSb.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 FSIODiWheelDrive.cpp
+     /tmp/cc9BspSb.s:16     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth:00000000 $t
+     /tmp/cc9BspSb.s:22     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive17getVcnl4020OffsetEPth
+     /tmp/cc9BspSb.s:63     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth:00000000 $t
+     /tmp/cc9BspSb.s:69     .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive17setVcnl4020OffsetEth
+     /tmp/cc9BspSb.s:116    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf:00000000 $t
+     /tmp/cc9BspSb.s:122    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive14setwheelfactorEf
+     /tmp/cc9BspSb.s:165    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf:00000000 $t
+     /tmp/cc9BspSb.s:171    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive14getWheelFactorEPf
+     /tmp/cc9BspSb.s:207    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf:00000000 $t
+     /tmp/cc9BspSb.s:213    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setiGainEf
+     /tmp/cc9BspSb.s:256    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf:00000000 $t
+     /tmp/cc9BspSb.s:262    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getiGainEPf
+     /tmp/cc9BspSb.s:298    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf:00000000 $t
+     /tmp/cc9BspSb.s:304    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setdGainEf
+     /tmp/cc9BspSb.s:347    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf:00000000 $t
+     /tmp/cc9BspSb.s:353    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getdGainEPf
+     /tmp/cc9BspSb.s:389    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi:00000000 $t
+     /tmp/cc9BspSb.s:395    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8setpGainEi
+     /tmp/cc9BspSb.s:438    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi:00000000 $t
+     /tmp/cc9BspSb.s:444    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive8getpGainEPi
+     /tmp/cc9BspSb.s:480    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf:00000000 $t
+     /tmp/cc9BspSb.s:486    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEdEPf
+     /tmp/cc9BspSb.s:522    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf:00000000 $t
+     /tmp/cc9BspSb.s:528    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEdEf
+     /tmp/cc9BspSb.s:571    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf:00000000 $t
+     /tmp/cc9BspSb.s:577    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5getEbEPf
+     /tmp/cc9BspSb.s:613    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf:00000000 $t
+     /tmp/cc9BspSb.s:619    .text._ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf:00000000 _ZN5amiro12fileSystemIo16FSIODiWheelDrive5setEbEf
+
+NO UNDEFINED SYMBOLS

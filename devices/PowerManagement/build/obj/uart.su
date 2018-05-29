@@ -1,0 +1,12 @@
+uart.c:68:6:uartInit	0	static
+uart.c:80:6:uartObjectInit	0	static
+uart.c:100:6:uartStart	16	static
+uart.c:121:6:uartStop	16	static
+uart.c:147:6:uartStartSend	16	static
+uart.c:175:6:uartStartSendI	16	static
+uart.c:201:8:uartStopSend	16	static
+uart.c:232:8:uartStopSendI	8	static
+uart.c:257:6:uartStartReceive	16	static
+uart.c:285:6:uartStartReceiveI	16	static
+uart.c:311:8:uartStopReceive	16	static
+uart.c:343:8:uartStopReceiveI	8	static

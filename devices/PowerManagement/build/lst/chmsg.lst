@@ -1,0 +1,219 @@
+ARM GAS  /tmp/cckojtVW.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chmsg.c"
+  17              		.section	.text.chMsgSend,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	chMsgSend
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	chMsgSend, %function
+  24              	chMsgSend:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 154B     		ldr	r3, .L7
+  28 0002 70B5     		push	{r4, r5, r6, lr}
+  29 0004 0546     		mov	r5, r0
+  30 0006 0E46     		mov	r6, r1
+  31 0008 9C69     		ldr	r4, [r3, #24]
+  32 000a 00B3     		cbz	r0, .L5
+  33              	.L2:
+  34 000c 2023     		movs	r3, #32
+  35              	@ 80 "../../../ChibiOS/os/kernel/src/chmsg.c" 1
+  36 000e 83F31188 		msr     BASEPRI, r3
+  37              	@ 0 "" 2
+  38              		.thumb
+  39 0012 FFF7FEFF 		bl	dbg_check_lock
+  40 0016 05F13002 		add	r2, r5, #48
+  41 001a 95F82010 		ldrb	r1, [r5, #32]	@ zero_extendqisi2
+  42 001e A262     		str	r2, [r4, #40]
+  43 0020 6B6B     		ldr	r3, [r5, #52]
+  44 0022 A663     		str	r6, [r4, #56]
+  45 0024 0C29     		cmp	r1, #12
+  46 0026 84E80C00 		stmia	r4, {r2, r3}
+  47 002a 6C63     		str	r4, [r5, #52]
+  48 002c 1C60     		str	r4, [r3]
+  49 002e 0AD0     		beq	.L6
+  50              	.L3:
+  51 0030 0A20     		movs	r0, #10
+  52 0032 FFF7FEFF 		bl	chSchGoSleepS
+  53 0036 A46A     		ldr	r4, [r4, #40]
+  54 0038 FFF7FEFF 		bl	dbg_check_unlock
+  55 003c 0023     		movs	r3, #0
+  56              	@ 88 "../../../ChibiOS/os/kernel/src/chmsg.c" 1
+  57 003e 83F31188 		msr     BASEPRI, r3
+ARM GAS  /tmp/cckojtVW.s 			page 2
+
+
+  58              	@ 0 "" 2
+  59              		.thumb
+  60 0042 2046     		mov	r0, r4
+  61 0044 70BD     		pop	{r4, r5, r6, pc}
+  62              	.L6:
+  63 0046 2846     		mov	r0, r5
+  64 0048 FFF7FEFF 		bl	chSchReadyI
+  65 004c F0E7     		b	.L3
+  66              	.L5:
+  67 004e 0348     		ldr	r0, .L7+4
+  68 0050 FFF7FEFF 		bl	chDbgPanic
+  69 0054 DAE7     		b	.L2
+  70              	.L8:
+  71 0056 00BF     		.align	2
+  72              	.L7:
+  73 0058 00000000 		.word	rlist
+  74 005c 00000000 		.word	.LC0
+  75              		.size	chMsgSend, .-chMsgSend
+  76              		.section	.text.chMsgWait,"ax",%progbits
+  77              		.align	2
+  78              		.p2align 4,,15
+  79              		.global	chMsgWait
+  80              		.thumb
+  81              		.thumb_func
+  82              		.type	chMsgWait, %function
+  83              	chMsgWait:
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86 0000 38B5     		push	{r3, r4, r5, lr}
+  87 0002 2023     		movs	r3, #32
+  88              	@ 109 "../../../ChibiOS/os/kernel/src/chmsg.c" 1
+  89 0004 83F31188 		msr     BASEPRI, r3
+  90              	@ 0 "" 2
+  91              		.thumb
+  92 0008 0E4D     		ldr	r5, .L12
+  93 000a FFF7FEFF 		bl	dbg_check_lock
+  94 000e AA69     		ldr	r2, [r5, #24]
+  95 0010 1346     		mov	r3, r2
+  96 0012 53F8304F 		ldr	r4, [r3, #48]!
+  97 0016 9C42     		cmp	r4, r3
+  98 0018 0CD0     		beq	.L11
+  99              	.L10:
+ 100 001a 2168     		ldr	r1, [r4]
+ 101 001c 1163     		str	r1, [r2, #48]
+ 102 001e 0B22     		movs	r2, #11
+ 103 0020 4B60     		str	r3, [r1, #4]
+ 104 0022 84F82020 		strb	r2, [r4, #32]
+ 105 0026 FFF7FEFF 		bl	dbg_check_unlock
+ 106 002a 0023     		movs	r3, #0
+ 107              	@ 114 "../../../ChibiOS/os/kernel/src/chmsg.c" 1
+ 108 002c 83F31188 		msr     BASEPRI, r3
+ 109              	@ 0 "" 2
+ 110              		.thumb
+ 111 0030 2046     		mov	r0, r4
+ 112 0032 38BD     		pop	{r3, r4, r5, pc}
+ 113              	.L11:
+ 114 0034 0C20     		movs	r0, #12
+ARM GAS  /tmp/cckojtVW.s 			page 3
+
+
+ 115 0036 FFF7FEFF 		bl	chSchGoSleepS
+ 116 003a AA69     		ldr	r2, [r5, #24]
+ 117 003c 146B     		ldr	r4, [r2, #48]
+ 118 003e 02F13003 		add	r3, r2, #48
+ 119 0042 EAE7     		b	.L10
+ 120              	.L13:
+ 121              		.align	2
+ 122              	.L12:
+ 123 0044 00000000 		.word	rlist
+ 124              		.size	chMsgWait, .-chMsgWait
+ 125 0048 AFF30080 		.section	.text.chMsgRelease,"ax",%progbits
+ 125      AFF30080 
+ 126              		.align	2
+ 127              		.p2align 4,,15
+ 128              		.global	chMsgRelease
+ 129              		.thumb
+ 130              		.thumb_func
+ 131              		.type	chMsgRelease, %function
+ 132              	chMsgRelease:
+ 133              		@ args = 0, pretend = 0, frame = 0
+ 134              		@ frame_needed = 0, uses_anonymous_args = 0
+ 135 0000 38B5     		push	{r3, r4, r5, lr}
+ 136 0002 0446     		mov	r4, r0
+ 137 0004 0D46     		mov	r5, r1
+ 138 0006 2023     		movs	r3, #32
+ 139              	@ 130 "../../../ChibiOS/os/kernel/src/chmsg.c" 1
+ 140 0008 83F31188 		msr     BASEPRI, r3
+ 141              	@ 0 "" 2
+ 142              		.thumb
+ 143 000c FFF7FEFF 		bl	dbg_check_lock
+ 144 0010 94F82030 		ldrb	r3, [r4, #32]	@ zero_extendqisi2
+ 145 0014 0B2B     		cmp	r3, #11
+ 146 0016 02D0     		beq	.L15
+ 147 0018 0648     		ldr	r0, .L19
+ 148 001a FFF7FEFF 		bl	chDbgPanic
+ 149              	.L15:
+ 150 001e 2046     		mov	r0, r4
+ 151 0020 2946     		mov	r1, r5
+ 152 0022 FFF7FEFF 		bl	chSchWakeupS
+ 153 0026 FFF7FEFF 		bl	dbg_check_unlock
+ 154 002a 0023     		movs	r3, #0
+ 155              	@ 134 "../../../ChibiOS/os/kernel/src/chmsg.c" 1
+ 156 002c 83F31188 		msr     BASEPRI, r3
+ 157              	@ 0 "" 2
+ 158              		.thumb
+ 159 0030 38BD     		pop	{r3, r4, r5, pc}
+ 160              	.L20:
+ 161 0032 00BF     		.align	2
+ 162              	.L19:
+ 163 0034 10000000 		.word	.LC1
+ 164              		.size	chMsgRelease, .-chMsgRelease
+ 165 0038 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 165      AFF30080 
+ 166              		.align	2
+ 167              	.LC0:
+ 168 0000 2263684D 		.ascii	"\"chMsgSend\"()\000"
+ 168      73675365 
+ARM GAS  /tmp/cckojtVW.s 			page 4
+
+
+ 168      6E642228 
+ 168      2900
+ 169 000e 0000     		.space	2
+ 170              	.LC1:
+ 171 0010 63684D73 		.ascii	"chMsgRelease(), #1\000"
+ 171      6752656C 
+ 171      65617365 
+ 171      28292C20 
+ 171      233100
+ 172 0023 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cckojtVW.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chmsg.c
+     /tmp/cckojtVW.s:18     .text.chMsgSend:00000000 $t
+     /tmp/cckojtVW.s:24     .text.chMsgSend:00000000 chMsgSend
+     /tmp/cckojtVW.s:73     .text.chMsgSend:00000058 $d
+     /tmp/cckojtVW.s:77     .text.chMsgWait:00000000 $t
+     /tmp/cckojtVW.s:83     .text.chMsgWait:00000000 chMsgWait
+     /tmp/cckojtVW.s:123    .text.chMsgWait:00000044 $d
+     /tmp/cckojtVW.s:126    .text.chMsgRelease:00000000 $t
+     /tmp/cckojtVW.s:132    .text.chMsgRelease:00000000 chMsgRelease
+     /tmp/cckojtVW.s:163    .text.chMsgRelease:00000034 $d
+     /tmp/cckojtVW.s:166    .rodata.str1.4:00000000 $d
+     /tmp/cckojtVW.s:125    .text.chMsgWait:00000048 $t
+     /tmp/cckojtVW.s:165    .text.chMsgRelease:00000038 $t
+
+UNDEFINED SYMBOLS
+dbg_check_lock
+chSchGoSleepS
+dbg_check_unlock
+chSchReadyI
+chDbgPanic
+rlist
+chSchWakeupS

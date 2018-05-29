@@ -1,0 +1,144 @@
+ARM GAS  /tmp/ccoRucJ6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"nvic.c"
+  17              		.section	.text.nvicEnableVector,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	nvicEnableVector
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	nvicEnableVector, %function
+  24              	nvicEnableVector:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 20F00302 		bic	r2, r0, #3
+  29 0004 02F16042 		add	r2, r2, #-536870912
+  30 0008 02F56142 		add	r2, r2, #57600
+  31 000c F0B4     		push	{r4, r5, r6, r7}
+  32 000e 4309     		lsrs	r3, r0, #5
+  33 0010 00F00304 		and	r4, r0, #3
+  34 0014 D2F80053 		ldr	r5, [r2, #768]
+  35 0018 E400     		lsls	r4, r4, #3
+  36 001a FF26     		movs	r6, #255
+  37 001c 9B00     		lsls	r3, r3, #2
+  38 001e A640     		lsls	r6, r6, r4
+  39 0020 03F16043 		add	r3, r3, #-536870912
+  40 0024 25EA0605 		bic	r5, r5, r6
+  41 0028 03F56143 		add	r3, r3, #57600
+  42 002c 0127     		movs	r7, #1
+  43 002e A140     		lsls	r1, r1, r4
+  44 0030 00F01F00 		and	r0, r0, #31
+  45 0034 07FA00F0 		lsl	r0, r7, r0
+  46 0038 45EA0104 		orr	r4, r5, r1
+  47 003c C2F80043 		str	r4, [r2, #768]
+  48 0040 C3F88001 		str	r0, [r3, #384]
+  49 0044 F0BC     		pop	{r4, r5, r6, r7}
+  50 0046 1860     		str	r0, [r3]
+  51 0048 7047     		bx	lr
+  52              		.size	nvicEnableVector, .-nvicEnableVector
+  53 004a 00BFAFF3 		.section	.text.nvicDisableVector,"ax",%progbits
+  53      0080
+  54              		.align	2
+  55              		.p2align 4,,15
+  56              		.global	nvicDisableVector
+ARM GAS  /tmp/ccoRucJ6.s 			page 2
+
+
+  57              		.thumb
+  58              		.thumb_func
+  59              		.type	nvicDisableVector, %function
+  60              	nvicDisableVector:
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 4109     		lsrs	r1, r0, #5
+  65 0002 30B4     		push	{r4, r5}
+  66 0004 2031     		adds	r1, r1, #32
+  67 0006 00F01F04 		and	r4, r0, #31
+  68 000a 0125     		movs	r5, #1
+  69 000c 0C4A     		ldr	r2, .L3
+  70 000e 20F00303 		bic	r3, r0, #3
+  71 0012 05FA04F4 		lsl	r4, r5, r4
+  72 0016 03F16043 		add	r3, r3, #-536870912
+  73 001a 42F82140 		str	r4, [r2, r1, lsl #2]
+  74 001e 03F56143 		add	r3, r3, #57600
+  75 0022 00F00300 		and	r0, r0, #3
+  76 0026 D3F80023 		ldr	r2, [r3, #768]
+  77 002a C000     		lsls	r0, r0, #3
+  78 002c FF21     		movs	r1, #255
+  79 002e 01FA00F0 		lsl	r0, r1, r0
+  80 0032 22EA0000 		bic	r0, r2, r0
+  81 0036 C3F80003 		str	r0, [r3, #768]
+  82 003a 30BC     		pop	{r4, r5}
+  83 003c 7047     		bx	lr
+  84              	.L4:
+  85 003e 00BF     		.align	2
+  86              	.L3:
+  87 0040 00E100E0 		.word	-536813312
+  88              		.size	nvicDisableVector, .-nvicDisableVector
+  89 0044 AFF30080 		.section	.text.nvicSetSystemHandlerPriority,"ax",%progbits
+  89      AFF30080 
+  89      AFF30080 
+  90              		.align	2
+  91              		.p2align 4,,15
+  92              		.global	nvicSetSystemHandlerPriority
+  93              		.thumb
+  94              		.thumb_func
+  95              		.type	nvicSetSystemHandlerPriority, %function
+  96              	nvicSetSystemHandlerPriority:
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99              		@ link register save eliminated.
+ 100 0000 20F00303 		bic	r3, r0, #3
+ 101 0004 03F16043 		add	r3, r3, #-536870912
+ 102 0008 03F56D43 		add	r3, r3, #60672
+ 103 000c 00F00300 		and	r0, r0, #3
+ 104 0010 10B4     		push	{r4}
+ 105 0012 C000     		lsls	r0, r0, #3
+ 106 0014 9A69     		ldr	r2, [r3, #24]
+ 107 0016 FF24     		movs	r4, #255
+ 108 0018 8440     		lsls	r4, r4, r0
+ 109 001a 22EA0402 		bic	r2, r2, r4
+ 110 001e 8140     		lsls	r1, r1, r0
+ 111 0020 0A43     		orrs	r2, r2, r1
+ARM GAS  /tmp/ccoRucJ6.s 			page 3
+
+
+ 112 0022 9A61     		str	r2, [r3, #24]
+ 113 0024 5DF8044B 		ldr	r4, [sp], #4
+ 114 0028 7047     		bx	lr
+ 115              		.size	nvicSetSystemHandlerPriority, .-nvicSetSystemHandlerPriority
+ 116 002a 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 116      0080
+ARM GAS  /tmp/ccoRucJ6.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 nvic.c
+     /tmp/ccoRucJ6.s:18     .text.nvicEnableVector:00000000 $t
+     /tmp/ccoRucJ6.s:24     .text.nvicEnableVector:00000000 nvicEnableVector
+     /tmp/ccoRucJ6.s:54     .text.nvicDisableVector:00000000 $t
+     /tmp/ccoRucJ6.s:60     .text.nvicDisableVector:00000000 nvicDisableVector
+     /tmp/ccoRucJ6.s:87     .text.nvicDisableVector:00000040 $d
+     /tmp/ccoRucJ6.s:90     .text.nvicSetSystemHandlerPriority:00000000 $t
+     /tmp/ccoRucJ6.s:96     .text.nvicSetSystemHandlerPriority:00000000 nvicSetSystemHandlerPriority
+     /tmp/ccoRucJ6.s:89     .text.nvicDisableVector:00000044 $t
+
+NO UNDEFINED SYMBOLS

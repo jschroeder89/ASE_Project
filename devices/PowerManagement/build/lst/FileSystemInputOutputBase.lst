@@ -1,0 +1,476 @@
+ARM GAS  /tmp/ccYPmWvD.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"FileSystemInputOutputBase.cpp"
+  17              		.section	.text._ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv, %function
+  24              	_ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv:
+  25              		@ args = 0, pretend = 0, frame = 24
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 10B5     		push	{r4, lr}
+  28 0002 0446     		mov	r4, r0
+  29 0004 0068     		ldr	r0, [r0]
+  30 0006 0368     		ldr	r3, [r0]
+  31 0008 86B0     		sub	sp, sp, #24
+  32 000a 0021     		movs	r1, #0
+  33 000c 1B6A     		ldr	r3, [r3, #32]
+  34 000e 9847     		blx	r3
+  35 0010 2068     		ldr	r0, [r4]
+  36 0012 0368     		ldr	r3, [r0]
+  37 0014 01A9     		add	r1, sp, #4
+  38 0016 5B68     		ldr	r3, [r3, #4]
+  39 0018 1422     		movs	r2, #20
+  40 001a 9847     		blx	r3
+  41 001c 1428     		cmp	r0, #20
+  42 001e 02D0     		beq	.L10
+  43 0020 0820     		movs	r0, #8
+  44              	.L2:
+  45 0022 06B0     		add	sp, sp, #24
+  46              		@ sp needed
+  47 0024 10BD     		pop	{r4, pc}
+  48              	.L10:
+  49 0026 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+  50 002a AA2B     		cmp	r3, #170
+  51 002c 02D0     		beq	.L11
+  52 002e 1020     		movs	r0, #16
+  53 0030 06B0     		add	sp, sp, #24
+  54              		@ sp needed
+  55 0032 10BD     		pop	{r4, pc}
+  56              	.L11:
+  57 0034 9DF80520 		ldrb	r2, [sp, #5]	@ zero_extendqisi2
+ARM GAS  /tmp/ccYPmWvD.s 			page 2
+
+
+  58 0038 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
+  59 003a 9A42     		cmp	r2, r3
+  60 003c 01D0     		beq	.L12
+  61 003e 0220     		movs	r0, #2
+  62 0040 EFE7     		b	.L2
+  63              	.L12:
+  64 0042 9DF80620 		ldrb	r2, [sp, #6]	@ zero_extendqisi2
+  65 0046 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+  66 0048 9A42     		cmp	r2, r3
+  67 004a 01D2     		bcs	.L13
+  68 004c 0420     		movs	r0, #4
+  69 004e E8E7     		b	.L2
+  70              	.L13:
+  71 0050 9DF80720 		ldrb	r2, [sp, #7]	@ zero_extendqisi2
+  72 0054 A379     		ldrb	r3, [r4, #6]	@ zero_extendqisi2
+  73 0056 9A42     		cmp	r2, r3
+  74 0058 01D0     		beq	.L14
+  75 005a 4020     		movs	r0, #64
+  76 005c E1E7     		b	.L2
+  77              	.L14:
+  78 005e E379     		ldrb	r3, [r4, #7]	@ zero_extendqisi2
+  79 0060 9DF80800 		ldrb	r0, [sp, #8]	@ zero_extendqisi2
+  80 0064 9842     		cmp	r0, r3
+  81 0066 34BF     		ite	cc
+  82 0068 8020     		movcc	r0, #128
+  83 006a 0020     		movcs	r0, #0
+  84 006c D9E7     		b	.L2
+  85              		.size	_ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv, .-_ZN5amiro12fileSystemIo16FileSystemI
+  86 006e 00BF     		.section	.text._ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb,"ax",%progbits
+  87              		.align	2
+  88              		.p2align 4,,15
+  89              		.global	_ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb
+  90              		.thumb
+  91              		.thumb_func
+  92              		.type	_ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb, %function
+  93              	_ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb:
+  94              		@ args = 0, pretend = 0, frame = 8
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
+  96 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  97 0004 82B0     		sub	sp, sp, #8
+  98 0006 0024     		movs	r4, #0
+  99 0008 1E46     		mov	r6, r3
+ 100 000a 0546     		mov	r5, r0
+ 101 000c 0F46     		mov	r7, r1
+ 102 000e 9046     		mov	r8, r2
+ 103 0010 ADF80440 		strh	r4, [sp, #4]	@ movhi
+ 104 0014 8DF80640 		strb	r4, [sp, #6]
+ 105 0018 002B     		cmp	r3, #0
+ 106 001a 49D1     		bne	.L16
+ 107              	.L19:
+ 108 001c 012F     		cmp	r7, #1
+ 109 001e 43D1     		bne	.L37
+ 110 0020 002E     		cmp	r6, #0
+ 111 0022 57D1     		bne	.L20
+ 112 0024 01AC     		add	r4, sp, #4
+ 113              	.L23:
+ 114 0026 2868     		ldr	r0, [r5]
+ARM GAS  /tmp/ccYPmWvD.s 			page 3
+
+
+ 115 0028 0368     		ldr	r3, [r0]
+ 116 002a 0221     		movs	r1, #2
+ 117 002c 1B6A     		ldr	r3, [r3, #32]
+ 118 002e 9847     		blx	r3
+ 119 0030 2868     		ldr	r0, [r5]
+ 120 0032 8DF80480 		strb	r8, [sp, #4]
+ 121 0036 0368     		ldr	r3, [r0]
+ 122 0038 2146     		mov	r1, r4
+ 123 003a 1B68     		ldr	r3, [r3]
+ 124 003c 0122     		movs	r2, #1
+ 125 003e 9847     		blx	r3
+ 126 0040 0128     		cmp	r0, #1
+ 127 0042 0746     		mov	r7, r0
+ 128 0044 03D0     		beq	.L38
+ 129              	.L21:
+ 130 0046 0820     		movs	r0, #8
+ 131              	.L17:
+ 132 0048 02B0     		add	sp, sp, #8
+ 133              		@ sp needed
+ 134 004a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 135              	.L38:
+ 136 004e B8F1010F 		cmp	r8, #1
+ 137 0052 14D0     		beq	.L24
+ 138 0054 B8F1020F 		cmp	r8, #2
+ 139 0058 26D1     		bne	.L37
+ 140 005a 2868     		ldr	r0, [r5]
+ 141 005c 0368     		ldr	r3, [r0]
+ 142 005e 0521     		movs	r1, #5
+ 143 0060 1B6A     		ldr	r3, [r3, #32]
+ 144 0062 9847     		blx	r3
+ 145 0064 0023     		movs	r3, #0
+ 146 0066 2868     		ldr	r0, [r5]
+ 147 0068 8DF80430 		strb	r3, [sp, #4]
+ 148 006c 0368     		ldr	r3, [r0]
+ 149 006e 3A46     		mov	r2, r7
+ 150 0070 1B68     		ldr	r3, [r3]
+ 151 0072 2146     		mov	r1, r4
+ 152 0074 9847     		blx	r3
+ 153 0076 0128     		cmp	r0, #1
+ 154 0078 E5D1     		bne	.L21
+ 155 007a 002E     		cmp	r6, #0
+ 156 007c 3BD0     		beq	.L28
+ 157              	.L24:
+ 158 007e 2868     		ldr	r0, [r5]
+ 159 0080 0368     		ldr	r3, [r0]
+ 160 0082 0221     		movs	r1, #2
+ 161 0084 1B6A     		ldr	r3, [r3, #32]
+ 162 0086 9847     		blx	r3
+ 163 0088 AA79     		ldrb	r2, [r5, #6]	@ zero_extendqisi2
+ 164 008a EB79     		ldrb	r3, [r5, #7]	@ zero_extendqisi2
+ 165 008c 2868     		ldr	r0, [r5]
+ 166 008e 8DF80520 		strb	r2, [sp, #5]
+ 167 0092 8DF80480 		strb	r8, [sp, #4]
+ 168 0096 8DF80630 		strb	r3, [sp, #6]
+ 169 009a 0368     		ldr	r3, [r0]
+ 170 009c 2146     		mov	r1, r4
+ 171 009e 1B68     		ldr	r3, [r3]
+ARM GAS  /tmp/ccYPmWvD.s 			page 4
+
+
+ 172 00a0 0322     		movs	r2, #3
+ 173 00a2 9847     		blx	r3
+ 174 00a4 0328     		cmp	r0, #3
+ 175 00a6 CED1     		bne	.L21
+ 176              	.L37:
+ 177 00a8 0020     		movs	r0, #0
+ 178 00aa 02B0     		add	sp, sp, #8
+ 179              		@ sp needed
+ 180 00ac BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 181              	.L16:
+ 182 00b0 0068     		ldr	r0, [r0]
+ 183 00b2 0368     		ldr	r3, [r0]
+ 184 00b4 2146     		mov	r1, r4
+ 185 00b6 1B6A     		ldr	r3, [r3, #32]
+ 186 00b8 02AC     		add	r4, sp, #8
+ 187 00ba 9847     		blx	r3
+ 188 00bc AA23     		movs	r3, #170
+ 189 00be 04F8043D 		strb	r3, [r4, #-4]!
+ 190 00c2 2868     		ldr	r0, [r5]
+ 191 00c4 0368     		ldr	r3, [r0]
+ 192 00c6 2146     		mov	r1, r4
+ 193 00c8 1B68     		ldr	r3, [r3]
+ 194 00ca 0122     		movs	r2, #1
+ 195 00cc 9847     		blx	r3
+ 196 00ce 0128     		cmp	r0, #1
+ 197 00d0 B9D1     		bne	.L21
+ 198 00d2 A3E7     		b	.L19
+ 199              	.L20:
+ 200 00d4 2868     		ldr	r0, [r5]
+ 201 00d6 0368     		ldr	r3, [r0]
+ 202 00d8 02AC     		add	r4, sp, #8
+ 203 00da 1B6A     		ldr	r3, [r3, #32]
+ 204 00dc 3946     		mov	r1, r7
+ 205 00de 9847     		blx	r3
+ 206 00e0 04F8047D 		strb	r7, [r4, #-4]!
+ 207 00e4 2868     		ldr	r0, [r5]
+ 208 00e6 0368     		ldr	r3, [r0]
+ 209 00e8 3A46     		mov	r2, r7
+ 210 00ea 1B68     		ldr	r3, [r3]
+ 211 00ec 2146     		mov	r1, r4
+ 212 00ee 9847     		blx	r3
+ 213 00f0 0128     		cmp	r0, #1
+ 214 00f2 A8D1     		bne	.L21
+ 215 00f4 97E7     		b	.L23
+ 216              	.L28:
+ 217 00f6 3046     		mov	r0, r6
+ 218 00f8 A6E7     		b	.L17
+ 219              		.size	_ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb, .-_ZN5amiro12fileSystemIo16File
+ 220 00fa 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FileSystemIoBase4initEv,"ax",%progbits
+ 220      0080
+ 221              		.align	2
+ 222              		.p2align 4,,15
+ 223              		.global	_ZN5amiro12fileSystemIo16FileSystemIoBase4initEv
+ 224              		.thumb
+ 225              		.thumb_func
+ 226              		.type	_ZN5amiro12fileSystemIo16FileSystemIoBase4initEv, %function
+ 227              	_ZN5amiro12fileSystemIo16FileSystemIoBase4initEv:
+ARM GAS  /tmp/ccYPmWvD.s 			page 5
+
+
+ 228              		@ args = 0, pretend = 0, frame = 24
+ 229              		@ frame_needed = 0, uses_anonymous_args = 0
+ 230 0000 70B5     		push	{r4, r5, r6, lr}
+ 231 0002 0446     		mov	r4, r0
+ 232 0004 0068     		ldr	r0, [r0]
+ 233 0006 0368     		ldr	r3, [r0]
+ 234 0008 86B0     		sub	sp, sp, #24
+ 235 000a 0021     		movs	r1, #0
+ 236 000c 1B6A     		ldr	r3, [r3, #32]
+ 237 000e 9847     		blx	r3
+ 238 0010 2068     		ldr	r0, [r4]
+ 239 0012 0368     		ldr	r3, [r0]
+ 240 0014 01A9     		add	r1, sp, #4
+ 241 0016 5B68     		ldr	r3, [r3, #4]
+ 242 0018 1422     		movs	r2, #20
+ 243 001a 9847     		blx	r3
+ 244 001c 1428     		cmp	r0, #20
+ 245 001e 02D0     		beq	.L49
+ 246 0020 0820     		movs	r0, #8
+ 247              	.L40:
+ 248 0022 06B0     		add	sp, sp, #24
+ 249              		@ sp needed
+ 250 0024 70BD     		pop	{r4, r5, r6, pc}
+ 251              	.L49:
+ 252 0026 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+ 253 002a AA2B     		cmp	r3, #170
+ 254 002c 02D0     		beq	.L50
+ 255 002e 1020     		movs	r0, #16
+ 256 0030 06B0     		add	sp, sp, #24
+ 257              		@ sp needed
+ 258 0032 70BD     		pop	{r4, r5, r6, pc}
+ 259              	.L50:
+ 260 0034 9DF80520 		ldrb	r2, [sp, #5]	@ zero_extendqisi2
+ 261 0038 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
+ 262 003a 9342     		cmp	r3, r2
+ 263 003c 01D0     		beq	.L51
+ 264 003e 0220     		movs	r0, #2
+ 265 0040 EFE7     		b	.L40
+ 266              	.L51:
+ 267 0042 6579     		ldrb	r5, [r4, #5]	@ zero_extendqisi2
+ 268 0044 9DF80620 		ldrb	r2, [sp, #6]	@ zero_extendqisi2
+ 269 0048 AA42     		cmp	r2, r5
+ 270 004a 18D2     		bcs	.L47
+ 271 004c 1946     		mov	r1, r3
+ 272 004e 0426     		movs	r6, #4
+ 273 0050 00E0     		b	.L42
+ 274              	.L52:
+ 275 0052 2179     		ldrb	r1, [r4, #4]	@ zero_extendqisi2
+ 276              	.L42:
+ 277 0054 2A46     		mov	r2, r5
+ 278 0056 0023     		movs	r3, #0
+ 279 0058 2046     		mov	r0, r4
+ 280 005a FFF7FEFF 		bl	_ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb
+ 281 005e 013D     		subs	r5, r5, #1
+ 282 0060 9DF80630 		ldrb	r3, [sp, #6]	@ zero_extendqisi2
+ 283 0064 EDB2     		uxtb	r5, r5
+ 284 0066 AB42     		cmp	r3, r5
+ARM GAS  /tmp/ccYPmWvD.s 			page 6
+
+
+ 285 0068 46EA0006 		orr	r6, r6, r0
+ 286 006c F1D3     		bcc	.L52
+ 287              	.L41:
+ 288 006e 9DF80720 		ldrb	r2, [sp, #7]	@ zero_extendqisi2
+ 289 0072 A379     		ldrb	r3, [r4, #6]	@ zero_extendqisi2
+ 290 0074 9A42     		cmp	r2, r3
+ 291 0076 04D0     		beq	.L43
+ 292 0078 46F04000 		orr	r0, r6, #64
+ 293 007c D1E7     		b	.L40
+ 294              	.L47:
+ 295 007e 0026     		movs	r6, #0
+ 296 0080 F5E7     		b	.L41
+ 297              	.L43:
+ 298 0082 E379     		ldrb	r3, [r4, #7]	@ zero_extendqisi2
+ 299 0084 9DF80820 		ldrb	r2, [sp, #8]	@ zero_extendqisi2
+ 300 0088 9A42     		cmp	r2, r3
+ 301 008a 02D3     		bcc	.L48
+ 302 008c 46F08000 		orr	r0, r6, #128
+ 303 0090 C7E7     		b	.L40
+ 304              	.L48:
+ 305 0092 3046     		mov	r0, r6
+ 306 0094 C5E7     		b	.L40
+ 307              		.size	_ZN5amiro12fileSystemIo16FileSystemIoBase4initEv, .-_ZN5amiro12fileSystemIo16FileSystemIoBas
+ 308 0096 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv,"ax",%progbits
+ 308      0080AFF3 
+ 308      0080
+ 309              		.align	2
+ 310              		.p2align 4,,15
+ 311              		.global	_ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv
+ 312              		.thumb
+ 313              		.thumb_func
+ 314              		.type	_ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv, %function
+ 315              	_ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv:
+ 316              		@ args = 0, pretend = 0, frame = 0
+ 317              		@ frame_needed = 0, uses_anonymous_args = 0
+ 318              		@ link register save eliminated.
+ 319 0000 0123     		movs	r3, #1
+ 320 0002 0179     		ldrb	r1, [r0, #4]	@ zero_extendqisi2
+ 321 0004 4279     		ldrb	r2, [r0, #5]	@ zero_extendqisi2
+ 322 0006 FFF7FEBF 		b	_ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb
+ 323              		.size	_ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv, .-_ZN5amiro12fileSystemIo16FileSys
+ 324 000a 00BFAFF3 		.section	.text._ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh,"ax",%progbits
+ 324      0080
+ 325              		.align	2
+ 326              		.p2align 4,,15
+ 327              		.global	_ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh
+ 328              		.thumb
+ 329              		.thumb_func
+ 330              		.type	_ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh, %function
+ 331              	_ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh:
+ 332              		@ args = 0, pretend = 0, frame = 8
+ 333              		@ frame_needed = 0, uses_anonymous_args = 0
+ 334 0000 70B5     		push	{r4, r5, r6, lr}
+ 335 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 336 0004 82B0     		sub	sp, sp, #8
+ 337 0006 0023     		movs	r3, #0
+ 338 0008 012D     		cmp	r5, #1
+ARM GAS  /tmp/ccYPmWvD.s 			page 7
+
+
+ 339 000a 0446     		mov	r4, r0
+ 340 000c ADF80430 		strh	r3, [sp, #4]	@ movhi
+ 341 0010 0E46     		mov	r6, r1
+ 342 0012 03D0     		beq	.L62
+ 343 0014 0820     		movs	r0, #8
+ 344 0016 0B70     		strb	r3, [r1]
+ 345 0018 02B0     		add	sp, sp, #8
+ 346              		@ sp needed
+ 347 001a 70BD     		pop	{r4, r5, r6, pc}
+ 348              	.L62:
+ 349 001c 0068     		ldr	r0, [r0]
+ 350 001e 0368     		ldr	r3, [r0]
+ 351 0020 0521     		movs	r1, #5
+ 352 0022 1B6A     		ldr	r3, [r3, #32]
+ 353 0024 9847     		blx	r3
+ 354 0026 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 355 0028 012B     		cmp	r3, #1
+ 356 002a 0ED9     		bls	.L58
+ 357 002c 2068     		ldr	r0, [r4]
+ 358 002e 0368     		ldr	r3, [r0]
+ 359 0030 01A9     		add	r1, sp, #4
+ 360 0032 5B68     		ldr	r3, [r3, #4]
+ 361 0034 0222     		movs	r2, #2
+ 362 0036 9847     		blx	r3
+ 363 0038 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+ 364 003c 3370     		strb	r3, [r6]
+ 365 003e 0228     		cmp	r0, #2
+ 366 0040 0CBF     		ite	eq
+ 367 0042 0020     		moveq	r0, #0
+ 368 0044 0820     		movne	r0, #8
+ 369 0046 02B0     		add	sp, sp, #8
+ 370              		@ sp needed
+ 371 0048 70BD     		pop	{r4, r5, r6, pc}
+ 372              	.L58:
+ 373 004a 2846     		mov	r0, r5
+ 374 004c 02B0     		add	sp, sp, #8
+ 375              		@ sp needed
+ 376 004e 70BD     		pop	{r4, r5, r6, pc}
+ 377              		.size	_ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh, .-_ZN5amiro12fileSystemIo16FileSys
+ 378              		.section	.text._ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh,"ax",%progbits
+ 379              		.align	2
+ 380              		.p2align 4,,15
+ 381              		.global	_ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh
+ 382              		.thumb
+ 383              		.thumb_func
+ 384              		.type	_ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh, %function
+ 385              	_ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh:
+ 386              		@ args = 0, pretend = 0, frame = 8
+ 387              		@ frame_needed = 0, uses_anonymous_args = 0
+ 388 0000 30B5     		push	{r4, r5, lr}
+ 389 0002 0579     		ldrb	r5, [r0, #4]	@ zero_extendqisi2
+ 390 0004 83B0     		sub	sp, sp, #12
+ 391 0006 012D     		cmp	r5, #1
+ 392 0008 0446     		mov	r4, r0
+ 393 000a 8DF80710 		strb	r1, [sp, #7]
+ 394 000e 02D0     		beq	.L70
+ 395 0010 0820     		movs	r0, #8
+ARM GAS  /tmp/ccYPmWvD.s 			page 8
+
+
+ 396 0012 03B0     		add	sp, sp, #12
+ 397              		@ sp needed
+ 398 0014 30BD     		pop	{r4, r5, pc}
+ 399              	.L70:
+ 400 0016 0068     		ldr	r0, [r0]
+ 401 0018 0368     		ldr	r3, [r0]
+ 402 001a 0521     		movs	r1, #5
+ 403 001c 1B6A     		ldr	r3, [r3, #32]
+ 404 001e 9847     		blx	r3
+ 405 0020 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
+ 406 0022 012B     		cmp	r3, #1
+ 407 0024 0CD9     		bls	.L67
+ 408 0026 2068     		ldr	r0, [r4]
+ 409 0028 0368     		ldr	r3, [r0]
+ 410 002a 2A46     		mov	r2, r5
+ 411 002c 1B68     		ldr	r3, [r3]
+ 412 002e 0DF10701 		add	r1, sp, #7
+ 413 0032 9847     		blx	r3
+ 414 0034 0128     		cmp	r0, #1
+ 415 0036 0CBF     		ite	eq
+ 416 0038 0020     		moveq	r0, #0
+ 417 003a 0820     		movne	r0, #8
+ 418 003c 03B0     		add	sp, sp, #12
+ 419              		@ sp needed
+ 420 003e 30BD     		pop	{r4, r5, pc}
+ 421              	.L67:
+ 422 0040 2846     		mov	r0, r5
+ 423 0042 03B0     		add	sp, sp, #12
+ 424              		@ sp needed
+ 425 0044 30BD     		pop	{r4, r5, pc}
+ 426              		.size	_ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh, .-_ZN5amiro12fileSystemIo16FileSyst
+ 427 0046 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 427      0080AFF3 
+ 427      0080
+ARM GAS  /tmp/ccYPmWvD.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 FileSystemInputOutputBase.cpp
+     /tmp/ccYPmWvD.s:18     .text._ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv:00000000 $t
+     /tmp/ccYPmWvD.s:24     .text._ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv
+     /tmp/ccYPmWvD.s:87     .text._ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb:00000000 $t
+     /tmp/ccYPmWvD.s:93     .text._ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase12initPreambleEhhb
+     /tmp/ccYPmWvD.s:221    .text._ZN5amiro12fileSystemIo16FileSystemIoBase4initEv:00000000 $t
+     /tmp/ccYPmWvD.s:227    .text._ZN5amiro12fileSystemIo16FileSystemIoBase4initEv:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase4initEv
+     /tmp/ccYPmWvD.s:309    .text._ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv:00000000 $t
+     /tmp/ccYPmWvD.s:315    .text._ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv
+     /tmp/ccYPmWvD.s:325    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh:00000000 $t
+     /tmp/ccYPmWvD.s:331    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh
+     /tmp/ccYPmWvD.s:379    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh:00000000 $t
+     /tmp/ccYPmWvD.s:385    .text._ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh:00000000 _ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,12 @@
+I2CDriver.hpp:30:13:amiro::I2CDriver::~I2CDriver()	0	static
+VI2CDriver.hpp:26:13:amiro::VI2CDriver::~VI2CDriver()	0	static
+VI2CDriver.cpp:22:1:virtual void amiro::VI2CDriver::start(const I2CConfig*)	0	static
+VI2CDriver.cpp:32:1:virtual void amiro::VI2CDriver::stop()	0	static
+VI2CDriver.cpp:40:1:virtual i2cflags_t amiro::VI2CDriver::getErrors()	8	static
+VI2CDriver.cpp:48:1:virtual msg_t amiro::VI2CDriver::masterTransmit(const amiro::I2CTxParams*, systime_t)	24	static
+VI2CDriver.cpp:66:1:virtual msg_t amiro::VI2CDriver::masterReceive(const amiro::I2CRxParams*, systime_t)	24	static
+I2CDriver.hpp:30:13:virtual amiro::I2CDriver::~I2CDriver()	8	static
+VI2CDriver.hpp:26:13:virtual amiro::VI2CDriver::~VI2CDriver()	8	static
+VI2CDriver.cpp:85:1:virtual void amiro::VI2CDriver::acquireBus()	0	static
+VI2CDriver.cpp:97:1:virtual void amiro::VI2CDriver::releaseBus()	0	static
+VI2CDriver.cpp:7:1:amiro::VI2CDriver::VI2CDriver(amiro::I2CMultiplexer*, uint8_t)	8	static

@@ -1,0 +1,31 @@
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 512; tprio_t = long unsigned int]	24	static
+chprintf.h:69:20:)	12	static
+MotorControl.cpp:19:1:amiro::MotorControl::MotorControl(PWMDriver*, amiro::MotorIncrements*, GPIO_TypeDef*, int, amiro::fileSystemIo::FSIODiWheelDrive*)	40	static
+MotorControl.cpp:78:5:int amiro::MotorControl::getCurrentRPMLeft()	0	static
+MotorControl.cpp:82:5:int amiro::MotorControl::getCurrentRPMRight()	0	static
+MotorControl.cpp:86:11:types::kinematic amiro::MotorControl::getCurrentVelocity()	12	static
+MotorControl.cpp:90:7:msg_t amiro::MotorControl::setWheelDiameterCorrectionFactor(float, bool_t)	24	static
+MotorControl.cpp:102:7:msg_t amiro::MotorControl::setActualWheelBaseDistance(float, bool_t)	16	static
+MotorControl.cpp:112:12:chibios_rt::EvtSource* amiro::MotorControl::getEventSource()	0	static
+MotorControl.cpp:116:6:void amiro::MotorControl::setTargetRPM(int32_t, int32_t)	24	static
+MotorControl.cpp:128:6:void amiro::MotorControl::setTargetSpeed(const types::kinematic&)	16	static
+MotorControl.cpp:214:6:void amiro::MotorControl::calibrate()	40	static
+MotorControl.cpp:246:6:void amiro::MotorControl::calibrateZiegler()	32	static
+MotorControl.cpp:361:6:void amiro::MotorControl::setLeftWheelSpeed(int, int)	32	static
+MotorControl.cpp:366:6:void amiro::MotorControl::setRightWheelSpeed(int, int)	32	static
+MotorControl.cpp:313:6:void amiro::MotorControl::PIDController()	48	static
+MotorControl.cpp:189:6:void amiro::MotorControl::controllerAndCalibrationLogic()	16	static
+MotorControl.cpp:372:5:int amiro::MotorControl::getRightWheelSpeed()	8	static
+MotorControl.cpp:377:5:int amiro::MotorControl::getLeftWheelSpeed()	8	static
+MotorControl.cpp:383:6:void amiro::MotorControl::updatePastVelocities()	4	static
+MotorControl.cpp:393:6:void amiro::MotorControl::updateDerivativeLastVelocities()	4	static
+MotorControl.cpp:406:5:int amiro::MotorControl::getNumberofSignChanges()	8	static
+MotorControl.cpp:430:6:void amiro::MotorControl::printGains()	16	static
+MotorControl.cpp:437:6:void amiro::MotorControl::resetGains()	8	static
+MotorControl.cpp:458:6:void amiro::MotorControl::calcVelocity()	16	static
+MotorControl.cpp:468:6:static void amiro::MotorControl::updateIncrements(amiro::MotorIncrements*, int32_t (&)[2], float (&)[2])	40	static
+MotorControl.cpp:499:6:static void amiro::MotorControl::updateSpeed(const float (&)[2], int32_t (&)[2], uint32_t)	24	static
+MotorControl.cpp:508:6:static void amiro::MotorControl::updateDistance(const float (&)[2], float (&)[2])	16	static
+MotorControl.cpp:516:6:void amiro::MotorControl::writePulseWidthModulation()	40	static
+MotorControl.cpp:136:7:virtual msg_t amiro::MotorControl::main()	32	static
+MotorControl.cpp:539:1:cpp)	0	static

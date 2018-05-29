@@ -1,0 +1,165 @@
+ARM GAS  /tmp/ccuEivzX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"evtimer.c"
+  15              		.section	.text.tmrcb,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.thumb
+  19              		.thumb_func
+  20              		.type	tmrcb, %function
+  21              	tmrcb:
+  22              		@ args = 0, pretend = 0, frame = 0
+  23              		@ frame_needed = 0, uses_anonymous_args = 0
+  24 0000 10B5     		push	{r4, lr}
+  25 0002 2023     		movs	r3, #32
+  26 0004 0446     		mov	r4, r0
+  27              	@ 31 "../../../ChibiOS/os/various/evtimer.c" 1
+  28 0006 83F31188 		msr     BASEPRI, r3
+  29              	@ 0 "" 2
+  30              		.thumb
+  31 000a FFF7FEFF 		bl	dbg_check_lock_from_isr
+  32 000e 04F11400 		add	r0, r4, #20
+  33 0012 0021     		movs	r1, #0
+  34 0014 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+  35 0018 2346     		mov	r3, r4
+  36 001a 2046     		mov	r0, r4
+  37 001c A169     		ldr	r1, [r4, #24]
+  38 001e 044A     		ldr	r2, .L2
+  39 0020 FFF7FEFF 		bl	chVTSetI
+  40 0024 FFF7FEFF 		bl	dbg_check_unlock_from_isr
+  41 0028 0023     		movs	r3, #0
+  42              	@ 34 "../../../ChibiOS/os/various/evtimer.c" 1
+  43 002a 83F31188 		msr     BASEPRI, r3
+  44              	@ 0 "" 2
+  45              		.thumb
+  46 002e 10BD     		pop	{r4, pc}
+  47              	.L3:
+  48              		.align	2
+  49              	.L2:
+  50 0030 00000000 		.word	tmrcb
+  51              		.size	tmrcb, .-tmrcb
+  52 0034 AFF30080 		.section	.text.evtStart,"ax",%progbits
+  52      AFF30080 
+  52      AFF30080 
+  53              		.align	2
+  54              		.p2align 4,,15
+  55              		.global	evtStart
+ARM GAS  /tmp/ccuEivzX.s 			page 2
+
+
+  56              		.thumb
+  57              		.thumb_func
+  58              		.type	evtStart, %function
+  59              	evtStart:
+  60              		@ args = 0, pretend = 0, frame = 0
+  61              		@ frame_needed = 0, uses_anonymous_args = 0
+  62 0000 10B5     		push	{r4, lr}
+  63 0002 2023     		movs	r3, #32
+  64 0004 0446     		mov	r4, r0
+  65              	@ 45 "../../../ChibiOS/os/various/evtimer.c" 1
+  66 0006 83F31188 		msr     BASEPRI, r3
+  67              	@ 0 "" 2
+  68              		.thumb
+  69 000a FFF7FEFF 		bl	dbg_check_lock
+  70 000e E368     		ldr	r3, [r4, #12]
+  71 0010 2BB1     		cbz	r3, .L7
+  72 0012 FFF7FEFF 		bl	dbg_check_unlock
+  73 0016 0023     		movs	r3, #0
+  74              	@ 50 "../../../ChibiOS/os/various/evtimer.c" 1
+  75 0018 83F31188 		msr     BASEPRI, r3
+  76              	@ 0 "" 2
+  77              		.thumb
+  78 001c 10BD     		pop	{r4, pc}
+  79              	.L7:
+  80 001e 2346     		mov	r3, r4
+  81 0020 2046     		mov	r0, r4
+  82 0022 A169     		ldr	r1, [r4, #24]
+  83 0024 044A     		ldr	r2, .L8
+  84 0026 FFF7FEFF 		bl	chVTSetI
+  85 002a FFF7FEFF 		bl	dbg_check_unlock
+  86 002e 0023     		movs	r3, #0
+  87              	@ 50 "../../../ChibiOS/os/various/evtimer.c" 1
+  88 0030 83F31188 		msr     BASEPRI, r3
+  89              	@ 0 "" 2
+  90              		.thumb
+  91 0034 10BD     		pop	{r4, pc}
+  92              	.L9:
+  93 0036 00BF     		.align	2
+  94              	.L8:
+  95 0038 00000000 		.word	tmrcb
+  96              		.size	evtStart, .-evtStart
+  97 003c AFF30080 		.section	.text.evtStop,"ax",%progbits
+  98              		.align	2
+  99              		.p2align 4,,15
+ 100              		.global	evtStop
+ 101              		.thumb
+ 102              		.thumb_func
+ 103              		.type	evtStop, %function
+ 104              	evtStop:
+ 105              		@ args = 0, pretend = 0, frame = 0
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107 0000 10B5     		push	{r4, lr}
+ 108 0002 2023     		movs	r3, #32
+ 109 0004 0446     		mov	r4, r0
+ 110              	@ 61 "../../../ChibiOS/os/various/evtimer.c" 1
+ 111 0006 83F31188 		msr     BASEPRI, r3
+ 112              	@ 0 "" 2
+ARM GAS  /tmp/ccuEivzX.s 			page 3
+
+
+ 113              		.thumb
+ 114 000a FFF7FEFF 		bl	dbg_check_lock
+ 115 000e E368     		ldr	r3, [r4, #12]
+ 116 0010 13B1     		cbz	r3, .L11
+ 117 0012 2046     		mov	r0, r4
+ 118 0014 FFF7FEFF 		bl	chVTResetI
+ 119              	.L11:
+ 120 0018 FFF7FEFF 		bl	dbg_check_unlock
+ 121 001c 0023     		movs	r3, #0
+ 122              	@ 61 "../../../ChibiOS/os/various/evtimer.c" 1
+ 123 001e 83F31188 		msr     BASEPRI, r3
+ 124              	@ 0 "" 2
+ 125              		.thumb
+ 126 0022 10BD     		pop	{r4, pc}
+ 127              		.size	evtStop, .-evtStop
+ 128 0024 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 128      AFF30080 
+ 128      AFF30080 
+ARM GAS  /tmp/ccuEivzX.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 evtimer.c
+     /tmp/ccuEivzX.s:16     .text.tmrcb:00000000 $t
+     /tmp/ccuEivzX.s:21     .text.tmrcb:00000000 tmrcb
+     /tmp/ccuEivzX.s:50     .text.tmrcb:00000030 $d
+     /tmp/ccuEivzX.s:53     .text.evtStart:00000000 $t
+     /tmp/ccuEivzX.s:59     .text.evtStart:00000000 evtStart
+     /tmp/ccuEivzX.s:95     .text.evtStart:00000038 $d
+     /tmp/ccuEivzX.s:98     .text.evtStop:00000000 $t
+     /tmp/ccuEivzX.s:104    .text.evtStop:00000000 evtStop
+     /tmp/ccuEivzX.s:52     .text.tmrcb:00000034 $t
+     /tmp/ccuEivzX.s:97     .text.evtStart:0000003c $t
+
+UNDEFINED SYMBOLS
+dbg_check_lock_from_isr
+chEvtBroadcastFlagsI
+chVTSetI
+dbg_check_unlock_from_isr
+dbg_check_lock
+dbg_check_unlock
+chVTResetI

@@ -1,0 +1,10 @@
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+DistControl.cpp:18:1:amiro::DistControl::DistControl(amiro::MotorControl*, amiro::MotorIncrements*)	24	static
+DistControl.cpp:49:5:int amiro::DistControl::getCurrentTargetDist()	8	static
+DistControl.cpp:53:5:int amiro::DistControl::getCurrentTargetAngle()	8	static
+DistControl.cpp:57:6:void amiro::DistControl::setTargetPosition(int32_t, int32_t, uint16_t)	24	static
+DistControl.cpp:77:6:bool amiro::DistControl::isActive()	0	static
+DistControl.cpp:81:6:void amiro::DistControl::deactivateController()	16	static
+DistControl.cpp:173:6:void amiro::DistControl::calcVelocities()	40	static
+DistControl.cpp:96:7:virtual msg_t amiro::DistControl::main()	40	static
+DistControl.cpp:224:1:cpp)	0	static

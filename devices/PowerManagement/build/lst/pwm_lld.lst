@@ -1,0 +1,429 @@
+ARM GAS  /tmp/ccvW34wp.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"pwm_lld.c"
+  17              		.section	.text.VectorB4,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	VectorB4
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	VectorB4, %function
+  24              	VectorB4:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 38B5     		push	{r3, r4, r5, lr}
+  28 0002 194D     		ldr	r5, .L27
+  29 0004 FFF7FEFF 		bl	dbg_check_enter_isr
+  30 0008 2B69     		ldr	r3, [r5, #16]
+  31 000a 1A69     		ldr	r2, [r3, #16]
+  32 000c DC68     		ldr	r4, [r3, #12]
+  33 000e 1440     		ands	r4, r4, r2
+  34 0010 A4B2     		uxth	r4, r4
+  35 0012 E2B2     		uxtb	r2, r4
+  36 0014 D243     		mvns	r2, r2
+  37 0016 1A61     		str	r2, [r3, #16]
+  38 0018 A307     		lsls	r3, r4, #30
+  39 001a 20D4     		bmi	.L23
+  40              	.L2:
+  41 001c 6007     		lsls	r0, r4, #29
+  42 001e 19D4     		bmi	.L24
+  43              	.L3:
+  44 0020 2107     		lsls	r1, r4, #28
+  45 0022 12D4     		bmi	.L25
+  46              	.L4:
+  47 0024 E206     		lsls	r2, r4, #27
+  48 0026 0BD4     		bmi	.L26
+  49              	.L5:
+  50 0028 E307     		lsls	r3, r4, #31
+  51 002a 03D5     		bpl	.L6
+  52 002c 6B68     		ldr	r3, [r5, #4]
+  53 002e 0E48     		ldr	r0, .L27
+  54 0030 9B68     		ldr	r3, [r3, #8]
+  55 0032 9847     		blx	r3
+  56              	.L6:
+  57 0034 FFF7FEFF 		bl	dbg_check_leave_isr
+ARM GAS  /tmp/ccvW34wp.s 			page 2
+
+
+  58 0038 BDE83840 		pop	{r3, r4, r5, lr}
+  59 003c FFF7FEBF 		b	_port_irq_epilogue
+  60              	.L26:
+  61 0040 6B68     		ldr	r3, [r5, #4]
+  62 0042 0948     		ldr	r0, .L27
+  63 0044 9B6A     		ldr	r3, [r3, #40]
+  64 0046 9847     		blx	r3
+  65 0048 EEE7     		b	.L5
+  66              	.L25:
+  67 004a 6B68     		ldr	r3, [r5, #4]
+  68 004c 0648     		ldr	r0, .L27
+  69 004e 1B6A     		ldr	r3, [r3, #32]
+  70 0050 9847     		blx	r3
+  71 0052 E7E7     		b	.L4
+  72              	.L24:
+  73 0054 6B68     		ldr	r3, [r5, #4]
+  74 0056 0448     		ldr	r0, .L27
+  75 0058 9B69     		ldr	r3, [r3, #24]
+  76 005a 9847     		blx	r3
+  77 005c E0E7     		b	.L3
+  78              	.L23:
+  79 005e 6B68     		ldr	r3, [r5, #4]
+  80 0060 2846     		mov	r0, r5
+  81 0062 1B69     		ldr	r3, [r3, #16]
+  82 0064 9847     		blx	r3
+  83 0066 D9E7     		b	.L2
+  84              	.L28:
+  85              		.align	2
+  86              	.L27:
+  87 0068 00000000 		.word	.LANCHOR0
+  88              		.size	VectorB4, .-VectorB4
+  89 006c AFF30080 		.section	.text.pwm_lld_init,"ax",%progbits
+  90              		.align	2
+  91              		.p2align 4,,15
+  92              		.global	pwm_lld_init
+  93              		.thumb
+  94              		.thumb_func
+  95              		.type	pwm_lld_init, %function
+  96              	pwm_lld_init:
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99 0000 10B5     		push	{r4, lr}
+ 100 0002 034C     		ldr	r4, .L30
+ 101 0004 2046     		mov	r0, r4
+ 102 0006 FFF7FEFF 		bl	pwmObjectInit
+ 103 000a 024B     		ldr	r3, .L30+4
+ 104 000c 2361     		str	r3, [r4, #16]
+ 105 000e 10BD     		pop	{r4, pc}
+ 106              	.L31:
+ 107              		.align	2
+ 108              	.L30:
+ 109 0010 00000000 		.word	.LANCHOR0
+ 110 0014 00040040 		.word	1073742848
+ 111              		.size	pwm_lld_init, .-pwm_lld_init
+ 112 0018 AFF30080 		.section	.text.pwm_lld_start,"ax",%progbits
+ 112      AFF30080 
+ 113              		.align	2
+ARM GAS  /tmp/ccvW34wp.s 			page 3
+
+
+ 114              		.p2align 4,,15
+ 115              		.global	pwm_lld_start
+ 116              		.thumb
+ 117              		.thumb_func
+ 118              		.type	pwm_lld_start, %function
+ 119              	pwm_lld_start:
+ 120              		@ args = 0, pretend = 0, frame = 0
+ 121              		@ frame_needed = 0, uses_anonymous_args = 0
+ 122 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 123 0002 012B     		cmp	r3, #1
+ 124 0004 70B5     		push	{r4, r5, r6, lr}
+ 125 0006 0446     		mov	r4, r0
+ 126 0008 5ED0     		beq	.L61
+ 127 000a 0369     		ldr	r3, [r0, #16]
+ 128 000c 0022     		movs	r2, #0
+ 129 000e 1A60     		str	r2, [r3]
+ 130 0010 5A63     		str	r2, [r3, #52]
+ 131 0012 9A63     		str	r2, [r3, #56]
+ 132 0014 DA63     		str	r2, [r3, #60]
+ 133 0016 1A64     		str	r2, [r3, #64]
+ 134 0018 5A62     		str	r2, [r3, #36]
+ 135              	.L35:
+ 136 001a 6268     		ldr	r2, [r4, #4]
+ 137 001c E168     		ldr	r1, [r4, #12]
+ 138 001e 1668     		ldr	r6, [r2]
+ 139 0020 B1FBF6F0 		udiv	r0, r1, r6
+ 140 0024 451E     		subs	r5, r0, #1
+ 141 0026 B5F5803F 		cmp	r5, #65536
+ 142 002a 03D2     		bcs	.L36
+ 143 002c 06FB00F0 		mul	r0, r6, r0
+ 144 0030 8142     		cmp	r1, r0
+ 145 0032 04D0     		beq	.L37
+ 146              	.L36:
+ 147 0034 3248     		ldr	r0, .L65
+ 148 0036 FFF7FEFF 		bl	chDbgPanic
+ 149 003a 6268     		ldr	r2, [r4, #4]
+ 150 003c 2369     		ldr	r3, [r4, #16]
+ 151              	.L37:
+ 152 003e 2489     		ldrh	r4, [r4, #8]
+ 153 0040 D168     		ldr	r1, [r2, #12]
+ 154 0042 D06A     		ldr	r0, [r2, #44]
+ 155 0044 013C     		subs	r4, r4, #1
+ 156 0046 01F00F01 		and	r1, r1, #15
+ 157 004a A4B2     		uxth	r4, r4
+ 158 004c ADB2     		uxth	r5, r5
+ 159 004e 0129     		cmp	r1, #1
+ 160 0050 9D62     		str	r5, [r3, #40]
+ 161 0052 DC62     		str	r4, [r3, #44]
+ 162 0054 5860     		str	r0, [r3, #4]
+ 163 0056 03D0     		beq	.L38
+ 164 0058 0229     		cmp	r1, #2
+ 165 005a 0CBF     		ite	eq
+ 166 005c 0321     		moveq	r1, #3
+ 167 005e 0021     		movne	r1, #0
+ 168              	.L38:
+ 169 0060 5069     		ldr	r0, [r2, #20]
+ 170 0062 00F00F00 		and	r0, r0, #15
+ARM GAS  /tmp/ccvW34wp.s 			page 4
+
+
+ 171 0066 0128     		cmp	r0, #1
+ 172 0068 2BD0     		beq	.L42
+ 173 006a 0228     		cmp	r0, #2
+ 174 006c 27D0     		beq	.L62
+ 175              	.L41:
+ 176 006e D069     		ldr	r0, [r2, #28]
+ 177 0070 00F00F00 		and	r0, r0, #15
+ 178 0074 0128     		cmp	r0, #1
+ 179 0076 1FD0     		beq	.L45
+ 180 0078 0228     		cmp	r0, #2
+ 181 007a 1BD0     		beq	.L63
+ 182              	.L44:
+ 183 007c 506A     		ldr	r0, [r2, #36]
+ 184 007e 00F00F00 		and	r0, r0, #15
+ 185 0082 0128     		cmp	r0, #1
+ 186 0084 03D0     		beq	.L48
+ 187 0086 0228     		cmp	r0, #2
+ 188 0088 03D1     		bne	.L47
+ 189 008a 41F40051 		orr	r1, r1, #8192
+ 190              	.L48:
+ 191 008e 41F48051 		orr	r1, r1, #4096
+ 192              	.L47:
+ 193 0092 106B     		ldr	r0, [r2, #48]
+ 194 0094 9268     		ldr	r2, [r2, #8]
+ 195 0096 1962     		str	r1, [r3, #32]
+ 196 0098 20F0FF01 		bic	r1, r0, #255
+ 197 009c 002A     		cmp	r2, #0
+ 198 009e 18BF     		it	ne
+ 199 00a0 41F00101 		orrne	r1, r1, #1
+ 200 00a4 0124     		movs	r4, #1
+ 201 00a6 0020     		movs	r0, #0
+ 202 00a8 8522     		movs	r2, #133
+ 203 00aa 5C61     		str	r4, [r3, #20]
+ 204 00ac 1861     		str	r0, [r3, #16]
+ 205 00ae D960     		str	r1, [r3, #12]
+ 206 00b0 1A60     		str	r2, [r3]
+ 207 00b2 70BD     		pop	{r4, r5, r6, pc}
+ 208              	.L63:
+ 209 00b4 41F40071 		orr	r1, r1, #512
+ 210              	.L45:
+ 211 00b8 41F48071 		orr	r1, r1, #256
+ 212 00bc DEE7     		b	.L44
+ 213              	.L62:
+ 214 00be 41F02001 		orr	r1, r1, #32
+ 215              	.L42:
+ 216 00c2 41F01001 		orr	r1, r1, #16
+ 217 00c6 D2E7     		b	.L41
+ 218              	.L61:
+ 219 00c8 0E4B     		ldr	r3, .L65+4
+ 220 00ca 9842     		cmp	r0, r3
+ 221 00cc 05D0     		beq	.L64
+ 222              	.L34:
+ 223 00ce 2369     		ldr	r3, [r4, #16]
+ 224 00d0 46F66802 		movw	r2, #26728
+ 225 00d4 9A61     		str	r2, [r3, #24]
+ 226 00d6 DA61     		str	r2, [r3, #28]
+ 227 00d8 9FE7     		b	.L35
+ARM GAS  /tmp/ccvW34wp.s 			page 5
+
+
+ 228              	.L64:
+ 229 00da 0B4B     		ldr	r3, .L65+8
+ 230 00dc 1A6C     		ldr	r2, [r3, #64]
+ 231 00de 42F00202 		orr	r2, r2, #2
+ 232 00e2 1A64     		str	r2, [r3, #64]
+ 233 00e4 196A     		ldr	r1, [r3, #32]
+ 234 00e6 0022     		movs	r2, #0
+ 235 00e8 41F00201 		orr	r1, r1, #2
+ 236 00ec 1962     		str	r1, [r3, #32]
+ 237 00ee 1D20     		movs	r0, #29
+ 238 00f0 1A62     		str	r2, [r3, #32]
+ 239 00f2 7021     		movs	r1, #112
+ 240 00f4 FFF7FEFF 		bl	nvicEnableVector
+ 241 00f8 044B     		ldr	r3, .L65+12
+ 242 00fa E360     		str	r3, [r4, #12]
+ 243 00fc E7E7     		b	.L34
+ 244              	.L66:
+ 245 00fe 00BF     		.align	2
+ 246              	.L65:
+ 247 0100 00000000 		.word	.LC0
+ 248 0104 00000000 		.word	.LANCHOR0
+ 249 0108 00380240 		.word	1073887232
+ 250 010c 00BD0105 		.word	84000000
+ 251              		.size	pwm_lld_start, .-pwm_lld_start
+ 252              		.section	.text.pwm_lld_stop,"ax",%progbits
+ 253              		.align	2
+ 254              		.p2align 4,,15
+ 255              		.global	pwm_lld_stop
+ 256              		.thumb
+ 257              		.thumb_func
+ 258              		.type	pwm_lld_stop, %function
+ 259              	pwm_lld_stop:
+ 260              		@ args = 0, pretend = 0, frame = 0
+ 261              		@ frame_needed = 0, uses_anonymous_args = 0
+ 262 0000 08B5     		push	{r3, lr}
+ 263 0002 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 264 0004 022B     		cmp	r3, #2
+ 265 0006 00D0     		beq	.L71
+ 266              	.L67:
+ 267 0008 08BD     		pop	{r3, pc}
+ 268              	.L71:
+ 269 000a 0849     		ldr	r1, .L72
+ 270 000c 0369     		ldr	r3, [r0, #16]
+ 271 000e 0022     		movs	r2, #0
+ 272 0010 8842     		cmp	r0, r1
+ 273 0012 1A60     		str	r2, [r3]
+ 274 0014 DA60     		str	r2, [r3, #12]
+ 275 0016 1A61     		str	r2, [r3, #16]
+ 276 0018 F6D1     		bne	.L67
+ 277 001a 1D20     		movs	r0, #29
+ 278 001c FFF7FEFF 		bl	nvicDisableVector
+ 279 0020 034B     		ldr	r3, .L72+4
+ 280 0022 1A6C     		ldr	r2, [r3, #64]
+ 281 0024 22F00202 		bic	r2, r2, #2
+ 282 0028 1A64     		str	r2, [r3, #64]
+ 283 002a EDE7     		b	.L67
+ 284              	.L73:
+ARM GAS  /tmp/ccvW34wp.s 			page 6
+
+
+ 285              		.align	2
+ 286              	.L72:
+ 287 002c 00000000 		.word	.LANCHOR0
+ 288 0030 00380240 		.word	1073887232
+ 289              		.size	pwm_lld_stop, .-pwm_lld_stop
+ 290 0034 AFF30080 		.section	.text.pwm_lld_enable_channel,"ax",%progbits
+ 290      AFF30080 
+ 290      AFF30080 
+ 291              		.align	2
+ 292              		.p2align 4,,15
+ 293              		.global	pwm_lld_enable_channel
+ 294              		.thumb
+ 295              		.thumb_func
+ 296              		.type	pwm_lld_enable_channel, %function
+ 297              	pwm_lld_enable_channel:
+ 298              		@ args = 0, pretend = 0, frame = 0
+ 299              		@ frame_needed = 0, uses_anonymous_args = 0
+ 300              		@ link register save eliminated.
+ 301 0000 10B4     		push	{r4}
+ 302 0002 4468     		ldr	r4, [r0, #4]
+ 303 0004 0369     		ldr	r3, [r0, #16]
+ 304 0006 04EBC100 		add	r0, r4, r1, lsl #3
+ 305 000a 01F10C04 		add	r4, r1, #12
+ 306 000e 0069     		ldr	r0, [r0, #16]
+ 307 0010 03EB8404 		add	r4, r3, r4, lsl #2
+ 308 0014 6260     		str	r2, [r4, #4]
+ 309 0016 48B1     		cbz	r0, .L74
+ 310 0018 0220     		movs	r0, #2
+ 311 001a DA68     		ldr	r2, [r3, #12]
+ 312 001c 00FA01F1 		lsl	r1, r0, r1
+ 313 0020 1142     		tst	r1, r2
+ 314 0022 03D1     		bne	.L74
+ 315 0024 0A43     		orrs	r2, r2, r1
+ 316 0026 C943     		mvns	r1, r1
+ 317 0028 DA60     		str	r2, [r3, #12]
+ 318 002a 1961     		str	r1, [r3, #16]
+ 319              	.L74:
+ 320 002c 5DF8044B 		ldr	r4, [sp], #4
+ 321 0030 7047     		bx	lr
+ 322              		.size	pwm_lld_enable_channel, .-pwm_lld_enable_channel
+ 323 0032 00BFAFF3 		.section	.text.pwm_lld_disable_channel,"ax",%progbits
+ 323      0080AFF3 
+ 323      0080AFF3 
+ 323      0080
+ 324              		.align	2
+ 325              		.p2align 4,,15
+ 326              		.global	pwm_lld_disable_channel
+ 327              		.thumb
+ 328              		.thumb_func
+ 329              		.type	pwm_lld_disable_channel, %function
+ 330              	pwm_lld_disable_channel:
+ 331              		@ args = 0, pretend = 0, frame = 0
+ 332              		@ frame_needed = 0, uses_anonymous_args = 0
+ 333              		@ link register save eliminated.
+ 334 0000 0369     		ldr	r3, [r0, #16]
+ 335 0002 01F10C02 		add	r2, r1, #12
+ 336 0006 03EB8202 		add	r2, r3, r2, lsl #2
+ARM GAS  /tmp/ccvW34wp.s 			page 7
+
+
+ 337 000a 0020     		movs	r0, #0
+ 338 000c 5060     		str	r0, [r2, #4]
+ 339 000e DA68     		ldr	r2, [r3, #12]
+ 340 0010 0220     		movs	r0, #2
+ 341 0012 00FA01F1 		lsl	r1, r0, r1
+ 342 0016 22EA0101 		bic	r1, r2, r1
+ 343 001a D960     		str	r1, [r3, #12]
+ 344 001c 7047     		bx	lr
+ 345              		.size	pwm_lld_disable_channel, .-pwm_lld_disable_channel
+ 346              		.global	PWMD3
+ 347              		.section	.bss.PWMD3,"aw",%nobits
+ 348              		.align	2
+ 349              		.set	.LANCHOR0,. + 0
+ 350              		.type	PWMD3, %object
+ 351              		.size	PWMD3, 20
+ 352              	PWMD3:
+ 353 0000 00000000 		.space	20
+ 353      00000000 
+ 353      00000000 
+ 353      00000000 
+ 353      00000000 
+ 354              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 355              		.align	2
+ 356              	.LC0:
+ 357 0000 70776D5F 		.ascii	"pwm_lld_start(), #1\000"
+ 357      6C6C645F 
+ 357      73746172 
+ 357      7428292C 
+ 357      20233100 
+ 358              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccvW34wp.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 pwm_lld.c
+     /tmp/ccvW34wp.s:18     .text.VectorB4:00000000 $t
+     /tmp/ccvW34wp.s:24     .text.VectorB4:00000000 VectorB4
+     /tmp/ccvW34wp.s:87     .text.VectorB4:00000068 $d
+     /tmp/ccvW34wp.s:90     .text.pwm_lld_init:00000000 $t
+     /tmp/ccvW34wp.s:96     .text.pwm_lld_init:00000000 pwm_lld_init
+     /tmp/ccvW34wp.s:109    .text.pwm_lld_init:00000010 $d
+     /tmp/ccvW34wp.s:113    .text.pwm_lld_start:00000000 $t
+     /tmp/ccvW34wp.s:119    .text.pwm_lld_start:00000000 pwm_lld_start
+     /tmp/ccvW34wp.s:247    .text.pwm_lld_start:00000100 $d
+     /tmp/ccvW34wp.s:253    .text.pwm_lld_stop:00000000 $t
+     /tmp/ccvW34wp.s:259    .text.pwm_lld_stop:00000000 pwm_lld_stop
+     /tmp/ccvW34wp.s:287    .text.pwm_lld_stop:0000002c $d
+     /tmp/ccvW34wp.s:291    .text.pwm_lld_enable_channel:00000000 $t
+     /tmp/ccvW34wp.s:297    .text.pwm_lld_enable_channel:00000000 pwm_lld_enable_channel
+     /tmp/ccvW34wp.s:324    .text.pwm_lld_disable_channel:00000000 $t
+     /tmp/ccvW34wp.s:330    .text.pwm_lld_disable_channel:00000000 pwm_lld_disable_channel
+     /tmp/ccvW34wp.s:352    .bss.PWMD3:00000000 PWMD3
+     /tmp/ccvW34wp.s:348    .bss.PWMD3:00000000 $d
+     /tmp/ccvW34wp.s:355    .rodata.str1.4:00000000 $d
+     /tmp/ccvW34wp.s:89     .text.VectorB4:0000006c $t
+     /tmp/ccvW34wp.s:112    .text.pwm_lld_init:00000018 $t
+     /tmp/ccvW34wp.s:290    .text.pwm_lld_stop:00000034 $t
+
+UNDEFINED SYMBOLS
+dbg_check_enter_isr
+dbg_check_leave_isr
+_port_irq_epilogue
+pwmObjectInit
+chDbgPanic
+nvicEnableVector
+nvicDisableVector

@@ -1,0 +1,248 @@
+ARM GAS  /tmp/ccHtJ5nz.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"HWSPIDriver.cpp"
+  15              		.section	.text._ZN5amiro11HWSPIDriverD2Ev,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro11HWSPIDriverD2Ev
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro11HWSPIDriverD2Ev, %function
+  22              	_ZN5amiro11HWSPIDriverD2Ev:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 014B     		ldr	r3, .L2
+  27 0002 0360     		str	r3, [r0]
+  28 0004 7047     		bx	lr
+  29              	.L3:
+  30 0006 00BF     		.align	2
+  31              	.L2:
+  32 0008 08000000 		.word	.LANCHOR0+8
+  33              		.size	_ZN5amiro11HWSPIDriverD2Ev, .-_ZN5amiro11HWSPIDriverD2Ev
+  34              		.global	_ZN5amiro11HWSPIDriverD1Ev
+  35              		.thumb_set _ZN5amiro11HWSPIDriverD1Ev,_ZN5amiro11HWSPIDriverD2Ev
+  36 000c AFF30080 		.section	.text._ZN5amiro11HWSPIDriverD0Ev,"ax",%progbits
+  37              		.align	2
+  38              		.p2align 4,,15
+  39              		.global	_ZN5amiro11HWSPIDriverD0Ev
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	_ZN5amiro11HWSPIDriverD0Ev, %function
+  43              	_ZN5amiro11HWSPIDriverD0Ev:
+  44              		@ args = 0, pretend = 0, frame = 0
+  45              		@ frame_needed = 0, uses_anonymous_args = 0
+  46 0000 10B5     		push	{r4, lr}
+  47 0002 034B     		ldr	r3, .L5
+  48 0004 0446     		mov	r4, r0
+  49 0006 0360     		str	r3, [r0]
+  50 0008 FFF7FEFF 		bl	_ZdlPv
+  51 000c 2046     		mov	r0, r4
+  52 000e 10BD     		pop	{r4, pc}
+  53              	.L6:
+  54              		.align	2
+  55              	.L5:
+  56 0010 08000000 		.word	.LANCHOR0+8
+  57              		.size	_ZN5amiro11HWSPIDriverD0Ev, .-_ZN5amiro11HWSPIDriverD0Ev
+ARM GAS  /tmp/ccHtJ5nz.s 			page 2
+
+
+  58 0014 AFF30080 		.section	.text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig,"ax",%progbits
+  58      AFF30080 
+  58      AFF30080 
+  59              		.align	2
+  60              		.p2align 4,,15
+  61              		.global	_ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	_ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig, %function
+  65              	_ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68              		@ link register save eliminated.
+  69 0000 10B4     		push	{r4}
+  70 0002 034C     		ldr	r4, .L8
+  71 0004 4160     		str	r1, [r0, #4]
+  72 0006 0460     		str	r4, [r0]
+  73 0008 8260     		str	r2, [r0, #8]
+  74 000a 5DF8044B 		ldr	r4, [sp], #4
+  75 000e 7047     		bx	lr
+  76              	.L9:
+  77              		.align	2
+  78              	.L8:
+  79 0010 08000000 		.word	.LANCHOR0+8
+  80              		.size	_ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig, .-_ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9S
+  81              		.global	_ZN5amiro11HWSPIDriverC1EP9SPIDriverPK9SPIConfig
+  82              		.thumb_set _ZN5amiro11HWSPIDriverC1EP9SPIDriverPK9SPIConfig,_ZN5amiro11HWSPIDriverC2EP9SPIDriverPK
+  83 0014 AFF30080 		.section	.text._ZN5amiro11HWSPIDriver8exchangeEPhPKhj,"ax",%progbits
+  83      AFF30080 
+  83      AFF30080 
+  84              		.align	2
+  85              		.p2align 4,,15
+  86              		.global	_ZN5amiro11HWSPIDriver8exchangeEPhPKhj
+  87              		.thumb
+  88              		.thumb_func
+  89              		.type	_ZN5amiro11HWSPIDriver8exchangeEPhPKhj, %function
+  90              	_ZN5amiro11HWSPIDriver8exchangeEPhPKhj:
+  91              		@ args = 0, pretend = 0, frame = 0
+  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  93 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  94 0002 0446     		mov	r4, r0
+  95 0004 4068     		ldr	r0, [r0, #4]
+  96 0006 1F46     		mov	r7, r3
+  97 0008 1646     		mov	r6, r2
+  98 000a 0D46     		mov	r5, r1
+  99 000c FFF7FEFF 		bl	spiAcquireBus
+ 100 0010 A168     		ldr	r1, [r4, #8]
+ 101 0012 6068     		ldr	r0, [r4, #4]
+ 102 0014 FFF7FEFF 		bl	spiStart
+ 103 0018 6068     		ldr	r0, [r4, #4]
+ 104 001a FFF7FEFF 		bl	spiSelect
+ 105 001e 3946     		mov	r1, r7
+ 106 0020 3246     		mov	r2, r6
+ 107 0022 2B46     		mov	r3, r5
+ 108 0024 6068     		ldr	r0, [r4, #4]
+ 109 0026 FFF7FEFF 		bl	spiExchange
+ 110 002a 6068     		ldr	r0, [r4, #4]
+ARM GAS  /tmp/ccHtJ5nz.s 			page 3
+
+
+ 111 002c FFF7FEFF 		bl	spiUnselect
+ 112 0030 6068     		ldr	r0, [r4, #4]
+ 113 0032 BDE8F840 		pop	{r3, r4, r5, r6, r7, lr}
+ 114 0036 FFF7FEBF 		b	spiReleaseBus
+ 115              		.size	_ZN5amiro11HWSPIDriver8exchangeEPhPKhj, .-_ZN5amiro11HWSPIDriver8exchangeEPhPKhj
+ 116 003a 00BFAFF3 		.section	.text._ZN5amiro11HWSPIDriver4readEPhj,"ax",%progbits
+ 116      0080
+ 117              		.align	2
+ 118              		.p2align 4,,15
+ 119              		.global	_ZN5amiro11HWSPIDriver4readEPhj
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.type	_ZN5amiro11HWSPIDriver4readEPhj, %function
+ 123              	_ZN5amiro11HWSPIDriver4readEPhj:
+ 124              		@ args = 0, pretend = 0, frame = 0
+ 125              		@ frame_needed = 0, uses_anonymous_args = 0
+ 126 0000 70B5     		push	{r4, r5, r6, lr}
+ 127 0002 0446     		mov	r4, r0
+ 128 0004 4068     		ldr	r0, [r0, #4]
+ 129 0006 1646     		mov	r6, r2
+ 130 0008 0D46     		mov	r5, r1
+ 131 000a FFF7FEFF 		bl	spiAcquireBus
+ 132 000e A168     		ldr	r1, [r4, #8]
+ 133 0010 6068     		ldr	r0, [r4, #4]
+ 134 0012 FFF7FEFF 		bl	spiStart
+ 135 0016 6068     		ldr	r0, [r4, #4]
+ 136 0018 FFF7FEFF 		bl	spiSelect
+ 137 001c 3146     		mov	r1, r6
+ 138 001e 2A46     		mov	r2, r5
+ 139 0020 6068     		ldr	r0, [r4, #4]
+ 140 0022 FFF7FEFF 		bl	spiReceive
+ 141 0026 6068     		ldr	r0, [r4, #4]
+ 142 0028 FFF7FEFF 		bl	spiUnselect
+ 143 002c 6068     		ldr	r0, [r4, #4]
+ 144 002e BDE87040 		pop	{r4, r5, r6, lr}
+ 145 0032 FFF7FEBF 		b	spiReleaseBus
+ 146              		.size	_ZN5amiro11HWSPIDriver4readEPhj, .-_ZN5amiro11HWSPIDriver4readEPhj
+ 147 0036 00BFAFF3 		.section	.text._ZN5amiro11HWSPIDriver5writeEPKhj,"ax",%progbits
+ 147      0080AFF3 
+ 147      0080
+ 148              		.align	2
+ 149              		.p2align 4,,15
+ 150              		.global	_ZN5amiro11HWSPIDriver5writeEPKhj
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.type	_ZN5amiro11HWSPIDriver5writeEPKhj, %function
+ 154              	_ZN5amiro11HWSPIDriver5writeEPKhj:
+ 155              		@ args = 0, pretend = 0, frame = 0
+ 156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 157 0000 70B5     		push	{r4, r5, r6, lr}
+ 158 0002 0446     		mov	r4, r0
+ 159 0004 4068     		ldr	r0, [r0, #4]
+ 160 0006 1646     		mov	r6, r2
+ 161 0008 0D46     		mov	r5, r1
+ 162 000a FFF7FEFF 		bl	spiAcquireBus
+ 163 000e A168     		ldr	r1, [r4, #8]
+ 164 0010 6068     		ldr	r0, [r4, #4]
+ARM GAS  /tmp/ccHtJ5nz.s 			page 4
+
+
+ 165 0012 FFF7FEFF 		bl	spiStart
+ 166 0016 6068     		ldr	r0, [r4, #4]
+ 167 0018 FFF7FEFF 		bl	spiSelect
+ 168 001c 3146     		mov	r1, r6
+ 169 001e 2A46     		mov	r2, r5
+ 170 0020 6068     		ldr	r0, [r4, #4]
+ 171 0022 FFF7FEFF 		bl	spiSend
+ 172 0026 6068     		ldr	r0, [r4, #4]
+ 173 0028 FFF7FEFF 		bl	spiUnselect
+ 174 002c 6068     		ldr	r0, [r4, #4]
+ 175 002e BDE87040 		pop	{r4, r5, r6, lr}
+ 176 0032 FFF7FEBF 		b	spiReleaseBus
+ 177              		.size	_ZN5amiro11HWSPIDriver5writeEPKhj, .-_ZN5amiro11HWSPIDriver5writeEPKhj
+ 178              		.global	_ZTVN5amiro11HWSPIDriverE
+ 179 0036 00BFAFF3 		.section	.rodata._ZTVN5amiro11HWSPIDriverE,"a",%progbits
+ 179      0080AFF3 
+ 179      0080
+ 180              		.align	3
+ 181              		.set	.LANCHOR0,. + 0
+ 182              		.type	_ZTVN5amiro11HWSPIDriverE, %object
+ 183              		.size	_ZTVN5amiro11HWSPIDriverE, 16
+ 184              	_ZTVN5amiro11HWSPIDriverE:
+ 185 0000 00000000 		.word	0
+ 186 0004 00000000 		.word	0
+ 187 0008 00000000 		.word	_ZN5amiro11HWSPIDriverD1Ev
+ 188 000c 00000000 		.word	_ZN5amiro11HWSPIDriverD0Ev
+ 189              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccHtJ5nz.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 HWSPIDriver.cpp
+     /tmp/ccHtJ5nz.s:16     .text._ZN5amiro11HWSPIDriverD2Ev:00000000 $t
+     /tmp/ccHtJ5nz.s:22     .text._ZN5amiro11HWSPIDriverD2Ev:00000000 _ZN5amiro11HWSPIDriverD2Ev
+     /tmp/ccHtJ5nz.s:32     .text._ZN5amiro11HWSPIDriverD2Ev:00000008 $d
+     /tmp/ccHtJ5nz.s:22     .text._ZN5amiro11HWSPIDriverD2Ev:00000000 _ZN5amiro11HWSPIDriverD1Ev
+     /tmp/ccHtJ5nz.s:37     .text._ZN5amiro11HWSPIDriverD0Ev:00000000 $t
+     /tmp/ccHtJ5nz.s:43     .text._ZN5amiro11HWSPIDriverD0Ev:00000000 _ZN5amiro11HWSPIDriverD0Ev
+     /tmp/ccHtJ5nz.s:56     .text._ZN5amiro11HWSPIDriverD0Ev:00000010 $d
+     /tmp/ccHtJ5nz.s:59     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000000 $t
+     /tmp/ccHtJ5nz.s:65     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000000 _ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig
+     /tmp/ccHtJ5nz.s:79     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000010 $d
+     /tmp/ccHtJ5nz.s:65     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000000 _ZN5amiro11HWSPIDriverC1EP9SPIDriverPK9SPIConfig
+     /tmp/ccHtJ5nz.s:84     .text._ZN5amiro11HWSPIDriver8exchangeEPhPKhj:00000000 $t
+     /tmp/ccHtJ5nz.s:90     .text._ZN5amiro11HWSPIDriver8exchangeEPhPKhj:00000000 _ZN5amiro11HWSPIDriver8exchangeEPhPKhj
+     /tmp/ccHtJ5nz.s:117    .text._ZN5amiro11HWSPIDriver4readEPhj:00000000 $t
+     /tmp/ccHtJ5nz.s:123    .text._ZN5amiro11HWSPIDriver4readEPhj:00000000 _ZN5amiro11HWSPIDriver4readEPhj
+     /tmp/ccHtJ5nz.s:148    .text._ZN5amiro11HWSPIDriver5writeEPKhj:00000000 $t
+     /tmp/ccHtJ5nz.s:154    .text._ZN5amiro11HWSPIDriver5writeEPKhj:00000000 _ZN5amiro11HWSPIDriver5writeEPKhj
+     /tmp/ccHtJ5nz.s:184    .rodata._ZTVN5amiro11HWSPIDriverE:00000000 _ZTVN5amiro11HWSPIDriverE
+     /tmp/ccHtJ5nz.s:180    .rodata._ZTVN5amiro11HWSPIDriverE:00000000 $d
+     /tmp/ccHtJ5nz.s:36     .text._ZN5amiro11HWSPIDriverD2Ev:0000000c $t
+     /tmp/ccHtJ5nz.s:58     .text._ZN5amiro11HWSPIDriverD0Ev:00000014 $t
+     /tmp/ccHtJ5nz.s:83     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000014 $t
+
+UNDEFINED SYMBOLS
+_ZdlPv
+spiAcquireBus
+spiStart
+spiSelect
+spiExchange
+spiUnselect
+spiReleaseBus
+spiReceive
+spiSend

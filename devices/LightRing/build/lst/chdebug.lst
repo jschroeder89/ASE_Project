@@ -1,0 +1,726 @@
+ARM GAS  /tmp/ccruzQlA.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"chdebug.c"
+  15              		.section	.text.dbg_check_disable,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	dbg_check_disable
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	dbg_check_disable, %function
+  22              	dbg_check_disable:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 08B5     		push	{r3, lr}
+  26 0002 084B     		ldr	r3, .L5
+  27 0004 1B68     		ldr	r3, [r3]
+  28 0006 13B9     		cbnz	r3, .L2
+  29 0008 074B     		ldr	r3, .L5+4
+  30 000a 1B68     		ldr	r3, [r3]
+  31 000c 43B1     		cbz	r3, .L1
+  32              	.L2:
+  33 000e 074B     		ldr	r3, .L5+8
+  34 0010 074A     		ldr	r2, .L5+12
+  35 0012 1A60     		str	r2, [r3]
+  36 0014 FFF7FEFF 		bl	haltErrorCode
+  37 0018 BDE80840 		pop	{r3, lr}
+  38 001c FFF7FEBF 		b	port_halt
+  39              	.L1:
+  40 0020 08BD     		pop	{r3, pc}
+  41              	.L6:
+  42 0022 00BF     		.align	2
+  43              	.L5:
+  44 0024 00000000 		.word	.LANCHOR0
+  45 0028 00000000 		.word	.LANCHOR1
+  46 002c 00000000 		.word	.LANCHOR2
+  47 0030 00000000 		.word	.LC0
+  48              		.size	dbg_check_disable, .-dbg_check_disable
+  49 0034 AFF30080 		.section	.text.dbg_check_suspend,"ax",%progbits
+  49      AFF30080 
+  49      AFF30080 
+  50              		.align	2
+  51              		.p2align 4,,15
+  52              		.global	dbg_check_suspend
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	dbg_check_suspend, %function
+ARM GAS  /tmp/ccruzQlA.s 			page 2
+
+
+  56              	dbg_check_suspend:
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59 0000 08B5     		push	{r3, lr}
+  60 0002 084B     		ldr	r3, .L10
+  61 0004 1B68     		ldr	r3, [r3]
+  62 0006 13B9     		cbnz	r3, .L8
+  63 0008 074B     		ldr	r3, .L10+4
+  64 000a 1B68     		ldr	r3, [r3]
+  65 000c 43B1     		cbz	r3, .L7
+  66              	.L8:
+  67 000e 074B     		ldr	r3, .L10+8
+  68 0010 074A     		ldr	r2, .L10+12
+  69 0012 1A60     		str	r2, [r3]
+  70 0014 FFF7FEFF 		bl	haltErrorCode
+  71 0018 BDE80840 		pop	{r3, lr}
+  72 001c FFF7FEBF 		b	port_halt
+  73              	.L7:
+  74 0020 08BD     		pop	{r3, pc}
+  75              	.L11:
+  76 0022 00BF     		.align	2
+  77              	.L10:
+  78 0024 00000000 		.word	.LANCHOR0
+  79 0028 00000000 		.word	.LANCHOR1
+  80 002c 00000000 		.word	.LANCHOR2
+  81 0030 08000000 		.word	.LC1
+  82              		.size	dbg_check_suspend, .-dbg_check_suspend
+  83 0034 AFF30080 		.section	.text.dbg_check_enable,"ax",%progbits
+  83      AFF30080 
+  83      AFF30080 
+  84              		.align	2
+  85              		.p2align 4,,15
+  86              		.global	dbg_check_enable
+  87              		.thumb
+  88              		.thumb_func
+  89              		.type	dbg_check_enable, %function
+  90              	dbg_check_enable:
+  91              		@ args = 0, pretend = 0, frame = 0
+  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  93 0000 08B5     		push	{r3, lr}
+  94 0002 084B     		ldr	r3, .L15
+  95 0004 1B68     		ldr	r3, [r3]
+  96 0006 13B9     		cbnz	r3, .L13
+  97 0008 074B     		ldr	r3, .L15+4
+  98 000a 1B68     		ldr	r3, [r3]
+  99 000c 43B1     		cbz	r3, .L12
+ 100              	.L13:
+ 101 000e 074B     		ldr	r3, .L15+8
+ 102 0010 074A     		ldr	r2, .L15+12
+ 103 0012 1A60     		str	r2, [r3]
+ 104 0014 FFF7FEFF 		bl	haltErrorCode
+ 105 0018 BDE80840 		pop	{r3, lr}
+ 106 001c FFF7FEBF 		b	port_halt
+ 107              	.L12:
+ 108 0020 08BD     		pop	{r3, pc}
+ 109              	.L16:
+ 110 0022 00BF     		.align	2
+ARM GAS  /tmp/ccruzQlA.s 			page 3
+
+
+ 111              	.L15:
+ 112 0024 00000000 		.word	.LANCHOR0
+ 113 0028 00000000 		.word	.LANCHOR1
+ 114 002c 00000000 		.word	.LANCHOR2
+ 115 0030 10000000 		.word	.LC2
+ 116              		.size	dbg_check_enable, .-dbg_check_enable
+ 117 0034 AFF30080 		.section	.text.dbg_check_lock,"ax",%progbits
+ 117      AFF30080 
+ 117      AFF30080 
+ 118              		.align	2
+ 119              		.p2align 4,,15
+ 120              		.global	dbg_check_lock
+ 121              		.thumb
+ 122              		.thumb_func
+ 123              		.type	dbg_check_lock, %function
+ 124              	dbg_check_lock:
+ 125              		@ args = 0, pretend = 0, frame = 0
+ 126              		@ frame_needed = 0, uses_anonymous_args = 0
+ 127 0000 084B     		ldr	r3, .L25
+ 128 0002 10B5     		push	{r4, lr}
+ 129 0004 1B68     		ldr	r3, [r3]
+ 130 0006 084C     		ldr	r4, .L25+4
+ 131 0008 0BB9     		cbnz	r3, .L18
+ 132 000a 2368     		ldr	r3, [r4]
+ 133 000c 33B1     		cbz	r3, .L19
+ 134              	.L18:
+ 135 000e 074B     		ldr	r3, .L25+8
+ 136 0010 074A     		ldr	r2, .L25+12
+ 137 0012 1A60     		str	r2, [r3]
+ 138 0014 FFF7FEFF 		bl	haltErrorCode
+ 139 0018 FFF7FEFF 		bl	port_halt
+ 140              	.L19:
+ 141 001c 0123     		movs	r3, #1
+ 142 001e 2360     		str	r3, [r4]
+ 143 0020 10BD     		pop	{r4, pc}
+ 144              	.L26:
+ 145 0022 00BF     		.align	2
+ 146              	.L25:
+ 147 0024 00000000 		.word	.LANCHOR0
+ 148 0028 00000000 		.word	.LANCHOR1
+ 149 002c 00000000 		.word	.LANCHOR2
+ 150 0030 18000000 		.word	.LC3
+ 151              		.size	dbg_check_lock, .-dbg_check_lock
+ 152 0034 AFF30080 		.section	.text.dbg_check_unlock,"ax",%progbits
+ 152      AFF30080 
+ 152      AFF30080 
+ 153              		.align	2
+ 154              		.p2align 4,,15
+ 155              		.global	dbg_check_unlock
+ 156              		.thumb
+ 157              		.thumb_func
+ 158              		.type	dbg_check_unlock, %function
+ 159              	dbg_check_unlock:
+ 160              		@ args = 0, pretend = 0, frame = 0
+ 161              		@ frame_needed = 0, uses_anonymous_args = 0
+ 162 0000 0A4B     		ldr	r3, .L32
+ 163 0002 10B5     		push	{r4, lr}
+ARM GAS  /tmp/ccruzQlA.s 			page 4
+
+
+ 164 0004 1B68     		ldr	r3, [r3]
+ 165 0006 0A4C     		ldr	r4, .L32+4
+ 166 0008 2BB9     		cbnz	r3, .L28
+ 167 000a 2368     		ldr	r3, [r4]
+ 168 000c 002B     		cmp	r3, #0
+ 169 000e 02DD     		ble	.L28
+ 170 0010 0023     		movs	r3, #0
+ 171 0012 2360     		str	r3, [r4]
+ 172 0014 10BD     		pop	{r4, pc}
+ 173              	.L28:
+ 174 0016 074B     		ldr	r3, .L32+8
+ 175 0018 074A     		ldr	r2, .L32+12
+ 176 001a 1A60     		str	r2, [r3]
+ 177 001c FFF7FEFF 		bl	haltErrorCode
+ 178 0020 FFF7FEFF 		bl	port_halt
+ 179 0024 0023     		movs	r3, #0
+ 180 0026 2360     		str	r3, [r4]
+ 181 0028 10BD     		pop	{r4, pc}
+ 182              	.L33:
+ 183 002a 00BF     		.align	2
+ 184              	.L32:
+ 185 002c 00000000 		.word	.LANCHOR0
+ 186 0030 00000000 		.word	.LANCHOR1
+ 187 0034 00000000 		.word	.LANCHOR2
+ 188 0038 20000000 		.word	.LC4
+ 189              		.size	dbg_check_unlock, .-dbg_check_unlock
+ 190 003c AFF30080 		.section	.text.dbg_check_lock_from_isr,"ax",%progbits
+ 191              		.align	2
+ 192              		.p2align 4,,15
+ 193              		.global	dbg_check_lock_from_isr
+ 194              		.thumb
+ 195              		.thumb_func
+ 196              		.type	dbg_check_lock_from_isr, %function
+ 197              	dbg_check_lock_from_isr:
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200 0000 084B     		ldr	r3, .L42
+ 201 0002 10B5     		push	{r4, lr}
+ 202 0004 1B68     		ldr	r3, [r3]
+ 203 0006 084C     		ldr	r4, .L42+4
+ 204 0008 002B     		cmp	r3, #0
+ 205 000a 01DD     		ble	.L35
+ 206 000c 2368     		ldr	r3, [r4]
+ 207 000e 33B1     		cbz	r3, .L36
+ 208              	.L35:
+ 209 0010 064B     		ldr	r3, .L42+8
+ 210 0012 074A     		ldr	r2, .L42+12
+ 211 0014 1A60     		str	r2, [r3]
+ 212 0016 FFF7FEFF 		bl	haltErrorCode
+ 213 001a FFF7FEFF 		bl	port_halt
+ 214              	.L36:
+ 215 001e 0123     		movs	r3, #1
+ 216 0020 2360     		str	r3, [r4]
+ 217 0022 10BD     		pop	{r4, pc}
+ 218              	.L43:
+ 219              		.align	2
+ 220              	.L42:
+ARM GAS  /tmp/ccruzQlA.s 			page 5
+
+
+ 221 0024 00000000 		.word	.LANCHOR0
+ 222 0028 00000000 		.word	.LANCHOR1
+ 223 002c 00000000 		.word	.LANCHOR2
+ 224 0030 28000000 		.word	.LC5
+ 225              		.size	dbg_check_lock_from_isr, .-dbg_check_lock_from_isr
+ 226 0034 AFF30080 		.section	.text.dbg_check_unlock_from_isr,"ax",%progbits
+ 226      AFF30080 
+ 226      AFF30080 
+ 227              		.align	2
+ 228              		.p2align 4,,15
+ 229              		.global	dbg_check_unlock_from_isr
+ 230              		.thumb
+ 231              		.thumb_func
+ 232              		.type	dbg_check_unlock_from_isr, %function
+ 233              	dbg_check_unlock_from_isr:
+ 234              		@ args = 0, pretend = 0, frame = 0
+ 235              		@ frame_needed = 0, uses_anonymous_args = 0
+ 236 0000 0A4B     		ldr	r3, .L49
+ 237 0002 10B5     		push	{r4, lr}
+ 238 0004 1B68     		ldr	r3, [r3]
+ 239 0006 0A4C     		ldr	r4, .L49+4
+ 240 0008 002B     		cmp	r3, #0
+ 241 000a 05DD     		ble	.L45
+ 242 000c 2368     		ldr	r3, [r4]
+ 243 000e 002B     		cmp	r3, #0
+ 244 0010 02DD     		ble	.L45
+ 245 0012 0023     		movs	r3, #0
+ 246 0014 2360     		str	r3, [r4]
+ 247 0016 10BD     		pop	{r4, pc}
+ 248              	.L45:
+ 249 0018 064B     		ldr	r3, .L49+8
+ 250 001a 074A     		ldr	r2, .L49+12
+ 251 001c 1A60     		str	r2, [r3]
+ 252 001e FFF7FEFF 		bl	haltErrorCode
+ 253 0022 FFF7FEFF 		bl	port_halt
+ 254 0026 0023     		movs	r3, #0
+ 255 0028 2360     		str	r3, [r4]
+ 256 002a 10BD     		pop	{r4, pc}
+ 257              	.L50:
+ 258              		.align	2
+ 259              	.L49:
+ 260 002c 00000000 		.word	.LANCHOR0
+ 261 0030 00000000 		.word	.LANCHOR1
+ 262 0034 00000000 		.word	.LANCHOR2
+ 263 0038 30000000 		.word	.LC6
+ 264              		.size	dbg_check_unlock_from_isr, .-dbg_check_unlock_from_isr
+ 265 003c AFF30080 		.section	.text.dbg_check_enter_isr,"ax",%progbits
+ 266              		.align	2
+ 267              		.p2align 4,,15
+ 268              		.global	dbg_check_enter_isr
+ 269              		.thumb
+ 270              		.thumb_func
+ 271              		.type	dbg_check_enter_isr, %function
+ 272              	dbg_check_enter_isr:
+ 273              		@ args = 0, pretend = 0, frame = 0
+ 274              		@ frame_needed = 0, uses_anonymous_args = 0
+ 275 0000 10B5     		push	{r4, lr}
+ARM GAS  /tmp/ccruzQlA.s 			page 6
+
+
+ 276 0002 2023     		movs	r3, #32
+ 277              	@ 164 "../../../ChibiOS/os/kernel/src/chdebug.c" 1
+ 278 0004 83F31188 		msr     BASEPRI, r3
+ 279              	@ 0 "" 2
+ 280              		.thumb
+ 281 0008 0A4C     		ldr	r4, .L55
+ 282 000a 2368     		ldr	r3, [r4]
+ 283 000c 002B     		cmp	r3, #0
+ 284 000e 02DB     		blt	.L52
+ 285 0010 094A     		ldr	r2, .L55+4
+ 286 0012 1268     		ldr	r2, [r2]
+ 287 0014 3AB1     		cbz	r2, .L53
+ 288              	.L52:
+ 289 0016 094B     		ldr	r3, .L55+8
+ 290 0018 094A     		ldr	r2, .L55+12
+ 291 001a 1A60     		str	r2, [r3]
+ 292 001c FFF7FEFF 		bl	haltErrorCode
+ 293 0020 FFF7FEFF 		bl	port_halt
+ 294 0024 2368     		ldr	r3, [r4]
+ 295              	.L53:
+ 296 0026 0133     		adds	r3, r3, #1
+ 297 0028 2360     		str	r3, [r4]
+ 298 002a 0023     		movs	r3, #0
+ 299              	@ 168 "../../../ChibiOS/os/kernel/src/chdebug.c" 1
+ 300 002c 83F31188 		msr     BASEPRI, r3
+ 301              	@ 0 "" 2
+ 302              		.thumb
+ 303 0030 10BD     		pop	{r4, pc}
+ 304              	.L56:
+ 305 0032 00BF     		.align	2
+ 306              	.L55:
+ 307 0034 00000000 		.word	.LANCHOR0
+ 308 0038 00000000 		.word	.LANCHOR1
+ 309 003c 00000000 		.word	.LANCHOR2
+ 310 0040 38000000 		.word	.LC7
+ 311              		.size	dbg_check_enter_isr, .-dbg_check_enter_isr
+ 312 0044 AFF30080 		.section	.text.dbg_check_leave_isr,"ax",%progbits
+ 312      AFF30080 
+ 312      AFF30080 
+ 313              		.align	2
+ 314              		.p2align 4,,15
+ 315              		.global	dbg_check_leave_isr
+ 316              		.thumb
+ 317              		.thumb_func
+ 318              		.type	dbg_check_leave_isr, %function
+ 319              	dbg_check_leave_isr:
+ 320              		@ args = 0, pretend = 0, frame = 0
+ 321              		@ frame_needed = 0, uses_anonymous_args = 0
+ 322 0000 10B5     		push	{r4, lr}
+ 323 0002 2023     		movs	r3, #32
+ 324              	@ 178 "../../../ChibiOS/os/kernel/src/chdebug.c" 1
+ 325 0004 83F31188 		msr     BASEPRI, r3
+ 326              	@ 0 "" 2
+ 327              		.thumb
+ 328 0008 0A4C     		ldr	r4, .L61
+ 329 000a 2368     		ldr	r3, [r4]
+ 330 000c 002B     		cmp	r3, #0
+ARM GAS  /tmp/ccruzQlA.s 			page 7
+
+
+ 331 000e 02DD     		ble	.L58
+ 332 0010 094A     		ldr	r2, .L61+4
+ 333 0012 1268     		ldr	r2, [r2]
+ 334 0014 3AB1     		cbz	r2, .L59
+ 335              	.L58:
+ 336 0016 094B     		ldr	r3, .L61+8
+ 337 0018 094A     		ldr	r2, .L61+12
+ 338 001a 1A60     		str	r2, [r3]
+ 339 001c FFF7FEFF 		bl	haltErrorCode
+ 340 0020 FFF7FEFF 		bl	port_halt
+ 341 0024 2368     		ldr	r3, [r4]
+ 342              	.L59:
+ 343 0026 013B     		subs	r3, r3, #1
+ 344 0028 2360     		str	r3, [r4]
+ 345 002a 0023     		movs	r3, #0
+ 346              	@ 182 "../../../ChibiOS/os/kernel/src/chdebug.c" 1
+ 347 002c 83F31188 		msr     BASEPRI, r3
+ 348              	@ 0 "" 2
+ 349              		.thumb
+ 350 0030 10BD     		pop	{r4, pc}
+ 351              	.L62:
+ 352 0032 00BF     		.align	2
+ 353              	.L61:
+ 354 0034 00000000 		.word	.LANCHOR0
+ 355 0038 00000000 		.word	.LANCHOR1
+ 356 003c 00000000 		.word	.LANCHOR2
+ 357 0040 40000000 		.word	.LC8
+ 358              		.size	dbg_check_leave_isr, .-dbg_check_leave_isr
+ 359 0044 AFF30080 		.section	.text.chDbgCheckClassI,"ax",%progbits
+ 359      AFF30080 
+ 359      AFF30080 
+ 360              		.align	2
+ 361              		.p2align 4,,15
+ 362              		.global	chDbgCheckClassI
+ 363              		.thumb
+ 364              		.thumb_func
+ 365              		.type	chDbgCheckClassI, %function
+ 366              	chDbgCheckClassI:
+ 367              		@ args = 0, pretend = 0, frame = 0
+ 368              		@ frame_needed = 0, uses_anonymous_args = 0
+ 369 0000 08B5     		push	{r3, lr}
+ 370 0002 094B     		ldr	r3, .L66
+ 371 0004 1B68     		ldr	r3, [r3]
+ 372 0006 002B     		cmp	r3, #0
+ 373 0008 04DB     		blt	.L64
+ 374 000a 084B     		ldr	r3, .L66+4
+ 375 000c 1B68     		ldr	r3, [r3]
+ 376 000e 002B     		cmp	r3, #0
+ 377 0010 00DD     		ble	.L64
+ 378 0012 08BD     		pop	{r3, pc}
+ 379              	.L64:
+ 380 0014 064B     		ldr	r3, .L66+8
+ 381 0016 074A     		ldr	r2, .L66+12
+ 382 0018 1A60     		str	r2, [r3]
+ 383 001a FFF7FEFF 		bl	haltErrorCode
+ 384 001e BDE80840 		pop	{r3, lr}
+ 385 0022 FFF7FEBF 		b	port_halt
+ARM GAS  /tmp/ccruzQlA.s 			page 8
+
+
+ 386              	.L67:
+ 387 0026 00BF     		.align	2
+ 388              	.L66:
+ 389 0028 00000000 		.word	.LANCHOR0
+ 390 002c 00000000 		.word	.LANCHOR1
+ 391 0030 00000000 		.word	.LANCHOR2
+ 392 0034 48000000 		.word	.LC9
+ 393              		.size	chDbgCheckClassI, .-chDbgCheckClassI
+ 394 0038 AFF30080 		.section	.text.chDbgCheckClassS,"ax",%progbits
+ 394      AFF30080 
+ 395              		.align	2
+ 396              		.p2align 4,,15
+ 397              		.global	chDbgCheckClassS
+ 398              		.thumb
+ 399              		.thumb_func
+ 400              		.type	chDbgCheckClassS, %function
+ 401              	chDbgCheckClassS:
+ 402              		@ args = 0, pretend = 0, frame = 0
+ 403              		@ frame_needed = 0, uses_anonymous_args = 0
+ 404 0000 08B5     		push	{r3, lr}
+ 405 0002 084B     		ldr	r3, .L71
+ 406 0004 1B68     		ldr	r3, [r3]
+ 407 0006 23B9     		cbnz	r3, .L69
+ 408 0008 074B     		ldr	r3, .L71+4
+ 409 000a 1B68     		ldr	r3, [r3]
+ 410 000c 002B     		cmp	r3, #0
+ 411 000e 00DD     		ble	.L69
+ 412 0010 08BD     		pop	{r3, pc}
+ 413              	.L69:
+ 414 0012 064B     		ldr	r3, .L71+8
+ 415 0014 064A     		ldr	r2, .L71+12
+ 416 0016 1A60     		str	r2, [r3]
+ 417 0018 FFF7FEFF 		bl	haltErrorCode
+ 418 001c BDE80840 		pop	{r3, lr}
+ 419 0020 FFF7FEBF 		b	port_halt
+ 420              	.L72:
+ 421              		.align	2
+ 422              	.L71:
+ 423 0024 00000000 		.word	.LANCHOR0
+ 424 0028 00000000 		.word	.LANCHOR1
+ 425 002c 00000000 		.word	.LANCHOR2
+ 426 0030 50000000 		.word	.LC10
+ 427              		.size	chDbgCheckClassS, .-chDbgCheckClassS
+ 428 0034 AFF30080 		.section	.text._trace_init,"ax",%progbits
+ 428      AFF30080 
+ 428      AFF30080 
+ 429              		.align	2
+ 430              		.p2align 4,,15
+ 431              		.global	_trace_init
+ 432              		.thumb
+ 433              		.thumb_func
+ 434              		.type	_trace_init, %function
+ 435              	_trace_init:
+ 436              		@ args = 0, pretend = 0, frame = 0
+ 437              		@ frame_needed = 0, uses_anonymous_args = 0
+ 438              		@ link register save eliminated.
+ 439 0000 034A     		ldr	r2, .L74
+ARM GAS  /tmp/ccruzQlA.s 			page 9
+
+
+ 440 0002 4021     		movs	r1, #64
+ 441 0004 1346     		mov	r3, r2
+ 442 0006 43F8081B 		str	r1, [r3], #8
+ 443 000a 5360     		str	r3, [r2, #4]
+ 444 000c 7047     		bx	lr
+ 445              	.L75:
+ 446 000e 00BF     		.align	2
+ 447              	.L74:
+ 448 0010 00000000 		.word	.LANCHOR3
+ 449              		.size	_trace_init, .-_trace_init
+ 450 0014 AFF30080 		.section	.text.dbg_trace,"ax",%progbits
+ 450      AFF30080 
+ 450      AFF30080 
+ 451              		.align	2
+ 452              		.p2align 4,,15
+ 453              		.global	dbg_trace
+ 454              		.thumb
+ 455              		.thumb_func
+ 456              		.type	dbg_trace, %function
+ 457              	dbg_trace:
+ 458              		@ args = 0, pretend = 0, frame = 0
+ 459              		@ frame_needed = 0, uses_anonymous_args = 0
+ 460              		@ link register save eliminated.
+ 461 0000 10B4     		push	{r4}
+ 462 0002 0D4A     		ldr	r2, .L79
+ 463 0004 0D4C     		ldr	r4, .L79+4
+ 464 0006 0E49     		ldr	r1, .L79+8
+ 465 0008 5368     		ldr	r3, [r2, #4]
+ 466 000a E468     		ldr	r4, [r4, #12]
+ 467 000c 8969     		ldr	r1, [r1, #24]
+ 468 000e 1C60     		str	r4, [r3]
+ 469 0010 5960     		str	r1, [r3, #4]
+ 470 0012 846A     		ldr	r4, [r0, #40]
+ 471 0014 03F11001 		add	r1, r3, #16
+ 472 0018 9C60     		str	r4, [r3, #8]
+ 473 001a 90F82040 		ldrb	r4, [r0, #32]	@ zero_extendqisi2
+ 474 001e 02F58160 		add	r0, r2, #1032
+ 475 0022 8142     		cmp	r1, r0
+ 476 0024 1C73     		strb	r4, [r3, #12]
+ 477 0026 2ABF     		itet	cs
+ 478 0028 02F10803 		addcs	r3, r2, #8
+ 479 002c 5160     		strcc	r1, [r2, #4]
+ 480 002e 5360     		strcs	r3, [r2, #4]
+ 481 0030 5DF8044B 		ldr	r4, [sp], #4
+ 482 0034 7047     		bx	lr
+ 483              	.L80:
+ 484 0036 00BF     		.align	2
+ 485              	.L79:
+ 486 0038 00000000 		.word	.LANCHOR3
+ 487 003c 00000000 		.word	vtlist
+ 488 0040 00000000 		.word	rlist
+ 489              		.size	dbg_trace, .-dbg_trace
+ 490 0044 AFF30080 		.section	.text.chDbgPanic,"ax",%progbits
+ 490      AFF30080 
+ 490      AFF30080 
+ 491              		.align	2
+ 492              		.p2align 4,,15
+ARM GAS  /tmp/ccruzQlA.s 			page 10
+
+
+ 493              		.global	chDbgPanic
+ 494              		.thumb
+ 495              		.thumb_func
+ 496              		.type	chDbgPanic, %function
+ 497              	chDbgPanic:
+ 498              		@ args = 0, pretend = 0, frame = 0
+ 499              		@ frame_needed = 0, uses_anonymous_args = 0
+ 500 0000 08B5     		push	{r3, lr}
+ 501 0002 044B     		ldr	r3, .L82
+ 502 0004 1860     		str	r0, [r3]
+ 503 0006 FFF7FEFF 		bl	haltErrorCode
+ 504 000a BDE80840 		pop	{r3, lr}
+ 505 000e FFF7FEBF 		b	port_halt
+ 506              	.L83:
+ 507 0012 00BF     		.align	2
+ 508              	.L82:
+ 509 0014 00000000 		.word	.LANCHOR2
+ 510              		.size	chDbgPanic, .-chDbgPanic
+ 511              		.global	dbg_panic_msg
+ 512              		.global	dbg_trace_buffer
+ 513              		.global	dbg_lock_cnt
+ 514              		.global	dbg_isr_cnt
+ 515 0018 AFF30080 		.section	.bss.dbg_isr_cnt,"aw",%nobits
+ 515      AFF30080 
+ 516              		.align	2
+ 517              		.set	.LANCHOR0,. + 0
+ 518              		.type	dbg_isr_cnt, %object
+ 519              		.size	dbg_isr_cnt, 4
+ 520              	dbg_isr_cnt:
+ 521 0000 00000000 		.space	4
+ 522              		.section	.bss.dbg_trace_buffer,"aw",%nobits
+ 523              		.align	2
+ 524              		.set	.LANCHOR3,. + 0
+ 525              		.type	dbg_trace_buffer, %object
+ 526              		.size	dbg_trace_buffer, 1032
+ 527              	dbg_trace_buffer:
+ 528 0000 00000000 		.space	1032
+ 528      00000000 
+ 528      00000000 
+ 528      00000000 
+ 528      00000000 
+ 529              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 530              		.align	2
+ 531              	.LC0:
+ 532 0000 53562331 		.ascii	"SV#1\000"
+ 532      00
+ 533 0005 000000   		.space	3
+ 534              	.LC1:
+ 535 0008 53562332 		.ascii	"SV#2\000"
+ 535      00
+ 536 000d 000000   		.space	3
+ 537              	.LC2:
+ 538 0010 53562333 		.ascii	"SV#3\000"
+ 538      00
+ 539 0015 000000   		.space	3
+ 540              	.LC3:
+ 541 0018 53562334 		.ascii	"SV#4\000"
+ARM GAS  /tmp/ccruzQlA.s 			page 11
+
+
+ 541      00
+ 542 001d 000000   		.space	3
+ 543              	.LC4:
+ 544 0020 53562335 		.ascii	"SV#5\000"
+ 544      00
+ 545 0025 000000   		.space	3
+ 546              	.LC5:
+ 547 0028 53562336 		.ascii	"SV#6\000"
+ 547      00
+ 548 002d 000000   		.space	3
+ 549              	.LC6:
+ 550 0030 53562337 		.ascii	"SV#7\000"
+ 550      00
+ 551 0035 000000   		.space	3
+ 552              	.LC7:
+ 553 0038 53562338 		.ascii	"SV#8\000"
+ 553      00
+ 554 003d 000000   		.space	3
+ 555              	.LC8:
+ 556 0040 53562339 		.ascii	"SV#9\000"
+ 556      00
+ 557 0045 000000   		.space	3
+ 558              	.LC9:
+ 559 0048 53562331 		.ascii	"SV#10\000"
+ 559      3000
+ 560 004e 0000     		.space	2
+ 561              	.LC10:
+ 562 0050 53562331 		.ascii	"SV#11\000"
+ 562      3100
+ 563 0056 0000     		.section	.bss.dbg_lock_cnt,"aw",%nobits
+ 564              		.align	2
+ 565              		.set	.LANCHOR1,. + 0
+ 566              		.type	dbg_lock_cnt, %object
+ 567              		.size	dbg_lock_cnt, 4
+ 568              	dbg_lock_cnt:
+ 569 0000 00000000 		.space	4
+ 570              		.section	.bss.dbg_panic_msg,"aw",%nobits
+ 571              		.align	2
+ 572              		.set	.LANCHOR2,. + 0
+ 573              		.type	dbg_panic_msg, %object
+ 574              		.size	dbg_panic_msg, 4
+ 575              	dbg_panic_msg:
+ 576 0000 00000000 		.space	4
+ 577              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccruzQlA.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chdebug.c
+     /tmp/ccruzQlA.s:16     .text.dbg_check_disable:00000000 $t
+     /tmp/ccruzQlA.s:22     .text.dbg_check_disable:00000000 dbg_check_disable
+     /tmp/ccruzQlA.s:44     .text.dbg_check_disable:00000024 $d
+     /tmp/ccruzQlA.s:50     .text.dbg_check_suspend:00000000 $t
+     /tmp/ccruzQlA.s:56     .text.dbg_check_suspend:00000000 dbg_check_suspend
+     /tmp/ccruzQlA.s:78     .text.dbg_check_suspend:00000024 $d
+     /tmp/ccruzQlA.s:84     .text.dbg_check_enable:00000000 $t
+     /tmp/ccruzQlA.s:90     .text.dbg_check_enable:00000000 dbg_check_enable
+     /tmp/ccruzQlA.s:112    .text.dbg_check_enable:00000024 $d
+     /tmp/ccruzQlA.s:118    .text.dbg_check_lock:00000000 $t
+     /tmp/ccruzQlA.s:124    .text.dbg_check_lock:00000000 dbg_check_lock
+     /tmp/ccruzQlA.s:147    .text.dbg_check_lock:00000024 $d
+     /tmp/ccruzQlA.s:153    .text.dbg_check_unlock:00000000 $t
+     /tmp/ccruzQlA.s:159    .text.dbg_check_unlock:00000000 dbg_check_unlock
+     /tmp/ccruzQlA.s:185    .text.dbg_check_unlock:0000002c $d
+     /tmp/ccruzQlA.s:191    .text.dbg_check_lock_from_isr:00000000 $t
+     /tmp/ccruzQlA.s:197    .text.dbg_check_lock_from_isr:00000000 dbg_check_lock_from_isr
+     /tmp/ccruzQlA.s:221    .text.dbg_check_lock_from_isr:00000024 $d
+     /tmp/ccruzQlA.s:227    .text.dbg_check_unlock_from_isr:00000000 $t
+     /tmp/ccruzQlA.s:233    .text.dbg_check_unlock_from_isr:00000000 dbg_check_unlock_from_isr
+     /tmp/ccruzQlA.s:260    .text.dbg_check_unlock_from_isr:0000002c $d
+     /tmp/ccruzQlA.s:266    .text.dbg_check_enter_isr:00000000 $t
+     /tmp/ccruzQlA.s:272    .text.dbg_check_enter_isr:00000000 dbg_check_enter_isr
+     /tmp/ccruzQlA.s:307    .text.dbg_check_enter_isr:00000034 $d
+     /tmp/ccruzQlA.s:313    .text.dbg_check_leave_isr:00000000 $t
+     /tmp/ccruzQlA.s:319    .text.dbg_check_leave_isr:00000000 dbg_check_leave_isr
+     /tmp/ccruzQlA.s:354    .text.dbg_check_leave_isr:00000034 $d
+     /tmp/ccruzQlA.s:360    .text.chDbgCheckClassI:00000000 $t
+     /tmp/ccruzQlA.s:366    .text.chDbgCheckClassI:00000000 chDbgCheckClassI
+     /tmp/ccruzQlA.s:389    .text.chDbgCheckClassI:00000028 $d
+     /tmp/ccruzQlA.s:395    .text.chDbgCheckClassS:00000000 $t
+     /tmp/ccruzQlA.s:401    .text.chDbgCheckClassS:00000000 chDbgCheckClassS
+     /tmp/ccruzQlA.s:423    .text.chDbgCheckClassS:00000024 $d
+     /tmp/ccruzQlA.s:429    .text._trace_init:00000000 $t
+     /tmp/ccruzQlA.s:435    .text._trace_init:00000000 _trace_init
+     /tmp/ccruzQlA.s:448    .text._trace_init:00000010 $d
+     /tmp/ccruzQlA.s:451    .text.dbg_trace:00000000 $t
+     /tmp/ccruzQlA.s:457    .text.dbg_trace:00000000 dbg_trace
+     /tmp/ccruzQlA.s:486    .text.dbg_trace:00000038 $d
+     /tmp/ccruzQlA.s:491    .text.chDbgPanic:00000000 $t
+     /tmp/ccruzQlA.s:497    .text.chDbgPanic:00000000 chDbgPanic
+     /tmp/ccruzQlA.s:509    .text.chDbgPanic:00000014 $d
+     /tmp/ccruzQlA.s:575    .bss.dbg_panic_msg:00000000 dbg_panic_msg
+     /tmp/ccruzQlA.s:527    .bss.dbg_trace_buffer:00000000 dbg_trace_buffer
+     /tmp/ccruzQlA.s:568    .bss.dbg_lock_cnt:00000000 dbg_lock_cnt
+     /tmp/ccruzQlA.s:520    .bss.dbg_isr_cnt:00000000 dbg_isr_cnt
+     /tmp/ccruzQlA.s:516    .bss.dbg_isr_cnt:00000000 $d
+     /tmp/ccruzQlA.s:523    .bss.dbg_trace_buffer:00000000 $d
+     /tmp/ccruzQlA.s:530    .rodata.str1.4:00000000 $d
+     /tmp/ccruzQlA.s:564    .bss.dbg_lock_cnt:00000000 $d
+     /tmp/ccruzQlA.s:571    .bss.dbg_panic_msg:00000000 $d
+     /tmp/ccruzQlA.s:49     .text.dbg_check_disable:00000034 $t
+     /tmp/ccruzQlA.s:83     .text.dbg_check_suspend:00000034 $t
+     /tmp/ccruzQlA.s:117    .text.dbg_check_enable:00000034 $t
+     /tmp/ccruzQlA.s:152    .text.dbg_check_lock:00000034 $t
+ARM GAS  /tmp/ccruzQlA.s 			page 13
+
+
+     /tmp/ccruzQlA.s:190    .text.dbg_check_unlock:0000003c $t
+     /tmp/ccruzQlA.s:226    .text.dbg_check_lock_from_isr:00000034 $t
+     /tmp/ccruzQlA.s:265    .text.dbg_check_unlock_from_isr:0000003c $t
+     /tmp/ccruzQlA.s:312    .text.dbg_check_enter_isr:00000044 $t
+     /tmp/ccruzQlA.s:359    .text.dbg_check_leave_isr:00000044 $t
+     /tmp/ccruzQlA.s:394    .text.chDbgCheckClassI:00000038 $t
+     /tmp/ccruzQlA.s:428    .text.chDbgCheckClassS:00000034 $t
+     /tmp/ccruzQlA.s:450    .text._trace_init:00000014 $t
+     /tmp/ccruzQlA.s:490    .text.dbg_trace:00000044 $t
+     /tmp/ccruzQlA.s:515    .text.chDbgPanic:00000018 $t
+
+UNDEFINED SYMBOLS
+haltErrorCode
+port_halt
+vtlist
+rlist

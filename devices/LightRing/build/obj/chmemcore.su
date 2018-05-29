@@ -1,0 +1,4 @@
+chmemcore.c:66:6:_core_init	0	static
+chmemcore.c:112:7:chCoreAllocI	8	static
+chmemcore.c:91:7:chCoreAlloc	8	static
+chmemcore.c:132:8:chCoreStatus	0	static

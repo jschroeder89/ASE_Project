@@ -1,0 +1,624 @@
+ARM GAS  /tmp/cca8rhDd.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"hmc5883l.cpp"
+  15              		.section	.text._ZN5amiro8HMC5883LD2Ev,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro8HMC5883LD2Ev
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro8HMC5883LD2Ev, %function
+  22              	_ZN5amiro8HMC5883LD2Ev:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 014B     		ldr	r3, .L2
+  27 0002 0360     		str	r3, [r0]
+  28 0004 7047     		bx	lr
+  29              	.L3:
+  30 0006 00BF     		.align	2
+  31              	.L2:
+  32 0008 08000000 		.word	.LANCHOR0+8
+  33              		.size	_ZN5amiro8HMC5883LD2Ev, .-_ZN5amiro8HMC5883LD2Ev
+  34              		.global	_ZN5amiro8HMC5883LD1Ev
+  35              		.thumb_set _ZN5amiro8HMC5883LD1Ev,_ZN5amiro8HMC5883LD2Ev
+  36 000c AFF30080 		.section	.text._ZN5amiro8HMC5883LD0Ev,"ax",%progbits
+  37              		.align	2
+  38              		.p2align 4,,15
+  39              		.global	_ZN5amiro8HMC5883LD0Ev
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	_ZN5amiro8HMC5883LD0Ev, %function
+  43              	_ZN5amiro8HMC5883LD0Ev:
+  44              		@ args = 0, pretend = 0, frame = 0
+  45              		@ frame_needed = 0, uses_anonymous_args = 0
+  46 0000 10B5     		push	{r4, lr}
+  47 0002 034B     		ldr	r3, .L5
+  48 0004 0446     		mov	r4, r0
+  49 0006 0360     		str	r3, [r0]
+  50 0008 FFF7FEFF 		bl	_ZdlPv
+  51 000c 2046     		mov	r0, r4
+  52 000e 10BD     		pop	{r4, pc}
+  53              	.L6:
+  54              		.align	2
+  55              	.L5:
+  56 0010 08000000 		.word	.LANCHOR0+8
+  57              		.size	_ZN5amiro8HMC5883LD0Ev, .-_ZN5amiro8HMC5883LD0Ev
+ARM GAS  /tmp/cca8rhDd.s 			page 2
+
+
+  58 0014 AFF30080 		.section	.text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm,"axG",%progbits,_ZN10chibios_rt16
+  58      AFF30080 
+  58      AFF30080 
+  59              		.align	2
+  60              		.p2align 4,,15
+  61              		.weak	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, %function
+  65              	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:
+  66              		@ args = 0, pretend = 0, frame = 0
+  67              		@ frame_needed = 0, uses_anonymous_args = 0
+  68 0000 30B5     		push	{r4, r5, lr}
+  69 0002 0D46     		mov	r5, r1
+  70 0004 83B0     		sub	sp, sp, #12
+  71 0006 0446     		mov	r4, r0
+  72 0008 0091     		str	r1, [sp]
+  73 000a 05F10800 		add	r0, r5, #8
+  74 000e 4FF4E871 		mov	r1, #464
+  75 0012 054B     		ldr	r3, .L8
+  76 0014 FFF7FEFF 		bl	chThdCreateStatic
+  77 0018 044A     		ldr	r2, .L8+4
+  78 001a 0346     		mov	r3, r0
+  79 001c 6860     		str	r0, [r5, #4]
+  80 001e 2046     		mov	r0, r4
+  81 0020 84E80C00 		stmia	r4, {r2, r3}
+  82 0024 03B0     		add	sp, sp, #12
+  83              		@ sp needed
+  84 0026 30BD     		pop	{r4, r5, pc}
+  85              	.L9:
+  86              		.align	2
+  87              	.L8:
+  88 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+  89 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+  90              		.size	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi256
+  91              		.section	.text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE,"ax",%progbits
+  92              		.align	2
+  93              		.p2align 4,,15
+  94              		.global	_ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
+  95              		.thumb
+  96              		.thumb_func
+  97              		.type	_ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE, %function
+  98              	_ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:
+  99              		@ args = 0, pretend = 0, frame = 0
+ 100              		@ frame_needed = 0, uses_anonymous_args = 0
+ 101 0000 70B5     		push	{r4, r5, r6, lr}
+ 102 0002 0446     		mov	r4, r0
+ 103 0004 0D46     		mov	r5, r1
+ 104 0006 1646     		mov	r6, r2
+ 105 0008 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThreadC2Ev
+ 106 000c 074B     		ldr	r3, .L11
+ 107 000e C4F8E051 		str	r5, [r4, #480]
+ 108 0012 2360     		str	r3, [r4]
+ 109 0014 C4F8E461 		str	r6, [r4, #484]
+ 110 0018 04F5F470 		add	r0, r4, #488
+ 111 001c FFF7FEFF 		bl	_ZN10chibios_rt9EvtSourceC1Ev
+ 112 0020 1E23     		movs	r3, #30
+ARM GAS  /tmp/cca8rhDd.s 			page 3
+
+
+ 113 0022 A4F8EC31 		strh	r3, [r4, #492]	@ movhi
+ 114 0026 2046     		mov	r0, r4
+ 115 0028 70BD     		pop	{r4, r5, r6, pc}
+ 116              	.L12:
+ 117 002a 00BF     		.align	2
+ 118              	.L11:
+ 119 002c 08000000 		.word	.LANCHOR0+8
+ 120              		.size	_ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE, .-_ZN5amiro8HMC5883LC2EPNS_9I2C
+ 121              		.global	_ZN5amiro8HMC5883LC1EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
+ 122              		.thumb_set _ZN5amiro8HMC5883LC1EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE,_ZN5amiro8HMC5883LC2EPNS_9I
+ 123              		.section	.text._ZN5amiro8HMC5883L14getEventSourceEv,"ax",%progbits
+ 124              		.align	2
+ 125              		.p2align 4,,15
+ 126              		.global	_ZN5amiro8HMC5883L14getEventSourceEv
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.type	_ZN5amiro8HMC5883L14getEventSourceEv, %function
+ 130              	_ZN5amiro8HMC5883L14getEventSourceEv:
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133              		@ link register save eliminated.
+ 134 0000 00F5F470 		add	r0, r0, #488
+ 135 0004 7047     		bx	lr
+ 136              		.size	_ZN5amiro8HMC5883L14getEventSourceEv, .-_ZN5amiro8HMC5883L14getEventSourceEv
+ 137 0006 00BFAFF3 		.section	.text._ZN5amiro8HMC5883L16getMagnetizationEh,"ax",%progbits
+ 137      0080AFF3 
+ 137      0080
+ 138              		.align	2
+ 139              		.p2align 4,,15
+ 140              		.global	_ZN5amiro8HMC5883L16getMagnetizationEh
+ 141              		.thumb
+ 142              		.thumb_func
+ 143              		.type	_ZN5amiro8HMC5883L16getMagnetizationEh, %function
+ 144              	_ZN5amiro8HMC5883L16getMagnetizationEh:
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147 0000 38B5     		push	{r3, r4, r5, lr}
+ 148 0002 0446     		mov	r4, r0
+ 149 0004 0D46     		mov	r5, r1
+ 150 0006 2023     		movs	r3, #32
+ 151              	@ 64 "../../components/magneto/hmc5883l.cpp" 1
+ 152 0008 83F31188 		msr     BASEPRI, r3
+ 153              	@ 0 "" 2
+ 154              		.thumb
+ 155 000c EC35     		adds	r5, r5, #236
+ 156 000e FFF7FEFF 		bl	dbg_check_lock
+ 157 0012 34F81540 		ldrh	r4, [r4, r5, lsl #1]
+ 158 0016 FFF7FEFF 		bl	dbg_check_unlock
+ 159 001a 0023     		movs	r3, #0
+ 160              	@ 66 "../../components/magneto/hmc5883l.cpp" 1
+ 161 001c 83F31188 		msr     BASEPRI, r3
+ 162              	@ 0 "" 2
+ 163              		.thumb
+ 164 0020 20B2     		sxth	r0, r4
+ 165 0022 38BD     		pop	{r3, r4, r5, pc}
+ 166              		.size	_ZN5amiro8HMC5883L16getMagnetizationEh, .-_ZN5amiro8HMC5883L16getMagnetizationEh
+ 167 0024 AFF30080 		.section	.text._ZN5amiro8HMC5883L21getMagnetizationGaussEh,"ax",%progbits
+ARM GAS  /tmp/cca8rhDd.s 			page 4
+
+
+ 167      AFF30080 
+ 167      AFF30080 
+ 168              		.align	2
+ 169              		.p2align 4,,15
+ 170              		.global	_ZN5amiro8HMC5883L21getMagnetizationGaussEh
+ 171              		.thumb
+ 172              		.thumb_func
+ 173              		.type	_ZN5amiro8HMC5883L21getMagnetizationGaussEh, %function
+ 174              	_ZN5amiro8HMC5883L21getMagnetizationGaussEh:
+ 175              		@ args = 0, pretend = 0, frame = 0
+ 176              		@ frame_needed = 0, uses_anonymous_args = 0
+ 177 0000 38B5     		push	{r3, r4, r5, lr}
+ 178 0002 0446     		mov	r4, r0
+ 179 0004 0D46     		mov	r5, r1
+ 180 0006 2023     		movs	r3, #32
+ 181              	@ 64 "../../components/magneto/hmc5883l.cpp" 1
+ 182 0008 83F31188 		msr     BASEPRI, r3
+ 183              	@ 0 "" 2
+ 184              		.thumb
+ 185 000c EC35     		adds	r5, r5, #236
+ 186 000e FFF7FEFF 		bl	dbg_check_lock
+ 187 0012 34F81550 		ldrh	r5, [r4, r5, lsl #1]
+ 188 0016 FFF7FEFF 		bl	dbg_check_unlock
+ 189 001a 0023     		movs	r3, #0
+ 190              	@ 66 "../../components/magneto/hmc5883l.cpp" 1
+ 191 001c 83F31188 		msr     BASEPRI, r3
+ 192              	@ 0 "" 2
+ 193              		.thumb
+ 194 0020 D4F8E431 		ldr	r3, [r4, #484]
+ 195 0024 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 196 0026 03F0E003 		and	r3, r3, #224
+ 197 002a 602B     		cmp	r3, #96
+ 198 002c 39D0     		beq	.L17
+ 199 002e 0CD9     		bls	.L29
+ 200 0030 A02B     		cmp	r3, #160
+ 201 0032 31D0     		beq	.L22
+ 202 0034 1CD9     		bls	.L30
+ 203 0036 C02B     		cmp	r3, #192
+ 204 0038 14D0     		beq	.L25
+ 205 003a E02B     		cmp	r3, #224
+ 206 003c 0AD1     		bne	.L27
+ 207 003e 2DB2     		sxth	r5, r5
+ 208 0040 41F2FE00 		movw	r0, #4350
+ 209 0044 00FB05F0 		mul	r0, r0, r5
+ 210 0048 38BD     		pop	{r3, r4, r5, pc}
+ 211              	.L29:
+ 212 004a 202B     		cmp	r3, #32
+ 213 004c 18D0     		beq	.L19
+ 214 004e 402B     		cmp	r3, #64
+ 215 0050 02D0     		beq	.L20
+ 216 0052 DBB1     		cbz	r3, .L31
+ 217              	.L27:
+ 218 0054 0020     		movs	r0, #0
+ 219 0056 38BD     		pop	{r3, r4, r5, pc}
+ 220              	.L20:
+ 221 0058 2DB2     		sxth	r5, r5
+ 222 005a 40F2C440 		movw	r0, #1220
+ARM GAS  /tmp/cca8rhDd.s 			page 5
+
+
+ 223 005e 00FB05F0 		mul	r0, r0, r5
+ 224 0062 38BD     		pop	{r3, r4, r5, pc}
+ 225              	.L25:
+ 226 0064 2DB2     		sxth	r5, r5
+ 227 0066 40F6D630 		movw	r0, #3030
+ 228 006a 00FB05F0 		mul	r0, r0, r5
+ 229 006e 38BD     		pop	{r3, r4, r5, pc}
+ 230              	.L30:
+ 231 0070 802B     		cmp	r3, #128
+ 232 0072 EFD1     		bne	.L27
+ 233 0074 2DB2     		sxth	r5, r5
+ 234 0076 40F6DE00 		movw	r0, #2270
+ 235 007a 00FB05F0 		mul	r0, r0, r5
+ 236 007e 38BD     		pop	{r3, r4, r5, pc}
+ 237              	.L19:
+ 238 0080 2DB2     		sxth	r5, r5
+ 239 0082 4FF46670 		mov	r0, #920
+ 240 0086 00FB05F0 		mul	r0, r0, r5
+ 241 008a 38BD     		pop	{r3, r4, r5, pc}
+ 242              	.L31:
+ 243 008c 2DB2     		sxth	r5, r5
+ 244 008e 40F2DA20 		movw	r0, #730
+ 245 0092 00FB05F0 		mul	r0, r0, r5
+ 246 0096 38BD     		pop	{r3, r4, r5, pc}
+ 247              	.L22:
+ 248 0098 2DB2     		sxth	r5, r5
+ 249 009a 05EB8505 		add	r5, r5, r5, lsl #2
+ 250 009e 6802     		lsls	r0, r5, #9
+ 251 00a0 38BD     		pop	{r3, r4, r5, pc}
+ 252              	.L17:
+ 253 00a2 2DB2     		sxth	r5, r5
+ 254 00a4 4FF4BE60 		mov	r0, #1520
+ 255 00a8 00FB05F0 		mul	r0, r0, r5
+ 256 00ac 38BD     		pop	{r3, r4, r5, pc}
+ 257              		.size	_ZN5amiro8HMC5883L21getMagnetizationGaussEh, .-_ZN5amiro8HMC5883L21getMagnetizationGaussEh
+ 258 00ae 00BF     		.section	.text._ZN5amiro8HMC5883L8getCheckEv,"ax",%progbits
+ 259              		.align	2
+ 260              		.p2align 4,,15
+ 261              		.global	_ZN5amiro8HMC5883L8getCheckEv
+ 262              		.thumb
+ 263              		.thumb_func
+ 264              		.type	_ZN5amiro8HMC5883L8getCheckEv, %function
+ 265              	_ZN5amiro8HMC5883L8getCheckEv:
+ 266              		@ args = 0, pretend = 0, frame = 32
+ 267              		@ frame_needed = 0, uses_anonymous_args = 0
+ 268 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 269 0002 0A23     		movs	r3, #10
+ 270 0004 89B0     		sub	sp, sp, #36
+ 271 0006 0446     		mov	r4, r0
+ 272 0008 D0F8E001 		ldr	r0, [r0, #480]
+ 273 000c 8DF80730 		strb	r3, [sp, #7]
+ 274 0010 0368     		ldr	r3, [r0]
+ 275 0012 02A9     		add	r1, sp, #8
+ 276 0014 0322     		movs	r2, #3
+ 277 0016 0DF10706 		add	r6, sp, #7
+ 278 001a 1E27     		movs	r7, #30
+ 279 001c 0125     		movs	r5, #1
+ARM GAS  /tmp/cca8rhDd.s 			page 6
+
+
+ 280 001e DB69     		ldr	r3, [r3, #28]
+ 281 0020 0496     		str	r6, [sp, #16]
+ 282 0022 0691     		str	r1, [sp, #24]
+ 283 0024 0792     		str	r2, [sp, #28]
+ 284 0026 ADF80C70 		strh	r7, [sp, #12]	@ movhi
+ 285 002a 0595     		str	r5, [sp, #20]
+ 286 002c 9847     		blx	r3
+ 287 002e D4F8E001 		ldr	r0, [r4, #480]
+ 288 0032 03A9     		add	r1, sp, #12
+ 289 0034 0368     		ldr	r3, [r0]
+ 290 0036 4FF0FF32 		mov	r2, #-1
+ 291 003a 5B69     		ldr	r3, [r3, #20]
+ 292 003c 9847     		blx	r3
+ 293 003e 0646     		mov	r6, r0
+ 294 0040 D4F8E001 		ldr	r0, [r4, #480]
+ 295 0044 0268     		ldr	r2, [r0]
+ 296 0046 136A     		ldr	r3, [r2, #32]
+ 297 0048 9847     		blx	r3
+ 298 004a 9DF80830 		ldrb	r3, [sp, #8]	@ zero_extendqisi2
+ 299 004e 482B     		cmp	r3, #72
+ 300 0050 02D0     		beq	.L37
+ 301              	.L36:
+ 302 0052 2846     		mov	r0, r5
+ 303              	.L33:
+ 304 0054 09B0     		add	sp, sp, #36
+ 305              		@ sp needed
+ 306 0056 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 307              	.L37:
+ 308 0058 9DF80930 		ldrb	r3, [sp, #9]	@ zero_extendqisi2
+ 309 005c 342B     		cmp	r3, #52
+ 310 005e F8D1     		bne	.L36
+ 311 0060 9DF80A30 		ldrb	r3, [sp, #10]	@ zero_extendqisi2
+ 312 0064 332B     		cmp	r3, #51
+ 313 0066 F4D1     		bne	.L36
+ 314 0068 301C     		adds	r0, r6, #0
+ 315 006a 18BF     		it	ne
+ 316 006c 0120     		movne	r0, #1
+ 317 006e F1E7     		b	.L33
+ 318              		.size	_ZN5amiro8HMC5883L8getCheckEv, .-_ZN5amiro8HMC5883L8getCheckEv
+ 319              		.section	.text._ZN5amiro8HMC5883L9writeConfEv,"ax",%progbits
+ 320              		.align	2
+ 321              		.p2align 4,,15
+ 322              		.global	_ZN5amiro8HMC5883L9writeConfEv
+ 323              		.thumb
+ 324              		.thumb_func
+ 325              		.type	_ZN5amiro8HMC5883L9writeConfEv, %function
+ 326              	_ZN5amiro8HMC5883L9writeConfEv:
+ 327              		@ args = 0, pretend = 0, frame = 8
+ 328              		@ frame_needed = 0, uses_anonymous_args = 0
+ 329 0000 30B5     		push	{r4, r5, lr}
+ 330 0002 D0F8E431 		ldr	r3, [r0, #484]
+ 331 0006 83B0     		sub	sp, sp, #12
+ 332 0008 0022     		movs	r2, #0
+ 333 000a 8DF80420 		strb	r2, [sp, #4]
+ 334 000e 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 335 0010 0446     		mov	r4, r0
+ 336 0012 8DF80510 		strb	r1, [sp, #5]
+ARM GAS  /tmp/cca8rhDd.s 			page 7
+
+
+ 337 0016 5978     		ldrb	r1, [r3, #1]	@ zero_extendqisi2
+ 338 0018 D0F8E001 		ldr	r0, [r0, #480]
+ 339 001c 8DF80610 		strb	r1, [sp, #6]
+ 340 0020 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 341 0022 01AD     		add	r5, sp, #4
+ 342 0024 8DF80730 		strb	r3, [sp, #7]
+ 343 0028 0368     		ldr	r3, [r0]
+ 344 002a 0421     		movs	r1, #4
+ 345 002c C4F8F051 		str	r5, [r4, #496]
+ 346 0030 C4F8FC21 		str	r2, [r4, #508]
+ 347 0034 C4F8F411 		str	r1, [r4, #500]
+ 348 0038 DB69     		ldr	r3, [r3, #28]
+ 349 003a 9847     		blx	r3
+ 350 003c D4F8E001 		ldr	r0, [r4, #480]
+ 351 0040 04F5F671 		add	r1, r4, #492
+ 352 0044 0368     		ldr	r3, [r0]
+ 353 0046 4FF0FF32 		mov	r2, #-1
+ 354 004a 5B69     		ldr	r3, [r3, #20]
+ 355 004c 9847     		blx	r3
+ 356 004e 0546     		mov	r5, r0
+ 357 0050 D4F8E001 		ldr	r0, [r4, #480]
+ 358 0054 0268     		ldr	r2, [r0]
+ 359 0056 136A     		ldr	r3, [r2, #32]
+ 360 0058 9847     		blx	r3
+ 361 005a 2846     		mov	r0, r5
+ 362 005c 03B0     		add	sp, sp, #12
+ 363              		@ sp needed
+ 364 005e 30BD     		pop	{r4, r5, pc}
+ 365              		.size	_ZN5amiro8HMC5883L9writeConfEv, .-_ZN5amiro8HMC5883L9writeConfEv
+ 366              		.section	.text.startup._ZN5amiro8HMC5883L4mainEv,"ax",%progbits
+ 367              		.align	2
+ 368              		.p2align 4,,15
+ 369              		.global	_ZN5amiro8HMC5883L4mainEv
+ 370              		.thumb
+ 371              		.thumb_func
+ 372              		.type	_ZN5amiro8HMC5883L4mainEv, %function
+ 373              	_ZN5amiro8HMC5883L4mainEv:
+ 374              		@ args = 0, pretend = 0, frame = 16
+ 375              		@ frame_needed = 0, uses_anonymous_args = 0
+ 376 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 377 0002 0446     		mov	r4, r0
+ 378 0004 85B0     		sub	sp, sp, #20
+ 379 0006 3148     		ldr	r0, .L44
+ 380 0008 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread7setNameEPKc
+ 381 000c 2046     		mov	r0, r4
+ 382 000e FFF7FEFF 		bl	_ZN5amiro8HMC5883L9writeConfEv
+ 383 0012 0028     		cmp	r0, #0
+ 384 0014 56D1     		bne	.L43
+ 385 0016 0327     		movs	r7, #3
+ 386 0018 0DF10706 		add	r6, sp, #7
+ 387 001c 0125     		movs	r5, #1
+ 388 001e 49E0     		b	.L41
+ 389              	.L42:
+ 390 0020 D4F8E001 		ldr	r0, [r4, #480]
+ 391 0024 8DF80770 		strb	r7, [sp, #7]
+ 392 0028 0268     		ldr	r2, [r0]
+ 393 002a 02A9     		add	r1, sp, #8
+ARM GAS  /tmp/cca8rhDd.s 			page 8
+
+
+ 394 002c C4F8F811 		str	r1, [r4, #504]
+ 395 0030 C4F8F061 		str	r6, [r4, #496]
+ 396 0034 C4F8FC31 		str	r3, [r4, #508]
+ 397 0038 C4F8F451 		str	r5, [r4, #500]
+ 398 003c D369     		ldr	r3, [r2, #28]
+ 399 003e 9847     		blx	r3
+ 400 0040 D4F8E001 		ldr	r0, [r4, #480]
+ 401 0044 04F5F671 		add	r1, r4, #492
+ 402 0048 0368     		ldr	r3, [r0]
+ 403 004a 4FF0FF32 		mov	r2, #-1
+ 404 004e 5B69     		ldr	r3, [r3, #20]
+ 405 0050 9847     		blx	r3
+ 406 0052 D4F8E001 		ldr	r0, [r4, #480]
+ 407 0056 0368     		ldr	r3, [r0]
+ 408 0058 1B6A     		ldr	r3, [r3, #32]
+ 409 005a 9847     		blx	r3
+ 410 005c 2023     		movs	r3, #32
+ 411              	@ 134 "../../components/magneto/hmc5883l.cpp" 1
+ 412 005e 83F31188 		msr     BASEPRI, r3
+ 413              	@ 0 "" 2
+ 414              		.thumb
+ 415 0062 FFF7FEFF 		bl	dbg_check_lock
+ 416 0066 9DF808C0 		ldrb	ip, [sp, #8]	@ zero_extendqisi2
+ 417 006a 9DF80910 		ldrb	r1, [sp, #9]	@ zero_extendqisi2
+ 418 006e 9DF80AE0 		ldrb	lr, [sp, #10]	@ zero_extendqisi2
+ 419 0072 9DF80B20 		ldrb	r2, [sp, #11]	@ zero_extendqisi2
+ 420 0076 9DF80C00 		ldrb	r0, [sp, #12]	@ zero_extendqisi2
+ 421 007a 9DF80D30 		ldrb	r3, [sp, #13]	@ zero_extendqisi2
+ 422 007e 01EB0C21 		add	r1, r1, ip, lsl #8
+ 423 0082 03EB0023 		add	r3, r3, r0, lsl #8
+ 424 0086 02EB0E22 		add	r2, r2, lr, lsl #8
+ 425 008a A4F8DC31 		strh	r3, [r4, #476]	@ movhi
+ 426 008e A4F8D811 		strh	r1, [r4, #472]	@ movhi
+ 427 0092 A4F8DA21 		strh	r2, [r4, #474]	@ movhi
+ 428 0096 FFF7FEFF 		bl	dbg_check_unlock
+ 429 009a 0023     		movs	r3, #0
+ 430              	@ 138 "../../components/magneto/hmc5883l.cpp" 1
+ 431 009c 83F31188 		msr     BASEPRI, r3
+ 432              	@ 0 "" 2
+ 433              		.thumb
+ 434 00a0 0021     		movs	r1, #0
+ 435 00a2 04F5F470 		add	r0, r4, #488
+ 436 00a6 FFF7FEFF 		bl	_ZN10chibios_rt9EvtSource14broadcastFlagsEm
+ 437 00aa 4FF0FF30 		mov	r0, #-1
+ 438 00ae 3F21     		movs	r1, #63
+ 439 00b0 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
+ 440              	.L41:
+ 441 00b4 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ 442 00b8 0623     		movs	r3, #6
+ 443 00ba 0028     		cmp	r0, #0
+ 444 00bc B0D0     		beq	.L42
+ 445 00be 0020     		movs	r0, #0
+ 446              	.L40:
+ 447 00c0 05B0     		add	sp, sp, #20
+ 448              		@ sp needed
+ 449 00c2 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 450              	.L43:
+ARM GAS  /tmp/cca8rhDd.s 			page 9
+
+
+ 451 00c4 6FF00100 		mvn	r0, #1
+ 452 00c8 FAE7     		b	.L40
+ 453              	.L45:
+ 454 00ca 00BF     		.align	2
+ 455              	.L44:
+ 456 00cc 00000000 		.word	.LC0
+ 457              		.size	_ZN5amiro8HMC5883L4mainEv, .-_ZN5amiro8HMC5883L4mainEv
+ 458              		.section	.text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev,"ax",%progbits
+ 459              		.align	2
+ 460              		.p2align 4,,15
+ 461              		.thumb
+ 462              		.thumb_func
+ 463              		.type	_GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev, %function
+ 464              	_GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:
+ 465              		@ args = 0, pretend = 0, frame = 0
+ 466              		@ frame_needed = 0, uses_anonymous_args = 0
+ 467              		@ link register save eliminated.
+ 468 0000 024B     		ldr	r3, .L47
+ 469 0002 034A     		ldr	r2, .L47+4
+ 470 0004 1A60     		str	r2, [r3]
+ 471 0006 5A60     		str	r2, [r3, #4]
+ 472 0008 7047     		bx	lr
+ 473              	.L48:
+ 474 000a 00BF     		.align	2
+ 475              	.L47:
+ 476 000c 00000000 		.word	.LANCHOR1
+ 477 0010 A0860100 		.word	100000
+ 478              		.size	_GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev, .-_GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev
+ 479 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 479      AFF30080 
+ 479      AFF30080 
+ 480              		.align	2
+ 481 0000 00000000 		.word	_GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev(target1)
+ 482              		.weak	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+ 483              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE,"aG",%progbits,_ZTVN10chibios_rt16Ba
+ 484              		.align	3
+ 485              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, %object
+ 486              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE, 20
+ 487              	_ZTVN10chibios_rt16BaseStaticThreadILi256EEE:
+ 488 0000 00000000 		.word	0
+ 489 0004 00000000 		.word	0
+ 490 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 491 000c 00000000 		.word	_ZN10chibios_rt10BaseThread4mainEv
+ 492 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 493              		.global	_ZTVN5amiro8HMC5883LE
+ 494 0014 00000000 		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 495              		.align	2
+ 496              		.set	.LANCHOR1,. + 0
+ 497              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 498              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 499              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 500 0000 00000000 		.space	8
+ 500      00000000 
+ 501              		.section	.rodata._ZTVN5amiro8HMC5883LE,"a",%progbits
+ 502              		.align	3
+ 503              		.set	.LANCHOR0,. + 0
+ 504              		.type	_ZTVN5amiro8HMC5883LE, %object
+ARM GAS  /tmp/cca8rhDd.s 			page 10
+
+
+ 505              		.size	_ZTVN5amiro8HMC5883LE, 28
+ 506              	_ZTVN5amiro8HMC5883LE:
+ 507 0000 00000000 		.word	0
+ 508 0004 00000000 		.word	0
+ 509 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 510 000c 00000000 		.word	_ZN5amiro8HMC5883L4mainEv
+ 511 0010 00000000 		.word	_ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+ 512 0014 00000000 		.word	_ZN5amiro8HMC5883LD1Ev
+ 513 0018 00000000 		.word	_ZN5amiro8HMC5883LD0Ev
+ 514 001c 00000000 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 515              		.align	2
+ 516              	.LC0:
+ 517 0000 486D6335 		.ascii	"Hmc5883l\000"
+ 517      3838336C 
+ 517      00
+ 518 0009 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cca8rhDd.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 hmc5883l.cpp
+     /tmp/cca8rhDd.s:16     .text._ZN5amiro8HMC5883LD2Ev:00000000 $t
+     /tmp/cca8rhDd.s:22     .text._ZN5amiro8HMC5883LD2Ev:00000000 _ZN5amiro8HMC5883LD2Ev
+     /tmp/cca8rhDd.s:32     .text._ZN5amiro8HMC5883LD2Ev:00000008 $d
+     /tmp/cca8rhDd.s:22     .text._ZN5amiro8HMC5883LD2Ev:00000000 _ZN5amiro8HMC5883LD1Ev
+     /tmp/cca8rhDd.s:37     .text._ZN5amiro8HMC5883LD0Ev:00000000 $t
+     /tmp/cca8rhDd.s:43     .text._ZN5amiro8HMC5883LD0Ev:00000000 _ZN5amiro8HMC5883LD0Ev
+     /tmp/cca8rhDd.s:56     .text._ZN5amiro8HMC5883LD0Ev:00000010 $d
+     /tmp/cca8rhDd.s:59     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/cca8rhDd.s:65     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/cca8rhDd.s:88     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/cca8rhDd.s:92     .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:00000000 $t
+     /tmp/cca8rhDd.s:98     .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:00000000 _ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
+     /tmp/cca8rhDd.s:119    .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:0000002c $d
+     /tmp/cca8rhDd.s:98     .text._ZN5amiro8HMC5883LC2EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE:00000000 _ZN5amiro8HMC5883LC1EPNS_9I2CDriverEPKNS0_14HMC5883LConfigE
+     /tmp/cca8rhDd.s:124    .text._ZN5amiro8HMC5883L14getEventSourceEv:00000000 $t
+     /tmp/cca8rhDd.s:130    .text._ZN5amiro8HMC5883L14getEventSourceEv:00000000 _ZN5amiro8HMC5883L14getEventSourceEv
+     /tmp/cca8rhDd.s:138    .text._ZN5amiro8HMC5883L16getMagnetizationEh:00000000 $t
+     /tmp/cca8rhDd.s:144    .text._ZN5amiro8HMC5883L16getMagnetizationEh:00000000 _ZN5amiro8HMC5883L16getMagnetizationEh
+     /tmp/cca8rhDd.s:168    .text._ZN5amiro8HMC5883L21getMagnetizationGaussEh:00000000 $t
+     /tmp/cca8rhDd.s:174    .text._ZN5amiro8HMC5883L21getMagnetizationGaussEh:00000000 _ZN5amiro8HMC5883L21getMagnetizationGaussEh
+     /tmp/cca8rhDd.s:259    .text._ZN5amiro8HMC5883L8getCheckEv:00000000 $t
+     /tmp/cca8rhDd.s:265    .text._ZN5amiro8HMC5883L8getCheckEv:00000000 _ZN5amiro8HMC5883L8getCheckEv
+     /tmp/cca8rhDd.s:320    .text._ZN5amiro8HMC5883L9writeConfEv:00000000 $t
+     /tmp/cca8rhDd.s:326    .text._ZN5amiro8HMC5883L9writeConfEv:00000000 _ZN5amiro8HMC5883L9writeConfEv
+     /tmp/cca8rhDd.s:367    .text.startup._ZN5amiro8HMC5883L4mainEv:00000000 $t
+     /tmp/cca8rhDd.s:373    .text.startup._ZN5amiro8HMC5883L4mainEv:00000000 _ZN5amiro8HMC5883L4mainEv
+     /tmp/cca8rhDd.s:456    .text.startup._ZN5amiro8HMC5883L4mainEv:000000cc $d
+     /tmp/cca8rhDd.s:459    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:00000000 $t
+     /tmp/cca8rhDd.s:464    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:00000000 _GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev
+     /tmp/cca8rhDd.s:476    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:0000000c $d
+     /tmp/cca8rhDd.s:480    .init_array:00000000 $d
+     /tmp/cca8rhDd.s:487    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/cca8rhDd.s:484    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/cca8rhDd.s:506    .rodata._ZTVN5amiro8HMC5883LE:00000000 _ZTVN5amiro8HMC5883LE
+     /tmp/cca8rhDd.s:495    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/cca8rhDd.s:499    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/cca8rhDd.s:502    .rodata._ZTVN5amiro8HMC5883LE:00000000 $d
+     /tmp/cca8rhDd.s:515    .rodata.str1.4:00000000 $d
+     /tmp/cca8rhDd.s:36     .text._ZN5amiro8HMC5883LD2Ev:0000000c $t
+     /tmp/cca8rhDd.s:58     .text._ZN5amiro8HMC5883LD0Ev:00000014 $t
+     /tmp/cca8rhDd.s:479    .text.startup._GLOBAL__sub_I__ZN5amiro8HMC5883LD2Ev:00000014 $t
+
+UNDEFINED SYMBOLS
+_ZdlPv
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+_ZN10chibios_rt10BaseThreadC2Ev
+_ZN10chibios_rt9EvtSourceC1Ev
+dbg_check_lock
+dbg_check_unlock
+_ZN10chibios_rt10BaseThread7setNameEPKc
+_ZN10chibios_rt9EvtSource14broadcastFlagsEm
+_ZN10chibios_rt10BaseThread19waitAnyEventTimeoutEmm
+_ZN10chibios_rt10BaseThread15shouldTerminateEv
+ARM GAS  /tmp/cca8rhDd.s 			page 12
+
+
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN10chibios_rt10BaseThread4mainEv

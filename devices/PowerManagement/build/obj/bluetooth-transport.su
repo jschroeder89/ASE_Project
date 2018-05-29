@@ -1,0 +1,19 @@
+bluetooth-transport.cpp:77:6:static void amiro::BluetoothTransport::bluetoothTransportTransmitCompleted_cb(UARTDriver*)	8	static
+bluetooth-transport.cpp:140:6:static void amiro::BluetoothTransport::bluetoothTransportCharacterReceived_cb(UARTDriver*, uint16_t)	8	static
+bluetooth-transport.cpp:181:6:static void amiro::BluetoothTransport::bluetoothTransportReceiveCompleted_cb(UARTDriver*)	8	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 128; tprio_t = long unsigned int]	24	static
+bluetooth-transport.cpp:15:1:amiro::BluetoothTransport::BluetoothTransport(UARTDriver*)	16	static
+bluetooth-transport.cpp:258:6:void amiro::BluetoothTransport::bluetoothTransportResetState()	0	static
+bluetooth-transport.cpp:263:6:bool amiro::BluetoothTransport::bluetoothTransportIsMuxMode()	0	static
+bluetooth-transport.cpp:270:22:chibios_rt::Mailbox* amiro::BluetoothTransport::bluetoothTransportGetStorageMailbox()	0	static
+bluetooth-transport.cpp:274:22:chibios_rt::Mailbox* amiro::BluetoothTransport::bluetoothTransportGetTransmitMailbox()	0	static
+bluetooth-transport.cpp:278:6:void amiro::BluetoothTransport::bluetoothTransportSetReceiveMailbox(uint8_t, chibios_rt::Mailbox*)	16	static
+bluetooth-transport.cpp:284:6:void amiro::BluetoothTransport::postReceiveDescriptorI()	16	static
+bluetooth-transport.cpp:145:6:virtual void amiro::BluetoothTransport::bluetoothTransportCharacterReceived(uint16_t)	24	static
+bluetooth-transport.cpp:186:6:virtual void amiro::BluetoothTransport::bluetoothTransportReceiveCompleted()	16	static
+bluetooth-transport.cpp:296:6:void amiro::BluetoothTransport::postTransmitDescriptorI()	8	static
+bluetooth-transport.cpp:307:11:uint8_t* amiro::BluetoothTransport::getEncodeHeader()	8	static
+bluetooth-transport.cpp:39:7:virtual msg_t amiro::BluetoothTransport::main()	24	static
+bluetooth-transport.cpp:82:6:virtual void amiro::BluetoothTransport::bluetoothTransportTransmitCompleted()	16	static
+bluetooth-transport.cpp:315:10:uint8_t* amiro::BluetoothTransport::getEncodeTailer()	0	static
+bluetooth-transport.cpp:320:5:int amiro::BluetoothTransport::decodeHeader()	0	static

@@ -1,0 +1,569 @@
+ARM GAS  /tmp/cckcCpqV.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"ext_lld_isr.c"
+  15              		.section	.text.Vector58,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	Vector58
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	Vector58, %function
+  22              	Vector58:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 08B5     		push	{r3, lr}
+  26 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+  27 0006 0748     		ldr	r0, .L2
+  28 0008 074A     		ldr	r2, .L2+4
+  29 000a 4368     		ldr	r3, [r0, #4]
+  30 000c 0121     		movs	r1, #1
+  31 000e 5B68     		ldr	r3, [r3, #4]
+  32 0010 5161     		str	r1, [r2, #20]
+  33 0012 0021     		movs	r1, #0
+  34 0014 9847     		blx	r3
+  35 0016 FFF7FEFF 		bl	dbg_check_leave_isr
+  36 001a BDE80840 		pop	{r3, lr}
+  37 001e FFF7FEBF 		b	_port_irq_epilogue
+  38              	.L3:
+  39 0022 00BF     		.align	2
+  40              	.L2:
+  41 0024 00000000 		.word	EXTD1
+  42 0028 00040140 		.word	1073808384
+  43              		.size	Vector58, .-Vector58
+  44 002c AFF30080 		.section	.text.Vector5C,"ax",%progbits
+  45              		.align	2
+  46              		.p2align 4,,15
+  47              		.global	Vector5C
+  48              		.thumb
+  49              		.thumb_func
+  50              		.type	Vector5C, %function
+  51              	Vector5C:
+  52              		@ args = 0, pretend = 0, frame = 0
+  53              		@ frame_needed = 0, uses_anonymous_args = 0
+  54 0000 08B5     		push	{r3, lr}
+  55 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+  56 0006 0748     		ldr	r0, .L5
+  57 0008 074A     		ldr	r2, .L5+4
+ARM GAS  /tmp/cckcCpqV.s 			page 2
+
+
+  58 000a 4368     		ldr	r3, [r0, #4]
+  59 000c 0221     		movs	r1, #2
+  60 000e DB68     		ldr	r3, [r3, #12]
+  61 0010 5161     		str	r1, [r2, #20]
+  62 0012 0121     		movs	r1, #1
+  63 0014 9847     		blx	r3
+  64 0016 FFF7FEFF 		bl	dbg_check_leave_isr
+  65 001a BDE80840 		pop	{r3, lr}
+  66 001e FFF7FEBF 		b	_port_irq_epilogue
+  67              	.L6:
+  68 0022 00BF     		.align	2
+  69              	.L5:
+  70 0024 00000000 		.word	EXTD1
+  71 0028 00040140 		.word	1073808384
+  72              		.size	Vector5C, .-Vector5C
+  73 002c AFF30080 		.section	.text.Vector60,"ax",%progbits
+  74              		.align	2
+  75              		.p2align 4,,15
+  76              		.global	Vector60
+  77              		.thumb
+  78              		.thumb_func
+  79              		.type	Vector60, %function
+  80              	Vector60:
+  81              		@ args = 0, pretend = 0, frame = 0
+  82              		@ frame_needed = 0, uses_anonymous_args = 0
+  83 0000 08B5     		push	{r3, lr}
+  84 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+  85 0006 0748     		ldr	r0, .L8
+  86 0008 074A     		ldr	r2, .L8+4
+  87 000a 4368     		ldr	r3, [r0, #4]
+  88 000c 0421     		movs	r1, #4
+  89 000e 5B69     		ldr	r3, [r3, #20]
+  90 0010 5161     		str	r1, [r2, #20]
+  91 0012 0221     		movs	r1, #2
+  92 0014 9847     		blx	r3
+  93 0016 FFF7FEFF 		bl	dbg_check_leave_isr
+  94 001a BDE80840 		pop	{r3, lr}
+  95 001e FFF7FEBF 		b	_port_irq_epilogue
+  96              	.L9:
+  97 0022 00BF     		.align	2
+  98              	.L8:
+  99 0024 00000000 		.word	EXTD1
+ 100 0028 00040140 		.word	1073808384
+ 101              		.size	Vector60, .-Vector60
+ 102 002c AFF30080 		.section	.text.Vector64,"ax",%progbits
+ 103              		.align	2
+ 104              		.p2align 4,,15
+ 105              		.global	Vector64
+ 106              		.thumb
+ 107              		.thumb_func
+ 108              		.type	Vector64, %function
+ 109              	Vector64:
+ 110              		@ args = 0, pretend = 0, frame = 0
+ 111              		@ frame_needed = 0, uses_anonymous_args = 0
+ 112 0000 08B5     		push	{r3, lr}
+ 113 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 114 0006 0748     		ldr	r0, .L11
+ARM GAS  /tmp/cckcCpqV.s 			page 3
+
+
+ 115 0008 074A     		ldr	r2, .L11+4
+ 116 000a 4368     		ldr	r3, [r0, #4]
+ 117 000c 0821     		movs	r1, #8
+ 118 000e DB69     		ldr	r3, [r3, #28]
+ 119 0010 5161     		str	r1, [r2, #20]
+ 120 0012 0321     		movs	r1, #3
+ 121 0014 9847     		blx	r3
+ 122 0016 FFF7FEFF 		bl	dbg_check_leave_isr
+ 123 001a BDE80840 		pop	{r3, lr}
+ 124 001e FFF7FEBF 		b	_port_irq_epilogue
+ 125              	.L12:
+ 126 0022 00BF     		.align	2
+ 127              	.L11:
+ 128 0024 00000000 		.word	EXTD1
+ 129 0028 00040140 		.word	1073808384
+ 130              		.size	Vector64, .-Vector64
+ 131 002c AFF30080 		.section	.text.Vector68,"ax",%progbits
+ 132              		.align	2
+ 133              		.p2align 4,,15
+ 134              		.global	Vector68
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.type	Vector68, %function
+ 138              	Vector68:
+ 139              		@ args = 0, pretend = 0, frame = 0
+ 140              		@ frame_needed = 0, uses_anonymous_args = 0
+ 141 0000 08B5     		push	{r3, lr}
+ 142 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 143 0006 0748     		ldr	r0, .L14
+ 144 0008 074A     		ldr	r2, .L14+4
+ 145 000a 4368     		ldr	r3, [r0, #4]
+ 146 000c 1021     		movs	r1, #16
+ 147 000e 5B6A     		ldr	r3, [r3, #36]
+ 148 0010 5161     		str	r1, [r2, #20]
+ 149 0012 0421     		movs	r1, #4
+ 150 0014 9847     		blx	r3
+ 151 0016 FFF7FEFF 		bl	dbg_check_leave_isr
+ 152 001a BDE80840 		pop	{r3, lr}
+ 153 001e FFF7FEBF 		b	_port_irq_epilogue
+ 154              	.L15:
+ 155 0022 00BF     		.align	2
+ 156              	.L14:
+ 157 0024 00000000 		.word	EXTD1
+ 158 0028 00040140 		.word	1073808384
+ 159              		.size	Vector68, .-Vector68
+ 160 002c AFF30080 		.section	.text.Vector9C,"ax",%progbits
+ 161              		.align	2
+ 162              		.p2align 4,,15
+ 163              		.global	Vector9C
+ 164              		.thumb
+ 165              		.thumb_func
+ 166              		.type	Vector9C, %function
+ 167              	Vector9C:
+ 168              		@ args = 0, pretend = 0, frame = 0
+ 169              		@ frame_needed = 0, uses_anonymous_args = 0
+ 170 0000 10B5     		push	{r4, lr}
+ 171 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ARM GAS  /tmp/cckcCpqV.s 			page 4
+
+
+ 172 0006 194B     		ldr	r3, .L42
+ 173 0008 5C69     		ldr	r4, [r3, #20]
+ 174 000a 04F47872 		and	r2, r4, #992
+ 175 000e 5A61     		str	r2, [r3, #20]
+ 176 0010 A306     		lsls	r3, r4, #26
+ 177 0012 24D4     		bmi	.L38
+ 178              	.L17:
+ 179 0014 6006     		lsls	r0, r4, #25
+ 180 0016 1CD4     		bmi	.L39
+ 181              	.L18:
+ 182 0018 2106     		lsls	r1, r4, #24
+ 183 001a 14D4     		bmi	.L40
+ 184              	.L19:
+ 185 001c E205     		lsls	r2, r4, #23
+ 186 001e 0CD4     		bmi	.L41
+ 187              	.L20:
+ 188 0020 A305     		lsls	r3, r4, #22
+ 189 0022 04D5     		bpl	.L21
+ 190 0024 1248     		ldr	r0, .L42+4
+ 191 0026 0921     		movs	r1, #9
+ 192 0028 4368     		ldr	r3, [r0, #4]
+ 193 002a DB6C     		ldr	r3, [r3, #76]
+ 194 002c 9847     		blx	r3
+ 195              	.L21:
+ 196 002e FFF7FEFF 		bl	dbg_check_leave_isr
+ 197 0032 BDE81040 		pop	{r4, lr}
+ 198 0036 FFF7FEBF 		b	_port_irq_epilogue
+ 199              	.L41:
+ 200 003a 0D48     		ldr	r0, .L42+4
+ 201 003c 0821     		movs	r1, #8
+ 202 003e 4368     		ldr	r3, [r0, #4]
+ 203 0040 5B6C     		ldr	r3, [r3, #68]
+ 204 0042 9847     		blx	r3
+ 205 0044 ECE7     		b	.L20
+ 206              	.L40:
+ 207 0046 0A48     		ldr	r0, .L42+4
+ 208 0048 0721     		movs	r1, #7
+ 209 004a 4368     		ldr	r3, [r0, #4]
+ 210 004c DB6B     		ldr	r3, [r3, #60]
+ 211 004e 9847     		blx	r3
+ 212 0050 E4E7     		b	.L19
+ 213              	.L39:
+ 214 0052 0748     		ldr	r0, .L42+4
+ 215 0054 0621     		movs	r1, #6
+ 216 0056 4368     		ldr	r3, [r0, #4]
+ 217 0058 5B6B     		ldr	r3, [r3, #52]
+ 218 005a 9847     		blx	r3
+ 219 005c DCE7     		b	.L18
+ 220              	.L38:
+ 221 005e 0448     		ldr	r0, .L42+4
+ 222 0060 0521     		movs	r1, #5
+ 223 0062 4368     		ldr	r3, [r0, #4]
+ 224 0064 DB6A     		ldr	r3, [r3, #44]
+ 225 0066 9847     		blx	r3
+ 226 0068 D4E7     		b	.L17
+ 227              	.L43:
+ 228 006a 00BF     		.align	2
+ARM GAS  /tmp/cckcCpqV.s 			page 5
+
+
+ 229              	.L42:
+ 230 006c 00040140 		.word	1073808384
+ 231 0070 00000000 		.word	EXTD1
+ 232              		.size	Vector9C, .-Vector9C
+ 233 0074 AFF30080 		.section	.text.VectorE0,"ax",%progbits
+ 233      AFF30080 
+ 233      AFF30080 
+ 234              		.align	2
+ 235              		.p2align 4,,15
+ 236              		.global	VectorE0
+ 237              		.thumb
+ 238              		.thumb_func
+ 239              		.type	VectorE0, %function
+ 240              	VectorE0:
+ 241              		@ args = 0, pretend = 0, frame = 0
+ 242              		@ frame_needed = 0, uses_anonymous_args = 0
+ 243 0000 10B5     		push	{r4, lr}
+ 244 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 245 0006 1D4B     		ldr	r3, .L74
+ 246 0008 5C69     		ldr	r4, [r3, #20]
+ 247 000a 04F47C42 		and	r2, r4, #64512
+ 248 000e 5A61     		str	r2, [r3, #20]
+ 249 0010 6205     		lsls	r2, r4, #21
+ 250 0012 2CD4     		bmi	.L69
+ 251              	.L45:
+ 252 0014 2305     		lsls	r3, r4, #20
+ 253 0016 24D4     		bmi	.L70
+ 254              	.L46:
+ 255 0018 E004     		lsls	r0, r4, #19
+ 256 001a 1CD4     		bmi	.L71
+ 257              	.L47:
+ 258 001c A104     		lsls	r1, r4, #18
+ 259 001e 14D4     		bmi	.L72
+ 260              	.L48:
+ 261 0020 6204     		lsls	r2, r4, #17
+ 262 0022 0CD4     		bmi	.L73
+ 263              	.L49:
+ 264 0024 2304     		lsls	r3, r4, #16
+ 265 0026 04D5     		bpl	.L50
+ 266 0028 1548     		ldr	r0, .L74+4
+ 267 002a 0F21     		movs	r1, #15
+ 268 002c 4368     		ldr	r3, [r0, #4]
+ 269 002e DB6F     		ldr	r3, [r3, #124]
+ 270 0030 9847     		blx	r3
+ 271              	.L50:
+ 272 0032 FFF7FEFF 		bl	dbg_check_leave_isr
+ 273 0036 BDE81040 		pop	{r4, lr}
+ 274 003a FFF7FEBF 		b	_port_irq_epilogue
+ 275              	.L73:
+ 276 003e 1048     		ldr	r0, .L74+4
+ 277 0040 0E21     		movs	r1, #14
+ 278 0042 4368     		ldr	r3, [r0, #4]
+ 279 0044 5B6F     		ldr	r3, [r3, #116]
+ 280 0046 9847     		blx	r3
+ 281 0048 ECE7     		b	.L49
+ 282              	.L72:
+ 283 004a 0D48     		ldr	r0, .L74+4
+ARM GAS  /tmp/cckcCpqV.s 			page 6
+
+
+ 284 004c 0D21     		movs	r1, #13
+ 285 004e 4368     		ldr	r3, [r0, #4]
+ 286 0050 DB6E     		ldr	r3, [r3, #108]
+ 287 0052 9847     		blx	r3
+ 288 0054 E4E7     		b	.L48
+ 289              	.L71:
+ 290 0056 0A48     		ldr	r0, .L74+4
+ 291 0058 0C21     		movs	r1, #12
+ 292 005a 4368     		ldr	r3, [r0, #4]
+ 293 005c 5B6E     		ldr	r3, [r3, #100]
+ 294 005e 9847     		blx	r3
+ 295 0060 DCE7     		b	.L47
+ 296              	.L70:
+ 297 0062 0748     		ldr	r0, .L74+4
+ 298 0064 0B21     		movs	r1, #11
+ 299 0066 4368     		ldr	r3, [r0, #4]
+ 300 0068 DB6D     		ldr	r3, [r3, #92]
+ 301 006a 9847     		blx	r3
+ 302 006c D4E7     		b	.L46
+ 303              	.L69:
+ 304 006e 0448     		ldr	r0, .L74+4
+ 305 0070 0A21     		movs	r1, #10
+ 306 0072 4368     		ldr	r3, [r0, #4]
+ 307 0074 5B6D     		ldr	r3, [r3, #84]
+ 308 0076 9847     		blx	r3
+ 309 0078 CCE7     		b	.L45
+ 310              	.L75:
+ 311 007a 00BF     		.align	2
+ 312              	.L74:
+ 313 007c 00040140 		.word	1073808384
+ 314 0080 00000000 		.word	EXTD1
+ 315              		.size	VectorE0, .-VectorE0
+ 316 0084 AFF30080 		.section	.text.Vector44,"ax",%progbits
+ 316      AFF30080 
+ 316      AFF30080 
+ 317              		.align	2
+ 318              		.p2align 4,,15
+ 319              		.global	Vector44
+ 320              		.thumb
+ 321              		.thumb_func
+ 322              		.type	Vector44, %function
+ 323              	Vector44:
+ 324              		@ args = 0, pretend = 0, frame = 0
+ 325              		@ frame_needed = 0, uses_anonymous_args = 0
+ 326 0000 08B5     		push	{r3, lr}
+ 327 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 328 0006 0848     		ldr	r0, .L77
+ 329 0008 084A     		ldr	r2, .L77+4
+ 330 000a 4368     		ldr	r3, [r0, #4]
+ 331 000c 4FF48031 		mov	r1, #65536
+ 332 0010 D3F88430 		ldr	r3, [r3, #132]
+ 333 0014 5161     		str	r1, [r2, #20]
+ 334 0016 1021     		movs	r1, #16
+ 335 0018 9847     		blx	r3
+ 336 001a FFF7FEFF 		bl	dbg_check_leave_isr
+ 337 001e BDE80840 		pop	{r3, lr}
+ 338 0022 FFF7FEBF 		b	_port_irq_epilogue
+ARM GAS  /tmp/cckcCpqV.s 			page 7
+
+
+ 339              	.L78:
+ 340 0026 00BF     		.align	2
+ 341              	.L77:
+ 342 0028 00000000 		.word	EXTD1
+ 343 002c 00040140 		.word	1073808384
+ 344              		.size	Vector44, .-Vector44
+ 345              		.section	.text.VectorE4,"ax",%progbits
+ 346              		.align	2
+ 347              		.p2align 4,,15
+ 348              		.global	VectorE4
+ 349              		.thumb
+ 350              		.thumb_func
+ 351              		.type	VectorE4, %function
+ 352              	VectorE4:
+ 353              		@ args = 0, pretend = 0, frame = 0
+ 354              		@ frame_needed = 0, uses_anonymous_args = 0
+ 355 0000 08B5     		push	{r3, lr}
+ 356 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 357 0006 0848     		ldr	r0, .L80
+ 358 0008 084A     		ldr	r2, .L80+4
+ 359 000a 4368     		ldr	r3, [r0, #4]
+ 360 000c 4FF40031 		mov	r1, #131072
+ 361 0010 D3F88C30 		ldr	r3, [r3, #140]
+ 362 0014 5161     		str	r1, [r2, #20]
+ 363 0016 1121     		movs	r1, #17
+ 364 0018 9847     		blx	r3
+ 365 001a FFF7FEFF 		bl	dbg_check_leave_isr
+ 366 001e BDE80840 		pop	{r3, lr}
+ 367 0022 FFF7FEBF 		b	_port_irq_epilogue
+ 368              	.L81:
+ 369 0026 00BF     		.align	2
+ 370              	.L80:
+ 371 0028 00000000 		.word	EXTD1
+ 372 002c 00040140 		.word	1073808384
+ 373              		.size	VectorE4, .-VectorE4
+ 374              		.section	.text.VectorE8,"ax",%progbits
+ 375              		.align	2
+ 376              		.p2align 4,,15
+ 377              		.global	VectorE8
+ 378              		.thumb
+ 379              		.thumb_func
+ 380              		.type	VectorE8, %function
+ 381              	VectorE8:
+ 382              		@ args = 0, pretend = 0, frame = 0
+ 383              		@ frame_needed = 0, uses_anonymous_args = 0
+ 384 0000 08B5     		push	{r3, lr}
+ 385 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 386 0006 0848     		ldr	r0, .L83
+ 387 0008 084A     		ldr	r2, .L83+4
+ 388 000a 4368     		ldr	r3, [r0, #4]
+ 389 000c 4FF48021 		mov	r1, #262144
+ 390 0010 D3F89430 		ldr	r3, [r3, #148]
+ 391 0014 5161     		str	r1, [r2, #20]
+ 392 0016 1221     		movs	r1, #18
+ 393 0018 9847     		blx	r3
+ 394 001a FFF7FEFF 		bl	dbg_check_leave_isr
+ 395 001e BDE80840 		pop	{r3, lr}
+ARM GAS  /tmp/cckcCpqV.s 			page 8
+
+
+ 396 0022 FFF7FEBF 		b	_port_irq_epilogue
+ 397              	.L84:
+ 398 0026 00BF     		.align	2
+ 399              	.L83:
+ 400 0028 00000000 		.word	EXTD1
+ 401 002c 00040140 		.word	1073808384
+ 402              		.size	VectorE8, .-VectorE8
+ 403              		.section	.text.ext_lld_exti_irq_enable,"ax",%progbits
+ 404              		.align	2
+ 405              		.p2align 4,,15
+ 406              		.global	ext_lld_exti_irq_enable
+ 407              		.thumb
+ 408              		.thumb_func
+ 409              		.type	ext_lld_exti_irq_enable, %function
+ 410              	ext_lld_exti_irq_enable:
+ 411              		@ args = 0, pretend = 0, frame = 0
+ 412              		@ frame_needed = 0, uses_anonymous_args = 0
+ 413 0000 08B5     		push	{r3, lr}
+ 414 0002 0620     		movs	r0, #6
+ 415 0004 6021     		movs	r1, #96
+ 416 0006 FFF7FEFF 		bl	nvicEnableVector
+ 417 000a 0720     		movs	r0, #7
+ 418 000c 6021     		movs	r1, #96
+ 419 000e FFF7FEFF 		bl	nvicEnableVector
+ 420 0012 0820     		movs	r0, #8
+ 421 0014 6021     		movs	r1, #96
+ 422 0016 FFF7FEFF 		bl	nvicEnableVector
+ 423 001a 0920     		movs	r0, #9
+ 424 001c 6021     		movs	r1, #96
+ 425 001e FFF7FEFF 		bl	nvicEnableVector
+ 426 0022 0A20     		movs	r0, #10
+ 427 0024 6021     		movs	r1, #96
+ 428 0026 FFF7FEFF 		bl	nvicEnableVector
+ 429 002a 1720     		movs	r0, #23
+ 430 002c 6021     		movs	r1, #96
+ 431 002e FFF7FEFF 		bl	nvicEnableVector
+ 432 0032 2820     		movs	r0, #40
+ 433 0034 6021     		movs	r1, #96
+ 434 0036 FFF7FEFF 		bl	nvicEnableVector
+ 435 003a 0120     		movs	r0, #1
+ 436 003c 6021     		movs	r1, #96
+ 437 003e FFF7FEFF 		bl	nvicEnableVector
+ 438 0042 2920     		movs	r0, #41
+ 439 0044 6021     		movs	r1, #96
+ 440 0046 FFF7FEFF 		bl	nvicEnableVector
+ 441 004a BDE80840 		pop	{r3, lr}
+ 442 004e 2A20     		movs	r0, #42
+ 443 0050 6021     		movs	r1, #96
+ 444 0052 FFF7FEBF 		b	nvicEnableVector
+ 445              		.size	ext_lld_exti_irq_enable, .-ext_lld_exti_irq_enable
+ 446 0056 00BFAFF3 		.section	.text.ext_lld_exti_irq_disable,"ax",%progbits
+ 446      0080AFF3 
+ 446      0080
+ 447              		.align	2
+ 448              		.p2align 4,,15
+ 449              		.global	ext_lld_exti_irq_disable
+ 450              		.thumb
+ARM GAS  /tmp/cckcCpqV.s 			page 9
+
+
+ 451              		.thumb_func
+ 452              		.type	ext_lld_exti_irq_disable, %function
+ 453              	ext_lld_exti_irq_disable:
+ 454              		@ args = 0, pretend = 0, frame = 0
+ 455              		@ frame_needed = 0, uses_anonymous_args = 0
+ 456 0000 08B5     		push	{r3, lr}
+ 457 0002 0620     		movs	r0, #6
+ 458 0004 FFF7FEFF 		bl	nvicDisableVector
+ 459 0008 0720     		movs	r0, #7
+ 460 000a FFF7FEFF 		bl	nvicDisableVector
+ 461 000e 0820     		movs	r0, #8
+ 462 0010 FFF7FEFF 		bl	nvicDisableVector
+ 463 0014 0920     		movs	r0, #9
+ 464 0016 FFF7FEFF 		bl	nvicDisableVector
+ 465 001a 0A20     		movs	r0, #10
+ 466 001c FFF7FEFF 		bl	nvicDisableVector
+ 467 0020 1720     		movs	r0, #23
+ 468 0022 FFF7FEFF 		bl	nvicDisableVector
+ 469 0026 2820     		movs	r0, #40
+ 470 0028 FFF7FEFF 		bl	nvicDisableVector
+ 471 002c 0120     		movs	r0, #1
+ 472 002e FFF7FEFF 		bl	nvicDisableVector
+ 473 0032 2920     		movs	r0, #41
+ 474 0034 FFF7FEFF 		bl	nvicDisableVector
+ 475 0038 BDE80840 		pop	{r3, lr}
+ 476 003c 2A20     		movs	r0, #42
+ 477 003e FFF7FEBF 		b	nvicDisableVector
+ 478              		.size	ext_lld_exti_irq_disable, .-ext_lld_exti_irq_disable
+ 479 0042 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 479      0080AFF3 
+ 479      0080AFF3 
+ 479      0080
+ARM GAS  /tmp/cckcCpqV.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ext_lld_isr.c
+     /tmp/cckcCpqV.s:16     .text.Vector58:00000000 $t
+     /tmp/cckcCpqV.s:22     .text.Vector58:00000000 Vector58
+     /tmp/cckcCpqV.s:41     .text.Vector58:00000024 $d
+     /tmp/cckcCpqV.s:45     .text.Vector5C:00000000 $t
+     /tmp/cckcCpqV.s:51     .text.Vector5C:00000000 Vector5C
+     /tmp/cckcCpqV.s:70     .text.Vector5C:00000024 $d
+     /tmp/cckcCpqV.s:74     .text.Vector60:00000000 $t
+     /tmp/cckcCpqV.s:80     .text.Vector60:00000000 Vector60
+     /tmp/cckcCpqV.s:99     .text.Vector60:00000024 $d
+     /tmp/cckcCpqV.s:103    .text.Vector64:00000000 $t
+     /tmp/cckcCpqV.s:109    .text.Vector64:00000000 Vector64
+     /tmp/cckcCpqV.s:128    .text.Vector64:00000024 $d
+     /tmp/cckcCpqV.s:132    .text.Vector68:00000000 $t
+     /tmp/cckcCpqV.s:138    .text.Vector68:00000000 Vector68
+     /tmp/cckcCpqV.s:157    .text.Vector68:00000024 $d
+     /tmp/cckcCpqV.s:161    .text.Vector9C:00000000 $t
+     /tmp/cckcCpqV.s:167    .text.Vector9C:00000000 Vector9C
+     /tmp/cckcCpqV.s:230    .text.Vector9C:0000006c $d
+     /tmp/cckcCpqV.s:234    .text.VectorE0:00000000 $t
+     /tmp/cckcCpqV.s:240    .text.VectorE0:00000000 VectorE0
+     /tmp/cckcCpqV.s:313    .text.VectorE0:0000007c $d
+     /tmp/cckcCpqV.s:317    .text.Vector44:00000000 $t
+     /tmp/cckcCpqV.s:323    .text.Vector44:00000000 Vector44
+     /tmp/cckcCpqV.s:342    .text.Vector44:00000028 $d
+     /tmp/cckcCpqV.s:346    .text.VectorE4:00000000 $t
+     /tmp/cckcCpqV.s:352    .text.VectorE4:00000000 VectorE4
+     /tmp/cckcCpqV.s:371    .text.VectorE4:00000028 $d
+     /tmp/cckcCpqV.s:375    .text.VectorE8:00000000 $t
+     /tmp/cckcCpqV.s:381    .text.VectorE8:00000000 VectorE8
+     /tmp/cckcCpqV.s:400    .text.VectorE8:00000028 $d
+     /tmp/cckcCpqV.s:404    .text.ext_lld_exti_irq_enable:00000000 $t
+     /tmp/cckcCpqV.s:410    .text.ext_lld_exti_irq_enable:00000000 ext_lld_exti_irq_enable
+     /tmp/cckcCpqV.s:447    .text.ext_lld_exti_irq_disable:00000000 $t
+     /tmp/cckcCpqV.s:453    .text.ext_lld_exti_irq_disable:00000000 ext_lld_exti_irq_disable
+     /tmp/cckcCpqV.s:44     .text.Vector58:0000002c $t
+     /tmp/cckcCpqV.s:73     .text.Vector5C:0000002c $t
+     /tmp/cckcCpqV.s:102    .text.Vector60:0000002c $t
+     /tmp/cckcCpqV.s:131    .text.Vector64:0000002c $t
+     /tmp/cckcCpqV.s:160    .text.Vector68:0000002c $t
+     /tmp/cckcCpqV.s:233    .text.Vector9C:00000074 $t
+     /tmp/cckcCpqV.s:316    .text.VectorE0:00000084 $t
+
+UNDEFINED SYMBOLS
+dbg_check_enter_isr
+dbg_check_leave_isr
+_port_irq_epilogue
+EXTD1
+nvicEnableVector
+nvicDisableVector

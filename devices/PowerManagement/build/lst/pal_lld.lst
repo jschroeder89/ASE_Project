@@ -1,0 +1,290 @@
+ARM GAS  /tmp/cciUBsDJ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"pal_lld.c"
+  17              		.section	.text._pal_lld_init,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_pal_lld_init
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_pal_lld_init, %function
+  24              	_pal_lld_init:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 2DE9F00F 		push	{r4, r5, r6, r7, r8, r9, r10, fp}
+  29 0004 DFF8AC91 		ldr	r9, .L2+28
+  30 0008 DFF8AC81 		ldr	r8, .L2+32
+  31 000c D9F830B0 		ldr	fp, [r9, #48]
+  32 0010 DFF8A8C1 		ldr	ip, .L2+36
+  33 0014 604F     		ldr	r7, .L2
+  34 0016 614E     		ldr	r6, .L2+4
+  35 0018 614D     		ldr	r5, .L2+8
+  36 001a 624C     		ldr	r4, .L2+12
+  37 001c 6249     		ldr	r1, .L2+16
+  38 001e 634A     		ldr	r2, .L2+20
+  39 0020 40F2FF1A 		movw	r10, #511
+  40 0024 4BEA0A0B 		orr	fp, fp, r10
+  41 0028 C9F830B0 		str	fp, [r9, #48]
+  42 002c D9F850B0 		ldr	fp, [r9, #80]
+  43 0030 4BEA0A0A 		orr	r10, fp, r10
+  44 0034 C9F850A0 		str	r10, [r9, #80]
+  45 0038 4368     		ldr	r3, [r0, #4]
+  46 003a C8F80430 		str	r3, [r8, #4]
+  47 003e 8368     		ldr	r3, [r0, #8]
+  48 0040 C8F80830 		str	r3, [r8, #8]
+  49 0044 C368     		ldr	r3, [r0, #12]
+  50 0046 C8F80C30 		str	r3, [r8, #12]
+  51 004a 0369     		ldr	r3, [r0, #16]
+  52 004c C8F81430 		str	r3, [r8, #20]
+  53 0050 4369     		ldr	r3, [r0, #20]
+  54 0052 C8F82030 		str	r3, [r8, #32]
+  55 0056 8369     		ldr	r3, [r0, #24]
+  56 0058 C8F82430 		str	r3, [r8, #36]
+  57 005c 0368     		ldr	r3, [r0]
+ARM GAS  /tmp/cciUBsDJ.s 			page 2
+
+
+  58 005e C8F80030 		str	r3, [r8]
+  59 0062 036A     		ldr	r3, [r0, #32]
+  60 0064 CCF80430 		str	r3, [ip, #4]
+  61 0068 436A     		ldr	r3, [r0, #36]
+  62 006a CCF80830 		str	r3, [ip, #8]
+  63 006e 836A     		ldr	r3, [r0, #40]
+  64 0070 CCF80C30 		str	r3, [ip, #12]
+  65 0074 C36A     		ldr	r3, [r0, #44]
+  66 0076 CCF81430 		str	r3, [ip, #20]
+  67 007a 036B     		ldr	r3, [r0, #48]
+  68 007c CCF82030 		str	r3, [ip, #32]
+  69 0080 436B     		ldr	r3, [r0, #52]
+  70 0082 CCF82430 		str	r3, [ip, #36]
+  71 0086 C369     		ldr	r3, [r0, #28]
+  72 0088 CCF80030 		str	r3, [ip]
+  73 008c C36B     		ldr	r3, [r0, #60]
+  74 008e 7B60     		str	r3, [r7, #4]
+  75 0090 036C     		ldr	r3, [r0, #64]
+  76 0092 BB60     		str	r3, [r7, #8]
+  77 0094 436C     		ldr	r3, [r0, #68]
+  78 0096 FB60     		str	r3, [r7, #12]
+  79 0098 836C     		ldr	r3, [r0, #72]
+  80 009a 7B61     		str	r3, [r7, #20]
+  81 009c C36C     		ldr	r3, [r0, #76]
+  82 009e 3B62     		str	r3, [r7, #32]
+  83 00a0 036D     		ldr	r3, [r0, #80]
+  84 00a2 7B62     		str	r3, [r7, #36]
+  85 00a4 836B     		ldr	r3, [r0, #56]
+  86 00a6 3B60     		str	r3, [r7]
+  87 00a8 876D     		ldr	r7, [r0, #88]
+  88 00aa 7760     		str	r7, [r6, #4]
+  89 00ac C76D     		ldr	r7, [r0, #92]
+  90 00ae B760     		str	r7, [r6, #8]
+  91 00b0 076E     		ldr	r7, [r0, #96]
+  92 00b2 F760     		str	r7, [r6, #12]
+  93 00b4 476E     		ldr	r7, [r0, #100]
+  94 00b6 7761     		str	r7, [r6, #20]
+  95 00b8 876E     		ldr	r7, [r0, #104]
+  96 00ba 3762     		str	r7, [r6, #32]
+  97 00bc C76E     		ldr	r7, [r0, #108]
+  98 00be 7762     		str	r7, [r6, #36]
+  99 00c0 476D     		ldr	r7, [r0, #84]
+ 100 00c2 3760     		str	r7, [r6]
+ 101 00c4 466F     		ldr	r6, [r0, #116]
+ 102 00c6 6E60     		str	r6, [r5, #4]
+ 103 00c8 866F     		ldr	r6, [r0, #120]
+ 104 00ca AE60     		str	r6, [r5, #8]
+ 105 00cc C66F     		ldr	r6, [r0, #124]
+ 106 00ce EE60     		str	r6, [r5, #12]
+ 107 00d0 D0F88060 		ldr	r6, [r0, #128]
+ 108 00d4 6E61     		str	r6, [r5, #20]
+ 109 00d6 D0F88460 		ldr	r6, [r0, #132]
+ 110 00da 2E62     		str	r6, [r5, #32]
+ 111 00dc D0F88860 		ldr	r6, [r0, #136]
+ 112 00e0 6E62     		str	r6, [r5, #36]
+ 113 00e2 066F     		ldr	r6, [r0, #112]
+ 114 00e4 2E60     		str	r6, [r5]
+ARM GAS  /tmp/cciUBsDJ.s 			page 3
+
+
+ 115 00e6 D0F89050 		ldr	r5, [r0, #144]
+ 116 00ea 6560     		str	r5, [r4, #4]
+ 117 00ec D0F89450 		ldr	r5, [r0, #148]
+ 118 00f0 A560     		str	r5, [r4, #8]
+ 119 00f2 D0F89850 		ldr	r5, [r0, #152]
+ 120 00f6 E560     		str	r5, [r4, #12]
+ 121 00f8 D0F89C50 		ldr	r5, [r0, #156]
+ 122 00fc 6561     		str	r5, [r4, #20]
+ 123 00fe D0F8A050 		ldr	r5, [r0, #160]
+ 124 0102 2562     		str	r5, [r4, #32]
+ 125 0104 D0F8A450 		ldr	r5, [r0, #164]
+ 126 0108 6562     		str	r5, [r4, #36]
+ 127 010a D0F88C50 		ldr	r5, [r0, #140]
+ 128 010e 2560     		str	r5, [r4]
+ 129 0110 D0F8AC40 		ldr	r4, [r0, #172]
+ 130 0114 4C60     		str	r4, [r1, #4]
+ 131 0116 D0F8B040 		ldr	r4, [r0, #176]
+ 132 011a 8C60     		str	r4, [r1, #8]
+ 133 011c D0F8B440 		ldr	r4, [r0, #180]
+ 134 0120 CC60     		str	r4, [r1, #12]
+ 135 0122 D0F8B840 		ldr	r4, [r0, #184]
+ 136 0126 4C61     		str	r4, [r1, #20]
+ 137 0128 D0F8BC40 		ldr	r4, [r0, #188]
+ 138 012c 0C62     		str	r4, [r1, #32]
+ 139 012e D0F8C040 		ldr	r4, [r0, #192]
+ 140 0132 4C62     		str	r4, [r1, #36]
+ 141 0134 D0F8A840 		ldr	r4, [r0, #168]
+ 142 0138 0C60     		str	r4, [r1]
+ 143 013a D0F8C810 		ldr	r1, [r0, #200]
+ 144 013e 5160     		str	r1, [r2, #4]
+ 145 0140 D0F8CC10 		ldr	r1, [r0, #204]
+ 146 0144 9160     		str	r1, [r2, #8]
+ 147 0146 D0F8D010 		ldr	r1, [r0, #208]
+ 148 014a D160     		str	r1, [r2, #12]
+ 149 014c D0F8D410 		ldr	r1, [r0, #212]
+ 150 0150 5161     		str	r1, [r2, #20]
+ 151 0152 D0F8D810 		ldr	r1, [r0, #216]
+ 152 0156 1162     		str	r1, [r2, #32]
+ 153 0158 D0F8DC10 		ldr	r1, [r0, #220]
+ 154 015c 5162     		str	r1, [r2, #36]
+ 155 015e D0F8C410 		ldr	r1, [r0, #196]
+ 156 0162 1160     		str	r1, [r2]
+ 157 0164 124B     		ldr	r3, .L2+24
+ 158 0166 D0F8E420 		ldr	r2, [r0, #228]
+ 159 016a 5A60     		str	r2, [r3, #4]
+ 160 016c D0F8E820 		ldr	r2, [r0, #232]
+ 161 0170 9A60     		str	r2, [r3, #8]
+ 162 0172 D0F8EC20 		ldr	r2, [r0, #236]
+ 163 0176 DA60     		str	r2, [r3, #12]
+ 164 0178 D0F8F020 		ldr	r2, [r0, #240]
+ 165 017c 5A61     		str	r2, [r3, #20]
+ 166 017e D0F8F420 		ldr	r2, [r0, #244]
+ 167 0182 1A62     		str	r2, [r3, #32]
+ 168 0184 D0F8F820 		ldr	r2, [r0, #248]
+ 169 0188 5A62     		str	r2, [r3, #36]
+ 170 018a D0F8E020 		ldr	r2, [r0, #224]
+ 171 018e 1A60     		str	r2, [r3]
+ARM GAS  /tmp/cciUBsDJ.s 			page 4
+
+
+ 172 0190 BDE8F00F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp}
+ 173 0194 7047     		bx	lr
+ 174              	.L3:
+ 175 0196 00BF     		.align	2
+ 176              	.L2:
+ 177 0198 00080240 		.word	1073874944
+ 178 019c 000C0240 		.word	1073875968
+ 179 01a0 00100240 		.word	1073876992
+ 180 01a4 00140240 		.word	1073878016
+ 181 01a8 00180240 		.word	1073879040
+ 182 01ac 001C0240 		.word	1073880064
+ 183 01b0 00200240 		.word	1073881088
+ 184 01b4 00380240 		.word	1073887232
+ 185 01b8 00000240 		.word	1073872896
+ 186 01bc 00040240 		.word	1073873920
+ 187              		.size	_pal_lld_init, .-_pal_lld_init
+ 188              		.section	.text._pal_lld_setgroupmode,"ax",%progbits
+ 189              		.align	2
+ 190              		.p2align 4,,15
+ 191              		.global	_pal_lld_setgroupmode
+ 192              		.thumb
+ 193              		.thumb_func
+ 194              		.type	_pal_lld_setgroupmode, %function
+ 195              	_pal_lld_setgroupmode:
+ 196              		@ args = 0, pretend = 0, frame = 0
+ 197              		@ frame_needed = 0, uses_anonymous_args = 0
+ 198              		@ link register save eliminated.
+ 199 0000 2DE9F00F 		push	{r4, r5, r6, r7, r8, r9, r10, fp}
+ 200 0004 0023     		movs	r3, #0
+ 201 0006 02F00307 		and	r7, r2, #3
+ 202 000a C2F38006 		ubfx	r6, r2, #2, #1
+ 203 000e C2F3C105 		ubfx	r5, r2, #3, #2
+ 204 0012 C2F34114 		ubfx	r4, r2, #5, #2
+ 205 0016 4FF00F09 		mov	r9, #15
+ 206 001a C2F3C312 		ubfx	r2, r2, #7, #4
+ 207 001e 4FF0010A 		mov	r10, #1
+ 208 0022 38E0     		b	.L9
+ 209              	.L14:
+ 210 0024 D0F820B0 		ldr	fp, [r0, #32]
+ 211 0028 2BEA0C0C 		bic	ip, fp, ip
+ 212 002c 4CEA0808 		orr	r8, ip, r8
+ 213 0030 C0F82080 		str	r8, [r0, #32]
+ 214              	.L7:
+ 215 0034 D0F804C0 		ldr	ip, [r0, #4]
+ 216 0038 0AFA03F8 		lsl	r8, r10, r3
+ 217 003c 2CEA080C 		bic	ip, ip, r8
+ 218 0040 4CEA060C 		orr	ip, ip, r6
+ 219 0044 C0F804C0 		str	ip, [r0, #4]
+ 220 0048 4FF0030B 		mov	fp, #3
+ 221 004c 4FEA430C 		lsl	ip, r3, #1
+ 222 0050 D0F80880 		ldr	r8, [r0, #8]
+ 223 0054 0BFA0CFC 		lsl	ip, fp, ip
+ 224 0058 6FEA0C0C 		mvn	ip, ip
+ 225 005c 0CEA0808 		and	r8, ip, r8
+ 226 0060 48EA0508 		orr	r8, r8, r5
+ 227 0064 C0F80880 		str	r8, [r0, #8]
+ 228 0068 D0F80C80 		ldr	r8, [r0, #12]
+ARM GAS  /tmp/cciUBsDJ.s 			page 5
+
+
+ 229 006c 0CEA0808 		and	r8, ip, r8
+ 230 0070 48EA0408 		orr	r8, r8, r4
+ 231 0074 C0F80C80 		str	r8, [r0, #12]
+ 232 0078 D0F80080 		ldr	r8, [r0]
+ 233 007c 0CEA080C 		and	ip, ip, r8
+ 234 0080 4CEA070C 		orr	ip, ip, r7
+ 235 0084 C0F800C0 		str	ip, [r0]
+ 236              	.L5:
+ 237 0088 4908     		lsrs	r1, r1, #1
+ 238 008a 1AD0     		beq	.L4
+ 239 008c 7600     		lsls	r6, r6, #1
+ 240 008e AD00     		lsls	r5, r5, #2
+ 241 0090 A400     		lsls	r4, r4, #2
+ 242 0092 BF00     		lsls	r7, r7, #2
+ 243 0094 0133     		adds	r3, r3, #1
+ 244              	.L9:
+ 245 0096 03F0070C 		and	ip, r3, #7
+ 246 009a 4FEA8C0C 		lsl	ip, ip, #2
+ 247 009e 11F0010F 		tst	r1, #1
+ 248 00a2 02FA0CF8 		lsl	r8, r2, ip
+ 249 00a6 09FA0CFC 		lsl	ip, r9, ip
+ 250 00aa EDD0     		beq	.L5
+ 251 00ac 072B     		cmp	r3, #7
+ 252 00ae B9D9     		bls	.L14
+ 253 00b0 D0F824B0 		ldr	fp, [r0, #36]
+ 254 00b4 2BEA0C0C 		bic	ip, fp, ip
+ 255 00b8 4CEA0808 		orr	r8, ip, r8
+ 256 00bc C0F82480 		str	r8, [r0, #36]
+ 257 00c0 B8E7     		b	.L7
+ 258              	.L4:
+ 259 00c2 BDE8F00F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp}
+ 260 00c6 7047     		bx	lr
+ 261              		.size	_pal_lld_setgroupmode, .-_pal_lld_setgroupmode
+ 262 00c8 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 262      AFF30080 
+ARM GAS  /tmp/cciUBsDJ.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 pal_lld.c
+     /tmp/cciUBsDJ.s:18     .text._pal_lld_init:00000000 $t
+     /tmp/cciUBsDJ.s:24     .text._pal_lld_init:00000000 _pal_lld_init
+     /tmp/cciUBsDJ.s:177    .text._pal_lld_init:00000198 $d
+     /tmp/cciUBsDJ.s:189    .text._pal_lld_setgroupmode:00000000 $t
+     /tmp/cciUBsDJ.s:195    .text._pal_lld_setgroupmode:00000000 _pal_lld_setgroupmode
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,3 @@
+nvic.c:46:6:nvicEnableVector	16	static
+nvic.c:60:6:nvicDisableVector	8	static
+nvic.c:74:6:nvicSetSystemHandlerPriority	4	static

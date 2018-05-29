@@ -1,0 +1,49 @@
+ARM GAS  /tmp/ccOCaWzB.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chcore.c"
+  17              		.section	.text.port_halt,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.weak	port_halt
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	port_halt, %function
+  24              	port_halt:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28              	@ 48 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore.c" 1
+  29 0000 72B6     		cpsid   i
+  30              	@ 0 "" 2
+  31              		.thumb
+  32              	.L2:
+  33 0002 FEE7     		b	.L2
+  34              		.size	port_halt, .-port_halt
+  35 0004 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+  35      AFF30080 
+  35      AFF30080 
+ARM GAS  /tmp/ccOCaWzB.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chcore.c
+     /tmp/ccOCaWzB.s:18     .text.port_halt:00000000 $t
+     /tmp/ccOCaWzB.s:24     .text.port_halt:00000000 port_halt
+
+NO UNDEFINED SYMBOLS

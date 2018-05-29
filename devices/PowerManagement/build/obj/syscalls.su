@@ -1,0 +1,7 @@
+syscalls.c:75:5:_read_r	0	static
+syscalls.c:96:5:_lseek_r	0	static
+syscalls.c:108:5:_write_r	0	static
+syscalls.c:125:5:_close_r	0	static
+syscalls.c:135:9:_sbrk_r	16	static
+syscalls.c:157:5:_fstat_r	8	static
+syscalls.c:169:5:_isatty_r	0	static

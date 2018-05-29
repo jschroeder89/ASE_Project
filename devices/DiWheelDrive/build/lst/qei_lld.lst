@@ -1,0 +1,303 @@
+ARM GAS  /tmp/ccHcG4IL.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"qei_lld.c"
+  15              		.section	.text.qei_lld_init,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	qei_lld_init
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	qei_lld_init, %function
+  22              	qei_lld_init:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 38B5     		push	{r3, r4, r5, lr}
+  26 0002 064D     		ldr	r5, .L2
+  27 0004 064C     		ldr	r4, .L2+4
+  28 0006 2846     		mov	r0, r5
+  29 0008 FFF7FEFF 		bl	qeiObjectInit
+  30 000c 054B     		ldr	r3, .L2+8
+  31 000e 2046     		mov	r0, r4
+  32 0010 AB60     		str	r3, [r5, #8]
+  33 0012 FFF7FEFF 		bl	qeiObjectInit
+  34 0016 044B     		ldr	r3, .L2+12
+  35 0018 A360     		str	r3, [r4, #8]
+  36 001a 38BD     		pop	{r3, r4, r5, pc}
+  37              	.L3:
+  38              		.align	2
+  39              	.L2:
+  40 001c 00000000 		.word	.LANCHOR0
+  41 0020 00000000 		.word	.LANCHOR1
+  42 0024 00040040 		.word	1073742848
+  43 0028 00080040 		.word	1073743872
+  44              		.size	qei_lld_init, .-qei_lld_init
+  45 002c AFF30080 		.section	.text.qei_lld_start,"ax",%progbits
+  46              		.align	2
+  47              		.p2align 4,,15
+  48              		.global	qei_lld_start
+  49              		.thumb
+  50              		.thumb_func
+  51              		.type	qei_lld_start, %function
+  52              	qei_lld_start:
+  53              		@ args = 0, pretend = 0, frame = 0
+  54              		@ frame_needed = 0, uses_anonymous_args = 0
+  55 0000 38B5     		push	{r3, r4, r5, lr}
+  56 0002 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+  57 0004 0446     		mov	r4, r0
+ARM GAS  /tmp/ccHcG4IL.s 			page 2
+
+
+  58 0006 012B     		cmp	r3, #1
+  59 0008 2ED0     		beq	.L17
+  60 000a 8368     		ldr	r3, [r0, #8]
+  61 000c 0022     		movs	r2, #0
+  62 000e 1A60     		str	r2, [r3]
+  63 0010 DA60     		str	r2, [r3, #12]
+  64 0012 1A61     		str	r2, [r3, #16]
+  65 0014 5A63     		str	r2, [r3, #52]
+  66 0016 9A63     		str	r2, [r3, #56]
+  67 0018 5A62     		str	r2, [r3, #36]
+  68              	.L7:
+  69 001a 6268     		ldr	r2, [r4, #4]
+  70 001c 0021     		movs	r1, #0
+  71 001e 5568     		ldr	r5, [r2, #4]
+  72 0020 9962     		str	r1, [r3, #40]
+  73 0022 013D     		subs	r5, r5, #1
+  74 0024 B5F5803F 		cmp	r5, #65536
+  75 0028 18D2     		bcs	.L18
+  76              	.L9:
+  77 002a 5178     		ldrb	r1, [r2, #1]	@ zero_extendqisi2
+  78 002c 9078     		ldrb	r0, [r2, #2]	@ zero_extendqisi2
+  79 002e 0129     		cmp	r1, #1
+  80 0030 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+  81 0032 0CBF     		ite	eq
+  82 0034 0221     		moveq	r1, #2
+  83 0036 0021     		movne	r1, #0
+  84 0038 0128     		cmp	r0, #1
+  85 003a 08BF     		it	eq
+  86 003c 41F02001 		orreq	r1, r1, #32
+  87 0040 ADB2     		uxth	r5, r5
+  88 0042 40F20114 		movw	r4, #257
+  89 0046 012A     		cmp	r2, #1
+  90 0048 DD62     		str	r5, [r3, #44]
+  91 004a 9C61     		str	r4, [r3, #24]
+  92 004c 1962     		str	r1, [r3, #32]
+  93 004e 13D0     		beq	.L19
+  94 0050 022A     		cmp	r2, #2
+  95 0052 0CBF     		ite	eq
+  96 0054 0122     		moveq	r2, #1
+  97 0056 0322     		movne	r2, #3
+  98 0058 9A60     		str	r2, [r3, #8]
+  99 005a 38BD     		pop	{r3, r4, r5, pc}
+ 100              	.L18:
+ 101 005c 1548     		ldr	r0, .L21
+ 102 005e FFF7FEFF 		bl	chDbgPanic
+ 103 0062 A368     		ldr	r3, [r4, #8]
+ 104 0064 6268     		ldr	r2, [r4, #4]
+ 105 0066 E0E7     		b	.L9
+ 106              	.L17:
+ 107 0068 134B     		ldr	r3, .L21+4
+ 108 006a 9842     		cmp	r0, r3
+ 109 006c 14D0     		beq	.L20
+ 110 006e 134B     		ldr	r3, .L21+8
+ 111 0070 9842     		cmp	r0, r3
+ 112 0072 04D0     		beq	.L8
+ 113 0074 8368     		ldr	r3, [r0, #8]
+ 114 0076 D0E7     		b	.L7
+ARM GAS  /tmp/ccHcG4IL.s 			page 3
+
+
+ 115              	.L19:
+ 116 0078 0222     		movs	r2, #2
+ 117 007a 9A60     		str	r2, [r3, #8]
+ 118 007c 38BD     		pop	{r3, r4, r5, pc}
+ 119              	.L8:
+ 120 007e 104A     		ldr	r2, .L21+12
+ 121 0080 A368     		ldr	r3, [r4, #8]
+ 122 0082 D069     		ldr	r0, [r2, #28]
+ 123 0084 0021     		movs	r1, #0
+ 124 0086 40F00400 		orr	r0, r0, #4
+ 125 008a D061     		str	r0, [r2, #28]
+ 126 008c 1069     		ldr	r0, [r2, #16]
+ 127 008e 40F00400 		orr	r0, r0, #4
+ 128 0092 1061     		str	r0, [r2, #16]
+ 129 0094 1161     		str	r1, [r2, #16]
+ 130 0096 C0E7     		b	.L7
+ 131              	.L20:
+ 132 0098 094A     		ldr	r2, .L21+12
+ 133 009a A368     		ldr	r3, [r4, #8]
+ 134 009c D069     		ldr	r0, [r2, #28]
+ 135 009e 0021     		movs	r1, #0
+ 136 00a0 40F00200 		orr	r0, r0, #2
+ 137 00a4 D061     		str	r0, [r2, #28]
+ 138 00a6 1069     		ldr	r0, [r2, #16]
+ 139 00a8 40F00200 		orr	r0, r0, #2
+ 140 00ac 1061     		str	r0, [r2, #16]
+ 141 00ae 1161     		str	r1, [r2, #16]
+ 142 00b0 B3E7     		b	.L7
+ 143              	.L22:
+ 144 00b2 00BF     		.align	2
+ 145              	.L21:
+ 146 00b4 00000000 		.word	.LC0
+ 147 00b8 00000000 		.word	.LANCHOR0
+ 148 00bc 00000000 		.word	.LANCHOR1
+ 149 00c0 00100240 		.word	1073876992
+ 150              		.size	qei_lld_start, .-qei_lld_start
+ 151 00c4 AFF30080 		.section	.text.qei_lld_stop,"ax",%progbits
+ 151      AFF30080 
+ 151      AFF30080 
+ 152              		.align	2
+ 153              		.p2align 4,,15
+ 154              		.global	qei_lld_stop
+ 155              		.thumb
+ 156              		.thumb_func
+ 157              		.type	qei_lld_stop, %function
+ 158              	qei_lld_stop:
+ 159              		@ args = 0, pretend = 0, frame = 0
+ 160              		@ frame_needed = 0, uses_anonymous_args = 0
+ 161              		@ link register save eliminated.
+ 162 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 163 0002 022B     		cmp	r3, #2
+ 164 0004 00D0     		beq	.L28
+ 165              	.L23:
+ 166 0006 7047     		bx	lr
+ 167              	.L28:
+ 168 0008 0A4A     		ldr	r2, .L30
+ 169 000a 8368     		ldr	r3, [r0, #8]
+ARM GAS  /tmp/ccHcG4IL.s 			page 4
+
+
+ 170 000c 0021     		movs	r1, #0
+ 171 000e 9042     		cmp	r0, r2
+ 172 0010 1960     		str	r1, [r3]
+ 173 0012 08D0     		beq	.L29
+ 174 0014 084B     		ldr	r3, .L30+4
+ 175 0016 9842     		cmp	r0, r3
+ 176 0018 F5D1     		bne	.L23
+ 177 001a 084B     		ldr	r3, .L30+8
+ 178 001c DA69     		ldr	r2, [r3, #28]
+ 179 001e 22F00402 		bic	r2, r2, #4
+ 180 0022 DA61     		str	r2, [r3, #28]
+ 181 0024 EFE7     		b	.L23
+ 182              	.L29:
+ 183 0026 054B     		ldr	r3, .L30+8
+ 184 0028 DA69     		ldr	r2, [r3, #28]
+ 185 002a 22F00202 		bic	r2, r2, #2
+ 186 002e DA61     		str	r2, [r3, #28]
+ 187 0030 7047     		bx	lr
+ 188              	.L31:
+ 189 0032 00BF     		.align	2
+ 190              	.L30:
+ 191 0034 00000000 		.word	.LANCHOR0
+ 192 0038 00000000 		.word	.LANCHOR1
+ 193 003c 00100240 		.word	1073876992
+ 194              		.size	qei_lld_stop, .-qei_lld_stop
+ 195              		.section	.text.qei_lld_enable,"ax",%progbits
+ 196              		.align	2
+ 197              		.p2align 4,,15
+ 198              		.global	qei_lld_enable
+ 199              		.thumb
+ 200              		.thumb_func
+ 201              		.type	qei_lld_enable, %function
+ 202              	qei_lld_enable:
+ 203              		@ args = 0, pretend = 0, frame = 0
+ 204              		@ frame_needed = 0, uses_anonymous_args = 0
+ 205              		@ link register save eliminated.
+ 206 0000 8368     		ldr	r3, [r0, #8]
+ 207 0002 0122     		movs	r2, #1
+ 208 0004 1A60     		str	r2, [r3]
+ 209 0006 7047     		bx	lr
+ 210              		.size	qei_lld_enable, .-qei_lld_enable
+ 211 0008 AFF30080 		.section	.text.qei_lld_disable,"ax",%progbits
+ 211      AFF30080 
+ 212              		.align	2
+ 213              		.p2align 4,,15
+ 214              		.global	qei_lld_disable
+ 215              		.thumb
+ 216              		.thumb_func
+ 217              		.type	qei_lld_disable, %function
+ 218              	qei_lld_disable:
+ 219              		@ args = 0, pretend = 0, frame = 0
+ 220              		@ frame_needed = 0, uses_anonymous_args = 0
+ 221              		@ link register save eliminated.
+ 222 0000 8368     		ldr	r3, [r0, #8]
+ 223 0002 0022     		movs	r2, #0
+ 224 0004 1A60     		str	r2, [r3]
+ 225 0006 7047     		bx	lr
+ARM GAS  /tmp/ccHcG4IL.s 			page 5
+
+
+ 226              		.size	qei_lld_disable, .-qei_lld_disable
+ 227              		.global	QEID4
+ 228              		.global	QEID3
+ 229 0008 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 229      AFF30080 
+ 230              		.align	2
+ 231              	.LC0:
+ 232 0000 7165695F 		.ascii	"qei_lld_start(), #1\000"
+ 232      6C6C645F 
+ 232      73746172 
+ 232      7428292C 
+ 232      20233100 
+ 233              		.section	.bss.QEID3,"aw",%nobits
+ 234              		.align	2
+ 235              		.set	.LANCHOR0,. + 0
+ 236              		.type	QEID3, %object
+ 237              		.size	QEID3, 12
+ 238              	QEID3:
+ 239 0000 00000000 		.space	12
+ 239      00000000 
+ 239      00000000 
+ 240              		.section	.bss.QEID4,"aw",%nobits
+ 241              		.align	2
+ 242              		.set	.LANCHOR1,. + 0
+ 243              		.type	QEID4, %object
+ 244              		.size	QEID4, 12
+ 245              	QEID4:
+ 246 0000 00000000 		.space	12
+ 246      00000000 
+ 246      00000000 
+ 247              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccHcG4IL.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 qei_lld.c
+     /tmp/ccHcG4IL.s:16     .text.qei_lld_init:00000000 $t
+     /tmp/ccHcG4IL.s:22     .text.qei_lld_init:00000000 qei_lld_init
+     /tmp/ccHcG4IL.s:40     .text.qei_lld_init:0000001c $d
+     /tmp/ccHcG4IL.s:46     .text.qei_lld_start:00000000 $t
+     /tmp/ccHcG4IL.s:52     .text.qei_lld_start:00000000 qei_lld_start
+     /tmp/ccHcG4IL.s:146    .text.qei_lld_start:000000b4 $d
+     /tmp/ccHcG4IL.s:152    .text.qei_lld_stop:00000000 $t
+     /tmp/ccHcG4IL.s:158    .text.qei_lld_stop:00000000 qei_lld_stop
+     /tmp/ccHcG4IL.s:191    .text.qei_lld_stop:00000034 $d
+     /tmp/ccHcG4IL.s:196    .text.qei_lld_enable:00000000 $t
+     /tmp/ccHcG4IL.s:202    .text.qei_lld_enable:00000000 qei_lld_enable
+     /tmp/ccHcG4IL.s:212    .text.qei_lld_disable:00000000 $t
+     /tmp/ccHcG4IL.s:218    .text.qei_lld_disable:00000000 qei_lld_disable
+     /tmp/ccHcG4IL.s:245    .bss.QEID4:00000000 QEID4
+     /tmp/ccHcG4IL.s:238    .bss.QEID3:00000000 QEID3
+     /tmp/ccHcG4IL.s:230    .rodata.str1.4:00000000 $d
+     /tmp/ccHcG4IL.s:234    .bss.QEID3:00000000 $d
+     /tmp/ccHcG4IL.s:241    .bss.QEID4:00000000 $d
+     /tmp/ccHcG4IL.s:45     .text.qei_lld_init:0000002c $t
+     /tmp/ccHcG4IL.s:151    .text.qei_lld_start:000000c4 $t
+
+UNDEFINED SYMBOLS
+qeiObjectInit
+chDbgPanic

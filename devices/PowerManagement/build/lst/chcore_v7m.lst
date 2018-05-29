@@ -1,0 +1,325 @@
+ARM GAS  /tmp/ccIfTmcP.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chcore_v7m.c"
+  17              		.section	.text._port_switch_from_isr,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_port_switch_from_isr
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_port_switch_from_isr, %function
+  24              	_port_switch_from_isr:
+  25              		@ Naked Function: prologue and epilogue provided by programmer.
+  26              		@ args = 0, pretend = 0, frame = 0
+  27              		@ frame_needed = 0, uses_anonymous_args = 0
+  28 0000 FFF7FEFF 		bl	dbg_check_lock
+  29 0004 FFF7FEFF 		bl	chSchDoReschedule
+  30 0008 FFF7FEFF 		bl	dbg_check_unlock
+  31              	@ 205 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+  32              		_port_exit_from_isr:
+  33              	@ 0 "" 2
+  34              	@ 207 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+  35 000c 00DF     		svc     #0
+  36              	@ 0 "" 2
+  37              		.thumb
+  38              		.size	_port_switch_from_isr, .-_port_switch_from_isr
+  39 000e 00BF     		.section	.text.SVCallVector,"ax",%progbits
+  40              		.align	2
+  41              		.p2align 4,,15
+  42              		.global	SVCallVector
+  43              		.thumb
+  44              		.thumb_func
+  45              		.type	SVCallVector, %function
+  46              	SVCallVector:
+  47              		@ args = 0, pretend = 0, frame = 0
+  48              		@ frame_needed = 0, uses_anonymous_args = 0
+  49              		@ link register save eliminated.
+  50 0000 064B     		ldr	r3, .L3
+  51 0002 5A68     		ldr	r2, [r3, #4]
+  52 0004 22F00102 		bic	r2, r2, #1
+  53 0008 5A60     		str	r2, [r3, #4]
+  54              	@ 74 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+  55 000a EFF30983 		mrs     r3, PSP
+  56              	@ 0 "" 2
+  57              		.thumb
+ARM GAS  /tmp/ccIfTmcP.s 			page 2
+
+
+  58 000e 6833     		adds	r3, r3, #104
+  59              	@ 81 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+  60 0010 83F30988 		msr     PSP, r3
+  61              	@ 0 "" 2
+  62              		.thumb
+  63 0014 0023     		movs	r3, #0
+  64              	@ 82 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+  65 0016 83F31188 		msr     BASEPRI, r3
+  66              	@ 0 "" 2
+  67              		.thumb
+  68 001a 7047     		bx	lr
+  69              	.L4:
+  70              		.align	2
+  71              	.L3:
+  72 001c 30EF00E0 		.word	-536809680
+  73              		.size	SVCallVector, .-SVCallVector
+  74              		.section	.text._port_init,"ax",%progbits
+  75              		.align	2
+  76              		.p2align 4,,15
+  77              		.global	_port_init
+  78              		.thumb
+  79              		.thumb_func
+  80              		.type	_port_init, %function
+  81              	_port_init:
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84 0000 08B5     		push	{r3, lr}
+  85 0002 0A4B     		ldr	r3, .L6
+  86 0004 0A4A     		ldr	r2, .L6+4
+  87 0006 4FF40041 		mov	r1, #32768
+  88 000a 9960     		str	r1, [r3, #8]
+  89 000c 0720     		movs	r0, #7
+  90 000e DA60     		str	r2, [r3, #12]
+  91 0010 1021     		movs	r1, #16
+  92 0012 FFF7FEFF 		bl	nvicSetSystemHandlerPriority
+  93 0016 0A20     		movs	r0, #10
+  94 0018 2021     		movs	r1, #32
+  95 001a FFF7FEFF 		bl	nvicSetSystemHandlerPriority
+  96 001e 0B20     		movs	r0, #11
+  97 0020 8021     		movs	r1, #128
+  98 0022 BDE80840 		pop	{r3, lr}
+  99 0026 FFF7FEBF 		b	nvicSetSystemHandlerPriority
+ 100              	.L7:
+ 101 002a 00BF     		.align	2
+ 102              	.L6:
+ 103 002c 00ED00E0 		.word	-536810240
+ 104 0030 0003FA05 		.word	100270848
+ 105              		.size	_port_init, .-_port_init
+ 106 0034 AFF30080 		.section	.text._port_irq_epilogue,"ax",%progbits
+ 106      AFF30080 
+ 106      AFF30080 
+ 107              		.align	2
+ 108              		.p2align 4,,15
+ 109              		.global	_port_irq_epilogue
+ 110              		.thumb
+ 111              		.thumb_func
+ 112              		.type	_port_irq_epilogue, %function
+ARM GAS  /tmp/ccIfTmcP.s 			page 3
+
+
+ 113              	_port_irq_epilogue:
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              		@ link register save eliminated.
+ 117 0000 2023     		movs	r3, #32
+ 118              	@ 152 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 119 0002 83F31188 		msr     BASEPRI, r3
+ 120              	@ 0 "" 2
+ 121              		.thumb
+ 122 0006 194B     		ldr	r3, .L16
+ 123 0008 5B68     		ldr	r3, [r3, #4]
+ 124 000a 13F40063 		ands	r3, r3, #2048
+ 125 000e 20D0     		beq	.L9
+ 126              	@ 159 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 127 0010 F1EE10FA 		vmrs    APSR_nzcv, FPSCR
+ 128              	@ 0 "" 2
+ 129              	@ 163 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 130 0014 EFF30983 		mrs     r3, PSP
+ 131              	@ 0 "" 2
+ 132              		.thumb
+ 133 0018 154A     		ldr	r2, .L16+4
+ 134 001a 4FF08071 		mov	r1, #16777216
+ 135 001e D268     		ldr	r2, [r2, #12]
+ 136 0020 43F8082C 		str	r2, [r3, #-8]
+ 137 0024 43F84C1C 		str	r1, [r3, #-76]
+ 138 0028 A3F16802 		sub	r2, r3, #104
+ 139              	@ 172 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 140 002c 82F30988 		msr     PSP, r2
+ 141              	@ 0 "" 2
+ 142              		.thumb
+ 143 0030 1049     		ldr	r1, .L16+8
+ 144 0032 8A69     		ldr	r2, [r1, #24]
+ 145 0034 0968     		ldr	r1, [r1]
+ 146 0036 92F82300 		ldrb	r0, [r2, #35]	@ zero_extendqisi2
+ 147 003a 8968     		ldr	r1, [r1, #8]
+ 148 003c 9268     		ldr	r2, [r2, #8]
+ 149 003e 58B1     		cbz	r0, .L10
+ 150 0040 9142     		cmp	r1, r2
+ 151 0042 94BF     		ite	ls
+ 152 0044 0022     		movls	r2, #0
+ 153 0046 0122     		movhi	r2, #1
+ 154 0048 62B1     		cbz	r2, .L12
+ 155              	.L15:
+ 156 004a 0B4A     		ldr	r2, .L16+12
+ 157 004c 43F8502C 		str	r2, [r3, #-80]
+ 158 0050 7047     		bx	lr
+ 159              	.L9:
+ 160              	@ 190 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 161 0052 83F31188 		msr     BASEPRI, r3
+ 162              	@ 0 "" 2
+ 163              		.thumb
+ 164 0056 7047     		bx	lr
+ 165              	.L10:
+ 166 0058 9142     		cmp	r1, r2
+ 167 005a 34BF     		ite	cc
+ 168 005c 0022     		movcc	r2, #0
+ 169 005e 0122     		movcs	r2, #1
+ARM GAS  /tmp/ccIfTmcP.s 			page 4
+
+
+ 170 0060 002A     		cmp	r2, #0
+ 171 0062 F2D1     		bne	.L15
+ 172              	.L12:
+ 173 0064 054A     		ldr	r2, .L16+16
+ 174 0066 43F8502C 		str	r2, [r3, #-80]
+ 175 006a 7047     		bx	lr
+ 176              	.L17:
+ 177              		.align	2
+ 178              	.L16:
+ 179 006c 00ED00E0 		.word	-536810240
+ 180 0070 30EF00E0 		.word	-536809680
+ 181 0074 00000000 		.word	rlist
+ 182 0078 00000000 		.word	_port_switch_from_isr
+ 183 007c 0C000000 		.word	_port_exit_from_isr
+ 184              		.size	_port_irq_epilogue, .-_port_irq_epilogue
+ 185              		.section	.text.SysTickVector,"ax",%progbits
+ 186              		.align	2
+ 187              		.p2align 4,,15
+ 188              		.global	SysTickVector
+ 189              		.thumb
+ 190              		.thumb_func
+ 191              		.type	SysTickVector, %function
+ 192              	SysTickVector:
+ 193              		@ args = 0, pretend = 0, frame = 0
+ 194              		@ frame_needed = 0, uses_anonymous_args = 0
+ 195 0000 08B5     		push	{r3, lr}
+ 196 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 197 0006 2023     		movs	r3, #32
+ 198              	@ 51 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 199 0008 83F31188 		msr     BASEPRI, r3
+ 200              	@ 0 "" 2
+ 201              		.thumb
+ 202 000c FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 203 0010 FFF7FEFF 		bl	chSysTimerHandlerI
+ 204 0014 FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 205 0018 0023     		movs	r3, #0
+ 206              	@ 53 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 207 001a 83F31188 		msr     BASEPRI, r3
+ 208              	@ 0 "" 2
+ 209              		.thumb
+ 210 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 211 0022 BDE80840 		pop	{r3, lr}
+ 212 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 213              		.size	SysTickVector, .-SysTickVector
+ 214 002a 00BFAFF3 		.section	.text._port_switch,"ax",%progbits
+ 214      0080
+ 215              		.align	2
+ 216              		.p2align 4,,15
+ 217              		.global	_port_switch
+ 218              		.thumb
+ 219              		.thumb_func
+ 220              		.type	_port_switch, %function
+ 221              	_port_switch:
+ 222              		@ Naked Function: prologue and epilogue provided by programmer.
+ 223              		@ args = 0, pretend = 0, frame = 0
+ 224              		@ frame_needed = 0, uses_anonymous_args = 0
+ 225              	@ 231 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ARM GAS  /tmp/ccIfTmcP.s 			page 5
+
+
+ 226 0000 2DE9F04F 		push    {r4, r5, r6, r7, r8, r9, r10, r11, lr}
+ 227              	@ 0 "" 2
+ 228              	@ 234 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 229 0004 2DED108A 		vpush   {s16-s31}
+ 230              	@ 0 "" 2
+ 231              	@ 237 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 232 0008 C1F80CD0 		str     sp, [r1, #12]                          
+ 233 000c D0F80CD0 		ldr     sp, [r0, #12]
+ 234              	@ 0 "" 2
+ 235              	@ 241 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 236 0010 BDEC108A 		vpop    {s16-s31}
+ 237              	@ 0 "" 2
+ 238              	@ 243 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 239 0014 BDE8F08F 		pop     {r4, r5, r6, r7, r8, r9, r10, r11, pc}
+ 240              	@ 0 "" 2
+ 241              		.thumb
+ 242              		.size	_port_switch, .-_port_switch
+ 243 0018 AFF30080 		.section	.text._port_thread_start,"ax",%progbits
+ 243      AFF30080 
+ 244              		.align	2
+ 245              		.p2align 4,,15
+ 246              		.global	_port_thread_start
+ 247              		.thumb
+ 248              		.thumb_func
+ 249              		.type	_port_thread_start, %function
+ 250              	_port_thread_start:
+ 251              		@ args = 0, pretend = 0, frame = 0
+ 252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 253 0000 08B5     		push	{r3, lr}
+ 254 0002 FFF7FEFF 		bl	dbg_check_unlock
+ 255 0006 0023     		movs	r3, #0
+ 256              	@ 254 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 257 0008 83F31188 		msr     BASEPRI, r3
+ 258              	@ 0 "" 2
+ 259              	@ 255 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
+ 260 000c 2846     		mov     r0, r5                                 
+ 261 000e A047     		blx     r4                                     
+ 262 0010 FFF7FEFF 		bl      chThdExit
+ 263              	@ 0 "" 2
+ 264              		.thumb
+ 265 0014 08BD     		pop	{r3, pc}
+ 266              		.size	_port_thread_start, .-_port_thread_start
+ 267 0016 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 267      0080AFF3 
+ 267      0080
+ARM GAS  /tmp/ccIfTmcP.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chcore_v7m.c
+     /tmp/ccIfTmcP.s:18     .text._port_switch_from_isr:00000000 $t
+     /tmp/ccIfTmcP.s:24     .text._port_switch_from_isr:00000000 _port_switch_from_isr
+     /tmp/ccIfTmcP.s:32     .text._port_switch_from_isr:0000000c _port_exit_from_isr
+     /tmp/ccIfTmcP.s:40     .text.SVCallVector:00000000 $t
+     /tmp/ccIfTmcP.s:46     .text.SVCallVector:00000000 SVCallVector
+     /tmp/ccIfTmcP.s:72     .text.SVCallVector:0000001c $d
+     /tmp/ccIfTmcP.s:75     .text._port_init:00000000 $t
+     /tmp/ccIfTmcP.s:81     .text._port_init:00000000 _port_init
+     /tmp/ccIfTmcP.s:103    .text._port_init:0000002c $d
+     /tmp/ccIfTmcP.s:107    .text._port_irq_epilogue:00000000 $t
+     /tmp/ccIfTmcP.s:113    .text._port_irq_epilogue:00000000 _port_irq_epilogue
+     /tmp/ccIfTmcP.s:179    .text._port_irq_epilogue:0000006c $d
+     /tmp/ccIfTmcP.s:186    .text.SysTickVector:00000000 $t
+     /tmp/ccIfTmcP.s:192    .text.SysTickVector:00000000 SysTickVector
+     /tmp/ccIfTmcP.s:215    .text._port_switch:00000000 $t
+     /tmp/ccIfTmcP.s:221    .text._port_switch:00000000 _port_switch
+     /tmp/ccIfTmcP.s:244    .text._port_thread_start:00000000 $t
+     /tmp/ccIfTmcP.s:250    .text._port_thread_start:00000000 _port_thread_start
+     /tmp/ccIfTmcP.s:106    .text._port_init:00000034 $t
+
+UNDEFINED SYMBOLS
+dbg_check_lock
+chSchDoReschedule
+dbg_check_unlock
+nvicSetSystemHandlerPriority
+rlist
+dbg_check_enter_isr
+dbg_check_lock_from_isr
+chSysTimerHandlerI
+dbg_check_unlock_from_isr
+dbg_check_leave_isr
+chThdExit

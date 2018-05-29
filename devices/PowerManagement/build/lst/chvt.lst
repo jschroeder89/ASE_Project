@@ -1,0 +1,218 @@
+ARM GAS  /tmp/ccBqAlNU.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chvt.c"
+  17              		.section	.text._vt_init,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_vt_init
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_vt_init, %function
+  24              	_vt_init:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 044B     		ldr	r3, .L2
+  29 0002 4FF0FF31 		mov	r1, #-1
+  30 0006 0022     		movs	r2, #0
+  31 0008 5B60     		str	r3, [r3, #4]
+  32 000a 1B60     		str	r3, [r3]
+  33 000c 9960     		str	r1, [r3, #8]
+  34 000e DA60     		str	r2, [r3, #12]
+  35 0010 7047     		bx	lr
+  36              	.L3:
+  37 0012 00BF     		.align	2
+  38              	.L2:
+  39 0014 00000000 		.word	.LANCHOR0
+  40              		.size	_vt_init, .-_vt_init
+  41 0018 AFF30080 		.section	.text.chVTSetI,"ax",%progbits
+  41      AFF30080 
+  42              		.align	2
+  43              		.p2align 4,,15
+  44              		.global	chVTSetI
+  45              		.thumb
+  46              		.thumb_func
+  47              		.type	chVTSetI, %function
+  48              	chVTSetI:
+  49              		@ args = 0, pretend = 0, frame = 0
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  52 0002 0546     		mov	r5, r0
+  53 0004 0C46     		mov	r4, r1
+  54 0006 1646     		mov	r6, r2
+  55 0008 1F46     		mov	r7, r3
+  56 000a FFF7FEFF 		bl	chDbgCheckClassI
+ARM GAS  /tmp/ccBqAlNU.s 			page 2
+
+
+  57 000e CDB1     		cbz	r5, .L5
+  58 0010 C6B1     		cbz	r6, .L5
+  59 0012 BCB1     		cbz	r4, .L5
+  60              	.L6:
+  61 0014 0D49     		ldr	r1, .L17
+  62 0016 2F61     		str	r7, [r5, #16]
+  63 0018 0B68     		ldr	r3, [r1]
+  64 001a EE60     		str	r6, [r5, #12]
+  65 001c 9A68     		ldr	r2, [r3, #8]
+  66 001e 9442     		cmp	r4, r2
+  67 0020 04D9     		bls	.L7
+  68              	.L8:
+  69 0022 1B68     		ldr	r3, [r3]
+  70 0024 A41A     		subs	r4, r4, r2
+  71 0026 9A68     		ldr	r2, [r3, #8]
+  72 0028 A242     		cmp	r2, r4
+  73 002a FAD3     		bcc	.L8
+  74              	.L7:
+  75 002c 5A68     		ldr	r2, [r3, #4]
+  76 002e 6A60     		str	r2, [r5, #4]
+  77 0030 8B42     		cmp	r3, r1
+  78 0032 2B60     		str	r3, [r5]
+  79 0034 5D60     		str	r5, [r3, #4]
+  80 0036 1560     		str	r5, [r2]
+  81 0038 AC60     		str	r4, [r5, #8]
+  82 003a 02D0     		beq	.L4
+  83 003c 9A68     		ldr	r2, [r3, #8]
+  84 003e 141B     		subs	r4, r2, r4
+  85 0040 9C60     		str	r4, [r3, #8]
+  86              	.L4:
+  87 0042 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+  88              	.L5:
+  89 0044 0248     		ldr	r0, .L17+4
+  90 0046 FFF7FEFF 		bl	chDbgPanic
+  91 004a E3E7     		b	.L6
+  92              	.L18:
+  93              		.align	2
+  94              	.L17:
+  95 004c 00000000 		.word	.LANCHOR0
+  96 0050 00000000 		.word	.LC0
+  97              		.size	chVTSetI, .-chVTSetI
+  98 0054 AFF30080 		.section	.text.chVTResetI,"ax",%progbits
+  98      AFF30080 
+  98      AFF30080 
+  99              		.align	2
+ 100              		.p2align 4,,15
+ 101              		.global	chVTResetI
+ 102              		.thumb
+ 103              		.thumb_func
+ 104              		.type	chVTResetI, %function
+ 105              	chVTResetI:
+ 106              		@ args = 0, pretend = 0, frame = 0
+ 107              		@ frame_needed = 0, uses_anonymous_args = 0
+ 108 0000 10B5     		push	{r4, lr}
+ 109 0002 0446     		mov	r4, r0
+ 110 0004 FFF7FEFF 		bl	chDbgCheckClassI
+ 111 0008 84B1     		cbz	r4, .L23
+ARM GAS  /tmp/ccBqAlNU.s 			page 3
+
+
+ 112              	.L20:
+ 113 000a E368     		ldr	r3, [r4, #12]
+ 114 000c 93B1     		cbz	r3, .L24
+ 115              	.L21:
+ 116 000e 2368     		ldr	r3, [r4]
+ 117 0010 0A4A     		ldr	r2, .L25
+ 118 0012 9342     		cmp	r3, r2
+ 119 0014 03D0     		beq	.L22
+ 120 0016 9968     		ldr	r1, [r3, #8]
+ 121 0018 A268     		ldr	r2, [r4, #8]
+ 122 001a 0A44     		add	r2, r2, r1
+ 123 001c 9A60     		str	r2, [r3, #8]
+ 124              	.L22:
+ 125 001e 6268     		ldr	r2, [r4, #4]
+ 126 0020 1360     		str	r3, [r2]
+ 127 0022 2368     		ldr	r3, [r4]
+ 128 0024 0021     		movs	r1, #0
+ 129 0026 5A60     		str	r2, [r3, #4]
+ 130 0028 E160     		str	r1, [r4, #12]
+ 131 002a 10BD     		pop	{r4, pc}
+ 132              	.L23:
+ 133 002c 0448     		ldr	r0, .L25+4
+ 134 002e FFF7FEFF 		bl	chDbgPanic
+ 135 0032 EAE7     		b	.L20
+ 136              	.L24:
+ 137 0034 0348     		ldr	r0, .L25+8
+ 138 0036 FFF7FEFF 		bl	chDbgPanic
+ 139 003a E8E7     		b	.L21
+ 140              	.L26:
+ 141              		.align	2
+ 142              	.L25:
+ 143 003c 00000000 		.word	.LANCHOR0
+ 144 0040 10000000 		.word	.LC1
+ 145 0044 20000000 		.word	.LC2
+ 146              		.size	chVTResetI, .-chVTResetI
+ 147              		.global	vtlist
+ 148 0048 AFF30080 		.section	.bss.vtlist,"aw",%nobits
+ 148      AFF30080 
+ 149              		.align	2
+ 150              		.set	.LANCHOR0,. + 0
+ 151              		.type	vtlist, %object
+ 152              		.size	vtlist, 16
+ 153              	vtlist:
+ 154 0000 00000000 		.space	16
+ 154      00000000 
+ 154      00000000 
+ 154      00000000 
+ 155              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 156              		.align	2
+ 157              	.LC0:
+ 158 0000 22636856 		.ascii	"\"chVTSetI\"()\000"
+ 158      54536574 
+ 158      49222829 
+ 158      00
+ 159 000d 000000   		.space	3
+ 160              	.LC1:
+ 161 0010 22636856 		.ascii	"\"chVTResetI\"()\000"
+ARM GAS  /tmp/ccBqAlNU.s 			page 4
+
+
+ 161      54526573 
+ 161      65744922 
+ 161      282900
+ 162 001f 00       		.space	1
+ 163              	.LC2:
+ 164 0020 63685654 		.ascii	"chVTResetI(), #1\000"
+ 164      52657365 
+ 164      74492829 
+ 164      2C202331 
+ 164      00
+ 165 0031 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccBqAlNU.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chvt.c
+     /tmp/ccBqAlNU.s:18     .text._vt_init:00000000 $t
+     /tmp/ccBqAlNU.s:24     .text._vt_init:00000000 _vt_init
+     /tmp/ccBqAlNU.s:39     .text._vt_init:00000014 $d
+     /tmp/ccBqAlNU.s:42     .text.chVTSetI:00000000 $t
+     /tmp/ccBqAlNU.s:48     .text.chVTSetI:00000000 chVTSetI
+     /tmp/ccBqAlNU.s:95     .text.chVTSetI:0000004c $d
+     /tmp/ccBqAlNU.s:99     .text.chVTResetI:00000000 $t
+     /tmp/ccBqAlNU.s:105    .text.chVTResetI:00000000 chVTResetI
+     /tmp/ccBqAlNU.s:143    .text.chVTResetI:0000003c $d
+     /tmp/ccBqAlNU.s:153    .bss.vtlist:00000000 vtlist
+     /tmp/ccBqAlNU.s:149    .bss.vtlist:00000000 $d
+     /tmp/ccBqAlNU.s:156    .rodata.str1.4:00000000 $d
+     /tmp/ccBqAlNU.s:41     .text._vt_init:00000018 $t
+     /tmp/ccBqAlNU.s:98     .text.chVTSetI:00000054 $t
+     /tmp/ccBqAlNU.s:148    .text.chVTResetI:00000048 $t
+
+UNDEFINED SYMBOLS
+chDbgCheckClassI
+chDbgPanic

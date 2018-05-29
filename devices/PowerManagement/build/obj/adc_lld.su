@@ -1,0 +1,11 @@
+adc_lld.c:180:6:adc_lld_init	8	static
+adc_lld.c:233:6:adc_lld_start	16	static
+adc_lld.c:296:6:adc_lld_stop	8	static
+adc_lld.c:328:6:adc_lld_start_conversion	32	static
+adc_lld.c:385:6:adc_lld_stop_conversion	4	static
+adc_lld.c:111:1:Vector88	16	static
+adc_lld.c:76:13:adc_lld_serve_rx_interrupt	16	static
+adc_lld.c:399:6:adcSTM32EnableTSVREFE	0	static
+adc_lld.c:410:6:adcSTM32DisableTSVREFE	0	static
+adc_lld.c:421:6:adcSTM32EnableVBATE	0	static
+adc_lld.c:432:6:adcSTM32DisableVBATE	0	static

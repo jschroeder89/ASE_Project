@@ -1,0 +1,712 @@
+ARM GAS  /tmp/ccPClU58.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"spi_lld.c"
+  15              		.section	.text.spi_lld_serve_tx_interrupt,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.thumb
+  19              		.thumb_func
+  20              		.type	spi_lld_serve_tx_interrupt, %function
+  21              	spi_lld_serve_tx_interrupt:
+  22              		@ args = 0, pretend = 0, frame = 0
+  23              		@ frame_needed = 0, uses_anonymous_args = 0
+  24 0000 08B5     		push	{r3, lr}
+  25 0002 0B07     		lsls	r3, r1, #28
+  26 0004 00D4     		bmi	.L4
+  27 0006 08BD     		pop	{r3, pc}
+  28              	.L4:
+  29 0008 FFF7FEFF 		bl	haltErrorCode
+  30 000c BDE80840 		pop	{r3, lr}
+  31 0010 FFF7FEBF 		b	port_halt
+  32              		.size	spi_lld_serve_tx_interrupt, .-spi_lld_serve_tx_interrupt
+  33 0014 AFF30080 		.section	.text.spi_lld_serve_rx_interrupt,"ax",%progbits
+  33      AFF30080 
+  33      AFF30080 
+  34              		.align	2
+  35              		.p2align 4,,15
+  36              		.thumb
+  37              		.thumb_func
+  38              		.type	spi_lld_serve_rx_interrupt, %function
+  39              	spi_lld_serve_rx_interrupt:
+  40              		@ args = 0, pretend = 0, frame = 0
+  41              		@ frame_needed = 0, uses_anonymous_args = 0
+  42 0000 0B07     		lsls	r3, r1, #28
+  43 0002 70B5     		push	{r4, r5, r6, lr}
+  44 0004 0446     		mov	r4, r0
+  45 0006 35D4     		bmi	.L16
+  46              	.L6:
+  47 0008 626A     		ldr	r2, [r4, #36]
+  48 000a 236A     		ldr	r3, [r4, #32]
+  49 000c 1068     		ldr	r0, [r2]
+  50 000e 5568     		ldr	r5, [r2, #4]
+  51 0010 0668     		ldr	r6, [r0]
+  52 0012 0F21     		movs	r1, #15
+  53 0014 26F00F06 		bic	r6, r6, #15
+  54 0018 0660     		str	r6, [r0]
+  55 001a 107A     		ldrb	r0, [r2, #8]	@ zero_extendqisi2
+ARM GAS  /tmp/ccPClU58.s 			page 2
+
+
+  56 001c 1A68     		ldr	r2, [r3]
+  57 001e 01FA00F0 		lsl	r0, r1, r0
+  58 0022 2860     		str	r0, [r5]
+  59 0024 1568     		ldr	r5, [r2]
+  60 0026 6068     		ldr	r0, [r4, #4]
+  61 0028 25F00F05 		bic	r5, r5, #15
+  62 002c 1560     		str	r5, [r2]
+  63 002e 1D7A     		ldrb	r5, [r3, #8]	@ zero_extendqisi2
+  64 0030 5A68     		ldr	r2, [r3, #4]
+  65 0032 A940     		lsls	r1, r1, r5
+  66 0034 0368     		ldr	r3, [r0]
+  67 0036 1160     		str	r1, [r2]
+  68 0038 CBB1     		cbz	r3, .L7
+  69 003a 0422     		movs	r2, #4
+  70 003c 2270     		strb	r2, [r4]
+  71 003e 2046     		mov	r0, r4
+  72 0040 9847     		blx	r3
+  73 0042 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+  74 0044 042B     		cmp	r3, #4
+  75 0046 12D0     		beq	.L7
+  76              	.L8:
+  77 0048 2023     		movs	r3, #32
+  78              	@ 150 "../../../ChibiOS/os/hal/platforms/STM32/SPIv1/spi_lld.c" 1
+  79 004a 83F31188 		msr     BASEPRI, r3
+  80              	@ 0 "" 2
+  81              		.thumb
+  82 004e FFF7FEFF 		bl	dbg_check_lock_from_isr
+  83 0052 A368     		ldr	r3, [r4, #8]
+  84 0054 2BB1     		cbz	r3, .L9
+  85 0056 0022     		movs	r2, #0
+  86 0058 A260     		str	r2, [r4, #8]
+  87 005a 1846     		mov	r0, r3
+  88 005c 9A62     		str	r2, [r3, #40]
+  89 005e FFF7FEFF 		bl	chSchReadyI
+  90              	.L9:
+  91 0062 FFF7FEFF 		bl	dbg_check_unlock_from_isr
+  92 0066 0023     		movs	r3, #0
+  93              	@ 150 "../../../ChibiOS/os/hal/platforms/STM32/SPIv1/spi_lld.c" 1
+  94 0068 83F31188 		msr     BASEPRI, r3
+  95              	@ 0 "" 2
+  96              		.thumb
+  97 006c 70BD     		pop	{r4, r5, r6, pc}
+  98              	.L7:
+  99 006e 0223     		movs	r3, #2
+ 100 0070 2370     		strb	r3, [r4]
+ 101 0072 E9E7     		b	.L8
+ 102              	.L16:
+ 103 0074 FFF7FEFF 		bl	haltErrorCode
+ 104 0078 FFF7FEFF 		bl	port_halt
+ 105 007c C4E7     		b	.L6
+ 106              		.size	spi_lld_serve_rx_interrupt, .-spi_lld_serve_rx_interrupt
+ 107 007e 00BF     		.section	.text.spi_lld_init,"ax",%progbits
+ 108              		.align	2
+ 109              		.p2align 4,,15
+ 110              		.global	spi_lld_init
+ 111              		.thumb
+ 112              		.thumb_func
+ARM GAS  /tmp/ccPClU58.s 			page 3
+
+
+ 113              		.type	spi_lld_init, %function
+ 114              	spi_lld_init:
+ 115              		@ args = 0, pretend = 0, frame = 0
+ 116              		@ frame_needed = 0, uses_anonymous_args = 0
+ 117 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 118 0004 124D     		ldr	r5, .L18
+ 119 0006 134B     		ldr	r3, .L18+4
+ 120 0008 134C     		ldr	r4, .L18+8
+ 121 000a 144E     		ldr	r6, .L18+12
+ 122 000c 4FF6FF72 		movw	r2, #65535
+ 123 0010 2846     		mov	r0, r5
+ 124 0012 1A80     		strh	r2, [r3]	@ movhi
+ 125 0014 FFF7FEFF 		bl	spiObjectInit
+ 126 0018 114A     		ldr	r2, .L18+16
+ 127 001a 06F10C03 		add	r3, r6, #12
+ 128 001e 41F20A08 		movw	r8, #4106
+ 129 0022 41F21807 		movw	r7, #4120
+ 130 0026 2046     		mov	r0, r4
+ 131 0028 EA61     		str	r2, [r5, #28]
+ 132 002a 2E62     		str	r6, [r5, #32]
+ 133 002c 6B62     		str	r3, [r5, #36]
+ 134 002e C5F82880 		str	r8, [r5, #40]
+ 135 0032 EF62     		str	r7, [r5, #44]
+ 136 0034 FFF7FEFF 		bl	spiObjectInit
+ 137 0038 0A4A     		ldr	r2, .L18+20
+ 138 003a 06F11803 		add	r3, r6, #24
+ 139 003e 2436     		adds	r6, r6, #36
+ 140 0040 C4F82880 		str	r8, [r4, #40]
+ 141 0044 E762     		str	r7, [r4, #44]
+ 142 0046 E261     		str	r2, [r4, #28]
+ 143 0048 2362     		str	r3, [r4, #32]
+ 144 004a 6662     		str	r6, [r4, #36]
+ 145 004c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 146              	.L19:
+ 147              		.align	2
+ 148              	.L18:
+ 149 0050 00000000 		.word	.LANCHOR1
+ 150 0054 00000000 		.word	.LANCHOR0
+ 151 0058 00000000 		.word	.LANCHOR2
+ 152 005c 0C000000 		.word	_stm32_dma_streams+12
+ 153 0060 00300140 		.word	1073819648
+ 154 0064 00380040 		.word	1073756160
+ 155              		.size	spi_lld_init, .-spi_lld_init
+ 156 0068 AFF30080 		.section	.text.spi_lld_start,"ax",%progbits
+ 156      AFF30080 
+ 157              		.align	2
+ 158              		.p2align 4,,15
+ 159              		.global	spi_lld_start
+ 160              		.thumb
+ 161              		.thumb_func
+ 162              		.type	spi_lld_start, %function
+ 163              	spi_lld_start:
+ 164              		@ args = 0, pretend = 0, frame = 0
+ 165              		@ frame_needed = 0, uses_anonymous_args = 0
+ 166 0000 38B5     		push	{r3, r4, r5, lr}
+ 167 0002 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 168 0004 0446     		mov	r4, r0
+ARM GAS  /tmp/ccPClU58.s 			page 4
+
+
+ 169 0006 012B     		cmp	r3, #1
+ 170 0008 1DD0     		beq	.L43
+ 171 000a C369     		ldr	r3, [r0, #28]
+ 172              	.L21:
+ 173 000c 6268     		ldr	r2, [r4, #4]
+ 174 000e A06A     		ldr	r0, [r4, #40]
+ 175 0010 5289     		ldrh	r2, [r2, #10]
+ 176 0012 E16A     		ldr	r1, [r4, #44]
+ 177 0014 20F47060 		bic	r0, r0, #3840
+ 178 0018 21F47061 		bic	r1, r1, #3840
+ 179 001c 1505     		lsls	r5, r2, #20
+ 180 001e 44BF     		itt	mi
+ 181 0020 40F4A060 		orrmi	r0, r0, #1280
+ 182 0024 41F4A061 		orrmi	r1, r1, #1280
+ 183 0028 A062     		str	r0, [r4, #40]
+ 184 002a E162     		str	r1, [r4, #44]
+ 185 002c 42F44172 		orr	r2, r2, #772
+ 186 0030 0020     		movs	r0, #0
+ 187 0032 0721     		movs	r1, #7
+ 188 0034 1880     		strh	r0, [r3]	@ movhi
+ 189 0036 1A80     		strh	r2, [r3]	@ movhi
+ 190 0038 9980     		strh	r1, [r3, #4]	@ movhi
+ 191 003a 1A88     		ldrh	r2, [r3]
+ 192 003c 92B2     		uxth	r2, r2
+ 193 003e 42F04002 		orr	r2, r2, #64
+ 194 0042 1A80     		strh	r2, [r3]	@ movhi
+ 195 0044 38BD     		pop	{r3, r4, r5, pc}
+ 196              	.L43:
+ 197 0046 244D     		ldr	r5, .L51
+ 198 0048 A842     		cmp	r0, r5
+ 199 004a 0CD0     		beq	.L45
+ 200 004c 234D     		ldr	r5, .L51+4
+ 201 004e A842     		cmp	r0, r5
+ 202 0050 1DD0     		beq	.L46
+ 203              	.L25:
+ 204 0052 216A     		ldr	r1, [r4, #32]
+ 205 0054 626A     		ldr	r2, [r4, #36]
+ 206 0056 E369     		ldr	r3, [r4, #28]
+ 207 0058 0868     		ldr	r0, [r1]
+ 208 005a 1168     		ldr	r1, [r2]
+ 209 005c 03F10C02 		add	r2, r3, #12
+ 210 0060 8260     		str	r2, [r0, #8]
+ 211 0062 8A60     		str	r2, [r1, #8]
+ 212 0064 D2E7     		b	.L21
+ 213              	.L45:
+ 214 0066 006A     		ldr	r0, [r0, #32]
+ 215 0068 0A21     		movs	r1, #10
+ 216 006a 1D4A     		ldr	r2, .L51+8
+ 217 006c 2346     		mov	r3, r4
+ 218 006e FFF7FEFF 		bl	dmaStreamAllocate
+ 219 0072 20BB     		cbnz	r0, .L47
+ 220              	.L23:
+ 221 0074 686A     		ldr	r0, [r5, #36]
+ 222 0076 0A21     		movs	r1, #10
+ 223 0078 1A4A     		ldr	r2, .L51+12
+ 224 007a 174B     		ldr	r3, .L51
+ 225 007c FFF7FEFF 		bl	dmaStreamAllocate
+ARM GAS  /tmp/ccPClU58.s 			page 5
+
+
+ 226 0080 C8B9     		cbnz	r0, .L48
+ 227              	.L24:
+ 228 0082 194B     		ldr	r3, .L51+16
+ 229 0084 9A69     		ldr	r2, [r3, #24]
+ 230 0086 42F48052 		orr	r2, r2, #4096
+ 231 008a 9A61     		str	r2, [r3, #24]
+ 232 008c E1E7     		b	.L25
+ 233              	.L46:
+ 234 008e 006A     		ldr	r0, [r0, #32]
+ 235 0090 0A21     		movs	r1, #10
+ 236 0092 134A     		ldr	r2, .L51+8
+ 237 0094 2346     		mov	r3, r4
+ 238 0096 FFF7FEFF 		bl	dmaStreamAllocate
+ 239 009a C0B9     		cbnz	r0, .L49
+ 240              	.L26:
+ 241 009c 686A     		ldr	r0, [r5, #36]
+ 242 009e 0A21     		movs	r1, #10
+ 243 00a0 104A     		ldr	r2, .L51+12
+ 244 00a2 0E4B     		ldr	r3, .L51+4
+ 245 00a4 FFF7FEFF 		bl	dmaStreamAllocate
+ 246 00a8 68B9     		cbnz	r0, .L50
+ 247              	.L27:
+ 248 00aa 0F4B     		ldr	r3, .L51+16
+ 249 00ac DA69     		ldr	r2, [r3, #28]
+ 250 00ae 42F48042 		orr	r2, r2, #16384
+ 251 00b2 DA61     		str	r2, [r3, #28]
+ 252 00b4 CDE7     		b	.L25
+ 253              	.L48:
+ 254 00b6 0D48     		ldr	r0, .L51+20
+ 255 00b8 FFF7FEFF 		bl	chDbgPanic
+ 256 00bc E1E7     		b	.L24
+ 257              	.L47:
+ 258 00be 0C48     		ldr	r0, .L51+24
+ 259 00c0 FFF7FEFF 		bl	chDbgPanic
+ 260 00c4 D6E7     		b	.L23
+ 261              	.L50:
+ 262 00c6 0B48     		ldr	r0, .L51+28
+ 263 00c8 FFF7FEFF 		bl	chDbgPanic
+ 264 00cc EDE7     		b	.L27
+ 265              	.L49:
+ 266 00ce 0A48     		ldr	r0, .L51+32
+ 267 00d0 FFF7FEFF 		bl	chDbgPanic
+ 268 00d4 E2E7     		b	.L26
+ 269              	.L52:
+ 270 00d6 00BF     		.align	2
+ 271              	.L51:
+ 272 00d8 00000000 		.word	.LANCHOR1
+ 273 00dc 00000000 		.word	.LANCHOR2
+ 274 00e0 00000000 		.word	spi_lld_serve_rx_interrupt
+ 275 00e4 00000000 		.word	spi_lld_serve_tx_interrupt
+ 276 00e8 00100240 		.word	1073876992
+ 277 00ec 14000000 		.word	.LC1
+ 278 00f0 00000000 		.word	.LC0
+ 279 00f4 3C000000 		.word	.LC3
+ 280 00f8 28000000 		.word	.LC2
+ 281              		.size	spi_lld_start, .-spi_lld_start
+ 282 00fc AFF30080 		.section	.text.spi_lld_stop,"ax",%progbits
+ARM GAS  /tmp/ccPClU58.s 			page 6
+
+
+ 283              		.align	2
+ 284              		.p2align 4,,15
+ 285              		.global	spi_lld_stop
+ 286              		.thumb
+ 287              		.thumb_func
+ 288              		.type	spi_lld_stop, %function
+ 289              	spi_lld_stop:
+ 290              		@ args = 0, pretend = 0, frame = 0
+ 291              		@ frame_needed = 0, uses_anonymous_args = 0
+ 292 0000 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+ 293 0002 10B5     		push	{r4, lr}
+ 294 0004 022B     		cmp	r3, #2
+ 295 0006 0446     		mov	r4, r0
+ 296 0008 00D0     		beq	.L58
+ 297              	.L53:
+ 298 000a 10BD     		pop	{r4, pc}
+ 299              	.L58:
+ 300 000c C369     		ldr	r3, [r0, #28]
+ 301 000e 0022     		movs	r2, #0
+ 302 0010 1A80     		strh	r2, [r3]	@ movhi
+ 303 0012 006A     		ldr	r0, [r0, #32]
+ 304 0014 9A80     		strh	r2, [r3, #4]	@ movhi
+ 305 0016 FFF7FEFF 		bl	dmaStreamRelease
+ 306 001a 606A     		ldr	r0, [r4, #36]
+ 307 001c FFF7FEFF 		bl	dmaStreamRelease
+ 308 0020 084B     		ldr	r3, .L60
+ 309 0022 9C42     		cmp	r4, r3
+ 310 0024 08D0     		beq	.L59
+ 311 0026 084B     		ldr	r3, .L60+4
+ 312 0028 9C42     		cmp	r4, r3
+ 313 002a EED1     		bne	.L53
+ 314 002c 074B     		ldr	r3, .L60+8
+ 315 002e DA69     		ldr	r2, [r3, #28]
+ 316 0030 22F48042 		bic	r2, r2, #16384
+ 317 0034 DA61     		str	r2, [r3, #28]
+ 318 0036 E8E7     		b	.L53
+ 319              	.L59:
+ 320 0038 044B     		ldr	r3, .L60+8
+ 321 003a 9A69     		ldr	r2, [r3, #24]
+ 322 003c 22F48052 		bic	r2, r2, #4096
+ 323 0040 9A61     		str	r2, [r3, #24]
+ 324 0042 10BD     		pop	{r4, pc}
+ 325              	.L61:
+ 326              		.align	2
+ 327              	.L60:
+ 328 0044 00000000 		.word	.LANCHOR1
+ 329 0048 00000000 		.word	.LANCHOR2
+ 330 004c 00100240 		.word	1073876992
+ 331              		.size	spi_lld_stop, .-spi_lld_stop
+ 332              		.section	.text.spi_lld_select,"ax",%progbits
+ 333              		.align	2
+ 334              		.p2align 4,,15
+ 335              		.global	spi_lld_select
+ 336              		.thumb
+ 337              		.thumb_func
+ 338              		.type	spi_lld_select, %function
+ 339              	spi_lld_select:
+ARM GAS  /tmp/ccPClU58.s 			page 7
+
+
+ 340              		@ args = 0, pretend = 0, frame = 0
+ 341              		@ frame_needed = 0, uses_anonymous_args = 0
+ 342              		@ link register save eliminated.
+ 343 0000 4368     		ldr	r3, [r0, #4]
+ 344 0002 0121     		movs	r1, #1
+ 345 0004 1A89     		ldrh	r2, [r3, #8]
+ 346 0006 5B68     		ldr	r3, [r3, #4]
+ 347 0008 01FA02F2 		lsl	r2, r1, r2
+ 348 000c 5A61     		str	r2, [r3, #20]
+ 349 000e 7047     		bx	lr
+ 350              		.size	spi_lld_select, .-spi_lld_select
+ 351              		.section	.text.spi_lld_unselect,"ax",%progbits
+ 352              		.align	2
+ 353              		.p2align 4,,15
+ 354              		.global	spi_lld_unselect
+ 355              		.thumb
+ 356              		.thumb_func
+ 357              		.type	spi_lld_unselect, %function
+ 358              	spi_lld_unselect:
+ 359              		@ args = 0, pretend = 0, frame = 0
+ 360              		@ frame_needed = 0, uses_anonymous_args = 0
+ 361              		@ link register save eliminated.
+ 362 0000 4368     		ldr	r3, [r0, #4]
+ 363 0002 0121     		movs	r1, #1
+ 364 0004 1A89     		ldrh	r2, [r3, #8]
+ 365 0006 5B68     		ldr	r3, [r3, #4]
+ 366 0008 01FA02F2 		lsl	r2, r1, r2
+ 367 000c 1A61     		str	r2, [r3, #16]
+ 368 000e 7047     		bx	lr
+ 369              		.size	spi_lld_unselect, .-spi_lld_unselect
+ 370              		.section	.text.spi_lld_ignore,"ax",%progbits
+ 371              		.align	2
+ 372              		.p2align 4,,15
+ 373              		.global	spi_lld_ignore
+ 374              		.thumb
+ 375              		.thumb_func
+ 376              		.type	spi_lld_ignore, %function
+ 377              	spi_lld_ignore:
+ 378              		@ args = 0, pretend = 0, frame = 0
+ 379              		@ frame_needed = 0, uses_anonymous_args = 0
+ 380              		@ link register save eliminated.
+ 381 0000 026A     		ldr	r2, [r0, #32]
+ 382 0002 436A     		ldr	r3, [r0, #36]
+ 383 0004 70B4     		push	{r4, r5, r6}
+ 384 0006 1268     		ldr	r2, [r2]
+ 385 0008 856A     		ldr	r5, [r0, #40]
+ 386 000a 1B68     		ldr	r3, [r3]
+ 387 000c C06A     		ldr	r0, [r0, #44]
+ 388 000e 094E     		ldr	r6, .L65
+ 389 0010 094C     		ldr	r4, .L65+4
+ 390 0012 D660     		str	r6, [r2, #12]
+ 391 0014 5160     		str	r1, [r2, #4]
+ 392 0016 1560     		str	r5, [r2]
+ 393 0018 DC60     		str	r4, [r3, #12]
+ 394 001a 5960     		str	r1, [r3, #4]
+ 395 001c 1860     		str	r0, [r3]
+ 396 001e 1168     		ldr	r1, [r2]
+ARM GAS  /tmp/ccPClU58.s 			page 8
+
+
+ 397 0020 70BC     		pop	{r4, r5, r6}
+ 398 0022 41F00101 		orr	r1, r1, #1
+ 399 0026 1160     		str	r1, [r2]
+ 400 0028 1A68     		ldr	r2, [r3]
+ 401 002a 42F00102 		orr	r2, r2, #1
+ 402 002e 1A60     		str	r2, [r3]
+ 403 0030 7047     		bx	lr
+ 404              	.L66:
+ 405 0032 00BF     		.align	2
+ 406              	.L65:
+ 407 0034 00000000 		.word	.LANCHOR3
+ 408 0038 00000000 		.word	.LANCHOR0
+ 409              		.size	spi_lld_ignore, .-spi_lld_ignore
+ 410 003c AFF30080 		.section	.text.spi_lld_exchange,"ax",%progbits
+ 411              		.align	2
+ 412              		.p2align 4,,15
+ 413              		.global	spi_lld_exchange
+ 414              		.thumb
+ 415              		.thumb_func
+ 416              		.type	spi_lld_exchange, %function
+ 417              	spi_lld_exchange:
+ 418              		@ args = 0, pretend = 0, frame = 0
+ 419              		@ frame_needed = 0, uses_anonymous_args = 0
+ 420              		@ link register save eliminated.
+ 421 0000 F0B4     		push	{r4, r5, r6, r7}
+ 422 0002 046A     		ldr	r4, [r0, #32]
+ 423 0004 476A     		ldr	r7, [r0, #36]
+ 424 0006 866A     		ldr	r6, [r0, #40]
+ 425 0008 C56A     		ldr	r5, [r0, #44]
+ 426 000a 2468     		ldr	r4, [r4]
+ 427 000c 3868     		ldr	r0, [r7]
+ 428 000e 46F08006 		orr	r6, r6, #128
+ 429 0012 45F08005 		orr	r5, r5, #128
+ 430 0016 E360     		str	r3, [r4, #12]
+ 431 0018 6160     		str	r1, [r4, #4]
+ 432 001a 2660     		str	r6, [r4]
+ 433 001c C260     		str	r2, [r0, #12]
+ 434 001e 4160     		str	r1, [r0, #4]
+ 435 0020 0560     		str	r5, [r0]
+ 436 0022 2368     		ldr	r3, [r4]
+ 437 0024 43F00103 		orr	r3, r3, #1
+ 438 0028 2360     		str	r3, [r4]
+ 439 002a 0368     		ldr	r3, [r0]
+ 440 002c F0BC     		pop	{r4, r5, r6, r7}
+ 441 002e 43F00103 		orr	r3, r3, #1
+ 442 0032 0360     		str	r3, [r0]
+ 443 0034 7047     		bx	lr
+ 444              		.size	spi_lld_exchange, .-spi_lld_exchange
+ 445 0036 00BFAFF3 		.section	.text.spi_lld_send,"ax",%progbits
+ 445      0080AFF3 
+ 445      0080
+ 446              		.align	2
+ 447              		.p2align 4,,15
+ 448              		.global	spi_lld_send
+ 449              		.thumb
+ 450              		.thumb_func
+ 451              		.type	spi_lld_send, %function
+ARM GAS  /tmp/ccPClU58.s 			page 9
+
+
+ 452              	spi_lld_send:
+ 453              		@ args = 0, pretend = 0, frame = 0
+ 454              		@ frame_needed = 0, uses_anonymous_args = 0
+ 455              		@ link register save eliminated.
+ 456 0000 F0B4     		push	{r4, r5, r6, r7}
+ 457 0002 036A     		ldr	r3, [r0, #32]
+ 458 0004 476A     		ldr	r7, [r0, #36]
+ 459 0006 C66A     		ldr	r6, [r0, #44]
+ 460 0008 1C68     		ldr	r4, [r3]
+ 461 000a 806A     		ldr	r0, [r0, #40]
+ 462 000c 3B68     		ldr	r3, [r7]
+ 463 000e 094D     		ldr	r5, .L69
+ 464 0010 46F08006 		orr	r6, r6, #128
+ 465 0014 E560     		str	r5, [r4, #12]
+ 466 0016 6160     		str	r1, [r4, #4]
+ 467 0018 2060     		str	r0, [r4]
+ 468 001a DA60     		str	r2, [r3, #12]
+ 469 001c 5960     		str	r1, [r3, #4]
+ 470 001e 1E60     		str	r6, [r3]
+ 471 0020 2268     		ldr	r2, [r4]
+ 472 0022 42F00102 		orr	r2, r2, #1
+ 473 0026 2260     		str	r2, [r4]
+ 474 0028 1A68     		ldr	r2, [r3]
+ 475 002a F0BC     		pop	{r4, r5, r6, r7}
+ 476 002c 42F00102 		orr	r2, r2, #1
+ 477 0030 1A60     		str	r2, [r3]
+ 478 0032 7047     		bx	lr
+ 479              	.L70:
+ 480              		.align	2
+ 481              	.L69:
+ 482 0034 00000000 		.word	.LANCHOR3
+ 483              		.size	spi_lld_send, .-spi_lld_send
+ 484 0038 AFF30080 		.section	.text.spi_lld_receive,"ax",%progbits
+ 484      AFF30080 
+ 485              		.align	2
+ 486              		.p2align 4,,15
+ 487              		.global	spi_lld_receive
+ 488              		.thumb
+ 489              		.thumb_func
+ 490              		.type	spi_lld_receive, %function
+ 491              	spi_lld_receive:
+ 492              		@ args = 0, pretend = 0, frame = 0
+ 493              		@ frame_needed = 0, uses_anonymous_args = 0
+ 494              		@ link register save eliminated.
+ 495 0000 70B4     		push	{r4, r5, r6}
+ 496 0002 436A     		ldr	r3, [r0, #36]
+ 497 0004 046A     		ldr	r4, [r0, #32]
+ 498 0006 866A     		ldr	r6, [r0, #40]
+ 499 0008 2468     		ldr	r4, [r4]
+ 500 000a 1B68     		ldr	r3, [r3]
+ 501 000c C06A     		ldr	r0, [r0, #44]
+ 502 000e 094D     		ldr	r5, .L72
+ 503 0010 46F08006 		orr	r6, r6, #128
+ 504 0014 E260     		str	r2, [r4, #12]
+ 505 0016 6160     		str	r1, [r4, #4]
+ 506 0018 2660     		str	r6, [r4]
+ 507 001a DD60     		str	r5, [r3, #12]
+ARM GAS  /tmp/ccPClU58.s 			page 10
+
+
+ 508 001c 5960     		str	r1, [r3, #4]
+ 509 001e 1860     		str	r0, [r3]
+ 510 0020 2268     		ldr	r2, [r4]
+ 511 0022 42F00102 		orr	r2, r2, #1
+ 512 0026 2260     		str	r2, [r4]
+ 513 0028 1A68     		ldr	r2, [r3]
+ 514 002a 70BC     		pop	{r4, r5, r6}
+ 515 002c 42F00102 		orr	r2, r2, #1
+ 516 0030 1A60     		str	r2, [r3]
+ 517 0032 7047     		bx	lr
+ 518              	.L73:
+ 519              		.align	2
+ 520              	.L72:
+ 521 0034 00000000 		.word	.LANCHOR0
+ 522              		.size	spi_lld_receive, .-spi_lld_receive
+ 523 0038 AFF30080 		.section	.text.spi_lld_polled_exchange,"ax",%progbits
+ 523      AFF30080 
+ 524              		.align	2
+ 525              		.p2align 4,,15
+ 526              		.global	spi_lld_polled_exchange
+ 527              		.thumb
+ 528              		.thumb_func
+ 529              		.type	spi_lld_polled_exchange, %function
+ 530              	spi_lld_polled_exchange:
+ 531              		@ args = 0, pretend = 0, frame = 0
+ 532              		@ frame_needed = 0, uses_anonymous_args = 0
+ 533              		@ link register save eliminated.
+ 534 0000 C269     		ldr	r2, [r0, #28]
+ 535 0002 9181     		strh	r1, [r2, #12]	@ movhi
+ 536              	.L76:
+ 537 0004 1389     		ldrh	r3, [r2, #8]
+ 538 0006 DB07     		lsls	r3, r3, #31
+ 539 0008 FCD5     		bpl	.L76
+ 540 000a 9089     		ldrh	r0, [r2, #12]
+ 541 000c 80B2     		uxth	r0, r0
+ 542 000e 7047     		bx	lr
+ 543              		.size	spi_lld_polled_exchange, .-spi_lld_polled_exchange
+ 544              		.global	SPID2
+ 545              		.global	SPID1
+ 546              		.section	.bss.dummytx,"aw",%nobits
+ 547              		.align	1
+ 548              		.set	.LANCHOR0,. + 0
+ 549              		.type	dummytx, %object
+ 550              		.size	dummytx, 2
+ 551              	dummytx:
+ 552 0000 0000     		.space	2
+ 553              		.section	.bss.SPID1,"aw",%nobits
+ 554              		.align	2
+ 555              		.set	.LANCHOR1,. + 0
+ 556              		.type	SPID1, %object
+ 557              		.size	SPID1, 48
+ 558              	SPID1:
+ 559 0000 00000000 		.space	48
+ 559      00000000 
+ 559      00000000 
+ 559      00000000 
+ 559      00000000 
+ARM GAS  /tmp/ccPClU58.s 			page 11
+
+
+ 560              		.section	.bss.SPID2,"aw",%nobits
+ 561              		.align	2
+ 562              		.set	.LANCHOR2,. + 0
+ 563              		.type	SPID2, %object
+ 564              		.size	SPID2, 48
+ 565              	SPID2:
+ 566 0000 00000000 		.space	48
+ 566      00000000 
+ 566      00000000 
+ 566      00000000 
+ 566      00000000 
+ 567              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 568              		.align	2
+ 569              	.LC0:
+ 570 0000 7370695F 		.ascii	"spi_lld_start(), #1\000"
+ 570      6C6C645F 
+ 570      73746172 
+ 570      7428292C 
+ 570      20233100 
+ 571              	.LC1:
+ 572 0014 7370695F 		.ascii	"spi_lld_start(), #2\000"
+ 572      6C6C645F 
+ 572      73746172 
+ 572      7428292C 
+ 572      20233200 
+ 573              	.LC2:
+ 574 0028 7370695F 		.ascii	"spi_lld_start(), #3\000"
+ 574      6C6C645F 
+ 574      73746172 
+ 574      7428292C 
+ 574      20233300 
+ 575              	.LC3:
+ 576 003c 7370695F 		.ascii	"spi_lld_start(), #4\000"
+ 576      6C6C645F 
+ 576      73746172 
+ 576      7428292C 
+ 576      20233400 
+ 577              		.section	.bss.dummyrx,"aw",%nobits
+ 578              		.align	1
+ 579              		.set	.LANCHOR3,. + 0
+ 580              		.type	dummyrx, %object
+ 581              		.size	dummyrx, 2
+ 582              	dummyrx:
+ 583 0000 0000     		.space	2
+ 584              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccPClU58.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 spi_lld.c
+     /tmp/ccPClU58.s:16     .text.spi_lld_serve_tx_interrupt:00000000 $t
+     /tmp/ccPClU58.s:21     .text.spi_lld_serve_tx_interrupt:00000000 spi_lld_serve_tx_interrupt
+     /tmp/ccPClU58.s:34     .text.spi_lld_serve_rx_interrupt:00000000 $t
+     /tmp/ccPClU58.s:39     .text.spi_lld_serve_rx_interrupt:00000000 spi_lld_serve_rx_interrupt
+     /tmp/ccPClU58.s:108    .text.spi_lld_init:00000000 $t
+     /tmp/ccPClU58.s:114    .text.spi_lld_init:00000000 spi_lld_init
+     /tmp/ccPClU58.s:149    .text.spi_lld_init:00000050 $d
+     /tmp/ccPClU58.s:157    .text.spi_lld_start:00000000 $t
+     /tmp/ccPClU58.s:163    .text.spi_lld_start:00000000 spi_lld_start
+     /tmp/ccPClU58.s:272    .text.spi_lld_start:000000d8 $d
+     /tmp/ccPClU58.s:283    .text.spi_lld_stop:00000000 $t
+     /tmp/ccPClU58.s:289    .text.spi_lld_stop:00000000 spi_lld_stop
+     /tmp/ccPClU58.s:328    .text.spi_lld_stop:00000044 $d
+     /tmp/ccPClU58.s:333    .text.spi_lld_select:00000000 $t
+     /tmp/ccPClU58.s:339    .text.spi_lld_select:00000000 spi_lld_select
+     /tmp/ccPClU58.s:352    .text.spi_lld_unselect:00000000 $t
+     /tmp/ccPClU58.s:358    .text.spi_lld_unselect:00000000 spi_lld_unselect
+     /tmp/ccPClU58.s:371    .text.spi_lld_ignore:00000000 $t
+     /tmp/ccPClU58.s:377    .text.spi_lld_ignore:00000000 spi_lld_ignore
+     /tmp/ccPClU58.s:407    .text.spi_lld_ignore:00000034 $d
+     /tmp/ccPClU58.s:411    .text.spi_lld_exchange:00000000 $t
+     /tmp/ccPClU58.s:417    .text.spi_lld_exchange:00000000 spi_lld_exchange
+     /tmp/ccPClU58.s:446    .text.spi_lld_send:00000000 $t
+     /tmp/ccPClU58.s:452    .text.spi_lld_send:00000000 spi_lld_send
+     /tmp/ccPClU58.s:482    .text.spi_lld_send:00000034 $d
+     /tmp/ccPClU58.s:485    .text.spi_lld_receive:00000000 $t
+     /tmp/ccPClU58.s:491    .text.spi_lld_receive:00000000 spi_lld_receive
+     /tmp/ccPClU58.s:521    .text.spi_lld_receive:00000034 $d
+     /tmp/ccPClU58.s:524    .text.spi_lld_polled_exchange:00000000 $t
+     /tmp/ccPClU58.s:530    .text.spi_lld_polled_exchange:00000000 spi_lld_polled_exchange
+     /tmp/ccPClU58.s:565    .bss.SPID2:00000000 SPID2
+     /tmp/ccPClU58.s:558    .bss.SPID1:00000000 SPID1
+     /tmp/ccPClU58.s:547    .bss.dummytx:00000000 $d
+     /tmp/ccPClU58.s:551    .bss.dummytx:00000000 dummytx
+     /tmp/ccPClU58.s:554    .bss.SPID1:00000000 $d
+     /tmp/ccPClU58.s:561    .bss.SPID2:00000000 $d
+     /tmp/ccPClU58.s:568    .rodata.str1.4:00000000 $d
+     /tmp/ccPClU58.s:578    .bss.dummyrx:00000000 $d
+     /tmp/ccPClU58.s:582    .bss.dummyrx:00000000 dummyrx
+     /tmp/ccPClU58.s:156    .text.spi_lld_init:00000068 $t
+     /tmp/ccPClU58.s:282    .text.spi_lld_start:000000fc $t
+     /tmp/ccPClU58.s:410    .text.spi_lld_ignore:0000003c $t
+     /tmp/ccPClU58.s:484    .text.spi_lld_send:00000038 $t
+     /tmp/ccPClU58.s:523    .text.spi_lld_receive:00000038 $t
+
+UNDEFINED SYMBOLS
+haltErrorCode
+port_halt
+dbg_check_lock_from_isr
+chSchReadyI
+dbg_check_unlock_from_isr
+spiObjectInit
+_stm32_dma_streams
+dmaStreamAllocate
+chDbgPanic
+ARM GAS  /tmp/ccPClU58.s 			page 13
+
+
+dmaStreamRelease

@@ -1,0 +1,8 @@
+can.c:68:6:canInit	0	static
+can.c:80:6:canObjectInit	16	static
+can.c:107:6:canStart	16	static
+can.c:133:6:canStop	8	static
+can.c:169:7:canTransmit	40	static
+can.c:214:7:canReceive	40	static
+can.c:250:6:canSleep	8	static
+can.c:273:6:canWakeup	8	static

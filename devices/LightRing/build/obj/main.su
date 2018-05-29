@@ -1,0 +1,23 @@
+I2CDriver.hpp:30:13:amiro::I2CDriver::~I2CDriver()	0	static
+I2CDriver.hpp:30:13:virtual amiro::I2CDriver::~I2CDriver()	8	static
+chprintf.h:69:20:)	12	static
+main.cpp:33:6:void shellRequestShutdown(BaseSequentialStream*, int, char**)	16	static
+main.cpp:217:6:void shellRequestResetMemory(BaseSequentialStream*, int, char**)	8	static
+main.cpp:227:6:void shellRequestGetBoardId(BaseSequentialStream*, int, char**)	16	static
+main.cpp:279:6:void shellRequestGetMemoryData(BaseSequentialStream*, int, char**)	40	dynamic
+main.cpp:401:6:void shellRequestGetRobotId(BaseSequentialStream*, int, char**)	8	static
+main.cpp:408:6:void shellRequestGetSystemLoad(BaseSequentialStream*, int, char**)	32	static
+main.cpp:438:6:void shellRequestGetBootloaderInfo(BaseSequentialStream*, int, char**)	16	static
+main.cpp:238:6:void shellRequestSetBoardId(BaseSequentialStream*, int, char**)	16	static
+main.cpp:427:6:void shellSwitchBoardCmd(BaseSequentialStream*, int, char**)	16	static
+global.hpp:83:3:amiro::Global::Global()	48	static
+main.cpp:76:6:void testLights()	16	static
+main.cpp:121:6:void testColors()	24	static
+main.cpp:136:6:void testFade()	24	static
+main.cpp:146:6:void testBrightness()	16	static
+main.cpp:197:6:void systemShutdown()	16	static
+main.cpp:252:6:void boardPeripheryCheck(BaseSequentialStream*)	8	static
+main.cpp:396:6:void shellRequestCheck(BaseSequentialStream*, int, char**)	8	static
+main.cpp:487:5:int main()	64	static
+main.cpp:706:1:cpp)	8	static
+global.hpp:98:3:amiro::Global::~Global()	16	static

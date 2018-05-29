@@ -1,0 +1,249 @@
+ARM GAS  /tmp/ccYqttlZ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"I2CMultiplexer.cpp"
+  15              		.section	.text._ZN5amiro14I2CMultiplexer9getErrorsEv,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_ZN5amiro14I2CMultiplexer9getErrorsEv
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro14I2CMultiplexer9getErrorsEv, %function
+  22              	_ZN5amiro14I2CMultiplexer9getErrorsEv:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 08B5     		push	{r3, lr}
+  26 0002 4068     		ldr	r0, [r0, #4]
+  27 0004 0368     		ldr	r3, [r0]
+  28 0006 1B69     		ldr	r3, [r3, #16]
+  29 0008 9847     		blx	r3
+  30 000a 08BD     		pop	{r3, pc}
+  31              		.size	_ZN5amiro14I2CMultiplexer9getErrorsEv, .-_ZN5amiro14I2CMultiplexer9getErrorsEv
+  32 000c AFF30080 		.section	.text._ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm,"ax",%progbits
+  33              		.align	2
+  34              		.p2align 4,,15
+  35              		.global	_ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm
+  36              		.thumb
+  37              		.thumb_func
+  38              		.type	_ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm, %function
+  39              	_ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm:
+  40              		@ args = 0, pretend = 0, frame = 0
+  41              		@ frame_needed = 0, uses_anonymous_args = 0
+  42 0000 08B5     		push	{r3, lr}
+  43 0002 4068     		ldr	r0, [r0, #4]
+  44 0004 0368     		ldr	r3, [r0]
+  45 0006 5B69     		ldr	r3, [r3, #20]
+  46 0008 9847     		blx	r3
+  47 000a 08BD     		pop	{r3, pc}
+  48              		.size	_ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm, .-_ZN5amiro14I2CMultiplexer1
+  49 000c AFF30080 		.section	.text._ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm,"ax",%progbits
+  50              		.align	2
+  51              		.p2align 4,,15
+  52              		.global	_ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	_ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm, %function
+  56              	_ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm:
+  57              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccYqttlZ.s 			page 2
+
+
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59 0000 08B5     		push	{r3, lr}
+  60 0002 4068     		ldr	r0, [r0, #4]
+  61 0004 0368     		ldr	r3, [r0]
+  62 0006 9B69     		ldr	r3, [r3, #24]
+  63 0008 9847     		blx	r3
+  64 000a 08BD     		pop	{r3, pc}
+  65              		.size	_ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm, .-_ZN5amiro14I2CMultiplexer13
+  66 000c AFF30080 		.section	.text._ZN5amiro14I2CMultiplexer10acquireBusEv,"ax",%progbits
+  67              		.align	2
+  68              		.p2align 4,,15
+  69              		.global	_ZN5amiro14I2CMultiplexer10acquireBusEv
+  70              		.thumb
+  71              		.thumb_func
+  72              		.type	_ZN5amiro14I2CMultiplexer10acquireBusEv, %function
+  73              	_ZN5amiro14I2CMultiplexer10acquireBusEv:
+  74              		@ args = 0, pretend = 0, frame = 0
+  75              		@ frame_needed = 0, uses_anonymous_args = 0
+  76 0000 10B5     		push	{r4, lr}
+  77 0002 0446     		mov	r4, r0
+  78 0004 0830     		adds	r0, r0, #8
+  79 0006 FFF7FEFF 		bl	chMtxLock
+  80 000a 6068     		ldr	r0, [r4, #4]
+  81 000c 0368     		ldr	r3, [r0]
+  82 000e DB69     		ldr	r3, [r3, #28]
+  83 0010 9847     		blx	r3
+  84 0012 10BD     		pop	{r4, pc}
+  85              		.size	_ZN5amiro14I2CMultiplexer10acquireBusEv, .-_ZN5amiro14I2CMultiplexer10acquireBusEv
+  86 0014 AFF30080 		.section	.text._ZN5amiro14I2CMultiplexer10releaseBusEv,"ax",%progbits
+  86      AFF30080 
+  86      AFF30080 
+  87              		.align	2
+  88              		.p2align 4,,15
+  89              		.global	_ZN5amiro14I2CMultiplexer10releaseBusEv
+  90              		.thumb
+  91              		.thumb_func
+  92              		.type	_ZN5amiro14I2CMultiplexer10releaseBusEv, %function
+  93              	_ZN5amiro14I2CMultiplexer10releaseBusEv:
+  94              		@ args = 0, pretend = 0, frame = 0
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
+  96 0000 08B5     		push	{r3, lr}
+  97 0002 4068     		ldr	r0, [r0, #4]
+  98 0004 0368     		ldr	r3, [r0]
+  99 0006 1B6A     		ldr	r3, [r3, #32]
+ 100 0008 9847     		blx	r3
+ 101 000a BDE80840 		pop	{r3, lr}
+ 102 000e FFF7FEBF 		b	chMtxUnlock
+ 103              		.size	_ZN5amiro14I2CMultiplexer10releaseBusEv, .-_ZN5amiro14I2CMultiplexer10releaseBusEv
+ 104 0012 00BFAFF3 		.section	.text._ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE,"ax",%progbits
+ 104      0080AFF3 
+ 104      0080AFF3 
+ 104      0080
+ 105              		.align	2
+ 106              		.p2align 4,,15
+ 107              		.global	_ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE
+ 108              		.thumb
+ 109              		.thumb_func
+ARM GAS  /tmp/ccYqttlZ.s 			page 3
+
+
+ 110              		.type	_ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE, %function
+ 111              	_ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE:
+ 112              		@ args = 0, pretend = 0, frame = 0
+ 113              		@ frame_needed = 0, uses_anonymous_args = 0
+ 114 0000 10B5     		push	{r4, lr}
+ 115 0002 044B     		ldr	r3, .L7
+ 116 0004 4160     		str	r1, [r0, #4]
+ 117 0006 0360     		str	r3, [r0]
+ 118 0008 0446     		mov	r4, r0
+ 119 000a 0830     		adds	r0, r0, #8
+ 120 000c FFF7FEFF 		bl	chMtxInit
+ 121 0010 2046     		mov	r0, r4
+ 122 0012 10BD     		pop	{r4, pc}
+ 123              	.L8:
+ 124              		.align	2
+ 125              	.L7:
+ 126 0014 08000000 		.word	.LANCHOR0+8
+ 127              		.size	_ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE, .-_ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE
+ 128              		.global	_ZN5amiro14I2CMultiplexerC1EPNS_9I2CDriverE
+ 129              		.thumb_set _ZN5amiro14I2CMultiplexerC1EPNS_9I2CDriverE,_ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE
+ 130 0018 AFF30080 		.section	.text._ZN5amiro14I2CMultiplexerD2Ev,"ax",%progbits
+ 130      AFF30080 
+ 131              		.align	2
+ 132              		.p2align 4,,15
+ 133              		.global	_ZN5amiro14I2CMultiplexerD2Ev
+ 134              		.thumb
+ 135              		.thumb_func
+ 136              		.type	_ZN5amiro14I2CMultiplexerD2Ev, %function
+ 137              	_ZN5amiro14I2CMultiplexerD2Ev:
+ 138              		@ args = 0, pretend = 0, frame = 0
+ 139              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140              		@ link register save eliminated.
+ 141 0000 014B     		ldr	r3, .L10
+ 142 0002 0360     		str	r3, [r0]
+ 143 0004 7047     		bx	lr
+ 144              	.L11:
+ 145 0006 00BF     		.align	2
+ 146              	.L10:
+ 147 0008 08000000 		.word	.LANCHOR0+8
+ 148              		.size	_ZN5amiro14I2CMultiplexerD2Ev, .-_ZN5amiro14I2CMultiplexerD2Ev
+ 149              		.global	_ZN5amiro14I2CMultiplexerD1Ev
+ 150              		.thumb_set _ZN5amiro14I2CMultiplexerD1Ev,_ZN5amiro14I2CMultiplexerD2Ev
+ 151 000c AFF30080 		.section	.text._ZN5amiro14I2CMultiplexerD0Ev,"ax",%progbits
+ 152              		.align	2
+ 153              		.p2align 4,,15
+ 154              		.global	_ZN5amiro14I2CMultiplexerD0Ev
+ 155              		.thumb
+ 156              		.thumb_func
+ 157              		.type	_ZN5amiro14I2CMultiplexerD0Ev, %function
+ 158              	_ZN5amiro14I2CMultiplexerD0Ev:
+ 159              		@ args = 0, pretend = 0, frame = 0
+ 160              		@ frame_needed = 0, uses_anonymous_args = 0
+ 161 0000 10B5     		push	{r4, lr}
+ 162 0002 034B     		ldr	r3, .L13
+ 163 0004 0446     		mov	r4, r0
+ 164 0006 0360     		str	r3, [r0]
+ 165 0008 FFF7FEFF 		bl	_ZdlPv
+ARM GAS  /tmp/ccYqttlZ.s 			page 4
+
+
+ 166 000c 2046     		mov	r0, r4
+ 167 000e 10BD     		pop	{r4, pc}
+ 168              	.L14:
+ 169              		.align	2
+ 170              	.L13:
+ 171 0010 08000000 		.word	.LANCHOR0+8
+ 172              		.size	_ZN5amiro14I2CMultiplexerD0Ev, .-_ZN5amiro14I2CMultiplexerD0Ev
+ 173              		.global	_ZTVN5amiro14I2CMultiplexerE
+ 174 0014 AFF30080 		.section	.rodata._ZTVN5amiro14I2CMultiplexerE,"a",%progbits
+ 174      AFF30080 
+ 174      AFF30080 
+ 175              		.align	3
+ 176              		.set	.LANCHOR0,. + 0
+ 177              		.type	_ZTVN5amiro14I2CMultiplexerE, %object
+ 178              		.size	_ZTVN5amiro14I2CMultiplexerE, 44
+ 179              	_ZTVN5amiro14I2CMultiplexerE:
+ 180 0000 00000000 		.word	0
+ 181 0004 00000000 		.word	0
+ 182 0008 00000000 		.word	__cxa_pure_virtual
+ 183 000c 00000000 		.word	__cxa_pure_virtual
+ 184 0010 00000000 		.word	_ZN5amiro14I2CMultiplexer9getErrorsEv
+ 185 0014 00000000 		.word	_ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm
+ 186 0018 00000000 		.word	_ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm
+ 187 001c 00000000 		.word	_ZN5amiro14I2CMultiplexer10acquireBusEv
+ 188 0020 00000000 		.word	_ZN5amiro14I2CMultiplexer10releaseBusEv
+ 189 0024 00000000 		.word	__cxa_pure_virtual
+ 190 0028 00000000 		.word	__cxa_pure_virtual
+ 191 002c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccYqttlZ.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 I2CMultiplexer.cpp
+     /tmp/ccYqttlZ.s:16     .text._ZN5amiro14I2CMultiplexer9getErrorsEv:00000000 $t
+     /tmp/ccYqttlZ.s:22     .text._ZN5amiro14I2CMultiplexer9getErrorsEv:00000000 _ZN5amiro14I2CMultiplexer9getErrorsEv
+     /tmp/ccYqttlZ.s:33     .text._ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm:00000000 $t
+     /tmp/ccYqttlZ.s:39     .text._ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm:00000000 _ZN5amiro14I2CMultiplexer14masterTransmitEPKNS_11I2CTxParamsEm
+     /tmp/ccYqttlZ.s:50     .text._ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm:00000000 $t
+     /tmp/ccYqttlZ.s:56     .text._ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm:00000000 _ZN5amiro14I2CMultiplexer13masterReceiveEPKNS_11I2CRxParamsEm
+     /tmp/ccYqttlZ.s:67     .text._ZN5amiro14I2CMultiplexer10acquireBusEv:00000000 $t
+     /tmp/ccYqttlZ.s:73     .text._ZN5amiro14I2CMultiplexer10acquireBusEv:00000000 _ZN5amiro14I2CMultiplexer10acquireBusEv
+     /tmp/ccYqttlZ.s:87     .text._ZN5amiro14I2CMultiplexer10releaseBusEv:00000000 $t
+     /tmp/ccYqttlZ.s:93     .text._ZN5amiro14I2CMultiplexer10releaseBusEv:00000000 _ZN5amiro14I2CMultiplexer10releaseBusEv
+     /tmp/ccYqttlZ.s:105    .text._ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE:00000000 $t
+     /tmp/ccYqttlZ.s:111    .text._ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE:00000000 _ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE
+     /tmp/ccYqttlZ.s:126    .text._ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE:00000014 $d
+     /tmp/ccYqttlZ.s:111    .text._ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE:00000000 _ZN5amiro14I2CMultiplexerC1EPNS_9I2CDriverE
+     /tmp/ccYqttlZ.s:131    .text._ZN5amiro14I2CMultiplexerD2Ev:00000000 $t
+     /tmp/ccYqttlZ.s:137    .text._ZN5amiro14I2CMultiplexerD2Ev:00000000 _ZN5amiro14I2CMultiplexerD2Ev
+     /tmp/ccYqttlZ.s:147    .text._ZN5amiro14I2CMultiplexerD2Ev:00000008 $d
+     /tmp/ccYqttlZ.s:137    .text._ZN5amiro14I2CMultiplexerD2Ev:00000000 _ZN5amiro14I2CMultiplexerD1Ev
+     /tmp/ccYqttlZ.s:152    .text._ZN5amiro14I2CMultiplexerD0Ev:00000000 $t
+     /tmp/ccYqttlZ.s:158    .text._ZN5amiro14I2CMultiplexerD0Ev:00000000 _ZN5amiro14I2CMultiplexerD0Ev
+     /tmp/ccYqttlZ.s:171    .text._ZN5amiro14I2CMultiplexerD0Ev:00000010 $d
+     /tmp/ccYqttlZ.s:179    .rodata._ZTVN5amiro14I2CMultiplexerE:00000000 _ZTVN5amiro14I2CMultiplexerE
+     /tmp/ccYqttlZ.s:175    .rodata._ZTVN5amiro14I2CMultiplexerE:00000000 $d
+     /tmp/ccYqttlZ.s:130    .text._ZN5amiro14I2CMultiplexerC2EPNS_9I2CDriverE:00000018 $t
+     /tmp/ccYqttlZ.s:151    .text._ZN5amiro14I2CMultiplexerD2Ev:0000000c $t
+     /tmp/ccYqttlZ.s:174    .text._ZN5amiro14I2CMultiplexerD0Ev:00000014 $t
+
+UNDEFINED SYMBOLS
+chMtxLock
+chMtxUnlock
+chMtxInit
+_ZdlPv
+__cxa_pure_virtual

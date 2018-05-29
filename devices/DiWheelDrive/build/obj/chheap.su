@@ -1,0 +1,5 @@
+chheap.c:75:6:_heap_init	0	static
+chheap.c:99:6:chHeapInit	16	static
+chheap.c:132:7:chHeapAlloc	24	static
+chheap.c:194:6:chHeapFree	24	static
+chheap.c:250:8:chHeapStatus	16	static

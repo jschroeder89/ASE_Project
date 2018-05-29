@@ -1,0 +1,538 @@
+ARM GAS  /tmp/ccDJpvKP.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"i2c.c"
+  15              		.section	.text.i2cInit,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	i2cInit
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	i2cInit, %function
+  22              	i2cInit:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 FFF7FEBF 		b	i2c_lld_init
+  27              		.size	i2cInit, .-i2cInit
+  28 0004 AFF30080 		.section	.text.i2cObjectInit,"ax",%progbits
+  28      AFF30080 
+  28      AFF30080 
+  29              		.align	2
+  30              		.p2align 4,,15
+  31              		.global	i2cObjectInit
+  32              		.thumb
+  33              		.thumb_func
+  34              		.type	i2cObjectInit, %function
+  35              	i2cObjectInit:
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38              		@ link register save eliminated.
+  39 0000 0122     		movs	r2, #1
+  40 0002 0023     		movs	r3, #0
+  41 0004 0270     		strb	r2, [r0]
+  42 0006 4360     		str	r3, [r0, #4]
+  43 0008 0C30     		adds	r0, r0, #12
+  44 000a FFF7FEBF 		b	chMtxInit
+  45              		.size	i2cObjectInit, .-i2cObjectInit
+  46 000e 00BF     		.section	.text.i2cStart,"ax",%progbits
+  47              		.align	2
+  48              		.p2align 4,,15
+  49              		.global	i2cStart
+  50              		.thumb
+  51              		.thumb_func
+  52              		.type	i2cStart, %function
+  53              	i2cStart:
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccDJpvKP.s 			page 2
+
+
+  56 0000 38B5     		push	{r3, r4, r5, lr}
+  57 0002 0446     		mov	r4, r0
+  58 0004 0D46     		mov	r5, r1
+  59 0006 D0B1     		cbz	r0, .L4
+  60 0008 C9B1     		cbz	r1, .L4
+  61              	.L5:
+  62 000a 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+  63 000c 5A1E     		subs	r2, r3, #1
+  64 000e 012A     		cmp	r2, #1
+  65 0010 04D9     		bls	.L6
+  66 0012 052B     		cmp	r3, #5
+  67 0014 02D0     		beq	.L6
+  68 0016 0C48     		ldr	r0, .L14
+  69 0018 FFF7FEFF 		bl	chDbgPanic
+  70              	.L6:
+  71 001c 2023     		movs	r3, #32
+  72              	@ 116 "../../../ChibiOS/os/hal/src/i2c.c" 1
+  73 001e 83F31188 		msr     BASEPRI, r3
+  74              	@ 0 "" 2
+  75              		.thumb
+  76 0022 FFF7FEFF 		bl	dbg_check_lock
+  77 0026 2046     		mov	r0, r4
+  78 0028 6560     		str	r5, [r4, #4]
+  79 002a FFF7FEFF 		bl	i2c_lld_start
+  80 002e 0223     		movs	r3, #2
+  81 0030 2370     		strb	r3, [r4]
+  82 0032 FFF7FEFF 		bl	dbg_check_unlock
+  83 0036 0023     		movs	r3, #0
+  84              	@ 120 "../../../ChibiOS/os/hal/src/i2c.c" 1
+  85 0038 83F31188 		msr     BASEPRI, r3
+  86              	@ 0 "" 2
+  87              		.thumb
+  88 003c 38BD     		pop	{r3, r4, r5, pc}
+  89              	.L4:
+  90 003e 0348     		ldr	r0, .L14+4
+  91 0040 FFF7FEFF 		bl	chDbgPanic
+  92 0044 E1E7     		b	.L5
+  93              	.L15:
+  94 0046 00BF     		.align	2
+  95              	.L14:
+  96 0048 10000000 		.word	.LC1
+  97 004c 00000000 		.word	.LC0
+  98              		.size	i2cStart, .-i2cStart
+  99              		.section	.text.i2cStop,"ax",%progbits
+ 100              		.align	2
+ 101              		.p2align 4,,15
+ 102              		.global	i2cStop
+ 103              		.thumb
+ 104              		.thumb_func
+ 105              		.type	i2cStop, %function
+ 106              	i2cStop:
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109 0000 10B5     		push	{r4, lr}
+ 110 0002 0446     		mov	r4, r0
+ 111 0004 C0B1     		cbz	r0, .L22
+ 112              	.L17:
+ARM GAS  /tmp/ccDJpvKP.s 			page 3
+
+
+ 113 0006 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 114 0008 5A1E     		subs	r2, r3, #1
+ 115 000a 012A     		cmp	r2, #1
+ 116 000c 04D9     		bls	.L18
+ 117 000e 052B     		cmp	r3, #5
+ 118 0010 02D0     		beq	.L18
+ 119 0012 0B48     		ldr	r0, .L23
+ 120 0014 FFF7FEFF 		bl	chDbgPanic
+ 121              	.L18:
+ 122 0018 2023     		movs	r3, #32
+ 123              	@ 138 "../../../ChibiOS/os/hal/src/i2c.c" 1
+ 124 001a 83F31188 		msr     BASEPRI, r3
+ 125              	@ 0 "" 2
+ 126              		.thumb
+ 127 001e FFF7FEFF 		bl	dbg_check_lock
+ 128 0022 2046     		mov	r0, r4
+ 129 0024 FFF7FEFF 		bl	i2c_lld_stop
+ 130 0028 0123     		movs	r3, #1
+ 131 002a 2370     		strb	r3, [r4]
+ 132 002c FFF7FEFF 		bl	dbg_check_unlock
+ 133 0030 0023     		movs	r3, #0
+ 134              	@ 141 "../../../ChibiOS/os/hal/src/i2c.c" 1
+ 135 0032 83F31188 		msr     BASEPRI, r3
+ 136              	@ 0 "" 2
+ 137              		.thumb
+ 138 0036 10BD     		pop	{r4, pc}
+ 139              	.L22:
+ 140 0038 0248     		ldr	r0, .L23+4
+ 141 003a FFF7FEFF 		bl	chDbgPanic
+ 142 003e E2E7     		b	.L17
+ 143              	.L24:
+ 144              		.align	2
+ 145              	.L23:
+ 146 0040 2C000000 		.word	.LC3
+ 147 0044 20000000 		.word	.LC2
+ 148              		.size	i2cStop, .-i2cStop
+ 149 0048 AFF30080 		.section	.text.i2cGetErrors,"ax",%progbits
+ 149      AFF30080 
+ 150              		.align	2
+ 151              		.p2align 4,,15
+ 152              		.global	i2cGetErrors
+ 153              		.thumb
+ 154              		.thumb_func
+ 155              		.type	i2cGetErrors, %function
+ 156              	i2cGetErrors:
+ 157              		@ args = 0, pretend = 0, frame = 0
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 159 0000 10B5     		push	{r4, lr}
+ 160 0002 0446     		mov	r4, r0
+ 161 0004 08B1     		cbz	r0, .L27
+ 162 0006 A068     		ldr	r0, [r4, #8]
+ 163 0008 10BD     		pop	{r4, pc}
+ 164              	.L27:
+ 165 000a 0248     		ldr	r0, .L28
+ 166 000c FFF7FEFF 		bl	chDbgPanic
+ 167 0010 A068     		ldr	r0, [r4, #8]
+ 168 0012 10BD     		pop	{r4, pc}
+ARM GAS  /tmp/ccDJpvKP.s 			page 4
+
+
+ 169              	.L29:
+ 170              		.align	2
+ 171              	.L28:
+ 172 0014 3C000000 		.word	.LC4
+ 173              		.size	i2cGetErrors, .-i2cGetErrors
+ 174 0018 AFF30080 		.section	.text.i2cMasterTransmitTimeout,"ax",%progbits
+ 174      AFF30080 
+ 175              		.align	2
+ 176              		.p2align 4,,15
+ 177              		.global	i2cMasterTransmitTimeout
+ 178              		.thumb
+ 179              		.thumb_func
+ 180              		.type	i2cMasterTransmitTimeout, %function
+ 181              	i2cMasterTransmitTimeout:
+ 182              		@ args = 12, pretend = 0, frame = 0
+ 183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 184 0000 2DE9F046 		push	{r4, r5, r6, r7, r9, r10, lr}
+ 185 0004 85B0     		sub	sp, sp, #20
+ 186 0006 0446     		mov	r4, r0
+ 187 0008 0E46     		mov	r6, r1
+ 188 000a 9246     		mov	r10, r2
+ 189 000c 9946     		mov	r9, r3
+ 190 000e 0D9D     		ldr	r5, [sp, #52]
+ 191 0010 00B1     		cbz	r0, .L31
+ 192 0012 59BB     		cbnz	r1, .L58
+ 193              	.L31:
+ 194 0014 1B48     		ldr	r0, .L59
+ 195 0016 FFF7FEFF 		bl	chDbgPanic
+ 196              	.L33:
+ 197 001a 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 198 001c 022B     		cmp	r3, #2
+ 199 001e 02D0     		beq	.L34
+ 200 0020 1948     		ldr	r0, .L59+4
+ 201 0022 FFF7FEFF 		bl	chDbgPanic
+ 202              	.L34:
+ 203 0026 2023     		movs	r3, #32
+ 204              	@ 203 "../../../ChibiOS/os/hal/src/i2c.c" 1
+ 205 0028 83F31188 		msr     BASEPRI, r3
+ 206              	@ 0 "" 2
+ 207              		.thumb
+ 208 002c FFF7FEFF 		bl	dbg_check_lock
+ 209 0030 0027     		movs	r7, #0
+ 210 0032 0320     		movs	r0, #3
+ 211 0034 2070     		strb	r0, [r4]
+ 212 0036 A760     		str	r7, [r4, #8]
+ 213 0038 3146     		mov	r1, r6
+ 214 003a 0195     		str	r5, [sp, #4]
+ 215 003c 0C9E     		ldr	r6, [sp, #48]
+ 216 003e 0E9D     		ldr	r5, [sp, #56]
+ 217 0040 5246     		mov	r2, r10
+ 218 0042 4B46     		mov	r3, r9
+ 219 0044 0295     		str	r5, [sp, #8]
+ 220 0046 2046     		mov	r0, r4
+ 221 0048 0096     		str	r6, [sp]
+ 222 004a FFF7FEFF 		bl	i2c_lld_master_transmit_timeout
+ 223 004e 431C     		adds	r3, r0, #1
+ 224 0050 0CBF     		ite	eq
+ARM GAS  /tmp/ccDJpvKP.s 			page 5
+
+
+ 225 0052 0523     		moveq	r3, #5
+ 226 0054 0223     		movne	r3, #2
+ 227 0056 2370     		strb	r3, [r4]
+ 228 0058 0546     		mov	r5, r0
+ 229 005a FFF7FEFF 		bl	dbg_check_unlock
+ 230 005e 0023     		movs	r3, #0
+ 231              	@ 212 "../../../ChibiOS/os/hal/src/i2c.c" 1
+ 232 0060 83F31188 		msr     BASEPRI, r3
+ 233              	@ 0 "" 2
+ 234              		.thumb
+ 235 0064 2846     		mov	r0, r5
+ 236 0066 05B0     		add	sp, sp, #20
+ 237              		@ sp needed
+ 238 0068 BDE8F086 		pop	{r4, r5, r6, r7, r9, r10, pc}
+ 239              	.L58:
+ 240 006c 002B     		cmp	r3, #0
+ 241 006e D1D0     		beq	.L31
+ 242 0070 002A     		cmp	r2, #0
+ 243 0072 CFD0     		beq	.L31
+ 244 0074 15B1     		cbz	r5, .L32
+ 245 0076 0C9B     		ldr	r3, [sp, #48]
+ 246 0078 002B     		cmp	r3, #0
+ 247 007a CBD0     		beq	.L31
+ 248              	.L32:
+ 249 007c 0E9B     		ldr	r3, [sp, #56]
+ 250 007e 002B     		cmp	r3, #0
+ 251 0080 CBD1     		bne	.L33
+ 252 0082 C7E7     		b	.L31
+ 253              	.L60:
+ 254              		.align	2
+ 255              	.L59:
+ 256 0084 50000000 		.word	.LC5
+ 257 0088 70000000 		.word	.LC6
+ 258              		.size	i2cMasterTransmitTimeout, .-i2cMasterTransmitTimeout
+ 259 008c AFF30080 		.section	.text.i2cMasterReceiveTimeout,"ax",%progbits
+ 260              		.align	2
+ 261              		.p2align 4,,15
+ 262              		.global	i2cMasterReceiveTimeout
+ 263              		.thumb
+ 264              		.thumb_func
+ 265              		.type	i2cMasterReceiveTimeout, %function
+ 266              	i2cMasterReceiveTimeout:
+ 267              		@ args = 4, pretend = 0, frame = 0
+ 268              		@ frame_needed = 0, uses_anonymous_args = 0
+ 269 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 270 0004 0446     		mov	r4, r0
+ 271 0006 82B0     		sub	sp, sp, #8
+ 272 0008 0D46     		mov	r5, r1
+ 273 000a 9046     		mov	r8, r2
+ 274 000c 1E46     		mov	r6, r3
+ 275 000e 00B1     		cbz	r0, .L62
+ 276 0010 41BB     		cbnz	r1, .L82
+ 277              	.L62:
+ 278 0012 1848     		ldr	r0, .L83
+ 279 0014 FFF7FEFF 		bl	chDbgPanic
+ 280              	.L63:
+ 281 0018 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ARM GAS  /tmp/ccDJpvKP.s 			page 6
+
+
+ 282 001a 022B     		cmp	r3, #2
+ 283 001c 02D0     		beq	.L64
+ 284 001e 1648     		ldr	r0, .L83+4
+ 285 0020 FFF7FEFF 		bl	chDbgPanic
+ 286              	.L64:
+ 287 0024 2023     		movs	r3, #32
+ 288              	@ 252 "../../../ChibiOS/os/hal/src/i2c.c" 1
+ 289 0026 83F31188 		msr     BASEPRI, r3
+ 290              	@ 0 "" 2
+ 291              		.thumb
+ 292 002a FFF7FEFF 		bl	dbg_check_lock
+ 293 002e 2946     		mov	r1, r5
+ 294 0030 089D     		ldr	r5, [sp, #32]
+ 295 0032 0027     		movs	r7, #0
+ 296 0034 0420     		movs	r0, #4
+ 297 0036 2070     		strb	r0, [r4]
+ 298 0038 4246     		mov	r2, r8
+ 299 003a 3346     		mov	r3, r6
+ 300 003c A760     		str	r7, [r4, #8]
+ 301 003e 2046     		mov	r0, r4
+ 302 0040 0095     		str	r5, [sp]
+ 303 0042 FFF7FEFF 		bl	i2c_lld_master_receive_timeout
+ 304 0046 431C     		adds	r3, r0, #1
+ 305 0048 0CBF     		ite	eq
+ 306 004a 0523     		moveq	r3, #5
+ 307 004c 0223     		movne	r3, #2
+ 308 004e 2370     		strb	r3, [r4]
+ 309 0050 0546     		mov	r5, r0
+ 310 0052 FFF7FEFF 		bl	dbg_check_unlock
+ 311 0056 0023     		movs	r3, #0
+ 312              	@ 260 "../../../ChibiOS/os/hal/src/i2c.c" 1
+ 313 0058 83F31188 		msr     BASEPRI, r3
+ 314              	@ 0 "" 2
+ 315              		.thumb
+ 316 005c 2846     		mov	r0, r5
+ 317 005e 02B0     		add	sp, sp, #8
+ 318              		@ sp needed
+ 319 0060 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 320              	.L82:
+ 321 0064 002B     		cmp	r3, #0
+ 322 0066 D4D0     		beq	.L62
+ 323 0068 002A     		cmp	r2, #0
+ 324 006a D2D0     		beq	.L62
+ 325 006c 089B     		ldr	r3, [sp, #32]
+ 326 006e 002B     		cmp	r3, #0
+ 327 0070 D2D1     		bne	.L63
+ 328 0072 CEE7     		b	.L62
+ 329              	.L84:
+ 330              		.align	2
+ 331              	.L83:
+ 332 0074 90000000 		.word	.LC7
+ 333 0078 AC000000 		.word	.LC8
+ 334              		.size	i2cMasterReceiveTimeout, .-i2cMasterReceiveTimeout
+ 335 007c AFF30080 		.section	.text.i2cAcquireBus,"ax",%progbits
+ 336              		.align	2
+ 337              		.p2align 4,,15
+ 338              		.global	i2cAcquireBus
+ARM GAS  /tmp/ccDJpvKP.s 			page 7
+
+
+ 339              		.thumb
+ 340              		.thumb_func
+ 341              		.type	i2cAcquireBus, %function
+ 342              	i2cAcquireBus:
+ 343              		@ args = 0, pretend = 0, frame = 0
+ 344              		@ frame_needed = 0, uses_anonymous_args = 0
+ 345 0000 10B5     		push	{r4, lr}
+ 346 0002 0446     		mov	r4, r0
+ 347 0004 28B1     		cbz	r0, .L87
+ 348 0006 04F10C00 		add	r0, r4, #12
+ 349 000a BDE81040 		pop	{r4, lr}
+ 350 000e FFF7FEBF 		b	chMtxLock
+ 351              	.L87:
+ 352 0012 0448     		ldr	r0, .L88
+ 353 0014 FFF7FEFF 		bl	chDbgPanic
+ 354 0018 04F10C00 		add	r0, r4, #12
+ 355 001c BDE81040 		pop	{r4, lr}
+ 356 0020 FFF7FEBF 		b	chMtxLock
+ 357              	.L89:
+ 358              		.align	2
+ 359              	.L88:
+ 360 0024 C4000000 		.word	.LC9
+ 361              		.size	i2cAcquireBus, .-i2cAcquireBus
+ 362 0028 AFF30080 		.section	.text.i2cReleaseBus,"ax",%progbits
+ 362      AFF30080 
+ 363              		.align	2
+ 364              		.p2align 4,,15
+ 365              		.global	i2cReleaseBus
+ 366              		.thumb
+ 367              		.thumb_func
+ 368              		.type	i2cReleaseBus, %function
+ 369              	i2cReleaseBus:
+ 370              		@ args = 0, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372 0000 08B5     		push	{r3, lr}
+ 373 0002 18B1     		cbz	r0, .L92
+ 374 0004 BDE80840 		pop	{r3, lr}
+ 375 0008 FFF7FEBF 		b	chMtxUnlock
+ 376              	.L92:
+ 377 000c 0348     		ldr	r0, .L93
+ 378 000e FFF7FEFF 		bl	chDbgPanic
+ 379 0012 BDE80840 		pop	{r3, lr}
+ 380 0016 FFF7FEBF 		b	chMtxUnlock
+ 381              	.L94:
+ 382 001a 00BF     		.align	2
+ 383              	.L93:
+ 384 001c D8000000 		.word	.LC10
+ 385              		.size	i2cReleaseBus, .-i2cReleaseBus
+ 386              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 387              		.align	2
+ 388              	.LC0:
+ 389 0000 22693263 		.ascii	"\"i2cStart\"()\000"
+ 389      53746172 
+ 389      74222829 
+ 389      00
+ 390 000d 000000   		.space	3
+ 391              	.LC1:
+ARM GAS  /tmp/ccDJpvKP.s 			page 8
+
+
+ 392 0010 69326353 		.ascii	"i2cStart(), #1\000"
+ 392      74617274 
+ 392      28292C20 
+ 392      233100
+ 393 001f 00       		.space	1
+ 394              	.LC2:
+ 395 0020 22693263 		.ascii	"\"i2cStop\"()\000"
+ 395      53746F70 
+ 395      22282900 
+ 396              	.LC3:
+ 397 002c 69326353 		.ascii	"i2cStop(), #1\000"
+ 397      746F7028 
+ 397      292C2023 
+ 397      3100
+ 398 003a 0000     		.space	2
+ 399              	.LC4:
+ 400 003c 22693263 		.ascii	"\"i2cGetErrors\"()\000"
+ 400      47657445 
+ 400      72726F72 
+ 400      73222829 
+ 400      00
+ 401 004d 000000   		.space	3
+ 402              	.LC5:
+ 403 0050 22693263 		.ascii	"\"i2cMasterTransmitTimeout\"()\000"
+ 403      4D617374 
+ 403      65725472 
+ 403      616E736D 
+ 403      69745469 
+ 404 006d 000000   		.space	3
+ 405              	.LC6:
+ 406 0070 6932634D 		.ascii	"i2cMasterTransmitTimeout(), #1\000"
+ 406      61737465 
+ 406      72547261 
+ 406      6E736D69 
+ 406      7454696D 
+ 407 008f 00       		.space	1
+ 408              	.LC7:
+ 409 0090 22693263 		.ascii	"\"i2cMasterReceiveTimeout\"()\000"
+ 409      4D617374 
+ 409      65725265 
+ 409      63656976 
+ 409      6554696D 
+ 410              	.LC8:
+ 411 00ac 6932634D 		.ascii	"i2cMasterReceive(), #1\000"
+ 411      61737465 
+ 411      72526563 
+ 411      65697665 
+ 411      28292C20 
+ 412 00c3 00       		.space	1
+ 413              	.LC9:
+ 414 00c4 22693263 		.ascii	"\"i2cAcquireBus\"()\000"
+ 414      41637175 
+ 414      69726542 
+ 414      75732228 
+ 414      2900
+ 415 00d6 0000     		.space	2
+ 416              	.LC10:
+ARM GAS  /tmp/ccDJpvKP.s 			page 9
+
+
+ 417 00d8 22693263 		.ascii	"\"i2cReleaseBus\"()\000"
+ 417      52656C65 
+ 417      61736542 
+ 417      75732228 
+ 417      2900
+ 418 00ea 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccDJpvKP.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 i2c.c
+     /tmp/ccDJpvKP.s:16     .text.i2cInit:00000000 $t
+     /tmp/ccDJpvKP.s:22     .text.i2cInit:00000000 i2cInit
+     /tmp/ccDJpvKP.s:29     .text.i2cObjectInit:00000000 $t
+     /tmp/ccDJpvKP.s:35     .text.i2cObjectInit:00000000 i2cObjectInit
+     /tmp/ccDJpvKP.s:47     .text.i2cStart:00000000 $t
+     /tmp/ccDJpvKP.s:53     .text.i2cStart:00000000 i2cStart
+     /tmp/ccDJpvKP.s:96     .text.i2cStart:00000048 $d
+     /tmp/ccDJpvKP.s:100    .text.i2cStop:00000000 $t
+     /tmp/ccDJpvKP.s:106    .text.i2cStop:00000000 i2cStop
+     /tmp/ccDJpvKP.s:146    .text.i2cStop:00000040 $d
+     /tmp/ccDJpvKP.s:150    .text.i2cGetErrors:00000000 $t
+     /tmp/ccDJpvKP.s:156    .text.i2cGetErrors:00000000 i2cGetErrors
+     /tmp/ccDJpvKP.s:172    .text.i2cGetErrors:00000014 $d
+     /tmp/ccDJpvKP.s:175    .text.i2cMasterTransmitTimeout:00000000 $t
+     /tmp/ccDJpvKP.s:181    .text.i2cMasterTransmitTimeout:00000000 i2cMasterTransmitTimeout
+     /tmp/ccDJpvKP.s:256    .text.i2cMasterTransmitTimeout:00000084 $d
+     /tmp/ccDJpvKP.s:260    .text.i2cMasterReceiveTimeout:00000000 $t
+     /tmp/ccDJpvKP.s:266    .text.i2cMasterReceiveTimeout:00000000 i2cMasterReceiveTimeout
+     /tmp/ccDJpvKP.s:332    .text.i2cMasterReceiveTimeout:00000074 $d
+     /tmp/ccDJpvKP.s:336    .text.i2cAcquireBus:00000000 $t
+     /tmp/ccDJpvKP.s:342    .text.i2cAcquireBus:00000000 i2cAcquireBus
+     /tmp/ccDJpvKP.s:360    .text.i2cAcquireBus:00000024 $d
+     /tmp/ccDJpvKP.s:363    .text.i2cReleaseBus:00000000 $t
+     /tmp/ccDJpvKP.s:369    .text.i2cReleaseBus:00000000 i2cReleaseBus
+     /tmp/ccDJpvKP.s:384    .text.i2cReleaseBus:0000001c $d
+     /tmp/ccDJpvKP.s:387    .rodata.str1.4:00000000 $d
+     /tmp/ccDJpvKP.s:149    .text.i2cStop:00000048 $t
+     /tmp/ccDJpvKP.s:174    .text.i2cGetErrors:00000018 $t
+     /tmp/ccDJpvKP.s:259    .text.i2cMasterTransmitTimeout:0000008c $t
+     /tmp/ccDJpvKP.s:335    .text.i2cMasterReceiveTimeout:0000007c $t
+     /tmp/ccDJpvKP.s:362    .text.i2cAcquireBus:00000028 $t
+
+UNDEFINED SYMBOLS
+i2c_lld_init
+chMtxInit
+chDbgPanic
+dbg_check_lock
+i2c_lld_start
+dbg_check_unlock
+i2c_lld_stop
+i2c_lld_master_transmit_timeout
+i2c_lld_master_receive_timeout
+chMtxLock
+chMtxUnlock

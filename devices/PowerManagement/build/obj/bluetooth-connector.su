@@ -1,0 +1,6 @@
+bluetooth-connector.cpp:87:6:void amiro::BluetoothConnector::bluetoothConnectorActivate(uint8_t)	16	static
+bluetooth-connector.cpp:94:6:void amiro::BluetoothConnector::bluetoothConnectorDeactivate()	8	static
+bluetooth-connector.cpp:17:1:amiro::BluetoothConnector::BluetoothConnector(amiro::BLUETOOTH*, void*, const char*)	4	static
+bluetooth-connector.cpp:26:6:void amiro::BluetoothConnector::bluetoothConnectorListen(const char*)	24	static
+bluetooth-connector.cpp:49:6:void amiro::BluetoothConnector::bluetoothConnectorConnect(const char*)	32	dynamic
+bluetooth-connector.cpp:72:6:void amiro::BluetoothConnector::bluetoothConnectorDisconnect(const char*)	32	static

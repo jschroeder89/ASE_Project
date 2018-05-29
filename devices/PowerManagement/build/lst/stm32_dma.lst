@@ -1,0 +1,1050 @@
+ARM GAS  /tmp/ccZEeZLr.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"stm32_dma.c"
+  17              		.section	.text.Vector6C,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	Vector6C
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	Vector6C, %function
+  24              	Vector6C:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 08B5     		push	{r3, lr}
+  28 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+  29 0006 084B     		ldr	r3, .L7
+  30 0008 084A     		ldr	r2, .L7+4
+  31 000a 1968     		ldr	r1, [r3]
+  32 000c 01F03D01 		and	r1, r1, #61
+  33 0010 9960     		str	r1, [r3, #8]
+  34 0012 1368     		ldr	r3, [r2]
+  35 0014 0BB1     		cbz	r3, .L2
+  36 0016 5068     		ldr	r0, [r2, #4]
+  37 0018 9847     		blx	r3
+  38              	.L2:
+  39 001a FFF7FEFF 		bl	dbg_check_leave_isr
+  40 001e BDE80840 		pop	{r3, lr}
+  41 0022 FFF7FEBF 		b	_port_irq_epilogue
+  42              	.L8:
+  43 0026 00BF     		.align	2
+  44              	.L7:
+  45 0028 00600240 		.word	1073897472
+  46 002c 00000000 		.word	.LANCHOR0
+  47              		.size	Vector6C, .-Vector6C
+  48              		.section	.text.Vector70,"ax",%progbits
+  49              		.align	2
+  50              		.p2align 4,,15
+  51              		.global	Vector70
+  52              		.thumb
+  53              		.thumb_func
+  54              		.type	Vector70, %function
+  55              	Vector70:
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccZEeZLr.s 			page 2
+
+
+  58 0000 10B5     		push	{r4, lr}
+  59 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+  60 0006 094B     		ldr	r3, .L14
+  61 0008 0948     		ldr	r0, .L14+4
+  62 000a 1968     		ldr	r1, [r3]
+  63 000c 8268     		ldr	r2, [r0, #8]
+  64 000e 8909     		lsrs	r1, r1, #6
+  65 0010 01F03D01 		and	r1, r1, #61
+  66 0014 8C01     		lsls	r4, r1, #6
+  67 0016 9C60     		str	r4, [r3, #8]
+  68 0018 0AB1     		cbz	r2, .L10
+  69 001a C068     		ldr	r0, [r0, #12]
+  70 001c 9047     		blx	r2
+  71              	.L10:
+  72 001e FFF7FEFF 		bl	dbg_check_leave_isr
+  73 0022 BDE81040 		pop	{r4, lr}
+  74 0026 FFF7FEBF 		b	_port_irq_epilogue
+  75              	.L15:
+  76 002a 00BF     		.align	2
+  77              	.L14:
+  78 002c 00600240 		.word	1073897472
+  79 0030 00000000 		.word	.LANCHOR0
+  80              		.size	Vector70, .-Vector70
+  81 0034 AFF30080 		.section	.text.Vector74,"ax",%progbits
+  81      AFF30080 
+  81      AFF30080 
+  82              		.align	2
+  83              		.p2align 4,,15
+  84              		.global	Vector74
+  85              		.thumb
+  86              		.thumb_func
+  87              		.type	Vector74, %function
+  88              	Vector74:
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91 0000 10B5     		push	{r4, lr}
+  92 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+  93 0006 094B     		ldr	r3, .L21
+  94 0008 0948     		ldr	r0, .L21+4
+  95 000a 1968     		ldr	r1, [r3]
+  96 000c 0269     		ldr	r2, [r0, #16]
+  97 000e 090C     		lsrs	r1, r1, #16
+  98 0010 01F03D01 		and	r1, r1, #61
+  99 0014 0C04     		lsls	r4, r1, #16
+ 100 0016 9C60     		str	r4, [r3, #8]
+ 101 0018 0AB1     		cbz	r2, .L17
+ 102 001a 4069     		ldr	r0, [r0, #20]
+ 103 001c 9047     		blx	r2
+ 104              	.L17:
+ 105 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 106 0022 BDE81040 		pop	{r4, lr}
+ 107 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 108              	.L22:
+ 109 002a 00BF     		.align	2
+ 110              	.L21:
+ 111 002c 00600240 		.word	1073897472
+ 112 0030 00000000 		.word	.LANCHOR0
+ARM GAS  /tmp/ccZEeZLr.s 			page 3
+
+
+ 113              		.size	Vector74, .-Vector74
+ 114 0034 AFF30080 		.section	.text.Vector78,"ax",%progbits
+ 114      AFF30080 
+ 114      AFF30080 
+ 115              		.align	2
+ 116              		.p2align 4,,15
+ 117              		.global	Vector78
+ 118              		.thumb
+ 119              		.thumb_func
+ 120              		.type	Vector78, %function
+ 121              	Vector78:
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124 0000 10B5     		push	{r4, lr}
+ 125 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 126 0006 094B     		ldr	r3, .L28
+ 127 0008 0948     		ldr	r0, .L28+4
+ 128 000a 1968     		ldr	r1, [r3]
+ 129 000c 8269     		ldr	r2, [r0, #24]
+ 130 000e 890D     		lsrs	r1, r1, #22
+ 131 0010 01F03D01 		and	r1, r1, #61
+ 132 0014 8C05     		lsls	r4, r1, #22
+ 133 0016 9C60     		str	r4, [r3, #8]
+ 134 0018 0AB1     		cbz	r2, .L24
+ 135 001a C069     		ldr	r0, [r0, #28]
+ 136 001c 9047     		blx	r2
+ 137              	.L24:
+ 138 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 139 0022 BDE81040 		pop	{r4, lr}
+ 140 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 141              	.L29:
+ 142 002a 00BF     		.align	2
+ 143              	.L28:
+ 144 002c 00600240 		.word	1073897472
+ 145 0030 00000000 		.word	.LANCHOR0
+ 146              		.size	Vector78, .-Vector78
+ 147 0034 AFF30080 		.section	.text.Vector7C,"ax",%progbits
+ 147      AFF30080 
+ 147      AFF30080 
+ 148              		.align	2
+ 149              		.p2align 4,,15
+ 150              		.global	Vector7C
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.type	Vector7C, %function
+ 154              	Vector7C:
+ 155              		@ args = 0, pretend = 0, frame = 0
+ 156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 157 0000 08B5     		push	{r3, lr}
+ 158 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 159 0006 084B     		ldr	r3, .L35
+ 160 0008 0848     		ldr	r0, .L35+4
+ 161 000a 5968     		ldr	r1, [r3, #4]
+ 162 000c 026A     		ldr	r2, [r0, #32]
+ 163 000e 01F03D01 		and	r1, r1, #61
+ 164 0012 D960     		str	r1, [r3, #12]
+ 165 0014 0AB1     		cbz	r2, .L31
+ARM GAS  /tmp/ccZEeZLr.s 			page 4
+
+
+ 166 0016 406A     		ldr	r0, [r0, #36]
+ 167 0018 9047     		blx	r2
+ 168              	.L31:
+ 169 001a FFF7FEFF 		bl	dbg_check_leave_isr
+ 170 001e BDE80840 		pop	{r3, lr}
+ 171 0022 FFF7FEBF 		b	_port_irq_epilogue
+ 172              	.L36:
+ 173 0026 00BF     		.align	2
+ 174              	.L35:
+ 175 0028 00600240 		.word	1073897472
+ 176 002c 00000000 		.word	.LANCHOR0
+ 177              		.size	Vector7C, .-Vector7C
+ 178              		.section	.text.Vector80,"ax",%progbits
+ 179              		.align	2
+ 180              		.p2align 4,,15
+ 181              		.global	Vector80
+ 182              		.thumb
+ 183              		.thumb_func
+ 184              		.type	Vector80, %function
+ 185              	Vector80:
+ 186              		@ args = 0, pretend = 0, frame = 0
+ 187              		@ frame_needed = 0, uses_anonymous_args = 0
+ 188 0000 10B5     		push	{r4, lr}
+ 189 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 190 0006 094B     		ldr	r3, .L42
+ 191 0008 0948     		ldr	r0, .L42+4
+ 192 000a 5968     		ldr	r1, [r3, #4]
+ 193 000c 826A     		ldr	r2, [r0, #40]
+ 194 000e 8909     		lsrs	r1, r1, #6
+ 195 0010 01F03D01 		and	r1, r1, #61
+ 196 0014 8C01     		lsls	r4, r1, #6
+ 197 0016 DC60     		str	r4, [r3, #12]
+ 198 0018 0AB1     		cbz	r2, .L38
+ 199 001a C06A     		ldr	r0, [r0, #44]
+ 200 001c 9047     		blx	r2
+ 201              	.L38:
+ 202 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 203 0022 BDE81040 		pop	{r4, lr}
+ 204 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 205              	.L43:
+ 206 002a 00BF     		.align	2
+ 207              	.L42:
+ 208 002c 00600240 		.word	1073897472
+ 209 0030 00000000 		.word	.LANCHOR0
+ 210              		.size	Vector80, .-Vector80
+ 211 0034 AFF30080 		.section	.text.Vector84,"ax",%progbits
+ 211      AFF30080 
+ 211      AFF30080 
+ 212              		.align	2
+ 213              		.p2align 4,,15
+ 214              		.global	Vector84
+ 215              		.thumb
+ 216              		.thumb_func
+ 217              		.type	Vector84, %function
+ 218              	Vector84:
+ 219              		@ args = 0, pretend = 0, frame = 0
+ 220              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccZEeZLr.s 			page 5
+
+
+ 221 0000 10B5     		push	{r4, lr}
+ 222 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 223 0006 094B     		ldr	r3, .L49
+ 224 0008 0948     		ldr	r0, .L49+4
+ 225 000a 5968     		ldr	r1, [r3, #4]
+ 226 000c 026B     		ldr	r2, [r0, #48]
+ 227 000e 090C     		lsrs	r1, r1, #16
+ 228 0010 01F03D01 		and	r1, r1, #61
+ 229 0014 0C04     		lsls	r4, r1, #16
+ 230 0016 DC60     		str	r4, [r3, #12]
+ 231 0018 0AB1     		cbz	r2, .L45
+ 232 001a 406B     		ldr	r0, [r0, #52]
+ 233 001c 9047     		blx	r2
+ 234              	.L45:
+ 235 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 236 0022 BDE81040 		pop	{r4, lr}
+ 237 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 238              	.L50:
+ 239 002a 00BF     		.align	2
+ 240              	.L49:
+ 241 002c 00600240 		.word	1073897472
+ 242 0030 00000000 		.word	.LANCHOR0
+ 243              		.size	Vector84, .-Vector84
+ 244 0034 AFF30080 		.section	.text.VectorFC,"ax",%progbits
+ 244      AFF30080 
+ 244      AFF30080 
+ 245              		.align	2
+ 246              		.p2align 4,,15
+ 247              		.global	VectorFC
+ 248              		.thumb
+ 249              		.thumb_func
+ 250              		.type	VectorFC, %function
+ 251              	VectorFC:
+ 252              		@ args = 0, pretend = 0, frame = 0
+ 253              		@ frame_needed = 0, uses_anonymous_args = 0
+ 254 0000 10B5     		push	{r4, lr}
+ 255 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 256 0006 094B     		ldr	r3, .L56
+ 257 0008 0948     		ldr	r0, .L56+4
+ 258 000a 5968     		ldr	r1, [r3, #4]
+ 259 000c 826B     		ldr	r2, [r0, #56]
+ 260 000e 890D     		lsrs	r1, r1, #22
+ 261 0010 01F03D01 		and	r1, r1, #61
+ 262 0014 8C05     		lsls	r4, r1, #22
+ 263 0016 DC60     		str	r4, [r3, #12]
+ 264 0018 0AB1     		cbz	r2, .L52
+ 265 001a C06B     		ldr	r0, [r0, #60]
+ 266 001c 9047     		blx	r2
+ 267              	.L52:
+ 268 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 269 0022 BDE81040 		pop	{r4, lr}
+ 270 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 271              	.L57:
+ 272 002a 00BF     		.align	2
+ 273              	.L56:
+ 274 002c 00600240 		.word	1073897472
+ 275 0030 00000000 		.word	.LANCHOR0
+ARM GAS  /tmp/ccZEeZLr.s 			page 6
+
+
+ 276              		.size	VectorFC, .-VectorFC
+ 277 0034 AFF30080 		.section	.text.Vector120,"ax",%progbits
+ 277      AFF30080 
+ 277      AFF30080 
+ 278              		.align	2
+ 279              		.p2align 4,,15
+ 280              		.global	Vector120
+ 281              		.thumb
+ 282              		.thumb_func
+ 283              		.type	Vector120, %function
+ 284              	Vector120:
+ 285              		@ args = 0, pretend = 0, frame = 0
+ 286              		@ frame_needed = 0, uses_anonymous_args = 0
+ 287 0000 08B5     		push	{r3, lr}
+ 288 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 289 0006 084B     		ldr	r3, .L63
+ 290 0008 0848     		ldr	r0, .L63+4
+ 291 000a 1968     		ldr	r1, [r3]
+ 292 000c 026C     		ldr	r2, [r0, #64]
+ 293 000e 01F03D01 		and	r1, r1, #61
+ 294 0012 9960     		str	r1, [r3, #8]
+ 295 0014 0AB1     		cbz	r2, .L59
+ 296 0016 406C     		ldr	r0, [r0, #68]
+ 297 0018 9047     		blx	r2
+ 298              	.L59:
+ 299 001a FFF7FEFF 		bl	dbg_check_leave_isr
+ 300 001e BDE80840 		pop	{r3, lr}
+ 301 0022 FFF7FEBF 		b	_port_irq_epilogue
+ 302              	.L64:
+ 303 0026 00BF     		.align	2
+ 304              	.L63:
+ 305 0028 00640240 		.word	1073898496
+ 306 002c 00000000 		.word	.LANCHOR0
+ 307              		.size	Vector120, .-Vector120
+ 308              		.section	.text.Vector124,"ax",%progbits
+ 309              		.align	2
+ 310              		.p2align 4,,15
+ 311              		.global	Vector124
+ 312              		.thumb
+ 313              		.thumb_func
+ 314              		.type	Vector124, %function
+ 315              	Vector124:
+ 316              		@ args = 0, pretend = 0, frame = 0
+ 317              		@ frame_needed = 0, uses_anonymous_args = 0
+ 318 0000 10B5     		push	{r4, lr}
+ 319 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 320 0006 094B     		ldr	r3, .L70
+ 321 0008 0948     		ldr	r0, .L70+4
+ 322 000a 1968     		ldr	r1, [r3]
+ 323 000c 826C     		ldr	r2, [r0, #72]
+ 324 000e 8909     		lsrs	r1, r1, #6
+ 325 0010 01F03D01 		and	r1, r1, #61
+ 326 0014 8C01     		lsls	r4, r1, #6
+ 327 0016 9C60     		str	r4, [r3, #8]
+ 328 0018 0AB1     		cbz	r2, .L66
+ 329 001a C06C     		ldr	r0, [r0, #76]
+ 330 001c 9047     		blx	r2
+ARM GAS  /tmp/ccZEeZLr.s 			page 7
+
+
+ 331              	.L66:
+ 332 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 333 0022 BDE81040 		pop	{r4, lr}
+ 334 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 335              	.L71:
+ 336 002a 00BF     		.align	2
+ 337              	.L70:
+ 338 002c 00640240 		.word	1073898496
+ 339 0030 00000000 		.word	.LANCHOR0
+ 340              		.size	Vector124, .-Vector124
+ 341 0034 AFF30080 		.section	.text.Vector128,"ax",%progbits
+ 341      AFF30080 
+ 341      AFF30080 
+ 342              		.align	2
+ 343              		.p2align 4,,15
+ 344              		.global	Vector128
+ 345              		.thumb
+ 346              		.thumb_func
+ 347              		.type	Vector128, %function
+ 348              	Vector128:
+ 349              		@ args = 0, pretend = 0, frame = 0
+ 350              		@ frame_needed = 0, uses_anonymous_args = 0
+ 351 0000 10B5     		push	{r4, lr}
+ 352 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 353 0006 094B     		ldr	r3, .L77
+ 354 0008 0948     		ldr	r0, .L77+4
+ 355 000a 1968     		ldr	r1, [r3]
+ 356 000c 026D     		ldr	r2, [r0, #80]
+ 357 000e 090C     		lsrs	r1, r1, #16
+ 358 0010 01F03D01 		and	r1, r1, #61
+ 359 0014 0C04     		lsls	r4, r1, #16
+ 360 0016 9C60     		str	r4, [r3, #8]
+ 361 0018 0AB1     		cbz	r2, .L73
+ 362 001a 406D     		ldr	r0, [r0, #84]
+ 363 001c 9047     		blx	r2
+ 364              	.L73:
+ 365 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 366 0022 BDE81040 		pop	{r4, lr}
+ 367 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 368              	.L78:
+ 369 002a 00BF     		.align	2
+ 370              	.L77:
+ 371 002c 00640240 		.word	1073898496
+ 372 0030 00000000 		.word	.LANCHOR0
+ 373              		.size	Vector128, .-Vector128
+ 374 0034 AFF30080 		.section	.text.Vector12C,"ax",%progbits
+ 374      AFF30080 
+ 374      AFF30080 
+ 375              		.align	2
+ 376              		.p2align 4,,15
+ 377              		.global	Vector12C
+ 378              		.thumb
+ 379              		.thumb_func
+ 380              		.type	Vector12C, %function
+ 381              	Vector12C:
+ 382              		@ args = 0, pretend = 0, frame = 0
+ 383              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccZEeZLr.s 			page 8
+
+
+ 384 0000 10B5     		push	{r4, lr}
+ 385 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 386 0006 094B     		ldr	r3, .L84
+ 387 0008 0948     		ldr	r0, .L84+4
+ 388 000a 1968     		ldr	r1, [r3]
+ 389 000c 826D     		ldr	r2, [r0, #88]
+ 390 000e 890D     		lsrs	r1, r1, #22
+ 391 0010 01F03D01 		and	r1, r1, #61
+ 392 0014 8C05     		lsls	r4, r1, #22
+ 393 0016 9C60     		str	r4, [r3, #8]
+ 394 0018 0AB1     		cbz	r2, .L80
+ 395 001a C06D     		ldr	r0, [r0, #92]
+ 396 001c 9047     		blx	r2
+ 397              	.L80:
+ 398 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 399 0022 BDE81040 		pop	{r4, lr}
+ 400 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 401              	.L85:
+ 402 002a 00BF     		.align	2
+ 403              	.L84:
+ 404 002c 00640240 		.word	1073898496
+ 405 0030 00000000 		.word	.LANCHOR0
+ 406              		.size	Vector12C, .-Vector12C
+ 407 0034 AFF30080 		.section	.text.Vector130,"ax",%progbits
+ 407      AFF30080 
+ 407      AFF30080 
+ 408              		.align	2
+ 409              		.p2align 4,,15
+ 410              		.global	Vector130
+ 411              		.thumb
+ 412              		.thumb_func
+ 413              		.type	Vector130, %function
+ 414              	Vector130:
+ 415              		@ args = 0, pretend = 0, frame = 0
+ 416              		@ frame_needed = 0, uses_anonymous_args = 0
+ 417 0000 08B5     		push	{r3, lr}
+ 418 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 419 0006 084B     		ldr	r3, .L91
+ 420 0008 0848     		ldr	r0, .L91+4
+ 421 000a 5968     		ldr	r1, [r3, #4]
+ 422 000c 026E     		ldr	r2, [r0, #96]
+ 423 000e 01F03D01 		and	r1, r1, #61
+ 424 0012 D960     		str	r1, [r3, #12]
+ 425 0014 0AB1     		cbz	r2, .L87
+ 426 0016 406E     		ldr	r0, [r0, #100]
+ 427 0018 9047     		blx	r2
+ 428              	.L87:
+ 429 001a FFF7FEFF 		bl	dbg_check_leave_isr
+ 430 001e BDE80840 		pop	{r3, lr}
+ 431 0022 FFF7FEBF 		b	_port_irq_epilogue
+ 432              	.L92:
+ 433 0026 00BF     		.align	2
+ 434              	.L91:
+ 435 0028 00640240 		.word	1073898496
+ 436 002c 00000000 		.word	.LANCHOR0
+ 437              		.size	Vector130, .-Vector130
+ 438              		.section	.text.Vector150,"ax",%progbits
+ARM GAS  /tmp/ccZEeZLr.s 			page 9
+
+
+ 439              		.align	2
+ 440              		.p2align 4,,15
+ 441              		.global	Vector150
+ 442              		.thumb
+ 443              		.thumb_func
+ 444              		.type	Vector150, %function
+ 445              	Vector150:
+ 446              		@ args = 0, pretend = 0, frame = 0
+ 447              		@ frame_needed = 0, uses_anonymous_args = 0
+ 448 0000 10B5     		push	{r4, lr}
+ 449 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 450 0006 094B     		ldr	r3, .L98
+ 451 0008 0948     		ldr	r0, .L98+4
+ 452 000a 5968     		ldr	r1, [r3, #4]
+ 453 000c 826E     		ldr	r2, [r0, #104]
+ 454 000e 8909     		lsrs	r1, r1, #6
+ 455 0010 01F03D01 		and	r1, r1, #61
+ 456 0014 8C01     		lsls	r4, r1, #6
+ 457 0016 DC60     		str	r4, [r3, #12]
+ 458 0018 0AB1     		cbz	r2, .L94
+ 459 001a C06E     		ldr	r0, [r0, #108]
+ 460 001c 9047     		blx	r2
+ 461              	.L94:
+ 462 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 463 0022 BDE81040 		pop	{r4, lr}
+ 464 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 465              	.L99:
+ 466 002a 00BF     		.align	2
+ 467              	.L98:
+ 468 002c 00640240 		.word	1073898496
+ 469 0030 00000000 		.word	.LANCHOR0
+ 470              		.size	Vector150, .-Vector150
+ 471 0034 AFF30080 		.section	.text.Vector154,"ax",%progbits
+ 471      AFF30080 
+ 471      AFF30080 
+ 472              		.align	2
+ 473              		.p2align 4,,15
+ 474              		.global	Vector154
+ 475              		.thumb
+ 476              		.thumb_func
+ 477              		.type	Vector154, %function
+ 478              	Vector154:
+ 479              		@ args = 0, pretend = 0, frame = 0
+ 480              		@ frame_needed = 0, uses_anonymous_args = 0
+ 481 0000 10B5     		push	{r4, lr}
+ 482 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 483 0006 094B     		ldr	r3, .L105
+ 484 0008 0948     		ldr	r0, .L105+4
+ 485 000a 5968     		ldr	r1, [r3, #4]
+ 486 000c 026F     		ldr	r2, [r0, #112]
+ 487 000e 090C     		lsrs	r1, r1, #16
+ 488 0010 01F03D01 		and	r1, r1, #61
+ 489 0014 0C04     		lsls	r4, r1, #16
+ 490 0016 DC60     		str	r4, [r3, #12]
+ 491 0018 0AB1     		cbz	r2, .L101
+ 492 001a 406F     		ldr	r0, [r0, #116]
+ 493 001c 9047     		blx	r2
+ARM GAS  /tmp/ccZEeZLr.s 			page 10
+
+
+ 494              	.L101:
+ 495 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 496 0022 BDE81040 		pop	{r4, lr}
+ 497 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 498              	.L106:
+ 499 002a 00BF     		.align	2
+ 500              	.L105:
+ 501 002c 00640240 		.word	1073898496
+ 502 0030 00000000 		.word	.LANCHOR0
+ 503              		.size	Vector154, .-Vector154
+ 504 0034 AFF30080 		.section	.text.Vector158,"ax",%progbits
+ 504      AFF30080 
+ 504      AFF30080 
+ 505              		.align	2
+ 506              		.p2align 4,,15
+ 507              		.global	Vector158
+ 508              		.thumb
+ 509              		.thumb_func
+ 510              		.type	Vector158, %function
+ 511              	Vector158:
+ 512              		@ args = 0, pretend = 0, frame = 0
+ 513              		@ frame_needed = 0, uses_anonymous_args = 0
+ 514 0000 10B5     		push	{r4, lr}
+ 515 0002 FFF7FEFF 		bl	dbg_check_enter_isr
+ 516 0006 094B     		ldr	r3, .L112
+ 517 0008 0948     		ldr	r0, .L112+4
+ 518 000a 5968     		ldr	r1, [r3, #4]
+ 519 000c 826F     		ldr	r2, [r0, #120]
+ 520 000e 890D     		lsrs	r1, r1, #22
+ 521 0010 01F03D01 		and	r1, r1, #61
+ 522 0014 8C05     		lsls	r4, r1, #22
+ 523 0016 DC60     		str	r4, [r3, #12]
+ 524 0018 0AB1     		cbz	r2, .L108
+ 525 001a C06F     		ldr	r0, [r0, #124]
+ 526 001c 9047     		blx	r2
+ 527              	.L108:
+ 528 001e FFF7FEFF 		bl	dbg_check_leave_isr
+ 529 0022 BDE81040 		pop	{r4, lr}
+ 530 0026 FFF7FEBF 		b	_port_irq_epilogue
+ 531              	.L113:
+ 532 002a 00BF     		.align	2
+ 533              	.L112:
+ 534 002c 00640240 		.word	1073898496
+ 535 0030 00000000 		.word	.LANCHOR0
+ 536              		.size	Vector158, .-Vector158
+ 537 0034 AFF30080 		.section	.text.dmaInit,"ax",%progbits
+ 537      AFF30080 
+ 537      AFF30080 
+ 538              		.align	2
+ 539              		.p2align 4,,15
+ 540              		.global	dmaInit
+ 541              		.thumb
+ 542              		.thumb_func
+ 543              		.type	dmaInit, %function
+ 544              	dmaInit:
+ 545              		@ args = 0, pretend = 0, frame = 0
+ 546              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccZEeZLr.s 			page 11
+
+
+ 547              		@ link register save eliminated.
+ 548 0000 0C4B     		ldr	r3, .L118
+ 549 0002 30B4     		push	{r4, r5}
+ 550 0004 0022     		movs	r2, #0
+ 551 0006 0C4D     		ldr	r5, .L118+4
+ 552 0008 0C4C     		ldr	r4, .L118+8
+ 553 000a 1A60     		str	r2, [r3]
+ 554 000c 1146     		mov	r1, r2
+ 555 000e 1346     		mov	r3, r2
+ 556              	.L116:
+ 557 0010 E858     		ldr	r0, [r5, r3]
+ 558 0012 0C33     		adds	r3, r3, #12
+ 559 0014 C02B     		cmp	r3, #192
+ 560 0016 0160     		str	r1, [r0]
+ 561 0018 A150     		str	r1, [r4, r2]
+ 562 001a 02F10802 		add	r2, r2, #8
+ 563 001e F7D1     		bne	.L116
+ 564 0020 0749     		ldr	r1, .L118+12
+ 565 0022 084A     		ldr	r2, .L118+16
+ 566 0024 4FF0FF33 		mov	r3, #-1
+ 567 0028 8B60     		str	r3, [r1, #8]
+ 568 002a 30BC     		pop	{r4, r5}
+ 569 002c CB60     		str	r3, [r1, #12]
+ 570 002e 9360     		str	r3, [r2, #8]
+ 571 0030 D360     		str	r3, [r2, #12]
+ 572 0032 7047     		bx	lr
+ 573              	.L119:
+ 574              		.align	2
+ 575              	.L118:
+ 576 0034 00000000 		.word	.LANCHOR1
+ 577 0038 00000000 		.word	.LANCHOR2
+ 578 003c 00000000 		.word	.LANCHOR0
+ 579 0040 00600240 		.word	1073897472
+ 580 0044 00640240 		.word	1073898496
+ 581              		.size	dmaInit, .-dmaInit
+ 582 0048 AFF30080 		.section	.text.dmaStreamAllocate,"ax",%progbits
+ 582      AFF30080 
+ 583              		.align	2
+ 584              		.p2align 4,,15
+ 585              		.global	dmaStreamAllocate
+ 586              		.thumb
+ 587              		.thumb_func
+ 588              		.type	dmaStreamAllocate, %function
+ 589              	dmaStreamAllocate:
+ 590              		@ args = 0, pretend = 0, frame = 16
+ 591              		@ frame_needed = 0, uses_anonymous_args = 0
+ 592 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 593 0004 0646     		mov	r6, r0
+ 594 0006 84B0     		sub	sp, sp, #16
+ 595 0008 0028     		cmp	r0, #0
+ 596 000a 45D0     		beq	.L135
+ 597              	.L121:
+ 598 000c 274F     		ldr	r7, .L137
+ 599 000e 747A     		ldrb	r4, [r6, #9]	@ zero_extendqisi2
+ 600 0010 3868     		ldr	r0, [r7]
+ 601 0012 0125     		movs	r5, #1
+ 602 0014 05FA04FC 		lsl	ip, r5, r4
+ARM GAS  /tmp/ccZEeZLr.s 			page 12
+
+
+ 603 0018 1CEA000F 		tst	ip, r0
+ 604 001c 34D1     		bne	.L127
+ 605 001e 244D     		ldr	r5, .L137+4
+ 606 0020 4CEA0000 		orr	r0, ip, r0
+ 607 0024 05EBC408 		add	r8, r5, r4, lsl #3
+ 608 0028 10F0FF0F 		tst	r0, #255
+ 609 002c 45F83420 		str	r2, [r5, r4, lsl #3]
+ 610 0030 3860     		str	r0, [r7]
+ 611 0032 C8F80430 		str	r3, [r8, #4]
+ 612 0036 04D0     		beq	.L123
+ 613 0038 1E4B     		ldr	r3, .L137+8
+ 614 003a 1C6B     		ldr	r4, [r3, #48]
+ 615 003c 44F40014 		orr	r4, r4, #2097152
+ 616 0040 1C63     		str	r4, [r3, #48]
+ 617              	.L123:
+ 618 0042 10F47F4F 		tst	r0, #65280
+ 619 0046 19D1     		bne	.L136
+ 620              	.L124:
+ 621 0048 3468     		ldr	r4, [r6]
+ 622 004a 2368     		ldr	r3, [r4]
+ 623 004c 23F01F03 		bic	r3, r3, #31
+ 624 0050 2360     		str	r3, [r4]
+ 625              	.L126:
+ 626 0052 2368     		ldr	r3, [r4]
+ 627 0054 13F00105 		ands	r5, r3, #1
+ 628 0058 FBD1     		bne	.L126
+ 629 005a 307A     		ldrb	r0, [r6, #8]	@ zero_extendqisi2
+ 630 005c 7368     		ldr	r3, [r6, #4]
+ 631 005e 3D27     		movs	r7, #61
+ 632 0060 8740     		lsls	r7, r7, r0
+ 633 0062 2120     		movs	r0, #33
+ 634 0064 1F60     		str	r7, [r3]
+ 635 0066 2560     		str	r5, [r4]
+ 636 0068 6061     		str	r0, [r4, #20]
+ 637 006a 8AB1     		cbz	r2, .L128
+ 638 006c B07A     		ldrb	r0, [r6, #10]	@ zero_extendqisi2
+ 639 006e 0901     		lsls	r1, r1, #4
+ 640 0070 FFF7FEFF 		bl	nvicEnableVector
+ 641 0074 2846     		mov	r0, r5
+ 642 0076 04B0     		add	sp, sp, #16
+ 643              		@ sp needed
+ 644 0078 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 645              	.L136:
+ 646 007c 0D4B     		ldr	r3, .L137+8
+ 647 007e 186B     		ldr	r0, [r3, #48]
+ 648 0080 40F48000 		orr	r0, r0, #4194304
+ 649 0084 1863     		str	r0, [r3, #48]
+ 650 0086 DFE7     		b	.L124
+ 651              	.L127:
+ 652 0088 2846     		mov	r0, r5
+ 653 008a 04B0     		add	sp, sp, #16
+ 654              		@ sp needed
+ 655 008c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 656              	.L128:
+ 657 0090 1046     		mov	r0, r2
+ 658 0092 04B0     		add	sp, sp, #16
+ 659              		@ sp needed
+ARM GAS  /tmp/ccZEeZLr.s 			page 13
+
+
+ 660 0094 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 661              	.L135:
+ 662 0098 0748     		ldr	r0, .L137+12
+ 663 009a 0391     		str	r1, [sp, #12]
+ 664 009c 0292     		str	r2, [sp, #8]
+ 665 009e 0193     		str	r3, [sp, #4]
+ 666 00a0 FFF7FEFF 		bl	chDbgPanic
+ 667 00a4 019B     		ldr	r3, [sp, #4]
+ 668 00a6 029A     		ldr	r2, [sp, #8]
+ 669 00a8 0399     		ldr	r1, [sp, #12]
+ 670 00aa AFE7     		b	.L121
+ 671              	.L138:
+ 672              		.align	2
+ 673              	.L137:
+ 674 00ac 00000000 		.word	.LANCHOR1
+ 675 00b0 00000000 		.word	.LANCHOR0
+ 676 00b4 00380240 		.word	1073887232
+ 677 00b8 00000000 		.word	.LC0
+ 678              		.size	dmaStreamAllocate, .-dmaStreamAllocate
+ 679 00bc AFF30080 		.section	.text.dmaStreamRelease,"ax",%progbits
+ 680              		.align	2
+ 681              		.p2align 4,,15
+ 682              		.global	dmaStreamRelease
+ 683              		.thumb
+ 684              		.thumb_func
+ 685              		.type	dmaStreamRelease, %function
+ 686              	dmaStreamRelease:
+ 687              		@ args = 0, pretend = 0, frame = 0
+ 688              		@ frame_needed = 0, uses_anonymous_args = 0
+ 689 0000 38B5     		push	{r3, r4, r5, lr}
+ 690 0002 0446     		mov	r4, r0
+ 691 0004 38B3     		cbz	r0, .L144
+ 692              	.L140:
+ 693 0006 164D     		ldr	r5, .L146
+ 694 0008 627A     		ldrb	r2, [r4, #9]	@ zero_extendqisi2
+ 695 000a 2B68     		ldr	r3, [r5]
+ 696 000c 0121     		movs	r1, #1
+ 697 000e 01FA02F2 		lsl	r2, r1, r2
+ 698 0012 1A42     		tst	r2, r3
+ 699 0014 1BD0     		beq	.L145
+ 700              	.L141:
+ 701 0016 A07A     		ldrb	r0, [r4, #10]	@ zero_extendqisi2
+ 702 0018 FFF7FEFF 		bl	nvicDisableVector
+ 703 001c 637A     		ldrb	r3, [r4, #9]	@ zero_extendqisi2
+ 704 001e 2A68     		ldr	r2, [r5]
+ 705 0020 0121     		movs	r1, #1
+ 706 0022 01FA03F3 		lsl	r3, r1, r3
+ 707 0026 22EA0303 		bic	r3, r2, r3
+ 708 002a 13F0FF0F 		tst	r3, #255
+ 709 002e 2B60     		str	r3, [r5]
+ 710 0030 04D1     		bne	.L142
+ 711 0032 0C4A     		ldr	r2, .L146+4
+ 712 0034 116B     		ldr	r1, [r2, #48]
+ 713 0036 21F40011 		bic	r1, r1, #2097152
+ 714 003a 1163     		str	r1, [r2, #48]
+ 715              	.L142:
+ 716 003c 13F47F4F 		tst	r3, #65280
+ARM GAS  /tmp/ccZEeZLr.s 			page 14
+
+
+ 717 0040 04D1     		bne	.L139
+ 718 0042 084B     		ldr	r3, .L146+4
+ 719 0044 1A6B     		ldr	r2, [r3, #48]
+ 720 0046 22F48002 		bic	r2, r2, #4194304
+ 721 004a 1A63     		str	r2, [r3, #48]
+ 722              	.L139:
+ 723 004c 38BD     		pop	{r3, r4, r5, pc}
+ 724              	.L145:
+ 725 004e 0648     		ldr	r0, .L146+8
+ 726 0050 FFF7FEFF 		bl	chDbgPanic
+ 727 0054 DFE7     		b	.L141
+ 728              	.L144:
+ 729 0056 0548     		ldr	r0, .L146+12
+ 730 0058 FFF7FEFF 		bl	chDbgPanic
+ 731 005c D3E7     		b	.L140
+ 732              	.L147:
+ 733 005e 00BF     		.align	2
+ 734              	.L146:
+ 735 0060 00000000 		.word	.LANCHOR1
+ 736 0064 00380240 		.word	1073887232
+ 737 0068 30000000 		.word	.LC2
+ 738 006c 18000000 		.word	.LC1
+ 739              		.size	dmaStreamRelease, .-dmaStreamRelease
+ 740              		.global	_stm32_dma_streams
+ 741              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 742              		.align	2
+ 743              	.LC0:
+ 744 0000 22646D61 		.ascii	"\"dmaStreamAllocate\"()\000"
+ 744      53747265 
+ 744      616D416C 
+ 744      6C6F6361 
+ 744      74652228 
+ 745 0016 0000     		.space	2
+ 746              	.LC1:
+ 747 0018 22646D61 		.ascii	"\"dmaStreamRelease\"()\000"
+ 747      53747265 
+ 747      616D5265 
+ 747      6C656173 
+ 747      65222829 
+ 748 002d 000000   		.space	3
+ 749              	.LC2:
+ 750 0030 646D6153 		.ascii	"dmaStreamRelease(), #1\000"
+ 750      74726561 
+ 750      6D52656C 
+ 750      65617365 
+ 750      28292C20 
+ 751 0047 00       		.section	.bss.dma_isr_redir,"aw",%nobits
+ 752              		.align	2
+ 753              		.set	.LANCHOR0,. + 0
+ 754              		.type	dma_isr_redir, %object
+ 755              		.size	dma_isr_redir, 128
+ 756              	dma_isr_redir:
+ 757 0000 00000000 		.space	128
+ 757      00000000 
+ 757      00000000 
+ 757      00000000 
+ 757      00000000 
+ARM GAS  /tmp/ccZEeZLr.s 			page 15
+
+
+ 758              		.section	.rodata._stm32_dma_streams,"a",%progbits
+ 759              		.align	2
+ 760              		.set	.LANCHOR2,. + 0
+ 761              		.type	_stm32_dma_streams, %object
+ 762              		.size	_stm32_dma_streams, 192
+ 763              	_stm32_dma_streams:
+ 764 0000 10600240 		.word	1073897488
+ 765 0004 08600240 		.word	1073897480
+ 766 0008 00       		.byte	0
+ 767 0009 00       		.byte	0
+ 768 000a 0B       		.byte	11
+ 769 000b 00       		.space	1
+ 770 000c 28600240 		.word	1073897512
+ 771 0010 08600240 		.word	1073897480
+ 772 0014 06       		.byte	6
+ 773 0015 01       		.byte	1
+ 774 0016 0C       		.byte	12
+ 775 0017 00       		.space	1
+ 776 0018 40600240 		.word	1073897536
+ 777 001c 08600240 		.word	1073897480
+ 778 0020 10       		.byte	16
+ 779 0021 02       		.byte	2
+ 780 0022 0D       		.byte	13
+ 781 0023 00       		.space	1
+ 782 0024 58600240 		.word	1073897560
+ 783 0028 08600240 		.word	1073897480
+ 784 002c 16       		.byte	22
+ 785 002d 03       		.byte	3
+ 786 002e 0E       		.byte	14
+ 787 002f 00       		.space	1
+ 788 0030 70600240 		.word	1073897584
+ 789 0034 0C600240 		.word	1073897484
+ 790 0038 00       		.byte	0
+ 791 0039 04       		.byte	4
+ 792 003a 0F       		.byte	15
+ 793 003b 00       		.space	1
+ 794 003c 88600240 		.word	1073897608
+ 795 0040 0C600240 		.word	1073897484
+ 796 0044 06       		.byte	6
+ 797 0045 05       		.byte	5
+ 798 0046 10       		.byte	16
+ 799 0047 00       		.space	1
+ 800 0048 A0600240 		.word	1073897632
+ 801 004c 0C600240 		.word	1073897484
+ 802 0050 10       		.byte	16
+ 803 0051 06       		.byte	6
+ 804 0052 11       		.byte	17
+ 805 0053 00       		.space	1
+ 806 0054 B8600240 		.word	1073897656
+ 807 0058 0C600240 		.word	1073897484
+ 808 005c 16       		.byte	22
+ 809 005d 07       		.byte	7
+ 810 005e 2F       		.byte	47
+ 811 005f 00       		.space	1
+ 812 0060 10640240 		.word	1073898512
+ 813 0064 08640240 		.word	1073898504
+ 814 0068 00       		.byte	0
+ARM GAS  /tmp/ccZEeZLr.s 			page 16
+
+
+ 815 0069 08       		.byte	8
+ 816 006a 38       		.byte	56
+ 817 006b 00       		.space	1
+ 818 006c 28640240 		.word	1073898536
+ 819 0070 08640240 		.word	1073898504
+ 820 0074 06       		.byte	6
+ 821 0075 09       		.byte	9
+ 822 0076 39       		.byte	57
+ 823 0077 00       		.space	1
+ 824 0078 40640240 		.word	1073898560
+ 825 007c 08640240 		.word	1073898504
+ 826 0080 10       		.byte	16
+ 827 0081 0A       		.byte	10
+ 828 0082 3A       		.byte	58
+ 829 0083 00       		.space	1
+ 830 0084 58640240 		.word	1073898584
+ 831 0088 08640240 		.word	1073898504
+ 832 008c 16       		.byte	22
+ 833 008d 0B       		.byte	11
+ 834 008e 3B       		.byte	59
+ 835 008f 00       		.space	1
+ 836 0090 70640240 		.word	1073898608
+ 837 0094 0C640240 		.word	1073898508
+ 838 0098 00       		.byte	0
+ 839 0099 0C       		.byte	12
+ 840 009a 3C       		.byte	60
+ 841 009b 00       		.space	1
+ 842 009c 88640240 		.word	1073898632
+ 843 00a0 0C640240 		.word	1073898508
+ 844 00a4 06       		.byte	6
+ 845 00a5 0D       		.byte	13
+ 846 00a6 44       		.byte	68
+ 847 00a7 00       		.space	1
+ 848 00a8 A0640240 		.word	1073898656
+ 849 00ac 0C640240 		.word	1073898508
+ 850 00b0 10       		.byte	16
+ 851 00b1 0E       		.byte	14
+ 852 00b2 45       		.byte	69
+ 853 00b3 00       		.space	1
+ 854 00b4 B8640240 		.word	1073898680
+ 855 00b8 0C640240 		.word	1073898508
+ 856 00bc 16       		.byte	22
+ 857 00bd 0F       		.byte	15
+ 858 00be 46       		.byte	70
+ 859 00bf 00       		.space	1
+ 860              		.section	.bss.dma_streams_mask,"aw",%nobits
+ 861              		.align	2
+ 862              		.set	.LANCHOR1,. + 0
+ 863              		.type	dma_streams_mask, %object
+ 864              		.size	dma_streams_mask, 4
+ 865              	dma_streams_mask:
+ 866 0000 00000000 		.space	4
+ 867              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccZEeZLr.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32_dma.c
+     /tmp/ccZEeZLr.s:18     .text.Vector6C:00000000 $t
+     /tmp/ccZEeZLr.s:24     .text.Vector6C:00000000 Vector6C
+     /tmp/ccZEeZLr.s:45     .text.Vector6C:00000028 $d
+     /tmp/ccZEeZLr.s:49     .text.Vector70:00000000 $t
+     /tmp/ccZEeZLr.s:55     .text.Vector70:00000000 Vector70
+     /tmp/ccZEeZLr.s:78     .text.Vector70:0000002c $d
+     /tmp/ccZEeZLr.s:82     .text.Vector74:00000000 $t
+     /tmp/ccZEeZLr.s:88     .text.Vector74:00000000 Vector74
+     /tmp/ccZEeZLr.s:111    .text.Vector74:0000002c $d
+     /tmp/ccZEeZLr.s:115    .text.Vector78:00000000 $t
+     /tmp/ccZEeZLr.s:121    .text.Vector78:00000000 Vector78
+     /tmp/ccZEeZLr.s:144    .text.Vector78:0000002c $d
+     /tmp/ccZEeZLr.s:148    .text.Vector7C:00000000 $t
+     /tmp/ccZEeZLr.s:154    .text.Vector7C:00000000 Vector7C
+     /tmp/ccZEeZLr.s:175    .text.Vector7C:00000028 $d
+     /tmp/ccZEeZLr.s:179    .text.Vector80:00000000 $t
+     /tmp/ccZEeZLr.s:185    .text.Vector80:00000000 Vector80
+     /tmp/ccZEeZLr.s:208    .text.Vector80:0000002c $d
+     /tmp/ccZEeZLr.s:212    .text.Vector84:00000000 $t
+     /tmp/ccZEeZLr.s:218    .text.Vector84:00000000 Vector84
+     /tmp/ccZEeZLr.s:241    .text.Vector84:0000002c $d
+     /tmp/ccZEeZLr.s:245    .text.VectorFC:00000000 $t
+     /tmp/ccZEeZLr.s:251    .text.VectorFC:00000000 VectorFC
+     /tmp/ccZEeZLr.s:274    .text.VectorFC:0000002c $d
+     /tmp/ccZEeZLr.s:278    .text.Vector120:00000000 $t
+     /tmp/ccZEeZLr.s:284    .text.Vector120:00000000 Vector120
+     /tmp/ccZEeZLr.s:305    .text.Vector120:00000028 $d
+     /tmp/ccZEeZLr.s:309    .text.Vector124:00000000 $t
+     /tmp/ccZEeZLr.s:315    .text.Vector124:00000000 Vector124
+     /tmp/ccZEeZLr.s:338    .text.Vector124:0000002c $d
+     /tmp/ccZEeZLr.s:342    .text.Vector128:00000000 $t
+     /tmp/ccZEeZLr.s:348    .text.Vector128:00000000 Vector128
+     /tmp/ccZEeZLr.s:371    .text.Vector128:0000002c $d
+     /tmp/ccZEeZLr.s:375    .text.Vector12C:00000000 $t
+     /tmp/ccZEeZLr.s:381    .text.Vector12C:00000000 Vector12C
+     /tmp/ccZEeZLr.s:404    .text.Vector12C:0000002c $d
+     /tmp/ccZEeZLr.s:408    .text.Vector130:00000000 $t
+     /tmp/ccZEeZLr.s:414    .text.Vector130:00000000 Vector130
+     /tmp/ccZEeZLr.s:435    .text.Vector130:00000028 $d
+     /tmp/ccZEeZLr.s:439    .text.Vector150:00000000 $t
+     /tmp/ccZEeZLr.s:445    .text.Vector150:00000000 Vector150
+     /tmp/ccZEeZLr.s:468    .text.Vector150:0000002c $d
+     /tmp/ccZEeZLr.s:472    .text.Vector154:00000000 $t
+     /tmp/ccZEeZLr.s:478    .text.Vector154:00000000 Vector154
+     /tmp/ccZEeZLr.s:501    .text.Vector154:0000002c $d
+     /tmp/ccZEeZLr.s:505    .text.Vector158:00000000 $t
+     /tmp/ccZEeZLr.s:511    .text.Vector158:00000000 Vector158
+     /tmp/ccZEeZLr.s:534    .text.Vector158:0000002c $d
+     /tmp/ccZEeZLr.s:538    .text.dmaInit:00000000 $t
+     /tmp/ccZEeZLr.s:544    .text.dmaInit:00000000 dmaInit
+     /tmp/ccZEeZLr.s:576    .text.dmaInit:00000034 $d
+     /tmp/ccZEeZLr.s:583    .text.dmaStreamAllocate:00000000 $t
+     /tmp/ccZEeZLr.s:589    .text.dmaStreamAllocate:00000000 dmaStreamAllocate
+     /tmp/ccZEeZLr.s:674    .text.dmaStreamAllocate:000000ac $d
+     /tmp/ccZEeZLr.s:680    .text.dmaStreamRelease:00000000 $t
+ARM GAS  /tmp/ccZEeZLr.s 			page 18
+
+
+     /tmp/ccZEeZLr.s:686    .text.dmaStreamRelease:00000000 dmaStreamRelease
+     /tmp/ccZEeZLr.s:735    .text.dmaStreamRelease:00000060 $d
+     /tmp/ccZEeZLr.s:763    .rodata._stm32_dma_streams:00000000 _stm32_dma_streams
+     /tmp/ccZEeZLr.s:742    .rodata.str1.4:00000000 $d
+     /tmp/ccZEeZLr.s:752    .bss.dma_isr_redir:00000000 $d
+     /tmp/ccZEeZLr.s:756    .bss.dma_isr_redir:00000000 dma_isr_redir
+     /tmp/ccZEeZLr.s:759    .rodata._stm32_dma_streams:00000000 $d
+     /tmp/ccZEeZLr.s:861    .bss.dma_streams_mask:00000000 $d
+     /tmp/ccZEeZLr.s:865    .bss.dma_streams_mask:00000000 dma_streams_mask
+     /tmp/ccZEeZLr.s:81     .text.Vector70:00000034 $t
+     /tmp/ccZEeZLr.s:114    .text.Vector74:00000034 $t
+     /tmp/ccZEeZLr.s:147    .text.Vector78:00000034 $t
+     /tmp/ccZEeZLr.s:211    .text.Vector80:00000034 $t
+     /tmp/ccZEeZLr.s:244    .text.Vector84:00000034 $t
+     /tmp/ccZEeZLr.s:277    .text.VectorFC:00000034 $t
+     /tmp/ccZEeZLr.s:341    .text.Vector124:00000034 $t
+     /tmp/ccZEeZLr.s:374    .text.Vector128:00000034 $t
+     /tmp/ccZEeZLr.s:407    .text.Vector12C:00000034 $t
+     /tmp/ccZEeZLr.s:471    .text.Vector150:00000034 $t
+     /tmp/ccZEeZLr.s:504    .text.Vector154:00000034 $t
+     /tmp/ccZEeZLr.s:537    .text.Vector158:00000034 $t
+     /tmp/ccZEeZLr.s:582    .text.dmaInit:00000048 $t
+     /tmp/ccZEeZLr.s:679    .text.dmaStreamAllocate:000000bc $t
+
+UNDEFINED SYMBOLS
+dbg_check_enter_isr
+dbg_check_leave_isr
+_port_irq_epilogue
+nvicEnableVector
+chDbgPanic
+nvicDisableVector

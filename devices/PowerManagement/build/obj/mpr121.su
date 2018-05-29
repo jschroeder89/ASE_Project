@@ -1,0 +1,11 @@
+mpr121.cpp:19:1:amiro::MPR121::~MPR121()	0	static
+mpr121.cpp:19:1:virtual amiro::MPR121::~MPR121()	8	static
+mpr121.cpp:160:1:virtual msg_t amiro::MPR121::main()	80	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+mpr121.cpp:7:1:amiro::MPR121::MPR121(amiro::I2CDriver*, uint8_t)	16	static
+mpr121.cpp:122:1:uint16_t amiro::MPR121::getButtonStatus()	0	static
+mpr121.cpp:130:1:uint8_t amiro::MPR121::getButtonStatus(uint8_t)	0	static
+mpr121.cpp:138:1:uint8_t amiro::MPR121::getBaselineData(uint8_t)	0	static
+mpr121.cpp:146:1:uint16_t amiro::MPR121::getElectrodeData(uint8_t)	0	static
+mpr121.cpp:189:1:msg_t amiro::MPR121::configure(const amiro::MPR121::MPR121Config*)	32	static
+mpr121.cpp:213:1:cpp)	0	static

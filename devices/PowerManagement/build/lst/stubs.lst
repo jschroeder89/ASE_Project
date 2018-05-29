@@ -1,0 +1,102 @@
+ARM GAS  /tmp/ccYeUZU8.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"stubs.c"
+  17              		.section	.text._getpid,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_getpid
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_getpid, %function
+  24              	_getpid:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 0120     		movs	r0, #1
+  29 0002 7047     		bx	lr
+  30              		.size	_getpid, .-_getpid
+  31 0004 AFF30080 		.section	.text._exit,"ax",%progbits
+  31      AFF30080 
+  31      AFF30080 
+  32              		.align	2
+  33              		.p2align 4,,15
+  34              		.global	_exit
+  35              		.thumb
+  36              		.thumb_func
+  37              		.type	_exit, %function
+  38              	_exit:
+  39              		@ Volatile: function does not return.
+  40              		@ args = 0, pretend = 0, frame = 0
+  41              		@ frame_needed = 0, uses_anonymous_args = 0
+  42              		@ link register save eliminated.
+  43              	.L3:
+  44 0000 FEE7     		b	.L3
+  45              		.size	_exit, .-_exit
+  46 0002 00BFAFF3 		.section	.text._kill,"ax",%progbits
+  46      0080AFF3 
+  46      0080AFF3 
+  46      0080
+  47              		.align	2
+  48              		.p2align 4,,15
+  49              		.global	_kill
+  50              		.thumb
+  51              		.thumb_func
+  52              		.type	_kill, %function
+ARM GAS  /tmp/ccYeUZU8.s 			page 2
+
+
+  53              	_kill:
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 0, uses_anonymous_args = 0
+  56              		@ link register save eliminated.
+  57 0000 024B     		ldr	r3, .L5
+  58 0002 1622     		movs	r2, #22
+  59 0004 1A60     		str	r2, [r3]
+  60 0006 4FF0FF30 		mov	r0, #-1
+  61 000a 7047     		bx	lr
+  62              	.L6:
+  63              		.align	2
+  64              	.L5:
+  65 000c 00000000 		.word	errno
+  66              		.size	_kill, .-_kill
+  67              		.global	__dso_handle
+  68              		.section	.bss.__dso_handle,"aw",%nobits
+  69              		.align	2
+  70              		.type	__dso_handle, %object
+  71              		.size	__dso_handle, 4
+  72              	__dso_handle:
+  73 0000 00000000 		.space	4
+  74              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccYeUZU8.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stubs.c
+     /tmp/ccYeUZU8.s:18     .text._getpid:00000000 $t
+     /tmp/ccYeUZU8.s:24     .text._getpid:00000000 _getpid
+     /tmp/ccYeUZU8.s:32     .text._exit:00000000 $t
+     /tmp/ccYeUZU8.s:38     .text._exit:00000000 _exit
+     /tmp/ccYeUZU8.s:47     .text._kill:00000000 $t
+     /tmp/ccYeUZU8.s:53     .text._kill:00000000 _kill
+     /tmp/ccYeUZU8.s:65     .text._kill:0000000c $d
+     /tmp/ccYeUZU8.s:72     .bss.__dso_handle:00000000 __dso_handle
+     /tmp/ccYeUZU8.s:69     .bss.__dso_handle:00000000 $d
+
+UNDEFINED SYMBOLS
+errno

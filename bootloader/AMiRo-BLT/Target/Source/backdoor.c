@@ -1,0 +1,232 @@
+/************************************************************************************//**
+* \file         Source\backdoor.c
+* \brief        Bootloader backdoor entry source file.
+* \ingroup      Core
+* \internal
+*----------------------------------------------------------------------------------------
+*                          C O P Y R I G H T
+*----------------------------------------------------------------------------------------
+*   Copyright (c) 2011  by Feaser    http://www.feaser.com    All rights reserved
+*
+*----------------------------------------------------------------------------------------
+*                            L I C E N S E
+*----------------------------------------------------------------------------------------
+* This file is part of OpenBLT. OpenBLT is free software: you can redistribute it and/or
+* modify it under the terms of the GNU General Public License as published by the Free
+* Software Foundation, either version 3 of the License, or (at your option) any later
+* version.
+*
+* OpenBLT is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+* PURPOSE. See the GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along with OpenBLT.
+* If not, see <http://www.gnu.org/licenses/>.
+*
+* A special exception to the GPL is included to allow you to distribute a combined work 
+* that includes OpenBLT without being obliged to provide the source code for any 
+* proprietary components. The exception text is included at the bottom of the license
+* file <license.html>.
+* 
+* \endinternal
+****************************************************************************************/
+
+/****************************************************************************************
+* Include files
+****************************************************************************************/
+#include "boot.h"                                /* bootloader generic header          */
+
+
+/****************************************************************************************
+* Macro definitions
+****************************************************************************************/
+#if (BOOT_BACKDOOR_HOOKS_ENABLE == 0)
+  #ifndef BACKDOOR_ENTRY_TIMEOUT_MS
+  /** \brief Sets the time in milliseconds that the backdoor is open, but allow an 
+   *         override for this time. note that this time should be at least 2.5 times
+   *         as long as the time that is configured in Microboot's XCP settings for the
+   *         connect command response. This is the last entry on XCP Timeouts tab. By 
+   *         default the connect command response is configured as 20ms by Microboot,
+   *         except for TCP/IP where it is 300ms due to accomodate for worldwide
+   *         network latency. For CAN this was also adjusted to 500ms so that Microboot
+   *         can wait for the bootloader to initialize. Otherwise errorframes can be
+   *         generated on the CAN bus.
+   */
+    #if (BOOT_COM_NET_ENABLE == 1)
+      #define BACKDOOR_ENTRY_TIMEOUT_MS  (750)
+    #elif (BOOT_COM_CAN_ENABLE == 1)
+      #define BACKDOOR_ENTRY_TIMEOUT_MS  (500)
+    #else
+      #define BACKDOOR_ENTRY_TIMEOUT_MS  (600)
+    #endif
+  #endif
+#endif
+
+/* Sets the time (ms) while the bootloader is in flashing mode but not connected */
+#ifndef FLASHING_WITHOUT_CONNECTION_TIMEOUT_MS
+#define FLASHING_WITHOUT_CONNECTION_TIMEOUT_MS 30000 // 30 seconds
+#endif
+/****************************************************************************************
+* Hook functions
+****************************************************************************************/
+#if (BOOT_BACKDOOR_HOOKS_ENABLE > 0)
+extern void BackDoorInitHook(void);
+extern blt_bool BackDoorEntryHook(void);
+extern blt_bool BackDoorEntryCheck(void);
+extern void BackDoorComIsConnected(void);
+#endif
+
+
+/****************************************************************************************
+* Local data declarations
+****************************************************************************************/
+#if (BOOT_BACKDOOR_HOOKS_ENABLE == 0)
+/** \brief To determine if the backdoor is open or closed. */
+static blt_bool backdoorOpen;
+/** \brief To determine how long the backdoor has been open in milliseconds. */
+static blt_int32u backdoorOpenTime;
+#endif /* (BOOT_BACKDOOR_HOOKS_ENABLE == 0) */
+#if (BOOTLOADER_OF_MAIN_DEVICE == 1)
+static blt_bool wasConnection;
+static blt_int32u inFlashingModeWithoutConnection;
+#endif /* (BOOTLOADER_OF_MAIN_DEVICE == 1) */
+
+
+/************************************************************************************//**
+** \brief     Initializes the backdoor entry option.
+** \return    none
+**
+****************************************************************************************/
+void BackDoorInit(void)
+{
+#if (BOOT_BACKDOOR_HOOKS_ENABLE > 0)
+  /* initialize application's backdoor functionality */
+  BackDoorInitHook();
+  
+  /* attempt to start the user program when no backdoor entry is requested */
+  if (BackDoorEntryHook() == BLT_FALSE)
+  {
+    /* this function does not return if a valid user program is present */
+    CpuStartUserProgram();
+  }
+  #if (BOOT_FILE_SYS_ENABLE > 0)
+  else
+  {
+    /* the backdoor is open so we should check if a update from locally  attached storage 
+     * is requested and, if so, start it.
+     */
+    FileHandleFirmwareUpdateRequest();
+  }
+  #endif
+#else
+  /* open the backdoor after a reset */
+  backdoorOpen = BLT_TRUE;
+  backdoorOpenTime = TimerGet();
+#endif
+
+#if (BOOTLOADER_OF_MAIN_DEVICE == 1)
+  wasConnection = BLT_FALSE;
+  inFlashingModeWithoutConnection = TimerGet();
+#endif /* (BOOTLOADER_OF_MAIN_DEVICE == 1) */
+
+  /* perform the first check that open/closes the backdoor */
+  BackDoorCheck();
+} /*** end of BackDoorInit ***/
+
+
+/************************************************************************************//**
+** \brief     The default backdoor entry feature keeps the bootloader active for a
+**            predetermined time after reset, allowing the host application to
+**            establish a connection and start a programming sequence. This function
+**            controls the opening/closing of the backdoor.
+** \return    none
+**
+****************************************************************************************/
+void BackDoorCheck(void)
+{
+#if (BOOT_COM_ENABLE > 0 || BOOT_GATE_ENABLE > 0)
+  /* check if a connection with the host was already established. in this case the
+   * backdoor stays open anyway, so no need to check if it needs to be closed. 
+   */
+  if (ComIsConnected() == BLT_TRUE)
+  {
+  #if (BOOT_BACKDOOR_HOOKS_ENABLE > 0)
+    BackDoorComIsConnected();
+  #endif
+  #if (BOOTLOADER_OF_MAIN_DEVICE == 1)
+    /* set timer for flashing mode timeout */
+    inFlashingModeWithoutConnection = TimerGet();
+    /* save that there has been a connection */
+    if (ComWasConnectedToMain() == BLT_TRUE) {
+      wasConnection = BLT_TRUE;
+    }
+  #endif
+    return;
+  }
+  #if (BOOTLOADER_OF_MAIN_DEVICE == 1)
+  /* check if a connection with the host has been closed. In this case the
+   * backdoor stays open (bootloader stays in "flashing mode") for the defined time. 
+   */
+  else if (wasConnection == BLT_TRUE)
+  {
+    /* check flashing mode timeout */
+    if (TimerGet() >= (FLASHING_WITHOUT_CONNECTION_TIMEOUT_MS + inFlashingModeWithoutConnection))
+    {
+      /* user program can be started because there hasn't been announced any connection in
+       * the defined flashing mode time.
+       */
+      CpuStartUserProgram();
+    }
+    return;
+  }
+  #endif
+#endif /* BOOT_COM_ENABLE > 0 || BOOT_GATE_ENABLE > 0 */
+
+#if (BOOT_BACKDOOR_HOOKS_ENABLE == 0)
+  #if (BOOT_FILE_SYS_ENABLE > 0)
+  /* check if the file module is busy, indicating that a firmware update through the
+   * locally attached storage is in progress. in this case the backdoor stays open 
+   * anyway, so no need to check if it needs to be closed. 
+   */
+  if (FileIsIdle() == BLT_FALSE)
+  {
+    return;
+  }
+  #endif  
+  
+  /* when the backdoor is still open, check if it's time to close it */
+  if (backdoorOpen == BLT_TRUE)
+  {
+    /* check if the backdoor entry time window elapsed */
+    if (TimerGet() >= (BACKDOOR_ENTRY_TIMEOUT_MS + backdoorOpenTime))
+    {
+      /* close the backdoor */
+      backdoorOpen = BLT_FALSE;
+      #if (BOOT_FILE_SYS_ENABLE > 0)
+      /* during the timed backdoor no remote update request was detected. now do one
+       * last check to see if a firmware update from locally attached storage is
+       * pending.
+       */
+      if (FileHandleFirmwareUpdateRequest() == BLT_FALSE)
+      #endif
+      {
+        /* no firmware update requests detected, so attempt to start the user program.
+         * this function does not return if a valid user program is present.
+         */
+        CpuStartUserProgram();
+      }
+    }
+  }
+#else
+  /* check if the bootloader has to stay in the backdoor loop */
+  if (BackDoorEntryCheck() == BLT_TRUE) {
+    return;
+  }
+
+  /* user program can be started because there is nothing else to check */
+  CpuStartUserProgram();
+#endif
+} /*** end of BackDoorCheck ***/
+
+
+/*********************************** end of backdoor.c *********************************/

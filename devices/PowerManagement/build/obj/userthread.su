@@ -1,0 +1,12 @@
+userthread.cpp:82:1:amiro::UserThread::~UserThread()	0	static
+userthread.cpp:82:1:virtual amiro::UserThread::~UserThread()	8	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 1024; tprio_t = long unsigned int]	24	static
+chprintf.h:69:20:)	12	static
+userthread.cpp:48:7:amiro::Color obstacle_avoidance::Prox2Color(float)	8	static
+userthread.cpp:87:1:virtual msg_t amiro::UserThread::main()	136	static
+userthread.cpp:77:1:amiro::UserThread::UserThread()	8	static
+userthread.cpp:393:1:void amiro::UserThread::setNextState(amiro::UserThread::State)	0	static
+userthread.cpp:400:1:amiro::UserThread::State amiro::UserThread::getCurrenState() const	0	static
+userthread.cpp:406:1:msg_t amiro::UserThread::setWiiAddress(const char*)	16	static
+userthread.cpp:419:1:float amiro::UserThread::setWiiDeadzone(float)	0	static
+userthread.cpp:436:1:cpp)	16	static

@@ -1,0 +1,12 @@
+spi_lld.c:159:13:spi_lld_serve_tx_interrupt	8	static
+spi_lld.c:133:13:spi_lld_serve_rx_interrupt	16	static
+spi_lld.c:186:6:spi_lld_init	24	static
+spi_lld.c:306:6:spi_lld_start	16	static
+spi_lld.c:442:6:spi_lld_stop	8	static
+spi_lld.c:487:6:spi_lld_select	0	static
+spi_lld.c:500:6:spi_lld_unselect	0	static
+spi_lld.c:516:6:spi_lld_ignore	12	static
+spi_lld.c:545:6:spi_lld_exchange	16	static
+spi_lld.c:573:6:spi_lld_send	16	static
+spi_lld.c:600:6:spi_lld_receive	12	static
+spi_lld.c:626:10:spi_lld_polled_exchange	0	static

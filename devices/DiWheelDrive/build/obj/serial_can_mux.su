@@ -1,0 +1,16 @@
+core_cm3.h:1478:22:void NVIC_SystemReset()	0	static
+serial_can_mux.cpp:30:1:amiro::SerialCanMux::~SerialCanMux()	0	static
+serial_can_mux.cpp:30:1:virtual amiro::SerialCanMux::~SerialCanMux()	8	static
+chprintf.h:69:20:)	12	static
+serial_can_mux.cpp:12:1:amiro::SerialCanMux::SerialCanMux(SerialDriver*, CANDriver*, uint8_t)	24	static
+serial_can_mux.cpp:37:6:void amiro::SerialCanMux::restartSystem()	8	static
+serial_can_mux.cpp:47:6:bool amiro::SerialCanMux::checkByteForBLReset(uint8_t*, size_t)	16	static
+serial_can_mux.cpp:95:7:msg_t amiro::SerialCanMux::sendViaCan(uint32_t, uint8_t*, size_t)	40	static
+serial_can_mux.cpp:115:8:virtual size_t amiro::SerialCanMux::write(const uint8_t*, size_t)	24	static
+serial_can_mux.cpp:129:8:virtual size_t amiro::SerialCanMux::read(uint8_t*, size_t)	24	static
+serial_can_mux.cpp:142:7:virtual msg_t amiro::SerialCanMux::put(uint8_t)	16	static
+serial_can_mux.cpp:155:7:virtual msg_t amiro::SerialCanMux::get()	24	static
+serial_can_mux.cpp:173:6:void amiro::SerialCanMux::convCan2Serial(uint8_t*, size_t)	16	static
+serial_can_mux.cpp:180:6:void amiro::SerialCanMux::sendSwitchCmd(uint8_t)	16	static
+serial_can_mux.cpp:216:6:void amiro::SerialCanMux::rcvSwitchCmd(uint8_t)	16	static
+serial_can_mux.cpp:228:1:cpp)	0	static

@@ -1,0 +1,160 @@
+ARM GAS  /tmp/cckjdWa8.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"exti.cpp"
+  17              		.section	.text._Z13power_down_cbP9EXTDriverm,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_Z13power_down_cbP9EXTDriverm
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_Z13power_down_cbP9EXTDriverm, %function
+  24              	_Z13power_down_cbP9EXTDriverm:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 054B     		ldr	r3, .L3
+  29 0002 1A69     		ldr	r2, [r3, #16]
+  30 0004 9204     		lsls	r2, r2, #18
+  31 0006 5CBF     		itt	pl
+  32 0008 4FF08052 		movpl	r2, #268435456
+  33 000c 9A61     		strpl	r2, [r3, #24]
+  34 000e 034B     		ldr	r3, .L3+4
+  35 0010 0522     		movs	r2, #5
+  36 0012 1A60     		str	r2, [r3]
+  37 0014 7047     		bx	lr
+  38              	.L4:
+  39 0016 00BF     		.align	2
+  40              	.L3:
+  41 0018 00080240 		.word	1073874944
+  42 001c 00000000 		.word	.LANCHOR0
+  43              		.size	_Z13power_down_cbP9EXTDriverm, .-_Z13power_down_cbP9EXTDriverm
+  44              		.section	.text._Z9pathdc_cbP9EXTDriverm,"ax",%progbits
+  45              		.align	2
+  46              		.p2align 4,,15
+  47              		.global	_Z9pathdc_cbP9EXTDriverm
+  48              		.thumb
+  49              		.thumb_func
+  50              		.type	_Z9pathdc_cbP9EXTDriverm, %function
+  51              	_Z9pathdc_cbP9EXTDriverm:
+  52              		@ args = 0, pretend = 0, frame = 0
+  53              		@ frame_needed = 0, uses_anonymous_args = 0
+  54              		@ link register save eliminated.
+  55 0000 024B     		ldr	r3, .L6
+  56 0002 4FF0FF32 		mov	r2, #-1
+  57 0006 1A60     		str	r2, [r3]
+ARM GAS  /tmp/cckjdWa8.s 			page 2
+
+
+  58 0008 7047     		bx	lr
+  59              	.L7:
+  60 000a 00BF     		.align	2
+  61              	.L6:
+  62 000c 00000000 		.word	.LANCHOR1
+  63              		.size	_Z9pathdc_cbP9EXTDriverm, .-_Z9pathdc_cbP9EXTDriverm
+  64              		.global	extcfg
+  65              		.global	pathdc_change
+  66              		.global	shutdown_now
+  67              		.section	.data.extcfg,"aw",%progbits
+  68              		.align	2
+  69              		.type	extcfg, %object
+  70              		.size	extcfg, 184
+  71              	extcfg:
+  72 0000 00000000 		.word	0
+  73 0004 00000000 		.word	0
+  74 0008 00000000 		.word	0
+  75 000c 00000000 		.word	0
+  76 0010 00000000 		.word	0
+  77 0014 00000000 		.word	0
+  78 0018 00000000 		.word	0
+  79 001c 00000000 		.word	0
+  80 0020 00000000 		.word	0
+  81 0024 00000000 		.word	0
+  82 0028 00000000 		.word	0
+  83 002c 00000000 		.word	0
+  84 0030 00000000 		.word	0
+  85 0034 00000000 		.word	0
+  86 0038 00000000 		.word	0
+  87 003c 00000000 		.word	0
+  88 0040 27000000 		.word	39
+  89 0044 00000000 		.word	_Z9pathdc_cbP9EXTDriverm
+  90 0048 00000000 		.word	0
+  91 004c 00000000 		.word	0
+  92 0050 00000000 		.word	0
+  93 0054 00000000 		.word	0
+  94 0058 00000000 		.word	0
+  95 005c 00000000 		.word	0
+  96 0060 00000000 		.word	0
+  97 0064 00000000 		.word	0
+  98 0068 26000000 		.word	38
+  99 006c 00000000 		.word	_Z13power_down_cbP9EXTDriverm
+ 100 0070 00000000 		.word	0
+ 101 0074 00000000 		.word	0
+ 102 0078 00000000 		.word	0
+ 103 007c 00000000 		.word	0
+ 104 0080 00000000 		.word	0
+ 105 0084 00000000 		.word	0
+ 106 0088 00000000 		.word	0
+ 107 008c 00000000 		.word	0
+ 108 0090 00000000 		.word	0
+ 109 0094 00000000 		.word	0
+ 110 0098 00000000 		.word	0
+ 111 009c 00000000 		.word	0
+ 112 00a0 00000000 		.word	0
+ 113 00a4 00000000 		.word	0
+ 114 00a8 00000000 		.word	0
+ARM GAS  /tmp/cckjdWa8.s 			page 3
+
+
+ 115 00ac 00000000 		.word	0
+ 116 00b0 00000000 		.word	0
+ 117 00b4 00000000 		.word	0
+ 118              		.section	.bss.pathdc_change,"aw",%nobits
+ 119              		.align	2
+ 120              		.set	.LANCHOR1,. + 0
+ 121              		.type	pathdc_change, %object
+ 122              		.size	pathdc_change, 4
+ 123              	pathdc_change:
+ 124 0000 00000000 		.space	4
+ 125              		.section	.bss.shutdown_now,"aw",%nobits
+ 126              		.align	2
+ 127              		.set	.LANCHOR0,. + 0
+ 128              		.type	shutdown_now, %object
+ 129              		.size	shutdown_now, 4
+ 130              	shutdown_now:
+ 131 0000 00000000 		.space	4
+ 132              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cckjdWa8.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 exti.cpp
+     /tmp/cckjdWa8.s:18     .text._Z13power_down_cbP9EXTDriverm:00000000 $t
+     /tmp/cckjdWa8.s:24     .text._Z13power_down_cbP9EXTDriverm:00000000 _Z13power_down_cbP9EXTDriverm
+     /tmp/cckjdWa8.s:41     .text._Z13power_down_cbP9EXTDriverm:00000018 $d
+     /tmp/cckjdWa8.s:45     .text._Z9pathdc_cbP9EXTDriverm:00000000 $t
+     /tmp/cckjdWa8.s:51     .text._Z9pathdc_cbP9EXTDriverm:00000000 _Z9pathdc_cbP9EXTDriverm
+     /tmp/cckjdWa8.s:62     .text._Z9pathdc_cbP9EXTDriverm:0000000c $d
+     /tmp/cckjdWa8.s:71     .data.extcfg:00000000 extcfg
+     /tmp/cckjdWa8.s:123    .bss.pathdc_change:00000000 pathdc_change
+     /tmp/cckjdWa8.s:130    .bss.shutdown_now:00000000 shutdown_now
+     /tmp/cckjdWa8.s:68     .data.extcfg:00000000 $d
+     /tmp/cckjdWa8.s:119    .bss.pathdc_change:00000000 $d
+     /tmp/cckjdWa8.s:126    .bss.shutdown_now:00000000 $d
+
+NO UNDEFINED SYMBOLS

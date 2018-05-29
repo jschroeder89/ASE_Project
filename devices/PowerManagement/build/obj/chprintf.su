@@ -1,0 +1,3 @@
+chprintf.c:37:14:long_to_string_with_divisor	16	static
+chprintf.c:112:6:chvprintf	88	static
+chprintf.c:288:5:chsnprintf	40	static

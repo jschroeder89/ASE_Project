@@ -1,0 +1,7 @@
+pwm.c:68:6:pwmInit	0	static
+pwm.c:80:6:pwmObjectInit	0	static
+pwm.c:99:6:pwmStart	16	static
+pwm.c:120:6:pwmStop	8	static
+pwm.c:147:6:pwmChangePeriod	16	static
+pwm.c:172:6:pwmEnableChannel	16	static
+pwm.c:200:6:pwmDisableChannel	16	static

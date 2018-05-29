@@ -1,0 +1,15 @@
+chprintf.h:69:20:)	12	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+Lidar.cpp:12:1:amiro::Lidar::Lidar(uint8_t, amiro::Lidar::SETUP)	24	static
+Lidar.cpp:19:1:amiro::Lidar::~Lidar()	0	static
+Lidar.cpp:110:8:bool_t amiro::Lidar::getScan(uint16_t (&)[682])	16	static
+Lidar.cpp:122:10:uint16_t amiro::Lidar::getNumberOfValues()	0	static
+Lidar.cpp:130:8:bool_t amiro::Lidar::getData(uint8_t&, uint32_t)	16	static
+Lidar.cpp:143:7:msg_t amiro::Lidar::updateSensorVal()	24	static
+Lidar.cpp:252:6:void amiro::Lidar::printData()	24	static
+Lidar.cpp:269:8:bool_t amiro::Lidar::checkDataString(const char*)	40	static
+Lidar.cpp:40:7:virtual msg_t amiro::Lidar::main()	40	static
+Lidar.cpp:296:6:void amiro::Lidar::printDetails()	8	static
+Lidar.cpp:307:6:void amiro::Lidar::printSpecification()	8	static
+Lidar.cpp:318:6:void amiro::Lidar::printInformation()	8	static
+Lidar.cpp:330:1:cpp)	0	static

@@ -1,0 +1,140 @@
+ARM GAS  /tmp/cc2KkvCg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"Debug.c"
+  17              		.section	.text.haltErrorCode,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	haltErrorCode
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	haltErrorCode, %function
+  24              	haltErrorCode:
+  25              		@ args = 0, pretend = 0, frame = 32
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 70B5     		push	{r4, r5, r6, lr}
+  28 0002 244D     		ldr	r5, .L21
+  29 0004 244E     		ldr	r6, .L21+4
+  30 0006 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+  31 0008 88B0     		sub	sp, sp, #32
+  32 000a 01AC     		add	r4, sp, #4
+  33 000c 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+  34 000e 95E80700 		ldmia	r5, {r0, r1, r2}
+  35 0012 03C4     		stmia	r4!, {r0, r1}
+  36 0014 2280     		strh	r2, [r4]	@ movhi
+  37 0016 736C     		ldr	r3, [r6, #68]
+  38 0018 43F01003 		orr	r3, r3, #16
+  39 001c 7364     		str	r3, [r6, #68]
+  40 001e 2520     		movs	r0, #37
+  41 0020 C021     		movs	r1, #192
+  42 0022 FFF7FEFF 		bl	nvicEnableVector
+  43 0026 1D48     		ldr	r0, .L21+8
+  44 0028 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+  45 002c D0F8D420 		ldr	r2, [r0, #212]
+  46 0030 0021     		movs	r1, #0
+  47 0032 9181     		strh	r1, [r2, #12]	@ movhi
+  48 0034 1182     		strh	r1, [r2, #16]	@ movhi
+  49 0036 9182     		strh	r1, [r2, #20]	@ movhi
+  50 0038 9189     		ldrh	r1, [r2, #12]
+  51 003a 89B2     		uxth	r1, r1
+  52 003c 41F40051 		orr	r1, r1, #8192
+  53 0040 41F00801 		orr	r1, r1, #8
+  54 0044 9181     		strh	r1, [r2, #12]	@ movhi
+  55 0046 148A     		ldrh	r4, [r2, #16]
+  56 0048 A4B2     		uxth	r4, r4
+  57 004a 40F2D921 		movw	r1, #729
+ARM GAS  /tmp/cc2KkvCg.s 			page 2
+
+
+  58 004e 0225     		movs	r5, #2
+  59 0050 44F44054 		orr	r4, r4, #12288
+  60 0054 0572     		strb	r5, [r0, #8]
+  61 0056 1482     		strh	r4, [r2, #16]	@ movhi
+  62 0058 1181     		strh	r1, [r2, #8]	@ movhi
+  63 005a 01A9     		add	r1, sp, #4
+  64 005c 3BB1     		cbz	r3, .L7
+  65              	.L8:
+  66 005e 9380     		strh	r3, [r2, #4]	@ movhi
+  67              	.L6:
+  68 0060 1388     		ldrh	r3, [r2]
+  69 0062 5C06     		lsls	r4, r3, #25
+  70 0064 FCD5     		bpl	.L6
+  71 0066 11F8013F 		ldrb	r3, [r1, #1]!	@ zero_extendqisi2
+  72 006a 002B     		cmp	r3, #0
+  73 006c F7D1     		bne	.L8
+  74              	.L7:
+  75 006e 0C4B     		ldr	r3, .L21+12
+  76 0070 1968     		ldr	r1, [r3]
+  77 0072 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+  78 0074 3BB1     		cbz	r3, .L4
+  79              	.L12:
+  80 0076 9380     		strh	r3, [r2, #4]	@ movhi
+  81              	.L11:
+  82 0078 1388     		ldrh	r3, [r2]
+  83 007a 5806     		lsls	r0, r3, #25
+  84 007c FCD5     		bpl	.L11
+  85 007e 11F8013F 		ldrb	r3, [r1, #1]!	@ zero_extendqisi2
+  86 0082 002B     		cmp	r3, #0
+  87 0084 F7D1     		bne	.L12
+  88              	.L4:
+  89 0086 0A23     		movs	r3, #10
+  90 0088 9380     		strh	r3, [r2, #4]	@ movhi
+  91              	.L9:
+  92 008a 1388     		ldrh	r3, [r2]
+  93 008c 5B06     		lsls	r3, r3, #25
+  94 008e FCD5     		bpl	.L9
+  95 0090 08B0     		add	sp, sp, #32
+  96              		@ sp needed
+  97 0092 70BD     		pop	{r4, r5, r6, pc}
+  98              	.L22:
+  99              		.align	2
+ 100              	.L21:
+ 101 0094 00000000 		.word	.LC0
+ 102 0098 00380240 		.word	1073887232
+ 103 009c 00000000 		.word	SD1
+ 104 00a0 00000000 		.word	dbg_panic_msg
+ 105              		.size	haltErrorCode, .-haltErrorCode
+ 106 00a4 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 106      AFF30080 
+ 106      AFF30080 
+ 107              		.align	2
+ 108              	.LC0:
+ 109 0000 0A537973 		.ascii	"\012System halt! Error Code:\000\000"
+ 109      74656D20 
+ 109      68616C74 
+ 109      21204572 
+ARM GAS  /tmp/cc2KkvCg.s 			page 3
+
+
+ 109      726F7220 
+ 110 001b 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/cc2KkvCg.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Debug.c
+     /tmp/cc2KkvCg.s:18     .text.haltErrorCode:00000000 $t
+     /tmp/cc2KkvCg.s:24     .text.haltErrorCode:00000000 haltErrorCode
+     /tmp/cc2KkvCg.s:101    .text.haltErrorCode:00000094 $d
+     /tmp/cc2KkvCg.s:107    .rodata.str1.4:00000000 $d
+     /tmp/cc2KkvCg.s:106    .text.haltErrorCode:000000a4 $t
+
+UNDEFINED SYMBOLS
+nvicEnableVector
+SD1
+dbg_panic_msg

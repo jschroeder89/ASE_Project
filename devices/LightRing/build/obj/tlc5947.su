@@ -1,0 +1,13 @@
+tlc5947.cpp:20:1:amiro::TLC5947::~TLC5947()	0	static
+tlc5947.cpp:20:1:virtual amiro::TLC5947::~TLC5947()	8	static
+tlc5947.cpp:50:7:virtual msg_t amiro::TLC5947::main()	120	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 192; tprio_t = long unsigned int]	24	static
+tlc5947.cpp:10:1:amiro::TLC5947::TLC5947(amiro::HWSPIDriver*, ioportid_t, int)	24	static
+tlc5947.cpp:25:6:void amiro::TLC5947::disable()	0	static
+tlc5947.cpp:29:6:void amiro::TLC5947::enable()	0	static
+tlc5947.cpp:33:6:void amiro::TLC5947::setBrightness(int)	0	static
+tlc5947.cpp:42:6:void amiro::TLC5947::setColor(int, amiro::Color)	0	static
+tlc5947.cpp:46:6:void amiro::TLC5947::update()	0	static
+tlc5947.cpp:87:5:int amiro::TLC5947::caluclateRedGrayscale(amiro::Color, int) const	8	static
+tlc5947.cpp:91:5:int amiro::TLC5947::caluclateGreenGrayscale(amiro::Color, int) const	8	static
+tlc5947.cpp:95:5:int amiro::TLC5947::caluclateBlueGrayscale(amiro::Color, int) const	8	static

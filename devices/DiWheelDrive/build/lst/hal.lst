@@ -1,0 +1,167 @@
+ARM GAS  /tmp/cczIp5gR.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"hal.c"
+  15              		.section	.text.halInit,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	halInit
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	halInit, %function
+  22              	halInit:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 08B5     		push	{r3, lr}
+  26 0002 FFF7FEFF 		bl	hal_lld_init
+  27 0006 FFF7FEFF 		bl	tmInit
+  28 000a 0948     		ldr	r0, .L2
+  29 000c FFF7FEFF 		bl	_pal_lld_init
+  30 0010 FFF7FEFF 		bl	canInit
+  31 0014 FFF7FEFF 		bl	extInit
+  32 0018 FFF7FEFF 		bl	i2cInit
+  33 001c FFF7FEFF 		bl	pwmInit
+  34 0020 FFF7FEFF 		bl	sdInit
+  35 0024 FFF7FEFF 		bl	spiInit
+  36 0028 BDE80840 		pop	{r3, lr}
+  37 002c FFF7FEBF 		b	boardInit
+  38              	.L3:
+  39              		.align	2
+  40              	.L2:
+  41 0030 00000000 		.word	pal_default_config
+  42              		.size	halInit, .-halInit
+  43 0034 AFF30080 		.section	.text.halIsCounterWithin,"ax",%progbits
+  43      AFF30080 
+  43      AFF30080 
+  44              		.align	2
+  45              		.p2align 4,,15
+  46              		.global	halIsCounterWithin
+  47              		.thumb
+  48              		.thumb_func
+  49              		.type	halIsCounterWithin, %function
+  50              	halIsCounterWithin:
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 0, uses_anonymous_args = 0
+  53              		@ link register save eliminated.
+  54 0000 084B     		ldr	r3, .L13
+  55 0002 8142     		cmp	r1, r0
+ARM GAS  /tmp/cczIp5gR.s 			page 2
+
+
+  56 0004 5B68     		ldr	r3, [r3, #4]
+  57 0006 06D9     		bls	.L5
+  58 0008 8342     		cmp	r3, r0
+  59 000a 08D3     		bcc	.L9
+  60              	.L11:
+  61 000c 8B42     		cmp	r3, r1
+  62 000e 2CBF     		ite	cs
+  63 0010 0020     		movcs	r0, #0
+  64 0012 0120     		movcc	r0, #1
+  65 0014 7047     		bx	lr
+  66              	.L5:
+  67 0016 8342     		cmp	r3, r0
+  68 0018 F8D3     		bcc	.L11
+  69 001a 0120     		movs	r0, #1
+  70 001c 7047     		bx	lr
+  71              	.L9:
+  72 001e 0020     		movs	r0, #0
+  73 0020 7047     		bx	lr
+  74              	.L14:
+  75 0022 00BF     		.align	2
+  76              	.L13:
+  77 0024 001000E0 		.word	-536866816
+  78              		.size	halIsCounterWithin, .-halIsCounterWithin
+  79 0028 AFF30080 		.section	.text.halPolledDelay,"ax",%progbits
+  79      AFF30080 
+  80              		.align	2
+  81              		.p2align 4,,15
+  82              		.global	halPolledDelay
+  83              		.thumb
+  84              		.thumb_func
+  85              		.type	halPolledDelay, %function
+  86              	halPolledDelay:
+  87              		@ args = 0, pretend = 0, frame = 0
+  88              		@ frame_needed = 0, uses_anonymous_args = 0
+  89              		@ link register save eliminated.
+  90 0000 0C49     		ldr	r1, .L26
+  91 0002 4A68     		ldr	r2, [r1, #4]
+  92 0004 1044     		add	r0, r0, r2
+  93              	.L21:
+  94 0006 8242     		cmp	r2, r0
+  95 0008 4B68     		ldr	r3, [r1, #4]
+  96 000a 0CD2     		bcs	.L16
+  97 000c 9A42     		cmp	r2, r3
+  98 000e 03D9     		bls	.L24
+  99 0010 0023     		movs	r3, #0
+ 100 0012 002B     		cmp	r3, #0
+ 101 0014 F7D1     		bne	.L21
+ 102              	.L25:
+ 103 0016 7047     		bx	lr
+ 104              	.L24:
+ 105 0018 9842     		cmp	r0, r3
+ 106 001a 94BF     		ite	ls
+ 107 001c 0023     		movls	r3, #0
+ 108 001e 0123     		movhi	r3, #1
+ 109 0020 002B     		cmp	r3, #0
+ 110 0022 F0D1     		bne	.L21
+ 111 0024 F7E7     		b	.L25
+ARM GAS  /tmp/cczIp5gR.s 			page 3
+
+
+ 112              	.L16:
+ 113 0026 9A42     		cmp	r2, r3
+ 114 0028 F6D8     		bhi	.L24
+ 115 002a 0123     		movs	r3, #1
+ 116 002c 002B     		cmp	r3, #0
+ 117 002e EAD1     		bne	.L21
+ 118 0030 F1E7     		b	.L25
+ 119              	.L27:
+ 120 0032 00BF     		.align	2
+ 121              	.L26:
+ 122 0034 001000E0 		.word	-536866816
+ 123              		.size	halPolledDelay, .-halPolledDelay
+ 124 0038 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 124      AFF30080 
+ARM GAS  /tmp/cczIp5gR.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 hal.c
+     /tmp/cczIp5gR.s:16     .text.halInit:00000000 $t
+     /tmp/cczIp5gR.s:22     .text.halInit:00000000 halInit
+     /tmp/cczIp5gR.s:41     .text.halInit:00000030 $d
+     /tmp/cczIp5gR.s:44     .text.halIsCounterWithin:00000000 $t
+     /tmp/cczIp5gR.s:50     .text.halIsCounterWithin:00000000 halIsCounterWithin
+     /tmp/cczIp5gR.s:77     .text.halIsCounterWithin:00000024 $d
+     /tmp/cczIp5gR.s:80     .text.halPolledDelay:00000000 $t
+     /tmp/cczIp5gR.s:86     .text.halPolledDelay:00000000 halPolledDelay
+     /tmp/cczIp5gR.s:122    .text.halPolledDelay:00000034 $d
+     /tmp/cczIp5gR.s:43     .text.halInit:00000034 $t
+     /tmp/cczIp5gR.s:79     .text.halIsCounterWithin:00000028 $t
+     /tmp/cczIp5gR.s:124    .text.halPolledDelay:00000038 $t
+
+UNDEFINED SYMBOLS
+hal_lld_init
+tmInit
+_pal_lld_init
+canInit
+extInit
+i2cInit
+pwmInit
+sdInit
+spiInit
+boardInit
+pal_default_config

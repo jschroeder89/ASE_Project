@@ -1,0 +1,209 @@
+ARM GAS  /tmp/ccJkQuQT.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"pal_lld.c"
+  15              		.section	.text._pal_lld_init,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_pal_lld_init
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_pal_lld_init, %function
+  22              	_pal_lld_init:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 1D49     		ldr	r1, .L2
+  27 0002 F0B4     		push	{r4, r5, r6, r7}
+  28 0004 8A69     		ldr	r2, [r1, #24]
+  29 0006 1D4B     		ldr	r3, .L2+4
+  30 0008 42F4FE72 		orr	r2, r2, #508
+  31 000c 42F00102 		orr	r2, r2, #1
+  32 0010 8A61     		str	r2, [r1, #24]
+  33 0012 0268     		ldr	r2, [r0]
+  34 0014 1A4E     		ldr	r6, .L2+8
+  35 0016 DA60     		str	r2, [r3, #12]
+  36 0018 8268     		ldr	r2, [r0, #8]
+  37 001a 1A4D     		ldr	r5, .L2+12
+  38 001c 5A60     		str	r2, [r3, #4]
+  39 001e 4268     		ldr	r2, [r0, #4]
+  40 0020 194C     		ldr	r4, .L2+16
+  41 0022 1A60     		str	r2, [r3]
+  42 0024 C368     		ldr	r3, [r0, #12]
+  43 0026 A1F57841 		sub	r1, r1, #63488
+  44 002a F360     		str	r3, [r6, #12]
+  45 002c 4369     		ldr	r3, [r0, #20]
+  46 002e 174A     		ldr	r2, .L2+20
+  47 0030 7360     		str	r3, [r6, #4]
+  48 0032 0769     		ldr	r7, [r0, #16]
+  49 0034 164B     		ldr	r3, .L2+24
+  50 0036 3760     		str	r7, [r6]
+  51 0038 8669     		ldr	r6, [r0, #24]
+  52 003a EE60     		str	r6, [r5, #12]
+  53 003c 066A     		ldr	r6, [r0, #32]
+  54 003e 6E60     		str	r6, [r5, #4]
+  55 0040 C669     		ldr	r6, [r0, #28]
+  56 0042 2E60     		str	r6, [r5]
+  57 0044 456A     		ldr	r5, [r0, #36]
+ARM GAS  /tmp/ccJkQuQT.s 			page 2
+
+
+  58 0046 E560     		str	r5, [r4, #12]
+  59 0048 C56A     		ldr	r5, [r0, #44]
+  60 004a 6560     		str	r5, [r4, #4]
+  61 004c 856A     		ldr	r5, [r0, #40]
+  62 004e 2560     		str	r5, [r4]
+  63 0050 046B     		ldr	r4, [r0, #48]
+  64 0052 CC60     		str	r4, [r1, #12]
+  65 0054 846B     		ldr	r4, [r0, #56]
+  66 0056 4C60     		str	r4, [r1, #4]
+  67 0058 446B     		ldr	r4, [r0, #52]
+  68 005a 0C60     		str	r4, [r1]
+  69 005c C16B     		ldr	r1, [r0, #60]
+  70 005e D160     		str	r1, [r2, #12]
+  71 0060 416C     		ldr	r1, [r0, #68]
+  72 0062 F0BC     		pop	{r4, r5, r6, r7}
+  73 0064 5160     		str	r1, [r2, #4]
+  74 0066 016C     		ldr	r1, [r0, #64]
+  75 0068 1160     		str	r1, [r2]
+  76 006a 826C     		ldr	r2, [r0, #72]
+  77 006c DA60     		str	r2, [r3, #12]
+  78 006e 026D     		ldr	r2, [r0, #80]
+  79 0070 5A60     		str	r2, [r3, #4]
+  80 0072 C26C     		ldr	r2, [r0, #76]
+  81 0074 1A60     		str	r2, [r3]
+  82 0076 7047     		bx	lr
+  83              	.L3:
+  84              		.align	2
+  85              	.L2:
+  86 0078 00100240 		.word	1073876992
+  87 007c 00080140 		.word	1073809408
+  88 0080 000C0140 		.word	1073810432
+  89 0084 00100140 		.word	1073811456
+  90 0088 00140140 		.word	1073812480
+  91 008c 001C0140 		.word	1073814528
+  92 0090 00200140 		.word	1073815552
+  93              		.size	_pal_lld_init, .-_pal_lld_init
+  94 0094 AFF30080 		.section	.text._pal_lld_setgroupmode,"ax",%progbits
+  94      AFF30080 
+  94      AFF30080 
+  95              		.align	2
+  96              		.p2align 4,,15
+  97              		.global	_pal_lld_setgroupmode
+  98              		.thumb
+  99              		.thumb_func
+ 100              		.type	_pal_lld_setgroupmode, %function
+ 101              	_pal_lld_setgroupmode:
+ 102              		@ args = 0, pretend = 0, frame = 0
+ 103              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104              		@ link register save eliminated.
+ 105 0000 032A     		cmp	r2, #3
+ 106 0002 F0B4     		push	{r4, r5, r6, r7}
+ 107 0004 2BD0     		beq	.L15
+ 108 0006 042A     		cmp	r2, #4
+ 109 0008 08BF     		it	eq
+ 110 000a 4161     		streq	r1, [r0, #20]
+ 111              	.L6:
+ 112 000c 154C     		ldr	r4, .L16
+ARM GAS  /tmp/ccJkQuQT.s 			page 3
+
+
+ 113 000e 0023     		movs	r3, #0
+ 114 0010 A75C     		ldrb	r7, [r4, r2]	@ zero_extendqisi2
+ 115 0012 1D46     		mov	r5, r3
+ 116 0014 1C46     		mov	r4, r3
+ 117 0016 1A46     		mov	r2, r3
+ 118 0018 0826     		movs	r6, #8
+ 119              	.L12:
+ 120 001a 11F0800F 		tst	r1, #128
+ 121 001e 4FEA0212 		lsl	r2, r2, #4
+ 122 0022 4FEA0313 		lsl	r3, r3, #4
+ 123 0026 4FEA0515 		lsl	r5, r5, #4
+ 124 002a 4FEA0414 		lsl	r4, r4, #4
+ 125 002e 0CBF     		ite	eq
+ 126 0030 42F00F02 		orreq	r2, r2, #15
+ 127 0034 3B43     		orrne	r3, r3, r7
+ 128 0036 11F4004F 		tst	r1, #32768
+ 129 003a 0CBF     		ite	eq
+ 130 003c 45F00F05 		orreq	r5, r5, #15
+ 131 0040 3C43     		orrne	r4, r4, r7
+ 132 0042 013E     		subs	r6, r6, #1
+ 133 0044 4FEA4101 		lsl	r1, r1, #1
+ 134 0048 E7D1     		bne	.L12
+ 135 004a 4168     		ldr	r1, [r0, #4]
+ 136 004c 0D40     		ands	r5, r5, r1
+ 137 004e 2C43     		orrs	r4, r4, r5
+ 138 0050 4460     		str	r4, [r0, #4]
+ 139 0052 0168     		ldr	r1, [r0]
+ 140 0054 F0BC     		pop	{r4, r5, r6, r7}
+ 141 0056 0A40     		ands	r2, r2, r1
+ 142 0058 1343     		orrs	r3, r3, r2
+ 143 005a 0360     		str	r3, [r0]
+ 144 005c 7047     		bx	lr
+ 145              	.L15:
+ 146 005e 0161     		str	r1, [r0, #16]
+ 147 0060 D4E7     		b	.L6
+ 148              	.L17:
+ 149 0062 00BF     		.align	2
+ 150              	.L16:
+ 151 0064 00000000 		.word	.LANCHOR0
+ 152              		.size	_pal_lld_setgroupmode, .-_pal_lld_setgroupmode
+ 153 0068 AFF30080 		.section	.rodata.cfgtab.6513,"a",%progbits
+ 153      AFF30080 
+ 154              		.align	2
+ 155              		.set	.LANCHOR0,. + 0
+ 156              		.type	cfgtab.6513, %object
+ 157              		.size	cfgtab.6513, 18
+ 158              	cfgtab.6513:
+ 159 0000 04       		.byte	4
+ 160 0001 02       		.byte	2
+ 161 0002 04       		.byte	4
+ 162 0003 08       		.byte	8
+ 163 0004 08       		.byte	8
+ 164 0005 00       		.byte	0
+ 165 0006 03       		.byte	3
+ 166 0007 07       		.byte	7
+ 167 0008 08       		.byte	8
+ 168 0009 08       		.byte	8
+ARM GAS  /tmp/ccJkQuQT.s 			page 4
+
+
+ 169 000a 08       		.byte	8
+ 170 000b 08       		.byte	8
+ 171 000c 08       		.byte	8
+ 172 000d 08       		.byte	8
+ 173 000e 08       		.byte	8
+ 174 000f 08       		.byte	8
+ 175 0010 0B       		.byte	11
+ 176 0011 0F       		.byte	15
+ 177 0012 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccJkQuQT.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 pal_lld.c
+     /tmp/ccJkQuQT.s:16     .text._pal_lld_init:00000000 $t
+     /tmp/ccJkQuQT.s:22     .text._pal_lld_init:00000000 _pal_lld_init
+     /tmp/ccJkQuQT.s:86     .text._pal_lld_init:00000078 $d
+     /tmp/ccJkQuQT.s:95     .text._pal_lld_setgroupmode:00000000 $t
+     /tmp/ccJkQuQT.s:101    .text._pal_lld_setgroupmode:00000000 _pal_lld_setgroupmode
+     /tmp/ccJkQuQT.s:151    .text._pal_lld_setgroupmode:00000064 $d
+     /tmp/ccJkQuQT.s:154    .rodata.cfgtab.6513:00000000 $d
+     /tmp/ccJkQuQT.s:158    .rodata.cfgtab.6513:00000000 cfgtab.6513
+     /tmp/ccJkQuQT.s:94     .text._pal_lld_init:00000094 $t
+     /tmp/ccJkQuQT.s:153    .text._pal_lld_setgroupmode:00000068 $t
+
+NO UNDEFINED SYMBOLS

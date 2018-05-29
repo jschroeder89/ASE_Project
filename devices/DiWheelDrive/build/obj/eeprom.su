@@ -1,0 +1,9 @@
+eeprom.cpp:9:1:amiro::EEPROM::EEPROM(const BaseFileStreamVMT*, size_t, uint8_t, uint16_t, uint8_t, amiro::I2CDriver*)	24	static
+eeprom.cpp:31:1:amiro::EEPROM::EEPROM(const BaseFileStreamVMT*, size_t, uint8_t, uint16_t, amiro::HWSPIDriver*)	24	static
+eeprom.cpp:51:1:amiro::EEPROM::~EEPROM()	0	static
+eeprom.cpp:57:1:void amiro::EEPROM::acquire()	0	static
+eeprom.cpp:69:1:void amiro::EEPROM::release()	0	static
+eeprom.cpp:81:1:static int amiro::EEPROM::geterror(void*)	0	static
+eeprom.cpp:89:1:static fileoffset_t amiro::EEPROM::getsize(void*)	0	static
+eeprom.cpp:97:1:static fileoffset_t amiro::EEPROM::getposition(void*)	0	static
+eeprom.cpp:106:1:static fileoffset_t amiro::EEPROM::lseek(void*, fileoffset_t)	0	static

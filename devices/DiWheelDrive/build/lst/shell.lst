@@ -1,0 +1,888 @@
+ARM GAS  /tmp/ccf9L3xr.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"shell.c"
+  15              		.section	.text.chprintf,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.thumb
+  19              		.thumb_func
+  20              		.type	chprintf, %function
+  21              	chprintf:
+  22              		@ args = 4, pretend = 12, frame = 8
+  23              		@ frame_needed = 0, uses_anonymous_args = 1
+  24 0000 0EB4     		push	{r1, r2, r3}
+  25 0002 00B5     		push	{lr}
+  26 0004 82B0     		sub	sp, sp, #8
+  27 0006 03AB     		add	r3, sp, #12
+  28 0008 53F8041B 		ldr	r1, [r3], #4
+  29 000c 1A46     		mov	r2, r3
+  30 000e 0193     		str	r3, [sp, #4]
+  31 0010 FFF7FEFF 		bl	chvprintf
+  32 0014 02B0     		add	sp, sp, #8
+  33              		@ sp needed
+  34 0016 5DF804EB 		ldr	lr, [sp], #4
+  35 001a 03B0     		add	sp, sp, #12
+  36 001c 7047     		bx	lr
+  37              		.size	chprintf, .-chprintf
+  38 001e 00BF     		.section	.text.cmd_systime,"ax",%progbits
+  39              		.align	2
+  40              		.p2align 4,,15
+  41              		.thumb
+  42              		.thumb_func
+  43              		.type	cmd_systime, %function
+  44              	cmd_systime:
+  45              		@ args = 0, pretend = 0, frame = 0
+  46              		@ frame_needed = 0, uses_anonymous_args = 0
+  47              		@ link register save eliminated.
+  48 0000 0029     		cmp	r1, #0
+  49 0002 03DD     		ble	.L3
+  50 0004 0449     		ldr	r1, .L5
+  51 0006 054A     		ldr	r2, .L5+4
+  52 0008 FFF7FEBF 		b	chprintf
+  53              	.L3:
+  54 000c 044B     		ldr	r3, .L5+8
+  55 000e 0549     		ldr	r1, .L5+12
+  56 0010 DA68     		ldr	r2, [r3, #12]
+  57 0012 FFF7FEBF 		b	chprintf
+ARM GAS  /tmp/ccf9L3xr.s 			page 2
+
+
+  58              	.L6:
+  59 0016 00BF     		.align	2
+  60              	.L5:
+  61 0018 00000000 		.word	.LC0
+  62 001c 0C000000 		.word	.LC1
+  63 0020 00000000 		.word	vtlist
+  64 0024 14000000 		.word	.LC2
+  65              		.size	cmd_systime, .-cmd_systime
+  66 0028 AFF30080 		.section	.text.cmd_info,"ax",%progbits
+  66      AFF30080 
+  67              		.align	2
+  68              		.p2align 4,,15
+  69              		.thumb
+  70              		.thumb_func
+  71              		.type	cmd_info, %function
+  72              	cmd_info:
+  73              		@ args = 0, pretend = 0, frame = 0
+  74              		@ frame_needed = 0, uses_anonymous_args = 0
+  75 0000 10B5     		push	{r4, lr}
+  76 0002 0029     		cmp	r1, #0
+  77 0004 82B0     		sub	sp, sp, #8
+  78 0006 0446     		mov	r4, r0
+  79 0008 06DD     		ble	.L8
+  80 000a 1949     		ldr	r1, .L9
+  81 000c 194A     		ldr	r2, .L9+4
+  82 000e 02B0     		add	sp, sp, #8
+  83              		@ sp needed
+  84 0010 BDE81040 		pop	{r4, lr}
+  85 0014 FFF7FEBF 		b	chprintf
+  86              	.L8:
+  87 0018 1749     		ldr	r1, .L9+8
+  88 001a 184A     		ldr	r2, .L9+12
+  89 001c FFF7FEFF 		bl	chprintf
+  90 0020 2046     		mov	r0, r4
+  91 0022 1749     		ldr	r1, .L9+16
+  92 0024 174A     		ldr	r2, .L9+20
+  93 0026 FFF7FEFF 		bl	chprintf
+  94 002a 2046     		mov	r0, r4
+  95 002c 1649     		ldr	r1, .L9+24
+  96 002e 174A     		ldr	r2, .L9+28
+  97 0030 FFF7FEFF 		bl	chprintf
+  98 0034 2046     		mov	r0, r4
+  99 0036 1649     		ldr	r1, .L9+32
+ 100 0038 164A     		ldr	r2, .L9+36
+ 101 003a FFF7FEFF 		bl	chprintf
+ 102 003e 2046     		mov	r0, r4
+ 103 0040 1549     		ldr	r1, .L9+40
+ 104 0042 164A     		ldr	r2, .L9+44
+ 105 0044 FFF7FEFF 		bl	chprintf
+ 106 0048 2046     		mov	r0, r4
+ 107 004a 1549     		ldr	r1, .L9+48
+ 108 004c 154A     		ldr	r2, .L9+52
+ 109 004e FFF7FEFF 		bl	chprintf
+ 110 0052 2046     		mov	r0, r4
+ 111 0054 1449     		ldr	r1, .L9+56
+ 112 0056 154A     		ldr	r2, .L9+60
+ 113 0058 FFF7FEFF 		bl	chprintf
+ARM GAS  /tmp/ccf9L3xr.s 			page 3
+
+
+ 114 005c 144B     		ldr	r3, .L9+64
+ 115 005e 2046     		mov	r0, r4
+ 116 0060 0093     		str	r3, [sp]
+ 117 0062 1449     		ldr	r1, .L9+68
+ 118 0064 144A     		ldr	r2, .L9+72
+ 119 0066 154B     		ldr	r3, .L9+76
+ 120 0068 FFF7FEFF 		bl	chprintf
+ 121 006c 02B0     		add	sp, sp, #8
+ 122              		@ sp needed
+ 123 006e 10BD     		pop	{r4, pc}
+ 124              	.L10:
+ 125              		.align	2
+ 126              	.L9:
+ 127 0070 00000000 		.word	.LC0
+ 128 0074 1C000000 		.word	.LC3
+ 129 0078 24000000 		.word	.LC4
+ 130 007c 38000000 		.word	.LC5
+ 131 0080 40000000 		.word	.LC6
+ 132 0084 54000000 		.word	.LC7
+ 133 0088 9C000000 		.word	.LC8
+ 134 008c B0000000 		.word	.LC9
+ 135 0090 B8000000 		.word	.LC10
+ 136 0094 CC000000 		.word	.LC11
+ 137 0098 D8000000 		.word	.LC12
+ 138 009c EC000000 		.word	.LC13
+ 139 00a0 04010000 		.word	.LC14
+ 140 00a4 18010000 		.word	.LC15
+ 141 00a8 40010000 		.word	.LC16
+ 142 00ac 54010000 		.word	.LC17
+ 143 00b0 90010000 		.word	.LC21
+ 144 00b4 68010000 		.word	.LC18
+ 145 00b8 80010000 		.word	.LC19
+ 146 00bc 8C010000 		.word	.LC20
+ 147              		.size	cmd_info, .-cmd_info
+ 148              		.section	.text._strtok.constprop.2,"ax",%progbits
+ 149              		.align	2
+ 150              		.p2align 4,,15
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.type	_strtok.constprop.2, %function
+ 154              	_strtok.constprop.2:
+ 155              		@ args = 0, pretend = 0, frame = 0
+ 156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 157 0000 38B5     		push	{r3, r4, r5, lr}
+ 158 0002 0446     		mov	r4, r0
+ 159 0004 0D46     		mov	r5, r1
+ 160 0006 90B1     		cbz	r0, .L12
+ 161 0008 2860     		str	r0, [r5]
+ 162              	.L13:
+ 163 000a 2046     		mov	r0, r4
+ 164 000c 0B49     		ldr	r1, .L22
+ 165 000e FFF7FEFF 		bl	strspn
+ 166 0012 0444     		add	r4, r4, r0
+ 167 0014 2046     		mov	r0, r4
+ 168 0016 0949     		ldr	r1, .L22
+ 169 0018 FFF7FEFF 		bl	strpbrk
+ 170 001c 60B1     		cbz	r0, .L21
+ARM GAS  /tmp/ccf9L3xr.s 			page 4
+
+
+ 171 001e 421C     		adds	r2, r0, #1
+ 172 0020 0023     		movs	r3, #0
+ 173 0022 2A60     		str	r2, [r5]
+ 174 0024 0370     		strb	r3, [r0]
+ 175              	.L16:
+ 176 0026 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 177 0028 23B1     		cbz	r3, .L17
+ 178 002a 2046     		mov	r0, r4
+ 179 002c 38BD     		pop	{r3, r4, r5, pc}
+ 180              	.L12:
+ 181 002e 0C68     		ldr	r4, [r1]
+ 182 0030 002C     		cmp	r4, #0
+ 183 0032 EAD1     		bne	.L13
+ 184              	.L17:
+ 185 0034 0020     		movs	r0, #0
+ 186 0036 38BD     		pop	{r3, r4, r5, pc}
+ 187              	.L21:
+ 188 0038 2860     		str	r0, [r5]
+ 189 003a F4E7     		b	.L16
+ 190              	.L23:
+ 191              		.align	2
+ 192              	.L22:
+ 193 003c 9C010000 		.word	.LC22
+ 194              		.size	_strtok.constprop.2, .-_strtok.constprop.2
+ 195              		.section	.text.shellInit,"ax",%progbits
+ 196              		.align	2
+ 197              		.p2align 4,,15
+ 198              		.global	shellInit
+ 199              		.thumb
+ 200              		.thumb_func
+ 201              		.type	shellInit, %function
+ 202              	shellInit:
+ 203              		@ args = 0, pretend = 0, frame = 0
+ 204              		@ frame_needed = 0, uses_anonymous_args = 0
+ 205              		@ link register save eliminated.
+ 206 0000 014B     		ldr	r3, .L25
+ 207 0002 1B60     		str	r3, [r3]
+ 208 0004 7047     		bx	lr
+ 209              	.L26:
+ 210 0006 00BF     		.align	2
+ 211              	.L25:
+ 212 0008 00000000 		.word	.LANCHOR0
+ 213              		.size	shellInit, .-shellInit
+ 214 000c AFF30080 		.section	.text.shellExit,"ax",%progbits
+ 215              		.align	2
+ 216              		.p2align 4,,15
+ 217              		.global	shellExit
+ 218              		.thumb
+ 219              		.thumb_func
+ 220              		.type	shellExit, %function
+ 221              	shellExit:
+ 222              		@ args = 0, pretend = 0, frame = 0
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224 0000 10B5     		push	{r4, lr}
+ 225 0002 2023     		movs	r3, #32
+ 226 0004 0446     		mov	r4, r0
+ 227              	@ 222 "../../../ChibiOS/os/various/shell.c" 1
+ARM GAS  /tmp/ccf9L3xr.s 			page 5
+
+
+ 228 0006 83F31188 		msr     BASEPRI, r3
+ 229              	@ 0 "" 2
+ 230              		.thumb
+ 231 000a FFF7FEFF 		bl	dbg_check_lock
+ 232 000e 0448     		ldr	r0, .L28
+ 233 0010 0021     		movs	r1, #0
+ 234 0012 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+ 235 0016 2046     		mov	r0, r4
+ 236 0018 BDE81040 		pop	{r4, lr}
+ 237 001c FFF7FEBF 		b	chThdExitS
+ 238              	.L29:
+ 239              		.align	2
+ 240              	.L28:
+ 241 0020 00000000 		.word	.LANCHOR0
+ 242              		.size	shellExit, .-shellExit
+ 243 0024 AFF30080 		.section	.text.shellCreate,"ax",%progbits
+ 243      AFF30080 
+ 243      AFF30080 
+ 244              		.align	2
+ 245              		.p2align 4,,15
+ 246              		.global	shellCreate
+ 247              		.thumb
+ 248              		.thumb_func
+ 249              		.type	shellCreate, %function
+ 250              	shellCreate:
+ 251              		@ args = 0, pretend = 0, frame = 0
+ 252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 253 0000 00B5     		push	{lr}
+ 254 0002 83B0     		sub	sp, sp, #12
+ 255 0004 0090     		str	r0, [sp]
+ 256 0006 034B     		ldr	r3, .L31
+ 257 0008 0020     		movs	r0, #0
+ 258 000a FFF7FEFF 		bl	chThdCreateFromHeap
+ 259 000e 03B0     		add	sp, sp, #12
+ 260              		@ sp needed
+ 261 0010 5DF804FB 		ldr	pc, [sp], #4
+ 262              	.L32:
+ 263              		.align	2
+ 264              	.L31:
+ 265 0014 00000000 		.word	shell_thread
+ 266              		.size	shellCreate, .-shellCreate
+ 267 0018 AFF30080 		.section	.text.shellCreateStatic,"ax",%progbits
+ 267      AFF30080 
+ 268              		.align	2
+ 269              		.p2align 4,,15
+ 270              		.global	shellCreateStatic
+ 271              		.thumb
+ 272              		.thumb_func
+ 273              		.type	shellCreateStatic, %function
+ 274              	shellCreateStatic:
+ 275              		@ args = 0, pretend = 0, frame = 0
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277 0000 00B5     		push	{lr}
+ 278 0002 83B0     		sub	sp, sp, #12
+ 279 0004 0090     		str	r0, [sp]
+ 280 0006 0846     		mov	r0, r1
+ 281 0008 1146     		mov	r1, r2
+ARM GAS  /tmp/ccf9L3xr.s 			page 6
+
+
+ 282 000a 1A46     		mov	r2, r3
+ 283 000c 024B     		ldr	r3, .L34
+ 284 000e FFF7FEFF 		bl	chThdCreateStatic
+ 285 0012 03B0     		add	sp, sp, #12
+ 286              		@ sp needed
+ 287 0014 5DF804FB 		ldr	pc, [sp], #4
+ 288              	.L35:
+ 289              		.align	2
+ 290              	.L34:
+ 291 0018 00000000 		.word	shell_thread
+ 292              		.size	shellCreateStatic, .-shellCreateStatic
+ 293 001c AFF30080 		.section	.text.shellGetLine,"ax",%progbits
+ 294              		.align	2
+ 295              		.p2align 4,,15
+ 296              		.global	shellGetLine
+ 297              		.thumb
+ 298              		.thumb_func
+ 299              		.type	shellGetLine, %function
+ 300              	shellGetLine:
+ 301              		@ args = 0, pretend = 0, frame = 8
+ 302              		@ frame_needed = 0, uses_anonymous_args = 0
+ 303 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 304 0002 013A     		subs	r2, r2, #1
+ 305 0004 83B0     		sub	sp, sp, #12
+ 306 0006 0E46     		mov	r6, r1
+ 307 0008 8F18     		adds	r7, r1, r2
+ 308 000a 0446     		mov	r4, r0
+ 309 000c 0D46     		mov	r5, r1
+ 310              	.L37:
+ 311 000e 2368     		ldr	r3, [r4]
+ 312 0010 2046     		mov	r0, r4
+ 313 0012 5B68     		ldr	r3, [r3, #4]
+ 314 0014 0DF10701 		add	r1, sp, #7
+ 315 0018 0122     		movs	r2, #1
+ 316 001a 9847     		blx	r3
+ 317 001c 50B3     		cbz	r0, .L46
+ 318 001e 9DF80710 		ldrb	r1, [sp, #7]	@ zero_extendqisi2
+ 319 0022 0429     		cmp	r1, #4
+ 320 0024 29D0     		beq	.L50
+ 321 0026 0829     		cmp	r1, #8
+ 322 0028 11D0     		beq	.L40
+ 323 002a 7F29     		cmp	r1, #127
+ 324 002c 0FD0     		beq	.L40
+ 325 002e 0D29     		cmp	r1, #13
+ 326 0030 2AD0     		beq	.L51
+ 327 0032 1F29     		cmp	r1, #31
+ 328 0034 EBD9     		bls	.L37
+ 329 0036 BD42     		cmp	r5, r7
+ 330 0038 E9D2     		bcs	.L37
+ 331 003a 2368     		ldr	r3, [r4]
+ 332 003c 2046     		mov	r0, r4
+ 333 003e 9B68     		ldr	r3, [r3, #8]
+ 334 0040 9847     		blx	r3
+ 335 0042 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 336 0046 0135     		adds	r5, r5, #1
+ 337 0048 05F8013C 		strb	r3, [r5, #-1]
+ 338 004c DFE7     		b	.L37
+ARM GAS  /tmp/ccf9L3xr.s 			page 7
+
+
+ 339              	.L40:
+ 340 004e B542     		cmp	r5, r6
+ 341 0050 DDD0     		beq	.L37
+ 342 0052 2368     		ldr	r3, [r4]
+ 343 0054 2046     		mov	r0, r4
+ 344 0056 9B68     		ldr	r3, [r3, #8]
+ 345 0058 9847     		blx	r3
+ 346 005a 2368     		ldr	r3, [r4]
+ 347 005c 2046     		mov	r0, r4
+ 348 005e 9B68     		ldr	r3, [r3, #8]
+ 349 0060 2021     		movs	r1, #32
+ 350 0062 9847     		blx	r3
+ 351 0064 2368     		ldr	r3, [r4]
+ 352 0066 2046     		mov	r0, r4
+ 353 0068 9B68     		ldr	r3, [r3, #8]
+ 354 006a 9DF80710 		ldrb	r1, [sp, #7]	@ zero_extendqisi2
+ 355 006e 013D     		subs	r5, r5, #1
+ 356 0070 9847     		blx	r3
+ 357 0072 CCE7     		b	.L37
+ 358              	.L46:
+ 359 0074 0120     		movs	r0, #1
+ 360 0076 03B0     		add	sp, sp, #12
+ 361              		@ sp needed
+ 362 0078 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 363              	.L50:
+ 364 007a 2046     		mov	r0, r4
+ 365 007c 0649     		ldr	r1, .L52
+ 366 007e FFF7FEFF 		bl	chprintf
+ 367 0082 0120     		movs	r0, #1
+ 368 0084 03B0     		add	sp, sp, #12
+ 369              		@ sp needed
+ 370 0086 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 371              	.L51:
+ 372 0088 2046     		mov	r0, r4
+ 373 008a 0449     		ldr	r1, .L52+4
+ 374 008c FFF7FEFF 		bl	chprintf
+ 375 0090 0020     		movs	r0, #0
+ 376 0092 2870     		strb	r0, [r5]
+ 377 0094 03B0     		add	sp, sp, #12
+ 378              		@ sp needed
+ 379 0096 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 380              	.L53:
+ 381              		.align	2
+ 382              	.L52:
+ 383 0098 A0010000 		.word	.LC23
+ 384 009c A4010000 		.word	.LC24
+ 385              		.size	shellGetLine, .-shellGetLine
+ 386              		.section	.text.shell_thread,"ax",%progbits
+ 387              		.align	2
+ 388              		.p2align 4,,15
+ 389              		.thumb
+ 390              		.thumb_func
+ 391              		.type	shell_thread, %function
+ 392              	shell_thread:
+ 393              		@ args = 0, pretend = 0, frame = 88
+ 394              		@ frame_needed = 0, uses_anonymous_args = 0
+ 395 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ARM GAS  /tmp/ccf9L3xr.s 			page 8
+
+
+ 396 0004 574B     		ldr	r3, .L110
+ 397 0006 0668     		ldr	r6, [r0]
+ 398 0008 9B69     		ldr	r3, [r3, #24]
+ 399 000a 574A     		ldr	r2, .L110+4
+ 400 000c D0F80480 		ldr	r8, [r0, #4]
+ 401 0010 96B0     		sub	sp, sp, #88
+ 402 0012 3046     		mov	r0, r6
+ 403 0014 9A61     		str	r2, [r3, #24]
+ 404 0016 5549     		ldr	r1, .L110+8
+ 405 0018 FFF7FEFF 		bl	chprintf
+ 406              	.L55:
+ 407 001c 3046     		mov	r0, r6
+ 408 001e 5449     		ldr	r1, .L110+12
+ 409 0020 FFF7FEFF 		bl	chprintf
+ 410 0024 3046     		mov	r0, r6
+ 411 0026 06A9     		add	r1, sp, #24
+ 412 0028 4022     		movs	r2, #64
+ 413 002a FFF7FEFF 		bl	shellGetLine
+ 414 002e 0446     		mov	r4, r0
+ 415 0030 0028     		cmp	r0, #0
+ 416 0032 2FD1     		bne	.L106
+ 417 0034 6946     		mov	r1, sp
+ 418 0036 06A8     		add	r0, sp, #24
+ 419 0038 FFF7FEFF 		bl	_strtok.constprop.2
+ 420 003c 6946     		mov	r1, sp
+ 421 003e 0746     		mov	r7, r0
+ 422 0040 0020     		movs	r0, #0
+ 423 0042 6D46     		mov	r5, sp
+ 424 0044 FFF7FEFF 		bl	_strtok.constprop.2
+ 425 0048 50B1     		cbz	r0, .L107
+ 426              	.L61:
+ 427 004a 042C     		cmp	r4, #4
+ 428 004c 1BD0     		beq	.L108
+ 429 004e 45F8040F 		str	r0, [r5, #4]!
+ 430 0052 6946     		mov	r1, sp
+ 431 0054 0020     		movs	r0, #0
+ 432 0056 0134     		adds	r4, r4, #1
+ 433 0058 FFF7FEFF 		bl	_strtok.constprop.2
+ 434 005c 0028     		cmp	r0, #0
+ 435 005e F4D1     		bne	.L61
+ 436              	.L107:
+ 437 0060 16AA     		add	r2, sp, #88
+ 438 0062 02EB8403 		add	r3, r2, r4, lsl #2
+ 439 0066 43F8540C 		str	r0, [r3, #-84]
+ 440 006a 002F     		cmp	r7, #0
+ 441 006c D6D0     		beq	.L55
+ 442 006e 3846     		mov	r0, r7
+ 443 0070 4049     		ldr	r1, .L110+16
+ 444 0072 FFF7FEFF 		bl	strcasecmp
+ 445 0076 C0B9     		cbnz	r0, .L62
+ 446 0078 84B1     		cbz	r4, .L57
+ 447 007a 3046     		mov	r0, r6
+ 448 007c 3E49     		ldr	r1, .L110+20
+ 449 007e 3D4A     		ldr	r2, .L110+16
+ 450 0080 FFF7FEFF 		bl	chprintf
+ 451 0084 CAE7     		b	.L55
+ 452              	.L108:
+ARM GAS  /tmp/ccf9L3xr.s 			page 9
+
+
+ 453 0086 3046     		mov	r0, r6
+ 454 0088 3C49     		ldr	r1, .L110+24
+ 455 008a FFF7FEFF 		bl	chprintf
+ 456 008e 0023     		movs	r3, #0
+ 457 0090 0593     		str	r3, [sp, #20]
+ 458 0092 C3E7     		b	.L55
+ 459              	.L106:
+ 460 0094 3046     		mov	r0, r6
+ 461 0096 3A49     		ldr	r1, .L110+28
+ 462 0098 FFF7FEFF 		bl	chprintf
+ 463              	.L57:
+ 464 009c 0020     		movs	r0, #0
+ 465 009e FFF7FEFF 		bl	shellExit
+ 466 00a2 0020     		movs	r0, #0
+ 467 00a4 16B0     		add	sp, sp, #88
+ 468              		@ sp needed
+ 469 00a6 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 470              	.L62:
+ 471 00aa 3846     		mov	r0, r7
+ 472 00ac 3549     		ldr	r1, .L110+32
+ 473 00ae FFF7FEFF 		bl	strcasecmp
+ 474 00b2 30B9     		cbnz	r0, .L109
+ 475 00b4 3046     		mov	r0, r6
+ 476 00b6 BCB1     		cbz	r4, .L67
+ 477 00b8 2F49     		ldr	r1, .L110+20
+ 478 00ba 324A     		ldr	r2, .L110+32
+ 479 00bc FFF7FEFF 		bl	chprintf
+ 480 00c0 ACE7     		b	.L55
+ 481              	.L109:
+ 482 00c2 314D     		ldr	r5, .L110+36
+ 483 00c4 2868     		ldr	r0, [r5]
+ 484 00c6 20B9     		cbnz	r0, .L75
+ 485 00c8 31E0     		b	.L66
+ 486              	.L74:
+ 487 00ca 55F8080F 		ldr	r0, [r5, #8]!
+ 488 00ce 0028     		cmp	r0, #0
+ 489 00d0 2DD0     		beq	.L66
+ 490              	.L75:
+ 491 00d2 3946     		mov	r1, r7
+ 492 00d4 FFF7FEFF 		bl	strcasecmp
+ 493 00d8 0028     		cmp	r0, #0
+ 494 00da F6D1     		bne	.L74
+ 495              	.L105:
+ 496 00dc 6B68     		ldr	r3, [r5, #4]
+ 497 00de 2146     		mov	r1, r4
+ 498 00e0 3046     		mov	r0, r6
+ 499 00e2 01AA     		add	r2, sp, #4
+ 500 00e4 9847     		blx	r3
+ 501 00e6 99E7     		b	.L55
+ 502              	.L67:
+ 503 00e8 274D     		ldr	r5, .L110+36
+ 504 00ea 2849     		ldr	r1, .L110+40
+ 505 00ec FFF7FEFF 		bl	chprintf
+ 506 00f0 2A68     		ldr	r2, [r5]
+ 507 00f2 2C46     		mov	r4, r5
+ 508 00f4 3AB1     		cbz	r2, .L71
+ 509              	.L72:
+ARM GAS  /tmp/ccf9L3xr.s 			page 10
+
+
+ 510 00f6 3046     		mov	r0, r6
+ 511 00f8 2549     		ldr	r1, .L110+44
+ 512 00fa FFF7FEFF 		bl	chprintf
+ 513 00fe 54F8082F 		ldr	r2, [r4, #8]!
+ 514 0102 002A     		cmp	r2, #0
+ 515 0104 F7D1     		bne	.L72
+ 516              	.L71:
+ 517 0106 B8F1000F 		cmp	r8, #0
+ 518 010a 0BD0     		beq	.L70
+ 519 010c D8F80020 		ldr	r2, [r8]
+ 520 0110 42B1     		cbz	r2, .L70
+ 521 0112 4446     		mov	r4, r8
+ 522              	.L73:
+ 523 0114 3046     		mov	r0, r6
+ 524 0116 1E49     		ldr	r1, .L110+44
+ 525 0118 FFF7FEFF 		bl	chprintf
+ 526 011c 54F8082F 		ldr	r2, [r4, #8]!
+ 527 0120 002A     		cmp	r2, #0
+ 528 0122 F7D1     		bne	.L73
+ 529              	.L70:
+ 530 0124 3046     		mov	r0, r6
+ 531 0126 1B49     		ldr	r1, .L110+48
+ 532 0128 FFF7FEFF 		bl	chprintf
+ 533 012c 76E7     		b	.L55
+ 534              	.L66:
+ 535 012e B8F1000F 		cmp	r8, #0
+ 536 0132 0DD0     		beq	.L78
+ 537 0134 D8F80000 		ldr	r0, [r8]
+ 538 0138 50B1     		cbz	r0, .L78
+ 539 013a 4546     		mov	r5, r8
+ 540 013c 02E0     		b	.L79
+ 541              	.L76:
+ 542 013e 55F8080F 		ldr	r0, [r5, #8]!
+ 543 0142 28B1     		cbz	r0, .L78
+ 544              	.L79:
+ 545 0144 3946     		mov	r1, r7
+ 546 0146 FFF7FEFF 		bl	strcasecmp
+ 547 014a 0028     		cmp	r0, #0
+ 548 014c F7D1     		bne	.L76
+ 549 014e C5E7     		b	.L105
+ 550              	.L78:
+ 551 0150 3046     		mov	r0, r6
+ 552 0152 3A46     		mov	r2, r7
+ 553 0154 1049     		ldr	r1, .L110+52
+ 554 0156 FFF7FEFF 		bl	chprintf
+ 555 015a 3046     		mov	r0, r6
+ 556 015c 0F49     		ldr	r1, .L110+56
+ 557 015e FFF7FEFF 		bl	chprintf
+ 558 0162 5BE7     		b	.L55
+ 559              	.L111:
+ 560              		.align	2
+ 561              	.L110:
+ 562 0164 00000000 		.word	rlist
+ 563 0168 A8010000 		.word	.LC25
+ 564 016c B0010000 		.word	.LC26
+ 565 0170 C8010000 		.word	.LC27
+ 566 0174 F4010000 		.word	.LC30
+ARM GAS  /tmp/ccf9L3xr.s 			page 11
+
+
+ 567 0178 00000000 		.word	.LC0
+ 568 017c DC010000 		.word	.LC29
+ 569 0180 D0010000 		.word	.LC28
+ 570 0184 FC010000 		.word	.LC31
+ 571 0188 00000000 		.word	.LANCHOR1
+ 572 018c 04020000 		.word	.LC32
+ 573 0190 1C020000 		.word	.LC33
+ 574 0194 A4010000 		.word	.LC24
+ 575 0198 20020000 		.word	.LC34
+ 576 019c 24020000 		.word	.LC35
+ 577              		.size	shell_thread, .-shell_thread
+ 578              		.global	shell_terminated
+ 579              		.section	.data.local_commands,"aw",%progbits
+ 580              		.align	2
+ 581              		.set	.LANCHOR1,. + 0
+ 582              		.type	local_commands, %object
+ 583              		.size	local_commands, 24
+ 584              	local_commands:
+ 585 0000 1C000000 		.word	.LC3
+ 586 0004 00000000 		.word	cmd_info
+ 587 0008 0C000000 		.word	.LC1
+ 588 000c 00000000 		.word	cmd_systime
+ 589 0010 00000000 		.word	0
+ 590 0014 00000000 		.word	0
+ 591              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 592              		.align	2
+ 593              	.LC0:
+ 594 0000 55736167 		.ascii	"Usage: %s\015\012\000"
+ 594      653A2025 
+ 594      730D0A00 
+ 595              	.LC1:
+ 596 000c 73797374 		.ascii	"systime\000"
+ 596      696D6500 
+ 597              	.LC2:
+ 598 0014 256C750D 		.ascii	"%lu\015\012\000"
+ 598      0A00
+ 599 001a 0000     		.space	2
+ 600              	.LC3:
+ 601 001c 696E666F 		.ascii	"info\000"
+ 601      00
+ 602 0021 000000   		.space	3
+ 603              	.LC4:
+ 604 0024 4B65726E 		.ascii	"Kernel:       %s\015\012\000"
+ 604      656C3A20 
+ 604      20202020 
+ 604      20202573 
+ 604      0D0A00
+ 605 0037 00       		.space	1
+ 606              	.LC5:
+ 607 0038 322E362E 		.ascii	"2.6.8\000"
+ 607      3800
+ 608 003e 0000     		.space	2
+ 609              	.LC6:
+ 610 0040 436F6D70 		.ascii	"Compiler:     %s\015\012\000"
+ 610      696C6572 
+ 610      3A202020 
+ 610      20202573 
+ARM GAS  /tmp/ccf9L3xr.s 			page 12
+
+
+ 610      0D0A00
+ 611 0053 00       		.space	1
+ 612              	.LC7:
+ 613 0054 47434320 		.ascii	"GCC 4.8.3 20140228 (release) [ARM/embedded-4_8-bran"
+ 613      342E382E 
+ 613      33203230 
+ 613      31343032 
+ 613      32382028 
+ 614 0087 63682072 		.ascii	"ch revision 208322]\000"
+ 614      65766973 
+ 614      696F6E20 
+ 614      32303833 
+ 614      32325D00 
+ 615 009b 00       		.space	1
+ 616              	.LC8:
+ 617 009c 41726368 		.ascii	"Architecture: %s\015\012\000"
+ 617      69746563 
+ 617      74757265 
+ 617      3A202573 
+ 617      0D0A00
+ 618 00af 00       		.space	1
+ 619              	.LC9:
+ 620 00b0 41524D76 		.ascii	"ARMv7-M\000"
+ 620      372D4D00 
+ 621              	.LC10:
+ 622 00b8 436F7265 		.ascii	"Core Variant: %s\015\012\000"
+ 622      20566172 
+ 622      69616E74 
+ 622      3A202573 
+ 622      0D0A00
+ 623 00cb 00       		.space	1
+ 624              	.LC11:
+ 625 00cc 436F7274 		.ascii	"Cortex-M3\000"
+ 625      65782D4D 
+ 625      3300
+ 626 00d6 0000     		.space	2
+ 627              	.LC12:
+ 628 00d8 506F7274 		.ascii	"Port Info:    %s\015\012\000"
+ 628      20496E66 
+ 628      6F3A2020 
+ 628      20202573 
+ 628      0D0A00
+ 629 00eb 00       		.space	1
+ 630              	.LC13:
+ 631 00ec 41647661 		.ascii	"Advanced kernel mode\000"
+ 631      6E636564 
+ 631      206B6572 
+ 631      6E656C20 
+ 631      6D6F6465 
+ 632 0101 000000   		.space	3
+ 633              	.LC14:
+ 634 0104 506C6174 		.ascii	"Platform:     %s\015\012\000"
+ 634      666F726D 
+ 634      3A202020 
+ 634      20202573 
+ 634      0D0A00
+ 635 0117 00       		.space	1
+ARM GAS  /tmp/ccf9L3xr.s 			page 13
+
+
+ 636              	.LC15:
+ 637 0118 53544D33 		.ascii	"STM32F10x Performance Line High Density\000"
+ 637      32463130 
+ 637      78205065 
+ 637      72666F72 
+ 637      6D616E63 
+ 638              	.LC16:
+ 639 0140 426F6172 		.ascii	"Board:        %s\015\012\000"
+ 639      643A2020 
+ 639      20202020 
+ 639      20202573 
+ 639      0D0A00
+ 640 0153 00       		.space	1
+ 641              	.LC17:
+ 642 0154 414D6952 		.ascii	"AMiRo DiWheelDrive\000"
+ 642      6F204469 
+ 642      57686565 
+ 642      6C447269 
+ 642      766500
+ 643 0167 00       		.space	1
+ 644              	.LC18:
+ 645 0168 4275696C 		.ascii	"Build time:   %s%s%s\015\012\000"
+ 645      64207469 
+ 645      6D653A20 
+ 645      20202573 
+ 645      25732573 
+ 646 017f 00       		.space	1
+ 647              	.LC19:
+ 648 0180 41707220 		.ascii	"Apr 17 2018\000"
+ 648      31372032 
+ 648      30313800 
+ 649              	.LC20:
+ 650 018c 202D2000 		.ascii	" - \000"
+ 651              	.LC21:
+ 652 0190 31363A34 		.ascii	"16:41:20\000"
+ 652      313A3230 
+ 652      00
+ 653 0199 000000   		.space	3
+ 654              	.LC22:
+ 655 019c 200900   		.ascii	" \011\000"
+ 656 019f 00       		.space	1
+ 657              	.LC23:
+ 658 01a0 5E4400   		.ascii	"^D\000"
+ 659 01a3 00       		.space	1
+ 660              	.LC24:
+ 661 01a4 0D0A00   		.ascii	"\015\012\000"
+ 662 01a7 00       		.space	1
+ 663              	.LC25:
+ 664 01a8 7368656C 		.ascii	"shell\000"
+ 664      6C00
+ 665 01ae 0000     		.space	2
+ 666              	.LC26:
+ 667 01b0 0D0A4368 		.ascii	"\015\012ChibiOS/RT Shell\015\012\000"
+ 667      6962694F 
+ 667      532F5254 
+ 667      20536865 
+ 667      6C6C0D0A 
+ARM GAS  /tmp/ccf9L3xr.s 			page 14
+
+
+ 668 01c5 000000   		.space	3
+ 669              	.LC27:
+ 670 01c8 63683E20 		.ascii	"ch> \000"
+ 670      00
+ 671 01cd 000000   		.space	3
+ 672              	.LC28:
+ 673 01d0 0D0A6C6F 		.ascii	"\015\012logout\000"
+ 673      676F7574 
+ 673      00
+ 674 01d9 000000   		.space	3
+ 675              	.LC29:
+ 676 01dc 746F6F20 		.ascii	"too many arguments\015\012\000"
+ 676      6D616E79 
+ 676      20617267 
+ 676      756D656E 
+ 676      74730D0A 
+ 677 01f1 000000   		.space	3
+ 678              	.LC30:
+ 679 01f4 65786974 		.ascii	"exit\000"
+ 679      00
+ 680 01f9 000000   		.space	3
+ 681              	.LC31:
+ 682 01fc 68656C70 		.ascii	"help\000"
+ 682      00
+ 683 0201 000000   		.space	3
+ 684              	.LC32:
+ 685 0204 436F6D6D 		.ascii	"Commands: help exit \000"
+ 685      616E6473 
+ 685      3A206865 
+ 685      6C702065 
+ 685      78697420 
+ 686 0219 000000   		.space	3
+ 687              	.LC33:
+ 688 021c 25732000 		.ascii	"%s \000"
+ 689              	.LC34:
+ 690 0220 257300   		.ascii	"%s\000"
+ 691 0223 00       		.space	1
+ 692              	.LC35:
+ 693 0224 203F0D0A 		.ascii	" ?\015\012\000"
+ 693      00
+ 694 0229 000000   		.section	.bss.shell_terminated,"aw",%nobits
+ 695              		.align	2
+ 696              		.set	.LANCHOR0,. + 0
+ 697              		.type	shell_terminated, %object
+ 698              		.size	shell_terminated, 4
+ 699              	shell_terminated:
+ 700 0000 00000000 		.space	4
+ 701              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccf9L3xr.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 shell.c
+     /tmp/ccf9L3xr.s:16     .text.chprintf:00000000 $t
+     /tmp/ccf9L3xr.s:21     .text.chprintf:00000000 chprintf
+     /tmp/ccf9L3xr.s:39     .text.cmd_systime:00000000 $t
+     /tmp/ccf9L3xr.s:44     .text.cmd_systime:00000000 cmd_systime
+     /tmp/ccf9L3xr.s:61     .text.cmd_systime:00000018 $d
+     /tmp/ccf9L3xr.s:67     .text.cmd_info:00000000 $t
+     /tmp/ccf9L3xr.s:72     .text.cmd_info:00000000 cmd_info
+     /tmp/ccf9L3xr.s:127    .text.cmd_info:00000070 $d
+     /tmp/ccf9L3xr.s:149    .text._strtok.constprop.2:00000000 $t
+     /tmp/ccf9L3xr.s:154    .text._strtok.constprop.2:00000000 _strtok.constprop.2
+     /tmp/ccf9L3xr.s:193    .text._strtok.constprop.2:0000003c $d
+     /tmp/ccf9L3xr.s:196    .text.shellInit:00000000 $t
+     /tmp/ccf9L3xr.s:202    .text.shellInit:00000000 shellInit
+     /tmp/ccf9L3xr.s:212    .text.shellInit:00000008 $d
+     /tmp/ccf9L3xr.s:215    .text.shellExit:00000000 $t
+     /tmp/ccf9L3xr.s:221    .text.shellExit:00000000 shellExit
+     /tmp/ccf9L3xr.s:241    .text.shellExit:00000020 $d
+     /tmp/ccf9L3xr.s:244    .text.shellCreate:00000000 $t
+     /tmp/ccf9L3xr.s:250    .text.shellCreate:00000000 shellCreate
+     /tmp/ccf9L3xr.s:265    .text.shellCreate:00000014 $d
+     /tmp/ccf9L3xr.s:392    .text.shell_thread:00000000 shell_thread
+     /tmp/ccf9L3xr.s:268    .text.shellCreateStatic:00000000 $t
+     /tmp/ccf9L3xr.s:274    .text.shellCreateStatic:00000000 shellCreateStatic
+     /tmp/ccf9L3xr.s:291    .text.shellCreateStatic:00000018 $d
+     /tmp/ccf9L3xr.s:294    .text.shellGetLine:00000000 $t
+     /tmp/ccf9L3xr.s:300    .text.shellGetLine:00000000 shellGetLine
+     /tmp/ccf9L3xr.s:383    .text.shellGetLine:00000098 $d
+     /tmp/ccf9L3xr.s:387    .text.shell_thread:00000000 $t
+     /tmp/ccf9L3xr.s:562    .text.shell_thread:00000164 $d
+     /tmp/ccf9L3xr.s:699    .bss.shell_terminated:00000000 shell_terminated
+     /tmp/ccf9L3xr.s:580    .data.local_commands:00000000 $d
+     /tmp/ccf9L3xr.s:584    .data.local_commands:00000000 local_commands
+     /tmp/ccf9L3xr.s:592    .rodata.str1.4:00000000 $d
+     /tmp/ccf9L3xr.s:695    .bss.shell_terminated:00000000 $d
+     /tmp/ccf9L3xr.s:66     .text.cmd_systime:00000028 $t
+     /tmp/ccf9L3xr.s:214    .text.shellInit:0000000c $t
+     /tmp/ccf9L3xr.s:243    .text.shellExit:00000024 $t
+     /tmp/ccf9L3xr.s:267    .text.shellCreate:00000018 $t
+     /tmp/ccf9L3xr.s:293    .text.shellCreateStatic:0000001c $t
+
+UNDEFINED SYMBOLS
+chvprintf
+vtlist
+strspn
+strpbrk
+dbg_check_lock
+chEvtBroadcastFlagsI
+chThdExitS
+chThdCreateFromHeap
+chThdCreateStatic
+strcasecmp
+rlist

@@ -1,0 +1,368 @@
+ARM GAS  /tmp/ccCLE81u.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"vectors.c"
+  15              		.section	.text._unhandled_exception,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	_unhandled_exception
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_unhandled_exception, %function
+  22              	_unhandled_exception:
+  23              		@ Naked Function: prologue and epilogue provided by programmer.
+  24              		@ Volatile: function does not return.
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              	.L2:
+  28 0000 FEE7     		b	.L2
+  29              		.size	_unhandled_exception, .-_unhandled_exception
+  30              		.weak	NMIVector
+  31              		.thumb_set NMIVector,_unhandled_exception
+  32              		.weak	HardFaultVector
+  33              		.thumb_set HardFaultVector,_unhandled_exception
+  34              		.weak	MemManageVector
+  35              		.thumb_set MemManageVector,_unhandled_exception
+  36              		.weak	BusFaultVector
+  37              		.thumb_set BusFaultVector,_unhandled_exception
+  38              		.weak	UsageFaultVector
+  39              		.thumb_set UsageFaultVector,_unhandled_exception
+  40              		.weak	Vector1C
+  41              		.thumb_set Vector1C,_unhandled_exception
+  42              		.weak	Vector20
+  43              		.thumb_set Vector20,_unhandled_exception
+  44              		.weak	Vector24
+  45              		.thumb_set Vector24,_unhandled_exception
+  46              		.weak	Vector28
+  47              		.thumb_set Vector28,_unhandled_exception
+  48              		.weak	SVCallVector
+  49              		.thumb_set SVCallVector,_unhandled_exception
+  50              		.weak	DebugMonitorVector
+  51              		.thumb_set DebugMonitorVector,_unhandled_exception
+  52              		.weak	Vector34
+  53              		.thumb_set Vector34,_unhandled_exception
+  54              		.weak	PendSVVector
+  55              		.thumb_set PendSVVector,_unhandled_exception
+  56              		.weak	SysTickVector
+  57              		.thumb_set SysTickVector,_unhandled_exception
+ARM GAS  /tmp/ccCLE81u.s 			page 2
+
+
+  58              		.weak	Vector40
+  59              		.thumb_set Vector40,_unhandled_exception
+  60              		.weak	Vector44
+  61              		.thumb_set Vector44,_unhandled_exception
+  62              		.weak	Vector48
+  63              		.thumb_set Vector48,_unhandled_exception
+  64              		.weak	Vector4C
+  65              		.thumb_set Vector4C,_unhandled_exception
+  66              		.weak	Vector50
+  67              		.thumb_set Vector50,_unhandled_exception
+  68              		.weak	Vector54
+  69              		.thumb_set Vector54,_unhandled_exception
+  70              		.weak	Vector58
+  71              		.thumb_set Vector58,_unhandled_exception
+  72              		.weak	Vector5C
+  73              		.thumb_set Vector5C,_unhandled_exception
+  74              		.weak	Vector60
+  75              		.thumb_set Vector60,_unhandled_exception
+  76              		.weak	Vector64
+  77              		.thumb_set Vector64,_unhandled_exception
+  78              		.weak	Vector68
+  79              		.thumb_set Vector68,_unhandled_exception
+  80              		.weak	Vector6C
+  81              		.thumb_set Vector6C,_unhandled_exception
+  82              		.weak	Vector70
+  83              		.thumb_set Vector70,_unhandled_exception
+  84              		.weak	Vector74
+  85              		.thumb_set Vector74,_unhandled_exception
+  86              		.weak	Vector78
+  87              		.thumb_set Vector78,_unhandled_exception
+  88              		.weak	Vector7C
+  89              		.thumb_set Vector7C,_unhandled_exception
+  90              		.weak	Vector80
+  91              		.thumb_set Vector80,_unhandled_exception
+  92              		.weak	Vector84
+  93              		.thumb_set Vector84,_unhandled_exception
+  94              		.weak	Vector88
+  95              		.thumb_set Vector88,_unhandled_exception
+  96              		.weak	Vector8C
+  97              		.thumb_set Vector8C,_unhandled_exception
+  98              		.weak	Vector90
+  99              		.thumb_set Vector90,_unhandled_exception
+ 100              		.weak	Vector94
+ 101              		.thumb_set Vector94,_unhandled_exception
+ 102              		.weak	Vector98
+ 103              		.thumb_set Vector98,_unhandled_exception
+ 104              		.weak	Vector9C
+ 105              		.thumb_set Vector9C,_unhandled_exception
+ 106              		.weak	VectorA0
+ 107              		.thumb_set VectorA0,_unhandled_exception
+ 108              		.weak	VectorA4
+ 109              		.thumb_set VectorA4,_unhandled_exception
+ 110              		.weak	VectorA8
+ 111              		.thumb_set VectorA8,_unhandled_exception
+ 112              		.weak	VectorAC
+ 113              		.thumb_set VectorAC,_unhandled_exception
+ 114              		.weak	VectorB0
+ARM GAS  /tmp/ccCLE81u.s 			page 3
+
+
+ 115              		.thumb_set VectorB0,_unhandled_exception
+ 116              		.weak	VectorB4
+ 117              		.thumb_set VectorB4,_unhandled_exception
+ 118              		.weak	VectorB8
+ 119              		.thumb_set VectorB8,_unhandled_exception
+ 120              		.weak	VectorBC
+ 121              		.thumb_set VectorBC,_unhandled_exception
+ 122              		.weak	VectorC0
+ 123              		.thumb_set VectorC0,_unhandled_exception
+ 124              		.weak	VectorC4
+ 125              		.thumb_set VectorC4,_unhandled_exception
+ 126              		.weak	VectorC8
+ 127              		.thumb_set VectorC8,_unhandled_exception
+ 128              		.weak	VectorCC
+ 129              		.thumb_set VectorCC,_unhandled_exception
+ 130              		.weak	VectorD0
+ 131              		.thumb_set VectorD0,_unhandled_exception
+ 132              		.weak	VectorD4
+ 133              		.thumb_set VectorD4,_unhandled_exception
+ 134              		.weak	VectorD8
+ 135              		.thumb_set VectorD8,_unhandled_exception
+ 136              		.weak	VectorDC
+ 137              		.thumb_set VectorDC,_unhandled_exception
+ 138              		.weak	VectorE0
+ 139              		.thumb_set VectorE0,_unhandled_exception
+ 140              		.weak	VectorE4
+ 141              		.thumb_set VectorE4,_unhandled_exception
+ 142              		.weak	VectorE8
+ 143              		.thumb_set VectorE8,_unhandled_exception
+ 144              		.weak	VectorEC
+ 145              		.thumb_set VectorEC,_unhandled_exception
+ 146              		.weak	VectorF0
+ 147              		.thumb_set VectorF0,_unhandled_exception
+ 148              		.weak	VectorF4
+ 149              		.thumb_set VectorF4,_unhandled_exception
+ 150              		.weak	VectorF8
+ 151              		.thumb_set VectorF8,_unhandled_exception
+ 152              		.weak	VectorFC
+ 153              		.thumb_set VectorFC,_unhandled_exception
+ 154              		.weak	Vector100
+ 155              		.thumb_set Vector100,_unhandled_exception
+ 156              		.weak	Vector104
+ 157              		.thumb_set Vector104,_unhandled_exception
+ 158              		.weak	Vector108
+ 159              		.thumb_set Vector108,_unhandled_exception
+ 160              		.weak	Vector10C
+ 161              		.thumb_set Vector10C,_unhandled_exception
+ 162              		.weak	Vector110
+ 163              		.thumb_set Vector110,_unhandled_exception
+ 164              		.weak	Vector114
+ 165              		.thumb_set Vector114,_unhandled_exception
+ 166              		.weak	Vector118
+ 167              		.thumb_set Vector118,_unhandled_exception
+ 168              		.weak	Vector11C
+ 169              		.thumb_set Vector11C,_unhandled_exception
+ 170              		.weak	Vector120
+ 171              		.thumb_set Vector120,_unhandled_exception
+ARM GAS  /tmp/ccCLE81u.s 			page 4
+
+
+ 172              		.weak	Vector124
+ 173              		.thumb_set Vector124,_unhandled_exception
+ 174              		.weak	Vector128
+ 175              		.thumb_set Vector128,_unhandled_exception
+ 176              		.weak	Vector12C
+ 177              		.thumb_set Vector12C,_unhandled_exception
+ 178              		.global	_vectors
+ 179 0002 00BFAFF3 		.section	vectors,"aw",%progbits
+ 179      0080AFF3 
+ 179      0080AFF3 
+ 179      0080
+ 180              		.align	2
+ 181              		.type	_vectors, %object
+ 182              		.size	_vectors, 304
+ 183              	_vectors:
+ 184 0000 00000000 		.word	__main_stack_end__
+ 185 0004 00000000 		.word	ResetHandler
+ 186 0008 00000000 		.word	NMIVector
+ 187 000c 00000000 		.word	HardFaultVector
+ 188 0010 00000000 		.word	MemManageVector
+ 189 0014 00000000 		.word	BusFaultVector
+ 190 0018 00000000 		.word	UsageFaultVector
+ 191 001c 00000000 		.word	Vector1C
+ 192 0020 00000000 		.word	Vector20
+ 193 0024 00000000 		.word	Vector24
+ 194 0028 00000000 		.word	Vector28
+ 195 002c 00000000 		.word	SVCallVector
+ 196 0030 00000000 		.word	DebugMonitorVector
+ 197 0034 00000000 		.word	Vector34
+ 198 0038 00000000 		.word	PendSVVector
+ 199 003c 00000000 		.word	SysTickVector
+ 200 0040 00000000 		.word	Vector40
+ 201 0044 00000000 		.word	Vector44
+ 202 0048 00000000 		.word	Vector48
+ 203 004c 00000000 		.word	Vector4C
+ 204 0050 00000000 		.word	Vector50
+ 205 0054 00000000 		.word	Vector54
+ 206 0058 00000000 		.word	Vector58
+ 207 005c 00000000 		.word	Vector5C
+ 208 0060 00000000 		.word	Vector60
+ 209 0064 00000000 		.word	Vector64
+ 210 0068 00000000 		.word	Vector68
+ 211 006c 00000000 		.word	Vector6C
+ 212 0070 00000000 		.word	Vector70
+ 213 0074 00000000 		.word	Vector74
+ 214 0078 00000000 		.word	Vector78
+ 215 007c 00000000 		.word	Vector7C
+ 216 0080 00000000 		.word	Vector80
+ 217 0084 00000000 		.word	Vector84
+ 218 0088 00000000 		.word	Vector88
+ 219 008c 00000000 		.word	Vector8C
+ 220 0090 00000000 		.word	Vector90
+ 221 0094 00000000 		.word	Vector94
+ 222 0098 00000000 		.word	Vector98
+ 223 009c 00000000 		.word	Vector9C
+ 224 00a0 00000000 		.word	VectorA0
+ 225 00a4 00000000 		.word	VectorA4
+ARM GAS  /tmp/ccCLE81u.s 			page 5
+
+
+ 226 00a8 00000000 		.word	VectorA8
+ 227 00ac 00000000 		.word	VectorAC
+ 228 00b0 00000000 		.word	VectorB0
+ 229 00b4 00000000 		.word	VectorB4
+ 230 00b8 00000000 		.word	VectorB8
+ 231 00bc 00000000 		.word	VectorBC
+ 232 00c0 00000000 		.word	VectorC0
+ 233 00c4 00000000 		.word	VectorC4
+ 234 00c8 00000000 		.word	VectorC8
+ 235 00cc 00000000 		.word	VectorCC
+ 236 00d0 00000000 		.word	VectorD0
+ 237 00d4 00000000 		.word	VectorD4
+ 238 00d8 00000000 		.word	VectorD8
+ 239 00dc 00000000 		.word	VectorDC
+ 240 00e0 00000000 		.word	VectorE0
+ 241 00e4 00000000 		.word	VectorE4
+ 242 00e8 00000000 		.word	VectorE8
+ 243 00ec 00000000 		.word	VectorEC
+ 244 00f0 00000000 		.word	VectorF0
+ 245 00f4 00000000 		.word	VectorF4
+ 246 00f8 00000000 		.word	VectorF8
+ 247 00fc 00000000 		.word	VectorFC
+ 248 0100 00000000 		.word	Vector100
+ 249 0104 00000000 		.word	Vector104
+ 250 0108 00000000 		.word	Vector108
+ 251 010c 00000000 		.word	Vector10C
+ 252 0110 00000000 		.word	Vector110
+ 253 0114 00000000 		.word	Vector114
+ 254 0118 00000000 		.word	Vector118
+ 255 011c 00000000 		.word	Vector11C
+ 256 0120 00000000 		.word	Vector120
+ 257 0124 00000000 		.word	Vector124
+ 258 0128 00000000 		.word	Vector128
+ 259 012c 00000000 		.word	Vector12C
+ 260              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccCLE81u.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 vectors.c
+     /tmp/ccCLE81u.s:16     .text._unhandled_exception:00000000 $t
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 _unhandled_exception
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 NMIVector
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 HardFaultVector
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 MemManageVector
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 BusFaultVector
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 UsageFaultVector
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector1C
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector20
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector24
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector28
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 SVCallVector
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 DebugMonitorVector
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector34
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 PendSVVector
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 SysTickVector
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector40
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector44
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector48
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector4C
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector50
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector54
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector58
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector5C
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector60
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector64
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector68
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector6C
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector70
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector74
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector78
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector7C
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector80
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector84
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector88
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector8C
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector90
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector94
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector98
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector9C
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorA0
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorA4
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorA8
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorAC
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorB0
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorB4
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorB8
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorBC
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorC0
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorC4
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorC8
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorCC
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorD0
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorD4
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorD8
+ARM GAS  /tmp/ccCLE81u.s 			page 7
+
+
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorDC
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorE0
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorE4
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorE8
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorEC
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorF0
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorF4
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorF8
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 VectorFC
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector100
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector104
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector108
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector10C
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector110
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector114
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector118
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector11C
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector120
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector124
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector128
+     /tmp/ccCLE81u.s:22     .text._unhandled_exception:00000000 Vector12C
+     /tmp/ccCLE81u.s:183    vectors:00000000 _vectors
+     /tmp/ccCLE81u.s:180    vectors:00000000 $d
+
+UNDEFINED SYMBOLS
+__main_stack_end__
+ResetHandler

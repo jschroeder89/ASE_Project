@@ -1,0 +1,2 @@
+wakeup.c:10:6:standby_wakeup_source	12	static
+wakeup.c:46:6:stop_wakeup_source	0	static

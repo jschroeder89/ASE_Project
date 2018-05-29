@@ -1,0 +1,21 @@
+ControllerAreaNetworkTx.cpp:192:7:virtual msg_t amiro::ControllerAreaNetworkTx::updateSensorVal()	0	static
+ControllerAreaNetworkTx.cpp:165:7:virtual msg_t amiro::ControllerAreaNetworkTx::main()	16	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 128; tprio_t = long unsigned int]	24	static
+ControllerAreaNetworkTx.cpp:14:1:amiro::ControllerAreaNetworkTx::ControllerAreaNetworkTx(CANDriver*, uint8_t)	16	static
+ControllerAreaNetworkTx.cpp:30:1:amiro::ControllerAreaNetworkTx::~ControllerAreaNetworkTx()	0	static
+ControllerAreaNetworkTx.cpp:30:1:virtual amiro::ControllerAreaNetworkTx::~ControllerAreaNetworkTx()	8	static
+ControllerAreaNetworkTx.cpp:198:6:void amiro::ControllerAreaNetworkTx::encodeBoardId(CANTxFrame*, int)	0	static
+ControllerAreaNetworkTx.cpp:202:6:void amiro::ControllerAreaNetworkTx::encodeDeviceId(CANTxFrame*, int)	0	static
+ControllerAreaNetworkTx.cpp:206:6:void amiro::ControllerAreaNetworkTx::encodeIndexId(CANTxFrame*, int)	0	static
+ControllerAreaNetworkTx.cpp:212:6:void amiro::ControllerAreaNetworkTx::transmitMessage(CANTxFrame*)	16	static
+ControllerAreaNetworkTx.cpp:37:6:void amiro::ControllerAreaNetworkTx::setLightBrightness(int)	24	static
+ControllerAreaNetworkTx.cpp:46:6:void amiro::ControllerAreaNetworkTx::setLightColor(int, amiro::Color)	32	static
+ControllerAreaNetworkTx.cpp:57:6:void amiro::ControllerAreaNetworkTx::setOdometry(types::position)	48	static
+ControllerAreaNetworkTx.cpp:75:6:void amiro::ControllerAreaNetworkTx::setTargetSpeed(int32_t, int32_t)	32	static
+ControllerAreaNetworkTx.cpp:85:6:void amiro::ControllerAreaNetworkTx::setTargetSpeed(types::kinematic&)	32	static
+ControllerAreaNetworkTx.cpp:95:6:void amiro::ControllerAreaNetworkTx::setTargetPosition(types::position&, uint32_t)	32	static
+ControllerAreaNetworkTx.cpp:106:6:void amiro::ControllerAreaNetworkTx::setKinematicConstants(float, float)	32	static
+ControllerAreaNetworkTx.cpp:116:6:void amiro::ControllerAreaNetworkTx::broadcastShutdown()	24	static
+ControllerAreaNetworkTx.cpp:128:6:void amiro::ControllerAreaNetworkTx::txQueryShell(uint8_t, char*, uint16_t)	56	static
+ControllerAreaNetworkTx.cpp:146:6:void amiro::ControllerAreaNetworkTx::txReplyShell(uint8_t, char*, uint16_t)	56	static
+ControllerAreaNetworkTx.cpp:229:1:cpp)	0	static

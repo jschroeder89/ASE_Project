@@ -1,0 +1,724 @@
+ARM GAS  /tmp/ccdox4Pp.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chdebug.c"
+  17              		.section	.text.dbg_check_disable,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	dbg_check_disable
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	dbg_check_disable, %function
+  24              	dbg_check_disable:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 08B5     		push	{r3, lr}
+  28 0002 084B     		ldr	r3, .L5
+  29 0004 1B68     		ldr	r3, [r3]
+  30 0006 13B9     		cbnz	r3, .L2
+  31 0008 074B     		ldr	r3, .L5+4
+  32 000a 1B68     		ldr	r3, [r3]
+  33 000c 43B1     		cbz	r3, .L1
+  34              	.L2:
+  35 000e 074B     		ldr	r3, .L5+8
+  36 0010 074A     		ldr	r2, .L5+12
+  37 0012 1A60     		str	r2, [r3]
+  38 0014 FFF7FEFF 		bl	haltErrorCode
+  39 0018 BDE80840 		pop	{r3, lr}
+  40 001c FFF7FEBF 		b	port_halt
+  41              	.L1:
+  42 0020 08BD     		pop	{r3, pc}
+  43              	.L6:
+  44 0022 00BF     		.align	2
+  45              	.L5:
+  46 0024 00000000 		.word	.LANCHOR0
+  47 0028 00000000 		.word	.LANCHOR1
+  48 002c 00000000 		.word	.LANCHOR2
+  49 0030 00000000 		.word	.LC0
+  50              		.size	dbg_check_disable, .-dbg_check_disable
+  51 0034 AFF30080 		.section	.text.dbg_check_suspend,"ax",%progbits
+  51      AFF30080 
+  51      AFF30080 
+  52              		.align	2
+  53              		.p2align 4,,15
+  54              		.global	dbg_check_suspend
+  55              		.thumb
+ARM GAS  /tmp/ccdox4Pp.s 			page 2
+
+
+  56              		.thumb_func
+  57              		.type	dbg_check_suspend, %function
+  58              	dbg_check_suspend:
+  59              		@ args = 0, pretend = 0, frame = 0
+  60              		@ frame_needed = 0, uses_anonymous_args = 0
+  61 0000 08B5     		push	{r3, lr}
+  62 0002 084B     		ldr	r3, .L10
+  63 0004 1B68     		ldr	r3, [r3]
+  64 0006 13B9     		cbnz	r3, .L8
+  65 0008 074B     		ldr	r3, .L10+4
+  66 000a 1B68     		ldr	r3, [r3]
+  67 000c 43B1     		cbz	r3, .L7
+  68              	.L8:
+  69 000e 074B     		ldr	r3, .L10+8
+  70 0010 074A     		ldr	r2, .L10+12
+  71 0012 1A60     		str	r2, [r3]
+  72 0014 FFF7FEFF 		bl	haltErrorCode
+  73 0018 BDE80840 		pop	{r3, lr}
+  74 001c FFF7FEBF 		b	port_halt
+  75              	.L7:
+  76 0020 08BD     		pop	{r3, pc}
+  77              	.L11:
+  78 0022 00BF     		.align	2
+  79              	.L10:
+  80 0024 00000000 		.word	.LANCHOR0
+  81 0028 00000000 		.word	.LANCHOR1
+  82 002c 00000000 		.word	.LANCHOR2
+  83 0030 08000000 		.word	.LC1
+  84              		.size	dbg_check_suspend, .-dbg_check_suspend
+  85 0034 AFF30080 		.section	.text.dbg_check_enable,"ax",%progbits
+  85      AFF30080 
+  85      AFF30080 
+  86              		.align	2
+  87              		.p2align 4,,15
+  88              		.global	dbg_check_enable
+  89              		.thumb
+  90              		.thumb_func
+  91              		.type	dbg_check_enable, %function
+  92              	dbg_check_enable:
+  93              		@ args = 0, pretend = 0, frame = 0
+  94              		@ frame_needed = 0, uses_anonymous_args = 0
+  95 0000 08B5     		push	{r3, lr}
+  96 0002 084B     		ldr	r3, .L15
+  97 0004 1B68     		ldr	r3, [r3]
+  98 0006 13B9     		cbnz	r3, .L13
+  99 0008 074B     		ldr	r3, .L15+4
+ 100 000a 1B68     		ldr	r3, [r3]
+ 101 000c 43B1     		cbz	r3, .L12
+ 102              	.L13:
+ 103 000e 074B     		ldr	r3, .L15+8
+ 104 0010 074A     		ldr	r2, .L15+12
+ 105 0012 1A60     		str	r2, [r3]
+ 106 0014 FFF7FEFF 		bl	haltErrorCode
+ 107 0018 BDE80840 		pop	{r3, lr}
+ 108 001c FFF7FEBF 		b	port_halt
+ 109              	.L12:
+ 110 0020 08BD     		pop	{r3, pc}
+ARM GAS  /tmp/ccdox4Pp.s 			page 3
+
+
+ 111              	.L16:
+ 112 0022 00BF     		.align	2
+ 113              	.L15:
+ 114 0024 00000000 		.word	.LANCHOR0
+ 115 0028 00000000 		.word	.LANCHOR1
+ 116 002c 00000000 		.word	.LANCHOR2
+ 117 0030 10000000 		.word	.LC2
+ 118              		.size	dbg_check_enable, .-dbg_check_enable
+ 119 0034 AFF30080 		.section	.text.dbg_check_lock,"ax",%progbits
+ 119      AFF30080 
+ 119      AFF30080 
+ 120              		.align	2
+ 121              		.p2align 4,,15
+ 122              		.global	dbg_check_lock
+ 123              		.thumb
+ 124              		.thumb_func
+ 125              		.type	dbg_check_lock, %function
+ 126              	dbg_check_lock:
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129 0000 084B     		ldr	r3, .L25
+ 130 0002 1B68     		ldr	r3, [r3]
+ 131 0004 10B5     		push	{r4, lr}
+ 132 0006 084C     		ldr	r4, .L25+4
+ 133 0008 0BB9     		cbnz	r3, .L18
+ 134 000a 2368     		ldr	r3, [r4]
+ 135 000c 33B1     		cbz	r3, .L19
+ 136              	.L18:
+ 137 000e 074B     		ldr	r3, .L25+8
+ 138 0010 074A     		ldr	r2, .L25+12
+ 139 0012 1A60     		str	r2, [r3]
+ 140 0014 FFF7FEFF 		bl	haltErrorCode
+ 141 0018 FFF7FEFF 		bl	port_halt
+ 142              	.L19:
+ 143 001c 0123     		movs	r3, #1
+ 144 001e 2360     		str	r3, [r4]
+ 145 0020 10BD     		pop	{r4, pc}
+ 146              	.L26:
+ 147 0022 00BF     		.align	2
+ 148              	.L25:
+ 149 0024 00000000 		.word	.LANCHOR0
+ 150 0028 00000000 		.word	.LANCHOR1
+ 151 002c 00000000 		.word	.LANCHOR2
+ 152 0030 18000000 		.word	.LC3
+ 153              		.size	dbg_check_lock, .-dbg_check_lock
+ 154 0034 AFF30080 		.section	.text.dbg_check_unlock,"ax",%progbits
+ 154      AFF30080 
+ 154      AFF30080 
+ 155              		.align	2
+ 156              		.p2align 4,,15
+ 157              		.global	dbg_check_unlock
+ 158              		.thumb
+ 159              		.thumb_func
+ 160              		.type	dbg_check_unlock, %function
+ 161              	dbg_check_unlock:
+ 162              		@ args = 0, pretend = 0, frame = 0
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccdox4Pp.s 			page 4
+
+
+ 164 0000 0A4B     		ldr	r3, .L32
+ 165 0002 1B68     		ldr	r3, [r3]
+ 166 0004 10B5     		push	{r4, lr}
+ 167 0006 0A4C     		ldr	r4, .L32+4
+ 168 0008 2BB9     		cbnz	r3, .L28
+ 169 000a 2368     		ldr	r3, [r4]
+ 170 000c 002B     		cmp	r3, #0
+ 171 000e 02DD     		ble	.L28
+ 172 0010 0023     		movs	r3, #0
+ 173 0012 2360     		str	r3, [r4]
+ 174 0014 10BD     		pop	{r4, pc}
+ 175              	.L28:
+ 176 0016 074B     		ldr	r3, .L32+8
+ 177 0018 074A     		ldr	r2, .L32+12
+ 178 001a 1A60     		str	r2, [r3]
+ 179 001c FFF7FEFF 		bl	haltErrorCode
+ 180 0020 FFF7FEFF 		bl	port_halt
+ 181 0024 0023     		movs	r3, #0
+ 182 0026 2360     		str	r3, [r4]
+ 183 0028 10BD     		pop	{r4, pc}
+ 184              	.L33:
+ 185 002a 00BF     		.align	2
+ 186              	.L32:
+ 187 002c 00000000 		.word	.LANCHOR0
+ 188 0030 00000000 		.word	.LANCHOR1
+ 189 0034 00000000 		.word	.LANCHOR2
+ 190 0038 20000000 		.word	.LC4
+ 191              		.size	dbg_check_unlock, .-dbg_check_unlock
+ 192 003c AFF30080 		.section	.text.dbg_check_lock_from_isr,"ax",%progbits
+ 193              		.align	2
+ 194              		.p2align 4,,15
+ 195              		.global	dbg_check_lock_from_isr
+ 196              		.thumb
+ 197              		.thumb_func
+ 198              		.type	dbg_check_lock_from_isr, %function
+ 199              	dbg_check_lock_from_isr:
+ 200              		@ args = 0, pretend = 0, frame = 0
+ 201              		@ frame_needed = 0, uses_anonymous_args = 0
+ 202 0000 084B     		ldr	r3, .L42
+ 203 0002 1B68     		ldr	r3, [r3]
+ 204 0004 002B     		cmp	r3, #0
+ 205 0006 10B5     		push	{r4, lr}
+ 206 0008 074C     		ldr	r4, .L42+4
+ 207 000a 01DD     		ble	.L35
+ 208 000c 2368     		ldr	r3, [r4]
+ 209 000e 33B1     		cbz	r3, .L36
+ 210              	.L35:
+ 211 0010 064B     		ldr	r3, .L42+8
+ 212 0012 074A     		ldr	r2, .L42+12
+ 213 0014 1A60     		str	r2, [r3]
+ 214 0016 FFF7FEFF 		bl	haltErrorCode
+ 215 001a FFF7FEFF 		bl	port_halt
+ 216              	.L36:
+ 217 001e 0123     		movs	r3, #1
+ 218 0020 2360     		str	r3, [r4]
+ 219 0022 10BD     		pop	{r4, pc}
+ 220              	.L43:
+ARM GAS  /tmp/ccdox4Pp.s 			page 5
+
+
+ 221              		.align	2
+ 222              	.L42:
+ 223 0024 00000000 		.word	.LANCHOR0
+ 224 0028 00000000 		.word	.LANCHOR1
+ 225 002c 00000000 		.word	.LANCHOR2
+ 226 0030 28000000 		.word	.LC5
+ 227              		.size	dbg_check_lock_from_isr, .-dbg_check_lock_from_isr
+ 228 0034 AFF30080 		.section	.text.dbg_check_unlock_from_isr,"ax",%progbits
+ 228      AFF30080 
+ 228      AFF30080 
+ 229              		.align	2
+ 230              		.p2align 4,,15
+ 231              		.global	dbg_check_unlock_from_isr
+ 232              		.thumb
+ 233              		.thumb_func
+ 234              		.type	dbg_check_unlock_from_isr, %function
+ 235              	dbg_check_unlock_from_isr:
+ 236              		@ args = 0, pretend = 0, frame = 0
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+ 238 0000 0A4B     		ldr	r3, .L49
+ 239 0002 1B68     		ldr	r3, [r3]
+ 240 0004 002B     		cmp	r3, #0
+ 241 0006 10B5     		push	{r4, lr}
+ 242 0008 094C     		ldr	r4, .L49+4
+ 243 000a 05DD     		ble	.L45
+ 244 000c 2368     		ldr	r3, [r4]
+ 245 000e 002B     		cmp	r3, #0
+ 246 0010 02DD     		ble	.L45
+ 247 0012 0023     		movs	r3, #0
+ 248 0014 2360     		str	r3, [r4]
+ 249 0016 10BD     		pop	{r4, pc}
+ 250              	.L45:
+ 251 0018 064B     		ldr	r3, .L49+8
+ 252 001a 074A     		ldr	r2, .L49+12
+ 253 001c 1A60     		str	r2, [r3]
+ 254 001e FFF7FEFF 		bl	haltErrorCode
+ 255 0022 FFF7FEFF 		bl	port_halt
+ 256 0026 0023     		movs	r3, #0
+ 257 0028 2360     		str	r3, [r4]
+ 258 002a 10BD     		pop	{r4, pc}
+ 259              	.L50:
+ 260              		.align	2
+ 261              	.L49:
+ 262 002c 00000000 		.word	.LANCHOR0
+ 263 0030 00000000 		.word	.LANCHOR1
+ 264 0034 00000000 		.word	.LANCHOR2
+ 265 0038 30000000 		.word	.LC6
+ 266              		.size	dbg_check_unlock_from_isr, .-dbg_check_unlock_from_isr
+ 267 003c AFF30080 		.section	.text.dbg_check_enter_isr,"ax",%progbits
+ 268              		.align	2
+ 269              		.p2align 4,,15
+ 270              		.global	dbg_check_enter_isr
+ 271              		.thumb
+ 272              		.thumb_func
+ 273              		.type	dbg_check_enter_isr, %function
+ 274              	dbg_check_enter_isr:
+ 275              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccdox4Pp.s 			page 6
+
+
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277 0000 10B5     		push	{r4, lr}
+ 278 0002 2023     		movs	r3, #32
+ 279              	@ 164 "../../../ChibiOS/os/kernel/src/chdebug.c" 1
+ 280 0004 83F31188 		msr     BASEPRI, r3
+ 281              	@ 0 "" 2
+ 282              		.thumb
+ 283 0008 0A4C     		ldr	r4, .L55
+ 284 000a 2368     		ldr	r3, [r4]
+ 285 000c 002B     		cmp	r3, #0
+ 286 000e 02DB     		blt	.L52
+ 287 0010 094A     		ldr	r2, .L55+4
+ 288 0012 1268     		ldr	r2, [r2]
+ 289 0014 3AB1     		cbz	r2, .L53
+ 290              	.L52:
+ 291 0016 094B     		ldr	r3, .L55+8
+ 292 0018 094A     		ldr	r2, .L55+12
+ 293 001a 1A60     		str	r2, [r3]
+ 294 001c FFF7FEFF 		bl	haltErrorCode
+ 295 0020 FFF7FEFF 		bl	port_halt
+ 296 0024 2368     		ldr	r3, [r4]
+ 297              	.L53:
+ 298 0026 0133     		adds	r3, r3, #1
+ 299 0028 2360     		str	r3, [r4]
+ 300 002a 0023     		movs	r3, #0
+ 301              	@ 168 "../../../ChibiOS/os/kernel/src/chdebug.c" 1
+ 302 002c 83F31188 		msr     BASEPRI, r3
+ 303              	@ 0 "" 2
+ 304              		.thumb
+ 305 0030 10BD     		pop	{r4, pc}
+ 306              	.L56:
+ 307 0032 00BF     		.align	2
+ 308              	.L55:
+ 309 0034 00000000 		.word	.LANCHOR0
+ 310 0038 00000000 		.word	.LANCHOR1
+ 311 003c 00000000 		.word	.LANCHOR2
+ 312 0040 38000000 		.word	.LC7
+ 313              		.size	dbg_check_enter_isr, .-dbg_check_enter_isr
+ 314 0044 AFF30080 		.section	.text.dbg_check_leave_isr,"ax",%progbits
+ 314      AFF30080 
+ 314      AFF30080 
+ 315              		.align	2
+ 316              		.p2align 4,,15
+ 317              		.global	dbg_check_leave_isr
+ 318              		.thumb
+ 319              		.thumb_func
+ 320              		.type	dbg_check_leave_isr, %function
+ 321              	dbg_check_leave_isr:
+ 322              		@ args = 0, pretend = 0, frame = 0
+ 323              		@ frame_needed = 0, uses_anonymous_args = 0
+ 324 0000 10B5     		push	{r4, lr}
+ 325 0002 2023     		movs	r3, #32
+ 326              	@ 178 "../../../ChibiOS/os/kernel/src/chdebug.c" 1
+ 327 0004 83F31188 		msr     BASEPRI, r3
+ 328              	@ 0 "" 2
+ 329              		.thumb
+ 330 0008 0A4C     		ldr	r4, .L61
+ARM GAS  /tmp/ccdox4Pp.s 			page 7
+
+
+ 331 000a 2368     		ldr	r3, [r4]
+ 332 000c 002B     		cmp	r3, #0
+ 333 000e 02DD     		ble	.L58
+ 334 0010 094A     		ldr	r2, .L61+4
+ 335 0012 1268     		ldr	r2, [r2]
+ 336 0014 3AB1     		cbz	r2, .L59
+ 337              	.L58:
+ 338 0016 094B     		ldr	r3, .L61+8
+ 339 0018 094A     		ldr	r2, .L61+12
+ 340 001a 1A60     		str	r2, [r3]
+ 341 001c FFF7FEFF 		bl	haltErrorCode
+ 342 0020 FFF7FEFF 		bl	port_halt
+ 343 0024 2368     		ldr	r3, [r4]
+ 344              	.L59:
+ 345 0026 013B     		subs	r3, r3, #1
+ 346 0028 2360     		str	r3, [r4]
+ 347 002a 0023     		movs	r3, #0
+ 348              	@ 182 "../../../ChibiOS/os/kernel/src/chdebug.c" 1
+ 349 002c 83F31188 		msr     BASEPRI, r3
+ 350              	@ 0 "" 2
+ 351              		.thumb
+ 352 0030 10BD     		pop	{r4, pc}
+ 353              	.L62:
+ 354 0032 00BF     		.align	2
+ 355              	.L61:
+ 356 0034 00000000 		.word	.LANCHOR0
+ 357 0038 00000000 		.word	.LANCHOR1
+ 358 003c 00000000 		.word	.LANCHOR2
+ 359 0040 40000000 		.word	.LC8
+ 360              		.size	dbg_check_leave_isr, .-dbg_check_leave_isr
+ 361 0044 AFF30080 		.section	.text.chDbgCheckClassI,"ax",%progbits
+ 361      AFF30080 
+ 361      AFF30080 
+ 362              		.align	2
+ 363              		.p2align 4,,15
+ 364              		.global	chDbgCheckClassI
+ 365              		.thumb
+ 366              		.thumb_func
+ 367              		.type	chDbgCheckClassI, %function
+ 368              	chDbgCheckClassI:
+ 369              		@ args = 0, pretend = 0, frame = 0
+ 370              		@ frame_needed = 0, uses_anonymous_args = 0
+ 371 0000 08B5     		push	{r3, lr}
+ 372 0002 094B     		ldr	r3, .L66
+ 373 0004 1B68     		ldr	r3, [r3]
+ 374 0006 002B     		cmp	r3, #0
+ 375 0008 04DB     		blt	.L64
+ 376 000a 084B     		ldr	r3, .L66+4
+ 377 000c 1B68     		ldr	r3, [r3]
+ 378 000e 002B     		cmp	r3, #0
+ 379 0010 00DD     		ble	.L64
+ 380 0012 08BD     		pop	{r3, pc}
+ 381              	.L64:
+ 382 0014 064B     		ldr	r3, .L66+8
+ 383 0016 074A     		ldr	r2, .L66+12
+ 384 0018 1A60     		str	r2, [r3]
+ 385 001a FFF7FEFF 		bl	haltErrorCode
+ARM GAS  /tmp/ccdox4Pp.s 			page 8
+
+
+ 386 001e BDE80840 		pop	{r3, lr}
+ 387 0022 FFF7FEBF 		b	port_halt
+ 388              	.L67:
+ 389 0026 00BF     		.align	2
+ 390              	.L66:
+ 391 0028 00000000 		.word	.LANCHOR0
+ 392 002c 00000000 		.word	.LANCHOR1
+ 393 0030 00000000 		.word	.LANCHOR2
+ 394 0034 48000000 		.word	.LC9
+ 395              		.size	chDbgCheckClassI, .-chDbgCheckClassI
+ 396 0038 AFF30080 		.section	.text.chDbgCheckClassS,"ax",%progbits
+ 396      AFF30080 
+ 397              		.align	2
+ 398              		.p2align 4,,15
+ 399              		.global	chDbgCheckClassS
+ 400              		.thumb
+ 401              		.thumb_func
+ 402              		.type	chDbgCheckClassS, %function
+ 403              	chDbgCheckClassS:
+ 404              		@ args = 0, pretend = 0, frame = 0
+ 405              		@ frame_needed = 0, uses_anonymous_args = 0
+ 406 0000 08B5     		push	{r3, lr}
+ 407 0002 084B     		ldr	r3, .L71
+ 408 0004 1B68     		ldr	r3, [r3]
+ 409 0006 23B9     		cbnz	r3, .L69
+ 410 0008 074B     		ldr	r3, .L71+4
+ 411 000a 1B68     		ldr	r3, [r3]
+ 412 000c 002B     		cmp	r3, #0
+ 413 000e 00DD     		ble	.L69
+ 414 0010 08BD     		pop	{r3, pc}
+ 415              	.L69:
+ 416 0012 064B     		ldr	r3, .L71+8
+ 417 0014 064A     		ldr	r2, .L71+12
+ 418 0016 1A60     		str	r2, [r3]
+ 419 0018 FFF7FEFF 		bl	haltErrorCode
+ 420 001c BDE80840 		pop	{r3, lr}
+ 421 0020 FFF7FEBF 		b	port_halt
+ 422              	.L72:
+ 423              		.align	2
+ 424              	.L71:
+ 425 0024 00000000 		.word	.LANCHOR0
+ 426 0028 00000000 		.word	.LANCHOR1
+ 427 002c 00000000 		.word	.LANCHOR2
+ 428 0030 50000000 		.word	.LC10
+ 429              		.size	chDbgCheckClassS, .-chDbgCheckClassS
+ 430 0034 AFF30080 		.section	.text._trace_init,"ax",%progbits
+ 430      AFF30080 
+ 430      AFF30080 
+ 431              		.align	2
+ 432              		.p2align 4,,15
+ 433              		.global	_trace_init
+ 434              		.thumb
+ 435              		.thumb_func
+ 436              		.type	_trace_init, %function
+ 437              	_trace_init:
+ 438              		@ args = 0, pretend = 0, frame = 0
+ 439              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccdox4Pp.s 			page 9
+
+
+ 440              		@ link register save eliminated.
+ 441 0000 034A     		ldr	r2, .L74
+ 442 0002 1346     		mov	r3, r2
+ 443 0004 4021     		movs	r1, #64
+ 444 0006 43F8081B 		str	r1, [r3], #8
+ 445 000a 5360     		str	r3, [r2, #4]
+ 446 000c 7047     		bx	lr
+ 447              	.L75:
+ 448 000e 00BF     		.align	2
+ 449              	.L74:
+ 450 0010 00000000 		.word	.LANCHOR3
+ 451              		.size	_trace_init, .-_trace_init
+ 452 0014 AFF30080 		.section	.text.dbg_trace,"ax",%progbits
+ 452      AFF30080 
+ 452      AFF30080 
+ 453              		.align	2
+ 454              		.p2align 4,,15
+ 455              		.global	dbg_trace
+ 456              		.thumb
+ 457              		.thumb_func
+ 458              		.type	dbg_trace, %function
+ 459              	dbg_trace:
+ 460              		@ args = 0, pretend = 0, frame = 0
+ 461              		@ frame_needed = 0, uses_anonymous_args = 0
+ 462              		@ link register save eliminated.
+ 463 0000 0C4A     		ldr	r2, .L80
+ 464 0002 0D49     		ldr	r1, .L80+4
+ 465 0004 5368     		ldr	r3, [r2, #4]
+ 466 0006 8969     		ldr	r1, [r1, #24]
+ 467 0008 10B4     		push	{r4}
+ 468 000a 0C4C     		ldr	r4, .L80+8
+ 469 000c E468     		ldr	r4, [r4, #12]
+ 470 000e 1C60     		str	r4, [r3]
+ 471 0010 5960     		str	r1, [r3, #4]
+ 472 0012 816A     		ldr	r1, [r0, #40]
+ 473 0014 9960     		str	r1, [r3, #8]
+ 474 0016 90F82010 		ldrb	r1, [r0, #32]	@ zero_extendqisi2
+ 475 001a 1973     		strb	r1, [r3, #12]
+ 476 001c 1033     		adds	r3, r3, #16
+ 477 001e 02F58161 		add	r1, r2, #1032
+ 478 0022 8B42     		cmp	r3, r1
+ 479 0024 28BF     		it	cs
+ 480 0026 02F10803 		addcs	r3, r2, #8
+ 481 002a 5360     		str	r3, [r2, #4]
+ 482 002c 5DF8044B 		ldr	r4, [sp], #4
+ 483 0030 7047     		bx	lr
+ 484              	.L81:
+ 485 0032 00BF     		.align	2
+ 486              	.L80:
+ 487 0034 00000000 		.word	.LANCHOR3
+ 488 0038 00000000 		.word	rlist
+ 489 003c 00000000 		.word	vtlist
+ 490              		.size	dbg_trace, .-dbg_trace
+ 491              		.section	.text.chDbgPanic,"ax",%progbits
+ 492              		.align	2
+ 493              		.p2align 4,,15
+ 494              		.global	chDbgPanic
+ARM GAS  /tmp/ccdox4Pp.s 			page 10
+
+
+ 495              		.thumb
+ 496              		.thumb_func
+ 497              		.type	chDbgPanic, %function
+ 498              	chDbgPanic:
+ 499              		@ args = 0, pretend = 0, frame = 0
+ 500              		@ frame_needed = 0, uses_anonymous_args = 0
+ 501 0000 08B5     		push	{r3, lr}
+ 502 0002 044B     		ldr	r3, .L83
+ 503 0004 1860     		str	r0, [r3]
+ 504 0006 FFF7FEFF 		bl	haltErrorCode
+ 505 000a BDE80840 		pop	{r3, lr}
+ 506 000e FFF7FEBF 		b	port_halt
+ 507              	.L84:
+ 508 0012 00BF     		.align	2
+ 509              	.L83:
+ 510 0014 00000000 		.word	.LANCHOR2
+ 511              		.size	chDbgPanic, .-chDbgPanic
+ 512              		.global	dbg_panic_msg
+ 513              		.global	dbg_trace_buffer
+ 514              		.global	dbg_lock_cnt
+ 515              		.global	dbg_isr_cnt
+ 516 0018 AFF30080 		.section	.bss.dbg_isr_cnt,"aw",%nobits
+ 516      AFF30080 
+ 517              		.align	2
+ 518              		.set	.LANCHOR0,. + 0
+ 519              		.type	dbg_isr_cnt, %object
+ 520              		.size	dbg_isr_cnt, 4
+ 521              	dbg_isr_cnt:
+ 522 0000 00000000 		.space	4
+ 523              		.section	.bss.dbg_trace_buffer,"aw",%nobits
+ 524              		.align	2
+ 525              		.set	.LANCHOR3,. + 0
+ 526              		.type	dbg_trace_buffer, %object
+ 527              		.size	dbg_trace_buffer, 1032
+ 528              	dbg_trace_buffer:
+ 529 0000 00000000 		.space	1032
+ 529      00000000 
+ 529      00000000 
+ 529      00000000 
+ 529      00000000 
+ 530              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 531              		.align	2
+ 532              	.LC0:
+ 533 0000 53562331 		.ascii	"SV#1\000"
+ 533      00
+ 534 0005 000000   		.space	3
+ 535              	.LC1:
+ 536 0008 53562332 		.ascii	"SV#2\000"
+ 536      00
+ 537 000d 000000   		.space	3
+ 538              	.LC2:
+ 539 0010 53562333 		.ascii	"SV#3\000"
+ 539      00
+ 540 0015 000000   		.space	3
+ 541              	.LC3:
+ 542 0018 53562334 		.ascii	"SV#4\000"
+ 542      00
+ARM GAS  /tmp/ccdox4Pp.s 			page 11
+
+
+ 543 001d 000000   		.space	3
+ 544              	.LC4:
+ 545 0020 53562335 		.ascii	"SV#5\000"
+ 545      00
+ 546 0025 000000   		.space	3
+ 547              	.LC5:
+ 548 0028 53562336 		.ascii	"SV#6\000"
+ 548      00
+ 549 002d 000000   		.space	3
+ 550              	.LC6:
+ 551 0030 53562337 		.ascii	"SV#7\000"
+ 551      00
+ 552 0035 000000   		.space	3
+ 553              	.LC7:
+ 554 0038 53562338 		.ascii	"SV#8\000"
+ 554      00
+ 555 003d 000000   		.space	3
+ 556              	.LC8:
+ 557 0040 53562339 		.ascii	"SV#9\000"
+ 557      00
+ 558 0045 000000   		.space	3
+ 559              	.LC9:
+ 560 0048 53562331 		.ascii	"SV#10\000"
+ 560      3000
+ 561 004e 0000     		.space	2
+ 562              	.LC10:
+ 563 0050 53562331 		.ascii	"SV#11\000"
+ 563      3100
+ 564 0056 0000     		.section	.bss.dbg_lock_cnt,"aw",%nobits
+ 565              		.align	2
+ 566              		.set	.LANCHOR1,. + 0
+ 567              		.type	dbg_lock_cnt, %object
+ 568              		.size	dbg_lock_cnt, 4
+ 569              	dbg_lock_cnt:
+ 570 0000 00000000 		.space	4
+ 571              		.section	.bss.dbg_panic_msg,"aw",%nobits
+ 572              		.align	2
+ 573              		.set	.LANCHOR2,. + 0
+ 574              		.type	dbg_panic_msg, %object
+ 575              		.size	dbg_panic_msg, 4
+ 576              	dbg_panic_msg:
+ 577 0000 00000000 		.space	4
+ 578              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccdox4Pp.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chdebug.c
+     /tmp/ccdox4Pp.s:18     .text.dbg_check_disable:00000000 $t
+     /tmp/ccdox4Pp.s:24     .text.dbg_check_disable:00000000 dbg_check_disable
+     /tmp/ccdox4Pp.s:46     .text.dbg_check_disable:00000024 $d
+     /tmp/ccdox4Pp.s:52     .text.dbg_check_suspend:00000000 $t
+     /tmp/ccdox4Pp.s:58     .text.dbg_check_suspend:00000000 dbg_check_suspend
+     /tmp/ccdox4Pp.s:80     .text.dbg_check_suspend:00000024 $d
+     /tmp/ccdox4Pp.s:86     .text.dbg_check_enable:00000000 $t
+     /tmp/ccdox4Pp.s:92     .text.dbg_check_enable:00000000 dbg_check_enable
+     /tmp/ccdox4Pp.s:114    .text.dbg_check_enable:00000024 $d
+     /tmp/ccdox4Pp.s:120    .text.dbg_check_lock:00000000 $t
+     /tmp/ccdox4Pp.s:126    .text.dbg_check_lock:00000000 dbg_check_lock
+     /tmp/ccdox4Pp.s:149    .text.dbg_check_lock:00000024 $d
+     /tmp/ccdox4Pp.s:155    .text.dbg_check_unlock:00000000 $t
+     /tmp/ccdox4Pp.s:161    .text.dbg_check_unlock:00000000 dbg_check_unlock
+     /tmp/ccdox4Pp.s:187    .text.dbg_check_unlock:0000002c $d
+     /tmp/ccdox4Pp.s:193    .text.dbg_check_lock_from_isr:00000000 $t
+     /tmp/ccdox4Pp.s:199    .text.dbg_check_lock_from_isr:00000000 dbg_check_lock_from_isr
+     /tmp/ccdox4Pp.s:223    .text.dbg_check_lock_from_isr:00000024 $d
+     /tmp/ccdox4Pp.s:229    .text.dbg_check_unlock_from_isr:00000000 $t
+     /tmp/ccdox4Pp.s:235    .text.dbg_check_unlock_from_isr:00000000 dbg_check_unlock_from_isr
+     /tmp/ccdox4Pp.s:262    .text.dbg_check_unlock_from_isr:0000002c $d
+     /tmp/ccdox4Pp.s:268    .text.dbg_check_enter_isr:00000000 $t
+     /tmp/ccdox4Pp.s:274    .text.dbg_check_enter_isr:00000000 dbg_check_enter_isr
+     /tmp/ccdox4Pp.s:309    .text.dbg_check_enter_isr:00000034 $d
+     /tmp/ccdox4Pp.s:315    .text.dbg_check_leave_isr:00000000 $t
+     /tmp/ccdox4Pp.s:321    .text.dbg_check_leave_isr:00000000 dbg_check_leave_isr
+     /tmp/ccdox4Pp.s:356    .text.dbg_check_leave_isr:00000034 $d
+     /tmp/ccdox4Pp.s:362    .text.chDbgCheckClassI:00000000 $t
+     /tmp/ccdox4Pp.s:368    .text.chDbgCheckClassI:00000000 chDbgCheckClassI
+     /tmp/ccdox4Pp.s:391    .text.chDbgCheckClassI:00000028 $d
+     /tmp/ccdox4Pp.s:397    .text.chDbgCheckClassS:00000000 $t
+     /tmp/ccdox4Pp.s:403    .text.chDbgCheckClassS:00000000 chDbgCheckClassS
+     /tmp/ccdox4Pp.s:425    .text.chDbgCheckClassS:00000024 $d
+     /tmp/ccdox4Pp.s:431    .text._trace_init:00000000 $t
+     /tmp/ccdox4Pp.s:437    .text._trace_init:00000000 _trace_init
+     /tmp/ccdox4Pp.s:450    .text._trace_init:00000010 $d
+     /tmp/ccdox4Pp.s:453    .text.dbg_trace:00000000 $t
+     /tmp/ccdox4Pp.s:459    .text.dbg_trace:00000000 dbg_trace
+     /tmp/ccdox4Pp.s:487    .text.dbg_trace:00000034 $d
+     /tmp/ccdox4Pp.s:492    .text.chDbgPanic:00000000 $t
+     /tmp/ccdox4Pp.s:498    .text.chDbgPanic:00000000 chDbgPanic
+     /tmp/ccdox4Pp.s:510    .text.chDbgPanic:00000014 $d
+     /tmp/ccdox4Pp.s:576    .bss.dbg_panic_msg:00000000 dbg_panic_msg
+     /tmp/ccdox4Pp.s:528    .bss.dbg_trace_buffer:00000000 dbg_trace_buffer
+     /tmp/ccdox4Pp.s:569    .bss.dbg_lock_cnt:00000000 dbg_lock_cnt
+     /tmp/ccdox4Pp.s:521    .bss.dbg_isr_cnt:00000000 dbg_isr_cnt
+     /tmp/ccdox4Pp.s:517    .bss.dbg_isr_cnt:00000000 $d
+     /tmp/ccdox4Pp.s:524    .bss.dbg_trace_buffer:00000000 $d
+     /tmp/ccdox4Pp.s:531    .rodata.str1.4:00000000 $d
+     /tmp/ccdox4Pp.s:565    .bss.dbg_lock_cnt:00000000 $d
+     /tmp/ccdox4Pp.s:572    .bss.dbg_panic_msg:00000000 $d
+     /tmp/ccdox4Pp.s:51     .text.dbg_check_disable:00000034 $t
+     /tmp/ccdox4Pp.s:85     .text.dbg_check_suspend:00000034 $t
+     /tmp/ccdox4Pp.s:119    .text.dbg_check_enable:00000034 $t
+     /tmp/ccdox4Pp.s:154    .text.dbg_check_lock:00000034 $t
+ARM GAS  /tmp/ccdox4Pp.s 			page 13
+
+
+     /tmp/ccdox4Pp.s:192    .text.dbg_check_unlock:0000003c $t
+     /tmp/ccdox4Pp.s:228    .text.dbg_check_lock_from_isr:00000034 $t
+     /tmp/ccdox4Pp.s:267    .text.dbg_check_unlock_from_isr:0000003c $t
+     /tmp/ccdox4Pp.s:314    .text.dbg_check_enter_isr:00000044 $t
+     /tmp/ccdox4Pp.s:361    .text.dbg_check_leave_isr:00000044 $t
+     /tmp/ccdox4Pp.s:396    .text.chDbgCheckClassI:00000038 $t
+     /tmp/ccdox4Pp.s:430    .text.chDbgCheckClassS:00000034 $t
+     /tmp/ccdox4Pp.s:452    .text._trace_init:00000014 $t
+     /tmp/ccdox4Pp.s:516    .text.chDbgPanic:00000018 $t
+
+UNDEFINED SYMBOLS
+haltErrorCode
+port_halt
+rlist
+vtlist

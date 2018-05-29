@@ -1,0 +1,11 @@
+chqueues.c:70:14:qwait	4	static
+chqueues.c:95:6:chIQInit	8	static
+chqueues.c:117:6:chIQResetI	16	static
+chqueues.c:140:7:chIQPutI	16	static
+chqueues.c:178:7:chIQGetTimeout	24	static
+chqueues.c:226:8:chIQReadTimeout	32	static
+chqueues.c:275:6:chOQInit	8	static
+chqueues.c:297:6:chOQResetI	16	static
+chqueues.c:329:7:chOQPutTimeout	24	static
+chqueues.c:363:7:chOQGetI	16	static
+chqueues.c:406:8:chOQWriteTimeout	40	static

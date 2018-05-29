@@ -1,0 +1,14 @@
+﻿
+*~
+
+Host/Source/SerialBoot/build/
+
+**/Boot/obj/
+**/Boot/bin/
+
+*.includes
+*.files
+*.config
+*.creator
+*.user
+

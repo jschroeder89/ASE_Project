@@ -1,0 +1,52 @@
+I2CDriver.hpp:30:13:amiro::I2CDriver::~I2CDriver()	0	static
+pca9544.tpp:41:1:msg_t amiro::PCA9544<ignore_deselect>::deselect() [with bool ignore_deselect = true; msg_t = long int]	0	static
+ltc4412.hpp:18:11:amiro::BaseLTC4412::~BaseLTC4412()	0	static
+ltc4412.hpp:30:11:amiro::BaseLTC4412wEN::~BaseLTC4412wEN()	0	static
+ltc4412.hpp:72:11:amiro::LTC4412wEN<STAT_PadGrp, STAT_Pad, EN_PadGrp, EN_Pad>::~LTC4412wEN() [with unsigned int STAT_PadGrp = 1073811456u; unsigned char STAT_Pad = 3u; unsigned int EN_PadGrp = 1073811456u; unsigned char EN_Pad = 5u]	0	static
+ltc4412.hpp:89:8:bool amiro::LTC4412wEN<STAT_PadGrp, STAT_Pad, EN_PadGrp, EN_Pad>::isPluggedIn() const [with unsigned int STAT_PadGrp = 1073811456u; unsigned char STAT_Pad = 3u; unsigned int EN_PadGrp = 1073811456u; unsigned char EN_Pad = 5u]	0	static
+ltc4412.hpp:84:8:bool amiro::LTC4412wEN<STAT_PadGrp, STAT_Pad, EN_PadGrp, EN_Pad>::isEnabled() const [with unsigned int STAT_PadGrp = 1073811456u; unsigned char STAT_Pad = 3u; unsigned int EN_PadGrp = 1073811456u; unsigned char EN_Pad = 5u]	0	static
+I2CDriver.hpp:30:13:virtual amiro::I2CDriver::~I2CDriver()	8	static
+ltc4412.hpp:18:11:virtual amiro::BaseLTC4412::~BaseLTC4412()	8	static
+ltc4412.hpp:30:11:virtual amiro::BaseLTC4412wEN::~BaseLTC4412wEN()	8	static
+ltc4412.hpp:72:11:amiro::LTC4412wEN<STAT_PadGrp, STAT_Pad, EN_PadGrp, EN_Pad>::~LTC4412wEN() [with unsigned int STAT_PadGrp = 1073811456u; unsigned char STAT_Pad = 3u; unsigned int EN_PadGrp = 1073811456u; unsigned char EN_Pad = 5u]	8	static
+chprintf.h:69:20:)	12	static
+main.cpp:94:6:void shellRequestShutdown(BaseSequentialStream*, int, char**)	16	static
+main.cpp:700:6:void shellRequestHelloWorld(BaseSequentialStream*, int, char**)	0	static
+main.cpp:137:6:void shellRequestWakeup(BaseSequentialStream*, int, char**)	24	static
+main.cpp:147:6:void shellRequestGetMemoryData(BaseSequentialStream*, int, char**)	40	dynamic
+main.cpp:262:6:void shellRequestSetLights(BaseSequentialStream*, int, char**)	32	static
+main.cpp:399:6:void shellRequestResetMemory(BaseSequentialStream*, int, char**)	8	static
+main.cpp:409:6:void shellRequestGetBoardId(BaseSequentialStream*, int, char**)	16	static
+main.cpp:435:6:void shellRequestResetCalibrationConstants(BaseSequentialStream*, int, char**)	8	static
+main.cpp:453:6:void shellRequestGetCalibrationConstants(BaseSequentialStream*, int, char**)	16	static
+main.cpp:538:6:void shellRequestResetVcnlOffset(BaseSequentialStream*, int, char**)	24	static
+main.cpp:557:6:void shellRequestGetVcnlOffset(BaseSequentialStream*, int, char**)	24	static
+main.cpp:580:6:void shellRequestCalib(BaseSequentialStream*, int, char**)	8	static
+main.cpp:585:6:void shellRequestGetRobotId(BaseSequentialStream*, int, char**)	8	static
+main.cpp:592:6:void shellRequestGetSystemLoad(BaseSequentialStream*, int, char**)	32	static
+main.cpp:647:6:void shellRequestMotorDrive(BaseSequentialStream*, int, char**)	40	static
+main.cpp:669:6:void shellRequestMotorStop(BaseSequentialStream*, int, char**)	32	static
+main.cpp:680:6:void shellRequestMotorCalibrate(BaseSequentialStream*, int, char**)	8	static
+main.cpp:695:6:void shellRequestMotorResetGains(BaseSequentialStream*, int, char**)	0	static
+main.cpp:689:6:void shellRequestMotorGetGains(BaseSequentialStream*, int, char**)	0	static
+pca9544.hpp:35:13:amiro::PCA9544<ignore_deselect>::~PCA9544() [with bool ignore_deselect = true]	8	static
+pca9544.hpp:35:13:amiro::PCA9544<ignore_deselect>::~PCA9544() [with bool ignore_deselect = true]	8	static
+ltc4412.hpp:75:8:void amiro::LTC4412wEN<STAT_PadGrp, STAT_Pad, EN_PadGrp, EN_Pad>::enable(bool) [with unsigned int STAT_PadGrp = 1073811456u; unsigned char STAT_Pad = 3u; unsigned int EN_PadGrp = 1073811456u; unsigned char EN_Pad = 5u]	16	static
+pca9544.tpp:20:1:msg_t amiro::PCA9544<ignore_deselect>::select(uint8_t) [with bool ignore_deselect = true; msg_t = long int; uint8_t = unsigned char]	24	static
+main.cpp:622:6:void shellRequestGetBootloaderInfo(BaseSequentialStream*, int, char**)	16	static
+main.cpp:421:6:void shellRequestSetBoardId(BaseSequentialStream*, int, char**)	16	static
+main.cpp:471:6:void shellRequestSetCalibrationConstants(BaseSequentialStream*, int, char**)	24	static
+main.cpp:611:6:void shellSwitchBoardCmd(BaseSequentialStream*, int, char**)	16	static
+main.cpp:498:6:void shellRequestGetVcnl(BaseSequentialStream*, int, char**)	40	static
+main.cpp:514:6:void shellRequestSetVcnlOffset(BaseSequentialStream*, int, char**)	24	static
+global.hpp:175:3:Global::Global()	88	static
+main.cpp:31:6:void systemShutdown()	40	static
+main.cpp:740:6:void initPowermonitor(amiro::INA219::Driver&, float, float, uint16_t)	56	static
+pca9544.tpp:78:1:uint8_t amiro::PCA9544<ignore_deselect>::getCheck() [with bool ignore_deselect = true; uint8_t = unsigned char]	80	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 512; tprio_t = long unsigned int]	24	static
+main.cpp:777:5:int main()	88	static
+main.cpp:1034:1:cpp)	8	static
+main.cpp:332:6:void boardPeripheryCheck(BaseSequentialStream*)	16	static
+main.cpp:394:6:void shellRequestCheck(BaseSequentialStream*, int, char**)	8	static
+global.hpp:234:3:Global::~Global()	24	static

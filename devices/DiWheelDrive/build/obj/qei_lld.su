@@ -1,0 +1,5 @@
+qei_lld.c:89:6:qei_lld_init	16	static
+qei_lld.c:135:6:qei_lld_start	16	static
+qei_lld.c:220:6:qei_lld_stop	0	static
+qei_lld.c:266:6:qei_lld_enable	0	static
+qei_lld.c:278:6:qei_lld_disable	0	static

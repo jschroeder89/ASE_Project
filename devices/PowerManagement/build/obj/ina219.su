@@ -1,0 +1,24 @@
+ina219.cpp:25:1:amiro::INA219::Driver::~Driver()	0	static
+ina219.cpp:94:1:virtual msg_t amiro::INA219::Driver::calibration(amiro::INA219::CalibData*)	4	static
+BaseSensor.hpp:23:13:amiro::BaseSensor<Init_t, Calib_t>::~BaseSensor() [with Init_t = amiro::INA219::InitData; Calib_t = amiro::INA219::CalibData]	0	static
+BaseSensor.hpp:41:26:msg_t amiro::BaseSensor<Init_t, Calib_t>::init(Init_t*) [with Init_t = amiro::INA219::InitData; Calib_t = amiro::INA219::CalibData; msg_t = long int]	0	static
+BaseSensor.hpp:66:19:msg_t amiro::BaseSensor<Init_t, Calib_t>::hibernate() [with Init_t = amiro::INA219::InitData; Calib_t = amiro::INA219::CalibData; msg_t = long int]	0	static
+BaseSensor.hpp:80:19:msg_t amiro::BaseSensor<Init_t, Calib_t>::calibration(Calib_t*) [with Init_t = amiro::INA219::InitData; Calib_t = amiro::INA219::CalibData; msg_t = long int]	0	static
+BaseSensor.hpp:98:19:msg_t amiro::BaseSensor<Init_t, Calib_t>::selftest() [with Init_t = amiro::INA219::InitData; Calib_t = amiro::INA219::CalibData; msg_t = long int]	0	static
+ina219.cpp:25:1:virtual amiro::INA219::Driver::~Driver()	8	static
+BaseSensor.hpp:23:13:amiro::BaseSensor<Init_t, Calib_t>::~BaseSensor() [with Init_t = amiro::INA219::InitData; Calib_t = amiro::INA219::CalibData]	8	static
+ina219.cpp:317:1:virtual msg_t amiro::INA219::Driver::main()	8	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+chprintf.h:69:20:)	12	static
+ina219.cpp:13:1:amiro::INA219::Driver::Driver(amiro::I2CDriver&, uint8_t)	16	static
+ina219.cpp:331:1:msg_t amiro::INA219::Driver::readRegister(amiro::INA219::Driver::RegisterAddress, uint16_t&)	40	static
+ina219.cpp:52:1:virtual msg_t amiro::INA219::Driver::update()	24	static
+ina219.cpp:273:1:amiro::INA219::BusVoltage amiro::INA219::Driver::readBusVoltage()	16	static
+ina219.cpp:249:1:int32_t amiro::INA219::Driver::readShuntVoltage_uV()	16	static
+ina219.cpp:357:1:msg_t amiro::INA219::Driver::writeRegister(amiro::INA219::Driver::RegisterAddress, const uint16_t&)	32	static
+ina219.cpp:29:1:virtual msg_t amiro::INA219::Driver::init(amiro::INA219::InitData*)	24	static
+ina219.cpp:70:1:virtual msg_t amiro::INA219::Driver::wakeup()	8	static
+ina219.cpp:80:1:virtual msg_t amiro::INA219::Driver::hibernate()	16	static
+ina219.cpp:310:1:uint8_t amiro::INA219::Driver::reset()	16	static
+ina219.cpp:145:1:virtual msg_t amiro::INA219::Driver::selftest()	64	static
+ina219.cpp:377:1:cpp)	0	static

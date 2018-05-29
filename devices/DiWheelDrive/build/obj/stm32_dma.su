@@ -1,0 +1,14 @@
+stm32_dma.c:126:1:Vector6C	8	static
+stm32_dma.c:144:1:Vector70	8	static
+stm32_dma.c:162:1:Vector74	8	static
+stm32_dma.c:180:1:Vector78	8	static
+stm32_dma.c:198:1:Vector7C	8	static
+stm32_dma.c:216:1:Vector80	8	static
+stm32_dma.c:234:1:Vector84	8	static
+stm32_dma.c:253:1:Vector120	8	static
+stm32_dma.c:271:1:Vector124	8	static
+stm32_dma.c:289:1:Vector128	8	static
+stm32_dma.c:346:1:Vector12C	8	static
+stm32_dma.c:381:6:dmaInit	8	static
+stm32_dma.c:419:8:dmaStreamAllocate	40	static
+stm32_dma.c:467:6:dmaStreamRelease	16	static

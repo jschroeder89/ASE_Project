@@ -1,0 +1,14 @@
+board.c:30:6:__early_init	0	static
+board.c:38:6:boardInit	0	static
+board.c:42:13:boardWriteIoPower	16	static
+board.c:59:13:boardWriteLed	0	static
+board.c:64:13:boardWriteSystemPower	0	static
+board.c:70:13:boardWriteWarmRestart	0	static
+board.c:76:13:boardChargerSetState	4	static
+board.c:84:13:boardBluetoothSetState	0	static
+board.c:89:13:boardRequestShutdown	0	static
+board.c:96:13:boardStandby	8	static
+board.c:114:13:boardStop	16	static
+board.c:142:13:boardWakeup	16	static
+board.c:149:13:boardClearI2CBus	32	static
+board.c:205:13:boardResetBQ27500I2C	32	static

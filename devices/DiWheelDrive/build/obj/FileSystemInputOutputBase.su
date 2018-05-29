@@ -1,0 +1,6 @@
+FileSystemInputOutputBase.cpp:60:1:msg_t amiro::fileSystemIo::FileSystemIoBase::getCheck()	32	static
+FileSystemInputOutputBase.cpp:87:1:msg_t amiro::fileSystemIo::FileSystemIoBase::initPreamble(uint8_t, uint8_t, bool)	32	static
+FileSystemInputOutputBase.cpp:7:1:msg_t amiro::fileSystemIo::FileSystemIoBase::init()	40	static
+FileSystemInputOutputBase.cpp:158:1:msg_t amiro::fileSystemIo::FileSystemIoBase::resetMemory()	0	static
+FileSystemInputOutputBase.cpp:164:1:msg_t amiro::fileSystemIo::FileSystemIoBase::getBoardId(uint8_t*)	24	static
+FileSystemInputOutputBase.cpp:196:1:msg_t amiro::fileSystemIo::FileSystemIoBase::setBoardId(uint8_t)	24	static

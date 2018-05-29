@@ -1,0 +1,8 @@
+a2500r24a.cpp:14:1:amiro::A2500R24A::~A2500R24A()	0	static
+a2500r24a.cpp:14:1:virtual amiro::A2500R24A::~A2500R24A()	8	static
+a2500r24a.cpp:23:7:virtual msg_t amiro::A2500R24A::main()	8	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+a2500r24a.cpp:9:1:amiro::A2500R24A::A2500R24A(amiro::HWSPIDriver*)	16	static
+a2500r24a.cpp:19:1:chibios_rt::EvtSource* amiro::A2500R24A::getEventSource()	0	static
+a2500r24a.cpp:41:7:msg_t amiro::A2500R24A::configure(amiro::A2500R24A::A2500R24AConfig*)	0	static
+a2500r24a.cpp:47:9:uint8_t amiro::A2500R24A::getCheck()	16	static

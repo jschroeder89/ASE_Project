@@ -1,0 +1,6 @@
+chmempools.c:62:6:chPoolInit	16	static
+chmempools.c:105:7:chPoolAllocI	8	static
+chmempools.c:128:7:chPoolAlloc	8	static
+chmempools.c:149:6:chPoolFreeI	16	static
+chmempools.c:171:6:chPoolFree	16	static
+chmempools.c:84:6:chPoolLoadArray	16	static

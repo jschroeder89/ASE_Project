@@ -1,0 +1,562 @@
+ARM GAS  /tmp/ccD1z2Qa.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chschd.c"
+  17              		.section	.text._scheduler_init,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_scheduler_init
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_scheduler_init, %function
+  24              	_scheduler_init:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 034B     		ldr	r3, .L2
+  29 0002 0022     		movs	r2, #0
+  30 0004 5B60     		str	r3, [r3, #4]
+  31 0006 1B60     		str	r3, [r3]
+  32 0008 5B61     		str	r3, [r3, #20]
+  33 000a 1B61     		str	r3, [r3, #16]
+  34 000c 9A60     		str	r2, [r3, #8]
+  35 000e 7047     		bx	lr
+  36              	.L3:
+  37              		.align	2
+  38              	.L2:
+  39 0010 00000000 		.word	.LANCHOR0
+  40              		.size	_scheduler_init, .-_scheduler_init
+  41 0014 AFF30080 		.section	.text.chSchReadyI,"ax",%progbits
+  41      AFF30080 
+  41      AFF30080 
+  42              		.align	2
+  43              		.p2align 4,,15
+  44              		.global	chSchReadyI
+  45              		.thumb
+  46              		.thumb_func
+  47              		.type	chSchReadyI, %function
+  48              	chSchReadyI:
+  49              		@ args = 0, pretend = 0, frame = 0
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51 0000 10B5     		push	{r4, lr}
+  52 0002 0446     		mov	r4, r0
+  53 0004 FFF7FEFF 		bl	chDbgCheckClassI
+  54 0008 94F82030 		ldrb	r3, [r4, #32]	@ zero_extendqisi2
+  55 000c 8BB1     		cbz	r3, .L5
+ARM GAS  /tmp/ccD1z2Qa.s 			page 2
+
+
+  56 000e 0E2B     		cmp	r3, #14
+  57 0010 0FD0     		beq	.L5
+  58              	.L6:
+  59 0012 0022     		movs	r2, #0
+  60 0014 A168     		ldr	r1, [r4, #8]
+  61 0016 094B     		ldr	r3, .L13
+  62 0018 84F82020 		strb	r2, [r4, #32]
+  63              	.L8:
+  64 001c 1B68     		ldr	r3, [r3]
+  65 001e 9A68     		ldr	r2, [r3, #8]
+  66 0020 8A42     		cmp	r2, r1
+  67 0022 FBD2     		bcs	.L8
+  68 0024 5A68     		ldr	r2, [r3, #4]
+  69 0026 6260     		str	r2, [r4, #4]
+  70 0028 2360     		str	r3, [r4]
+  71 002a 2046     		mov	r0, r4
+  72 002c 5C60     		str	r4, [r3, #4]
+  73 002e 1460     		str	r4, [r2]
+  74 0030 10BD     		pop	{r4, pc}
+  75              	.L5:
+  76 0032 0348     		ldr	r0, .L13+4
+  77 0034 FFF7FEFF 		bl	chDbgPanic
+  78 0038 EBE7     		b	.L6
+  79              	.L14:
+  80 003a 00BF     		.align	2
+  81              	.L13:
+  82 003c 00000000 		.word	.LANCHOR0
+  83 0040 00000000 		.word	.LC0
+  84              		.size	chSchReadyI, .-chSchReadyI
+  85 0044 AFF30080 		.section	.text.wakeup,"ax",%progbits
+  85      AFF30080 
+  85      AFF30080 
+  86              		.align	2
+  87              		.p2align 4,,15
+  88              		.thumb
+  89              		.thumb_func
+  90              		.type	wakeup, %function
+  91              	wakeup:
+  92              		@ args = 0, pretend = 0, frame = 0
+  93              		@ frame_needed = 0, uses_anonymous_args = 0
+  94 0000 10B5     		push	{r4, lr}
+  95 0002 2023     		movs	r3, #32
+  96 0004 0446     		mov	r4, r0
+  97              	@ 139 "../../../ChibiOS/os/kernel/src/chschd.c" 1
+  98 0006 83F31188 		msr     BASEPRI, r3
+  99              	@ 0 "" 2
+ 100              		.thumb
+ 101 000a FFF7FEFF 		bl	dbg_check_lock_from_isr
+ 102 000e 94F82030 		ldrb	r3, [r4, #32]	@ zero_extendqisi2
+ 103 0012 0D2B     		cmp	r3, #13
+ 104 0014 11D8     		bhi	.L16
+ 105 0016 DFE803F0 		tbb	[pc, r3]
+ 106              	.L18:
+ 107 001a 16       		.byte	(.L22-.L18)/2
+ 108 001b 10       		.byte	(.L16-.L18)/2
+ 109 001c 10       		.byte	(.L16-.L18)/2
+ 110 001d 07       		.byte	(.L19-.L18)/2
+ARM GAS  /tmp/ccD1z2Qa.s 			page 3
+
+
+ 111 001e 10       		.byte	(.L16-.L18)/2
+ 112 001f 0B       		.byte	(.L20-.L18)/2
+ 113 0020 10       		.byte	(.L16-.L18)/2
+ 114 0021 10       		.byte	(.L16-.L18)/2
+ 115 0022 10       		.byte	(.L16-.L18)/2
+ 116 0023 10       		.byte	(.L16-.L18)/2
+ 117 0024 10       		.byte	(.L16-.L18)/2
+ 118 0025 10       		.byte	(.L16-.L18)/2
+ 119 0026 10       		.byte	(.L16-.L18)/2
+ 120 0027 0B       		.byte	(.L20-.L18)/2
+ 121              		.align	1
+ 122              	.L19:
+ 123 0028 A36A     		ldr	r3, [r4, #40]
+ 124 002a 9A68     		ldr	r2, [r3, #8]
+ 125 002c 0132     		adds	r2, r2, #1
+ 126 002e 9A60     		str	r2, [r3, #8]
+ 127              	.L20:
+ 128 0030 94E80C00 		ldmia	r4, {r2, r3}
+ 129 0034 1A60     		str	r2, [r3]
+ 130 0036 2268     		ldr	r2, [r4]
+ 131 0038 5360     		str	r3, [r2, #4]
+ 132              	.L16:
+ 133 003a 4FF0FF33 		mov	r3, #-1
+ 134 003e A362     		str	r3, [r4, #40]
+ 135 0040 2046     		mov	r0, r4
+ 136 0042 FFF7FEFF 		bl	chSchReadyI
+ 137              	.L22:
+ 138 0046 FFF7FEFF 		bl	dbg_check_unlock_from_isr
+ 139 004a 0023     		movs	r3, #0
+ 140              	@ 165 "../../../ChibiOS/os/kernel/src/chschd.c" 1
+ 141 004c 83F31188 		msr     BASEPRI, r3
+ 142              	@ 0 "" 2
+ 143              		.thumb
+ 144 0050 10BD     		pop	{r4, pc}
+ 145              		.size	wakeup, .-wakeup
+ 146 0052 00BFAFF3 		.section	.text.chSchGoSleepS,"ax",%progbits
+ 146      0080AFF3 
+ 146      0080AFF3 
+ 146      0080
+ 147              		.align	2
+ 148              		.p2align 4,,15
+ 149              		.global	chSchGoSleepS
+ 150              		.thumb
+ 151              		.thumb_func
+ 152              		.type	chSchGoSleepS, %function
+ 153              	chSchGoSleepS:
+ 154              		@ args = 0, pretend = 0, frame = 0
+ 155              		@ frame_needed = 0, uses_anonymous_args = 0
+ 156 0000 70B5     		push	{r4, r5, r6, lr}
+ 157 0002 114C     		ldr	r4, .L25
+ 158 0004 0646     		mov	r6, r0
+ 159 0006 FFF7FEFF 		bl	chDbgCheckClassS
+ 160 000a 2368     		ldr	r3, [r4]
+ 161 000c A569     		ldr	r5, [r4, #24]
+ 162 000e 1A68     		ldr	r2, [r3]
+ 163 0010 85F82060 		strb	r6, [r5, #32]
+ 164 0014 1420     		movs	r0, #20
+ARM GAS  /tmp/ccD1z2Qa.s 			page 4
+
+
+ 165 0016 0121     		movs	r1, #1
+ 166 0018 85F82300 		strb	r0, [r5, #35]
+ 167 001c 5460     		str	r4, [r2, #4]
+ 168 001e 2846     		mov	r0, r5
+ 169 0020 83F82010 		strb	r1, [r3, #32]
+ 170 0024 2260     		str	r2, [r4]
+ 171 0026 A361     		str	r3, [r4, #24]
+ 172 0028 FFF7FEFF 		bl	dbg_trace
+ 173 002c EB69     		ldr	r3, [r5, #28]
+ 174 002e ADF16402 		sub	r2, sp, #100
+ 175 0032 9342     		cmp	r3, r2
+ 176 0034 02D9     		bls	.L24
+ 177 0036 0548     		ldr	r0, .L25+4
+ 178 0038 FFF7FEFF 		bl	chDbgPanic
+ 179              	.L24:
+ 180 003c A069     		ldr	r0, [r4, #24]
+ 181 003e 2946     		mov	r1, r5
+ 182 0040 BDE87040 		pop	{r4, r5, r6, lr}
+ 183 0044 FFF7FEBF 		b	_port_switch
+ 184              	.L26:
+ 185              		.align	2
+ 186              	.L25:
+ 187 0048 00000000 		.word	.LANCHOR0
+ 188 004c 14000000 		.word	.LC1
+ 189              		.size	chSchGoSleepS, .-chSchGoSleepS
+ 190              		.section	.text.chSchGoSleepTimeoutS,"ax",%progbits
+ 191              		.align	2
+ 192              		.p2align 4,,15
+ 193              		.global	chSchGoSleepTimeoutS
+ 194              		.thumb
+ 195              		.thumb_func
+ 196              		.type	chSchGoSleepTimeoutS, %function
+ 197              	chSchGoSleepTimeoutS:
+ 198              		@ args = 0, pretend = 0, frame = 24
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200 0000 70B5     		push	{r4, r5, r6, lr}
+ 201 0002 0C46     		mov	r4, r1
+ 202 0004 86B0     		sub	sp, sp, #24
+ 203 0006 0646     		mov	r6, r0
+ 204 0008 FFF7FEFF 		bl	chDbgCheckClassS
+ 205 000c 631C     		adds	r3, r4, #1
+ 206 000e 12D0     		beq	.L28
+ 207 0010 0D4D     		ldr	r5, .L34
+ 208 0012 0E4A     		ldr	r2, .L34+4
+ 209 0014 AB69     		ldr	r3, [r5, #24]
+ 210 0016 2146     		mov	r1, r4
+ 211 0018 01A8     		add	r0, sp, #4
+ 212 001a FFF7FEFF 		bl	chVTSetI
+ 213 001e 3046     		mov	r0, r6
+ 214 0020 FFF7FEFF 		bl	chSchGoSleepS
+ 215 0024 049B     		ldr	r3, [sp, #16]
+ 216 0026 13B1     		cbz	r3, .L30
+ 217 0028 01A8     		add	r0, sp, #4
+ 218 002a FFF7FEFF 		bl	chVTResetI
+ 219              	.L30:
+ 220 002e AB69     		ldr	r3, [r5, #24]
+ 221 0030 986A     		ldr	r0, [r3, #40]
+ARM GAS  /tmp/ccD1z2Qa.s 			page 5
+
+
+ 222 0032 06B0     		add	sp, sp, #24
+ 223              		@ sp needed
+ 224 0034 70BD     		pop	{r4, r5, r6, pc}
+ 225              	.L28:
+ 226 0036 044D     		ldr	r5, .L34
+ 227 0038 3046     		mov	r0, r6
+ 228 003a FFF7FEFF 		bl	chSchGoSleepS
+ 229 003e AB69     		ldr	r3, [r5, #24]
+ 230 0040 986A     		ldr	r0, [r3, #40]
+ 231 0042 06B0     		add	sp, sp, #24
+ 232              		@ sp needed
+ 233 0044 70BD     		pop	{r4, r5, r6, pc}
+ 234              	.L35:
+ 235 0046 00BF     		.align	2
+ 236              	.L34:
+ 237 0048 00000000 		.word	.LANCHOR0
+ 238 004c 00000000 		.word	wakeup
+ 239              		.size	chSchGoSleepTimeoutS, .-chSchGoSleepTimeoutS
+ 240              		.section	.text.chSchWakeupS,"ax",%progbits
+ 241              		.align	2
+ 242              		.p2align 4,,15
+ 243              		.global	chSchWakeupS
+ 244              		.thumb
+ 245              		.thumb_func
+ 246              		.type	chSchWakeupS, %function
+ 247              	chSchWakeupS:
+ 248              		@ args = 0, pretend = 0, frame = 0
+ 249              		@ frame_needed = 0, uses_anonymous_args = 0
+ 250 0000 70B5     		push	{r4, r5, r6, lr}
+ 251 0002 164D     		ldr	r5, .L41
+ 252 0004 0446     		mov	r4, r0
+ 253 0006 0E46     		mov	r6, r1
+ 254 0008 FFF7FEFF 		bl	chDbgCheckClassS
+ 255 000c A869     		ldr	r0, [r5, #24]
+ 256 000e A368     		ldr	r3, [r4, #8]
+ 257 0010 8268     		ldr	r2, [r0, #8]
+ 258 0012 A662     		str	r6, [r4, #40]
+ 259 0014 9342     		cmp	r3, r2
+ 260 0016 13D9     		bls	.L39
+ 261 0018 FFF7FEFF 		bl	chSchReadyI
+ 262 001c 0123     		movs	r3, #1
+ 263 001e 0646     		mov	r6, r0
+ 264 0020 84F82030 		strb	r3, [r4, #32]
+ 265 0024 AC61     		str	r4, [r5, #24]
+ 266 0026 FFF7FEFF 		bl	dbg_trace
+ 267 002a F369     		ldr	r3, [r6, #28]
+ 268 002c ADF16402 		sub	r2, sp, #100
+ 269 0030 9342     		cmp	r3, r2
+ 270 0032 0AD8     		bhi	.L40
+ 271 0034 2046     		mov	r0, r4
+ 272 0036 3146     		mov	r1, r6
+ 273 0038 BDE87040 		pop	{r4, r5, r6, lr}
+ 274 003c FFF7FEBF 		b	_port_switch
+ 275              	.L39:
+ 276 0040 2046     		mov	r0, r4
+ 277 0042 BDE87040 		pop	{r4, r5, r6, lr}
+ 278 0046 FFF7FEBF 		b	chSchReadyI
+ARM GAS  /tmp/ccD1z2Qa.s 			page 6
+
+
+ 279              	.L40:
+ 280 004a 0548     		ldr	r0, .L41+4
+ 281 004c FFF7FEFF 		bl	chDbgPanic
+ 282 0050 2046     		mov	r0, r4
+ 283 0052 3146     		mov	r1, r6
+ 284 0054 BDE87040 		pop	{r4, r5, r6, lr}
+ 285 0058 FFF7FEBF 		b	_port_switch
+ 286              	.L42:
+ 287              		.align	2
+ 288              	.L41:
+ 289 005c 00000000 		.word	.LANCHOR0
+ 290 0060 14000000 		.word	.LC1
+ 291              		.size	chSchWakeupS, .-chSchWakeupS
+ 292 0064 AFF30080 		.section	.text.chSchDoRescheduleBehind,"ax",%progbits
+ 292      AFF30080 
+ 292      AFF30080 
+ 293              		.align	2
+ 294              		.p2align 4,,15
+ 295              		.global	chSchDoRescheduleBehind
+ 296              		.thumb
+ 297              		.thumb_func
+ 298              		.type	chSchDoRescheduleBehind, %function
+ 299              	chSchDoRescheduleBehind:
+ 300              		@ args = 0, pretend = 0, frame = 0
+ 301              		@ frame_needed = 0, uses_anonymous_args = 0
+ 302 0000 70B5     		push	{r4, r5, r6, lr}
+ 303 0002 104C     		ldr	r4, .L45
+ 304 0004 2368     		ldr	r3, [r4]
+ 305 0006 A569     		ldr	r5, [r4, #24]
+ 306 0008 1A68     		ldr	r2, [r3]
+ 307 000a 2260     		str	r2, [r4]
+ 308 000c 1421     		movs	r1, #20
+ 309 000e 0126     		movs	r6, #1
+ 310 0010 5460     		str	r4, [r2, #4]
+ 311 0012 2846     		mov	r0, r5
+ 312 0014 83F82060 		strb	r6, [r3, #32]
+ 313 0018 85F82310 		strb	r1, [r5, #35]
+ 314 001c A361     		str	r3, [r4, #24]
+ 315 001e FFF7FEFF 		bl	chSchReadyI
+ 316 0022 2846     		mov	r0, r5
+ 317 0024 FFF7FEFF 		bl	dbg_trace
+ 318 0028 EB69     		ldr	r3, [r5, #28]
+ 319 002a ADF16402 		sub	r2, sp, #100
+ 320 002e 9342     		cmp	r3, r2
+ 321 0030 02D9     		bls	.L44
+ 322 0032 0548     		ldr	r0, .L45+4
+ 323 0034 FFF7FEFF 		bl	chDbgPanic
+ 324              	.L44:
+ 325 0038 A069     		ldr	r0, [r4, #24]
+ 326 003a 2946     		mov	r1, r5
+ 327 003c BDE87040 		pop	{r4, r5, r6, lr}
+ 328 0040 FFF7FEBF 		b	_port_switch
+ 329              	.L46:
+ 330              		.align	2
+ 331              	.L45:
+ 332 0044 00000000 		.word	.LANCHOR0
+ 333 0048 14000000 		.word	.LC1
+ARM GAS  /tmp/ccD1z2Qa.s 			page 7
+
+
+ 334              		.size	chSchDoRescheduleBehind, .-chSchDoRescheduleBehind
+ 335 004c AFF30080 		.section	.text.chSchDoRescheduleAhead,"ax",%progbits
+ 336              		.align	2
+ 337              		.p2align 4,,15
+ 338              		.global	chSchDoRescheduleAhead
+ 339              		.thumb
+ 340              		.thumb_func
+ 341              		.type	chSchDoRescheduleAhead, %function
+ 342              	chSchDoRescheduleAhead:
+ 343              		@ args = 0, pretend = 0, frame = 0
+ 344              		@ frame_needed = 0, uses_anonymous_args = 0
+ 345 0000 70B5     		push	{r4, r5, r6, lr}
+ 346 0002 154E     		ldr	r6, .L52
+ 347 0004 3268     		ldr	r2, [r6]
+ 348 0006 B569     		ldr	r5, [r6, #24]
+ 349 0008 1368     		ldr	r3, [r2]
+ 350 000a AC68     		ldr	r4, [r5, #8]
+ 351 000c 3360     		str	r3, [r6]
+ 352 000e 0120     		movs	r0, #1
+ 353 0010 0021     		movs	r1, #0
+ 354 0012 5E60     		str	r6, [r3, #4]
+ 355 0014 82F82000 		strb	r0, [r2, #32]
+ 356 0018 1346     		mov	r3, r2
+ 357 001a B261     		str	r2, [r6, #24]
+ 358 001c 85F82010 		strb	r1, [r5, #32]
+ 359 0020 00E0     		b	.L49
+ 360              	.L51:
+ 361 0022 1B68     		ldr	r3, [r3]
+ 362              	.L49:
+ 363 0024 9A68     		ldr	r2, [r3, #8]
+ 364 0026 A242     		cmp	r2, r4
+ 365 0028 FBD8     		bhi	.L51
+ 366 002a 5A68     		ldr	r2, [r3, #4]
+ 367 002c 6A60     		str	r2, [r5, #4]
+ 368 002e 2B60     		str	r3, [r5]
+ 369 0030 2846     		mov	r0, r5
+ 370 0032 5D60     		str	r5, [r3, #4]
+ 371 0034 1560     		str	r5, [r2]
+ 372 0036 FFF7FEFF 		bl	dbg_trace
+ 373 003a EB69     		ldr	r3, [r5, #28]
+ 374 003c ADF16402 		sub	r2, sp, #100
+ 375 0040 9342     		cmp	r3, r2
+ 376 0042 02D9     		bls	.L50
+ 377 0044 0548     		ldr	r0, .L52+4
+ 378 0046 FFF7FEFF 		bl	chDbgPanic
+ 379              	.L50:
+ 380 004a B069     		ldr	r0, [r6, #24]
+ 381 004c 2946     		mov	r1, r5
+ 382 004e BDE87040 		pop	{r4, r5, r6, lr}
+ 383 0052 FFF7FEBF 		b	_port_switch
+ 384              	.L53:
+ 385 0056 00BF     		.align	2
+ 386              	.L52:
+ 387 0058 00000000 		.word	.LANCHOR0
+ 388 005c 14000000 		.word	.LC1
+ 389              		.size	chSchDoRescheduleAhead, .-chSchDoRescheduleAhead
+ 390              		.section	.text.chSchRescheduleS,"ax",%progbits
+ARM GAS  /tmp/ccD1z2Qa.s 			page 8
+
+
+ 391              		.align	2
+ 392              		.p2align 4,,15
+ 393              		.global	chSchRescheduleS
+ 394              		.thumb
+ 395              		.thumb_func
+ 396              		.type	chSchRescheduleS, %function
+ 397              	chSchRescheduleS:
+ 398              		@ args = 0, pretend = 0, frame = 0
+ 399              		@ frame_needed = 0, uses_anonymous_args = 0
+ 400 0000 08B5     		push	{r3, lr}
+ 401 0002 FFF7FEFF 		bl	chDbgCheckClassS
+ 402 0006 064B     		ldr	r3, .L57
+ 403 0008 1A68     		ldr	r2, [r3]
+ 404 000a 9B69     		ldr	r3, [r3, #24]
+ 405 000c 9268     		ldr	r2, [r2, #8]
+ 406 000e 9B68     		ldr	r3, [r3, #8]
+ 407 0010 9A42     		cmp	r2, r3
+ 408 0012 00D8     		bhi	.L56
+ 409 0014 08BD     		pop	{r3, pc}
+ 410              	.L56:
+ 411 0016 BDE80840 		pop	{r3, lr}
+ 412 001a FFF7FEBF 		b	chSchDoRescheduleAhead
+ 413              	.L58:
+ 414 001e 00BF     		.align	2
+ 415              	.L57:
+ 416 0020 00000000 		.word	.LANCHOR0
+ 417              		.size	chSchRescheduleS, .-chSchRescheduleS
+ 418 0024 AFF30080 		.section	.text.chSchDoReschedule,"ax",%progbits
+ 418      AFF30080 
+ 418      AFF30080 
+ 419              		.align	2
+ 420              		.p2align 4,,15
+ 421              		.global	chSchDoReschedule
+ 422              		.thumb
+ 423              		.thumb_func
+ 424              		.type	chSchDoReschedule, %function
+ 425              	chSchDoReschedule:
+ 426              		@ args = 0, pretend = 0, frame = 0
+ 427              		@ frame_needed = 0, uses_anonymous_args = 0
+ 428              		@ link register save eliminated.
+ 429 0000 044B     		ldr	r3, .L62
+ 430 0002 9B69     		ldr	r3, [r3, #24]
+ 431 0004 93F82330 		ldrb	r3, [r3, #35]	@ zero_extendqisi2
+ 432 0008 0BB1     		cbz	r3, .L61
+ 433 000a FFF7FEBF 		b	chSchDoRescheduleAhead
+ 434              	.L61:
+ 435 000e FFF7FEBF 		b	chSchDoRescheduleBehind
+ 436              	.L63:
+ 437 0012 00BF     		.align	2
+ 438              	.L62:
+ 439 0014 00000000 		.word	.LANCHOR0
+ 440              		.size	chSchDoReschedule, .-chSchDoReschedule
+ 441              		.global	rlist
+ 442 0018 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 442      AFF30080 
+ 443              		.align	2
+ 444              	.LC0:
+ARM GAS  /tmp/ccD1z2Qa.s 			page 9
+
+
+ 445 0000 63685363 		.ascii	"chSchReadyI(), #1\000"
+ 445      68526561 
+ 445      64794928 
+ 445      292C2023 
+ 445      3100
+ 446 0012 0000     		.space	2
+ 447              	.LC1:
+ 448 0014 73746163 		.ascii	"stack overflow\000"
+ 448      6B206F76 
+ 448      6572666C 
+ 448      6F7700
+ 449 0023 00       		.section	.bss.rlist,"aw",%nobits
+ 450              		.align	2
+ 451              		.set	.LANCHOR0,. + 0
+ 452              		.type	rlist, %object
+ 453              		.size	rlist, 28
+ 454              	rlist:
+ 455 0000 00000000 		.space	28
+ 455      00000000 
+ 455      00000000 
+ 455      00000000 
+ 455      00000000 
+ 456              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccD1z2Qa.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chschd.c
+     /tmp/ccD1z2Qa.s:18     .text._scheduler_init:00000000 $t
+     /tmp/ccD1z2Qa.s:24     .text._scheduler_init:00000000 _scheduler_init
+     /tmp/ccD1z2Qa.s:39     .text._scheduler_init:00000010 $d
+     /tmp/ccD1z2Qa.s:42     .text.chSchReadyI:00000000 $t
+     /tmp/ccD1z2Qa.s:48     .text.chSchReadyI:00000000 chSchReadyI
+     /tmp/ccD1z2Qa.s:82     .text.chSchReadyI:0000003c $d
+     /tmp/ccD1z2Qa.s:86     .text.wakeup:00000000 $t
+     /tmp/ccD1z2Qa.s:91     .text.wakeup:00000000 wakeup
+     /tmp/ccD1z2Qa.s:107    .text.wakeup:0000001a $d
+     /tmp/ccD1z2Qa.s:121    .text.wakeup:00000028 $t
+     /tmp/ccD1z2Qa.s:147    .text.chSchGoSleepS:00000000 $t
+     /tmp/ccD1z2Qa.s:153    .text.chSchGoSleepS:00000000 chSchGoSleepS
+     /tmp/ccD1z2Qa.s:187    .text.chSchGoSleepS:00000048 $d
+     /tmp/ccD1z2Qa.s:191    .text.chSchGoSleepTimeoutS:00000000 $t
+     /tmp/ccD1z2Qa.s:197    .text.chSchGoSleepTimeoutS:00000000 chSchGoSleepTimeoutS
+     /tmp/ccD1z2Qa.s:237    .text.chSchGoSleepTimeoutS:00000048 $d
+     /tmp/ccD1z2Qa.s:241    .text.chSchWakeupS:00000000 $t
+     /tmp/ccD1z2Qa.s:247    .text.chSchWakeupS:00000000 chSchWakeupS
+     /tmp/ccD1z2Qa.s:289    .text.chSchWakeupS:0000005c $d
+     /tmp/ccD1z2Qa.s:293    .text.chSchDoRescheduleBehind:00000000 $t
+     /tmp/ccD1z2Qa.s:299    .text.chSchDoRescheduleBehind:00000000 chSchDoRescheduleBehind
+     /tmp/ccD1z2Qa.s:332    .text.chSchDoRescheduleBehind:00000044 $d
+     /tmp/ccD1z2Qa.s:336    .text.chSchDoRescheduleAhead:00000000 $t
+     /tmp/ccD1z2Qa.s:342    .text.chSchDoRescheduleAhead:00000000 chSchDoRescheduleAhead
+     /tmp/ccD1z2Qa.s:387    .text.chSchDoRescheduleAhead:00000058 $d
+     /tmp/ccD1z2Qa.s:391    .text.chSchRescheduleS:00000000 $t
+     /tmp/ccD1z2Qa.s:397    .text.chSchRescheduleS:00000000 chSchRescheduleS
+     /tmp/ccD1z2Qa.s:416    .text.chSchRescheduleS:00000020 $d
+     /tmp/ccD1z2Qa.s:419    .text.chSchDoReschedule:00000000 $t
+     /tmp/ccD1z2Qa.s:425    .text.chSchDoReschedule:00000000 chSchDoReschedule
+     /tmp/ccD1z2Qa.s:439    .text.chSchDoReschedule:00000014 $d
+     /tmp/ccD1z2Qa.s:454    .bss.rlist:00000000 rlist
+     /tmp/ccD1z2Qa.s:443    .rodata.str1.4:00000000 $d
+     /tmp/ccD1z2Qa.s:450    .bss.rlist:00000000 $d
+     /tmp/ccD1z2Qa.s:41     .text._scheduler_init:00000014 $t
+     /tmp/ccD1z2Qa.s:85     .text.chSchReadyI:00000044 $t
+     /tmp/ccD1z2Qa.s:292    .text.chSchWakeupS:00000064 $t
+     /tmp/ccD1z2Qa.s:335    .text.chSchDoRescheduleBehind:0000004c $t
+     /tmp/ccD1z2Qa.s:418    .text.chSchRescheduleS:00000024 $t
+     /tmp/ccD1z2Qa.s:442    .text.chSchDoReschedule:00000018 $t
+
+UNDEFINED SYMBOLS
+chDbgCheckClassI
+chDbgPanic
+dbg_check_lock_from_isr
+dbg_check_unlock_from_isr
+chDbgCheckClassS
+dbg_trace
+_port_switch
+chVTSetI
+chVTResetI

@@ -1,0 +1,525 @@
+ARM GAS  /tmp/ccM41vxo.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chcond.c"
+  17              		.section	.text.chCondInit,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	chCondInit
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	chCondInit, %function
+  24              	chCondInit:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 10B5     		push	{r4, lr}
+  28 0002 0446     		mov	r4, r0
+  29 0004 10B1     		cbz	r0, .L4
+  30 0006 6460     		str	r4, [r4, #4]
+  31 0008 2460     		str	r4, [r4]
+  32 000a 10BD     		pop	{r4, pc}
+  33              	.L4:
+  34 000c 0248     		ldr	r0, .L5
+  35 000e FFF7FEFF 		bl	chDbgPanic
+  36 0012 6460     		str	r4, [r4, #4]
+  37 0014 2460     		str	r4, [r4]
+  38 0016 10BD     		pop	{r4, pc}
+  39              	.L6:
+  40              		.align	2
+  41              	.L5:
+  42 0018 00000000 		.word	.LC0
+  43              		.size	chCondInit, .-chCondInit
+  44 001c AFF30080 		.section	.text.chCondSignal,"ax",%progbits
+  45              		.align	2
+  46              		.p2align 4,,15
+  47              		.global	chCondSignal
+  48              		.thumb
+  49              		.thumb_func
+  50              		.type	chCondSignal, %function
+  51              	chCondSignal:
+  52              		@ args = 0, pretend = 0, frame = 0
+  53              		@ frame_needed = 0, uses_anonymous_args = 0
+  54 0000 10B5     		push	{r4, lr}
+  55 0002 0446     		mov	r4, r0
+  56 0004 98B1     		cbz	r0, .L10
+  57              	.L8:
+ARM GAS  /tmp/ccM41vxo.s 			page 2
+
+
+  58 0006 2023     		movs	r3, #32
+  59              	@ 77 "../../../ChibiOS/os/kernel/src/chcond.c" 1
+  60 0008 83F31188 		msr     BASEPRI, r3
+  61              	@ 0 "" 2
+  62              		.thumb
+  63 000c FFF7FEFF 		bl	dbg_check_lock
+  64 0010 2068     		ldr	r0, [r4]
+  65 0012 A042     		cmp	r0, r4
+  66 0014 05D0     		beq	.L9
+  67 0016 0368     		ldr	r3, [r0]
+  68 0018 2360     		str	r3, [r4]
+  69 001a 0021     		movs	r1, #0
+  70 001c 5C60     		str	r4, [r3, #4]
+  71 001e FFF7FEFF 		bl	chSchWakeupS
+  72              	.L9:
+  73 0022 FFF7FEFF 		bl	dbg_check_unlock
+  74 0026 0023     		movs	r3, #0
+  75              	@ 80 "../../../ChibiOS/os/kernel/src/chcond.c" 1
+  76 0028 83F31188 		msr     BASEPRI, r3
+  77              	@ 0 "" 2
+  78              		.thumb
+  79 002c 10BD     		pop	{r4, pc}
+  80              	.L10:
+  81 002e 0248     		ldr	r0, .L11
+  82 0030 FFF7FEFF 		bl	chDbgPanic
+  83 0034 E7E7     		b	.L8
+  84              	.L12:
+  85 0036 00BF     		.align	2
+  86              	.L11:
+  87 0038 10000000 		.word	.LC1
+  88              		.size	chCondSignal, .-chCondSignal
+  89 003c AFF30080 		.section	.text.chCondSignalI,"ax",%progbits
+  90              		.align	2
+  91              		.p2align 4,,15
+  92              		.global	chCondSignalI
+  93              		.thumb
+  94              		.thumb_func
+  95              		.type	chCondSignalI, %function
+  96              	chCondSignalI:
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99 0000 10B5     		push	{r4, lr}
+ 100 0002 0446     		mov	r4, r0
+ 101 0004 FFF7FEFF 		bl	chDbgCheckClassI
+ 102 0008 54B1     		cbz	r4, .L16
+ 103              	.L14:
+ 104 000a 2068     		ldr	r0, [r4]
+ 105 000c A042     		cmp	r0, r4
+ 106 000e 06D0     		beq	.L13
+ 107 0010 0368     		ldr	r3, [r0]
+ 108 0012 2360     		str	r3, [r4]
+ 109 0014 5C60     		str	r4, [r3, #4]
+ 110 0016 FFF7FEFF 		bl	chSchReadyI
+ 111 001a 0023     		movs	r3, #0
+ 112 001c 8362     		str	r3, [r0, #40]
+ 113              	.L13:
+ 114 001e 10BD     		pop	{r4, pc}
+ARM GAS  /tmp/ccM41vxo.s 			page 3
+
+
+ 115              	.L16:
+ 116 0020 0148     		ldr	r0, .L17
+ 117 0022 FFF7FEFF 		bl	chDbgPanic
+ 118 0026 F0E7     		b	.L14
+ 119              	.L18:
+ 120              		.align	2
+ 121              	.L17:
+ 122 0028 24000000 		.word	.LC2
+ 123              		.size	chCondSignalI, .-chCondSignalI
+ 124 002c AFF30080 		.section	.text.chCondBroadcastI,"ax",%progbits
+ 125              		.align	2
+ 126              		.p2align 4,,15
+ 127              		.global	chCondBroadcastI
+ 128              		.thumb
+ 129              		.thumb_func
+ 130              		.type	chCondBroadcastI, %function
+ 131              	chCondBroadcastI:
+ 132              		@ args = 0, pretend = 0, frame = 0
+ 133              		@ frame_needed = 0, uses_anonymous_args = 0
+ 134 0000 38B5     		push	{r3, r4, r5, lr}
+ 135 0002 0446     		mov	r4, r0
+ 136 0004 FFF7FEFF 		bl	chDbgCheckClassI
+ 137 0008 74B1     		cbz	r4, .L24
+ 138              	.L20:
+ 139 000a 2068     		ldr	r0, [r4]
+ 140 000c A042     		cmp	r0, r4
+ 141 000e 0AD0     		beq	.L19
+ 142 0010 6FF00105 		mvn	r5, #1
+ 143              	.L23:
+ 144 0014 0368     		ldr	r3, [r0]
+ 145 0016 2360     		str	r3, [r4]
+ 146 0018 5C60     		str	r4, [r3, #4]
+ 147 001a FFF7FEFF 		bl	chSchReadyI
+ 148 001e 8562     		str	r5, [r0, #40]
+ 149 0020 2068     		ldr	r0, [r4]
+ 150 0022 A042     		cmp	r0, r4
+ 151 0024 F6D1     		bne	.L23
+ 152              	.L19:
+ 153 0026 38BD     		pop	{r3, r4, r5, pc}
+ 154              	.L24:
+ 155 0028 0148     		ldr	r0, .L25
+ 156 002a FFF7FEFF 		bl	chDbgPanic
+ 157 002e ECE7     		b	.L20
+ 158              	.L26:
+ 159              		.align	2
+ 160              	.L25:
+ 161 0030 38000000 		.word	.LC3
+ 162              		.size	chCondBroadcastI, .-chCondBroadcastI
+ 163 0034 AFF30080 		.section	.text.chCondBroadcast,"ax",%progbits
+ 163      AFF30080 
+ 163      AFF30080 
+ 164              		.align	2
+ 165              		.p2align 4,,15
+ 166              		.global	chCondBroadcast
+ 167              		.thumb
+ 168              		.thumb_func
+ 169              		.type	chCondBroadcast, %function
+ARM GAS  /tmp/ccM41vxo.s 			page 4
+
+
+ 170              	chCondBroadcast:
+ 171              		@ args = 0, pretend = 0, frame = 0
+ 172              		@ frame_needed = 0, uses_anonymous_args = 0
+ 173 0000 10B5     		push	{r4, lr}
+ 174 0002 2023     		movs	r3, #32
+ 175 0004 0446     		mov	r4, r0
+ 176              	@ 112 "../../../ChibiOS/os/kernel/src/chcond.c" 1
+ 177 0006 83F31188 		msr     BASEPRI, r3
+ 178              	@ 0 "" 2
+ 179              		.thumb
+ 180 000a FFF7FEFF 		bl	dbg_check_lock
+ 181 000e 2046     		mov	r0, r4
+ 182 0010 FFF7FEFF 		bl	chCondBroadcastI
+ 183 0014 FFF7FEFF 		bl	chSchRescheduleS
+ 184 0018 FFF7FEFF 		bl	dbg_check_unlock
+ 185 001c 0023     		movs	r3, #0
+ 186              	@ 115 "../../../ChibiOS/os/kernel/src/chcond.c" 1
+ 187 001e 83F31188 		msr     BASEPRI, r3
+ 188              	@ 0 "" 2
+ 189              		.thumb
+ 190 0022 10BD     		pop	{r4, pc}
+ 191              		.size	chCondBroadcast, .-chCondBroadcast
+ 192 0024 AFF30080 		.section	.text.chCondWaitS,"ax",%progbits
+ 192      AFF30080 
+ 192      AFF30080 
+ 193              		.align	2
+ 194              		.p2align 4,,15
+ 195              		.global	chCondWaitS
+ 196              		.thumb
+ 197              		.thumb_func
+ 198              		.type	chCondWaitS, %function
+ 199              	chCondWaitS:
+ 200              		@ args = 0, pretend = 0, frame = 0
+ 201              		@ frame_needed = 0, uses_anonymous_args = 0
+ 202 0000 154B     		ldr	r3, .L38
+ 203 0002 70B5     		push	{r4, r5, r6, lr}
+ 204 0004 0546     		mov	r5, r0
+ 205 0006 9C69     		ldr	r4, [r3, #24]
+ 206 0008 FFF7FEFF 		bl	chDbgCheckClassS
+ 207 000c E5B1     		cbz	r5, .L35
+ 208              	.L29:
+ 209 000e 236C     		ldr	r3, [r4, #64]
+ 210 0010 F3B1     		cbz	r3, .L36
+ 211              	.L30:
+ 212 0012 FFF7FEFF 		bl	chMtxUnlockS
+ 213 0016 A562     		str	r5, [r4, #40]
+ 214 0018 0646     		mov	r6, r0
+ 215 001a 2B46     		mov	r3, r5
+ 216 001c 03E0     		b	.L33
+ 217              	.L37:
+ 218 001e 9968     		ldr	r1, [r3, #8]
+ 219 0020 A268     		ldr	r2, [r4, #8]
+ 220 0022 9142     		cmp	r1, r2
+ 221 0024 02D3     		bcc	.L32
+ 222              	.L33:
+ 223 0026 1B68     		ldr	r3, [r3]
+ 224 0028 9D42     		cmp	r5, r3
+ARM GAS  /tmp/ccM41vxo.s 			page 5
+
+
+ 225 002a F8D1     		bne	.L37
+ 226              	.L32:
+ 227 002c 5A68     		ldr	r2, [r3, #4]
+ 228 002e 6260     		str	r2, [r4, #4]
+ 229 0030 2360     		str	r3, [r4]
+ 230 0032 0520     		movs	r0, #5
+ 231 0034 5C60     		str	r4, [r3, #4]
+ 232 0036 1460     		str	r4, [r2]
+ 233 0038 FFF7FEFF 		bl	chSchGoSleepS
+ 234 003c A46A     		ldr	r4, [r4, #40]
+ 235 003e 3046     		mov	r0, r6
+ 236 0040 FFF7FEFF 		bl	chMtxLockS
+ 237 0044 2046     		mov	r0, r4
+ 238 0046 70BD     		pop	{r4, r5, r6, pc}
+ 239              	.L35:
+ 240 0048 0448     		ldr	r0, .L38+4
+ 241 004a FFF7FEFF 		bl	chDbgPanic
+ 242 004e DEE7     		b	.L29
+ 243              	.L36:
+ 244 0050 0348     		ldr	r0, .L38+8
+ 245 0052 FFF7FEFF 		bl	chDbgPanic
+ 246 0056 DCE7     		b	.L30
+ 247              	.L39:
+ 248              		.align	2
+ 249              	.L38:
+ 250 0058 00000000 		.word	rlist
+ 251 005c 50000000 		.word	.LC4
+ 252 0060 60000000 		.word	.LC5
+ 253              		.size	chCondWaitS, .-chCondWaitS
+ 254 0064 AFF30080 		.section	.text.chCondWait,"ax",%progbits
+ 254      AFF30080 
+ 254      AFF30080 
+ 255              		.align	2
+ 256              		.p2align 4,,15
+ 257              		.global	chCondWait
+ 258              		.thumb
+ 259              		.thumb_func
+ 260              		.type	chCondWait, %function
+ 261              	chCondWait:
+ 262              		@ args = 0, pretend = 0, frame = 0
+ 263              		@ frame_needed = 0, uses_anonymous_args = 0
+ 264 0000 10B5     		push	{r4, lr}
+ 265 0002 2023     		movs	r3, #32
+ 266 0004 0446     		mov	r4, r0
+ 267              	@ 161 "../../../ChibiOS/os/kernel/src/chcond.c" 1
+ 268 0006 83F31188 		msr     BASEPRI, r3
+ 269              	@ 0 "" 2
+ 270              		.thumb
+ 271 000a FFF7FEFF 		bl	dbg_check_lock
+ 272 000e 2046     		mov	r0, r4
+ 273 0010 FFF7FEFF 		bl	chCondWaitS
+ 274 0014 0446     		mov	r4, r0
+ 275 0016 FFF7FEFF 		bl	dbg_check_unlock
+ 276 001a 0023     		movs	r3, #0
+ 277              	@ 163 "../../../ChibiOS/os/kernel/src/chcond.c" 1
+ 278 001c 83F31188 		msr     BASEPRI, r3
+ 279              	@ 0 "" 2
+ARM GAS  /tmp/ccM41vxo.s 			page 6
+
+
+ 280              		.thumb
+ 281 0020 2046     		mov	r0, r4
+ 282 0022 10BD     		pop	{r4, pc}
+ 283              		.size	chCondWait, .-chCondWait
+ 284 0024 AFF30080 		.section	.text.chCondWaitTimeoutS,"ax",%progbits
+ 284      AFF30080 
+ 284      AFF30080 
+ 285              		.align	2
+ 286              		.p2align 4,,15
+ 287              		.global	chCondWaitTimeoutS
+ 288              		.thumb
+ 289              		.thumb_func
+ 290              		.type	chCondWaitTimeoutS, %function
+ 291              	chCondWaitTimeoutS:
+ 292              		@ args = 0, pretend = 0, frame = 0
+ 293              		@ frame_needed = 0, uses_anonymous_args = 0
+ 294 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 295 0004 0646     		mov	r6, r0
+ 296 0006 8846     		mov	r8, r1
+ 297 0008 FFF7FEFF 		bl	chDbgCheckClassS
+ 298 000c 36B3     		cbz	r6, .L42
+ 299 000e B8F1000F 		cmp	r8, #0
+ 300 0012 23D0     		beq	.L42
+ 301              	.L43:
+ 302 0014 154C     		ldr	r4, .L54
+ 303 0016 A369     		ldr	r3, [r4, #24]
+ 304 0018 1B6C     		ldr	r3, [r3, #64]
+ 305 001a 1BB3     		cbz	r3, .L53
+ 306              	.L44:
+ 307 001c FFF7FEFF 		bl	chMtxUnlockS
+ 308 0020 A569     		ldr	r5, [r4, #24]
+ 309 0022 0746     		mov	r7, r0
+ 310 0024 3346     		mov	r3, r6
+ 311 0026 AE62     		str	r6, [r5, #40]
+ 312 0028 03E0     		b	.L49
+ 313              	.L45:
+ 314 002a 9C68     		ldr	r4, [r3, #8]
+ 315 002c AA68     		ldr	r2, [r5, #8]
+ 316 002e 9442     		cmp	r4, r2
+ 317 0030 02D3     		bcc	.L48
+ 318              	.L49:
+ 319 0032 1B68     		ldr	r3, [r3]
+ 320 0034 9E42     		cmp	r6, r3
+ 321 0036 F8D1     		bne	.L45
+ 322              	.L48:
+ 323 0038 5A68     		ldr	r2, [r3, #4]
+ 324 003a 6A60     		str	r2, [r5, #4]
+ 325 003c 2B60     		str	r3, [r5]
+ 326 003e 4146     		mov	r1, r8
+ 327 0040 5D60     		str	r5, [r3, #4]
+ 328 0042 0520     		movs	r0, #5
+ 329 0044 1560     		str	r5, [r2]
+ 330 0046 FFF7FEFF 		bl	chSchGoSleepTimeoutS
+ 331 004a 431C     		adds	r3, r0, #1
+ 332 004c 0446     		mov	r4, r0
+ 333 004e 02D0     		beq	.L47
+ 334 0050 3846     		mov	r0, r7
+ARM GAS  /tmp/ccM41vxo.s 			page 7
+
+
+ 335 0052 FFF7FEFF 		bl	chMtxLockS
+ 336              	.L47:
+ 337 0056 2046     		mov	r0, r4
+ 338 0058 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 339              	.L42:
+ 340 005c 0448     		ldr	r0, .L54+4
+ 341 005e FFF7FEFF 		bl	chDbgPanic
+ 342 0062 D7E7     		b	.L43
+ 343              	.L53:
+ 344 0064 0348     		ldr	r0, .L54+8
+ 345 0066 FFF7FEFF 		bl	chDbgPanic
+ 346 006a D7E7     		b	.L44
+ 347              	.L55:
+ 348              		.align	2
+ 349              	.L54:
+ 350 006c 00000000 		.word	rlist
+ 351 0070 74000000 		.word	.LC6
+ 352 0074 8C000000 		.word	.LC7
+ 353              		.size	chCondWaitTimeoutS, .-chCondWaitTimeoutS
+ 354 0078 AFF30080 		.section	.text.chCondWaitTimeout,"ax",%progbits
+ 354      AFF30080 
+ 355              		.align	2
+ 356              		.p2align 4,,15
+ 357              		.global	chCondWaitTimeout
+ 358              		.thumb
+ 359              		.thumb_func
+ 360              		.type	chCondWaitTimeout, %function
+ 361              	chCondWaitTimeout:
+ 362              		@ args = 0, pretend = 0, frame = 0
+ 363              		@ frame_needed = 0, uses_anonymous_args = 0
+ 364 0000 38B5     		push	{r3, r4, r5, lr}
+ 365 0002 0546     		mov	r5, r0
+ 366 0004 0C46     		mov	r4, r1
+ 367 0006 2023     		movs	r3, #32
+ 368              	@ 236 "../../../ChibiOS/os/kernel/src/chcond.c" 1
+ 369 0008 83F31188 		msr     BASEPRI, r3
+ 370              	@ 0 "" 2
+ 371              		.thumb
+ 372 000c FFF7FEFF 		bl	dbg_check_lock
+ 373 0010 2146     		mov	r1, r4
+ 374 0012 2846     		mov	r0, r5
+ 375 0014 FFF7FEFF 		bl	chCondWaitTimeoutS
+ 376 0018 0446     		mov	r4, r0
+ 377 001a FFF7FEFF 		bl	dbg_check_unlock
+ 378 001e 0023     		movs	r3, #0
+ 379              	@ 238 "../../../ChibiOS/os/kernel/src/chcond.c" 1
+ 380 0020 83F31188 		msr     BASEPRI, r3
+ 381              	@ 0 "" 2
+ 382              		.thumb
+ 383 0024 2046     		mov	r0, r4
+ 384 0026 38BD     		pop	{r3, r4, r5, pc}
+ 385              		.size	chCondWaitTimeout, .-chCondWaitTimeout
+ 386 0028 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 386      AFF30080 
+ 387              		.align	2
+ 388              	.LC0:
+ 389 0000 22636843 		.ascii	"\"chCondInit\"()\000"
+ARM GAS  /tmp/ccM41vxo.s 			page 8
+
+
+ 389      6F6E6449 
+ 389      6E697422 
+ 389      282900
+ 390 000f 00       		.space	1
+ 391              	.LC1:
+ 392 0010 22636843 		.ascii	"\"chCondSignal\"()\000"
+ 392      6F6E6453 
+ 392      69676E61 
+ 392      6C222829 
+ 392      00
+ 393 0021 000000   		.space	3
+ 394              	.LC2:
+ 395 0024 22636843 		.ascii	"\"chCondSignalI\"()\000"
+ 395      6F6E6453 
+ 395      69676E61 
+ 395      6C492228 
+ 395      2900
+ 396 0036 0000     		.space	2
+ 397              	.LC3:
+ 398 0038 22636843 		.ascii	"\"chCondBroadcastI\"()\000"
+ 398      6F6E6442 
+ 398      726F6164 
+ 398      63617374 
+ 398      49222829 
+ 399 004d 000000   		.space	3
+ 400              	.LC4:
+ 401 0050 22636843 		.ascii	"\"chCondWaitS\"()\000"
+ 401      6F6E6457 
+ 401      61697453 
+ 401      22282900 
+ 402              	.LC5:
+ 403 0060 6368436F 		.ascii	"chCondWaitS(), #1\000"
+ 403      6E645761 
+ 403      69745328 
+ 403      292C2023 
+ 403      3100
+ 404 0072 0000     		.space	2
+ 405              	.LC6:
+ 406 0074 22636843 		.ascii	"\"chCondWaitTimeoutS\"()\000"
+ 406      6F6E6457 
+ 406      61697454 
+ 406      696D656F 
+ 406      75745322 
+ 407 008b 00       		.space	1
+ 408              	.LC7:
+ 409 008c 6368436F 		.ascii	"chCondWaitTimeoutS(), #1\000"
+ 409      6E645761 
+ 409      69745469 
+ 409      6D656F75 
+ 409      74532829 
+ 410 00a5 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccM41vxo.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chcond.c
+     /tmp/ccM41vxo.s:18     .text.chCondInit:00000000 $t
+     /tmp/ccM41vxo.s:24     .text.chCondInit:00000000 chCondInit
+     /tmp/ccM41vxo.s:42     .text.chCondInit:00000018 $d
+     /tmp/ccM41vxo.s:45     .text.chCondSignal:00000000 $t
+     /tmp/ccM41vxo.s:51     .text.chCondSignal:00000000 chCondSignal
+     /tmp/ccM41vxo.s:87     .text.chCondSignal:00000038 $d
+     /tmp/ccM41vxo.s:90     .text.chCondSignalI:00000000 $t
+     /tmp/ccM41vxo.s:96     .text.chCondSignalI:00000000 chCondSignalI
+     /tmp/ccM41vxo.s:122    .text.chCondSignalI:00000028 $d
+     /tmp/ccM41vxo.s:125    .text.chCondBroadcastI:00000000 $t
+     /tmp/ccM41vxo.s:131    .text.chCondBroadcastI:00000000 chCondBroadcastI
+     /tmp/ccM41vxo.s:161    .text.chCondBroadcastI:00000030 $d
+     /tmp/ccM41vxo.s:164    .text.chCondBroadcast:00000000 $t
+     /tmp/ccM41vxo.s:170    .text.chCondBroadcast:00000000 chCondBroadcast
+     /tmp/ccM41vxo.s:193    .text.chCondWaitS:00000000 $t
+     /tmp/ccM41vxo.s:199    .text.chCondWaitS:00000000 chCondWaitS
+     /tmp/ccM41vxo.s:250    .text.chCondWaitS:00000058 $d
+     /tmp/ccM41vxo.s:255    .text.chCondWait:00000000 $t
+     /tmp/ccM41vxo.s:261    .text.chCondWait:00000000 chCondWait
+     /tmp/ccM41vxo.s:285    .text.chCondWaitTimeoutS:00000000 $t
+     /tmp/ccM41vxo.s:291    .text.chCondWaitTimeoutS:00000000 chCondWaitTimeoutS
+     /tmp/ccM41vxo.s:350    .text.chCondWaitTimeoutS:0000006c $d
+     /tmp/ccM41vxo.s:355    .text.chCondWaitTimeout:00000000 $t
+     /tmp/ccM41vxo.s:361    .text.chCondWaitTimeout:00000000 chCondWaitTimeout
+     /tmp/ccM41vxo.s:387    .rodata.str1.4:00000000 $d
+     /tmp/ccM41vxo.s:44     .text.chCondInit:0000001c $t
+     /tmp/ccM41vxo.s:89     .text.chCondSignal:0000003c $t
+     /tmp/ccM41vxo.s:124    .text.chCondSignalI:0000002c $t
+     /tmp/ccM41vxo.s:163    .text.chCondBroadcastI:00000034 $t
+     /tmp/ccM41vxo.s:254    .text.chCondWaitS:00000064 $t
+     /tmp/ccM41vxo.s:354    .text.chCondWaitTimeoutS:00000078 $t
+
+UNDEFINED SYMBOLS
+chDbgPanic
+dbg_check_lock
+chSchWakeupS
+dbg_check_unlock
+chDbgCheckClassI
+chSchReadyI
+chSchRescheduleS
+chDbgCheckClassS
+chMtxUnlockS
+chSchGoSleepS
+chMtxLockS
+rlist
+chSchGoSleepTimeoutS

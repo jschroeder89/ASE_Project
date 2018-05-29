@@ -1,0 +1,858 @@
+ARM GAS  /tmp/ccPEQyiY.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chsem.c"
+  17              		.section	.text.chSemInit,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	chSemInit
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	chSemInit, %function
+  24              	chSemInit:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 38B5     		push	{r3, r4, r5, lr}
+  28 0002 0446     		mov	r4, r0
+  29 0004 0D46     		mov	r5, r1
+  30 0006 28B1     		cbz	r0, .L2
+  31 0008 0029     		cmp	r1, #0
+  32 000a 03DB     		blt	.L2
+  33 000c 6460     		str	r4, [r4, #4]
+  34 000e 2460     		str	r4, [r4]
+  35 0010 A560     		str	r5, [r4, #8]
+  36 0012 38BD     		pop	{r3, r4, r5, pc}
+  37              	.L2:
+  38 0014 0348     		ldr	r0, .L8
+  39 0016 FFF7FEFF 		bl	chDbgPanic
+  40 001a 6460     		str	r4, [r4, #4]
+  41 001c 2460     		str	r4, [r4]
+  42 001e A560     		str	r5, [r4, #8]
+  43 0020 38BD     		pop	{r3, r4, r5, pc}
+  44              	.L9:
+  45 0022 00BF     		.align	2
+  46              	.L8:
+  47 0024 00000000 		.word	.LC0
+  48              		.size	chSemInit, .-chSemInit
+  49 0028 AFF30080 		.section	.text.chSemResetI,"ax",%progbits
+  49      AFF30080 
+  50              		.align	2
+  51              		.p2align 4,,15
+  52              		.global	chSemResetI
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	chSemResetI, %function
+  56              	chSemResetI:
+ARM GAS  /tmp/ccPEQyiY.s 			page 2
+
+
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59 0000 70B5     		push	{r4, r5, r6, lr}
+  60 0002 0446     		mov	r4, r0
+  61 0004 0E46     		mov	r6, r1
+  62 0006 FFF7FEFF 		bl	chDbgCheckClassI
+  63 000a FCB1     		cbz	r4, .L11
+  64 000c 002E     		cmp	r6, #0
+  65 000e 1DDB     		blt	.L11
+  66              	.L12:
+  67 0010 A568     		ldr	r5, [r4, #8]
+  68 0012 2368     		ldr	r3, [r4]
+  69 0014 002D     		cmp	r5, #0
+  70 0016 16DB     		blt	.L13
+  71 0018 A342     		cmp	r3, r4
+  72 001a 03D0     		beq	.L15
+  73              	.L14:
+  74 001c 0D48     		ldr	r0, .L25
+  75 001e FFF7FEFF 		bl	chDbgPanic
+  76 0022 A568     		ldr	r5, [r4, #8]
+  77              	.L15:
+  78 0024 0135     		adds	r5, r5, #1
+  79 0026 002D     		cmp	r5, #0
+  80 0028 A660     		str	r6, [r4, #8]
+  81 002a 0BDC     		bgt	.L10
+  82 002c 6FF00106 		mvn	r6, #1
+  83              	.L18:
+  84 0030 6068     		ldr	r0, [r4, #4]
+  85 0032 4368     		ldr	r3, [r0, #4]
+  86 0034 6360     		str	r3, [r4, #4]
+  87 0036 1C60     		str	r4, [r3]
+  88 0038 FFF7FEFF 		bl	chSchReadyI
+  89 003c 0135     		adds	r5, r5, #1
+  90 003e 012D     		cmp	r5, #1
+  91 0040 8662     		str	r6, [r0, #40]
+  92 0042 F5D1     		bne	.L18
+  93              	.L10:
+  94 0044 70BD     		pop	{r4, r5, r6, pc}
+  95              	.L13:
+  96 0046 A342     		cmp	r3, r4
+  97 0048 ECD1     		bne	.L15
+  98 004a E7E7     		b	.L14
+  99              	.L11:
+ 100 004c 0248     		ldr	r0, .L25+4
+ 101 004e FFF7FEFF 		bl	chDbgPanic
+ 102 0052 DDE7     		b	.L12
+ 103              	.L26:
+ 104              		.align	2
+ 105              	.L25:
+ 106 0054 20000000 		.word	.LC2
+ 107 0058 10000000 		.word	.LC1
+ 108              		.size	chSemResetI, .-chSemResetI
+ 109 005c AFF30080 		.section	.text.chSemReset,"ax",%progbits
+ 110              		.align	2
+ 111              		.p2align 4,,15
+ 112              		.global	chSemReset
+ 113              		.thumb
+ARM GAS  /tmp/ccPEQyiY.s 			page 3
+
+
+ 114              		.thumb_func
+ 115              		.type	chSemReset, %function
+ 116              	chSemReset:
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119 0000 38B5     		push	{r3, r4, r5, lr}
+ 120 0002 0546     		mov	r5, r0
+ 121 0004 0C46     		mov	r4, r1
+ 122 0006 2023     		movs	r3, #32
+ 123              	@ 111 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 124 0008 83F31188 		msr     BASEPRI, r3
+ 125              	@ 0 "" 2
+ 126              		.thumb
+ 127 000c FFF7FEFF 		bl	dbg_check_lock
+ 128 0010 2846     		mov	r0, r5
+ 129 0012 2146     		mov	r1, r4
+ 130 0014 FFF7FEFF 		bl	chSemResetI
+ 131 0018 FFF7FEFF 		bl	chSchRescheduleS
+ 132 001c FFF7FEFF 		bl	dbg_check_unlock
+ 133 0020 0023     		movs	r3, #0
+ 134              	@ 114 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 135 0022 83F31188 		msr     BASEPRI, r3
+ 136              	@ 0 "" 2
+ 137              		.thumb
+ 138 0026 38BD     		pop	{r3, r4, r5, pc}
+ 139              		.size	chSemReset, .-chSemReset
+ 140 0028 AFF30080 		.section	.text.chSemWaitS,"ax",%progbits
+ 140      AFF30080 
+ 141              		.align	2
+ 142              		.p2align 4,,15
+ 143              		.global	chSemWaitS
+ 144              		.thumb
+ 145              		.thumb_func
+ 146              		.type	chSemWaitS, %function
+ 147              	chSemWaitS:
+ 148              		@ args = 0, pretend = 0, frame = 0
+ 149              		@ frame_needed = 0, uses_anonymous_args = 0
+ 150 0000 38B5     		push	{r3, r4, r5, lr}
+ 151 0002 0446     		mov	r4, r0
+ 152 0004 FFF7FEFF 		bl	chDbgCheckClassS
+ 153 0008 1CB3     		cbz	r4, .L36
+ 154              	.L29:
+ 155 000a A368     		ldr	r3, [r4, #8]
+ 156 000c 2268     		ldr	r2, [r4]
+ 157 000e 002B     		cmp	r3, #0
+ 158 0010 0BDB     		blt	.L30
+ 159 0012 A242     		cmp	r2, r4
+ 160 0014 03D0     		beq	.L32
+ 161              	.L31:
+ 162 0016 1148     		ldr	r0, .L38
+ 163 0018 FFF7FEFF 		bl	chDbgPanic
+ 164 001c A368     		ldr	r3, [r4, #8]
+ 165              	.L32:
+ 166 001e 013B     		subs	r3, r3, #1
+ 167 0020 002B     		cmp	r3, #0
+ 168 0022 A360     		str	r3, [r4, #8]
+ 169 0024 07DB     		blt	.L37
+ARM GAS  /tmp/ccPEQyiY.s 			page 4
+
+
+ 170              	.L34:
+ 171 0026 0020     		movs	r0, #0
+ 172 0028 38BD     		pop	{r3, r4, r5, pc}
+ 173              	.L30:
+ 174 002a A242     		cmp	r2, r4
+ 175 002c F3D0     		beq	.L31
+ 176 002e 013B     		subs	r3, r3, #1
+ 177 0030 002B     		cmp	r3, #0
+ 178 0032 A360     		str	r3, [r4, #8]
+ 179 0034 F7DA     		bge	.L34
+ 180              	.L37:
+ 181 0036 0A4D     		ldr	r5, .L38+4
+ 182 0038 AB69     		ldr	r3, [r5, #24]
+ 183 003a 9C62     		str	r4, [r3, #40]
+ 184 003c 6268     		ldr	r2, [r4, #4]
+ 185 003e 5A60     		str	r2, [r3, #4]
+ 186 0040 1C60     		str	r4, [r3]
+ 187 0042 0320     		movs	r0, #3
+ 188 0044 6360     		str	r3, [r4, #4]
+ 189 0046 1360     		str	r3, [r2]
+ 190 0048 FFF7FEFF 		bl	chSchGoSleepS
+ 191 004c AB69     		ldr	r3, [r5, #24]
+ 192 004e 986A     		ldr	r0, [r3, #40]
+ 193 0050 38BD     		pop	{r3, r4, r5, pc}
+ 194              	.L36:
+ 195 0052 0448     		ldr	r0, .L38+8
+ 196 0054 FFF7FEFF 		bl	chDbgPanic
+ 197 0058 D7E7     		b	.L29
+ 198              	.L39:
+ 199 005a 00BF     		.align	2
+ 200              	.L38:
+ 201 005c 44000000 		.word	.LC4
+ 202 0060 00000000 		.word	rlist
+ 203 0064 34000000 		.word	.LC3
+ 204              		.size	chSemWaitS, .-chSemWaitS
+ 205 0068 AFF30080 		.section	.text.chSemWait,"ax",%progbits
+ 205      AFF30080 
+ 206              		.align	2
+ 207              		.p2align 4,,15
+ 208              		.global	chSemWait
+ 209              		.thumb
+ 210              		.thumb_func
+ 211              		.type	chSemWait, %function
+ 212              	chSemWait:
+ 213              		@ args = 0, pretend = 0, frame = 0
+ 214              		@ frame_needed = 0, uses_anonymous_args = 0
+ 215 0000 10B5     		push	{r4, lr}
+ 216 0002 2023     		movs	r3, #32
+ 217 0004 0446     		mov	r4, r0
+ 218              	@ 167 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 219 0006 83F31188 		msr     BASEPRI, r3
+ 220              	@ 0 "" 2
+ 221              		.thumb
+ 222 000a FFF7FEFF 		bl	dbg_check_lock
+ 223 000e 2046     		mov	r0, r4
+ 224 0010 FFF7FEFF 		bl	chSemWaitS
+ 225 0014 0446     		mov	r4, r0
+ARM GAS  /tmp/ccPEQyiY.s 			page 5
+
+
+ 226 0016 FFF7FEFF 		bl	dbg_check_unlock
+ 227 001a 0023     		movs	r3, #0
+ 228              	@ 169 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 229 001c 83F31188 		msr     BASEPRI, r3
+ 230              	@ 0 "" 2
+ 231              		.thumb
+ 232 0020 2046     		mov	r0, r4
+ 233 0022 10BD     		pop	{r4, pc}
+ 234              		.size	chSemWait, .-chSemWait
+ 235 0024 AFF30080 		.section	.text.chSemWaitTimeoutS,"ax",%progbits
+ 235      AFF30080 
+ 235      AFF30080 
+ 236              		.align	2
+ 237              		.p2align 4,,15
+ 238              		.global	chSemWaitTimeoutS
+ 239              		.thumb
+ 240              		.thumb_func
+ 241              		.type	chSemWaitTimeoutS, %function
+ 242              	chSemWaitTimeoutS:
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245 0000 38B5     		push	{r3, r4, r5, lr}
+ 246 0002 0446     		mov	r4, r0
+ 247 0004 0D46     		mov	r5, r1
+ 248 0006 FFF7FEFF 		bl	chDbgCheckClassS
+ 249 000a 24B3     		cbz	r4, .L50
+ 250              	.L42:
+ 251 000c A368     		ldr	r3, [r4, #8]
+ 252 000e 2268     		ldr	r2, [r4]
+ 253 0010 002B     		cmp	r3, #0
+ 254 0012 0BDB     		blt	.L43
+ 255 0014 A242     		cmp	r2, r4
+ 256 0016 03D0     		beq	.L45
+ 257              	.L44:
+ 258 0018 1348     		ldr	r0, .L53
+ 259 001a FFF7FEFF 		bl	chDbgPanic
+ 260 001e A368     		ldr	r3, [r4, #8]
+ 261              	.L45:
+ 262 0020 5A1E     		subs	r2, r3, #1
+ 263 0022 002A     		cmp	r2, #0
+ 264 0024 A260     		str	r2, [r4, #8]
+ 265 0026 07DB     		blt	.L51
+ 266              	.L48:
+ 267 0028 0020     		movs	r0, #0
+ 268 002a 38BD     		pop	{r3, r4, r5, pc}
+ 269              	.L43:
+ 270 002c A242     		cmp	r2, r4
+ 271 002e F3D0     		beq	.L44
+ 272 0030 5A1E     		subs	r2, r3, #1
+ 273 0032 002A     		cmp	r2, #0
+ 274 0034 A260     		str	r2, [r4, #8]
+ 275 0036 F7DA     		bge	.L48
+ 276              	.L51:
+ 277 0038 8DB1     		cbz	r5, .L52
+ 278 003a 0C4B     		ldr	r3, .L53+4
+ 279 003c 9B69     		ldr	r3, [r3, #24]
+ 280 003e 9C62     		str	r4, [r3, #40]
+ARM GAS  /tmp/ccPEQyiY.s 			page 6
+
+
+ 281 0040 6268     		ldr	r2, [r4, #4]
+ 282 0042 5A60     		str	r2, [r3, #4]
+ 283 0044 1C60     		str	r4, [r3]
+ 284 0046 2946     		mov	r1, r5
+ 285 0048 6360     		str	r3, [r4, #4]
+ 286 004a 0320     		movs	r0, #3
+ 287 004c 1360     		str	r3, [r2]
+ 288 004e BDE83840 		pop	{r3, r4, r5, lr}
+ 289 0052 FFF7FEBF 		b	chSchGoSleepTimeoutS
+ 290              	.L50:
+ 291 0056 0648     		ldr	r0, .L53+8
+ 292 0058 FFF7FEFF 		bl	chDbgPanic
+ 293 005c D6E7     		b	.L42
+ 294              	.L52:
+ 295 005e A360     		str	r3, [r4, #8]
+ 296 0060 4FF0FF30 		mov	r0, #-1
+ 297 0064 38BD     		pop	{r3, r4, r5, pc}
+ 298              	.L54:
+ 299 0066 00BF     		.align	2
+ 300              	.L53:
+ 301 0068 70000000 		.word	.LC6
+ 302 006c 00000000 		.word	rlist
+ 303 0070 58000000 		.word	.LC5
+ 304              		.size	chSemWaitTimeoutS, .-chSemWaitTimeoutS
+ 305 0074 AFF30080 		.section	.text.chSemWaitTimeout,"ax",%progbits
+ 305      AFF30080 
+ 305      AFF30080 
+ 306              		.align	2
+ 307              		.p2align 4,,15
+ 308              		.global	chSemWaitTimeout
+ 309              		.thumb
+ 310              		.thumb_func
+ 311              		.type	chSemWaitTimeout, %function
+ 312              	chSemWaitTimeout:
+ 313              		@ args = 0, pretend = 0, frame = 0
+ 314              		@ frame_needed = 0, uses_anonymous_args = 0
+ 315 0000 38B5     		push	{r3, r4, r5, lr}
+ 316 0002 0546     		mov	r5, r0
+ 317 0004 0C46     		mov	r4, r1
+ 318 0006 2023     		movs	r3, #32
+ 319              	@ 225 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 320 0008 83F31188 		msr     BASEPRI, r3
+ 321              	@ 0 "" 2
+ 322              		.thumb
+ 323 000c FFF7FEFF 		bl	dbg_check_lock
+ 324 0010 2146     		mov	r1, r4
+ 325 0012 2846     		mov	r0, r5
+ 326 0014 FFF7FEFF 		bl	chSemWaitTimeoutS
+ 327 0018 0446     		mov	r4, r0
+ 328 001a FFF7FEFF 		bl	dbg_check_unlock
+ 329 001e 0023     		movs	r3, #0
+ 330              	@ 227 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 331 0020 83F31188 		msr     BASEPRI, r3
+ 332              	@ 0 "" 2
+ 333              		.thumb
+ 334 0024 2046     		mov	r0, r4
+ 335 0026 38BD     		pop	{r3, r4, r5, pc}
+ARM GAS  /tmp/ccPEQyiY.s 			page 7
+
+
+ 336              		.size	chSemWaitTimeout, .-chSemWaitTimeout
+ 337 0028 AFF30080 		.section	.text.chSemSignal,"ax",%progbits
+ 337      AFF30080 
+ 338              		.align	2
+ 339              		.p2align 4,,15
+ 340              		.global	chSemSignal
+ 341              		.thumb
+ 342              		.thumb_func
+ 343              		.type	chSemSignal, %function
+ 344              	chSemSignal:
+ 345              		@ args = 0, pretend = 0, frame = 0
+ 346              		@ frame_needed = 0, uses_anonymous_args = 0
+ 347 0000 10B5     		push	{r4, lr}
+ 348 0002 0446     		mov	r4, r0
+ 349 0004 40B3     		cbz	r0, .L62
+ 350              	.L57:
+ 351 0006 A368     		ldr	r3, [r4, #8]
+ 352 0008 002B     		cmp	r3, #0
+ 353 000a 2368     		ldr	r3, [r4]
+ 354 000c 14DB     		blt	.L58
+ 355 000e A342     		cmp	r3, r4
+ 356 0010 02D0     		beq	.L60
+ 357              	.L59:
+ 358 0012 1348     		ldr	r0, .L64
+ 359 0014 FFF7FEFF 		bl	chDbgPanic
+ 360              	.L60:
+ 361 0018 2023     		movs	r3, #32
+ 362              	@ 286 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 363 001a 83F31188 		msr     BASEPRI, r3
+ 364              	@ 0 "" 2
+ 365              		.thumb
+ 366 001e FFF7FEFF 		bl	dbg_check_lock
+ 367 0022 A368     		ldr	r3, [r4, #8]
+ 368 0024 0133     		adds	r3, r3, #1
+ 369 0026 002B     		cmp	r3, #0
+ 370 0028 A360     		str	r3, [r4, #8]
+ 371 002a 08DD     		ble	.L63
+ 372 002c FFF7FEFF 		bl	dbg_check_unlock
+ 373 0030 0023     		movs	r3, #0
+ 374              	@ 289 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 375 0032 83F31188 		msr     BASEPRI, r3
+ 376              	@ 0 "" 2
+ 377              		.thumb
+ 378 0036 10BD     		pop	{r4, pc}
+ 379              	.L58:
+ 380 0038 A342     		cmp	r3, r4
+ 381 003a EDD1     		bne	.L60
+ 382 003c E9E7     		b	.L59
+ 383              	.L63:
+ 384 003e 2068     		ldr	r0, [r4]
+ 385 0040 0368     		ldr	r3, [r0]
+ 386 0042 2360     		str	r3, [r4]
+ 387 0044 0021     		movs	r1, #0
+ 388 0046 5C60     		str	r4, [r3, #4]
+ 389 0048 FFF7FEFF 		bl	chSchWakeupS
+ 390 004c FFF7FEFF 		bl	dbg_check_unlock
+ 391 0050 0023     		movs	r3, #0
+ARM GAS  /tmp/ccPEQyiY.s 			page 8
+
+
+ 392              	@ 289 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 393 0052 83F31188 		msr     BASEPRI, r3
+ 394              	@ 0 "" 2
+ 395              		.thumb
+ 396 0056 10BD     		pop	{r4, pc}
+ 397              	.L62:
+ 398 0058 0248     		ldr	r0, .L64+4
+ 399 005a FFF7FEFF 		bl	chDbgPanic
+ 400 005e D2E7     		b	.L57
+ 401              	.L65:
+ 402              		.align	2
+ 403              	.L64:
+ 404 0060 98000000 		.word	.LC8
+ 405 0064 88000000 		.word	.LC7
+ 406              		.size	chSemSignal, .-chSemSignal
+ 407 0068 AFF30080 		.section	.text.chSemSignalI,"ax",%progbits
+ 407      AFF30080 
+ 408              		.align	2
+ 409              		.p2align 4,,15
+ 410              		.global	chSemSignalI
+ 411              		.thumb
+ 412              		.thumb_func
+ 413              		.type	chSemSignalI, %function
+ 414              	chSemSignalI:
+ 415              		@ args = 0, pretend = 0, frame = 0
+ 416              		@ frame_needed = 0, uses_anonymous_args = 0
+ 417 0000 10B5     		push	{r4, lr}
+ 418 0002 0446     		mov	r4, r0
+ 419 0004 FFF7FEFF 		bl	chDbgCheckClassI
+ 420 0008 FCB1     		cbz	r4, .L73
+ 421              	.L67:
+ 422 000a A368     		ldr	r3, [r4, #8]
+ 423 000c 2268     		ldr	r2, [r4]
+ 424 000e 002B     		cmp	r3, #0
+ 425 0010 0ADB     		blt	.L68
+ 426 0012 A242     		cmp	r2, r4
+ 427 0014 03D0     		beq	.L70
+ 428              	.L69:
+ 429 0016 0F48     		ldr	r0, .L75
+ 430 0018 FFF7FEFF 		bl	chDbgPanic
+ 431 001c A368     		ldr	r3, [r4, #8]
+ 432              	.L70:
+ 433 001e 0133     		adds	r3, r3, #1
+ 434 0020 002B     		cmp	r3, #0
+ 435 0022 A360     		str	r3, [r4, #8]
+ 436 0024 06DD     		ble	.L74
+ 437              	.L66:
+ 438 0026 10BD     		pop	{r4, pc}
+ 439              	.L68:
+ 440 0028 A242     		cmp	r2, r4
+ 441 002a F4D0     		beq	.L69
+ 442 002c 0133     		adds	r3, r3, #1
+ 443 002e 002B     		cmp	r3, #0
+ 444 0030 A360     		str	r3, [r4, #8]
+ 445 0032 F8DC     		bgt	.L66
+ 446              	.L74:
+ 447 0034 2368     		ldr	r3, [r4]
+ARM GAS  /tmp/ccPEQyiY.s 			page 9
+
+
+ 448 0036 1A68     		ldr	r2, [r3]
+ 449 0038 2260     		str	r2, [r4]
+ 450 003a 0021     		movs	r1, #0
+ 451 003c 5460     		str	r4, [r2, #4]
+ 452 003e 9962     		str	r1, [r3, #40]
+ 453 0040 1846     		mov	r0, r3
+ 454 0042 BDE81040 		pop	{r4, lr}
+ 455 0046 FFF7FEBF 		b	chSchReadyI
+ 456              	.L73:
+ 457 004a 0348     		ldr	r0, .L75+4
+ 458 004c FFF7FEFF 		bl	chDbgPanic
+ 459 0050 DBE7     		b	.L67
+ 460              	.L76:
+ 461 0052 00BF     		.align	2
+ 462              	.L75:
+ 463 0054 C0000000 		.word	.LC10
+ 464 0058 AC000000 		.word	.LC9
+ 465              		.size	chSemSignalI, .-chSemSignalI
+ 466 005c AFF30080 		.section	.text.chSemAddCounterI,"ax",%progbits
+ 467              		.align	2
+ 468              		.p2align 4,,15
+ 469              		.global	chSemAddCounterI
+ 470              		.thumb
+ 471              		.thumb_func
+ 472              		.type	chSemAddCounterI, %function
+ 473              	chSemAddCounterI:
+ 474              		@ args = 0, pretend = 0, frame = 0
+ 475              		@ frame_needed = 0, uses_anonymous_args = 0
+ 476 0000 70B5     		push	{r4, r5, r6, lr}
+ 477 0002 0546     		mov	r5, r0
+ 478 0004 0C46     		mov	r4, r1
+ 479 0006 FFF7FEFF 		bl	chDbgCheckClassI
+ 480 000a 15B3     		cbz	r5, .L78
+ 481 000c 002C     		cmp	r4, #0
+ 482 000e 20DD     		ble	.L78
+ 483              	.L79:
+ 484 0010 AB68     		ldr	r3, [r5, #8]
+ 485 0012 002B     		cmp	r3, #0
+ 486 0014 2B68     		ldr	r3, [r5]
+ 487 0016 19DB     		blt	.L80
+ 488 0018 AB42     		cmp	r3, r5
+ 489 001a 02D0     		beq	.L82
+ 490              	.L81:
+ 491 001c 0F48     		ldr	r0, .L93
+ 492 001e FFF7FEFF 		bl	chDbgPanic
+ 493              	.L82:
+ 494 0022 002C     		cmp	r4, #0
+ 495 0024 11DD     		ble	.L77
+ 496 0026 0026     		movs	r6, #0
+ 497 0028 01E0     		b	.L86
+ 498              	.L84:
+ 499 002a 013C     		subs	r4, r4, #1
+ 500 002c 0DD0     		beq	.L77
+ 501              	.L86:
+ 502 002e AB68     		ldr	r3, [r5, #8]
+ 503 0030 0133     		adds	r3, r3, #1
+ 504 0032 002B     		cmp	r3, #0
+ARM GAS  /tmp/ccPEQyiY.s 			page 10
+
+
+ 505 0034 AB60     		str	r3, [r5, #8]
+ 506 0036 F8DC     		bgt	.L84
+ 507 0038 2868     		ldr	r0, [r5]
+ 508 003a 0368     		ldr	r3, [r0]
+ 509 003c 2B60     		str	r3, [r5]
+ 510 003e 5D60     		str	r5, [r3, #4]
+ 511 0040 FFF7FEFF 		bl	chSchReadyI
+ 512 0044 013C     		subs	r4, r4, #1
+ 513 0046 8662     		str	r6, [r0, #40]
+ 514 0048 F1D1     		bne	.L86
+ 515              	.L77:
+ 516 004a 70BD     		pop	{r4, r5, r6, pc}
+ 517              	.L80:
+ 518 004c AB42     		cmp	r3, r5
+ 519 004e E8D1     		bne	.L82
+ 520 0050 E4E7     		b	.L81
+ 521              	.L78:
+ 522 0052 0348     		ldr	r0, .L93+4
+ 523 0054 FFF7FEFF 		bl	chDbgPanic
+ 524 0058 DAE7     		b	.L79
+ 525              	.L94:
+ 526 005a 00BF     		.align	2
+ 527              	.L93:
+ 528 005c EC000000 		.word	.LC12
+ 529 0060 D4000000 		.word	.LC11
+ 530              		.size	chSemAddCounterI, .-chSemAddCounterI
+ 531 0064 AFF30080 		.section	.text.chSemSignalWait,"ax",%progbits
+ 531      AFF30080 
+ 531      AFF30080 
+ 532              		.align	2
+ 533              		.p2align 4,,15
+ 534              		.global	chSemSignalWait
+ 535              		.thumb
+ 536              		.thumb_func
+ 537              		.type	chSemSignalWait, %function
+ 538              	chSemSignalWait:
+ 539              		@ args = 0, pretend = 0, frame = 0
+ 540              		@ frame_needed = 0, uses_anonymous_args = 0
+ 541 0000 38B5     		push	{r3, r4, r5, lr}
+ 542 0002 0546     		mov	r5, r0
+ 543 0004 0C46     		mov	r4, r1
+ 544 0006 0028     		cmp	r0, #0
+ 545 0008 35D0     		beq	.L96
+ 546 000a 0029     		cmp	r1, #0
+ 547 000c 33D0     		beq	.L96
+ 548              	.L97:
+ 549 000e AB68     		ldr	r3, [r5, #8]
+ 550 0010 002B     		cmp	r3, #0
+ 551 0012 2B68     		ldr	r3, [r5]
+ 552 0014 26DB     		blt	.L98
+ 553 0016 AB42     		cmp	r3, r5
+ 554 0018 02D0     		beq	.L100
+ 555              	.L99:
+ 556 001a 2448     		ldr	r0, .L114
+ 557 001c FFF7FEFF 		bl	chDbgPanic
+ 558              	.L100:
+ 559 0020 A368     		ldr	r3, [r4, #8]
+ARM GAS  /tmp/ccPEQyiY.s 			page 11
+
+
+ 560 0022 002B     		cmp	r3, #0
+ 561 0024 2368     		ldr	r3, [r4]
+ 562 0026 23DB     		blt	.L101
+ 563              	.L113:
+ 564 0028 A342     		cmp	r3, r4
+ 565 002a 02D0     		beq	.L103
+ 566              	.L102:
+ 567 002c 2048     		ldr	r0, .L114+4
+ 568 002e FFF7FEFF 		bl	chDbgPanic
+ 569              	.L103:
+ 570 0032 2023     		movs	r3, #32
+ 571              	@ 379 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 572 0034 83F31188 		msr     BASEPRI, r3
+ 573              	@ 0 "" 2
+ 574              		.thumb
+ 575 0038 FFF7FEFF 		bl	dbg_check_lock
+ 576 003c AB68     		ldr	r3, [r5, #8]
+ 577 003e 0133     		adds	r3, r3, #1
+ 578 0040 002B     		cmp	r3, #0
+ 579 0042 AB60     		str	r3, [r5, #8]
+ 580 0044 28DD     		ble	.L111
+ 581              	.L104:
+ 582 0046 A368     		ldr	r3, [r4, #8]
+ 583 0048 013B     		subs	r3, r3, #1
+ 584 004a 002B     		cmp	r3, #0
+ 585 004c A360     		str	r3, [r4, #8]
+ 586 004e 16DB     		blt	.L112
+ 587 0050 FFF7FEFF 		bl	chSchRescheduleS
+ 588 0054 0024     		movs	r4, #0
+ 589              	.L106:
+ 590 0056 FFF7FEFF 		bl	dbg_check_unlock
+ 591 005a 0023     		movs	r3, #0
+ 592              	@ 393 "../../../ChibiOS/os/kernel/src/chsem.c" 1
+ 593 005c 83F31188 		msr     BASEPRI, r3
+ 594              	@ 0 "" 2
+ 595              		.thumb
+ 596 0060 2046     		mov	r0, r4
+ 597 0062 38BD     		pop	{r3, r4, r5, pc}
+ 598              	.L98:
+ 599 0064 AB42     		cmp	r3, r5
+ 600 0066 D8D0     		beq	.L99
+ 601 0068 A368     		ldr	r3, [r4, #8]
+ 602 006a 002B     		cmp	r3, #0
+ 603 006c 2368     		ldr	r3, [r4]
+ 604 006e DBDA     		bge	.L113
+ 605              	.L101:
+ 606 0070 A342     		cmp	r3, r4
+ 607 0072 DED1     		bne	.L103
+ 608 0074 DAE7     		b	.L102
+ 609              	.L96:
+ 610 0076 0F48     		ldr	r0, .L114+8
+ 611 0078 FFF7FEFF 		bl	chDbgPanic
+ 612 007c C7E7     		b	.L97
+ 613              	.L112:
+ 614 007e 0E4A     		ldr	r2, .L114+12
+ 615 0080 6368     		ldr	r3, [r4, #4]
+ 616 0082 9569     		ldr	r5, [r2, #24]
+ARM GAS  /tmp/ccPEQyiY.s 			page 12
+
+
+ 617 0084 0320     		movs	r0, #3
+ 618 0086 2C60     		str	r4, [r5]
+ 619 0088 6B60     		str	r3, [r5, #4]
+ 620 008a 6560     		str	r5, [r4, #4]
+ 621 008c 1D60     		str	r5, [r3]
+ 622 008e AC62     		str	r4, [r5, #40]
+ 623 0090 FFF7FEFF 		bl	chSchGoSleepS
+ 624 0094 AC6A     		ldr	r4, [r5, #40]
+ 625 0096 DEE7     		b	.L106
+ 626              	.L111:
+ 627 0098 2868     		ldr	r0, [r5]
+ 628 009a 0368     		ldr	r3, [r0]
+ 629 009c 2B60     		str	r3, [r5]
+ 630 009e 5D60     		str	r5, [r3, #4]
+ 631 00a0 FFF7FEFF 		bl	chSchReadyI
+ 632 00a4 0023     		movs	r3, #0
+ 633 00a6 8362     		str	r3, [r0, #40]
+ 634 00a8 CDE7     		b	.L104
+ 635              	.L115:
+ 636 00aa 00BF     		.align	2
+ 637              	.L114:
+ 638 00ac 18010000 		.word	.LC14
+ 639 00b0 30010000 		.word	.LC15
+ 640 00b4 04010000 		.word	.LC13
+ 641 00b8 00000000 		.word	rlist
+ 642              		.size	chSemSignalWait, .-chSemSignalWait
+ 643 00bc AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 644              		.align	2
+ 645              	.LC0:
+ 646 0000 22636853 		.ascii	"\"chSemInit\"()\000"
+ 646      656D496E 
+ 646      69742228 
+ 646      2900
+ 647 000e 0000     		.space	2
+ 648              	.LC1:
+ 649 0010 22636853 		.ascii	"\"chSemResetI\"()\000"
+ 649      656D5265 
+ 649      73657449 
+ 649      22282900 
+ 650              	.LC2:
+ 651 0020 63685365 		.ascii	"chSemResetI(), #1\000"
+ 651      6D526573 
+ 651      65744928 
+ 651      292C2023 
+ 651      3100
+ 652 0032 0000     		.space	2
+ 653              	.LC3:
+ 654 0034 22636853 		.ascii	"\"chSemWaitS\"()\000"
+ 654      656D5761 
+ 654      69745322 
+ 654      282900
+ 655 0043 00       		.space	1
+ 656              	.LC4:
+ 657 0044 63685365 		.ascii	"chSemWaitS(), #1\000"
+ 657      6D576169 
+ 657      74532829 
+ 657      2C202331 
+ARM GAS  /tmp/ccPEQyiY.s 			page 13
+
+
+ 657      00
+ 658 0055 000000   		.space	3
+ 659              	.LC5:
+ 660 0058 22636853 		.ascii	"\"chSemWaitTimeoutS\"()\000"
+ 660      656D5761 
+ 660      69745469 
+ 660      6D656F75 
+ 660      74532228 
+ 661 006e 0000     		.space	2
+ 662              	.LC6:
+ 663 0070 63685365 		.ascii	"chSemWaitTimeoutS(), #1\000"
+ 663      6D576169 
+ 663      7454696D 
+ 663      656F7574 
+ 663      5328292C 
+ 664              	.LC7:
+ 665 0088 22636853 		.ascii	"\"chSemSignal\"()\000"
+ 665      656D5369 
+ 665      676E616C 
+ 665      22282900 
+ 666              	.LC8:
+ 667 0098 63685365 		.ascii	"chSemSignal(), #1\000"
+ 667      6D536967 
+ 667      6E616C28 
+ 667      292C2023 
+ 667      3100
+ 668 00aa 0000     		.space	2
+ 669              	.LC9:
+ 670 00ac 22636853 		.ascii	"\"chSemSignalI\"()\000"
+ 670      656D5369 
+ 670      676E616C 
+ 670      49222829 
+ 670      00
+ 671 00bd 000000   		.space	3
+ 672              	.LC10:
+ 673 00c0 63685365 		.ascii	"chSemSignalI(), #1\000"
+ 673      6D536967 
+ 673      6E616C49 
+ 673      28292C20 
+ 673      233100
+ 674 00d3 00       		.space	1
+ 675              	.LC11:
+ 676 00d4 22636853 		.ascii	"\"chSemAddCounterI\"()\000"
+ 676      656D4164 
+ 676      64436F75 
+ 676      6E746572 
+ 676      49222829 
+ 677 00e9 000000   		.space	3
+ 678              	.LC12:
+ 679 00ec 63685365 		.ascii	"chSemAddCounterI(), #1\000"
+ 679      6D416464 
+ 679      436F756E 
+ 679      74657249 
+ 679      28292C20 
+ 680 0103 00       		.space	1
+ 681              	.LC13:
+ 682 0104 22636853 		.ascii	"\"chSemSignalWait\"()\000"
+ARM GAS  /tmp/ccPEQyiY.s 			page 14
+
+
+ 682      656D5369 
+ 682      676E616C 
+ 682      57616974 
+ 682      22282900 
+ 683              	.LC14:
+ 684 0118 63685365 		.ascii	"chSemSignalWait(), #1\000"
+ 684      6D536967 
+ 684      6E616C57 
+ 684      61697428 
+ 684      292C2023 
+ 685 012e 0000     		.space	2
+ 686              	.LC15:
+ 687 0130 63685365 		.ascii	"chSemSignalWait(), #2\000"
+ 687      6D536967 
+ 687      6E616C57 
+ 687      61697428 
+ 687      292C2023 
+ 688 0146 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccPEQyiY.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chsem.c
+     /tmp/ccPEQyiY.s:18     .text.chSemInit:00000000 $t
+     /tmp/ccPEQyiY.s:24     .text.chSemInit:00000000 chSemInit
+     /tmp/ccPEQyiY.s:47     .text.chSemInit:00000024 $d
+     /tmp/ccPEQyiY.s:50     .text.chSemResetI:00000000 $t
+     /tmp/ccPEQyiY.s:56     .text.chSemResetI:00000000 chSemResetI
+     /tmp/ccPEQyiY.s:106    .text.chSemResetI:00000054 $d
+     /tmp/ccPEQyiY.s:110    .text.chSemReset:00000000 $t
+     /tmp/ccPEQyiY.s:116    .text.chSemReset:00000000 chSemReset
+     /tmp/ccPEQyiY.s:141    .text.chSemWaitS:00000000 $t
+     /tmp/ccPEQyiY.s:147    .text.chSemWaitS:00000000 chSemWaitS
+     /tmp/ccPEQyiY.s:201    .text.chSemWaitS:0000005c $d
+     /tmp/ccPEQyiY.s:206    .text.chSemWait:00000000 $t
+     /tmp/ccPEQyiY.s:212    .text.chSemWait:00000000 chSemWait
+     /tmp/ccPEQyiY.s:236    .text.chSemWaitTimeoutS:00000000 $t
+     /tmp/ccPEQyiY.s:242    .text.chSemWaitTimeoutS:00000000 chSemWaitTimeoutS
+     /tmp/ccPEQyiY.s:301    .text.chSemWaitTimeoutS:00000068 $d
+     /tmp/ccPEQyiY.s:306    .text.chSemWaitTimeout:00000000 $t
+     /tmp/ccPEQyiY.s:312    .text.chSemWaitTimeout:00000000 chSemWaitTimeout
+     /tmp/ccPEQyiY.s:338    .text.chSemSignal:00000000 $t
+     /tmp/ccPEQyiY.s:344    .text.chSemSignal:00000000 chSemSignal
+     /tmp/ccPEQyiY.s:404    .text.chSemSignal:00000060 $d
+     /tmp/ccPEQyiY.s:408    .text.chSemSignalI:00000000 $t
+     /tmp/ccPEQyiY.s:414    .text.chSemSignalI:00000000 chSemSignalI
+     /tmp/ccPEQyiY.s:463    .text.chSemSignalI:00000054 $d
+     /tmp/ccPEQyiY.s:467    .text.chSemAddCounterI:00000000 $t
+     /tmp/ccPEQyiY.s:473    .text.chSemAddCounterI:00000000 chSemAddCounterI
+     /tmp/ccPEQyiY.s:528    .text.chSemAddCounterI:0000005c $d
+     /tmp/ccPEQyiY.s:532    .text.chSemSignalWait:00000000 $t
+     /tmp/ccPEQyiY.s:538    .text.chSemSignalWait:00000000 chSemSignalWait
+     /tmp/ccPEQyiY.s:638    .text.chSemSignalWait:000000ac $d
+     /tmp/ccPEQyiY.s:644    .rodata.str1.4:00000000 $d
+     /tmp/ccPEQyiY.s:49     .text.chSemInit:00000028 $t
+     /tmp/ccPEQyiY.s:109    .text.chSemResetI:0000005c $t
+     /tmp/ccPEQyiY.s:205    .text.chSemWaitS:00000068 $t
+     /tmp/ccPEQyiY.s:305    .text.chSemWaitTimeoutS:00000074 $t
+     /tmp/ccPEQyiY.s:407    .text.chSemSignal:00000068 $t
+     /tmp/ccPEQyiY.s:466    .text.chSemSignalI:0000005c $t
+     /tmp/ccPEQyiY.s:531    .text.chSemAddCounterI:00000064 $t
+     /tmp/ccPEQyiY.s:643    .text.chSemSignalWait:000000bc $t
+
+UNDEFINED SYMBOLS
+chDbgPanic
+chDbgCheckClassI
+chSchReadyI
+dbg_check_lock
+chSchRescheduleS
+dbg_check_unlock
+chDbgCheckClassS
+chSchGoSleepS
+rlist
+chSchGoSleepTimeoutS
+chSchWakeupS

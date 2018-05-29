@@ -1,0 +1,653 @@
+ARM GAS  /tmp/ccBUFuds.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"chmtx.c"
+  15              		.section	.text.chMtxInit,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	chMtxInit
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	chMtxInit, %function
+  22              	chMtxInit:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 10B5     		push	{r4, lr}
+  26 0002 0446     		mov	r4, r0
+  27 0004 20B1     		cbz	r0, .L4
+  28              	.L2:
+  29 0006 0023     		movs	r3, #0
+  30 0008 6460     		str	r4, [r4, #4]
+  31 000a 2460     		str	r4, [r4]
+  32 000c A360     		str	r3, [r4, #8]
+  33 000e 10BD     		pop	{r4, pc}
+  34              	.L4:
+  35 0010 0148     		ldr	r0, .L5
+  36 0012 FFF7FEFF 		bl	chDbgPanic
+  37 0016 F6E7     		b	.L2
+  38              	.L6:
+  39              		.align	2
+  40              	.L5:
+  41 0018 00000000 		.word	.LC0
+  42              		.size	chMtxInit, .-chMtxInit
+  43 001c AFF30080 		.section	.text.chMtxLockS,"ax",%progbits
+  44              		.align	2
+  45              		.p2align 4,,15
+  46              		.global	chMtxLockS
+  47              		.thumb
+  48              		.thumb_func
+  49              		.type	chMtxLockS, %function
+  50              	chMtxLockS:
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 0, uses_anonymous_args = 0
+  53 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  54 0002 3B4B     		ldr	r3, .L32
+  55 0004 0546     		mov	r5, r0
+  56 0006 9C69     		ldr	r4, [r3, #24]
+  57 0008 FFF7FEFF 		bl	chDbgCheckClassS
+ARM GAS  /tmp/ccBUFuds.s 			page 2
+
+
+  58 000c 002D     		cmp	r5, #0
+  59 000e 6BD0     		beq	.L30
+  60              	.L8:
+  61 0010 A868     		ldr	r0, [r5, #8]
+  62 0012 0028     		cmp	r0, #0
+  63 0014 36D0     		beq	.L9
+  64 0016 A268     		ldr	r2, [r4, #8]
+  65 0018 8368     		ldr	r3, [r0, #8]
+  66 001a 9342     		cmp	r3, r2
+  67 001c 07D2     		bcs	.L11
+  68              	.L20:
+  69 001e 90F82030 		ldrb	r3, [r0, #32]	@ zero_extendqisi2
+  70 0022 8260     		str	r2, [r0, #8]
+  71 0024 042B     		cmp	r3, #4
+  72 0026 46D0     		beq	.L12
+  73 0028 052B     		cmp	r3, #5
+  74 002a 30D0     		beq	.L13
+  75 002c FBB1     		cbz	r3, .L31
+  76              	.L11:
+  77 002e 2B46     		mov	r3, r5
+  78 0030 03E0     		b	.L28
+  79              	.L24:
+  80 0032 9968     		ldr	r1, [r3, #8]
+  81 0034 A268     		ldr	r2, [r4, #8]
+  82 0036 9142     		cmp	r1, r2
+  83 0038 02D3     		bcc	.L27
+  84              	.L28:
+  85 003a 1B68     		ldr	r3, [r3]
+  86 003c 9D42     		cmp	r5, r3
+  87 003e F8D1     		bne	.L24
+  88              	.L27:
+  89 0040 5A68     		ldr	r2, [r3, #4]
+  90 0042 0420     		movs	r0, #4
+  91 0044 2360     		str	r3, [r4]
+  92 0046 6260     		str	r2, [r4, #4]
+  93 0048 5C60     		str	r4, [r3, #4]
+  94 004a 1460     		str	r4, [r2]
+  95 004c A562     		str	r5, [r4, #40]
+  96 004e FFF7FEFF 		bl	chSchGoSleepS
+  97 0052 AB68     		ldr	r3, [r5, #8]
+  98 0054 A342     		cmp	r3, r4
+  99 0056 02D0     		beq	.L26
+ 100 0058 2648     		ldr	r0, .L32+4
+ 101 005a FFF7FEFF 		bl	chDbgPanic
+ 102              	.L26:
+ 103 005e 236C     		ldr	r3, [r4, #64]
+ 104 0060 AB42     		cmp	r3, r5
+ 105 0062 13D0     		beq	.L7
+ 106 0064 BDE8F840 		pop	{r3, r4, r5, r6, r7, lr}
+ 107 0068 2348     		ldr	r0, .L32+8
+ 108 006a FFF7FEBF 		b	chDbgPanic
+ 109              	.L31:
+ 110 006e 0121     		movs	r1, #1
+ 111 0070 90E80C00 		ldmia	r0, {r2, r3}
+ 112 0074 80F82010 		strb	r1, [r0, #32]
+ 113 0078 1A60     		str	r2, [r3]
+ 114 007a 0268     		ldr	r2, [r0]
+ARM GAS  /tmp/ccBUFuds.s 			page 3
+
+
+ 115 007c 5360     		str	r3, [r2, #4]
+ 116 007e FFF7FEFF 		bl	chSchReadyI
+ 117 0082 D4E7     		b	.L11
+ 118              	.L9:
+ 119 0084 236C     		ldr	r3, [r4, #64]
+ 120 0086 AC60     		str	r4, [r5, #8]
+ 121 0088 EB60     		str	r3, [r5, #12]
+ 122 008a 2564     		str	r5, [r4, #64]
+ 123              	.L7:
+ 124 008c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 125              	.L13:
+ 126 008e 0368     		ldr	r3, [r0]
+ 127 0090 4168     		ldr	r1, [r0, #4]
+ 128 0092 866A     		ldr	r6, [r0, #40]
+ 129 0094 0B60     		str	r3, [r1]
+ 130 0096 0768     		ldr	r7, [r0]
+ 131 0098 3346     		mov	r3, r6
+ 132 009a 7960     		str	r1, [r7, #4]
+ 133 009c 02E0     		b	.L23
+ 134              	.L21:
+ 135 009e 9968     		ldr	r1, [r3, #8]
+ 136 00a0 8A42     		cmp	r2, r1
+ 137 00a2 02D8     		bhi	.L22
+ 138              	.L23:
+ 139 00a4 1B68     		ldr	r3, [r3]
+ 140 00a6 9E42     		cmp	r6, r3
+ 141 00a8 F9D1     		bne	.L21
+ 142              	.L22:
+ 143 00aa 5A68     		ldr	r2, [r3, #4]
+ 144 00ac 0360     		str	r3, [r0]
+ 145 00ae 4260     		str	r2, [r0, #4]
+ 146 00b0 5860     		str	r0, [r3, #4]
+ 147 00b2 1060     		str	r0, [r2]
+ 148 00b4 BBE7     		b	.L11
+ 149              	.L12:
+ 150 00b6 0368     		ldr	r3, [r0]
+ 151 00b8 4168     		ldr	r1, [r0, #4]
+ 152 00ba 866A     		ldr	r6, [r0, #40]
+ 153 00bc 0B60     		str	r3, [r1]
+ 154 00be 0768     		ldr	r7, [r0]
+ 155 00c0 3346     		mov	r3, r6
+ 156 00c2 7960     		str	r1, [r7, #4]
+ 157 00c4 02E0     		b	.L19
+ 158              	.L15:
+ 159 00c6 9968     		ldr	r1, [r3, #8]
+ 160 00c8 9142     		cmp	r1, r2
+ 161 00ca 02D3     		bcc	.L18
+ 162              	.L19:
+ 163 00cc 1B68     		ldr	r3, [r3]
+ 164 00ce 9E42     		cmp	r6, r3
+ 165 00d0 F9D1     		bne	.L15
+ 166              	.L18:
+ 167 00d2 5A68     		ldr	r2, [r3, #4]
+ 168 00d4 0360     		str	r3, [r0]
+ 169 00d6 4260     		str	r2, [r0, #4]
+ 170 00d8 5860     		str	r0, [r3, #4]
+ 171 00da 1060     		str	r0, [r2]
+ARM GAS  /tmp/ccBUFuds.s 			page 4
+
+
+ 172 00dc B068     		ldr	r0, [r6, #8]
+ 173 00de A268     		ldr	r2, [r4, #8]
+ 174 00e0 8368     		ldr	r3, [r0, #8]
+ 175 00e2 9342     		cmp	r3, r2
+ 176 00e4 9BD3     		bcc	.L20
+ 177 00e6 A2E7     		b	.L11
+ 178              	.L30:
+ 179 00e8 0448     		ldr	r0, .L32+12
+ 180 00ea FFF7FEFF 		bl	chDbgPanic
+ 181 00ee 8FE7     		b	.L8
+ 182              	.L33:
+ 183              		.align	2
+ 184              	.L32:
+ 185 00f0 00000000 		.word	rlist
+ 186 00f4 20000000 		.word	.LC2
+ 187 00f8 34000000 		.word	.LC3
+ 188 00fc 10000000 		.word	.LC1
+ 189              		.size	chMtxLockS, .-chMtxLockS
+ 190              		.section	.text.chMtxLock,"ax",%progbits
+ 191              		.align	2
+ 192              		.p2align 4,,15
+ 193              		.global	chMtxLock
+ 194              		.thumb
+ 195              		.thumb_func
+ 196              		.type	chMtxLock, %function
+ 197              	chMtxLock:
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200 0000 10B5     		push	{r4, lr}
+ 201 0002 2023     		movs	r3, #32
+ 202 0004 0446     		mov	r4, r0
+ 203              	@ 105 "../../../ChibiOS/os/kernel/src/chmtx.c" 1
+ 204 0006 83F31188 		msr     BASEPRI, r3
+ 205              	@ 0 "" 2
+ 206              		.thumb
+ 207 000a FFF7FEFF 		bl	dbg_check_lock
+ 208 000e 2046     		mov	r0, r4
+ 209 0010 FFF7FEFF 		bl	chMtxLockS
+ 210 0014 FFF7FEFF 		bl	dbg_check_unlock
+ 211 0018 0023     		movs	r3, #0
+ 212              	@ 109 "../../../ChibiOS/os/kernel/src/chmtx.c" 1
+ 213 001a 83F31188 		msr     BASEPRI, r3
+ 214              	@ 0 "" 2
+ 215              		.thumb
+ 216 001e 10BD     		pop	{r4, pc}
+ 217              		.size	chMtxLock, .-chMtxLock
+ 218              		.section	.text.chMtxTryLockS,"ax",%progbits
+ 219              		.align	2
+ 220              		.p2align 4,,15
+ 221              		.global	chMtxTryLockS
+ 222              		.thumb
+ 223              		.thumb_func
+ 224              		.type	chMtxTryLockS, %function
+ 225              	chMtxTryLockS:
+ 226              		@ args = 0, pretend = 0, frame = 0
+ 227              		@ frame_needed = 0, uses_anonymous_args = 0
+ 228 0000 10B5     		push	{r4, lr}
+ARM GAS  /tmp/ccBUFuds.s 			page 5
+
+
+ 229 0002 0446     		mov	r4, r0
+ 230 0004 FFF7FEFF 		bl	chDbgCheckClassS
+ 231 0008 5CB1     		cbz	r4, .L39
+ 232              	.L36:
+ 233 000a A368     		ldr	r3, [r4, #8]
+ 234 000c 0BB1     		cbz	r3, .L40
+ 235 000e 0020     		movs	r0, #0
+ 236 0010 10BD     		pop	{r4, pc}
+ 237              	.L40:
+ 238 0012 064B     		ldr	r3, .L41
+ 239 0014 0120     		movs	r0, #1
+ 240 0016 9B69     		ldr	r3, [r3, #24]
+ 241 0018 1A6C     		ldr	r2, [r3, #64]
+ 242 001a A360     		str	r3, [r4, #8]
+ 243 001c E260     		str	r2, [r4, #12]
+ 244 001e 1C64     		str	r4, [r3, #64]
+ 245 0020 10BD     		pop	{r4, pc}
+ 246              	.L39:
+ 247 0022 0348     		ldr	r0, .L41+4
+ 248 0024 FFF7FEFF 		bl	chDbgPanic
+ 249 0028 EFE7     		b	.L36
+ 250              	.L42:
+ 251 002a 00BF     		.align	2
+ 252              	.L41:
+ 253 002c 00000000 		.word	rlist
+ 254 0030 48000000 		.word	.LC4
+ 255              		.size	chMtxTryLockS, .-chMtxTryLockS
+ 256 0034 AFF30080 		.section	.text.chMtxTryLock,"ax",%progbits
+ 256      AFF30080 
+ 256      AFF30080 
+ 257              		.align	2
+ 258              		.p2align 4,,15
+ 259              		.global	chMtxTryLock
+ 260              		.thumb
+ 261              		.thumb_func
+ 262              		.type	chMtxTryLock, %function
+ 263              	chMtxTryLock:
+ 264              		@ args = 0, pretend = 0, frame = 0
+ 265              		@ frame_needed = 0, uses_anonymous_args = 0
+ 266 0000 10B5     		push	{r4, lr}
+ 267 0002 2023     		movs	r3, #32
+ 268 0004 0446     		mov	r4, r0
+ 269              	@ 209 "../../../ChibiOS/os/kernel/src/chmtx.c" 1
+ 270 0006 83F31188 		msr     BASEPRI, r3
+ 271              	@ 0 "" 2
+ 272              		.thumb
+ 273 000a FFF7FEFF 		bl	dbg_check_lock
+ 274 000e 2046     		mov	r0, r4
+ 275 0010 FFF7FEFF 		bl	chMtxTryLockS
+ 276 0014 0446     		mov	r4, r0
+ 277 0016 FFF7FEFF 		bl	dbg_check_unlock
+ 278 001a 0023     		movs	r3, #0
+ 279              	@ 213 "../../../ChibiOS/os/kernel/src/chmtx.c" 1
+ 280 001c 83F31188 		msr     BASEPRI, r3
+ 281              	@ 0 "" 2
+ 282              		.thumb
+ 283 0020 2046     		mov	r0, r4
+ARM GAS  /tmp/ccBUFuds.s 			page 6
+
+
+ 284 0022 10BD     		pop	{r4, pc}
+ 285              		.size	chMtxTryLock, .-chMtxTryLock
+ 286 0024 AFF30080 		.section	.text.chMtxUnlock,"ax",%progbits
+ 286      AFF30080 
+ 286      AFF30080 
+ 287              		.align	2
+ 288              		.p2align 4,,15
+ 289              		.global	chMtxUnlock
+ 290              		.thumb
+ 291              		.thumb_func
+ 292              		.type	chMtxUnlock, %function
+ 293              	chMtxUnlock:
+ 294              		@ args = 0, pretend = 0, frame = 0
+ 295              		@ frame_needed = 0, uses_anonymous_args = 0
+ 296 0000 1E4A     		ldr	r2, .L59
+ 297 0002 70B5     		push	{r4, r5, r6, lr}
+ 298 0004 2023     		movs	r3, #32
+ 299 0006 9569     		ldr	r5, [r2, #24]
+ 300              	@ 261 "../../../ChibiOS/os/kernel/src/chmtx.c" 1
+ 301 0008 83F31188 		msr     BASEPRI, r3
+ 302              	@ 0 "" 2
+ 303              		.thumb
+ 304 000c FFF7FEFF 		bl	dbg_check_lock
+ 305 0010 2C6C     		ldr	r4, [r5, #64]
+ 306 0012 002C     		cmp	r4, #0
+ 307 0014 2DD0     		beq	.L58
+ 308              	.L45:
+ 309 0016 A368     		ldr	r3, [r4, #8]
+ 310 0018 AB42     		cmp	r3, r5
+ 311 001a 03D0     		beq	.L46
+ 312 001c 1848     		ldr	r0, .L59+4
+ 313 001e FFF7FEFF 		bl	chDbgPanic
+ 314 0022 2C6C     		ldr	r4, [r5, #64]
+ 315              	.L46:
+ 316 0024 2668     		ldr	r6, [r4]
+ 317 0026 E368     		ldr	r3, [r4, #12]
+ 318 0028 A642     		cmp	r6, r4
+ 319 002a 2B64     		str	r3, [r5, #64]
+ 320 002c 1ED0     		beq	.L47
+ 321 002e 696C     		ldr	r1, [r5, #68]
+ 322 0030 4BB1     		cbz	r3, .L48
+ 323              	.L50:
+ 324 0032 1A68     		ldr	r2, [r3]
+ 325 0034 9A42     		cmp	r2, r3
+ 326 0036 03D0     		beq	.L49
+ 327 0038 9268     		ldr	r2, [r2, #8]
+ 328 003a 9142     		cmp	r1, r2
+ 329 003c 38BF     		it	cc
+ 330 003e 1146     		movcc	r1, r2
+ 331              	.L49:
+ 332 0040 DB68     		ldr	r3, [r3, #12]
+ 333 0042 002B     		cmp	r3, #0
+ 334 0044 F5D1     		bne	.L50
+ 335              	.L48:
+ 336 0046 326C     		ldr	r2, [r6, #64]
+ 337 0048 3368     		ldr	r3, [r6]
+ 338 004a 3046     		mov	r0, r6
+ARM GAS  /tmp/ccBUFuds.s 			page 7
+
+
+ 339 004c A960     		str	r1, [r5, #8]
+ 340 004e 2360     		str	r3, [r4]
+ 341 0050 0021     		movs	r1, #0
+ 342 0052 5C60     		str	r4, [r3, #4]
+ 343 0054 A660     		str	r6, [r4, #8]
+ 344 0056 E260     		str	r2, [r4, #12]
+ 345 0058 3464     		str	r4, [r6, #64]
+ 346 005a FFF7FEFF 		bl	chSchWakeupS
+ 347              	.L51:
+ 348 005e FFF7FEFF 		bl	dbg_check_unlock
+ 349 0062 0023     		movs	r3, #0
+ 350              	@ 301 "../../../ChibiOS/os/kernel/src/chmtx.c" 1
+ 351 0064 83F31188 		msr     BASEPRI, r3
+ 352              	@ 0 "" 2
+ 353              		.thumb
+ 354 0068 2046     		mov	r0, r4
+ 355 006a 70BD     		pop	{r4, r5, r6, pc}
+ 356              	.L47:
+ 357 006c 0023     		movs	r3, #0
+ 358 006e A360     		str	r3, [r4, #8]
+ 359 0070 F5E7     		b	.L51
+ 360              	.L58:
+ 361 0072 0448     		ldr	r0, .L59+8
+ 362 0074 FFF7FEFF 		bl	chDbgPanic
+ 363 0078 2C6C     		ldr	r4, [r5, #64]
+ 364 007a CCE7     		b	.L45
+ 365              	.L60:
+ 366              		.align	2
+ 367              	.L59:
+ 368 007c 00000000 		.word	rlist
+ 369 0080 70000000 		.word	.LC6
+ 370 0084 5C000000 		.word	.LC5
+ 371              		.size	chMtxUnlock, .-chMtxUnlock
+ 372 0088 AFF30080 		.section	.text.chMtxUnlockS,"ax",%progbits
+ 372      AFF30080 
+ 373              		.align	2
+ 374              		.p2align 4,,15
+ 375              		.global	chMtxUnlockS
+ 376              		.thumb
+ 377              		.thumb_func
+ 378              		.type	chMtxUnlockS, %function
+ 379              	chMtxUnlockS:
+ 380              		@ args = 0, pretend = 0, frame = 0
+ 381              		@ frame_needed = 0, uses_anonymous_args = 0
+ 382 0000 1A4B     		ldr	r3, .L76
+ 383 0002 70B5     		push	{r4, r5, r6, lr}
+ 384 0004 9D69     		ldr	r5, [r3, #24]
+ 385 0006 FFF7FEFF 		bl	chDbgCheckClassS
+ 386 000a 2C6C     		ldr	r4, [r5, #64]
+ 387 000c 002C     		cmp	r4, #0
+ 388 000e 28D0     		beq	.L75
+ 389              	.L62:
+ 390 0010 A368     		ldr	r3, [r4, #8]
+ 391 0012 AB42     		cmp	r3, r5
+ 392 0014 03D0     		beq	.L63
+ 393 0016 1648     		ldr	r0, .L76+4
+ 394 0018 FFF7FEFF 		bl	chDbgPanic
+ARM GAS  /tmp/ccBUFuds.s 			page 8
+
+
+ 395 001c 2C6C     		ldr	r4, [r5, #64]
+ 396              	.L63:
+ 397 001e 2668     		ldr	r6, [r4]
+ 398 0020 E368     		ldr	r3, [r4, #12]
+ 399 0022 A642     		cmp	r6, r4
+ 400 0024 2B64     		str	r3, [r5, #64]
+ 401 0026 18D0     		beq	.L64
+ 402 0028 696C     		ldr	r1, [r5, #68]
+ 403 002a 4BB1     		cbz	r3, .L65
+ 404              	.L67:
+ 405 002c 1A68     		ldr	r2, [r3]
+ 406 002e 9A42     		cmp	r2, r3
+ 407 0030 03D0     		beq	.L66
+ 408 0032 9268     		ldr	r2, [r2, #8]
+ 409 0034 9142     		cmp	r1, r2
+ 410 0036 38BF     		it	cc
+ 411 0038 1146     		movcc	r1, r2
+ 412              	.L66:
+ 413 003a DB68     		ldr	r3, [r3, #12]
+ 414 003c 002B     		cmp	r3, #0
+ 415 003e F5D1     		bne	.L67
+ 416              	.L65:
+ 417 0040 326C     		ldr	r2, [r6, #64]
+ 418 0042 3368     		ldr	r3, [r6]
+ 419 0044 3046     		mov	r0, r6
+ 420 0046 A960     		str	r1, [r5, #8]
+ 421 0048 2360     		str	r3, [r4]
+ 422 004a 5C60     		str	r4, [r3, #4]
+ 423 004c A660     		str	r6, [r4, #8]
+ 424 004e E260     		str	r2, [r4, #12]
+ 425 0050 3464     		str	r4, [r6, #64]
+ 426 0052 FFF7FEFF 		bl	chSchReadyI
+ 427 0056 2046     		mov	r0, r4
+ 428 0058 70BD     		pop	{r4, r5, r6, pc}
+ 429              	.L64:
+ 430 005a 0023     		movs	r3, #0
+ 431 005c A360     		str	r3, [r4, #8]
+ 432 005e 2046     		mov	r0, r4
+ 433 0060 70BD     		pop	{r4, r5, r6, pc}
+ 434              	.L75:
+ 435 0062 0448     		ldr	r0, .L76+8
+ 436 0064 FFF7FEFF 		bl	chDbgPanic
+ 437 0068 2C6C     		ldr	r4, [r5, #64]
+ 438 006a D1E7     		b	.L62
+ 439              	.L77:
+ 440              		.align	2
+ 441              	.L76:
+ 442 006c 00000000 		.word	rlist
+ 443 0070 98000000 		.word	.LC8
+ 444 0074 84000000 		.word	.LC7
+ 445              		.size	chMtxUnlockS, .-chMtxUnlockS
+ 446 0078 AFF30080 		.section	.text.chMtxUnlockAll,"ax",%progbits
+ 446      AFF30080 
+ 447              		.align	2
+ 448              		.p2align 4,,15
+ 449              		.global	chMtxUnlockAll
+ 450              		.thumb
+ARM GAS  /tmp/ccBUFuds.s 			page 9
+
+
+ 451              		.thumb_func
+ 452              		.type	chMtxUnlockAll, %function
+ 453              	chMtxUnlockAll:
+ 454              		@ args = 0, pretend = 0, frame = 0
+ 455              		@ frame_needed = 0, uses_anonymous_args = 0
+ 456 0000 154A     		ldr	r2, .L89
+ 457 0002 70B5     		push	{r4, r5, r6, lr}
+ 458 0004 2023     		movs	r3, #32
+ 459 0006 9469     		ldr	r4, [r2, #24]
+ 460              	@ 377 "../../../ChibiOS/os/kernel/src/chmtx.c" 1
+ 461 0008 83F31188 		msr     BASEPRI, r3
+ 462              	@ 0 "" 2
+ 463              		.thumb
+ 464 000c FFF7FEFF 		bl	dbg_check_lock
+ 465 0010 236C     		ldr	r3, [r4, #64]
+ 466 0012 D3B1     		cbz	r3, .L79
+ 467 0014 0026     		movs	r6, #0
+ 468 0016 0BE0     		b	.L83
+ 469              	.L88:
+ 470 0018 156C     		ldr	r5, [r2, #64]
+ 471 001a 1168     		ldr	r1, [r2]
+ 472 001c 1046     		mov	r0, r2
+ 473 001e 1960     		str	r1, [r3]
+ 474 0020 4B60     		str	r3, [r1, #4]
+ 475 0022 9A60     		str	r2, [r3, #8]
+ 476 0024 DD60     		str	r5, [r3, #12]
+ 477 0026 1364     		str	r3, [r2, #64]
+ 478 0028 FFF7FEFF 		bl	chSchReadyI
+ 479 002c 236C     		ldr	r3, [r4, #64]
+ 480 002e 43B1     		cbz	r3, .L87
+ 481              	.L83:
+ 482 0030 1A68     		ldr	r2, [r3]
+ 483 0032 D968     		ldr	r1, [r3, #12]
+ 484 0034 9A42     		cmp	r2, r3
+ 485 0036 2164     		str	r1, [r4, #64]
+ 486 0038 EED1     		bne	.L88
+ 487 003a 9E60     		str	r6, [r3, #8]
+ 488 003c 236C     		ldr	r3, [r4, #64]
+ 489 003e 002B     		cmp	r3, #0
+ 490 0040 F6D1     		bne	.L83
+ 491              	.L87:
+ 492 0042 636C     		ldr	r3, [r4, #68]
+ 493 0044 A360     		str	r3, [r4, #8]
+ 494 0046 FFF7FEFF 		bl	chSchRescheduleS
+ 495              	.L79:
+ 496 004a FFF7FEFF 		bl	dbg_check_unlock
+ 497 004e 0023     		movs	r3, #0
+ 498              	@ 395 "../../../ChibiOS/os/kernel/src/chmtx.c" 1
+ 499 0050 83F31188 		msr     BASEPRI, r3
+ 500              	@ 0 "" 2
+ 501              		.thumb
+ 502 0054 70BD     		pop	{r4, r5, r6, pc}
+ 503              	.L90:
+ 504 0056 00BF     		.align	2
+ 505              	.L89:
+ 506 0058 00000000 		.word	rlist
+ 507              		.size	chMtxUnlockAll, .-chMtxUnlockAll
+ARM GAS  /tmp/ccBUFuds.s 			page 10
+
+
+ 508 005c AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 509              		.align	2
+ 510              	.LC0:
+ 511 0000 2263684D 		.ascii	"\"chMtxInit\"()\000"
+ 511      7478496E 
+ 511      69742228 
+ 511      2900
+ 512 000e 0000     		.space	2
+ 513              	.LC1:
+ 514 0010 2263684D 		.ascii	"\"chMtxLockS\"()\000"
+ 514      74784C6F 
+ 514      636B5322 
+ 514      282900
+ 515 001f 00       		.space	1
+ 516              	.LC2:
+ 517 0020 63684D74 		.ascii	"chMtxLockS(), #1\000"
+ 517      784C6F63 
+ 517      6B532829 
+ 517      2C202331 
+ 517      00
+ 518 0031 000000   		.space	3
+ 519              	.LC3:
+ 520 0034 63684D74 		.ascii	"chMtxLockS(), #2\000"
+ 520      784C6F63 
+ 520      6B532829 
+ 520      2C202332 
+ 520      00
+ 521 0045 000000   		.space	3
+ 522              	.LC4:
+ 523 0048 2263684D 		.ascii	"\"chMtxTryLockS\"()\000"
+ 523      74785472 
+ 523      794C6F63 
+ 523      6B532228 
+ 523      2900
+ 524 005a 0000     		.space	2
+ 525              	.LC5:
+ 526 005c 63684D74 		.ascii	"chMtxUnlock(), #1\000"
+ 526      78556E6C 
+ 526      6F636B28 
+ 526      292C2023 
+ 526      3100
+ 527 006e 0000     		.space	2
+ 528              	.LC6:
+ 529 0070 63684D74 		.ascii	"chMtxUnlock(), #2\000"
+ 529      78556E6C 
+ 529      6F636B28 
+ 529      292C2023 
+ 529      3200
+ 530 0082 0000     		.space	2
+ 531              	.LC7:
+ 532 0084 63684D74 		.ascii	"chMtxUnlockS(), #1\000"
+ 532      78556E6C 
+ 532      6F636B53 
+ 532      28292C20 
+ 532      233100
+ 533 0097 00       		.space	1
+ 534              	.LC8:
+ARM GAS  /tmp/ccBUFuds.s 			page 11
+
+
+ 535 0098 63684D74 		.ascii	"chMtxUnlockS(), #2\000"
+ 535      78556E6C 
+ 535      6F636B53 
+ 535      28292C20 
+ 535      233200
+ 536 00ab 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccBUFuds.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chmtx.c
+     /tmp/ccBUFuds.s:16     .text.chMtxInit:00000000 $t
+     /tmp/ccBUFuds.s:22     .text.chMtxInit:00000000 chMtxInit
+     /tmp/ccBUFuds.s:41     .text.chMtxInit:00000018 $d
+     /tmp/ccBUFuds.s:44     .text.chMtxLockS:00000000 $t
+     /tmp/ccBUFuds.s:50     .text.chMtxLockS:00000000 chMtxLockS
+     /tmp/ccBUFuds.s:185    .text.chMtxLockS:000000f0 $d
+     /tmp/ccBUFuds.s:191    .text.chMtxLock:00000000 $t
+     /tmp/ccBUFuds.s:197    .text.chMtxLock:00000000 chMtxLock
+     /tmp/ccBUFuds.s:219    .text.chMtxTryLockS:00000000 $t
+     /tmp/ccBUFuds.s:225    .text.chMtxTryLockS:00000000 chMtxTryLockS
+     /tmp/ccBUFuds.s:253    .text.chMtxTryLockS:0000002c $d
+     /tmp/ccBUFuds.s:257    .text.chMtxTryLock:00000000 $t
+     /tmp/ccBUFuds.s:263    .text.chMtxTryLock:00000000 chMtxTryLock
+     /tmp/ccBUFuds.s:287    .text.chMtxUnlock:00000000 $t
+     /tmp/ccBUFuds.s:293    .text.chMtxUnlock:00000000 chMtxUnlock
+     /tmp/ccBUFuds.s:368    .text.chMtxUnlock:0000007c $d
+     /tmp/ccBUFuds.s:373    .text.chMtxUnlockS:00000000 $t
+     /tmp/ccBUFuds.s:379    .text.chMtxUnlockS:00000000 chMtxUnlockS
+     /tmp/ccBUFuds.s:442    .text.chMtxUnlockS:0000006c $d
+     /tmp/ccBUFuds.s:447    .text.chMtxUnlockAll:00000000 $t
+     /tmp/ccBUFuds.s:453    .text.chMtxUnlockAll:00000000 chMtxUnlockAll
+     /tmp/ccBUFuds.s:506    .text.chMtxUnlockAll:00000058 $d
+     /tmp/ccBUFuds.s:509    .rodata.str1.4:00000000 $d
+     /tmp/ccBUFuds.s:43     .text.chMtxInit:0000001c $t
+     /tmp/ccBUFuds.s:256    .text.chMtxTryLockS:00000034 $t
+     /tmp/ccBUFuds.s:372    .text.chMtxUnlock:00000088 $t
+     /tmp/ccBUFuds.s:446    .text.chMtxUnlockS:00000078 $t
+     /tmp/ccBUFuds.s:508    .text.chMtxUnlockAll:0000005c $t
+
+UNDEFINED SYMBOLS
+chDbgPanic
+chDbgCheckClassS
+chSchGoSleepS
+chSchReadyI
+rlist
+dbg_check_lock
+dbg_check_unlock
+chSchWakeupS
+chSchRescheduleS

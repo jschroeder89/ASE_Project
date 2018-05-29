@@ -1,0 +1,2 @@
+FSIOPowerManagement.cpp:7:1:msg_t amiro::fileSystemIo::FSIOPowerManagement::getVcnl4020Offset(uint16_t*, uint8_t)	16	static
+FSIOPowerManagement.cpp:39:1:msg_t amiro::fileSystemIo::FSIOPowerManagement::setVcnl4020Offset(uint16_t, uint8_t)	24	static

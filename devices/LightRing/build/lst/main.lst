@@ -1,0 +1,3059 @@
+ARM GAS  /tmp/ccDAcKsC.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.cpp"
+  15              		.section	.text._ZN5amiro9I2CDriverD2Ev,"axG",%progbits,_ZN5amiro9I2CDriverD5Ev,comdat
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.weak	_ZN5amiro9I2CDriverD2Ev
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	_ZN5amiro9I2CDriverD2Ev, %function
+  22              	_ZN5amiro9I2CDriverD2Ev:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 014B     		ldr	r3, .L2
+  27 0002 0360     		str	r3, [r0]
+  28 0004 7047     		bx	lr
+  29              	.L3:
+  30 0006 00BF     		.align	2
+  31              	.L2:
+  32 0008 08000000 		.word	_ZTVN5amiro9I2CDriverE+8
+  33              		.size	_ZN5amiro9I2CDriverD2Ev, .-_ZN5amiro9I2CDriverD2Ev
+  34              		.weak	_ZN5amiro9I2CDriverD1Ev
+  35              		.thumb_set _ZN5amiro9I2CDriverD1Ev,_ZN5amiro9I2CDriverD2Ev
+  36 000c AFF30080 		.section	.text._ZN5amiro9I2CDriverD0Ev,"axG",%progbits,_ZN5amiro9I2CDriverD0Ev,comdat
+  37              		.align	2
+  38              		.p2align 4,,15
+  39              		.weak	_ZN5amiro9I2CDriverD0Ev
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	_ZN5amiro9I2CDriverD0Ev, %function
+  43              	_ZN5amiro9I2CDriverD0Ev:
+  44              		@ args = 0, pretend = 0, frame = 0
+  45              		@ frame_needed = 0, uses_anonymous_args = 0
+  46 0000 10B5     		push	{r4, lr}
+  47 0002 034B     		ldr	r3, .L5
+  48 0004 0446     		mov	r4, r0
+  49 0006 0360     		str	r3, [r0]
+  50 0008 FFF7FEFF 		bl	_ZdlPv
+  51 000c 2046     		mov	r0, r4
+  52 000e 10BD     		pop	{r4, pc}
+  53              	.L6:
+  54              		.align	2
+  55              	.L5:
+  56 0010 08000000 		.word	_ZTVN5amiro9I2CDriverE+8
+  57              		.size	_ZN5amiro9I2CDriverD0Ev, .-_ZN5amiro9I2CDriverD0Ev
+ARM GAS  /tmp/ccDAcKsC.s 			page 2
+
+
+  58 0014 AFF30080 		.section	.text._ZL8chprintfP20BaseSequentialStreamPKcz,"ax",%progbits
+  58      AFF30080 
+  58      AFF30080 
+  59              		.align	2
+  60              		.p2align 4,,15
+  61              		.thumb
+  62              		.thumb_func
+  63              		.type	_ZL8chprintfP20BaseSequentialStreamPKcz, %function
+  64              	_ZL8chprintfP20BaseSequentialStreamPKcz:
+  65              		@ args = 4, pretend = 12, frame = 8
+  66              		@ frame_needed = 0, uses_anonymous_args = 1
+  67 0000 0EB4     		push	{r1, r2, r3}
+  68 0002 00B5     		push	{lr}
+  69 0004 82B0     		sub	sp, sp, #8
+  70 0006 03AB     		add	r3, sp, #12
+  71 0008 53F8041B 		ldr	r1, [r3], #4
+  72 000c 1A46     		mov	r2, r3
+  73 000e 0193     		str	r3, [sp, #4]
+  74 0010 FFF7FEFF 		bl	chvprintf
+  75 0014 02B0     		add	sp, sp, #8
+  76              		@ sp needed
+  77 0016 5DF804EB 		ldr	lr, [sp], #4
+  78 001a 03B0     		add	sp, sp, #12
+  79 001c 7047     		bx	lr
+  80              		.size	_ZL8chprintfP20BaseSequentialStreamPKcz, .-_ZL8chprintfP20BaseSequentialStreamPKcz
+  81 001e 00BF     		.section	.text._Z20shellRequestShutdownP20BaseSequentialStreamiPPc,"ax",%progbits
+  82              		.align	2
+  83              		.p2align 4,,15
+  84              		.global	_Z20shellRequestShutdownP20BaseSequentialStreamiPPc
+  85              		.thumb
+  86              		.thumb_func
+  87              		.type	_Z20shellRequestShutdownP20BaseSequentialStreamiPPc, %function
+  88              	_Z20shellRequestShutdownP20BaseSequentialStreamiPPc:
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91 0000 70B5     		push	{r4, r5, r6, lr}
+  92 0002 0D46     		mov	r5, r1
+  93 0004 5049     		ldr	r1, .L36
+  94 0006 1646     		mov	r6, r2
+  95 0008 0446     		mov	r4, r0
+  96 000a FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+  97 000e 002D     		cmp	r5, #0
+  98 0010 3DD0     		beq	.L9
+  99 0012 3568     		ldr	r5, [r6]
+ 100 0014 4D49     		ldr	r1, .L36+4
+ 101 0016 2846     		mov	r0, r5
+ 102 0018 FFF7FEFF 		bl	strcmp
+ 103 001c 0028     		cmp	r0, #0
+ 104 001e 36D0     		beq	.L9
+ 105 0020 2846     		mov	r0, r5
+ 106 0022 4B49     		ldr	r1, .L36+8
+ 107 0024 FFF7FEFF 		bl	strcmp
+ 108 0028 0028     		cmp	r0, #0
+ 109 002a 6AD0     		beq	.L11
+ 110 002c 2846     		mov	r0, r5
+ 111 002e 4949     		ldr	r1, .L36+12
+ 112 0030 FFF7FEFF 		bl	strcmp
+ARM GAS  /tmp/ccDAcKsC.s 			page 3
+
+
+ 113 0034 0028     		cmp	r0, #0
+ 114 0036 64D0     		beq	.L11
+ 115 0038 2846     		mov	r0, r5
+ 116 003a 4749     		ldr	r1, .L36+16
+ 117 003c FFF7FEFF 		bl	strcmp
+ 118 0040 0028     		cmp	r0, #0
+ 119 0042 67D0     		beq	.L13
+ 120 0044 2846     		mov	r0, r5
+ 121 0046 4549     		ldr	r1, .L36+20
+ 122 0048 FFF7FEFF 		bl	strcmp
+ 123 004c 0028     		cmp	r0, #0
+ 124 004e 61D0     		beq	.L13
+ 125 0050 2846     		mov	r0, r5
+ 126 0052 4349     		ldr	r1, .L36+24
+ 127 0054 FFF7FEFF 		bl	strcmp
+ 128 0058 0028     		cmp	r0, #0
+ 129 005a 64D0     		beq	.L15
+ 130 005c 2846     		mov	r0, r5
+ 131 005e 4149     		ldr	r1, .L36+28
+ 132 0060 FFF7FEFF 		bl	strcmp
+ 133 0064 0028     		cmp	r0, #0
+ 134 0066 5ED0     		beq	.L15
+ 135 0068 2846     		mov	r0, r5
+ 136 006a 3F49     		ldr	r1, .L36+32
+ 137 006c FFF7FEFF 		bl	strcmp
+ 138 0070 28B1     		cbz	r0, .L17
+ 139 0072 2846     		mov	r0, r5
+ 140 0074 3D49     		ldr	r1, .L36+36
+ 141 0076 FFF7FEFF 		bl	strcmp
+ 142 007a 0028     		cmp	r0, #0
+ 143 007c 5CD1     		bne	.L18
+ 144              	.L17:
+ 145 007e 2046     		mov	r0, r4
+ 146 0080 3B49     		ldr	r1, .L36+40
+ 147 0082 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 148 0086 3B4B     		ldr	r3, .L36+44
+ 149 0088 0422     		movs	r2, #4
+ 150 008a 1A60     		str	r2, [r3]
+ 151 008c 70BD     		pop	{r4, r5, r6, pc}
+ 152              	.L9:
+ 153 008e 2046     		mov	r0, r4
+ 154 0090 3949     		ldr	r1, .L36+48
+ 155 0092 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 156 0096 2046     		mov	r0, r4
+ 157 0098 3849     		ldr	r1, .L36+52
+ 158 009a FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 159 009e 2046     		mov	r0, r4
+ 160 00a0 3749     		ldr	r1, .L36+56
+ 161 00a2 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 162 00a6 2046     		mov	r0, r4
+ 163 00a8 3649     		ldr	r1, .L36+60
+ 164 00aa FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 165 00ae 2046     		mov	r0, r4
+ 166 00b0 3549     		ldr	r1, .L36+64
+ 167 00b2 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 168 00b6 2046     		mov	r0, r4
+ 169 00b8 3449     		ldr	r1, .L36+68
+ARM GAS  /tmp/ccDAcKsC.s 			page 4
+
+
+ 170 00ba FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 171 00be 2046     		mov	r0, r4
+ 172 00c0 3349     		ldr	r1, .L36+72
+ 173 00c2 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 174 00c6 2046     		mov	r0, r4
+ 175 00c8 3249     		ldr	r1, .L36+76
+ 176 00ca FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 177 00ce 2046     		mov	r0, r4
+ 178 00d0 3149     		ldr	r1, .L36+80
+ 179 00d2 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 180 00d6 2046     		mov	r0, r4
+ 181 00d8 3049     		ldr	r1, .L36+84
+ 182 00da FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 183 00de 2046     		mov	r0, r4
+ 184 00e0 2F49     		ldr	r1, .L36+88
+ 185 00e2 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 186 00e6 2046     		mov	r0, r4
+ 187 00e8 2E49     		ldr	r1, .L36+92
+ 188 00ea FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 189 00ee 2046     		mov	r0, r4
+ 190 00f0 2D49     		ldr	r1, .L36+96
+ 191 00f2 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 192 00f6 2046     		mov	r0, r4
+ 193 00f8 2149     		ldr	r1, .L36+56
+ 194 00fa BDE87040 		pop	{r4, r5, r6, lr}
+ 195 00fe FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 196              	.L11:
+ 197 0102 1C4B     		ldr	r3, .L36+44
+ 198 0104 2046     		mov	r0, r4
+ 199 0106 0122     		movs	r2, #1
+ 200 0108 2849     		ldr	r1, .L36+100
+ 201 010a BDE87040 		pop	{r4, r5, r6, lr}
+ 202 010e 1A60     		str	r2, [r3]
+ 203 0110 FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 204              	.L13:
+ 205 0114 174B     		ldr	r3, .L36+44
+ 206 0116 2046     		mov	r0, r4
+ 207 0118 0222     		movs	r2, #2
+ 208 011a 2549     		ldr	r1, .L36+104
+ 209 011c BDE87040 		pop	{r4, r5, r6, lr}
+ 210 0120 1A60     		str	r2, [r3]
+ 211 0122 FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 212              	.L15:
+ 213 0126 134B     		ldr	r3, .L36+44
+ 214 0128 2046     		mov	r0, r4
+ 215 012a 0322     		movs	r2, #3
+ 216 012c 2149     		ldr	r1, .L36+108
+ 217 012e BDE87040 		pop	{r4, r5, r6, lr}
+ 218 0132 1A60     		str	r2, [r3]
+ 219 0134 FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 220              	.L18:
+ 221 0138 2046     		mov	r0, r4
+ 222 013a 1F49     		ldr	r1, .L36+112
+ 223 013c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 224 0140 0C4B     		ldr	r3, .L36+44
+ 225 0142 0022     		movs	r2, #0
+ 226 0144 1A60     		str	r2, [r3]
+ARM GAS  /tmp/ccDAcKsC.s 			page 5
+
+
+ 227 0146 70BD     		pop	{r4, r5, r6, pc}
+ 228              	.L37:
+ 229              		.align	2
+ 230              	.L36:
+ 231 0148 00000000 		.word	.LC3
+ 232 014c 18000000 		.word	.LC4
+ 233 0150 6C020000 		.word	.LC18
+ 234 0154 7C020000 		.word	.LC19
+ 235 0158 B0020000 		.word	.LC21
+ 236 015c BC020000 		.word	.LC22
+ 237 0160 E8020000 		.word	.LC24
+ 238 0164 F4020000 		.word	.LC25
+ 239 0168 20030000 		.word	.LC27
+ 240 016c 28030000 		.word	.LC28
+ 241 0170 2C030000 		.word	.LC29
+ 242 0174 00000000 		.word	shutdown_now
+ 243 0178 20000000 		.word	.LC5
+ 244 017c 2C000000 		.word	.LC6
+ 245 0180 40000000 		.word	.LC7
+ 246 0184 44000000 		.word	.LC8
+ 247 0188 4C000000 		.word	.LC9
+ 248 018c 70000000 		.word	.LC10
+ 249 0190 94000000 		.word	.LC11
+ 250 0194 D8000000 		.word	.LC12
+ 251 0198 0C010000 		.word	.LC13
+ 252 019c 54010000 		.word	.LC14
+ 253 01a0 9C010000 		.word	.LC15
+ 254 01a4 EC010000 		.word	.LC16
+ 255 01a8 1C020000 		.word	.LC17
+ 256 01ac 80020000 		.word	.LC20
+ 257 01b0 C0020000 		.word	.LC23
+ 258 01b4 F8020000 		.word	.LC26
+ 259 01b8 44030000 		.word	.LC30
+ 260              		.size	_Z20shellRequestShutdownP20BaseSequentialStreamiPPc, .-_Z20shellRequestShutdownP20BaseSequen
+ 261 01bc AFF30080 		.section	.text._Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc,"ax",%progbits
+ 262              		.align	2
+ 263              		.p2align 4,,15
+ 264              		.global	_Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc
+ 265              		.thumb
+ 266              		.thumb_func
+ 267              		.type	_Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc, %function
+ 268              	_Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc:
+ 269              		@ args = 0, pretend = 0, frame = 0
+ 270              		@ frame_needed = 0, uses_anonymous_args = 0
+ 271 0000 10B5     		push	{r4, lr}
+ 272 0002 0A49     		ldr	r1, .L41
+ 273 0004 0446     		mov	r4, r0
+ 274 0006 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 275 000a 0948     		ldr	r0, .L41+4
+ 276 000c FFF7FEFF 		bl	_ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv
+ 277 0010 28B9     		cbnz	r0, .L40
+ 278 0012 2046     		mov	r0, r4
+ 279 0014 0749     		ldr	r1, .L41+8
+ 280 0016 BDE81040 		pop	{r4, lr}
+ 281 001a FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 282              	.L40:
+ 283 001e 2046     		mov	r0, r4
+ARM GAS  /tmp/ccDAcKsC.s 			page 6
+
+
+ 284 0020 0549     		ldr	r1, .L41+12
+ 285 0022 BDE81040 		pop	{r4, lr}
+ 286 0026 FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 287              	.L42:
+ 288 002a 00BF     		.align	2
+ 289              	.L41:
+ 290 002c 60030000 		.word	.LC31
+ 291 0030 5C020000 		.word	.LANCHOR0+604
+ 292 0034 8C030000 		.word	.LC33
+ 293 0038 78030000 		.word	.LC32
+ 294              		.size	_Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc, .-_Z23shellRequestResetMemoryP20Base
+ 295 003c AFF30080 		.section	.text._Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc,"ax",%progbits
+ 296              		.align	2
+ 297              		.p2align 4,,15
+ 298              		.global	_Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc
+ 299              		.thumb
+ 300              		.thumb_func
+ 301              		.type	_Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc, %function
+ 302              	_Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc:
+ 303              		@ args = 0, pretend = 0, frame = 8
+ 304              		@ frame_needed = 0, uses_anonymous_args = 0
+ 305 0000 10B5     		push	{r4, lr}
+ 306 0002 0D49     		ldr	r1, .L47
+ 307 0004 82B0     		sub	sp, sp, #8
+ 308 0006 0446     		mov	r4, r0
+ 309 0008 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 310 000c FF23     		movs	r3, #255
+ 311 000e 02A9     		add	r1, sp, #8
+ 312 0010 01F8013D 		strb	r3, [r1, #-1]!
+ 313 0014 0948     		ldr	r0, .L47+4
+ 314 0016 FFF7FEFF 		bl	_ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh
+ 315 001a 38B9     		cbnz	r0, .L46
+ 316 001c 2046     		mov	r0, r4
+ 317 001e 0849     		ldr	r1, .L47+8
+ 318 0020 9DF80720 		ldrb	r2, [sp, #7]	@ zero_extendqisi2
+ 319 0024 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 320 0028 02B0     		add	sp, sp, #8
+ 321              		@ sp needed
+ 322 002a 10BD     		pop	{r4, pc}
+ 323              	.L46:
+ 324 002c 2046     		mov	r0, r4
+ 325 002e 0549     		ldr	r1, .L47+12
+ 326 0030 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 327 0034 02B0     		add	sp, sp, #8
+ 328              		@ sp needed
+ 329 0036 10BD     		pop	{r4, pc}
+ 330              	.L48:
+ 331              		.align	2
+ 332              	.L47:
+ 333 0038 A0030000 		.word	.LC34
+ 334 003c 5C020000 		.word	.LANCHOR0+604
+ 335 0040 CC030000 		.word	.LC36
+ 336 0044 B8030000 		.word	.LC35
+ 337              		.size	_Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc, .-_Z22shellRequestGetBoardIdP20BaseSe
+ 338 0048 AFF30080 		.section	.text._Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc,"ax",%progbits
+ 338      AFF30080 
+ 339              		.align	2
+ARM GAS  /tmp/ccDAcKsC.s 			page 7
+
+
+ 340              		.p2align 4,,15
+ 341              		.global	_Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc
+ 342              		.thumb
+ 343              		.thumb_func
+ 344              		.type	_Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc, %function
+ 345              	_Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc:
+ 346              		@ args = 0, pretend = 0, frame = 0
+ 347              		@ frame_needed = 1, uses_anonymous_args = 0
+ 348 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 349 0004 8946     		mov	r9, r1
+ 350 0006 00AF     		add	r7, sp, #0
+ 351 0008 9F49     		ldr	r1, .L82
+ 352 000a 9046     		mov	r8, r2
+ 353 000c 0546     		mov	r5, r0
+ 354 000e FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 355 0012 B9F1010F 		cmp	r9, #1
+ 356 0016 5EDD     		ble	.L50
+ 357 0018 D8F80040 		ldr	r4, [r8]
+ 358 001c 9B49     		ldr	r1, .L82+4
+ 359 001e 2046     		mov	r0, r4
+ 360 0020 FFF7FEFF 		bl	strcmp
+ 361 0024 0028     		cmp	r0, #0
+ 362 0026 56D0     		beq	.L50
+ 363 0028 2046     		mov	r0, r4
+ 364 002a 9949     		ldr	r1, .L82+8
+ 365 002c FFF7FEFF 		bl	strcmp
+ 366 0030 0028     		cmp	r0, #0
+ 367 0032 00F0F880 		beq	.L70
+ 368 0036 2046     		mov	r0, r4
+ 369 0038 9649     		ldr	r1, .L82+12
+ 370 003a FFF7FEFF 		bl	strcmp
+ 371 003e 0028     		cmp	r0, #0
+ 372 0040 40F0A180 		bne	.L78
+ 373 0044 4FF0010A 		mov	r10, #1
+ 374 0048 5646     		mov	r6, r10
+ 375              	.L53:
+ 376 004a D8F80400 		ldr	r0, [r8, #4]
+ 377 004e FFF7FEFF 		bl	atoi
+ 378 0052 B9F1020F 		cmp	r9, #2
+ 379 0056 8346     		mov	fp, r0
+ 380 0058 40F0FB80 		bne	.L79
+ 381 005c 4FF00108 		mov	r8, #1
+ 382              	.L54:
+ 383 0060 8D48     		ldr	r0, .L82+16
+ 384 0062 FFF7FEFF 		bl	_ZN5amiro6EEPROM7getsizeEPv
+ 385 0066 0AFB08F4 		mul	r4, r10, r8
+ 386 006a C31D     		adds	r3, r0, #7
+ 387 006c 23F00703 		bic	r3, r3, #7
+ 388 0070 ADEB030D 		sub	sp, sp, r3
+ 389 0074 04EB0B03 		add	r3, r4, fp
+ 390 0078 9842     		cmp	r0, r3
+ 391 007a E946     		mov	r9, sp
+ 392 007c C0F0DD80 		bcc	.L80
+ 393              	.L55:
+ 394 0080 DFF8A4A2 		ldr	r10, .L82+160
+ 395 0084 5946     		mov	r1, fp
+ 396 0086 DAF82032 		ldr	r3, [r10, #544]
+ARM GAS  /tmp/ccDAcKsC.s 			page 8
+
+
+ 397 008a 0AF50870 		add	r0, r10, #544
+ 398 008e 1B6A     		ldr	r3, [r3, #32]
+ 399 0090 9847     		blx	r3
+ 400 0092 012C     		cmp	r4, #1
+ 401 0094 DAF82032 		ldr	r3, [r10, #544]
+ 402 0098 98BF     		it	ls
+ 403 009a 4FEA4804 		lslls	r4, r8, #1
+ 404 009e 7E48     		ldr	r0, .L82+16
+ 405 00a0 5B68     		ldr	r3, [r3, #4]
+ 406 00a2 4946     		mov	r1, r9
+ 407 00a4 2246     		mov	r2, r4
+ 408 00a6 9847     		blx	r3
+ 409 00a8 A042     		cmp	r0, r4
+ 410 00aa 05D0     		beq	.L57
+ 411 00ac 0246     		mov	r2, r0
+ 412 00ae 2346     		mov	r3, r4
+ 413 00b0 2846     		mov	r0, r5
+ 414 00b2 7A49     		ldr	r1, .L82+20
+ 415 00b4 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 416              	.L57:
+ 417 00b8 B8F1000F 		cmp	r8, #0
+ 418 00bc 00F08E80 		beq	.L68
+ 419 00c0 013E     		subs	r6, r6, #1
+ 420 00c2 0024     		movs	r4, #0
+ 421              	.L69:
+ 422 00c4 2846     		mov	r0, r5
+ 423 00c6 052E     		cmp	r6, #5
+ 424 00c8 00F2A780 		bhi	.L59
+ 425 00cc DFE806F0 		tbb	[pc, r6]
+ 426              	.L61:
+ 427 00d0 9F       		.byte	(.L60-.L61)/2
+ 428 00d1 99       		.byte	(.L62-.L61)/2
+ 429 00d2 93       		.byte	(.L63-.L61)/2
+ 430 00d3 8D       		.byte	(.L64-.L61)/2
+ 431 00d4 7D       		.byte	(.L65-.L61)/2
+ 432 00d5 AF       		.byte	(.L66-.L61)/2
+ 433              		.align	1
+ 434              	.L50:
+ 435 00d6 724A     		ldr	r2, .L82+24
+ 436 00d8 2846     		mov	r0, r5
+ 437 00da 7249     		ldr	r1, .L82+28
+ 438 00dc FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 439 00e0 2846     		mov	r0, r5
+ 440 00e2 7149     		ldr	r1, .L82+32
+ 441 00e4 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 442 00e8 2846     		mov	r0, r5
+ 443 00ea 7049     		ldr	r1, .L82+36
+ 444 00ec FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 445 00f0 2846     		mov	r0, r5
+ 446 00f2 6F49     		ldr	r1, .L82+40
+ 447 00f4 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 448 00f8 2846     		mov	r0, r5
+ 449 00fa 6E49     		ldr	r1, .L82+44
+ 450 00fc FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 451 0100 2846     		mov	r0, r5
+ 452 0102 6D49     		ldr	r1, .L82+48
+ 453 0104 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ARM GAS  /tmp/ccDAcKsC.s 			page 9
+
+
+ 454 0108 2846     		mov	r0, r5
+ 455 010a 6C49     		ldr	r1, .L82+52
+ 456 010c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 457 0110 2846     		mov	r0, r5
+ 458 0112 6B49     		ldr	r1, .L82+56
+ 459 0114 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 460 0118 2846     		mov	r0, r5
+ 461 011a 6A49     		ldr	r1, .L82+60
+ 462 011c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 463 0120 2846     		mov	r0, r5
+ 464 0122 6949     		ldr	r1, .L82+64
+ 465 0124 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 466 0128 2846     		mov	r0, r5
+ 467 012a 6849     		ldr	r1, .L82+68
+ 468 012c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 469 0130 2846     		mov	r0, r5
+ 470 0132 6749     		ldr	r1, .L82+72
+ 471 0134 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 472 0138 2846     		mov	r0, r5
+ 473 013a 6649     		ldr	r1, .L82+76
+ 474 013c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 475 0140 2846     		mov	r0, r5
+ 476 0142 6549     		ldr	r1, .L82+80
+ 477 0144 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 478 0148 2846     		mov	r0, r5
+ 479 014a 6449     		ldr	r1, .L82+84
+ 480 014c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 481 0150 2846     		mov	r0, r5
+ 482 0152 6349     		ldr	r1, .L82+88
+ 483 0154 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 484 0158 2846     		mov	r0, r5
+ 485 015a 5349     		ldr	r1, .L82+32
+ 486 015c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 487 0160 2846     		mov	r0, r5
+ 488 0162 6049     		ldr	r1, .L82+92
+ 489 0164 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 490 0168 2846     		mov	r0, r5
+ 491 016a 5F49     		ldr	r1, .L82+96
+ 492 016c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 493 0170 2846     		mov	r0, r5
+ 494 0172 5E49     		ldr	r1, .L82+100
+ 495 0174 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 496 0178 2846     		mov	r0, r5
+ 497 017a 4B49     		ldr	r1, .L82+32
+ 498 017c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 499              	.L49:
+ 500 0180 BD46     		mov	sp, r7
+ 501              		@ sp needed
+ 502 0182 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 503              	.L78:
+ 504 0186 2046     		mov	r0, r4
+ 505 0188 5949     		ldr	r1, .L82+104
+ 506 018a FFF7FEFF 		bl	strcmp
+ 507 018e 0028     		cmp	r0, #0
+ 508 0190 65D0     		beq	.L72
+ 509 0192 2046     		mov	r0, r4
+ 510 0194 5749     		ldr	r1, .L82+108
+ARM GAS  /tmp/ccDAcKsC.s 			page 10
+
+
+ 511 0196 FFF7FEFF 		bl	strcmp
+ 512 019a 0028     		cmp	r0, #0
+ 513 019c 63D0     		beq	.L73
+ 514 019e 2046     		mov	r0, r4
+ 515 01a0 5549     		ldr	r1, .L82+112
+ 516 01a2 FFF7FEFF 		bl	strcmp
+ 517 01a6 0028     		cmp	r0, #0
+ 518 01a8 61D0     		beq	.L74
+ 519 01aa 2046     		mov	r0, r4
+ 520 01ac 5349     		ldr	r1, .L82+116
+ 521 01ae FFF7FEFF 		bl	strcmp
+ 522 01b2 0028     		cmp	r0, #0
+ 523 01b4 5FD0     		beq	.L75
+ 524 01b6 2046     		mov	r0, r4
+ 525 01b8 5149     		ldr	r1, .L82+120
+ 526 01ba FFF7FEFF 		bl	strcmp
+ 527 01be 0028     		cmp	r0, #0
+ 528 01c0 5DD1     		bne	.L81
+ 529 01c2 4FF0040A 		mov	r10, #4
+ 530 01c6 0626     		movs	r6, #6
+ 531 01c8 3FE7     		b	.L53
+ 532              	.L65:
+ 533 01ca 4E49     		ldr	r1, .L82+124
+ 534 01cc 39F91420 		ldrsh	r2, [r9, r4, lsl #1]
+ 535 01d0 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 536              	.L67:
+ 537 01d4 0134     		adds	r4, r4, #1
+ 538 01d6 4445     		cmp	r4, r8
+ 539 01d8 7FF474AF 		bne	.L69
+ 540              	.L68:
+ 541 01dc 2846     		mov	r0, r5
+ 542 01de 3249     		ldr	r1, .L82+32
+ 543 01e0 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 544 01e4 BD46     		mov	sp, r7
+ 545              		@ sp needed
+ 546 01e6 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 547              	.L64:
+ 548 01ea 4749     		ldr	r1, .L82+128
+ 549 01ec 19F90420 		ldrsb	r2, [r9, r4]
+ 550 01f0 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 551 01f4 EEE7     		b	.L67
+ 552              	.L63:
+ 553 01f6 4549     		ldr	r1, .L82+132
+ 554 01f8 59F82420 		ldr	r2, [r9, r4, lsl #2]
+ 555 01fc FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 556 0200 E8E7     		b	.L67
+ 557              	.L62:
+ 558 0202 4349     		ldr	r1, .L82+136
+ 559 0204 39F81420 		ldrh	r2, [r9, r4, lsl #1]
+ 560 0208 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 561 020c E2E7     		b	.L67
+ 562              	.L60:
+ 563 020e 4149     		ldr	r1, .L82+140
+ 564 0210 19F80420 		ldrb	r2, [r9, r4]	@ zero_extendqisi2
+ 565 0214 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 566 0218 DCE7     		b	.L67
+ 567              	.L59:
+ARM GAS  /tmp/ccDAcKsC.s 			page 11
+
+
+ 568 021a 3F49     		ldr	r1, .L82+144
+ 569 021c 19F80420 		ldrb	r2, [r9, r4]	@ zero_extendqisi2
+ 570 0220 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 571 0224 D6E7     		b	.L67
+ 572              	.L70:
+ 573 0226 0646     		mov	r6, r0
+ 574 0228 4FF0010A 		mov	r10, #1
+ 575 022c 0DE7     		b	.L53
+ 576              	.L66:
+ 577 022e 3B49     		ldr	r1, .L82+148
+ 578 0230 59F82420 		ldr	r2, [r9, r4, lsl #2]
+ 579 0234 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 580 0238 CCE7     		b	.L67
+ 581              	.L80:
+ 582 023a CBEB0000 		rsb	r0, fp, r0
+ 583 023e B0FBFAF8 		udiv	r8, r0, r10
+ 584 0242 4246     		mov	r2, r8
+ 585 0244 2846     		mov	r0, r5
+ 586 0246 3649     		ldr	r1, .L82+152
+ 587 0248 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 588 024c 0AFB08F4 		mul	r4, r10, r8
+ 589 0250 16E7     		b	.L55
+ 590              	.L79:
+ 591 0252 D8F80800 		ldr	r0, [r8, #8]
+ 592 0256 FFF7FEFF 		bl	atoi
+ 593 025a 8046     		mov	r8, r0
+ 594 025c 00E7     		b	.L54
+ 595              	.L72:
+ 596 025e 4FF0020A 		mov	r10, #2
+ 597 0262 5646     		mov	r6, r10
+ 598 0264 F1E6     		b	.L53
+ 599              	.L73:
+ 600 0266 4FF0040A 		mov	r10, #4
+ 601 026a 0326     		movs	r6, #3
+ 602 026c EDE6     		b	.L53
+ 603              	.L74:
+ 604 026e 4FF0010A 		mov	r10, #1
+ 605 0272 0426     		movs	r6, #4
+ 606 0274 E9E6     		b	.L53
+ 607              	.L75:
+ 608 0276 4FF0020A 		mov	r10, #2
+ 609 027a 0526     		movs	r6, #5
+ 610 027c E5E6     		b	.L53
+ 611              	.L81:
+ 612 027e 2846     		mov	r0, r5
+ 613 0280 2849     		ldr	r1, .L82+156
+ 614 0282 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 615 0286 7BE7     		b	.L49
+ 616              	.L83:
+ 617              		.align	2
+ 618              	.L82:
+ 619 0288 E0030000 		.word	.LC37
+ 620 028c 18000000 		.word	.LC4
+ 621 0290 30060000 		.word	.LC55
+ 622 0294 34060000 		.word	.LC56
+ 623 0298 20020000 		.word	.LANCHOR0+544
+ 624 029c CC060000 		.word	.LC64
+ARM GAS  /tmp/ccDAcKsC.s 			page 12
+
+
+ 625 02a0 04040000 		.word	.LC39
+ 626 02a4 F8030000 		.word	.LC38
+ 627 02a8 40000000 		.word	.LC7
+ 628 02ac 44000000 		.word	.LC8
+ 629 02b0 30040000 		.word	.LC40
+ 630 02b4 70000000 		.word	.LC10
+ 631 02b8 60040000 		.word	.LC41
+ 632 02bc 88040000 		.word	.LC42
+ 633 02c0 AC040000 		.word	.LC43
+ 634 02c4 D0040000 		.word	.LC44
+ 635 02c8 F4040000 		.word	.LC45
+ 636 02cc 14050000 		.word	.LC46
+ 637 02d0 38050000 		.word	.LC47
+ 638 02d4 5C050000 		.word	.LC48
+ 639 02d8 64050000 		.word	.LC49
+ 640 02dc 90050000 		.word	.LC50
+ 641 02e0 A8050000 		.word	.LC51
+ 642 02e4 CC050000 		.word	.LC52
+ 643 02e8 D4050000 		.word	.LC53
+ 644 02ec 04060000 		.word	.LC54
+ 645 02f0 38060000 		.word	.LC57
+ 646 02f4 3C060000 		.word	.LC58
+ 647 02f8 40060000 		.word	.LC59
+ 648 02fc 44060000 		.word	.LC60
+ 649 0300 48060000 		.word	.LC61
+ 650 0304 24070000 		.word	.LC70
+ 651 0308 1C070000 		.word	.LC69
+ 652 030c 14070000 		.word	.LC68
+ 653 0310 0C070000 		.word	.LC67
+ 654 0314 04070000 		.word	.LC66
+ 655 0318 FC060000 		.word	.LC65
+ 656 031c 2C070000 		.word	.LC71
+ 657 0320 8C060000 		.word	.LC63
+ 658 0324 4C060000 		.word	.LC62
+ 659 0328 00000000 		.word	.LANCHOR0
+ 660              		.size	_Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc, .-_Z25shellRequestGetMemoryDataP20
+ 661 032c AFF30080 		.section	.text._Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc,"ax",%progbits
+ 662              		.align	2
+ 663              		.p2align 4,,15
+ 664              		.global	_Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc
+ 665              		.thumb
+ 666              		.thumb_func
+ 667              		.type	_Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc, %function
+ 668              	_Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc:
+ 669              		@ args = 0, pretend = 0, frame = 0
+ 670              		@ frame_needed = 0, uses_anonymous_args = 0
+ 671 0000 10B5     		push	{r4, lr}
+ 672 0002 0B49     		ldr	r1, .L87
+ 673 0004 0446     		mov	r4, r0
+ 674 0006 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 675 000a 0A48     		ldr	r0, .L87+4
+ 676 000c FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv
+ 677 0010 0949     		ldr	r1, .L87+8
+ 678 0012 0246     		mov	r2, r0
+ 679 0014 2046     		mov	r0, r4
+ 680 0016 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 681 001a 0648     		ldr	r0, .L87+4
+ARM GAS  /tmp/ccDAcKsC.s 			page 13
+
+
+ 682 001c FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv
+ 683 0020 00B1     		cbz	r0, .L86
+ 684 0022 10BD     		pop	{r4, pc}
+ 685              	.L86:
+ 686 0024 2046     		mov	r0, r4
+ 687 0026 0549     		ldr	r1, .L87+12
+ 688 0028 BDE81040 		pop	{r4, lr}
+ 689 002c FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 690              	.L88:
+ 691              		.align	2
+ 692              	.L87:
+ 693 0030 34070000 		.word	.LC72
+ 694 0034 00040000 		.word	.LANCHOR0+1024
+ 695 0038 4C070000 		.word	.LC73
+ 696 003c 5C070000 		.word	.LC74
+ 697              		.size	_Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc, .-_Z22shellRequestGetRobotIdP20BaseSe
+ 698              		.global	__aeabi_ui2f
+ 699              		.global	__aeabi_i2f
+ 700              		.global	__aeabi_fdiv
+ 701              		.global	__aeabi_fsub
+ 702              		.global	__aeabi_fmul
+ 703              		.global	__aeabi_f2d
+ 704              		.section	.text._Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc,"ax",%progbits
+ 705              		.align	2
+ 706              		.p2align 4,,15
+ 707              		.global	_Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc
+ 708              		.thumb
+ 709              		.thumb_func
+ 710              		.type	_Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc, %function
+ 711              	_Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc:
+ 712              		@ args = 0, pretend = 0, frame = 0
+ 713              		@ frame_needed = 0, uses_anonymous_args = 0
+ 714 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 715 0002 0D46     		mov	r5, r1
+ 716 0004 83B0     		sub	sp, sp, #12
+ 717 0006 2F49     		ldr	r1, .L94
+ 718 0008 1646     		mov	r6, r2
+ 719 000a 0446     		mov	r4, r0
+ 720 000c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 721 0010 002D     		cmp	r5, #0
+ 722 0012 4EDD     		ble	.L93
+ 723 0014 3068     		ldr	r0, [r6]
+ 724 0016 FFF7FEFF 		bl	atoi
+ 725 001a C2B2     		uxtb	r2, r0
+ 726 001c 4FF47A76 		mov	r6, #1000
+ 727 0020 012A     		cmp	r2, #1
+ 728 0022 06FB02F6 		mul	r6, r6, r2
+ 729 0026 4AD9     		bls	.L91
+ 730 0028 274B     		ldr	r3, .L94+4
+ 731 002a 3746     		mov	r7, r6
+ 732              	.L92:
+ 733 002c 274D     		ldr	r5, .L94+8
+ 734 002e 2849     		ldr	r1, .L94+12
+ 735 0030 2046     		mov	r0, r4
+ 736 0032 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 737 0036 6B68     		ldr	r3, [r5, #4]
+ 738 0038 3846     		mov	r0, r7
+ARM GAS  /tmp/ccDAcKsC.s 			page 14
+
+
+ 739 003a 5F6A     		ldr	r7, [r3, #36]
+ 740 003c FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 741 0040 6B68     		ldr	r3, [r5, #4]
+ 742 0042 586A     		ldr	r0, [r3, #36]
+ 743 0044 C01B     		subs	r0, r0, r7
+ 744 0046 FFF7FEFF 		bl	__aeabi_ui2f
+ 745 004a 0546     		mov	r5, r0
+ 746 004c 3046     		mov	r0, r6
+ 747 004e FFF7FEFF 		bl	__aeabi_i2f
+ 748 0052 0146     		mov	r1, r0
+ 749 0054 2846     		mov	r0, r5
+ 750 0056 FFF7FEFF 		bl	__aeabi_fdiv
+ 751 005a 0146     		mov	r1, r0
+ 752 005c 4FF07E50 		mov	r0, #1065353216
+ 753 0060 FFF7FEFF 		bl	__aeabi_fsub
+ 754 0064 1B49     		ldr	r1, .L94+16
+ 755 0066 FFF7FEFF 		bl	__aeabi_fmul
+ 756 006a FFF7FEFF 		bl	__aeabi_f2d
+ 757 006e 0246     		mov	r2, r0
+ 758 0070 0B46     		mov	r3, r1
+ 759 0072 2046     		mov	r0, r4
+ 760 0074 1849     		ldr	r1, .L94+20
+ 761 0076 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 762 007a FFF7FEFF 		bl	chCoreStatus
+ 763 007e C0F58035 		rsb	r5, r0, #65536
+ 764 0082 2846     		mov	r0, r5
+ 765 0084 FFF7FEFF 		bl	__aeabi_ui2f
+ 766 0088 4FF05E51 		mov	r1, #931135488
+ 767 008c FFF7FEFF 		bl	__aeabi_fmul
+ 768 0090 1049     		ldr	r1, .L94+16
+ 769 0092 FFF7FEFF 		bl	__aeabi_fmul
+ 770 0096 FFF7FEFF 		bl	__aeabi_f2d
+ 771 009a 0B46     		mov	r3, r1
+ 772 009c 4FF48031 		mov	r1, #65536
+ 773 00a0 0246     		mov	r2, r0
+ 774 00a2 0191     		str	r1, [sp, #4]
+ 775 00a4 0095     		str	r5, [sp]
+ 776 00a6 2046     		mov	r0, r4
+ 777 00a8 0C49     		ldr	r1, .L94+24
+ 778 00aa FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 779 00ae 03B0     		add	sp, sp, #12
+ 780              		@ sp needed
+ 781 00b0 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 782              	.L93:
+ 783 00b2 4FF47A77 		mov	r7, #1000
+ 784 00b6 3E46     		mov	r6, r7
+ 785 00b8 0122     		movs	r2, #1
+ 786              	.L90:
+ 787 00ba 094B     		ldr	r3, .L94+28
+ 788 00bc B6E7     		b	.L92
+ 789              	.L91:
+ 790 00be 3746     		mov	r7, r6
+ 791 00c0 FBE7     		b	.L90
+ 792              	.L95:
+ 793 00c2 00BF     		.align	2
+ 794              	.L94:
+ 795 00c4 C0070000 		.word	.LC77
+ARM GAS  /tmp/ccDAcKsC.s 			page 15
+
+
+ 796 00c8 B0070000 		.word	.LC75
+ 797 00cc 00000000 		.word	rlist
+ 798 00d0 DC070000 		.word	.LC78
+ 799 00d4 0000C842 		.word	1120403456
+ 800 00d8 00080000 		.word	.LC79
+ 801 00dc 14080000 		.word	.LC80
+ 802 00e0 B8070000 		.word	.LC76
+ 803              		.size	_Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc, .-_Z25shellRequestGetSystemLoadP20
+ 804              		.section	.text._Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc,"ax",%progbits
+ 805              		.align	2
+ 806              		.p2align 4,,15
+ 807              		.global	_Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc
+ 808              		.thumb
+ 809              		.thumb_func
+ 810              		.type	_Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc, %function
+ 811              	_Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc:
+ 812              		@ args = 0, pretend = 0, frame = 0
+ 813              		@ frame_needed = 0, uses_anonymous_args = 0
+ 814 0000 00B5     		push	{lr}
+ 815 0002 134B     		ldr	r3, .L103
+ 816 0004 134A     		ldr	r2, .L103+4
+ 817 0006 1B68     		ldr	r3, [r3]
+ 818 0008 83B0     		sub	sp, sp, #12
+ 819 000a 9342     		cmp	r3, r2
+ 820 000c 14D0     		beq	.L98
+ 821 000e 124A     		ldr	r2, .L103+8
+ 822 0010 9342     		cmp	r3, r2
+ 823 0012 0AD1     		bne	.L102
+ 824 0014 114B     		ldr	r3, .L103+12
+ 825 0016 1248     		ldr	r0, .L103+16
+ 826 0018 1B68     		ldr	r3, [r3]
+ 827 001a 1249     		ldr	r1, .L103+20
+ 828 001c 1A46     		mov	r2, r3
+ 829 001e 0093     		str	r3, [sp]
+ 830 0020 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 831 0024 03B0     		add	sp, sp, #12
+ 832              		@ sp needed
+ 833 0026 5DF804FB 		ldr	pc, [sp], #4
+ 834              	.L102:
+ 835 002a 0D48     		ldr	r0, .L103+16
+ 836 002c 0E49     		ldr	r1, .L103+24
+ 837 002e 03B0     		add	sp, sp, #12
+ 838              		@ sp needed
+ 839 0030 5DF804EB 		ldr	lr, [sp], #4
+ 840 0034 FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 841              	.L98:
+ 842 0038 0849     		ldr	r1, .L103+12
+ 843 003a 0948     		ldr	r0, .L103+16
+ 844 003c 4A78     		ldrb	r2, [r1, #1]	@ zero_extendqisi2
+ 845 003e 8B78     		ldrb	r3, [r1, #2]	@ zero_extendqisi2
+ 846 0040 C978     		ldrb	r1, [r1, #3]	@ zero_extendqisi2
+ 847 0042 0091     		str	r1, [sp]
+ 848 0044 0749     		ldr	r1, .L103+20
+ 849 0046 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 850 004a 03B0     		add	sp, sp, #12
+ 851              		@ sp needed
+ 852 004c 5DF804FB 		ldr	pc, [sp], #4
+ARM GAS  /tmp/ccDAcKsC.s 			page 16
+
+
+ 853              	.L104:
+ 854              		.align	2
+ 855              	.L103:
+ 856 0050 C0010008 		.word	134218176
+ 857 0054 4C422D41 		.word	1093485132
+ 858 0058 009966FF 		.word	-10053376
+ 859 005c C4010008 		.word	134218180
+ 860 0060 00000000 		.word	SD1
+ 861 0064 38080000 		.word	.LC81
+ 862 0068 50080000 		.word	.LC82
+ 863              		.size	_Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc, .-_Z29shellRequestGetBootloade
+ 864 006c AFF30080 		.section	.text._Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc,"ax",%progbits
+ 865              		.align	2
+ 866              		.p2align 4,,15
+ 867              		.global	_Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc
+ 868              		.thumb
+ 869              		.thumb_func
+ 870              		.type	_Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc, %function
+ 871              	_Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc:
+ 872              		@ args = 0, pretend = 0, frame = 0
+ 873              		@ frame_needed = 0, uses_anonymous_args = 0
+ 874 0000 70B5     		push	{r4, r5, r6, lr}
+ 875 0002 0C46     		mov	r4, r1
+ 876 0004 1049     		ldr	r1, .L110
+ 877 0006 1646     		mov	r6, r2
+ 878 0008 0546     		mov	r5, r0
+ 879 000a FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 880 000e 9CB1     		cbz	r4, .L108
+ 881 0010 3068     		ldr	r0, [r6]
+ 882 0012 FFF7FEFF 		bl	atoi
+ 883 0016 C1B2     		uxtb	r1, r0
+ 884 0018 0C48     		ldr	r0, .L110+4
+ 885 001a FFF7FEFF 		bl	_ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh
+ 886 001e 28B9     		cbnz	r0, .L109
+ 887 0020 2846     		mov	r0, r5
+ 888 0022 0B49     		ldr	r1, .L110+8
+ 889 0024 BDE87040 		pop	{r4, r5, r6, lr}
+ 890 0028 FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 891              	.L109:
+ 892 002c 2846     		mov	r0, r5
+ 893 002e 0949     		ldr	r1, .L110+12
+ 894 0030 BDE87040 		pop	{r4, r5, r6, lr}
+ 895 0034 FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 896              	.L108:
+ 897 0038 2846     		mov	r0, r5
+ 898 003a 0749     		ldr	r1, .L110+16
+ 899 003c 074A     		ldr	r2, .L110+20
+ 900 003e BDE87040 		pop	{r4, r5, r6, lr}
+ 901 0042 FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 902              	.L111:
+ 903 0046 00BF     		.align	2
+ 904              	.L110:
+ 905 0048 6C080000 		.word	.LC83
+ 906 004c 5C020000 		.word	.LANCHOR0+604
+ 907 0050 AC080000 		.word	.LC86
+ 908 0054 98080000 		.word	.LC85
+ 909 0058 F8030000 		.word	.LC38
+ARM GAS  /tmp/ccDAcKsC.s 			page 17
+
+
+ 910 005c 84080000 		.word	.LC84
+ 911              		.size	_Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc, .-_Z22shellRequestSetBoardIdP20BaseSe
+ 912              		.section	.text._Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc,"ax",%progbits
+ 913              		.align	2
+ 914              		.p2align 4,,15
+ 915              		.global	_Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc
+ 916              		.thumb
+ 917              		.thumb_func
+ 918              		.type	_Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc, %function
+ 919              	_Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc:
+ 920              		@ args = 0, pretend = 0, frame = 0
+ 921              		@ frame_needed = 0, uses_anonymous_args = 0
+ 922 0000 0129     		cmp	r1, #1
+ 923 0002 38B5     		push	{r3, r4, r5, lr}
+ 924 0004 0446     		mov	r4, r0
+ 925 0006 04D0     		beq	.L113
+ 926 0008 BDE83840 		pop	{r3, r4, r5, lr}
+ 927 000c 0849     		ldr	r1, .L114
+ 928 000e FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 929              	.L113:
+ 930 0012 1068     		ldr	r0, [r2]
+ 931 0014 FFF7FEFF 		bl	atoi
+ 932 0018 0649     		ldr	r1, .L114+4
+ 933 001a 0546     		mov	r5, r0
+ 934 001c 2046     		mov	r0, r4
+ 935 001e FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 936 0022 E9B2     		uxtb	r1, r5
+ 937 0024 0448     		ldr	r0, .L114+8
+ 938 0026 BDE83840 		pop	{r3, r4, r5, lr}
+ 939 002a FFF7FEBF 		b	_ZN5amiro12SerialCanMux13sendSwitchCmdEh
+ 940              	.L115:
+ 941 002e 00BF     		.align	2
+ 942              	.L114:
+ 943 0030 C0080000 		.word	.LC87
+ 944 0034 F0080000 		.word	.LC88
+ 945 0038 D8050000 		.word	.LANCHOR0+1496
+ 946              		.size	_Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc, .-_Z19shellSwitchBoardCmdP20BaseSequenti
+ 947 003c AFF30080 		.section	.text._ZN5amiro6GlobalC2Ev,"axG",%progbits,_ZN5amiro6GlobalC5Ev,comdat
+ 948              		.align	2
+ 949              		.p2align 4,,15
+ 950              		.weak	_ZN5amiro6GlobalC2Ev
+ 951              		.thumb
+ 952              		.thumb_func
+ 953              		.type	_ZN5amiro6GlobalC2Ev, %function
+ 954              	_ZN5amiro6GlobalC2Ev:
+ 955              		@ args = 0, pretend = 0, frame = 0
+ 956              		@ frame_needed = 0, uses_anonymous_args = 0
+ 957 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 958 0004 3D4B     		ldr	r3, .L117
+ 959 0006 0446     		mov	r4, r0
+ 960 0008 03F10C0C 		add	ip, r3, #12
+ 961 000c 03F1180E 		add	lr, r3, #24
+ 962 0010 0025     		movs	r5, #0
+ 963 0012 00F12407 		add	r7, r0, #36
+ 964 0016 00F13006 		add	r6, r0, #48
+ 965 001a 00F13C09 		add	r9, r0, #60
+ 966 001e 4FF4E13A 		mov	r10, #115200
+ARM GAS  /tmp/ccDAcKsC.s 			page 18
+
+
+ 967 0022 4FF49648 		mov	r8, #19200
+ 968 0026 83B0     		sub	sp, sp, #12
+ 969 0028 93E80700 		ldmia	r3, {r0, r1, r2}
+ 970 002c C4F80CA0 		str	r10, [r4, #12]
+ 971 0030 84E80700 		stmia	r4, {r0, r1, r2}
+ 972 0034 9CE80700 		ldmia	ip, {r0, r1, r2}
+ 973 0038 C4F81880 		str	r8, [r4, #24]
+ 974 003c 2582     		strh	r5, [r4, #16]	@ movhi
+ 975 003e 6582     		strh	r5, [r4, #18]	@ movhi
+ 976 0040 A582     		strh	r5, [r4, #20]	@ movhi
+ 977 0042 A583     		strh	r5, [r4, #28]	@ movhi
+ 978 0044 E583     		strh	r5, [r4, #30]	@ movhi
+ 979 0046 2584     		strh	r5, [r4, #32]	@ movhi
+ 980 0048 04F1440A 		add	r10, r4, #68
+ 981 004c 87E80700 		stmia	r7, {r0, r1, r2}
+ 982 0050 9EE80700 		ldmia	lr, {r0, r1, r2}
+ 983 0054 86E80700 		stmia	r6, {r0, r1, r2}
+ 984 0058 4846     		mov	r0, r9
+ 985 005a 2949     		ldr	r1, .L117+4
+ 986 005c FFF7FEFF 		bl	_ZN5amiro11HWI2CDriverC1EP9I2CDriver
+ 987 0060 04F15008 		add	r8, r4, #80
+ 988 0064 3A46     		mov	r2, r7
+ 989 0066 5046     		mov	r0, r10
+ 990 0068 2649     		ldr	r1, .L117+8
+ 991 006a FFF7FEFF 		bl	_ZN5amiro11HWSPIDriverC1EP9SPIDriverPK9SPIConfig
+ 992 006e 04F16007 		add	r7, r4, #96
+ 993 0072 3246     		mov	r2, r6
+ 994 0074 4046     		mov	r0, r8
+ 995 0076 2449     		ldr	r1, .L117+12
+ 996 0078 FFF7FEFF 		bl	_ZN5amiro11HWSPIDriverC1EP9SPIDriverPK9SPIConfig
+ 997 007c 04F5087B 		add	fp, r4, #544
+ 998 0080 5146     		mov	r1, r10
+ 999 0082 3846     		mov	r0, r7
+ 1000 0084 214A     		ldr	r2, .L117+16
+ 1001 0086 0423     		movs	r3, #4
+ 1002 0088 FFF7FEFF 		bl	_ZN5amiro7TLC5947C1EPNS_11HWSPIDriverEP12GPIO_TypeDefi
+ 1003 008c 204E     		ldr	r6, .L117+20
+ 1004 008e CDF80090 		str	r9, [sp]
+ 1005 0092 5846     		mov	r0, fp
+ 1006 0094 8021     		movs	r1, #128
+ 1007 0096 0822     		movs	r2, #8
+ 1008 0098 4FF4FA73 		mov	r3, #500
+ 1009 009c FFF7FEFF 		bl	_ZN5amiro4AT24C1EjhtPNS_9I2CDriverE
+ 1010 00a0 0123     		movs	r3, #1
+ 1011 00a2 0221     		movs	r1, #2
+ 1012 00a4 3A46     		mov	r2, r7
+ 1013 00a6 84F86112 		strb	r1, [r4, #609]
+ 1014 00aa 84F86032 		strb	r3, [r4, #608]
+ 1015 00ae 84F86232 		strb	r3, [r4, #610]
+ 1016 00b2 3146     		mov	r1, r6
+ 1017 00b4 04F51773 		add	r3, r4, #604
+ 1018 00b8 C4F85CB2 		str	fp, [r4, #604]
+ 1019 00bc 84F86352 		strb	r5, [r4, #611]
+ 1020 00c0 04F51A70 		add	r0, r4, #616
+ 1021 00c4 FFF7FEFF 		bl	_ZN5amiro9LightRingC1EP9CANDriverPNS_7TLC5947EPNS_12fileSystemIo13FSIOLightRingE
+ 1022 00c8 0323     		movs	r3, #3
+ 1023 00ca 3246     		mov	r2, r6
+ARM GAS  /tmp/ccDAcKsC.s 			page 19
+
+
+ 1024 00cc 04F5BB60 		add	r0, r4, #1496
+ 1025 00d0 1049     		ldr	r1, .L117+24
+ 1026 00d2 FFF7FEFF 		bl	_ZN5amiro12SerialCanMuxC1EP12SerialDriverP9CANDriverh
+ 1027 00d6 2A46     		mov	r2, r5
+ 1028 00d8 04F5C260 		add	r0, r4, #1552
+ 1029 00dc 0321     		movs	r1, #3
+ 1030 00de FFF7FEFF 		bl	_ZN5amiro5LidarC1EhNS0_5SETUPE
+ 1031 00e2 4146     		mov	r1, r8
+ 1032 00e4 04F50260 		add	r0, r4, #2080
+ 1033 00e8 FFF7FEFF 		bl	_ZN5amiro9A2500R24AC1EPNS_11HWSPIDriverE
+ 1034 00ec 04F52060 		add	r0, r4, #2560
+ 1035 00f0 FFF7FEFF 		bl	_ZN5amiro10UserThreadC1Ev
+ 1036 00f4 2046     		mov	r0, r4
+ 1037 00f6 03B0     		add	sp, sp, #12
+ 1038              		@ sp needed
+ 1039 00f8 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 1040              	.L118:
+ 1041              		.align	2
+ 1042              	.L117:
+ 1043 00fc 00000000 		.word	.LANCHOR1
+ 1044 0100 00000000 		.word	I2CD2
+ 1045 0104 00000000 		.word	SPID1
+ 1046 0108 00000000 		.word	SPID2
+ 1047 010c 00080140 		.word	1073809408
+ 1048 0110 00000000 		.word	CAND1
+ 1049 0114 00000000 		.word	SD1
+ 1050              		.size	_ZN5amiro6GlobalC2Ev, .-_ZN5amiro6GlobalC2Ev
+ 1051              		.weak	_ZN5amiro6GlobalC1Ev
+ 1052              		.thumb_set _ZN5amiro6GlobalC1Ev,_ZN5amiro6GlobalC2Ev
+ 1053 0118 AFF30080 		.section	.text._Z10testLightsv,"ax",%progbits
+ 1053      AFF30080 
+ 1054              		.align	2
+ 1055              		.p2align 4,,15
+ 1056              		.global	_Z10testLightsv
+ 1057              		.thumb
+ 1058              		.thumb_func
+ 1059              		.type	_Z10testLightsv, %function
+ 1060              	_Z10testLightsv:
+ 1061              		@ args = 0, pretend = 0, frame = 8
+ 1062              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1063 0000 10B5     		push	{r4, lr}
+ 1064 0002 0024     		movs	r4, #0
+ 1065 0004 82B0     		sub	sp, sp, #8
+ 1066              	.L132:
+ 1067 0006 6846     		mov	r0, sp
+ 1068 0008 FFF7FEFF 		bl	_ZN5amiro5ColorC1Ev
+ 1069 000c 6311     		asrs	r3, r4, #5
+ 1070 000e 6846     		mov	r0, sp
+ 1071 0010 062B     		cmp	r3, #6
+ 1072 0012 41D8     		bhi	.L120
+ 1073 0014 DFE803F0 		tbb	[pc, r3]
+ 1074              	.L122:
+ 1075 0018 3C       		.byte	(.L121-.L122)/2
+ 1076 0019 38       		.byte	(.L123-.L122)/2
+ 1077 001a 34       		.byte	(.L124-.L122)/2
+ 1078 001b 30       		.byte	(.L125-.L122)/2
+ 1079 001c 2C       		.byte	(.L126-.L122)/2
+ARM GAS  /tmp/ccDAcKsC.s 			page 20
+
+
+ 1080 001d 25       		.byte	(.L127-.L122)/2
+ 1081 001e 04       		.byte	(.L128-.L122)/2
+ 1082 001f 00       		.align	1
+ 1083              	.L128:
+ 1084 0020 9121     		movs	r1, #145
+ 1085 0022 FFF7FEFF 		bl	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 1086              	.L129:
+ 1087 0026 E306     		lsls	r3, r4, #27
+ 1088 0028 20D5     		bpl	.L133
+ 1089              	.L134:
+ 1090 002a 04F00F01 		and	r1, r4, #15
+ 1091 002e 01EB4101 		add	r1, r1, r1, lsl #1
+ 1092 0032 4900     		lsls	r1, r1, #1
+ 1093 0034 0A31     		adds	r1, r1, #10
+ 1094              	.L130:
+ 1095 0036 1A48     		ldr	r0, .L135
+ 1096 0038 FFF7FEFF 		bl	_ZN5amiro9LightRing18setLightBrightnessEi
+ 1097 003c 6946     		mov	r1, sp
+ 1098 003e 01A8     		add	r0, sp, #4
+ 1099 0040 FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+ 1100 0044 C4F34201 		ubfx	r1, r4, #1, #3
+ 1101 0048 1548     		ldr	r0, .L135
+ 1102 004a 01AA     		add	r2, sp, #4
+ 1103 004c FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1104 0050 0134     		adds	r4, r4, #1
+ 1105 0052 FA20     		movs	r0, #250
+ 1106 0054 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 1107 0058 B4F5807F 		cmp	r4, #256
+ 1108 005c D3D1     		bne	.L132
+ 1109 005e 02B0     		add	sp, sp, #8
+ 1110              		@ sp needed
+ 1111 0060 10BD     		pop	{r4, pc}
+ 1112              	.L127:
+ 1113 0062 5221     		movs	r1, #82
+ 1114 0064 FFF7FEFF 		bl	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 1115 0068 E306     		lsls	r3, r4, #27
+ 1116 006a DED4     		bmi	.L134
+ 1117              	.L133:
+ 1118 006c 0A21     		movs	r1, #10
+ 1119 006e E2E7     		b	.L130
+ 1120              	.L126:
+ 1121 0070 0221     		movs	r1, #2
+ 1122 0072 FFF7FEFF 		bl	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 1123 0076 D6E7     		b	.L129
+ 1124              	.L125:
+ 1125 0078 0921     		movs	r1, #9
+ 1126 007a FFF7FEFF 		bl	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 1127 007e D2E7     		b	.L129
+ 1128              	.L124:
+ 1129 0080 3021     		movs	r1, #48
+ 1130 0082 FFF7FEFF 		bl	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 1131 0086 CEE7     		b	.L129
+ 1132              	.L123:
+ 1133 0088 7721     		movs	r1, #119
+ 1134 008a FFF7FEFF 		bl	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 1135 008e CAE7     		b	.L129
+ 1136              	.L121:
+ARM GAS  /tmp/ccDAcKsC.s 			page 21
+
+
+ 1137 0090 8F21     		movs	r1, #143
+ 1138 0092 FFF7FEFF 		bl	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 1139 0096 C6E7     		b	.L129
+ 1140              	.L120:
+ 1141 0098 0721     		movs	r1, #7
+ 1142 009a FFF7FEFF 		bl	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 1143 009e C2E7     		b	.L129
+ 1144              	.L136:
+ 1145              		.align	2
+ 1146              	.L135:
+ 1147 00a0 68020000 		.word	.LANCHOR0+616
+ 1148              		.size	_Z10testLightsv, .-_Z10testLightsv
+ 1149 00a4 AFF30080 		.section	.text._Z10testColorsv,"ax",%progbits
+ 1149      AFF30080 
+ 1149      AFF30080 
+ 1150              		.align	2
+ 1151              		.p2align 4,,15
+ 1152              		.global	_Z10testColorsv
+ 1153              		.thumb
+ 1154              		.thumb_func
+ 1155              		.type	_Z10testColorsv, %function
+ 1156              	_Z10testColorsv:
+ 1157              		@ args = 0, pretend = 0, frame = 8
+ 1158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1159 0000 30B5     		push	{r4, r5, lr}
+ 1160 0002 83B0     		sub	sp, sp, #12
+ 1161 0004 6846     		mov	r0, sp
+ 1162 0006 FFF7FEFF 		bl	_ZN5amiro5ColorC1Ev
+ 1163 000a 1148     		ldr	r0, .L142
+ 1164 000c 3221     		movs	r1, #50
+ 1165 000e FFF7FEFF 		bl	_ZN5amiro9LightRing18setLightBrightnessEi
+ 1166 0012 0025     		movs	r5, #0
+ 1167              	.L141:
+ 1168 0014 E9B2     		uxtb	r1, r5
+ 1169 0016 01A8     		add	r0, sp, #4
+ 1170 0018 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 1171 001c 6846     		mov	r0, sp
+ 1172 001e 01A9     		add	r1, sp, #4
+ 1173 0020 FFF7FEFF 		bl	_ZN5amiro5ColoraSERKS0_
+ 1174 0024 0024     		movs	r4, #0
+ 1175              	.L139:
+ 1176 0026 6946     		mov	r1, sp
+ 1177 0028 01A8     		add	r0, sp, #4
+ 1178 002a FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+ 1179 002e 2146     		mov	r1, r4
+ 1180 0030 0748     		ldr	r0, .L142
+ 1181 0032 01AA     		add	r2, sp, #4
+ 1182 0034 0134     		adds	r4, r4, #1
+ 1183 0036 FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1184 003a 082C     		cmp	r4, #8
+ 1185 003c F3D1     		bne	.L139
+ 1186 003e 0135     		adds	r5, r5, #1
+ 1187 0040 FA20     		movs	r0, #250
+ 1188 0042 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 1189 0046 922D     		cmp	r5, #146
+ 1190 0048 E4D1     		bne	.L141
+ 1191 004a 03B0     		add	sp, sp, #12
+ARM GAS  /tmp/ccDAcKsC.s 			page 22
+
+
+ 1192              		@ sp needed
+ 1193 004c 30BD     		pop	{r4, r5, pc}
+ 1194              	.L143:
+ 1195 004e 00BF     		.align	2
+ 1196              	.L142:
+ 1197 0050 68020000 		.word	.LANCHOR0+616
+ 1198              		.size	_Z10testColorsv, .-_Z10testColorsv
+ 1199 0054 AFF30080 		.section	.text._Z8testFadev,"ax",%progbits
+ 1199      AFF30080 
+ 1199      AFF30080 
+ 1200              		.align	2
+ 1201              		.p2align 4,,15
+ 1202              		.global	_Z8testFadev
+ 1203              		.thumb
+ 1204              		.thumb_func
+ 1205              		.type	_Z8testFadev, %function
+ 1206              	_Z8testFadev:
+ 1207              		@ args = 0, pretend = 0, frame = 8
+ 1208              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1209 0000 30B5     		push	{r4, r5, lr}
+ 1210 0002 0025     		movs	r5, #0
+ 1211 0004 83B0     		sub	sp, sp, #12
+ 1212              	.L148:
+ 1213 0006 6846     		mov	r0, sp
+ 1214 0008 C5F1FF01 		rsb	r1, r5, #255
+ 1215 000c 2A46     		mov	r2, r5
+ 1216 000e 0023     		movs	r3, #0
+ 1217 0010 FFF7FEFF 		bl	_ZN5amiro5ColorC1Eiii
+ 1218 0014 0024     		movs	r4, #0
+ 1219              	.L146:
+ 1220 0016 6946     		mov	r1, sp
+ 1221 0018 01A8     		add	r0, sp, #4
+ 1222 001a FFF7FEFF 		bl	_ZN5amiro5ColorC1ERKS0_
+ 1223 001e 2146     		mov	r1, r4
+ 1224 0020 0748     		ldr	r0, .L149
+ 1225 0022 01AA     		add	r2, sp, #4
+ 1226 0024 FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1227 0028 0134     		adds	r4, r4, #1
+ 1228 002a FA20     		movs	r0, #250
+ 1229 002c FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 1230 0030 082C     		cmp	r4, #8
+ 1231 0032 F0D1     		bne	.L146
+ 1232 0034 1035     		adds	r5, r5, #16
+ 1233 0036 B5F5807F 		cmp	r5, #256
+ 1234 003a E4D1     		bne	.L148
+ 1235 003c 03B0     		add	sp, sp, #12
+ 1236              		@ sp needed
+ 1237 003e 30BD     		pop	{r4, r5, pc}
+ 1238              	.L150:
+ 1239              		.align	2
+ 1240              	.L149:
+ 1241 0040 68020000 		.word	.LANCHOR0+616
+ 1242              		.size	_Z8testFadev, .-_Z8testFadev
+ 1243 0044 AFF30080 		.section	.text._Z14testBrightnessv,"ax",%progbits
+ 1243      AFF30080 
+ 1243      AFF30080 
+ 1244              		.align	2
+ARM GAS  /tmp/ccDAcKsC.s 			page 23
+
+
+ 1245              		.p2align 4,,15
+ 1246              		.global	_Z14testBrightnessv
+ 1247              		.thumb
+ 1248              		.thumb_func
+ 1249              		.type	_Z14testBrightnessv, %function
+ 1250              	_Z14testBrightnessv:
+ 1251              		@ args = 0, pretend = 0, frame = 8
+ 1252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1253 0000 10B5     		push	{r4, lr}
+ 1254 0002 0024     		movs	r4, #0
+ 1255 0004 82B0     		sub	sp, sp, #8
+ 1256              	.L154:
+ 1257 0006 8F21     		movs	r1, #143
+ 1258 0008 01A8     		add	r0, sp, #4
+ 1259 000a FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 1260 000e 2146     		mov	r1, r4
+ 1261 0010 0C48     		ldr	r0, .L158
+ 1262 0012 01AA     		add	r2, sp, #4
+ 1263 0014 0134     		adds	r4, r4, #1
+ 1264 0016 FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1265 001a 082C     		cmp	r4, #8
+ 1266 001c F3D1     		bne	.L154
+ 1267 001e 0024     		movs	r4, #0
+ 1268 0020 2146     		mov	r1, r4
+ 1269 0022 04E0     		b	.L153
+ 1270              	.L156:
+ 1271 0024 642C     		cmp	r4, #100
+ 1272 0026 CCBF     		ite	gt
+ 1273 0028 C4F1C801 		rsbgt	r1, r4, #200
+ 1274 002c 2146     		movle	r1, r4
+ 1275              	.L153:
+ 1276 002e 0548     		ldr	r0, .L158
+ 1277 0030 FFF7FEFF 		bl	_ZN5amiro9LightRing18setLightBrightnessEi
+ 1278 0034 0534     		adds	r4, r4, #5
+ 1279 0036 6420     		movs	r0, #100
+ 1280 0038 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 1281 003c C82C     		cmp	r4, #200
+ 1282 003e F1D1     		bne	.L156
+ 1283 0040 02B0     		add	sp, sp, #8
+ 1284              		@ sp needed
+ 1285 0042 10BD     		pop	{r4, pc}
+ 1286              	.L159:
+ 1287              		.align	2
+ 1288              	.L158:
+ 1289 0044 68020000 		.word	.LANCHOR0+616
+ 1290              		.size	_Z14testBrightnessv, .-_Z14testBrightnessv
+ 1291 0048 AFF30080 		.section	.text._Z14systemShutdownv,"ax",%progbits
+ 1291      AFF30080 
+ 1292              		.align	2
+ 1293              		.p2align 4,,15
+ 1294              		.global	_Z14systemShutdownv
+ 1295              		.thumb
+ 1296              		.thumb_func
+ 1297              		.type	_Z14systemShutdownv, %function
+ 1298              	_Z14systemShutdownv:
+ 1299              		@ args = 0, pretend = 0, frame = 0
+ 1300              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccDAcKsC.s 			page 24
+
+
+ 1301 0000 38B5     		push	{r3, r4, r5, lr}
+ 1302 0002 134C     		ldr	r4, .L161
+ 1303 0004 04F52065 		add	r5, r4, #2560
+ 1304 0008 2846     		mov	r0, r5
+ 1305 000a FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference16requestTerminateEv
+ 1306 000e 2846     		mov	r0, r5
+ 1307 0010 04F51A75 		add	r5, r4, #616
+ 1308 0014 FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference4waitEv
+ 1309 0018 0021     		movs	r1, #0
+ 1310 001a 2846     		mov	r0, r5
+ 1311 001c FFF7FEFF 		bl	_ZN5amiro9LightRing18setLightBrightnessEi
+ 1312 0020 2846     		mov	r0, r5
+ 1313 0022 04F16005 		add	r5, r4, #96
+ 1314 0026 FFF7FEFF 		bl	_ZN5amiro9LightRing9terminateEv
+ 1315 002a 2846     		mov	r0, r5
+ 1316 002c FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference16requestTerminateEv
+ 1317 0030 2846     		mov	r0, r5
+ 1318 0032 04F5C264 		add	r4, r4, #1552
+ 1319 0036 FFF7FEFF 		bl	_ZN5amiro7TLC59476updateEv
+ 1320 003a 2846     		mov	r0, r5
+ 1321 003c FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference4waitEv
+ 1322 0040 2046     		mov	r0, r4
+ 1323 0042 FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference16requestTerminateEv
+ 1324 0046 2046     		mov	r0, r4
+ 1325 0048 BDE83840 		pop	{r3, r4, r5, lr}
+ 1326 004c FFF7FEBF 		b	_ZN10chibios_rt15ThreadReference4waitEv
+ 1327              	.L162:
+ 1328              		.align	2
+ 1329              	.L161:
+ 1330 0050 00000000 		.word	.LANCHOR0
+ 1331              		.size	_Z14systemShutdownv, .-_Z14systemShutdownv
+ 1332 0054 AFF30080 		.section	.text._Z19boardPeripheryCheckP20BaseSequentialStream,"ax",%progbits
+ 1332      AFF30080 
+ 1332      AFF30080 
+ 1333              		.align	2
+ 1334              		.p2align 4,,15
+ 1335              		.global	_Z19boardPeripheryCheckP20BaseSequentialStream
+ 1336              		.thumb
+ 1337              		.thumb_func
+ 1338              		.type	_Z19boardPeripheryCheckP20BaseSequentialStream, %function
+ 1339              	_Z19boardPeripheryCheckP20BaseSequentialStream:
+ 1340              		@ args = 0, pretend = 0, frame = 0
+ 1341              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1342 0000 10B5     		push	{r4, lr}
+ 1343 0002 1B49     		ldr	r1, .L169
+ 1344 0004 0446     		mov	r4, r0
+ 1345 0006 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1346 000a 1A48     		ldr	r0, .L169+4
+ 1347 000c FFF7FEFF 		bl	_ZN5amiro9A2500R24A8getCheckEv
+ 1348 0010 F8B9     		cbnz	r0, .L164
+ 1349 0012 2046     		mov	r0, r4
+ 1350 0014 1849     		ldr	r1, .L169+8
+ 1351 0016 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1352 001a 1848     		ldr	r0, .L169+12
+ 1353 001c FFF7FEFF 		bl	_ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv
+ 1354 0020 00BB     		cbnz	r0, .L168
+ 1355              	.L166:
+ARM GAS  /tmp/ccDAcKsC.s 			page 25
+
+
+ 1356 0022 2046     		mov	r0, r4
+ 1357 0024 1649     		ldr	r1, .L169+16
+ 1358 0026 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1359              	.L167:
+ 1360 002a 2046     		mov	r0, r4
+ 1361 002c 1549     		ldr	r1, .L169+20
+ 1362 002e FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1363 0032 FFF7FEFF 		bl	_Z10testColorsv
+ 1364 0036 2046     		mov	r0, r4
+ 1365 0038 1349     		ldr	r1, .L169+24
+ 1366 003a FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1367 003e 1348     		ldr	r0, .L169+28
+ 1368 0040 0021     		movs	r1, #0
+ 1369 0042 FFF7FEFF 		bl	_ZN5amiro9LightRing18setLightBrightnessEi
+ 1370 0046 2046     		mov	r0, r4
+ 1371 0048 1149     		ldr	r1, .L169+32
+ 1372 004a BDE81040 		pop	{r4, lr}
+ 1373 004e FFF7FEBF 		b	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1374              	.L164:
+ 1375 0052 2046     		mov	r0, r4
+ 1376 0054 0F49     		ldr	r1, .L169+36
+ 1377 0056 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1378 005a 0848     		ldr	r0, .L169+12
+ 1379 005c FFF7FEFF 		bl	_ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv
+ 1380 0060 0028     		cmp	r0, #0
+ 1381 0062 DED0     		beq	.L166
+ 1382              	.L168:
+ 1383 0064 2046     		mov	r0, r4
+ 1384 0066 0C49     		ldr	r1, .L169+40
+ 1385 0068 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1386 006c DDE7     		b	.L167
+ 1387              	.L170:
+ 1388 006e 00BF     		.align	2
+ 1389              	.L169:
+ 1390 0070 08090000 		.word	.LC89
+ 1391 0074 20080000 		.word	.LANCHOR0+2080
+ 1392 0078 18090000 		.word	.LC90
+ 1393 007c 5C020000 		.word	.LANCHOR0+604
+ 1394 0080 54090000 		.word	.LC93
+ 1395 0084 6C090000 		.word	.LC94
+ 1396 0088 80090000 		.word	.LC95
+ 1397 008c 68020000 		.word	.LANCHOR0+616
+ 1398 0090 8C090000 		.word	.LC96
+ 1399 0094 28090000 		.word	.LC91
+ 1400 0098 3C090000 		.word	.LC92
+ 1401              		.size	_Z19boardPeripheryCheckP20BaseSequentialStream, .-_Z19boardPeripheryCheckP20BaseSequentialSt
+ 1402 009c AFF30080 		.section	.text._Z17shellRequestCheckP20BaseSequentialStreamiPPc,"ax",%progbits
+ 1403              		.align	2
+ 1404              		.p2align 4,,15
+ 1405              		.global	_Z17shellRequestCheckP20BaseSequentialStreamiPPc
+ 1406              		.thumb
+ 1407              		.thumb_func
+ 1408              		.type	_Z17shellRequestCheckP20BaseSequentialStreamiPPc, %function
+ 1409              	_Z17shellRequestCheckP20BaseSequentialStreamiPPc:
+ 1410              		@ args = 0, pretend = 0, frame = 0
+ 1411              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1412 0000 10B5     		push	{r4, lr}
+ARM GAS  /tmp/ccDAcKsC.s 			page 26
+
+
+ 1413 0002 0449     		ldr	r1, .L172
+ 1414 0004 0446     		mov	r4, r0
+ 1415 0006 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1416 000a 2046     		mov	r0, r4
+ 1417 000c BDE81040 		pop	{r4, lr}
+ 1418 0010 FFF7FEBF 		b	_Z19boardPeripheryCheckP20BaseSequentialStream
+ 1419              	.L173:
+ 1420              		.align	2
+ 1421              	.L172:
+ 1422 0014 9C090000 		.word	.LC97
+ 1423              		.size	_Z17shellRequestCheckP20BaseSequentialStreamiPPc, .-_Z17shellRequestCheckP20BaseSequentialSt
+ 1424 0018 AFF30080 		.section	.text.startup.main,"ax",%progbits
+ 1424      AFF30080 
+ 1425              		.align	2
+ 1426              		.p2align 4,,15
+ 1427              		.global	main
+ 1428              		.thumb
+ 1429              		.thumb_func
+ 1430              		.type	main, %function
+ 1431              	main:
+ 1432              		@ args = 0, pretend = 0, frame = 16
+ 1433              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1434 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 1435 0004 87B0     		sub	sp, sp, #28
+ 1436 0006 FFF7FEFF 		bl	halInit
+ 1437 000a FFF7FEFF 		bl	_ZN10chibios_rt6System4initEv
+ 1438 000e B248     		ldr	r0, .L205
+ 1439 0010 B249     		ldr	r1, .L205+4
+ 1440 0012 FFF7FEFF 		bl	sdStart
+ 1441 0016 B248     		ldr	r0, .L205+8
+ 1442 0018 B249     		ldr	r1, .L205+12
+ 1443 001a FFF7FEFF 		bl	sdStart
+ 1444 001e AE48     		ldr	r0, .L205
+ 1445 0020 B149     		ldr	r1, .L205+16
+ 1446 0022 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1447 0026 AC48     		ldr	r0, .L205
+ 1448 0028 B049     		ldr	r1, .L205+20
+ 1449 002a FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1450 002e B04B     		ldr	r3, .L205+24
+ 1451 0030 B04A     		ldr	r2, .L205+28
+ 1452 0032 1B68     		ldr	r3, [r3]
+ 1453 0034 9342     		cmp	r3, r2
+ 1454 0036 00F09781 		beq	.L176
+ 1455 003a AF4A     		ldr	r2, .L205+32
+ 1456 003c 9342     		cmp	r3, r2
+ 1457 003e 40F04681 		bne	.L198
+ 1458 0042 AE4B     		ldr	r3, .L205+36
+ 1459 0044 A448     		ldr	r0, .L205
+ 1460 0046 1B68     		ldr	r3, [r3]
+ 1461 0048 AD49     		ldr	r1, .L205+40
+ 1462 004a 1A46     		mov	r2, r3
+ 1463 004c 0093     		str	r3, [sp]
+ 1464 004e FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1465              	.L178:
+ 1466 0052 AC49     		ldr	r1, .L205+44
+ 1467 0054 A048     		ldr	r0, .L205
+ 1468 0056 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ARM GAS  /tmp/ccDAcKsC.s 			page 27
+
+
+ 1469 005a 0A20     		movs	r0, #10
+ 1470 005c FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 1471 0060 A948     		ldr	r0, .L205+48
+ 1472 0062 AA49     		ldr	r1, .L205+52
+ 1473 0064 FFF7FEFF 		bl	extStart
+ 1474 0068 0A20     		movs	r0, #10
+ 1475 006a 0B21     		movs	r1, #11
+ 1476 006c FFF7FEFF 		bl	boardClearI2CBus
+ 1477 0070 A748     		ldr	r0, .L205+56
+ 1478 0072 A0F13C01 		sub	r1, r0, #60
+ 1479 0076 FFF7FEFF 		bl	_ZN5amiro11HWI2CDriver5startEPK9I2CConfig
+ 1480 007a A648     		ldr	r0, .L205+60
+ 1481 007c FFF7FEFF 		bl	_ZN5amiro12fileSystemIo16FileSystemIoBase4initEv
+ 1482 0080 0023     		movs	r3, #0
+ 1483 0082 06A9     		add	r1, sp, #24
+ 1484 0084 01F8053D 		strb	r3, [r1, #-5]!
+ 1485 0088 A248     		ldr	r0, .L205+60
+ 1486 008a FFF7FEFF 		bl	_ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh
+ 1487 008e 0028     		cmp	r0, #0
+ 1488 0090 40F01881 		bne	.L179
+ 1489 0094 9048     		ldr	r0, .L205
+ 1490 0096 A049     		ldr	r1, .L205+64
+ 1491 0098 9DF81320 		ldrb	r2, [sp, #19]	@ zero_extendqisi2
+ 1492 009c FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1493              	.L180:
+ 1494 00a0 9E4C     		ldr	r4, .L205+68
+ 1495 00a2 8D48     		ldr	r0, .L205
+ 1496 00a4 04F16005 		add	r5, r4, #96
+ 1497 00a8 8F49     		ldr	r1, .L205+16
+ 1498 00aa FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1499 00ae 9C4B     		ldr	r3, .L205+72
+ 1500 00b0 4FF4C871 		mov	r1, #400
+ 1501 00b4 4522     		movs	r2, #69
+ 1502 00b6 0095     		str	r5, [sp]
+ 1503 00b8 04F16800 		add	r0, r4, #104
+ 1504 00bc FFF7FEFF 		bl	chThdCreateStatic
+ 1505 00c0 6066     		str	r0, [r4, #100]
+ 1506 00c2 2846     		mov	r0, r5
+ 1507 00c4 FFF7FEFF 		bl	_ZN5amiro7TLC59476enableEv
+ 1508 00c8 04F51A71 		add	r1, r4, #616
+ 1509 00cc 02A8     		add	r0, sp, #8
+ 1510 00ce 7E22     		movs	r2, #126
+ 1511 00d0 FFF7FEFF 		bl	_ZN5amiro9LightRing5startEm
+ 1512 00d4 04F5C263 		add	r3, r4, #1552
+ 1513 00d8 0093     		str	r3, [sp]
+ 1514 00da 4FF4E871 		mov	r1, #464
+ 1515 00de 4022     		movs	r2, #64
+ 1516 00e0 8F4B     		ldr	r3, .L205+72
+ 1517 00e2 04F5C360 		add	r0, r4, #1560
+ 1518 00e6 FFF7FEFF 		bl	chThdCreateStatic
+ 1519 00ea 04F52063 		add	r3, r4, #2560
+ 1520 00ee C4F81406 		str	r0, [r4, #1556]
+ 1521 00f2 4022     		movs	r2, #64
+ 1522 00f4 0093     		str	r3, [sp]
+ 1523 00f6 04F60820 		addw	r0, r4, #2568
+ 1524 00fa 894B     		ldr	r3, .L205+72
+ 1525 00fc 4FF49A61 		mov	r1, #1232
+ARM GAS  /tmp/ccDAcKsC.s 			page 28
+
+
+ 1526 0100 FFF7FEFF 		bl	chThdCreateStatic
+ 1527 0104 874B     		ldr	r3, .L205+76
+ 1528 0106 0422     		movs	r2, #4
+ 1529 0108 C4F8040A 		str	r0, [r4, #2564]
+ 1530 010c 1A61     		str	r2, [r3, #16]
+ 1531              	.L182:
+ 1532 010e 9A68     		ldr	r2, [r3, #8]
+ 1533 0110 5207     		lsls	r2, r2, #29
+ 1534 0112 FCD5     		bpl	.L182
+ 1535 0114 8448     		ldr	r0, .L205+80
+ 1536 0116 0A21     		movs	r1, #10
+ 1537 0118 FFF7FEFF 		bl	_ZN5amiro9LightRing18setLightBrightnessEi
+ 1538 011c 7721     		movs	r1, #119
+ 1539 011e 05A8     		add	r0, sp, #20
+ 1540 0120 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 1541 0124 05AA     		add	r2, sp, #20
+ 1542 0126 8048     		ldr	r0, .L205+80
+ 1543 0128 0021     		movs	r1, #0
+ 1544 012a FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1545 012e 5221     		movs	r1, #82
+ 1546 0130 05A8     		add	r0, sp, #20
+ 1547 0132 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 1548 0136 05AA     		add	r2, sp, #20
+ 1549 0138 7B48     		ldr	r0, .L205+80
+ 1550 013a 0121     		movs	r1, #1
+ 1551 013c FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1552 0140 0921     		movs	r1, #9
+ 1553 0142 05A8     		add	r0, sp, #20
+ 1554 0144 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 1555 0148 05AA     		add	r2, sp, #20
+ 1556 014a 7748     		ldr	r0, .L205+80
+ 1557 014c 0221     		movs	r1, #2
+ 1558 014e FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1559 0152 8F21     		movs	r1, #143
+ 1560 0154 05A8     		add	r0, sp, #20
+ 1561 0156 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 1562 015a 05AA     		add	r2, sp, #20
+ 1563 015c 7248     		ldr	r0, .L205+80
+ 1564 015e 0321     		movs	r1, #3
+ 1565 0160 FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1566 0164 7721     		movs	r1, #119
+ 1567 0166 05A8     		add	r0, sp, #20
+ 1568 0168 FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 1569 016c 05AA     		add	r2, sp, #20
+ 1570 016e 6E48     		ldr	r0, .L205+80
+ 1571 0170 0421     		movs	r1, #4
+ 1572 0172 FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1573 0176 5221     		movs	r1, #82
+ 1574 0178 05A8     		add	r0, sp, #20
+ 1575 017a FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 1576 017e 05AA     		add	r2, sp, #20
+ 1577 0180 6948     		ldr	r0, .L205+80
+ 1578 0182 0521     		movs	r1, #5
+ 1579 0184 FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1580 0188 0921     		movs	r1, #9
+ 1581 018a 05A8     		add	r0, sp, #20
+ 1582 018c FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ARM GAS  /tmp/ccDAcKsC.s 			page 29
+
+
+ 1583 0190 05AA     		add	r2, sp, #20
+ 1584 0192 6548     		ldr	r0, .L205+80
+ 1585 0194 0621     		movs	r1, #6
+ 1586 0196 FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1587 019a 8F21     		movs	r1, #143
+ 1588 019c 05A8     		add	r0, sp, #20
+ 1589 019e FFF7FEFF 		bl	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 1590 01a2 0024     		movs	r4, #0
+ 1591 01a4 05AA     		add	r2, sp, #20
+ 1592 01a6 6048     		ldr	r0, .L205+80
+ 1593 01a8 0721     		movs	r1, #7
+ 1594 01aa FFF7FEFF 		bl	_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+ 1595 01ae 5F4D     		ldr	r5, .L205+84
+ 1596 01b0 DFF8A891 		ldr	r9, .L205+132
+ 1597 01b4 DFF8A8A1 		ldr	r10, .L205+136
+ 1598 01b8 4E4E     		ldr	r6, .L205+28
+ 1599 01ba DFF8A881 		ldr	r8, .L205+140
+ 1600 01be 4E4F     		ldr	r7, .L205+32
+ 1601 01c0 1CB3     		cbz	r4, .L199
+ 1602              	.L183:
+ 1603 01c2 94F82030 		ldrb	r3, [r4, #32]	@ zero_extendqisi2
+ 1604 01c6 0E2B     		cmp	r3, #14
+ 1605 01c8 2FD0     		beq	.L200
+ 1606              	.L184:
+ 1607 01ca 2B68     		ldr	r3, [r5]
+ 1608 01cc DFF85CB1 		ldr	fp, .L205+84
+ 1609 01d0 ABB1     		cbz	r3, .L185
+ 1610 01d2 474B     		ldr	r3, .L205+24
+ 1611 01d4 1B68     		ldr	r3, [r3]
+ 1612 01d6 B342     		cmp	r3, r6
+ 1613 01d8 2CD0     		beq	.L186
+ 1614 01da BB42     		cmp	r3, r7
+ 1615 01dc 1DD1     		bne	.L201
+ 1616 01de 474B     		ldr	r3, .L205+36
+ 1617 01e0 1B68     		ldr	r3, [r3]
+ 1618 01e2 2BB9     		cbnz	r3, .L188
+ 1619 01e4 524B     		ldr	r3, .L205+88
+ 1620 01e6 1B68     		ldr	r3, [r3]
+ 1621 01e8 022B     		cmp	r3, #2
+ 1622 01ea 5BD0     		beq	.L202
+ 1623 01ec 032B     		cmp	r3, #3
+ 1624 01ee 61D0     		beq	.L203
+ 1625              	.L188:
+ 1626 01f0 2A68     		ldr	r2, [r5]
+ 1627 01f2 3948     		ldr	r0, .L205
+ 1628 01f4 4F49     		ldr	r1, .L205+92
+ 1629 01f6 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1630 01fa 0023     		movs	r3, #0
+ 1631 01fc 2B60     		str	r3, [r5]
+ 1632              	.L185:
+ 1633 01fe 4FF4FA70 		mov	r0, #500
+ 1634 0202 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 1635 0206 002C     		cmp	r4, #0
+ 1636 0208 DBD1     		bne	.L183
+ 1637              	.L199:
+ 1638 020a 4B48     		ldr	r0, .L205+96
+ 1639 020c 4FF49A61 		mov	r1, #1232
+ARM GAS  /tmp/ccDAcKsC.s 			page 30
+
+
+ 1640 0210 4022     		movs	r2, #64
+ 1641 0212 FFF7FEFF 		bl	shellCreate
+ 1642 0216 0446     		mov	r4, r0
+ 1643 0218 D7E7     		b	.L184
+ 1644              	.L201:
+ 1645 021a 2F48     		ldr	r0, .L205
+ 1646 021c 4749     		ldr	r1, .L205+100
+ 1647 021e FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1648 0222 0023     		movs	r3, #0
+ 1649 0224 CBF80030 		str	r3, [fp]
+ 1650 0228 E9E7     		b	.L185
+ 1651              	.L200:
+ 1652 022a 2046     		mov	r0, r4
+ 1653 022c FFF7FEFF 		bl	chThdRelease
+ 1654 0230 0024     		movs	r4, #0
+ 1655 0232 CAE7     		b	.L184
+ 1656              	.L186:
+ 1657 0234 314B     		ldr	r3, .L205+36
+ 1658 0236 5978     		ldrb	r1, [r3, #1]	@ zero_extendqisi2
+ 1659 0238 0129     		cmp	r1, #1
+ 1660 023a D9D1     		bne	.L188
+ 1661 023c 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 1662 023e 012B     		cmp	r3, #1
+ 1663 0240 D6D8     		bhi	.L188
+ 1664 0242 DBF80030 		ldr	r3, [fp]
+ 1665 0246 013B     		subs	r3, r3, #1
+ 1666 0248 042B     		cmp	r3, #4
+ 1667 024a D1D8     		bhi	.L188
+ 1668 024c 3C4A     		ldr	r2, .L205+104
+ 1669 024e 52F82330 		ldr	r3, [r2, r3, lsl #2]
+ 1670              	.L190:
+ 1671 0252 274A     		ldr	r2, .L205+24
+ 1672 0254 9342     		cmp	r3, r2
+ 1673 0256 CBD9     		bls	.L188
+ 1674 0258 D3F800B0 		ldr	fp, [r3]
+ 1675 025c 1E48     		ldr	r0, .L205
+ 1676 025e BBF1000F 		cmp	fp, #0
+ 1677 0262 19D0     		beq	.L204
+ 1678 0264 3749     		ldr	r1, .L205+108
+ 1679 0266 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1680 026a 2E49     		ldr	r1, .L205+76
+ 1681 026c 4FF08042 		mov	r2, #1073741824
+ 1682 0270 4FF48020 		mov	r0, #262144
+ 1683 0274 0861     		str	r0, [r1, #16]
+ 1684 0276 C8F81020 		str	r2, [r8, #16]
+ 1685 027a 1748     		ldr	r0, .L205
+ 1686 027c 3249     		ldr	r1, .L205+112
+ 1687 027e FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1688 0282 FFF7FEFF 		bl	_Z14systemShutdownv
+ 1689 0286 3149     		ldr	r1, .L205+116
+ 1690 0288 1348     		ldr	r0, .L205
+ 1691 028a FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1692 028e 0A20     		movs	r0, #10
+ 1693 0290 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 1694 0294 D847     		blx	fp
+ 1695 0296 B2E7     		b	.L185
+ 1696              	.L204:
+ARM GAS  /tmp/ccDAcKsC.s 			page 31
+
+
+ 1697 0298 2D49     		ldr	r1, .L205+120
+ 1698 029a FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1699 029e C5F800B0 		str	fp, [r5]
+ 1700 02a2 ACE7     		b	.L185
+ 1701              	.L202:
+ 1702 02a4 DBF80030 		ldr	r3, [fp]
+ 1703 02a8 013B     		subs	r3, r3, #1
+ 1704 02aa 042B     		cmp	r3, #4
+ 1705 02ac A0D8     		bhi	.L188
+ 1706 02ae 59F82330 		ldr	r3, [r9, r3, lsl #2]
+ 1707 02b2 CEE7     		b	.L190
+ 1708              	.L203:
+ 1709 02b4 DBF80030 		ldr	r3, [fp]
+ 1710 02b8 013B     		subs	r3, r3, #1
+ 1711 02ba 042B     		cmp	r3, #4
+ 1712 02bc 98D8     		bhi	.L188
+ 1713 02be 5AF82330 		ldr	r3, [r10, r3, lsl #2]
+ 1714 02c2 C6E7     		b	.L190
+ 1715              	.L179:
+ 1716 02c4 0448     		ldr	r0, .L205
+ 1717 02c6 2349     		ldr	r1, .L205+124
+ 1718 02c8 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1719 02cc E8E6     		b	.L180
+ 1720              	.L198:
+ 1721 02ce 0248     		ldr	r0, .L205
+ 1722 02d0 2149     		ldr	r1, .L205+128
+ 1723 02d2 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1724 02d6 BCE6     		b	.L178
+ 1725              	.L206:
+ 1726              		.align	2
+ 1727              	.L205:
+ 1728 02d8 00000000 		.word	SD1
+ 1729 02dc 0C000000 		.word	.LANCHOR0+12
+ 1730 02e0 00000000 		.word	SD2
+ 1731 02e4 18000000 		.word	.LANCHOR0+24
+ 1732 02e8 40000000 		.word	.LC7
+ 1733 02ec B0090000 		.word	.LC98
+ 1734 02f0 C0010008 		.word	134218176
+ 1735 02f4 4C422D41 		.word	1093485132
+ 1736 02f8 009966FF 		.word	-10053376
+ 1737 02fc C4010008 		.word	134218180
+ 1738 0300 38080000 		.word	.LC81
+ 1739 0304 C8090000 		.word	.LC99
+ 1740 0308 00000000 		.word	EXTD1
+ 1741 030c 00000000 		.word	extcfg
+ 1742 0310 3C000000 		.word	.LANCHOR0+60
+ 1743 0314 5C020000 		.word	.LANCHOR0+604
+ 1744 0318 D8090000 		.word	.LC100
+ 1745 031c 00000000 		.word	.LANCHOR0
+ 1746 0320 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+ 1747 0324 00140140 		.word	1073812480
+ 1748 0328 68020000 		.word	.LANCHOR0+616
+ 1749 032c 00000000 		.word	shutdown_now
+ 1750 0330 C8010008 		.word	134218184
+ 1751 0334 B80A0000 		.word	.LC107
+ 1752 0338 00000000 		.word	.LANCHOR2
+ 1753 033c 000A0000 		.word	.LC102
+ARM GAS  /tmp/ccDAcKsC.s 			page 32
+
+
+ 1754 0340 00000000 		.word	.LANCHOR5
+ 1755 0344 640A0000 		.word	.LC104
+ 1756 0348 880A0000 		.word	.LC105
+ 1757 034c B00A0000 		.word	.LC106
+ 1758 0350 380A0000 		.word	.LC103
+ 1759 0354 E8090000 		.word	.LC101
+ 1760 0358 50080000 		.word	.LC82
+ 1761 035c 00000000 		.word	.LANCHOR3
+ 1762 0360 00000000 		.word	.LANCHOR4
+ 1763 0364 00100140 		.word	1073811456
+ 1764              	.L176:
+ 1765 0368 0449     		ldr	r1, .L207
+ 1766 036a 0548     		ldr	r0, .L207+4
+ 1767 036c 4A78     		ldrb	r2, [r1, #1]	@ zero_extendqisi2
+ 1768 036e 8B78     		ldrb	r3, [r1, #2]	@ zero_extendqisi2
+ 1769 0370 C978     		ldrb	r1, [r1, #3]	@ zero_extendqisi2
+ 1770 0372 0091     		str	r1, [sp]
+ 1771 0374 0349     		ldr	r1, .L207+8
+ 1772 0376 FFF7FEFF 		bl	_ZL8chprintfP20BaseSequentialStreamPKcz
+ 1773 037a 6AE6     		b	.L178
+ 1774              	.L208:
+ 1775              		.align	2
+ 1776              	.L207:
+ 1777 037c C4010008 		.word	134218180
+ 1778 0380 00000000 		.word	SD1
+ 1779 0384 38080000 		.word	.LC81
+ 1780              		.size	main, .-main
+ 1781 0388 AFF30080 		.section	.text.startup._GLOBAL__sub_I_global,"ax",%progbits
+ 1781      AFF30080 
+ 1782              		.align	2
+ 1783              		.p2align 4,,15
+ 1784              		.thumb
+ 1785              		.thumb_func
+ 1786              		.type	_GLOBAL__sub_I_global, %function
+ 1787              	_GLOBAL__sub_I_global:
+ 1788              		@ args = 0, pretend = 0, frame = 0
+ 1789              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1790 0000 10B5     		push	{r4, lr}
+ 1791 0002 074C     		ldr	r4, .L210
+ 1792 0004 074A     		ldr	r2, .L210+4
+ 1793 0006 084B     		ldr	r3, .L210+8
+ 1794 0008 2046     		mov	r0, r4
+ 1795 000a 1A60     		str	r2, [r3]
+ 1796 000c 5A60     		str	r2, [r3, #4]
+ 1797 000e FFF7FEFF 		bl	_ZN5amiro6GlobalC1Ev
+ 1798 0012 2046     		mov	r0, r4
+ 1799 0014 0549     		ldr	r1, .L210+12
+ 1800 0016 064A     		ldr	r2, .L210+16
+ 1801 0018 BDE81040 		pop	{r4, lr}
+ 1802 001c FFF7FEBF 		b	__aeabi_atexit
+ 1803              	.L211:
+ 1804              		.align	2
+ 1805              	.L210:
+ 1806 0020 00000000 		.word	.LANCHOR0
+ 1807 0024 A0860100 		.word	100000
+ 1808 0028 00000000 		.word	.LANCHOR6
+ 1809 002c 00000000 		.word	_ZN5amiro6GlobalD1Ev
+ARM GAS  /tmp/ccDAcKsC.s 			page 33
+
+
+ 1810 0030 00000000 		.word	__dso_handle
+ 1811              		.size	_GLOBAL__sub_I_global, .-_GLOBAL__sub_I_global
+ 1812 0034 AFF30080 		.section	.init_array,"aw",%init_array
+ 1812      AFF30080 
+ 1812      AFF30080 
+ 1813              		.align	2
+ 1814 0000 00000000 		.word	_GLOBAL__sub_I_global(target1)
+ 1815              		.section	.text._ZN5amiro6GlobalD2Ev,"axG",%progbits,_ZN5amiro6GlobalD5Ev,comdat
+ 1816              		.align	2
+ 1817              		.p2align 4,,15
+ 1818              		.weak	_ZN5amiro6GlobalD2Ev
+ 1819              		.thumb
+ 1820              		.thumb_func
+ 1821              		.type	_ZN5amiro6GlobalD2Ev, %function
+ 1822              	_ZN5amiro6GlobalD2Ev:
+ 1823              		@ args = 0, pretend = 0, frame = 0
+ 1824              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1825 0000 38B5     		push	{r3, r4, r5, lr}
+ 1826 0002 0446     		mov	r4, r0
+ 1827 0004 00F52060 		add	r0, r0, #2560
+ 1828 0008 FFF7FEFF 		bl	_ZN5amiro10UserThreadD1Ev
+ 1829 000c 04F50260 		add	r0, r4, #2080
+ 1830 0010 FFF7FEFF 		bl	_ZN5amiro9A2500R24AD1Ev
+ 1831 0014 04F5C260 		add	r0, r4, #1552
+ 1832 0018 FFF7FEFF 		bl	_ZN5amiro5LidarD1Ev
+ 1833 001c 04F5BB60 		add	r0, r4, #1496
+ 1834 0020 FFF7FEFF 		bl	_ZN5amiro12SerialCanMuxD1Ev
+ 1835 0024 114B     		ldr	r3, .L213
+ 1836 0026 04F51A75 		add	r5, r4, #616
+ 1837 002a 03F12802 		add	r2, r3, #40
+ 1838 002e C4F86832 		str	r3, [r4, #616]
+ 1839 0032 C4F80024 		str	r2, [r4, #1024]
+ 1840 0036 04F58060 		add	r0, r4, #1024
+ 1841 003a FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRxD2Ev
+ 1842 003e 2846     		mov	r0, r5
+ 1843 0040 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTxD2Ev
+ 1844 0044 04F50870 		add	r0, r4, #544
+ 1845 0048 FFF7FEFF 		bl	_ZN5amiro4AT24D1Ev
+ 1846 004c 04F16000 		add	r0, r4, #96
+ 1847 0050 FFF7FEFF 		bl	_ZN5amiro7TLC5947D1Ev
+ 1848 0054 04F15000 		add	r0, r4, #80
+ 1849 0058 FFF7FEFF 		bl	_ZN5amiro11HWSPIDriverD1Ev
+ 1850 005c 04F14400 		add	r0, r4, #68
+ 1851 0060 FFF7FEFF 		bl	_ZN5amiro11HWSPIDriverD1Ev
+ 1852 0064 024B     		ldr	r3, .L213+4
+ 1853 0066 2046     		mov	r0, r4
+ 1854 0068 E363     		str	r3, [r4, #60]
+ 1855 006a 38BD     		pop	{r3, r4, r5, pc}
+ 1856              	.L214:
+ 1857              		.align	2
+ 1858              	.L213:
+ 1859 006c 08000000 		.word	_ZTVN5amiro9LightRingE+8
+ 1860 0070 08000000 		.word	_ZTVN5amiro9I2CDriverE+8
+ 1861              		.size	_ZN5amiro6GlobalD2Ev, .-_ZN5amiro6GlobalD2Ev
+ 1862              		.weak	_ZN5amiro6GlobalD1Ev
+ 1863              		.thumb_set _ZN5amiro6GlobalD1Ev,_ZN5amiro6GlobalD2Ev
+ 1864              		.weak	_ZTVN5amiro9I2CDriverE
+ARM GAS  /tmp/ccDAcKsC.s 			page 34
+
+
+ 1865 0074 AFF30080 		.section	.rodata._ZTVN5amiro9I2CDriverE,"aG",%progbits,_ZTVN5amiro9I2CDriverE,comdat
+ 1865      AFF30080 
+ 1865      AFF30080 
+ 1866              		.align	3
+ 1867              		.type	_ZTVN5amiro9I2CDriverE, %object
+ 1868              		.size	_ZTVN5amiro9I2CDriverE, 44
+ 1869              	_ZTVN5amiro9I2CDriverE:
+ 1870 0000 00000000 		.word	0
+ 1871 0004 00000000 		.word	0
+ 1872 0008 00000000 		.word	_ZN5amiro9I2CDriverD1Ev
+ 1873 000c 00000000 		.word	_ZN5amiro9I2CDriverD0Ev
+ 1874 0010 00000000 		.word	__cxa_pure_virtual
+ 1875 0014 00000000 		.word	__cxa_pure_virtual
+ 1876 0018 00000000 		.word	__cxa_pure_virtual
+ 1877 001c 00000000 		.word	__cxa_pure_virtual
+ 1878 0020 00000000 		.word	__cxa_pure_virtual
+ 1879 0024 00000000 		.word	__cxa_pure_virtual
+ 1880 0028 00000000 		.word	__cxa_pure_virtual
+ 1881              		.global	global
+ 1882 002c 00000000 		.section	.bss.global,"aw",%nobits
+ 1883              		.align	3
+ 1884              		.set	.LANCHOR0,. + 0
+ 1885              		.type	global, %object
+ 1886              		.size	global, 3808
+ 1887              	global:
+ 1888 0000 00000000 		.space	3808
+ 1888      00000000 
+ 1888      00000000 
+ 1888      00000000 
+ 1888      00000000 
+ 1889              		.section	.rodata
+ 1890              		.align	2
+ 1891              		.set	.LANCHOR1,. + 0
+ 1892              	.LC0:
+ 1893 0000 01       		.byte	1
+ 1894 0001 000000   		.space	3
+ 1895 0004 801A0600 		.word	400000
+ 1896 0008 02       		.byte	2
+ 1897 0009 000000   		.space	3
+ 1898              	.LC1:
+ 1899 000c 00000000 		.word	0
+ 1900 0010 00100140 		.word	1073811456
+ 1901 0014 0400     		.short	4
+ 1902 0016 1800     		.short	24
+ 1903              	.LC2:
+ 1904 0018 00000000 		.word	0
+ 1905 001c 000C0140 		.word	1073810432
+ 1906 0020 0C00     		.short	12
+ 1907 0022 0800     		.short	8
+ 1908              		.section	.rodata.CSWTCH.50,"a",%progbits
+ 1909              		.align	2
+ 1910              		.set	.LANCHOR4,. + 0
+ 1911              		.type	CSWTCH.50, %object
+ 1912              		.size	CSWTCH.50, 20
+ 1913              	CSWTCH.50:
+ 1914 0000 D8010008 		.word	134218200
+ 1915 0004 D4010008 		.word	134218196
+ARM GAS  /tmp/ccDAcKsC.s 			page 35
+
+
+ 1916 0008 D0010008 		.word	134218192
+ 1917 000c DC010008 		.word	134218204
+ 1918 0010 E0010008 		.word	134218208
+ 1919              		.section	.rodata.CSWTCH.51,"a",%progbits
+ 1920              		.align	2
+ 1921              		.set	.LANCHOR5,. + 0
+ 1922              		.type	CSWTCH.51, %object
+ 1923              		.size	CSWTCH.51, 20
+ 1924              	CSWTCH.51:
+ 1925 0000 D8010008 		.word	134218200
+ 1926 0004 D4010008 		.word	134218196
+ 1927 0008 D0010008 		.word	134218192
+ 1928 000c DC010008 		.word	134218204
+ 1929 0010 E0010008 		.word	134218208
+ 1930              		.section	.rodata.CSWTCH.49,"a",%progbits
+ 1931              		.align	2
+ 1932              		.set	.LANCHOR3,. + 0
+ 1933              		.type	CSWTCH.49, %object
+ 1934              		.size	CSWTCH.49, 20
+ 1935              	CSWTCH.49:
+ 1936 0000 D8010008 		.word	134218200
+ 1937 0004 D4010008 		.word	134218196
+ 1938 0008 D0010008 		.word	134218192
+ 1939 000c E8010008 		.word	134218216
+ 1940 0010 E8010008 		.word	134218216
+ 1941              		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 1942              		.align	2
+ 1943              		.set	.LANCHOR6,. + 0
+ 1944              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 1945              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 1946              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 1947 0000 00000000 		.space	8
+ 1947      00000000 
+ 1948              		.section	.rodata._ZL10shell_cfg1,"a",%progbits
+ 1949              		.align	2
+ 1950              		.set	.LANCHOR2,. + 0
+ 1951              		.type	_ZL10shell_cfg1, %object
+ 1952              		.size	_ZL10shell_cfg1, 8
+ 1953              	_ZL10shell_cfg1:
+ 1954 0000 D8050000 		.word	global+1496
+ 1955 0004 00000000 		.word	_ZL8commands
+ 1956              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 1957              		.align	2
+ 1958              	.LC3:
+ 1959 0000 7368656C 		.ascii	"shellRequestShutdown\012\000"
+ 1959      6C526571 
+ 1959      75657374 
+ 1959      53687574 
+ 1959      646F776E 
+ 1960 0016 0000     		.space	2
+ 1961              	.LC4:
+ 1962 0018 68656C70 		.ascii	"help\000"
+ 1962      00
+ 1963 001d 000000   		.space	3
+ 1964              	.LC5:
+ 1965 0020 09555341 		.ascii	"\011USAGE:\012\000"
+ 1965      47453A0A 
+ARM GAS  /tmp/ccDAcKsC.s 			page 36
+
+
+ 1965      00
+ 1966 0029 000000   		.space	3
+ 1967              	.LC6:
+ 1968 002c 3E207368 		.ascii	"> shutdown <type>\012\000"
+ 1968      7574646F 
+ 1968      776E203C 
+ 1968      74797065 
+ 1968      3E0A00
+ 1969 003f 00       		.space	1
+ 1970              	.LC7:
+ 1971 0040 0A00     		.ascii	"\012\000"
+ 1972 0042 0000     		.space	2
+ 1973              	.LC8:
+ 1974 0044 09747970 		.ascii	"\011type\012\000"
+ 1974      650A00
+ 1975 004b 00       		.space	1
+ 1976              	.LC9:
+ 1977 004c 54686520 		.ascii	"The type of shutdown to perform.\012\000"
+ 1977      74797065 
+ 1977      206F6620 
+ 1977      73687574 
+ 1977      646F776E 
+ 1978 006e 0000     		.space	2
+ 1979              	.LC10:
+ 1980 0070 43686F6F 		.ascii	"Choose one of the following types:\012\000"
+ 1980      7365206F 
+ 1980      6E65206F 
+ 1980      66207468 
+ 1980      6520666F 
+ 1981              	.LC11:
+ 1982 0094 20207472 		.ascii	"  transportation - Ultra low-power mode with all wa"
+ 1982      616E7370 
+ 1982      6F727461 
+ 1982      74696F6E 
+ 1982      202D2055 
+ 1983 00c7 6B657570 		.ascii	"keups disabled.\012\000"
+ 1983      73206469 
+ 1983      7361626C 
+ 1983      65642E0A 
+ 1983      00
+ 1984              	.LC12:
+ 1985 00d8 20202020 		.ascii	"                   The robot can not be charged.\012"
+ 1985      20202020 
+ 1985      20202020 
+ 1985      20202020 
+ 1985      20202054 
+ 1986 0109 00       		.ascii	"\000"
+ 1987 010a 0000     		.space	2
+ 1988              	.LC13:
+ 1989 010c 20206465 		.ascii	"  deepsleep      - Ultra low-power mode with severa"
+ 1989      6570736C 
+ 1989      65657020 
+ 1989      20202020 
+ 1989      202D2055 
+ 1990 013f 6C207761 		.ascii	"l wakeups enabled.\012\000"
+ 1990      6B657570 
+ 1990      7320656E 
+ARM GAS  /tmp/ccDAcKsC.s 			page 37
+
+
+ 1990      61626C65 
+ 1990      642E0A00 
+ 1991 0153 00       		.space	1
+ 1992              	.LC14:
+ 1993 0154 20202020 		.ascii	"                   The robot can only be charged vi"
+ 1993      20202020 
+ 1993      20202020 
+ 1993      20202020 
+ 1993      20202054 
+ 1994 0187 61207468 		.ascii	"a the power plug.\012\000"
+ 1994      6520706F 
+ 1994      77657220 
+ 1994      706C7567 
+ 1994      2E0A00
+ 1995 019a 0000     		.space	2
+ 1996              	.LC15:
+ 1997 019c 20206869 		.ascii	"  hibernate      - Medium low-power mode, but with "
+ 1997      6265726E 
+ 1997      61746520 
+ 1997      20202020 
+ 1997      202D204D 
+ 1998 01cf 66756C6C 		.ascii	"full charging capabilities.\012\000"
+ 1998      20636861 
+ 1998      7267696E 
+ 1998      67206361 
+ 1998      70616269 
+ 1999              	.LC16:
+ 2000 01ec 20207265 		.ascii	"  restart        - Performs a system restart.\012\000"
+ 2000      73746172 
+ 2000      74202020 
+ 2000      20202020 
+ 2000      202D2050 
+ 2001 021b 00       		.space	1
+ 2002              	.LC17:
+ 2003 021c 416C7465 		.ascii	"Alternatively, you can use the shortcuts 't', 'd', "
+ 2003      726E6174 
+ 2003      6976656C 
+ 2003      792C2079 
+ 2003      6F752063 
+ 2004 024f 2768272C 		.ascii	"'h', and 'r' respectively.\000"
+ 2004      20616E64 
+ 2004      20277227 
+ 2004      20726573 
+ 2004      70656374 
+ 2005 026a 0000     		.space	2
+ 2006              	.LC18:
+ 2007 026c 7472616E 		.ascii	"transportation\000"
+ 2007      73706F72 
+ 2007      74617469 
+ 2007      6F6E00
+ 2008 027b 00       		.space	1
+ 2009              	.LC19:
+ 2010 027c 7400     		.ascii	"t\000"
+ 2011 027e 0000     		.space	2
+ 2012              	.LC20:
+ 2013 0280 73687574 		.ascii	"shutdown to transportation mode initialized\012\000"
+ 2013      646F776E 
+ARM GAS  /tmp/ccDAcKsC.s 			page 38
+
+
+ 2013      20746F20 
+ 2013      7472616E 
+ 2013      73706F72 
+ 2014 02ad 000000   		.space	3
+ 2015              	.LC21:
+ 2016 02b0 64656570 		.ascii	"deepsleep\000"
+ 2016      736C6565 
+ 2016      7000
+ 2017 02ba 0000     		.space	2
+ 2018              	.LC22:
+ 2019 02bc 6400     		.ascii	"d\000"
+ 2020 02be 0000     		.space	2
+ 2021              	.LC23:
+ 2022 02c0 73687574 		.ascii	"shutdown to deepsleep mode initialized\012\000"
+ 2022      646F776E 
+ 2022      20746F20 
+ 2022      64656570 
+ 2022      736C6565 
+ 2023              	.LC24:
+ 2024 02e8 68696265 		.ascii	"hibernate\000"
+ 2024      726E6174 
+ 2024      6500
+ 2025 02f2 0000     		.space	2
+ 2026              	.LC25:
+ 2027 02f4 6800     		.ascii	"h\000"
+ 2028 02f6 0000     		.space	2
+ 2029              	.LC26:
+ 2030 02f8 73687574 		.ascii	"shutdown to hibernate mode initialized\012\000"
+ 2030      646F776E 
+ 2030      20746F20 
+ 2030      68696265 
+ 2030      726E6174 
+ 2031              	.LC27:
+ 2032 0320 72657374 		.ascii	"restart\000"
+ 2032      61727400 
+ 2033              	.LC28:
+ 2034 0328 7200     		.ascii	"r\000"
+ 2035 032a 0000     		.space	2
+ 2036              	.LC29:
+ 2037 032c 72657374 		.ascii	"restart initialized\012\000"
+ 2037      61727420 
+ 2037      696E6974 
+ 2037      69616C69 
+ 2037      7A65640A 
+ 2038 0341 000000   		.space	3
+ 2039              	.LC30:
+ 2040 0344 4552524F 		.ascii	"ERROR: unknown argument!\012\000"
+ 2040      523A2075 
+ 2040      6E6B6E6F 
+ 2040      776E2061 
+ 2040      7267756D 
+ 2041 035e 0000     		.space	2
+ 2042              	.LC31:
+ 2043 0360 7368656C 		.ascii	"shellRequestInitMemory\012\000"
+ 2043      6C526571 
+ 2043      75657374 
+ 2043      496E6974 
+ARM GAS  /tmp/ccDAcKsC.s 			page 39
+
+
+ 2043      4D656D6F 
+ 2044              	.LC32:
+ 2045 0378 4D656D6F 		.ascii	"Memory Init: FAIL\012\000"
+ 2045      72792049 
+ 2045      6E69743A 
+ 2045      20464149 
+ 2045      4C0A00
+ 2046 038b 00       		.space	1
+ 2047              	.LC33:
+ 2048 038c 4D656D6F 		.ascii	"Memory Init: OK\012\000"
+ 2048      72792049 
+ 2048      6E69743A 
+ 2048      204F4B0A 
+ 2048      00
+ 2049 039d 000000   		.space	3
+ 2050              	.LC34:
+ 2051 03a0 7368656C 		.ascii	"shellRequestGetBoardId\012\000"
+ 2051      6C526571 
+ 2051      75657374 
+ 2051      47657442 
+ 2051      6F617264 
+ 2052              	.LC35:
+ 2053 03b8 47657420 		.ascii	"Get Board ID: FAIL\012\000"
+ 2053      426F6172 
+ 2053      64204944 
+ 2053      3A204641 
+ 2053      494C0A00 
+ 2054              	.LC36:
+ 2055 03cc 47657420 		.ascii	"Get Board ID: %u\012\000"
+ 2055      426F6172 
+ 2055      64204944 
+ 2055      3A202575 
+ 2055      0A00
+ 2056 03de 0000     		.space	2
+ 2057              	.LC37:
+ 2058 03e0 7368656C 		.ascii	"shellRequestReadData\012\000"
+ 2058      6C526571 
+ 2058      75657374 
+ 2058      52656164 
+ 2058      44617461 
+ 2059 03f6 0000     		.space	2
+ 2060              	.LC38:
+ 2061 03f8 55736167 		.ascii	"Usage: %s\012\000"
+ 2061      653A2025 
+ 2061      730A00
+ 2062 0403 00       		.space	1
+ 2063              	.LC39:
+ 2064 0404 6765745F 		.ascii	"get_memory_data <type> <start> [<count>]\000"
+ 2064      6D656D6F 
+ 2064      72795F64 
+ 2064      61746120 
+ 2064      3C747970 
+ 2065 042d 000000   		.space	3
+ 2066              	.LC40:
+ 2067 0430 54686520 		.ascii	"The data type as which to interpret the data.\012\000"
+ 2067      64617461 
+ 2067      20747970 
+ARM GAS  /tmp/ccDAcKsC.s 			page 40
+
+
+ 2067      65206173 
+ 2067      20776869 
+ 2068 045f 00       		.space	1
+ 2069              	.LC41:
+ 2070 0460 20206865 		.ascii	"  hex - one byte as hexadecimal value\012\000"
+ 2070      78202D20 
+ 2070      6F6E6520 
+ 2070      62797465 
+ 2070      20617320 
+ 2071 0487 00       		.space	1
+ 2072              	.LC42:
+ 2073 0488 20207538 		.ascii	"  u8  - unsigned integer (8 bit)\012\000"
+ 2073      20202D20 
+ 2073      756E7369 
+ 2073      676E6564 
+ 2073      20696E74 
+ 2074 04aa 0000     		.space	2
+ 2075              	.LC43:
+ 2076 04ac 20207531 		.ascii	"  u16 - unsigned integer (16 bit)\012\000"
+ 2076      36202D20 
+ 2076      756E7369 
+ 2076      676E6564 
+ 2076      20696E74 
+ 2077 04cf 00       		.space	1
+ 2078              	.LC44:
+ 2079 04d0 20207533 		.ascii	"  u32 - unsigned integer (32 bit)\012\000"
+ 2079      32202D20 
+ 2079      756E7369 
+ 2079      676E6564 
+ 2079      20696E74 
+ 2080 04f3 00       		.space	1
+ 2081              	.LC45:
+ 2082 04f4 20207338 		.ascii	"  s8  - signed integer (8 bit)\012\000"
+ 2082      20202D20 
+ 2082      7369676E 
+ 2082      65642069 
+ 2082      6E746567 
+ 2083              	.LC46:
+ 2084 0514 20207331 		.ascii	"  s16 - signed integer (16 bit)\012\000"
+ 2084      36202D20 
+ 2084      7369676E 
+ 2084      65642069 
+ 2084      6E746567 
+ 2085 0535 000000   		.space	3
+ 2086              	.LC47:
+ 2087 0538 20207333 		.ascii	"  s32 - signed integer (32 bit)\012\000"
+ 2087      32202D20 
+ 2087      7369676E 
+ 2087      65642069 
+ 2087      6E746567 
+ 2088 0559 000000   		.space	3
+ 2089              	.LC48:
+ 2090 055c 09737461 		.ascii	"\011start\012\000"
+ 2090      72740A00 
+ 2091              	.LC49:
+ 2092 0564 54686520 		.ascii	"The first byte to read from the memory.\012\000"
+ 2092      66697273 
+ARM GAS  /tmp/ccDAcKsC.s 			page 41
+
+
+ 2092      74206279 
+ 2092      74652074 
+ 2092      6F207265 
+ 2093 058d 000000   		.space	3
+ 2094              	.LC50:
+ 2095 0590 09636F75 		.ascii	"\011count [default = 1]\012\000"
+ 2095      6E74205B 
+ 2095      64656661 
+ 2095      756C7420 
+ 2095      3D20315D 
+ 2096 05a6 0000     		.space	2
+ 2097              	.LC51:
+ 2098 05a8 54686520 		.ascii	"The number of elements to read.\012\000"
+ 2098      6E756D62 
+ 2098      6572206F 
+ 2098      6620656C 
+ 2098      656D656E 
+ 2099 05c9 000000   		.space	3
+ 2100              	.LC52:
+ 2101 05cc 094E4F54 		.ascii	"\011NOTE\012\000"
+ 2101      450A00
+ 2102 05d3 00       		.space	1
+ 2103              	.LC53:
+ 2104 05d4 54797065 		.ascii	"Type conversions of this function might fail.\012\000"
+ 2104      20636F6E 
+ 2104      76657273 
+ 2104      696F6E73 
+ 2104      206F6620 
+ 2105 0603 00       		.space	1
+ 2106              	.LC54:
+ 2107 0604 49662073 		.ascii	"If so, use type=hex and convert by hand.\012\000"
+ 2107      6F2C2075 
+ 2107      73652074 
+ 2107      7970653D 
+ 2107      68657820 
+ 2108 062e 0000     		.space	2
+ 2109              	.LC55:
+ 2110 0630 68657800 		.ascii	"hex\000"
+ 2111              	.LC56:
+ 2112 0634 753800   		.ascii	"u8\000"
+ 2113 0637 00       		.space	1
+ 2114              	.LC57:
+ 2115 0638 75313600 		.ascii	"u16\000"
+ 2116              	.LC58:
+ 2117 063c 75333200 		.ascii	"u32\000"
+ 2118              	.LC59:
+ 2119 0640 733800   		.ascii	"s8\000"
+ 2120 0643 00       		.space	1
+ 2121              	.LC60:
+ 2122 0644 73313600 		.ascii	"s16\000"
+ 2123              	.LC61:
+ 2124 0648 73333200 		.ascii	"s32\000"
+ 2125              	.LC62:
+ 2126 064c 46697273 		.ascii	"First argument invalid. Use 'get_memory_data help' "
+ 2126      74206172 
+ 2126      67756D65 
+ 2126      6E742069 
+ARM GAS  /tmp/ccDAcKsC.s 			page 42
+
+
+ 2126      6E76616C 
+ 2127 067f 666F7220 		.ascii	"for help.\012\000"
+ 2127      68656C70 
+ 2127      2E0A00
+ 2128 068a 0000     		.space	2
+ 2129              	.LC63:
+ 2130 068c 5761726E 		.ascii	"Warning: request exceeds eeprom size -> limiting to"
+ 2130      696E673A 
+ 2130      20726571 
+ 2130      75657374 
+ 2130      20657863 
+ 2131 06bf 20257520 		.ascii	" %u values.\012\000"
+ 2131      76616C75 
+ 2131      65732E0A 
+ 2131      00
+ 2132              	.LC64:
+ 2133 06cc 5761726E 		.ascii	"Warning: %u of %u requested bytes were read.\012\000"
+ 2133      696E673A 
+ 2133      20257520 
+ 2133      6F662025 
+ 2133      75207265 
+ 2134 06fa 0000     		.space	2
+ 2135              	.LC65:
+ 2136 06fc 25303258 		.ascii	"%02X \000"
+ 2136      2000
+ 2137 0702 0000     		.space	2
+ 2138              	.LC66:
+ 2139 0704 25303375 		.ascii	"%03u \000"
+ 2139      2000
+ 2140 070a 0000     		.space	2
+ 2141              	.LC67:
+ 2142 070c 25303575 		.ascii	"%05u \000"
+ 2142      2000
+ 2143 0712 0000     		.space	2
+ 2144              	.LC68:
+ 2145 0714 25303130 		.ascii	"%010u \000"
+ 2145      752000
+ 2146 071b 00       		.space	1
+ 2147              	.LC69:
+ 2148 071c 252B3033 		.ascii	"%+03d \000"
+ 2148      642000
+ 2149 0723 00       		.space	1
+ 2150              	.LC70:
+ 2151 0724 252B3035 		.ascii	"%+05d \000"
+ 2151      642000
+ 2152 072b 00       		.space	1
+ 2153              	.LC71:
+ 2154 072c 252B3031 		.ascii	"%+010d \000"
+ 2154      30642000 
+ 2155              	.LC72:
+ 2156 0734 7368656C 		.ascii	"shellRequestGetRobotId\012\000"
+ 2156      6C526571 
+ 2156      75657374 
+ 2156      47657452 
+ 2156      6F626F74 
+ 2157              	.LC73:
+ 2158 074c 526F626F 		.ascii	"Robot ID: %u\012\000"
+ARM GAS  /tmp/ccDAcKsC.s 			page 43
+
+
+ 2158      74204944 
+ 2158      3A202575 
+ 2158      0A00
+ 2159 075a 0000     		.space	2
+ 2160              	.LC74:
+ 2161 075c 5761726E 		.ascii	"Warning: The ID seems to be uninitialized. Is CAN c"
+ 2161      696E673A 
+ 2161      20546865 
+ 2161      20494420 
+ 2161      7365656D 
+ 2162 078f 6F6D6D75 		.ascii	"ommunication working correctly?\012\000"
+ 2162      6E696361 
+ 2162      74696F6E 
+ 2162      20776F72 
+ 2162      6B696E67 
+ 2163              	.LC75:
+ 2164 07b0 7365636F 		.ascii	"seconds\000"
+ 2164      6E647300 
+ 2165              	.LC76:
+ 2166 07b8 7365636F 		.ascii	"second\000"
+ 2166      6E6400
+ 2167 07bf 00       		.space	1
+ 2168              	.LC77:
+ 2169 07c0 7368656C 		.ascii	"shellRequestGetSystemLoad\012\000"
+ 2169      6C526571 
+ 2169      75657374 
+ 2169      47657453 
+ 2169      79737465 
+ 2170 07db 00       		.space	1
+ 2171              	.LC78:
+ 2172 07dc 6D656173 		.ascii	"measuring CPU load for %u %s...\012\000"
+ 2172      7572696E 
+ 2172      67204350 
+ 2172      55206C6F 
+ 2172      61642066 
+ 2173 07fd 000000   		.space	3
+ 2174              	.LC79:
+ 2175 0800 43505520 		.ascii	"CPU load: %3.2f%%\012\000"
+ 2175      6C6F6164 
+ 2175      3A202533 
+ 2175      2E326625 
+ 2175      250A00
+ 2176 0813 00       		.space	1
+ 2177              	.LC80:
+ 2178 0814 52414D20 		.ascii	"RAM load: %3.2f%% (%u / %u Byte)\012\000"
+ 2178      6C6F6164 
+ 2178      3A202533 
+ 2178      2E326625 
+ 2178      25202825 
+ 2179 0836 0000     		.space	2
+ 2180              	.LC81:
+ 2181 0838 426F6F74 		.ascii	"Bootloader %u.%u.%u\012\000"
+ 2181      6C6F6164 
+ 2181      65722025 
+ 2181      752E2575 
+ 2181      2E25750A 
+ 2182 084d 000000   		.space	3
+ARM GAS  /tmp/ccDAcKsC.s 			page 44
+
+
+ 2183              	.LC82:
+ 2184 0850 426F6F74 		.ascii	"Bootloader incompatible\012\000"
+ 2184      6C6F6164 
+ 2184      65722069 
+ 2184      6E636F6D 
+ 2184      70617469 
+ 2185 0869 000000   		.space	3
+ 2186              	.LC83:
+ 2187 086c 7368656C 		.ascii	"shellRequestSetBoardId\012\000"
+ 2187      6C526571 
+ 2187      75657374 
+ 2187      53657442 
+ 2187      6F617264 
+ 2188              	.LC84:
+ 2189 0884 7365745F 		.ascii	"set_board_id <idx>\000"
+ 2189      626F6172 
+ 2189      645F6964 
+ 2189      203C6964 
+ 2189      783E00
+ 2190 0897 00       		.space	1
+ 2191              	.LC85:
+ 2192 0898 53657420 		.ascii	"Set Board ID: FAIL\012\000"
+ 2192      426F6172 
+ 2192      64204944 
+ 2192      3A204641 
+ 2192      494C0A00 
+ 2193              	.LC86:
+ 2194 08ac 53657420 		.ascii	"Set Board ID: OK\012\000"
+ 2194      426F6172 
+ 2194      64204944 
+ 2194      3A204F4B 
+ 2194      0A00
+ 2195 08be 0000     		.space	2
+ 2196              	.LC87:
+ 2197 08c0 43616C6C 		.ascii	"Call with decimal numbers: shell_board <idx>\012\000"
+ 2197      20776974 
+ 2197      68206465 
+ 2197      63696D61 
+ 2197      6C206E75 
+ 2198 08ee 0000     		.space	2
+ 2199              	.LC88:
+ 2200 08f0 7368656C 		.ascii	"shellSwitchBoardCmd\012\000"
+ 2200      6C537769 
+ 2200      74636842 
+ 2200      6F617264 
+ 2200      436D640A 
+ 2201 0905 000000   		.space	3
+ 2202              	.LC89:
+ 2203 0908 0A434845 		.ascii	"\012CHECK: START\012\000"
+ 2203      434B3A20 
+ 2203      53544152 
+ 2203      540A00
+ 2204 0917 00       		.space	1
+ 2205              	.LC90:
+ 2206 0918 41323530 		.ascii	"A2500R24A: OK\012\000"
+ 2206      30523234 
+ 2206      413A204F 
+ARM GAS  /tmp/ccDAcKsC.s 			page 45
+
+
+ 2206      4B0A00
+ 2207 0927 00       		.space	1
+ 2208              	.LC91:
+ 2209 0928 41323530 		.ascii	"A2500R24A: FAIL\012\000"
+ 2209      30523234 
+ 2209      413A2046 
+ 2209      41494C0A 
+ 2209      00
+ 2210 0939 000000   		.space	3
+ 2211              	.LC92:
+ 2212 093c 4D656D6F 		.ascii	"Memory Structure: FAIL\012\000"
+ 2212      72792053 
+ 2212      74727563 
+ 2212      74757265 
+ 2212      3A204641 
+ 2213              	.LC93:
+ 2214 0954 4D656D6F 		.ascii	"Memory Structure: OK\012\000"
+ 2214      72792053 
+ 2214      74727563 
+ 2214      74757265 
+ 2214      3A204F4B 
+ 2215 096a 0000     		.space	2
+ 2216              	.LC94:
+ 2217 096c 4C454473 		.ascii	"LEDs: Test colors\012\000"
+ 2217      3A205465 
+ 2217      73742063 
+ 2217      6F6C6F72 
+ 2217      730A00
+ 2218 097f 00       		.space	1
+ 2219              	.LC95:
+ 2220 0980 4C454473 		.ascii	"LEDs: Off\012\000"
+ 2220      3A204F66 
+ 2220      660A00
+ 2221 098b 00       		.space	1
+ 2222              	.LC96:
+ 2223 098c 43484543 		.ascii	"CHECK: FINISH\012\000"
+ 2223      4B3A2046 
+ 2223      494E4953 
+ 2223      480A00
+ 2224 099b 00       		.space	1
+ 2225              	.LC97:
+ 2226 099c 7368656C 		.ascii	"shellRequestCheck\012\000"
+ 2226      6C526571 
+ 2226      75657374 
+ 2226      43686563 
+ 2226      6B0A00
+ 2227 09af 00       		.space	1
+ 2228              	.LC98:
+ 2229 09b0 414D6952 		.ascii	"AMiRo LightRing 1.0\012\000"
+ 2229      6F204C69 
+ 2229      67687452 
+ 2229      696E6720 
+ 2229      312E300A 
+ 2230 09c5 000000   		.space	3
+ 2231              	.LC99:
+ 2232 09c8 43686962 		.ascii	"ChibiOS 2.6.8\012\000"
+ 2232      694F5320 
+ARM GAS  /tmp/ccDAcKsC.s 			page 46
+
+
+ 2232      322E362E 
+ 2232      380A00
+ 2233 09d7 00       		.space	1
+ 2234              	.LC100:
+ 2235 09d8 426F6172 		.ascii	"Board ID: %u\012\000"
+ 2235      64204944 
+ 2235      3A202575 
+ 2235      0A00
+ 2236 09e6 0000     		.space	2
+ 2237              	.LC101:
+ 2238 09e8 4572726F 		.ascii	"Error reading board ID\012\000"
+ 2238      72207265 
+ 2238      6164696E 
+ 2238      6720626F 
+ 2238      61726420 
+ 2239              	.LC102:
+ 2240 0a00 4552524F 		.ascii	"ERROR: unable to shut down (bootloader deprecated)."
+ 2240      523A2075 
+ 2240      6E61626C 
+ 2240      6520746F 
+ 2240      20736875 
+ 2241 0a33 0A00     		.ascii	"\012\000"
+ 2242 0a35 000000   		.space	3
+ 2243              	.LC103:
+ 2244 0a38 4552524F 		.ascii	"ERROR: Requested shutdown not supported.\012\000"
+ 2244      523A2052 
+ 2244      65717565 
+ 2244      73746564 
+ 2244      20736875 
+ 2245 0a62 0000     		.space	2
+ 2246              	.LC104:
+ 2247 0a64 696E6974 		.ascii	"initiating shutdown sequence...\012\000"
+ 2247      69617469 
+ 2247      6E672073 
+ 2247      68757464 
+ 2247      6F776E20 
+ 2248 0a85 000000   		.space	3
+ 2249              	.LC105:
+ 2250 0a88 73746F70 		.ascii	"stopping all threads and periphery...\000"
+ 2250      70696E67 
+ 2250      20616C6C 
+ 2250      20746872 
+ 2250      65616473 
+ 2251 0aae 0000     		.space	2
+ 2252              	.LC106:
+ 2253 0ab0 09646F6E 		.ascii	"\011done\012\000"
+ 2253      650A00
+ 2254 0ab7 00       		.space	1
+ 2255              	.LC107:
+ 2256 0ab8 4552524F 		.ascii	"ERROR: invalid shutdown requested (%u).\012\000"
+ 2256      523A2069 
+ 2256      6E76616C 
+ 2256      69642073 
+ 2256      68757464 
+ 2257 0ae1 000000   		.space	3
+ 2258              	.LC108:
+ 2259 0ae4 73687574 		.ascii	"shutdown\000"
+ARM GAS  /tmp/ccDAcKsC.s 			page 47
+
+
+ 2259      646F776E 
+ 2259      00
+ 2260 0aed 000000   		.space	3
+ 2261              	.LC109:
+ 2262 0af0 63686563 		.ascii	"check\000"
+ 2262      6B00
+ 2263 0af6 0000     		.space	2
+ 2264              	.LC110:
+ 2265 0af8 72657365 		.ascii	"reset_memory\000"
+ 2265      745F6D65 
+ 2265      6D6F7279 
+ 2265      00
+ 2266 0b05 000000   		.space	3
+ 2267              	.LC111:
+ 2268 0b08 6765745F 		.ascii	"get_board_id\000"
+ 2268      626F6172 
+ 2268      645F6964 
+ 2268      00
+ 2269 0b15 000000   		.space	3
+ 2270              	.LC112:
+ 2271 0b18 7365745F 		.ascii	"set_board_id\000"
+ 2271      626F6172 
+ 2271      645F6964 
+ 2271      00
+ 2272 0b25 000000   		.space	3
+ 2273              	.LC113:
+ 2274 0b28 6765745F 		.ascii	"get_memory_data\000"
+ 2274      6D656D6F 
+ 2274      72795F64 
+ 2274      61746100 
+ 2275              	.LC114:
+ 2276 0b38 6765745F 		.ascii	"get_robot_id\000"
+ 2276      726F626F 
+ 2276      745F6964 
+ 2276      00
+ 2277 0b45 000000   		.space	3
+ 2278              	.LC115:
+ 2279 0b48 6765745F 		.ascii	"get_system_load\000"
+ 2279      73797374 
+ 2279      656D5F6C 
+ 2279      6F616400 
+ 2280              	.LC116:
+ 2281 0b58 7368656C 		.ascii	"shell_board\000"
+ 2281      6C5F626F 
+ 2281      61726400 
+ 2282              	.LC117:
+ 2283 0b64 6765745F 		.ascii	"get_bootloader_info\000"
+ 2283      626F6F74 
+ 2283      6C6F6164 
+ 2283      65725F69 
+ 2283      6E666F00 
+ 2284              		.section	.rodata._ZL8commands,"a",%progbits
+ 2285              		.align	2
+ 2286              		.type	_ZL8commands, %object
+ 2287              		.size	_ZL8commands, 88
+ 2288              	_ZL8commands:
+ 2289 0000 E40A0000 		.word	.LC108
+ARM GAS  /tmp/ccDAcKsC.s 			page 48
+
+
+ 2290 0004 00000000 		.word	_Z20shellRequestShutdownP20BaseSequentialStreamiPPc
+ 2291 0008 F00A0000 		.word	.LC109
+ 2292 000c 00000000 		.word	_Z17shellRequestCheckP20BaseSequentialStreamiPPc
+ 2293 0010 F80A0000 		.word	.LC110
+ 2294 0014 00000000 		.word	_Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc
+ 2295 0018 080B0000 		.word	.LC111
+ 2296 001c 00000000 		.word	_Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc
+ 2297 0020 180B0000 		.word	.LC112
+ 2298 0024 00000000 		.word	_Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc
+ 2299 0028 280B0000 		.word	.LC113
+ 2300 002c 00000000 		.word	_Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc
+ 2301 0030 380B0000 		.word	.LC114
+ 2302 0034 00000000 		.word	_Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc
+ 2303 0038 480B0000 		.word	.LC115
+ 2304 003c 00000000 		.word	_Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc
+ 2305 0040 580B0000 		.word	.LC116
+ 2306 0044 00000000 		.word	_Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc
+ 2307 0048 640B0000 		.word	.LC117
+ 2308 004c 00000000 		.word	_Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc
+ 2309 0050 00000000 		.word	0
+ 2310 0054 00000000 		.word	0
+ 2311              		.hidden	__dso_handle
+ 2312              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccDAcKsC.s 			page 49
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.cpp
+     /tmp/ccDAcKsC.s:16     .text._ZN5amiro9I2CDriverD2Ev:00000000 $t
+     /tmp/ccDAcKsC.s:22     .text._ZN5amiro9I2CDriverD2Ev:00000000 _ZN5amiro9I2CDriverD2Ev
+     /tmp/ccDAcKsC.s:32     .text._ZN5amiro9I2CDriverD2Ev:00000008 $d
+     /tmp/ccDAcKsC.s:1869   .rodata._ZTVN5amiro9I2CDriverE:00000000 _ZTVN5amiro9I2CDriverE
+     /tmp/ccDAcKsC.s:22     .text._ZN5amiro9I2CDriverD2Ev:00000000 _ZN5amiro9I2CDriverD1Ev
+     /tmp/ccDAcKsC.s:37     .text._ZN5amiro9I2CDriverD0Ev:00000000 $t
+     /tmp/ccDAcKsC.s:43     .text._ZN5amiro9I2CDriverD0Ev:00000000 _ZN5amiro9I2CDriverD0Ev
+     /tmp/ccDAcKsC.s:56     .text._ZN5amiro9I2CDriverD0Ev:00000010 $d
+     /tmp/ccDAcKsC.s:59     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 $t
+     /tmp/ccDAcKsC.s:64     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz
+     /tmp/ccDAcKsC.s:82     .text._Z20shellRequestShutdownP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:88     .text._Z20shellRequestShutdownP20BaseSequentialStreamiPPc:00000000 _Z20shellRequestShutdownP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:231    .text._Z20shellRequestShutdownP20BaseSequentialStreamiPPc:00000148 $d
+     /tmp/ccDAcKsC.s:262    .text._Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:268    .text._Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc:00000000 _Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:290    .text._Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc:0000002c $d
+     /tmp/ccDAcKsC.s:296    .text._Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:302    .text._Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc:00000000 _Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:333    .text._Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc:00000038 $d
+     /tmp/ccDAcKsC.s:339    .text._Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:345    .text._Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc:00000000 _Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:427    .text._Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc:000000d0 $d
+     /tmp/ccDAcKsC.s:433    .text._Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc:000000d6 $t
+     /tmp/ccDAcKsC.s:619    .text._Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc:00000288 $d
+     /tmp/ccDAcKsC.s:662    .text._Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:668    .text._Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc:00000000 _Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:693    .text._Z22shellRequestGetRobotIdP20BaseSequentialStreamiPPc:00000030 $d
+     /tmp/ccDAcKsC.s:705    .text._Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:711    .text._Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc:00000000 _Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:795    .text._Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc:000000c4 $d
+     /tmp/ccDAcKsC.s:805    .text._Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:811    .text._Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc:00000000 _Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:856    .text._Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc:00000050 $d
+     /tmp/ccDAcKsC.s:865    .text._Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:871    .text._Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc:00000000 _Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:905    .text._Z22shellRequestSetBoardIdP20BaseSequentialStreamiPPc:00000048 $d
+     /tmp/ccDAcKsC.s:913    .text._Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:919    .text._Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc:00000000 _Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:943    .text._Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc:00000030 $d
+     /tmp/ccDAcKsC.s:948    .text._ZN5amiro6GlobalC2Ev:00000000 $t
+     /tmp/ccDAcKsC.s:954    .text._ZN5amiro6GlobalC2Ev:00000000 _ZN5amiro6GlobalC2Ev
+     /tmp/ccDAcKsC.s:1043   .text._ZN5amiro6GlobalC2Ev:000000fc $d
+     /tmp/ccDAcKsC.s:954    .text._ZN5amiro6GlobalC2Ev:00000000 _ZN5amiro6GlobalC1Ev
+     /tmp/ccDAcKsC.s:1054   .text._Z10testLightsv:00000000 $t
+     /tmp/ccDAcKsC.s:1060   .text._Z10testLightsv:00000000 _Z10testLightsv
+     /tmp/ccDAcKsC.s:1075   .text._Z10testLightsv:00000018 $d
+     /tmp/ccDAcKsC.s:1147   .text._Z10testLightsv:000000a0 $d
+     /tmp/ccDAcKsC.s:1150   .text._Z10testColorsv:00000000 $t
+     /tmp/ccDAcKsC.s:1156   .text._Z10testColorsv:00000000 _Z10testColorsv
+     /tmp/ccDAcKsC.s:1197   .text._Z10testColorsv:00000050 $d
+     /tmp/ccDAcKsC.s:1200   .text._Z8testFadev:00000000 $t
+     /tmp/ccDAcKsC.s:1206   .text._Z8testFadev:00000000 _Z8testFadev
+     /tmp/ccDAcKsC.s:1241   .text._Z8testFadev:00000040 $d
+     /tmp/ccDAcKsC.s:1244   .text._Z14testBrightnessv:00000000 $t
+     /tmp/ccDAcKsC.s:1250   .text._Z14testBrightnessv:00000000 _Z14testBrightnessv
+ARM GAS  /tmp/ccDAcKsC.s 			page 50
+
+
+     /tmp/ccDAcKsC.s:1289   .text._Z14testBrightnessv:00000044 $d
+     /tmp/ccDAcKsC.s:1292   .text._Z14systemShutdownv:00000000 $t
+     /tmp/ccDAcKsC.s:1298   .text._Z14systemShutdownv:00000000 _Z14systemShutdownv
+     /tmp/ccDAcKsC.s:1330   .text._Z14systemShutdownv:00000050 $d
+     /tmp/ccDAcKsC.s:1333   .text._Z19boardPeripheryCheckP20BaseSequentialStream:00000000 $t
+     /tmp/ccDAcKsC.s:1339   .text._Z19boardPeripheryCheckP20BaseSequentialStream:00000000 _Z19boardPeripheryCheckP20BaseSequentialStream
+     /tmp/ccDAcKsC.s:1390   .text._Z19boardPeripheryCheckP20BaseSequentialStream:00000070 $d
+     /tmp/ccDAcKsC.s:1403   .text._Z17shellRequestCheckP20BaseSequentialStreamiPPc:00000000 $t
+     /tmp/ccDAcKsC.s:1409   .text._Z17shellRequestCheckP20BaseSequentialStreamiPPc:00000000 _Z17shellRequestCheckP20BaseSequentialStreamiPPc
+     /tmp/ccDAcKsC.s:1422   .text._Z17shellRequestCheckP20BaseSequentialStreamiPPc:00000014 $d
+     /tmp/ccDAcKsC.s:1425   .text.startup.main:00000000 $t
+     /tmp/ccDAcKsC.s:1431   .text.startup.main:00000000 main
+     /tmp/ccDAcKsC.s:1728   .text.startup.main:000002d8 $d
+     /tmp/ccDAcKsC.s:1765   .text.startup.main:00000368 $t
+     /tmp/ccDAcKsC.s:1777   .text.startup.main:0000037c $d
+     /tmp/ccDAcKsC.s:1782   .text.startup._GLOBAL__sub_I_global:00000000 $t
+     /tmp/ccDAcKsC.s:1787   .text.startup._GLOBAL__sub_I_global:00000000 _GLOBAL__sub_I_global
+     /tmp/ccDAcKsC.s:1806   .text.startup._GLOBAL__sub_I_global:00000020 $d
+     /tmp/ccDAcKsC.s:1822   .text._ZN5amiro6GlobalD2Ev:00000000 _ZN5amiro6GlobalD1Ev
+     /tmp/ccDAcKsC.s:1813   .init_array:00000000 $d
+     /tmp/ccDAcKsC.s:1816   .text._ZN5amiro6GlobalD2Ev:00000000 $t
+     /tmp/ccDAcKsC.s:1822   .text._ZN5amiro6GlobalD2Ev:00000000 _ZN5amiro6GlobalD2Ev
+     /tmp/ccDAcKsC.s:1859   .text._ZN5amiro6GlobalD2Ev:0000006c $d
+     /tmp/ccDAcKsC.s:1866   .rodata._ZTVN5amiro9I2CDriverE:00000000 $d
+     /tmp/ccDAcKsC.s:1887   .bss.global:00000000 global
+     /tmp/ccDAcKsC.s:1883   .bss.global:00000000 $d
+     /tmp/ccDAcKsC.s:1890   .rodata:00000000 $d
+     /tmp/ccDAcKsC.s:1909   .rodata.CSWTCH.50:00000000 $d
+     /tmp/ccDAcKsC.s:1913   .rodata.CSWTCH.50:00000000 CSWTCH.50
+     /tmp/ccDAcKsC.s:1920   .rodata.CSWTCH.51:00000000 $d
+     /tmp/ccDAcKsC.s:1924   .rodata.CSWTCH.51:00000000 CSWTCH.51
+     /tmp/ccDAcKsC.s:1931   .rodata.CSWTCH.49:00000000 $d
+     /tmp/ccDAcKsC.s:1935   .rodata.CSWTCH.49:00000000 CSWTCH.49
+     /tmp/ccDAcKsC.s:1942   .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccDAcKsC.s:1946   .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccDAcKsC.s:1949   .rodata._ZL10shell_cfg1:00000000 $d
+     /tmp/ccDAcKsC.s:1953   .rodata._ZL10shell_cfg1:00000000 _ZL10shell_cfg1
+     /tmp/ccDAcKsC.s:2288   .rodata._ZL8commands:00000000 _ZL8commands
+     /tmp/ccDAcKsC.s:1957   .rodata.str1.4:00000000 $d
+     /tmp/ccDAcKsC.s:2285   .rodata._ZL8commands:00000000 $d
+     /tmp/ccDAcKsC.s:36     .text._ZN5amiro9I2CDriverD2Ev:0000000c $t
+     /tmp/ccDAcKsC.s:58     .text._ZN5amiro9I2CDriverD0Ev:00000014 $t
+     /tmp/ccDAcKsC.s:261    .text._Z20shellRequestShutdownP20BaseSequentialStreamiPPc:000001bc $t
+     /tmp/ccDAcKsC.s:295    .text._Z23shellRequestResetMemoryP20BaseSequentialStreamiPPc:0000003c $t
+     /tmp/ccDAcKsC.s:338    .text._Z22shellRequestGetBoardIdP20BaseSequentialStreamiPPc:00000048 $t
+     /tmp/ccDAcKsC.s:661    .text._Z25shellRequestGetMemoryDataP20BaseSequentialStreamiPPc:0000032c $t
+     /tmp/ccDAcKsC.s:2312   .text._Z25shellRequestGetSystemLoadP20BaseSequentialStreamiPPc:000000e4 $t
+     /tmp/ccDAcKsC.s:864    .text._Z29shellRequestGetBootloaderInfoP20BaseSequentialStreamiPPc:0000006c $t
+     /tmp/ccDAcKsC.s:947    .text._Z19shellSwitchBoardCmdP20BaseSequentialStreamiPPc:0000003c $t
+     /tmp/ccDAcKsC.s:1053   .text._ZN5amiro6GlobalC2Ev:00000118 $t
+     /tmp/ccDAcKsC.s:1149   .text._Z10testLightsv:000000a4 $t
+     /tmp/ccDAcKsC.s:1199   .text._Z10testColorsv:00000054 $t
+     /tmp/ccDAcKsC.s:1243   .text._Z8testFadev:00000044 $t
+     /tmp/ccDAcKsC.s:1291   .text._Z14testBrightnessv:00000048 $t
+     /tmp/ccDAcKsC.s:1332   .text._Z14systemShutdownv:00000054 $t
+     /tmp/ccDAcKsC.s:1402   .text._Z19boardPeripheryCheckP20BaseSequentialStream:0000009c $t
+     /tmp/ccDAcKsC.s:1424   .text._Z17shellRequestCheckP20BaseSequentialStreamiPPc:00000018 $t
+ARM GAS  /tmp/ccDAcKsC.s 			page 51
+
+
+     /tmp/ccDAcKsC.s:1781   .text.startup.main:00000388 $t
+     /tmp/ccDAcKsC.s:1812   .text.startup._GLOBAL__sub_I_global:00000034 $t
+     /tmp/ccDAcKsC.s:1865   .text._ZN5amiro6GlobalD2Ev:00000074 $t
+     /tmp/ccDAcKsC.s:1082   .text._Z10testLightsv:0000001f $d
+     /tmp/ccDAcKsC.s:1082   .text._Z10testLightsv:00000020 $t
+                           .group:00000000 _ZN5amiro9I2CDriverD5Ev
+                           .group:00000000 _ZN5amiro6GlobalC5Ev
+                           .group:00000000 _ZN5amiro6GlobalD5Ev
+
+UNDEFINED SYMBOLS
+_ZdlPv
+chvprintf
+strcmp
+shutdown_now
+_ZN5amiro12fileSystemIo16FileSystemIoBase11resetMemoryEv
+_ZN5amiro12fileSystemIo16FileSystemIoBase10getBoardIdEPh
+atoi
+_ZN5amiro6EEPROM7getsizeEPv
+_ZN5amiro23ControllerAreaNetworkRx10getRobotIDEv
+__aeabi_ui2f
+__aeabi_i2f
+__aeabi_fdiv
+__aeabi_fsub
+__aeabi_fmul
+__aeabi_f2d
+_ZN10chibios_rt10BaseThread5sleepEm
+chCoreStatus
+rlist
+SD1
+_ZN5amiro12fileSystemIo16FileSystemIoBase10setBoardIdEh
+_ZN5amiro12SerialCanMux13sendSwitchCmdEh
+_ZN5amiro11HWI2CDriverC1EP9I2CDriver
+_ZN5amiro11HWSPIDriverC1EP9SPIDriverPK9SPIConfig
+_ZN5amiro7TLC5947C1EPNS_11HWSPIDriverEP12GPIO_TypeDefi
+_ZN5amiro4AT24C1EjhtPNS_9I2CDriverE
+_ZN5amiro9LightRingC1EP9CANDriverPNS_7TLC5947EPNS_12fileSystemIo13FSIOLightRingE
+_ZN5amiro12SerialCanMuxC1EP12SerialDriverP9CANDriverh
+_ZN5amiro5LidarC1EhNS0_5SETUPE
+_ZN5amiro9A2500R24AC1EPNS_11HWSPIDriverE
+_ZN5amiro10UserThreadC1Ev
+I2CD2
+SPID1
+SPID2
+CAND1
+_ZN5amiro5ColorC1Ev
+_ZN5amiro5ColoraSENS0_11GlobalColorE
+_ZN5amiro9LightRing18setLightBrightnessEi
+_ZN5amiro5ColorC1ERKS0_
+_ZN5amiro9LightRing13setLightColorEiNS_5ColorE
+_ZN5amiro5ColorC1ENS0_11GlobalColorE
+_ZN5amiro5ColoraSERKS0_
+_ZN5amiro5ColorC1Eiii
+_ZN10chibios_rt15ThreadReference16requestTerminateEv
+_ZN10chibios_rt15ThreadReference4waitEv
+_ZN5amiro9LightRing9terminateEv
+_ZN5amiro7TLC59476updateEv
+_ZN5amiro9A2500R24A8getCheckEv
+ARM GAS  /tmp/ccDAcKsC.s 			page 52
+
+
+_ZN5amiro12fileSystemIo16FileSystemIoBase8getCheckEv
+halInit
+_ZN10chibios_rt6System4initEv
+sdStart
+extStart
+boardClearI2CBus
+_ZN5amiro11HWI2CDriver5startEPK9I2CConfig
+_ZN5amiro12fileSystemIo16FileSystemIoBase4initEv
+chThdCreateStatic
+_ZN5amiro7TLC59476enableEv
+_ZN5amiro9LightRing5startEm
+shellCreate
+chThdRelease
+SD2
+EXTD1
+extcfg
+_ZN10chibios_rt10_thd_startEPv
+__aeabi_atexit
+__dso_handle
+_ZN5amiro10UserThreadD1Ev
+_ZN5amiro9A2500R24AD1Ev
+_ZN5amiro5LidarD1Ev
+_ZN5amiro12SerialCanMuxD1Ev
+_ZN5amiro23ControllerAreaNetworkRxD2Ev
+_ZN5amiro23ControllerAreaNetworkTxD2Ev
+_ZN5amiro4AT24D1Ev
+_ZN5amiro7TLC5947D1Ev
+_ZN5amiro11HWSPIDriverD1Ev
+_ZTVN5amiro9LightRingE
+__cxa_pure_virtual

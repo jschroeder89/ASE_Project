@@ -1,0 +1,771 @@
+ARM GAS  /tmp/ccjy2EA2.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"PowerManagement.cpp"
+  17              		.section	.text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame, %function
+  24              	_ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 70B5     		push	{r4, r5, r6, lr}
+  28 0002 00F50876 		add	r6, r0, #544
+  29 0006 0446     		mov	r4, r0
+  30 0008 3046     		mov	r0, r6
+  31 000a 0D46     		mov	r5, r1
+  32 000c FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame
+  33 0010 7228     		cmp	r0, #114
+  34 0012 22D0     		beq	.L3
+  35 0014 17DD     		ble	.L13
+  36 0016 7A28     		cmp	r0, #122
+  37 0018 08D0     		beq	.L6
+  38 001a 8228     		cmp	r0, #130
+  39 001c 1AD1     		bne	.L11
+  40 001e 2368     		ldr	r3, [r4]
+  41 0020 2046     		mov	r0, r4
+  42 0022 DB69     		ldr	r3, [r3, #28]
+  43 0024 9847     		blx	r3
+  44 0026 4FF0FF30 		mov	r0, #-1
+  45 002a 70BD     		pop	{r4, r5, r6, pc}
+  46              	.L6:
+  47 002c 2A79     		ldrb	r2, [r5, #4]	@ zero_extendqisi2
+  48 002e 12F00F02 		ands	r2, r2, #15
+  49 0032 0FD0     		beq	.L11
+  50 0034 05F10C01 		add	r1, r5, #12
+  51 0038 4FF0FF33 		mov	r3, #-1
+  52 003c 1448     		ldr	r0, .L15
+  53 003e FFF7FEFF 		bl	chOQWriteTimeout
+  54 0042 0020     		movs	r0, #0
+  55 0044 70BD     		pop	{r4, r5, r6, pc}
+  56              	.L13:
+  57 0046 4828     		cmp	r0, #72
+ARM GAS  /tmp/ccjy2EA2.s 			page 2
+
+
+  58 0048 04D1     		bne	.L11
+  59 004a 2B79     		ldrb	r3, [r5, #4]	@ zero_extendqisi2
+  60 004c 03F00F03 		and	r3, r3, #15
+  61 0050 012B     		cmp	r3, #1
+  62 0052 0ED0     		beq	.L14
+  63              	.L11:
+  64 0054 4FF0FF30 		mov	r0, #-1
+  65 0058 70BD     		pop	{r4, r5, r6, pc}
+  66              	.L3:
+  67 005a 2879     		ldrb	r0, [r5, #4]	@ zero_extendqisi2
+  68 005c 10F00F04 		ands	r4, r0, #15
+  69 0060 0CD0     		beq	.L8
+  70 0062 05F10C01 		add	r1, r5, #12
+  71 0066 2246     		mov	r2, r4
+  72 0068 0A48     		ldr	r0, .L15+4
+  73 006a FFF7FEFF 		bl	_ZN5amiro12SerialCanMux14convCan2SerialEPhj
+  74 006e 0020     		movs	r0, #0
+  75 0070 70BD     		pop	{r4, r5, r6, pc}
+  76              	.L14:
+  77 0072 2B7B     		ldrb	r3, [r5, #12]	@ zero_extendqisi2
+  78 0074 84F85634 		strb	r3, [r4, #1110]
+  79 0078 0020     		movs	r0, #0
+  80 007a 70BD     		pop	{r4, r5, r6, pc}
+  81              	.L8:
+  82 007c 2946     		mov	r1, r5
+  83 007e 3046     		mov	r0, r6
+  84 0080 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame
+  85 0084 C1B2     		uxtb	r1, r0
+  86 0086 0348     		ldr	r0, .L15+4
+  87 0088 FFF7FEFF 		bl	_ZN5amiro12SerialCanMux12rcvSwitchCmdEh
+  88 008c 2046     		mov	r0, r4
+  89 008e 70BD     		pop	{r4, r5, r6, pc}
+  90              	.L16:
+  91              		.align	2
+  92              	.L15:
+  93 0090 30000000 		.word	SD1+48
+  94 0094 F0360000 		.word	global+14064
+  95              		.size	_ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame, .-_ZN5amiro15PowerManagement14rece
+  96              		.thumb_set .LTHUNK0,_ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+  97 0098 AFF30080 		.section	.text._ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame,"ax",%progbits
+  97      AFF30080 
+  98              		.align	2
+  99              		.p2align 4,,15
+ 100              		.global	_ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+ 101              		.thumb
+ 102              		.thumb_func
+ 103              		.type	_ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame, %function
+ 104              	_ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame:
+ 105              		@ args = 0, pretend = 0, frame = 0
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107 0000 A0F50870 		sub	r0, r0, #544
+ 108 0004 FFF7FEBF 		b	.LTHUNK0
+ 109              		.size	_ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame, .-_ZThn544_N5amiro15PowerMa
+ 110 0008 AFF30080 		.section	.text._ZN5amiro15PowerManagement15updateSensorValEv,"ax",%progbits
+ 110      AFF30080 
+ 111              		.align	2
+ 112              		.p2align 4,,15
+ARM GAS  /tmp/ccjy2EA2.s 			page 3
+
+
+ 113              		.global	_ZN5amiro15PowerManagement15updateSensorValEv
+ 114              		.thumb
+ 115              		.thumb_func
+ 116              		.type	_ZN5amiro15PowerManagement15updateSensorValEv, %function
+ 117              	_ZN5amiro15PowerManagement15updateSensorValEv:
+ 118              		@ args = 0, pretend = 0, frame = 0
+ 119              		@ frame_needed = 0, uses_anonymous_args = 0
+ 120 0000 70B5     		push	{r4, r5, r6, lr}
+ 121 0002 364B     		ldr	r3, .L30
+ 122 0004 1A69     		ldr	r2, [r3, #16]
+ 123 0006 90F85034 		ldrb	r3, [r0, #1104]	@ zero_extendqisi2
+ 124 000a 0546     		mov	r5, r0
+ 125 000c C2F30022 		ubfx	r2, r2, #8, #1
+ 126 0010 62F30003 		bfi	r3, r2, #0, #1
+ 127 0014 85F85034 		strb	r3, [r5, #1104]
+ 128 0018 3148     		ldr	r0, .L30+4
+ 129 001a FFF7FEFF 		bl	_ZNK5amiro7BQ275006Driver9getStatusEv
+ 130 001e 0446     		mov	r4, r0
+ 131 0020 3048     		ldr	r0, .L30+8
+ 132 0022 FFF7FEFF 		bl	_ZNK5amiro7BQ275006Driver9getStatusEv
+ 133 0026 95F85034 		ldrb	r3, [r5, #1104]	@ zero_extendqisi2
+ 134 002a 03F01103 		and	r3, r3, #17
+ 135 002e 112B     		cmp	r3, #17
+ 136 0030 3FD0     		beq	.L28
+ 137              	.L25:
+ 138 0032 0022     		movs	r2, #0
+ 139              	.L18:
+ 140 0034 95F85034 		ldrb	r3, [r5, #1104]	@ zero_extendqisi2
+ 141 0038 62F34103 		bfi	r3, r2, #1, #1
+ 142 003c 03F01402 		and	r2, r3, #20
+ 143 0040 142A     		cmp	r2, #20
+ 144 0042 85F85034 		strb	r3, [r5, #1104]
+ 145 0046 3ED0     		beq	.L29
+ 146              	.L27:
+ 147 0048 0022     		movs	r2, #0
+ 148              	.L19:
+ 149 004a 95F85034 		ldrb	r3, [r5, #1104]	@ zero_extendqisi2
+ 150 004e 62F3C303 		bfi	r3, r2, #3, #1
+ 151 0052 85F85034 		strb	r3, [r5, #1104]
+ 152 0056 A179     		ldrb	r1, [r4, #6]	@ zero_extendqisi2
+ 153 0058 8279     		ldrb	r2, [r0, #6]	@ zero_extendqisi2
+ 154 005a DBB2     		uxtb	r3, r3
+ 155 005c 0A44     		add	r2, r2, r1
+ 156 005e 5210     		asrs	r2, r2, #1
+ 157 0060 13F00A0F 		tst	r3, #10
+ 158 0064 85F85124 		strb	r2, [r5, #1105]
+ 159 0068 1CD0     		beq	.L20
+ 160 006a 4288     		ldrh	r2, [r0, #2]
+ 161 006c 6388     		ldrh	r3, [r4, #2]
+ 162 006e 9A42     		cmp	r2, r3
+ 163 0070 28BF     		it	cs
+ 164 0072 1346     		movcs	r3, r2
+ 165 0074 A5F85234 		strh	r3, [r5, #1106]	@ movhi
+ 166              	.L21:
+ 167 0078 A288     		ldrh	r2, [r4, #4]
+ 168 007a 8388     		ldrh	r3, [r0, #4]
+ 169 007c 1A4C     		ldr	r4, .L30+12
+ARM GAS  /tmp/ccjy2EA2.s 			page 4
+
+
+ 170 007e 1344     		add	r3, r3, r2
+ 171 0080 5B10     		asrs	r3, r3, #1
+ 172 0082 A5F85434 		strh	r3, [r5, #1108]	@ movhi
+ 173 0086 04F5A256 		add	r6, r4, #5184
+ 174              	.L23:
+ 175 008a 2046     		mov	r0, r4
+ 176 008c FFF7FEFF 		bl	_ZN5amiro8VCNL402026getProximityScaledWoOffsetEv
+ 177 0090 04F52274 		add	r4, r4, #648
+ 178 0094 B442     		cmp	r4, r6
+ 179 0096 A5F80404 		strh	r0, [r5, #1028]	@ movhi
+ 180 009a 05F10205 		add	r5, r5, #2
+ 181 009e F4D1     		bne	.L23
+ 182 00a0 0020     		movs	r0, #0
+ 183 00a2 70BD     		pop	{r4, r5, r6, pc}
+ 184              	.L20:
+ 185 00a4 2288     		ldrh	r2, [r4]
+ 186 00a6 0388     		ldrh	r3, [r0]
+ 187 00a8 1344     		add	r3, r3, r2
+ 188 00aa 5B10     		asrs	r3, r3, #1
+ 189 00ac A5F85234 		strh	r3, [r5, #1106]	@ movhi
+ 190 00b0 E2E7     		b	.L21
+ 191              	.L28:
+ 192 00b2 2388     		ldrh	r3, [r4]
+ 193 00b4 4FF6FF72 		movw	r2, #65535
+ 194 00b8 9342     		cmp	r3, r2
+ 195 00ba BAD1     		bne	.L25
+ 196 00bc 0288     		ldrh	r2, [r0]
+ 197 00be D11A     		subs	r1, r2, r3
+ 198 00c0 4A42     		rsbs	r2, r1, #0
+ 199 00c2 4A41     		adcs	r2, r2, r1
+ 200 00c4 B6E7     		b	.L18
+ 201              	.L29:
+ 202 00c6 2388     		ldrh	r3, [r4]
+ 203 00c8 4FF6FF72 		movw	r2, #65535
+ 204 00cc 9342     		cmp	r3, r2
+ 205 00ce BBD1     		bne	.L27
+ 206 00d0 0288     		ldrh	r2, [r0]
+ 207 00d2 D31A     		subs	r3, r2, r3
+ 208 00d4 5A42     		rsbs	r2, r3, #0
+ 209 00d6 5A41     		adcs	r2, r2, r3
+ 210 00d8 B7E7     		b	.L19
+ 211              	.L31:
+ 212 00da 00BF     		.align	2
+ 213              	.L30:
+ 214 00dc 00080240 		.word	1073874944
+ 215 00e0 30100000 		.word	global+4144
+ 216 00e4 D0120000 		.word	global+4816
+ 217 00e8 B01F0000 		.word	global+8112
+ 218              		.size	_ZN5amiro15PowerManagement15updateSensorValEv, .-_ZN5amiro15PowerManagement15updateSensorVal
+ 219 00ec AFF30080 		.section	.text._ZN5amiro15PowerManagement17periodicBroadcastEv,"ax",%progbits
+ 220              		.align	2
+ 221              		.p2align 4,,15
+ 222              		.global	_ZN5amiro15PowerManagement17periodicBroadcastEv
+ 223              		.thumb
+ 224              		.thumb_func
+ 225              		.type	_ZN5amiro15PowerManagement17periodicBroadcastEv, %function
+ 226              	_ZN5amiro15PowerManagement17periodicBroadcastEv:
+ARM GAS  /tmp/ccjy2EA2.s 			page 5
+
+
+ 227              		@ args = 0, pretend = 0, frame = 16
+ 228              		@ frame_needed = 0, uses_anonymous_args = 0
+ 229 0000 D0F87834 		ldr	r3, [r0, #1144]
+ 230 0004 304A     		ldr	r2, .L37
+ 231 0006 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 232 000a A2FB0312 		umull	r1, r2, r2, r3
+ 233 000e D208     		lsrs	r2, r2, #3
+ 234 0010 02EB8202 		add	r2, r2, r2, lsl #2
+ 235 0014 B3EB4203 		subs	r3, r3, r2, lsl #1
+ 236 0018 84B0     		sub	sp, sp, #16
+ 237 001a 0646     		mov	r6, r0
+ 238 001c 2DD0     		beq	.L33
+ 239              	.L34:
+ 240 001e 3546     		mov	r5, r6
+ 241 0020 0024     		movs	r4, #0
+ 242 0022 4FF00208 		mov	r8, #2
+ 243              	.L36:
+ 244 0026 BDF80430 		ldrh	r3, [sp, #4]
+ 245 002a 44F03002 		orr	r2, r4, #48
+ 246 002e 6FF30A03 		bfc	r3, #0, #11
+ 247 0032 3046     		mov	r0, r6
+ 248 0034 6946     		mov	r1, sp
+ 249 0036 ADF80430 		strh	r3, [sp, #4]	@ movhi
+ 250 003a FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx14encodeDeviceIdEP10CANTxFramei
+ 251 003e 9DF80030 		ldrb	r3, [sp]	@ zero_extendqisi2
+ 252 0042 B5F80424 		ldrh	r2, [r5, #1028]
+ 253 0046 ADF80820 		strh	r2, [sp, #8]	@ movhi
+ 254 004a 68F30303 		bfi	r3, r8, #0, #4
+ 255 004e 3046     		mov	r0, r6
+ 256 0050 6946     		mov	r1, sp
+ 257 0052 8DF80030 		strb	r3, [sp]
+ 258 0056 0134     		adds	r4, r4, #1
+ 259 0058 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx15transmitMessageEP10CANTxFrame
+ 260 005c 0120     		movs	r0, #1
+ 261 005e FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
+ 262 0062 082C     		cmp	r4, #8
+ 263 0064 05F10205 		add	r5, r5, #2
+ 264 0068 DDD1     		bne	.L36
+ 265 006a D6F87834 		ldr	r3, [r6, #1144]
+ 266 006e 0133     		adds	r3, r3, #1
+ 267 0070 C6F87834 		str	r3, [r6, #1144]
+ 268 0074 04B0     		add	sp, sp, #16
+ 269              		@ sp needed
+ 270 0076 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 271              	.L33:
+ 272 007a BDF80440 		ldrh	r4, [sp, #4]
+ 273 007e 6946     		mov	r1, sp
+ 274 0080 63F30A04 		bfi	r4, r3, #0, #11
+ 275 0084 6022     		movs	r2, #96
+ 276 0086 ADF80440 		strh	r4, [sp, #4]	@ movhi
+ 277 008a FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx14encodeDeviceIdEP10CANTxFramei
+ 278 008e 9DF80030 		ldrb	r3, [sp]	@ zero_extendqisi2
+ 279 0092 96F85014 		ldrb	r1, [r6, #1104]	@ zero_extendqisi2
+ 280 0096 8DF80810 		strb	r1, [sp, #8]
+ 281 009a 0621     		movs	r1, #6
+ 282 009c 61F30303 		bfi	r3, r1, #0, #4
+ 283 00a0 96F85154 		ldrb	r5, [r6, #1105]	@ zero_extendqisi2
+ARM GAS  /tmp/ccjy2EA2.s 			page 6
+
+
+ 284 00a4 B6F85244 		ldrh	r4, [r6, #1106]
+ 285 00a8 B6F85424 		ldrh	r2, [r6, #1108]
+ 286 00ac 8DF80030 		strb	r3, [sp]
+ 287 00b0 6946     		mov	r1, sp
+ 288 00b2 3046     		mov	r0, r6
+ 289 00b4 8DF80950 		strb	r5, [sp, #9]
+ 290 00b8 ADF80A40 		strh	r4, [sp, #10]	@ movhi
+ 291 00bc ADF80C20 		strh	r2, [sp, #12]	@ movhi
+ 292 00c0 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTx15transmitMessageEP10CANTxFrame
+ 293 00c4 ABE7     		b	.L34
+ 294              	.L38:
+ 295 00c6 00BF     		.align	2
+ 296              	.L37:
+ 297 00c8 CDCCCCCC 		.word	-858993459
+ 298              		.size	_ZN5amiro15PowerManagement17periodicBroadcastEv, .-_ZN5amiro15PowerManagement17periodicBroad
+ 299 00cc AFF30080 		.section	.text._ZN5amiro15PowerManagementD2Ev,"axG",%progbits,_ZN5amiro15PowerManagementD5Ev,comda
+ 300              		.align	2
+ 301              		.p2align 4,,15
+ 302              		.weak	_ZN5amiro15PowerManagementD2Ev
+ 303              		.thumb
+ 304              		.thumb_func
+ 305              		.type	_ZN5amiro15PowerManagementD2Ev, %function
+ 306              	_ZN5amiro15PowerManagementD2Ev:
+ 307              		@ args = 0, pretend = 0, frame = 0
+ 308              		@ frame_needed = 0, uses_anonymous_args = 0
+ 309 0000 10B5     		push	{r4, lr}
+ 310 0002 084B     		ldr	r3, .L40
+ 311 0004 03F10802 		add	r2, r3, #8
+ 312 0008 3433     		adds	r3, r3, #52
+ 313 000a 0446     		mov	r4, r0
+ 314 000c 0260     		str	r2, [r0]
+ 315 000e C0F82032 		str	r3, [r0, #544]
+ 316 0012 00F50870 		add	r0, r0, #544
+ 317 0016 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRxD2Ev
+ 318 001a 2046     		mov	r0, r4
+ 319 001c FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTxD2Ev
+ 320 0020 2046     		mov	r0, r4
+ 321 0022 10BD     		pop	{r4, pc}
+ 322              	.L41:
+ 323              		.align	2
+ 324              	.L40:
+ 325 0024 00000000 		.word	.LANCHOR0
+ 326              		.size	_ZN5amiro15PowerManagementD2Ev, .-_ZN5amiro15PowerManagementD2Ev
+ 327              		.weak	_ZN5amiro15PowerManagementD1Ev
+ 328              		.thumb_set _ZN5amiro15PowerManagementD1Ev,_ZN5amiro15PowerManagementD2Ev
+ 329              		.thumb_set .LTHUNK2,_ZN5amiro15PowerManagementD1Ev
+ 330 0028 AFF30080 		.section	.text._ZN5amiro15PowerManagementD1Ev,"axG",%progbits,_ZN5amiro15PowerManagementD5Ev,comda
+ 330      AFF30080 
+ 331              		.align	2
+ 332              		.p2align 4,,15
+ 333              		.weak	_ZThn544_N5amiro15PowerManagementD1Ev
+ 334              		.thumb
+ 335              		.thumb_func
+ 336              		.type	_ZThn544_N5amiro15PowerManagementD1Ev, %function
+ 337              	_ZThn544_N5amiro15PowerManagementD1Ev:
+ 338              		@ args = 0, pretend = 0, frame = 0
+ 339              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccjy2EA2.s 			page 7
+
+
+ 340 0000 A0F50870 		sub	r0, r0, #544
+ 341 0004 FFF7FEBF 		b	.LTHUNK2
+ 342              		.size	_ZThn544_N5amiro15PowerManagementD1Ev, .-_ZThn544_N5amiro15PowerManagementD1Ev
+ 343 0008 AFF30080 		.section	.text._ZN5amiro15PowerManagementD0Ev,"axG",%progbits,_ZN5amiro15PowerManagementD0Ev,comda
+ 343      AFF30080 
+ 344              		.align	2
+ 345              		.p2align 4,,15
+ 346              		.weak	_ZN5amiro15PowerManagementD0Ev
+ 347              		.thumb
+ 348              		.thumb_func
+ 349              		.type	_ZN5amiro15PowerManagementD0Ev, %function
+ 350              	_ZN5amiro15PowerManagementD0Ev:
+ 351              		@ args = 0, pretend = 0, frame = 0
+ 352              		@ frame_needed = 0, uses_anonymous_args = 0
+ 353 0000 0A4B     		ldr	r3, .L43
+ 354 0002 10B5     		push	{r4, lr}
+ 355 0004 03F10802 		add	r2, r3, #8
+ 356 0008 3433     		adds	r3, r3, #52
+ 357 000a 0446     		mov	r4, r0
+ 358 000c 0260     		str	r2, [r0]
+ 359 000e C0F82032 		str	r3, [r0, #544]
+ 360 0012 00F50870 		add	r0, r0, #544
+ 361 0016 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRxD2Ev
+ 362 001a 2046     		mov	r0, r4
+ 363 001c FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTxD2Ev
+ 364 0020 2046     		mov	r0, r4
+ 365 0022 FFF7FEFF 		bl	_ZdlPv
+ 366 0026 2046     		mov	r0, r4
+ 367 0028 10BD     		pop	{r4, pc}
+ 368              	.L44:
+ 369 002a 00BF     		.align	2
+ 370              	.L43:
+ 371 002c 00000000 		.word	.LANCHOR0
+ 372              		.size	_ZN5amiro15PowerManagementD0Ev, .-_ZN5amiro15PowerManagementD0Ev
+ 373              		.thumb_set .LTHUNK3,_ZN5amiro15PowerManagementD0Ev
+ 374              		.align	2
+ 375              		.p2align 4,,15
+ 376              		.weak	_ZThn544_N5amiro15PowerManagementD0Ev
+ 377              		.thumb
+ 378              		.thumb_func
+ 379              		.type	_ZThn544_N5amiro15PowerManagementD0Ev, %function
+ 380              	_ZThn544_N5amiro15PowerManagementD0Ev:
+ 381              		@ args = 0, pretend = 0, frame = 0
+ 382              		@ frame_needed = 0, uses_anonymous_args = 0
+ 383 0030 A0F50870 		sub	r0, r0, #544
+ 384 0034 E4E7     		b	.LTHUNK3
+ 385              		.size	_ZThn544_N5amiro15PowerManagementD0Ev, .-_ZThn544_N5amiro15PowerManagementD0Ev
+ 386 0036 00BFAFF3 		.section	.text._ZN5amiro15PowerManagement5startEm,"ax",%progbits
+ 386      0080AFF3 
+ 386      0080
+ 387              		.align	2
+ 388              		.p2align 4,,15
+ 389              		.global	_ZN5amiro15PowerManagement5startEm
+ 390              		.thumb
+ 391              		.thumb_func
+ 392              		.type	_ZN5amiro15PowerManagement5startEm, %function
+ 393              	_ZN5amiro15PowerManagement5startEm:
+ARM GAS  /tmp/ccjy2EA2.s 			page 8
+
+
+ 394              		@ args = 0, pretend = 0, frame = 0
+ 395              		@ frame_needed = 0, uses_anonymous_args = 0
+ 396 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 397 0002 114E     		ldr	r6, .L46
+ 398 0004 83B0     		sub	sp, sp, #12
+ 399 0006 01F50873 		add	r3, r1, #544
+ 400 000a 0C46     		mov	r4, r1
+ 401 000c 0546     		mov	r5, r0
+ 402 000e 1746     		mov	r7, r2
+ 403 0010 0093     		str	r3, [sp]
+ 404 0012 01F50A70 		add	r0, r1, #552
+ 405 0016 3346     		mov	r3, r6
+ 406 0018 0132     		adds	r2, r2, #1
+ 407 001a 4FF4EC71 		mov	r1, #472
+ 408 001e FFF7FEFF 		bl	chThdCreateStatic
+ 409 0022 0094     		str	r4, [sp]
+ 410 0024 3A46     		mov	r2, r7
+ 411 0026 C4F82402 		str	r0, [r4, #548]
+ 412 002a 3346     		mov	r3, r6
+ 413 002c 04F10800 		add	r0, r4, #8
+ 414 0030 4FF4EC71 		mov	r1, #472
+ 415 0034 FFF7FEFF 		bl	chThdCreateStatic
+ 416 0038 044B     		ldr	r3, .L46+4
+ 417 003a 6060     		str	r0, [r4, #4]
+ 418 003c 0022     		movs	r2, #0
+ 419 003e 2846     		mov	r0, r5
+ 420 0040 2B60     		str	r3, [r5]
+ 421 0042 6A60     		str	r2, [r5, #4]
+ 422 0044 03B0     		add	sp, sp, #12
+ 423              		@ sp needed
+ 424 0046 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 425              	.L47:
+ 426              		.align	2
+ 427              	.L46:
+ 428 0048 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
+ 429 004c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
+ 430              		.size	_ZN5amiro15PowerManagement5startEm, .-_ZN5amiro15PowerManagement5startEm
+ 431              		.thumb_set .LTHUNK1,_ZN5amiro15PowerManagement5startEm
+ 432              		.section	.text._ZThn544_N5amiro15PowerManagement5startEm,"ax",%progbits
+ 433              		.align	2
+ 434              		.p2align 4,,15
+ 435              		.global	_ZThn544_N5amiro15PowerManagement5startEm
+ 436              		.thumb
+ 437              		.thumb_func
+ 438              		.type	_ZThn544_N5amiro15PowerManagement5startEm, %function
+ 439              	_ZThn544_N5amiro15PowerManagement5startEm:
+ 440              		@ args = 0, pretend = 0, frame = 0
+ 441              		@ frame_needed = 0, uses_anonymous_args = 0
+ 442 0000 A1F50871 		sub	r1, r1, #544
+ 443 0004 FFF7FEBF 		b	.LTHUNK1
+ 444              		.size	_ZThn544_N5amiro15PowerManagement5startEm, .-_ZThn544_N5amiro15PowerManagement5startEm
+ 445 0008 AFF30080 		.section	.text._ZN5amiro15PowerManagementC2EP9CANDriver,"ax",%progbits
+ 445      AFF30080 
+ 446              		.align	2
+ 447              		.p2align 4,,15
+ 448              		.global	_ZN5amiro15PowerManagementC2EP9CANDriver
+ 449              		.thumb
+ARM GAS  /tmp/ccjy2EA2.s 			page 9
+
+
+ 450              		.thumb_func
+ 451              		.type	_ZN5amiro15PowerManagementC2EP9CANDriver, %function
+ 452              	_ZN5amiro15PowerManagementC2EP9CANDriver:
+ 453              		@ args = 0, pretend = 0, frame = 0
+ 454              		@ frame_needed = 0, uses_anonymous_args = 0
+ 455 0000 38B5     		push	{r3, r4, r5, lr}
+ 456 0002 0222     		movs	r2, #2
+ 457 0004 0446     		mov	r4, r0
+ 458 0006 0D46     		mov	r5, r1
+ 459 0008 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkTxC2EP9CANDriverh
+ 460 000c 2946     		mov	r1, r5
+ 461 000e 04F50870 		add	r0, r4, #544
+ 462 0012 0222     		movs	r2, #2
+ 463 0014 FFF7FEFF 		bl	_ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+ 464 0018 064A     		ldr	r2, .L49
+ 465 001a 0023     		movs	r3, #0
+ 466 001c 02F10801 		add	r1, r2, #8
+ 467 0020 84F85034 		strb	r3, [r4, #1104]
+ 468 0024 3432     		adds	r2, r2, #52
+ 469 0026 2160     		str	r1, [r4]
+ 470 0028 C4F82022 		str	r2, [r4, #544]
+ 471 002c C4F87834 		str	r3, [r4, #1144]
+ 472 0030 2046     		mov	r0, r4
+ 473 0032 38BD     		pop	{r3, r4, r5, pc}
+ 474              	.L50:
+ 475              		.align	2
+ 476              	.L49:
+ 477 0034 00000000 		.word	.LANCHOR0
+ 478              		.size	_ZN5amiro15PowerManagementC2EP9CANDriver, .-_ZN5amiro15PowerManagementC2EP9CANDriver
+ 479              		.global	_ZN5amiro15PowerManagementC1EP9CANDriver
+ 480              		.thumb_set _ZN5amiro15PowerManagementC1EP9CANDriver,_ZN5amiro15PowerManagementC2EP9CANDriver
+ 481 0038 AFF30080 		.section	.text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv,"ax",%progbits
+ 481      AFF30080 
+ 482              		.align	2
+ 483              		.p2align 4,,15
+ 484              		.global	_ZN5amiro15PowerManagement28calibrateProximityRingValuesEv
+ 485              		.thumb
+ 486              		.thumb_func
+ 487              		.type	_ZN5amiro15PowerManagement28calibrateProximityRingValuesEv, %function
+ 488              	_ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:
+ 489              		@ args = 0, pretend = 0, frame = 0
+ 490              		@ frame_needed = 0, uses_anonymous_args = 0
+ 491 0000 38B5     		push	{r3, r4, r5, lr}
+ 492 0002 094C     		ldr	r4, .L54
+ 493 0004 0025     		movs	r5, #0
+ 494              	.L53:
+ 495 0006 2046     		mov	r0, r4
+ 496 0008 FFF7FEFF 		bl	_ZN5amiro8VCNL40209calibrateEv
+ 497 000c 2046     		mov	r0, r4
+ 498 000e FFF7FEFF 		bl	_ZN5amiro8VCNL402018getProximityOffsetEv
+ 499 0012 EAB2     		uxtb	r2, r5
+ 500 0014 0146     		mov	r1, r0
+ 501 0016 0135     		adds	r5, r5, #1
+ 502 0018 0448     		ldr	r0, .L54+4
+ 503 001a FFF7FEFF 		bl	_ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth
+ 504 001e 082D     		cmp	r5, #8
+ 505 0020 04F52274 		add	r4, r4, #648
+ARM GAS  /tmp/ccjy2EA2.s 			page 10
+
+
+ 506 0024 EFD1     		bne	.L53
+ 507 0026 38BD     		pop	{r3, r4, r5, pc}
+ 508              	.L55:
+ 509              		.align	2
+ 510              	.L54:
+ 511 0028 B01F0000 		.word	global+8112
+ 512 002c 7C030000 		.word	global+892
+ 513              		.size	_ZN5amiro15PowerManagement28calibrateProximityRingValuesEv, .-_ZN5amiro15PowerManagement28ca
+ 514              		.section	.text._ZN5amiro15PowerManagement9calibrateEv,"ax",%progbits
+ 515              		.align	2
+ 516              		.p2align 4,,15
+ 517              		.global	_ZN5amiro15PowerManagement9calibrateEv
+ 518              		.thumb
+ 519              		.thumb_func
+ 520              		.type	_ZN5amiro15PowerManagement9calibrateEv, %function
+ 521              	_ZN5amiro15PowerManagement9calibrateEv:
+ 522              		@ args = 0, pretend = 0, frame = 0
+ 523              		@ frame_needed = 0, uses_anonymous_args = 0
+ 524              		@ link register save eliminated.
+ 525 0000 FFF7FEBF 		b	_ZN5amiro15PowerManagement28calibrateProximityRingValuesEv
+ 526              		.size	_ZN5amiro15PowerManagement9calibrateEv, .-_ZN5amiro15PowerManagement9calibrateEv
+ 527 0004 AFF30080 		.section	.text._ZN5amiro15PowerManagement14getPowerStatusEv,"ax",%progbits
+ 527      AFF30080 
+ 527      AFF30080 
+ 528              		.align	2
+ 529              		.p2align 4,,15
+ 530              		.global	_ZN5amiro15PowerManagement14getPowerStatusEv
+ 531              		.thumb
+ 532              		.thumb_func
+ 533              		.type	_ZN5amiro15PowerManagement14getPowerStatusEv, %function
+ 534              	_ZN5amiro15PowerManagement14getPowerStatusEv:
+ 535              		@ args = 0, pretend = 0, frame = 0
+ 536              		@ frame_needed = 0, uses_anonymous_args = 0
+ 537              		@ link register save eliminated.
+ 538 0000 00F58A60 		add	r0, r0, #1104
+ 539 0004 7047     		bx	lr
+ 540              		.size	_ZN5amiro15PowerManagement14getPowerStatusEv, .-_ZN5amiro15PowerManagement14getPowerStatusEv
+ 541 0006 00BFAFF3 		.section	.text._ZN5amiro15PowerManagement9terminateEv,"ax",%progbits
+ 541      0080AFF3 
+ 541      0080
+ 542              		.align	2
+ 543              		.p2align 4,,15
+ 544              		.global	_ZN5amiro15PowerManagement9terminateEv
+ 545              		.thumb
+ 546              		.thumb_func
+ 547              		.type	_ZN5amiro15PowerManagement9terminateEv, %function
+ 548              	_ZN5amiro15PowerManagement9terminateEv:
+ 549              		@ args = 0, pretend = 0, frame = 0
+ 550              		@ frame_needed = 0, uses_anonymous_args = 0
+ 551 0000 38B5     		push	{r3, r4, r5, lr}
+ 552 0002 0446     		mov	r4, r0
+ 553 0004 FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference16requestTerminateEv
+ 554 0008 2046     		mov	r0, r4
+ 555 000a FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference4waitEv
+ 556 000e 04F50874 		add	r4, r4, #544
+ 557 0012 0546     		mov	r5, r0
+ 558 0014 2046     		mov	r0, r4
+ARM GAS  /tmp/ccjy2EA2.s 			page 11
+
+
+ 559 0016 FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference16requestTerminateEv
+ 560 001a 2046     		mov	r0, r4
+ 561 001c FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference4waitEv
+ 562 0020 2843     		orrs	r0, r0, r5
+ 563 0022 38BD     		pop	{r3, r4, r5, pc}
+ 564              		.size	_ZN5amiro15PowerManagement9terminateEv, .-_ZN5amiro15PowerManagement9terminateEv
+ 565 0024 AFF30080 		.section	.text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver,"ax",%progbits
+ 565      AFF30080 
+ 565      AFF30080 
+ 566              		.align	2
+ 567              		.p2align 4,,15
+ 568              		.thumb
+ 569              		.thumb_func
+ 570              		.type	_GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver, %function
+ 571              	_GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:
+ 572              		@ args = 0, pretend = 0, frame = 0
+ 573              		@ frame_needed = 0, uses_anonymous_args = 0
+ 574              		@ link register save eliminated.
+ 575 0000 024B     		ldr	r3, .L60
+ 576 0002 034A     		ldr	r2, .L60+4
+ 577 0004 1A60     		str	r2, [r3]
+ 578 0006 5A60     		str	r2, [r3, #4]
+ 579 0008 7047     		bx	lr
+ 580              	.L61:
+ 581 000a 00BF     		.align	2
+ 582              	.L60:
+ 583 000c 00000000 		.word	.LANCHOR1
+ 584 0010 A0860100 		.word	100000
+ 585              		.size	_GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver, .-_GLOBAL__sub_I__ZN5amiro15PowerMa
+ 586 0014 AFF30080 		.section	.init_array,"aw",%init_array
+ 586      AFF30080 
+ 586      AFF30080 
+ 587              		.align	2
+ 588 0000 00000000 		.word	_GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver(target1)
+ 589              		.global	_ZTVN5amiro15PowerManagementE
+ 590              		.section	.rodata._ZTVN5amiro15PowerManagementE,"a",%progbits
+ 591              		.align	3
+ 592              		.set	.LANCHOR0,. + 0
+ 593              		.type	_ZTVN5amiro15PowerManagementE, %object
+ 594              		.size	_ZTVN5amiro15PowerManagementE, 76
+ 595              	_ZTVN5amiro15PowerManagementE:
+ 596 0000 00000000 		.word	0
+ 597 0004 00000000 		.word	0
+ 598 0008 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 599 000c 00000000 		.word	_ZN5amiro23ControllerAreaNetworkTx4mainEv
+ 600 0010 00000000 		.word	_ZN5amiro15PowerManagement5startEm
+ 601 0014 00000000 		.word	_ZN5amiro15PowerManagementD1Ev
+ 602 0018 00000000 		.word	_ZN5amiro15PowerManagementD0Ev
+ 603 001c 00000000 		.word	_ZN5amiro15PowerManagement15updateSensorValEv
+ 604 0020 00000000 		.word	_ZN5amiro15PowerManagement17periodicBroadcastEv
+ 605 0024 00000000 		.word	_ZN5amiro15PowerManagement9calibrateEv
+ 606 0028 00000000 		.word	_ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+ 607 002c E0FDFFFF 		.word	-544
+ 608 0030 00000000 		.word	0
+ 609 0034 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
+ 610 0038 00000000 		.word	_ZN5amiro23ControllerAreaNetworkRx4mainEv
+ 611 003c 00000000 		.word	_ZThn544_N5amiro15PowerManagement5startEm
+ARM GAS  /tmp/ccjy2EA2.s 			page 12
+
+
+ 612 0040 00000000 		.word	_ZThn544_N5amiro15PowerManagementD1Ev
+ 613 0044 00000000 		.word	_ZThn544_N5amiro15PowerManagementD0Ev
+ 614 0048 00000000 		.word	_ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+ 615 004c 00000000 		.section	.bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE,"aw",%nobits
+ 616              		.align	2
+ 617              		.set	.LANCHOR1,. + 0
+ 618              		.type	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, %object
+ 619              		.size	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE, 8
+ 620              	_ZN5amiro9constants12DiWheelDriveL10wheelErrorE:
+ 621 0000 00000000 		.space	8
+ 621      00000000 
+ 622              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccjy2EA2.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 PowerManagement.cpp
+     /tmp/ccjy2EA2.s:18     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 $t
+     /tmp/ccjy2EA2.s:24     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 _ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+     /tmp/ccjy2EA2.s:93     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000090 $d
+     /tmp/ccjy2EA2.s:24     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 .LTHUNK0
+     /tmp/ccjy2EA2.s:98     .text._ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 $t
+     /tmp/ccjy2EA2.s:104    .text._ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 _ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+     /tmp/ccjy2EA2.s:111    .text._ZN5amiro15PowerManagement15updateSensorValEv:00000000 $t
+     /tmp/ccjy2EA2.s:117    .text._ZN5amiro15PowerManagement15updateSensorValEv:00000000 _ZN5amiro15PowerManagement15updateSensorValEv
+     /tmp/ccjy2EA2.s:214    .text._ZN5amiro15PowerManagement15updateSensorValEv:000000dc $d
+     /tmp/ccjy2EA2.s:220    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:00000000 $t
+     /tmp/ccjy2EA2.s:226    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:00000000 _ZN5amiro15PowerManagement17periodicBroadcastEv
+     /tmp/ccjy2EA2.s:297    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:000000c8 $d
+     /tmp/ccjy2EA2.s:300    .text._ZN5amiro15PowerManagementD2Ev:00000000 $t
+     /tmp/ccjy2EA2.s:306    .text._ZN5amiro15PowerManagementD2Ev:00000000 _ZN5amiro15PowerManagementD2Ev
+     /tmp/ccjy2EA2.s:325    .text._ZN5amiro15PowerManagementD2Ev:00000024 $d
+     /tmp/ccjy2EA2.s:306    .text._ZN5amiro15PowerManagementD2Ev:00000000 _ZN5amiro15PowerManagementD1Ev
+     /tmp/ccjy2EA2.s:306    .text._ZN5amiro15PowerManagementD2Ev:00000000 .LTHUNK2
+     /tmp/ccjy2EA2.s:331    .text._ZN5amiro15PowerManagementD1Ev:00000000 $t
+     /tmp/ccjy2EA2.s:337    .text._ZN5amiro15PowerManagementD1Ev:00000000 _ZThn544_N5amiro15PowerManagementD1Ev
+     /tmp/ccjy2EA2.s:344    .text._ZN5amiro15PowerManagementD0Ev:00000000 $t
+     /tmp/ccjy2EA2.s:350    .text._ZN5amiro15PowerManagementD0Ev:00000000 _ZN5amiro15PowerManagementD0Ev
+     /tmp/ccjy2EA2.s:371    .text._ZN5amiro15PowerManagementD0Ev:0000002c $d
+     /tmp/ccjy2EA2.s:374    .text._ZN5amiro15PowerManagementD0Ev:00000030 $t
+     /tmp/ccjy2EA2.s:380    .text._ZN5amiro15PowerManagementD0Ev:00000030 _ZThn544_N5amiro15PowerManagementD0Ev
+     /tmp/ccjy2EA2.s:387    .text._ZN5amiro15PowerManagement5startEm:00000000 $t
+     /tmp/ccjy2EA2.s:393    .text._ZN5amiro15PowerManagement5startEm:00000000 _ZN5amiro15PowerManagement5startEm
+     /tmp/ccjy2EA2.s:428    .text._ZN5amiro15PowerManagement5startEm:00000048 $d
+     /tmp/ccjy2EA2.s:393    .text._ZN5amiro15PowerManagement5startEm:00000000 .LTHUNK1
+     /tmp/ccjy2EA2.s:433    .text._ZThn544_N5amiro15PowerManagement5startEm:00000000 $t
+     /tmp/ccjy2EA2.s:439    .text._ZThn544_N5amiro15PowerManagement5startEm:00000000 _ZThn544_N5amiro15PowerManagement5startEm
+     /tmp/ccjy2EA2.s:446    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000000 $t
+     /tmp/ccjy2EA2.s:452    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000000 _ZN5amiro15PowerManagementC2EP9CANDriver
+     /tmp/ccjy2EA2.s:477    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000034 $d
+     /tmp/ccjy2EA2.s:452    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000000 _ZN5amiro15PowerManagementC1EP9CANDriver
+     /tmp/ccjy2EA2.s:482    .text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:00000000 $t
+     /tmp/ccjy2EA2.s:488    .text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:00000000 _ZN5amiro15PowerManagement28calibrateProximityRingValuesEv
+     /tmp/ccjy2EA2.s:511    .text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:00000028 $d
+     /tmp/ccjy2EA2.s:515    .text._ZN5amiro15PowerManagement9calibrateEv:00000000 $t
+     /tmp/ccjy2EA2.s:521    .text._ZN5amiro15PowerManagement9calibrateEv:00000000 _ZN5amiro15PowerManagement9calibrateEv
+     /tmp/ccjy2EA2.s:528    .text._ZN5amiro15PowerManagement14getPowerStatusEv:00000000 $t
+     /tmp/ccjy2EA2.s:534    .text._ZN5amiro15PowerManagement14getPowerStatusEv:00000000 _ZN5amiro15PowerManagement14getPowerStatusEv
+     /tmp/ccjy2EA2.s:542    .text._ZN5amiro15PowerManagement9terminateEv:00000000 $t
+     /tmp/ccjy2EA2.s:548    .text._ZN5amiro15PowerManagement9terminateEv:00000000 _ZN5amiro15PowerManagement9terminateEv
+     /tmp/ccjy2EA2.s:566    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:00000000 $t
+     /tmp/ccjy2EA2.s:571    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:00000000 _GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver
+     /tmp/ccjy2EA2.s:583    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:0000000c $d
+     /tmp/ccjy2EA2.s:587    .init_array:00000000 $d
+     /tmp/ccjy2EA2.s:595    .rodata._ZTVN5amiro15PowerManagementE:00000000 _ZTVN5amiro15PowerManagementE
+     /tmp/ccjy2EA2.s:591    .rodata._ZTVN5amiro15PowerManagementE:00000000 $d
+     /tmp/ccjy2EA2.s:616    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccjy2EA2.s:620    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccjy2EA2.s:97     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000098 $t
+     /tmp/ccjy2EA2.s:219    .text._ZN5amiro15PowerManagement15updateSensorValEv:000000ec $t
+     /tmp/ccjy2EA2.s:299    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:000000cc $t
+     /tmp/ccjy2EA2.s:330    .text._ZN5amiro15PowerManagementD2Ev:00000028 $t
+ARM GAS  /tmp/ccjy2EA2.s 			page 14
+
+
+     /tmp/ccjy2EA2.s:481    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000038 $t
+     /tmp/ccjy2EA2.s:586    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:00000014 $t
+                           .group:00000000 _ZN5amiro15PowerManagementD5Ev
+
+UNDEFINED SYMBOLS
+_ZN5amiro23ControllerAreaNetworkRx14decodeDeviceIdEP10CANRxFrame
+chOQWriteTimeout
+_ZN5amiro12SerialCanMux14convCan2SerialEPhj
+_ZN5amiro23ControllerAreaNetworkRx13decodeBoardIdEP10CANRxFrame
+_ZN5amiro12SerialCanMux12rcvSwitchCmdEh
+SD1
+global
+_ZNK5amiro7BQ275006Driver9getStatusEv
+_ZN5amiro8VCNL402026getProximityScaledWoOffsetEv
+_ZN5amiro23ControllerAreaNetworkTx14encodeDeviceIdEP10CANTxFramei
+_ZN5amiro23ControllerAreaNetworkTx15transmitMessageEP10CANTxFrame
+_ZN10chibios_rt10BaseThread5sleepEm
+_ZN5amiro23ControllerAreaNetworkRxD2Ev
+_ZN5amiro23ControllerAreaNetworkTxD2Ev
+_ZdlPv
+chThdCreateStatic
+_ZN10chibios_rt10_thd_startEPv
+_ZTVN10chibios_rt15ThreadReferenceE
+_ZN5amiro23ControllerAreaNetworkTxC2EP9CANDriverh
+_ZN5amiro23ControllerAreaNetworkRxC2EP9CANDriverh
+_ZN5amiro8VCNL40209calibrateEv
+_ZN5amiro8VCNL402018getProximityOffsetEv
+_ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth
+_ZN10chibios_rt15ThreadReference16requestTerminateEv
+_ZN10chibios_rt15ThreadReference4waitEv
+_ZN10chibios_rt15ThreadReference4stopEv
+_ZN5amiro23ControllerAreaNetworkTx4mainEv
+_ZN5amiro23ControllerAreaNetworkRx4mainEv

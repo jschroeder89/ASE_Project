@@ -1,0 +1,15 @@
+l3g4200d.cpp:26:1:amiro::L3G4200D::~L3G4200D()	0	static
+l3g4200d.cpp:26:1:virtual amiro::L3G4200D::~L3G4200D()	8	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+chprintf.h:69:20:)	12	static
+l3g4200d.cpp:35:7:virtual msg_t amiro::L3G4200D::main()	32	static
+l3g4200d.cpp:18:1:amiro::L3G4200D::L3G4200D(amiro::HWSPIDriver*)	16	static
+l3g4200d.cpp:31:1:chibios_rt::EvtSource* amiro::L3G4200D::getEventSource()	0	static
+l3g4200d.cpp:57:1:int16_t amiro::L3G4200D::getAngularRate(uint8_t)	0	static
+l3g4200d.cpp:63:1:int32_t amiro::L3G4200D::getAngularRate_udps(uint8_t)	0	static
+l3g4200d.cpp:69:1:int32_t amiro::L3G4200D::getAngular(uint8_t)	0	static
+l3g4200d.cpp:75:1:int32_t amiro::L3G4200D::getAngular_ud(uint8_t)	8	static
+l3g4200d.cpp:95:1:void amiro::L3G4200D::angularReset()	0	static
+l3g4200d.cpp:134:7:msg_t amiro::L3G4200D::configure(const amiro::L3G4200D::L3G4200DConfig*)	32	static
+l3g4200d.cpp:180:9:uint8_t amiro::L3G4200D::getCheck()	16	static
+l3g4200d.cpp:199:1:cpp)	0	static

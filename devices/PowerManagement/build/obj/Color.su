@@ -1,0 +1,13 @@
+Color.cpp:9:1:amiro::Color::Color()	0	static
+Color.cpp:15:1:amiro::Color::Color(const amiro::Color&)	8	static
+Color.cpp:21:1:amiro::Color::Color(int, int, int)	4	static
+Color.cpp:27:1:amiro::Color::Color(amiro::Color::GlobalColor)	8	static
+Color.cpp:197:6:void amiro::Color::getRedGreenBlue(int*, int*, int*)	4	static
+Color.cpp:203:5:int amiro::Color::getRed()	0	static
+Color.cpp:207:5:int amiro::Color::getGreen()	0	static
+Color.cpp:211:5:int amiro::Color::getBlue()	0	static
+Color.cpp:215:7:amiro::Color amiro::Color::lighter(int)	24	static
+Color.cpp:184:7:amiro::Color amiro::Color::darker(int)	16	static
+Color.cpp:232:6:void amiro::Color::setRedGreenBlue(int, int, int)	0	static
+Color.cpp:238:8:amiro::Color& amiro::Color::operator=(const amiro::Color&)	4	static
+Color.cpp:247:8:amiro::Color& amiro::Color::operator=(amiro::Color::GlobalColor)	8	static

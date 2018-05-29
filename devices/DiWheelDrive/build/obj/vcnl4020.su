@@ -1,0 +1,15 @@
+vcnl4020.cpp:15:1:amiro::VCNL4020::~VCNL4020()	0	static
+vcnl4020.cpp:15:1:virtual amiro::VCNL4020::~VCNL4020()	8	static
+vcnl4020.cpp:82:1:virtual msg_t amiro::VCNL4020::main()	40	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+vcnl4020.cpp:20:1:amiro::VCNL4020::VCNL4020(amiro::I2CDriver*, const amiro::VCNL4020::VCNL4020Config*)	16	static
+vcnl4020.cpp:34:1:uint16_t amiro::VCNL4020::getAmbientLight()	0	static
+vcnl4020.cpp:41:1:void amiro::VCNL4020::setProximityOffset(uint16_t)	0	static
+vcnl4020.cpp:48:1:uint16_t amiro::VCNL4020::getProximityOffset()	0	static
+vcnl4020.cpp:55:1:chibios_rt::EvtSource* amiro::VCNL4020::getEventSource()	0	static
+vcnl4020.cpp:62:1:uint16_t amiro::VCNL4020::getProximity()	0	static
+vcnl4020.cpp:69:1:uint16_t amiro::VCNL4020::getProximityScaledWoOffset()	16	static
+vcnl4020.cpp:174:1:uint8_t amiro::VCNL4020::getCheck()	48	static
+vcnl4020.cpp:219:1:uint8_t amiro::VCNL4020::calibrateOffset(uint16_t&)	40	static
+vcnl4020.cpp:201:1:uint8_t amiro::VCNL4020::calibrate()	16	static
+vcnl4020.cpp:248:1:cpp)	0	static

@@ -1,0 +1,12 @@
+chthreads.c:76:9:_thread_init	28	static
+chthreads.c:157:9:chThdCreateI	48	static
+chthreads.c:187:9:chThdCreateStatic	32	static
+chthreads.c:217:9:chThdSetPriority	16	static
+chthreads.c:250:9:chThdResume	8	static
+chthreads.c:273:6:chThdTerminate	8	static
+chthreads.c:292:6:chThdSleep	8	static
+chthreads.c:309:6:chThdSleepUntil	8	static
+chthreads.c:324:6:chThdYield	8	static
+chthreads.c:366:6:chThdExitS	16	static
+chthreads.c:345:6:chThdExit	8	static
+chthreads.c:420:7:chThdWait	16	static

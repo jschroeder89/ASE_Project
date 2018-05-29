@@ -1,0 +1,200 @@
+ARM GAS  /tmp/cc9EyXMM.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"eeprom.cpp"
+  17              		.section	.text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE, %function
+  24              	_ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:
+  25              		@ args = 12, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 70B5     		push	{r4, r5, r6, lr}
+  28 0002 0446     		mov	r4, r0
+  29 0004 BDF81060 		ldrh	r6, [sp, #16]
+  30 0008 0698     		ldr	r0, [sp, #24]
+  31 000a E260     		str	r2, [r4, #12]
+  32 000c 0022     		movs	r2, #0
+  33 000e 6682     		strh	r6, [r4, #18]	@ movhi
+  34 0010 6061     		str	r0, [r4, #20]
+  35 0012 9DF81460 		ldrb	r6, [sp, #20]	@ zero_extendqisi2
+  36 0016 2374     		strb	r3, [r4, #16]
+  37 0018 04F12C00 		add	r0, r4, #44
+  38 001c 6260     		str	r2, [r4, #4]
+  39 001e A260     		str	r2, [r4, #8]
+  40 0020 0D46     		mov	r5, r1
+  41 0022 FFF7FEFF 		bl	chMtxInit
+  42 0026 2683     		strh	r6, [r4, #24]	@ movhi
+  43 0028 2560     		str	r5, [r4]
+  44 002a 2046     		mov	r0, r4
+  45 002c 70BD     		pop	{r4, r5, r6, pc}
+  46              		.size	_ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE, .-_ZN5amiro6EEPROMC2EPK17BaseFi
+  47              		.global	_ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+  48              		.thumb_set _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE,_ZN5amiro6EEPROMC2EPK17Base
+  49 002e 00BF     		.section	.text._ZN5amiro6EEPROMD2Ev,"ax",%progbits
+  50              		.align	2
+  51              		.p2align 4,,15
+  52              		.global	_ZN5amiro6EEPROMD2Ev
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	_ZN5amiro6EEPROMD2Ev, %function
+  56              	_ZN5amiro6EEPROMD2Ev:
+  57              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/cc9EyXMM.s 			page 2
+
+
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  60 0000 7047     		bx	lr
+  61              		.size	_ZN5amiro6EEPROMD2Ev, .-_ZN5amiro6EEPROMD2Ev
+  62              		.global	_ZN5amiro6EEPROMD1Ev
+  63              		.thumb_set _ZN5amiro6EEPROMD1Ev,_ZN5amiro6EEPROMD2Ev
+  64 0002 00BFAFF3 		.section	.text._ZN5amiro6EEPROM7acquireEv,"ax",%progbits
+  64      0080AFF3 
+  64      0080AFF3 
+  64      0080
+  65              		.align	2
+  66              		.p2align 4,,15
+  67              		.global	_ZN5amiro6EEPROM7acquireEv
+  68              		.thumb
+  69              		.thumb_func
+  70              		.type	_ZN5amiro6EEPROM7acquireEv, %function
+  71              	_ZN5amiro6EEPROM7acquireEv:
+  72              		@ args = 0, pretend = 0, frame = 0
+  73              		@ frame_needed = 0, uses_anonymous_args = 0
+  74              		@ link register save eliminated.
+  75 0000 2C30     		adds	r0, r0, #44
+  76 0002 FFF7FEBF 		b	chMtxLock
+  77              		.size	_ZN5amiro6EEPROM7acquireEv, .-_ZN5amiro6EEPROM7acquireEv
+  78 0006 00BFAFF3 		.section	.text._ZN5amiro6EEPROM7releaseEv,"ax",%progbits
+  78      0080AFF3 
+  78      0080
+  79              		.align	2
+  80              		.p2align 4,,15
+  81              		.global	_ZN5amiro6EEPROM7releaseEv
+  82              		.thumb
+  83              		.thumb_func
+  84              		.type	_ZN5amiro6EEPROM7releaseEv, %function
+  85              	_ZN5amiro6EEPROM7releaseEv:
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		@ link register save eliminated.
+  89 0000 FFF7FEBF 		b	chMtxUnlock
+  90              		.size	_ZN5amiro6EEPROM7releaseEv, .-_ZN5amiro6EEPROM7releaseEv
+  91 0004 AFF30080 		.section	.text._ZN5amiro6EEPROM8geterrorEPv,"ax",%progbits
+  91      AFF30080 
+  91      AFF30080 
+  92              		.align	2
+  93              		.p2align 4,,15
+  94              		.global	_ZN5amiro6EEPROM8geterrorEPv
+  95              		.thumb
+  96              		.thumb_func
+  97              		.type	_ZN5amiro6EEPROM8geterrorEPv, %function
+  98              	_ZN5amiro6EEPROM8geterrorEPv:
+  99              		@ args = 0, pretend = 0, frame = 0
+ 100              		@ frame_needed = 0, uses_anonymous_args = 0
+ 101              		@ link register save eliminated.
+ 102 0000 4068     		ldr	r0, [r0, #4]
+ 103 0002 7047     		bx	lr
+ 104              		.size	_ZN5amiro6EEPROM8geterrorEPv, .-_ZN5amiro6EEPROM8geterrorEPv
+ 105 0004 AFF30080 		.section	.text._ZN5amiro6EEPROM7getsizeEPv,"ax",%progbits
+ 105      AFF30080 
+ 105      AFF30080 
+ARM GAS  /tmp/cc9EyXMM.s 			page 3
+
+
+ 106              		.align	2
+ 107              		.p2align 4,,15
+ 108              		.global	_ZN5amiro6EEPROM7getsizeEPv
+ 109              		.thumb
+ 110              		.thumb_func
+ 111              		.type	_ZN5amiro6EEPROM7getsizeEPv, %function
+ 112              	_ZN5amiro6EEPROM7getsizeEPv:
+ 113              		@ args = 0, pretend = 0, frame = 0
+ 114              		@ frame_needed = 0, uses_anonymous_args = 0
+ 115              		@ link register save eliminated.
+ 116 0000 C068     		ldr	r0, [r0, #12]
+ 117 0002 7047     		bx	lr
+ 118              		.size	_ZN5amiro6EEPROM7getsizeEPv, .-_ZN5amiro6EEPROM7getsizeEPv
+ 119 0004 AFF30080 		.section	.text._ZN5amiro6EEPROM11getpositionEPv,"ax",%progbits
+ 119      AFF30080 
+ 119      AFF30080 
+ 120              		.align	2
+ 121              		.p2align 4,,15
+ 122              		.global	_ZN5amiro6EEPROM11getpositionEPv
+ 123              		.thumb
+ 124              		.thumb_func
+ 125              		.type	_ZN5amiro6EEPROM11getpositionEPv, %function
+ 126              	_ZN5amiro6EEPROM11getpositionEPv:
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129              		@ link register save eliminated.
+ 130 0000 8068     		ldr	r0, [r0, #8]
+ 131 0002 7047     		bx	lr
+ 132              		.size	_ZN5amiro6EEPROM11getpositionEPv, .-_ZN5amiro6EEPROM11getpositionEPv
+ 133 0004 AFF30080 		.section	.text._ZN5amiro6EEPROM5lseekEPvm,"ax",%progbits
+ 133      AFF30080 
+ 133      AFF30080 
+ 134              		.align	2
+ 135              		.p2align 4,,15
+ 136              		.global	_ZN5amiro6EEPROM5lseekEPvm
+ 137              		.thumb
+ 138              		.thumb_func
+ 139              		.type	_ZN5amiro6EEPROM5lseekEPvm, %function
+ 140              	_ZN5amiro6EEPROM5lseekEPvm:
+ 141              		@ args = 0, pretend = 0, frame = 0
+ 142              		@ frame_needed = 0, uses_anonymous_args = 0
+ 143              		@ link register save eliminated.
+ 144 0000 8160     		str	r1, [r0, #8]
+ 145 0002 0020     		movs	r0, #0
+ 146 0004 7047     		bx	lr
+ 147              		.size	_ZN5amiro6EEPROM5lseekEPvm, .-_ZN5amiro6EEPROM5lseekEPvm
+ 148 0006 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 148      0080AFF3 
+ 148      0080
+ARM GAS  /tmp/cc9EyXMM.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 eeprom.cpp
+     /tmp/cc9EyXMM.s:18     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 $t
+     /tmp/cc9EyXMM.s:24     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+     /tmp/cc9EyXMM.s:24     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+     /tmp/cc9EyXMM.s:50     .text._ZN5amiro6EEPROMD2Ev:00000000 $t
+     /tmp/cc9EyXMM.s:56     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD2Ev
+     /tmp/cc9EyXMM.s:56     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD1Ev
+     /tmp/cc9EyXMM.s:65     .text._ZN5amiro6EEPROM7acquireEv:00000000 $t
+     /tmp/cc9EyXMM.s:71     .text._ZN5amiro6EEPROM7acquireEv:00000000 _ZN5amiro6EEPROM7acquireEv
+     /tmp/cc9EyXMM.s:79     .text._ZN5amiro6EEPROM7releaseEv:00000000 $t
+     /tmp/cc9EyXMM.s:85     .text._ZN5amiro6EEPROM7releaseEv:00000000 _ZN5amiro6EEPROM7releaseEv
+     /tmp/cc9EyXMM.s:92     .text._ZN5amiro6EEPROM8geterrorEPv:00000000 $t
+     /tmp/cc9EyXMM.s:98     .text._ZN5amiro6EEPROM8geterrorEPv:00000000 _ZN5amiro6EEPROM8geterrorEPv
+     /tmp/cc9EyXMM.s:106    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 $t
+     /tmp/cc9EyXMM.s:112    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 _ZN5amiro6EEPROM7getsizeEPv
+     /tmp/cc9EyXMM.s:120    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 $t
+     /tmp/cc9EyXMM.s:126    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 _ZN5amiro6EEPROM11getpositionEPv
+     /tmp/cc9EyXMM.s:134    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 $t
+     /tmp/cc9EyXMM.s:140    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 _ZN5amiro6EEPROM5lseekEPvm
+
+UNDEFINED SYMBOLS
+chMtxInit
+chMtxLock
+chMtxUnlock

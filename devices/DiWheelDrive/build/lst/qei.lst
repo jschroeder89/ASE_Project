@@ -1,0 +1,348 @@
+ARM GAS  /tmp/ccbUlUsm.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"qei.c"
+  15              		.section	.text.qeiInit,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	qeiInit
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	qeiInit, %function
+  22              	qeiInit:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 FFF7FEBF 		b	qei_lld_init
+  27              		.size	qeiInit, .-qeiInit
+  28 0004 AFF30080 		.section	.text.qeiObjectInit,"ax",%progbits
+  28      AFF30080 
+  28      AFF30080 
+  29              		.align	2
+  30              		.p2align 4,,15
+  31              		.global	qeiObjectInit
+  32              		.thumb
+  33              		.thumb_func
+  34              		.type	qeiObjectInit, %function
+  35              	qeiObjectInit:
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38              		@ link register save eliminated.
+  39 0000 0122     		movs	r2, #1
+  40 0002 0023     		movs	r3, #0
+  41 0004 0270     		strb	r2, [r0]
+  42 0006 4360     		str	r3, [r0, #4]
+  43 0008 7047     		bx	lr
+  44              		.size	qeiObjectInit, .-qeiObjectInit
+  45 000a 00BFAFF3 		.section	.text.qeiStart,"ax",%progbits
+  45      0080
+  46              		.align	2
+  47              		.p2align 4,,15
+  48              		.global	qeiStart
+  49              		.thumb
+  50              		.thumb_func
+  51              		.type	qeiStart, %function
+  52              	qeiStart:
+  53              		@ args = 0, pretend = 0, frame = 0
+  54              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccbUlUsm.s 			page 2
+
+
+  55 0000 38B5     		push	{r3, r4, r5, lr}
+  56 0002 0446     		mov	r4, r0
+  57 0004 0D46     		mov	r5, r1
+  58 0006 C0B1     		cbz	r0, .L4
+  59 0008 B9B1     		cbz	r1, .L4
+  60              	.L5:
+  61 000a 2023     		movs	r3, #32
+  62              	@ 72 "../../hal/src/qei.c" 1
+  63 000c 83F31188 		msr     BASEPRI, r3
+  64              	@ 0 "" 2
+  65              		.thumb
+  66 0010 FFF7FEFF 		bl	dbg_check_lock
+  67 0014 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+  68 0016 013B     		subs	r3, r3, #1
+  69 0018 012B     		cmp	r3, #1
+  70 001a 02D9     		bls	.L6
+  71 001c 0948     		ldr	r0, .L11
+  72 001e FFF7FEFF 		bl	chDbgPanic
+  73              	.L6:
+  74 0022 2046     		mov	r0, r4
+  75 0024 6560     		str	r5, [r4, #4]
+  76 0026 FFF7FEFF 		bl	qei_lld_start
+  77 002a 0223     		movs	r3, #2
+  78 002c 2370     		strb	r3, [r4]
+  79 002e FFF7FEFF 		bl	dbg_check_unlock
+  80 0032 0023     		movs	r3, #0
+  81              	@ 78 "../../hal/src/qei.c" 1
+  82 0034 83F31188 		msr     BASEPRI, r3
+  83              	@ 0 "" 2
+  84              		.thumb
+  85 0038 38BD     		pop	{r3, r4, r5, pc}
+  86              	.L4:
+  87 003a 0348     		ldr	r0, .L11+4
+  88 003c FFF7FEFF 		bl	chDbgPanic
+  89 0040 E3E7     		b	.L5
+  90              	.L12:
+  91 0042 00BF     		.align	2
+  92              	.L11:
+  93 0044 10000000 		.word	.LC1
+  94 0048 00000000 		.word	.LC0
+  95              		.size	qeiStart, .-qeiStart
+  96 004c AFF30080 		.section	.text.qeiStop,"ax",%progbits
+  97              		.align	2
+  98              		.p2align 4,,15
+  99              		.global	qeiStop
+ 100              		.thumb
+ 101              		.thumb_func
+ 102              		.type	qeiStop, %function
+ 103              	qeiStop:
+ 104              		@ args = 0, pretend = 0, frame = 0
+ 105              		@ frame_needed = 0, uses_anonymous_args = 0
+ 106 0000 10B5     		push	{r4, lr}
+ 107 0002 0446     		mov	r4, r0
+ 108 0004 B0B1     		cbz	r0, .L16
+ 109              	.L14:
+ 110 0006 2023     		movs	r3, #32
+ 111              	@ 92 "../../hal/src/qei.c" 1
+ARM GAS  /tmp/ccbUlUsm.s 			page 3
+
+
+ 112 0008 83F31188 		msr     BASEPRI, r3
+ 113              	@ 0 "" 2
+ 114              		.thumb
+ 115 000c FFF7FEFF 		bl	dbg_check_lock
+ 116 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 117 0012 013B     		subs	r3, r3, #1
+ 118 0014 012B     		cmp	r3, #1
+ 119 0016 02D9     		bls	.L15
+ 120 0018 0848     		ldr	r0, .L17
+ 121 001a FFF7FEFF 		bl	chDbgPanic
+ 122              	.L15:
+ 123 001e 2046     		mov	r0, r4
+ 124 0020 FFF7FEFF 		bl	qei_lld_stop
+ 125 0024 0123     		movs	r3, #1
+ 126 0026 2370     		strb	r3, [r4]
+ 127 0028 FFF7FEFF 		bl	dbg_check_unlock
+ 128 002c 0023     		movs	r3, #0
+ 129              	@ 97 "../../hal/src/qei.c" 1
+ 130 002e 83F31188 		msr     BASEPRI, r3
+ 131              	@ 0 "" 2
+ 132              		.thumb
+ 133 0032 10BD     		pop	{r4, pc}
+ 134              	.L16:
+ 135 0034 0248     		ldr	r0, .L17+4
+ 136 0036 FFF7FEFF 		bl	chDbgPanic
+ 137 003a E4E7     		b	.L14
+ 138              	.L18:
+ 139              		.align	2
+ 140              	.L17:
+ 141 003c 2C000000 		.word	.LC3
+ 142 0040 20000000 		.word	.LC2
+ 143              		.size	qeiStop, .-qeiStop
+ 144 0044 AFF30080 		.section	.text.qeiEnable,"ax",%progbits
+ 144      AFF30080 
+ 144      AFF30080 
+ 145              		.align	2
+ 146              		.p2align 4,,15
+ 147              		.global	qeiEnable
+ 148              		.thumb
+ 149              		.thumb_func
+ 150              		.type	qeiEnable, %function
+ 151              	qeiEnable:
+ 152              		@ args = 0, pretend = 0, frame = 0
+ 153              		@ frame_needed = 0, uses_anonymous_args = 0
+ 154 0000 10B5     		push	{r4, lr}
+ 155 0002 0446     		mov	r4, r0
+ 156 0004 A8B1     		cbz	r0, .L25
+ 157              	.L20:
+ 158 0006 2023     		movs	r3, #32
+ 159              	@ 111 "../../hal/src/qei.c" 1
+ 160 0008 83F31188 		msr     BASEPRI, r3
+ 161              	@ 0 "" 2
+ 162              		.thumb
+ 163 000c FFF7FEFF 		bl	dbg_check_lock
+ 164 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 165 0012 022B     		cmp	r3, #2
+ 166 0014 02D0     		beq	.L21
+ARM GAS  /tmp/ccbUlUsm.s 			page 4
+
+
+ 167 0016 0948     		ldr	r0, .L26
+ 168 0018 FFF7FEFF 		bl	chDbgPanic
+ 169              	.L21:
+ 170 001c 2046     		mov	r0, r4
+ 171 001e FFF7FEFF 		bl	qei_lld_enable
+ 172 0022 0423     		movs	r3, #4
+ 173 0024 2370     		strb	r3, [r4]
+ 174 0026 FFF7FEFF 		bl	dbg_check_unlock
+ 175 002a 0023     		movs	r3, #0
+ 176              	@ 115 "../../hal/src/qei.c" 1
+ 177 002c 83F31188 		msr     BASEPRI, r3
+ 178              	@ 0 "" 2
+ 179              		.thumb
+ 180 0030 10BD     		pop	{r4, pc}
+ 181              	.L25:
+ 182 0032 0348     		ldr	r0, .L26+4
+ 183 0034 FFF7FEFF 		bl	chDbgPanic
+ 184 0038 E5E7     		b	.L20
+ 185              	.L27:
+ 186 003a 00BF     		.align	2
+ 187              	.L26:
+ 188 003c 4C000000 		.word	.LC5
+ 189 0040 3C000000 		.word	.LC4
+ 190              		.size	qeiEnable, .-qeiEnable
+ 191 0044 AFF30080 		.section	.text.qeiDisable,"ax",%progbits
+ 191      AFF30080 
+ 191      AFF30080 
+ 192              		.align	2
+ 193              		.p2align 4,,15
+ 194              		.global	qeiDisable
+ 195              		.thumb
+ 196              		.thumb_func
+ 197              		.type	qeiDisable, %function
+ 198              	qeiDisable:
+ 199              		@ args = 0, pretend = 0, frame = 0
+ 200              		@ frame_needed = 0, uses_anonymous_args = 0
+ 201 0000 10B5     		push	{r4, lr}
+ 202 0002 0446     		mov	r4, r0
+ 203 0004 B8B1     		cbz	r0, .L37
+ 204              	.L29:
+ 205 0006 2023     		movs	r3, #32
+ 206              	@ 129 "../../hal/src/qei.c" 1
+ 207 0008 83F31188 		msr     BASEPRI, r3
+ 208              	@ 0 "" 2
+ 209              		.thumb
+ 210 000c FFF7FEFF 		bl	dbg_check_lock
+ 211 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 212 0012 022B     		cmp	r3, #2
+ 213 0014 04D0     		beq	.L30
+ 214 0016 042B     		cmp	r3, #4
+ 215 0018 02D0     		beq	.L30
+ 216 001a 0948     		ldr	r0, .L38
+ 217 001c FFF7FEFF 		bl	chDbgPanic
+ 218              	.L30:
+ 219 0020 2046     		mov	r0, r4
+ 220 0022 FFF7FEFF 		bl	qei_lld_disable
+ 221 0026 0223     		movs	r3, #2
+ARM GAS  /tmp/ccbUlUsm.s 			page 5
+
+
+ 222 0028 2370     		strb	r3, [r4]
+ 223 002a FFF7FEFF 		bl	dbg_check_unlock
+ 224 002e 0023     		movs	r3, #0
+ 225              	@ 134 "../../hal/src/qei.c" 1
+ 226 0030 83F31188 		msr     BASEPRI, r3
+ 227              	@ 0 "" 2
+ 228              		.thumb
+ 229 0034 10BD     		pop	{r4, pc}
+ 230              	.L37:
+ 231 0036 0348     		ldr	r0, .L38+4
+ 232 0038 FFF7FEFF 		bl	chDbgPanic
+ 233 003c E3E7     		b	.L29
+ 234              	.L39:
+ 235 003e 00BF     		.align	2
+ 236              	.L38:
+ 237 0040 6C000000 		.word	.LC7
+ 238 0044 5C000000 		.word	.LC6
+ 239              		.size	qeiDisable, .-qeiDisable
+ 240              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 241              		.align	2
+ 242              	.LC0:
+ 243 0000 22716569 		.ascii	"\"qeiStart\"()\000"
+ 243      53746172 
+ 243      74222829 
+ 243      00
+ 244 000d 000000   		.space	3
+ 245              	.LC1:
+ 246 0010 71656953 		.ascii	"qeiStart(), #1\000"
+ 246      74617274 
+ 246      28292C20 
+ 246      233100
+ 247 001f 00       		.space	1
+ 248              	.LC2:
+ 249 0020 22716569 		.ascii	"\"qeiStop\"()\000"
+ 249      53746F70 
+ 249      22282900 
+ 250              	.LC3:
+ 251 002c 71656953 		.ascii	"qeiStop(), #1\000"
+ 251      746F7028 
+ 251      292C2023 
+ 251      3100
+ 252 003a 0000     		.space	2
+ 253              	.LC4:
+ 254 003c 22716569 		.ascii	"\"qeiEnable\"()\000"
+ 254      456E6162 
+ 254      6C652228 
+ 254      2900
+ 255 004a 0000     		.space	2
+ 256              	.LC5:
+ 257 004c 71656945 		.ascii	"qeiEnable(), #1\000"
+ 257      6E61626C 
+ 257      6528292C 
+ 257      20233100 
+ 258              	.LC6:
+ 259 005c 22716569 		.ascii	"\"qeiDisable\"()\000"
+ 259      44697361 
+ 259      626C6522 
+ARM GAS  /tmp/ccbUlUsm.s 			page 6
+
+
+ 259      282900
+ 260 006b 00       		.space	1
+ 261              	.LC7:
+ 262 006c 71656944 		.ascii	"qeiDisable(), #1\000"
+ 262      69736162 
+ 262      6C652829 
+ 262      2C202331 
+ 262      00
+ 263 007d 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccbUlUsm.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 qei.c
+     /tmp/ccbUlUsm.s:16     .text.qeiInit:00000000 $t
+     /tmp/ccbUlUsm.s:22     .text.qeiInit:00000000 qeiInit
+     /tmp/ccbUlUsm.s:29     .text.qeiObjectInit:00000000 $t
+     /tmp/ccbUlUsm.s:35     .text.qeiObjectInit:00000000 qeiObjectInit
+     /tmp/ccbUlUsm.s:46     .text.qeiStart:00000000 $t
+     /tmp/ccbUlUsm.s:52     .text.qeiStart:00000000 qeiStart
+     /tmp/ccbUlUsm.s:93     .text.qeiStart:00000044 $d
+     /tmp/ccbUlUsm.s:97     .text.qeiStop:00000000 $t
+     /tmp/ccbUlUsm.s:103    .text.qeiStop:00000000 qeiStop
+     /tmp/ccbUlUsm.s:141    .text.qeiStop:0000003c $d
+     /tmp/ccbUlUsm.s:145    .text.qeiEnable:00000000 $t
+     /tmp/ccbUlUsm.s:151    .text.qeiEnable:00000000 qeiEnable
+     /tmp/ccbUlUsm.s:188    .text.qeiEnable:0000003c $d
+     /tmp/ccbUlUsm.s:192    .text.qeiDisable:00000000 $t
+     /tmp/ccbUlUsm.s:198    .text.qeiDisable:00000000 qeiDisable
+     /tmp/ccbUlUsm.s:237    .text.qeiDisable:00000040 $d
+     /tmp/ccbUlUsm.s:241    .rodata.str1.4:00000000 $d
+     /tmp/ccbUlUsm.s:96     .text.qeiStart:0000004c $t
+     /tmp/ccbUlUsm.s:144    .text.qeiStop:00000044 $t
+     /tmp/ccbUlUsm.s:191    .text.qeiEnable:00000044 $t
+     /tmp/ccbUlUsm.s:263    .text.qeiDisable:00000048 $t
+
+UNDEFINED SYMBOLS
+qei_lld_init
+dbg_check_lock
+chDbgPanic
+qei_lld_start
+dbg_check_unlock
+qei_lld_stop
+qei_lld_enable
+qei_lld_disable

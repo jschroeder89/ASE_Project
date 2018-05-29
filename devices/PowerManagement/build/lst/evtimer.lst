@@ -1,0 +1,167 @@
+ARM GAS  /tmp/cc9tA3Oo.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"evtimer.c"
+  17              		.section	.text.tmrcb,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.thumb
+  21              		.thumb_func
+  22              		.type	tmrcb, %function
+  23              	tmrcb:
+  24              		@ args = 0, pretend = 0, frame = 0
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26 0000 10B5     		push	{r4, lr}
+  27 0002 2023     		movs	r3, #32
+  28 0004 0446     		mov	r4, r0
+  29              	@ 31 "../../../ChibiOS/os/various/evtimer.c" 1
+  30 0006 83F31188 		msr     BASEPRI, r3
+  31              	@ 0 "" 2
+  32              		.thumb
+  33 000a FFF7FEFF 		bl	dbg_check_lock_from_isr
+  34 000e 04F11400 		add	r0, r4, #20
+  35 0012 0021     		movs	r1, #0
+  36 0014 FFF7FEFF 		bl	chEvtBroadcastFlagsI
+  37 0018 2346     		mov	r3, r4
+  38 001a 2046     		mov	r0, r4
+  39 001c A169     		ldr	r1, [r4, #24]
+  40 001e 044A     		ldr	r2, .L2
+  41 0020 FFF7FEFF 		bl	chVTSetI
+  42 0024 FFF7FEFF 		bl	dbg_check_unlock_from_isr
+  43 0028 0023     		movs	r3, #0
+  44              	@ 34 "../../../ChibiOS/os/various/evtimer.c" 1
+  45 002a 83F31188 		msr     BASEPRI, r3
+  46              	@ 0 "" 2
+  47              		.thumb
+  48 002e 10BD     		pop	{r4, pc}
+  49              	.L3:
+  50              		.align	2
+  51              	.L2:
+  52 0030 00000000 		.word	tmrcb
+  53              		.size	tmrcb, .-tmrcb
+  54 0034 AFF30080 		.section	.text.evtStart,"ax",%progbits
+  54      AFF30080 
+  54      AFF30080 
+  55              		.align	2
+ARM GAS  /tmp/cc9tA3Oo.s 			page 2
+
+
+  56              		.p2align 4,,15
+  57              		.global	evtStart
+  58              		.thumb
+  59              		.thumb_func
+  60              		.type	evtStart, %function
+  61              	evtStart:
+  62              		@ args = 0, pretend = 0, frame = 0
+  63              		@ frame_needed = 0, uses_anonymous_args = 0
+  64 0000 10B5     		push	{r4, lr}
+  65 0002 2023     		movs	r3, #32
+  66 0004 0446     		mov	r4, r0
+  67              	@ 45 "../../../ChibiOS/os/various/evtimer.c" 1
+  68 0006 83F31188 		msr     BASEPRI, r3
+  69              	@ 0 "" 2
+  70              		.thumb
+  71 000a FFF7FEFF 		bl	dbg_check_lock
+  72 000e E368     		ldr	r3, [r4, #12]
+  73 0010 2BB1     		cbz	r3, .L7
+  74 0012 FFF7FEFF 		bl	dbg_check_unlock
+  75 0016 0023     		movs	r3, #0
+  76              	@ 50 "../../../ChibiOS/os/various/evtimer.c" 1
+  77 0018 83F31188 		msr     BASEPRI, r3
+  78              	@ 0 "" 2
+  79              		.thumb
+  80 001c 10BD     		pop	{r4, pc}
+  81              	.L7:
+  82 001e 2346     		mov	r3, r4
+  83 0020 2046     		mov	r0, r4
+  84 0022 A169     		ldr	r1, [r4, #24]
+  85 0024 044A     		ldr	r2, .L8
+  86 0026 FFF7FEFF 		bl	chVTSetI
+  87 002a FFF7FEFF 		bl	dbg_check_unlock
+  88 002e 0023     		movs	r3, #0
+  89              	@ 50 "../../../ChibiOS/os/various/evtimer.c" 1
+  90 0030 83F31188 		msr     BASEPRI, r3
+  91              	@ 0 "" 2
+  92              		.thumb
+  93 0034 10BD     		pop	{r4, pc}
+  94              	.L9:
+  95 0036 00BF     		.align	2
+  96              	.L8:
+  97 0038 00000000 		.word	tmrcb
+  98              		.size	evtStart, .-evtStart
+  99 003c AFF30080 		.section	.text.evtStop,"ax",%progbits
+ 100              		.align	2
+ 101              		.p2align 4,,15
+ 102              		.global	evtStop
+ 103              		.thumb
+ 104              		.thumb_func
+ 105              		.type	evtStop, %function
+ 106              	evtStop:
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109 0000 10B5     		push	{r4, lr}
+ 110 0002 2023     		movs	r3, #32
+ 111 0004 0446     		mov	r4, r0
+ 112              	@ 61 "../../../ChibiOS/os/various/evtimer.c" 1
+ARM GAS  /tmp/cc9tA3Oo.s 			page 3
+
+
+ 113 0006 83F31188 		msr     BASEPRI, r3
+ 114              	@ 0 "" 2
+ 115              		.thumb
+ 116 000a FFF7FEFF 		bl	dbg_check_lock
+ 117 000e E368     		ldr	r3, [r4, #12]
+ 118 0010 13B1     		cbz	r3, .L11
+ 119 0012 2046     		mov	r0, r4
+ 120 0014 FFF7FEFF 		bl	chVTResetI
+ 121              	.L11:
+ 122 0018 FFF7FEFF 		bl	dbg_check_unlock
+ 123 001c 0023     		movs	r3, #0
+ 124              	@ 61 "../../../ChibiOS/os/various/evtimer.c" 1
+ 125 001e 83F31188 		msr     BASEPRI, r3
+ 126              	@ 0 "" 2
+ 127              		.thumb
+ 128 0022 10BD     		pop	{r4, pc}
+ 129              		.size	evtStop, .-evtStop
+ 130 0024 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 130      AFF30080 
+ 130      AFF30080 
+ARM GAS  /tmp/cc9tA3Oo.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 evtimer.c
+     /tmp/cc9tA3Oo.s:18     .text.tmrcb:00000000 $t
+     /tmp/cc9tA3Oo.s:23     .text.tmrcb:00000000 tmrcb
+     /tmp/cc9tA3Oo.s:52     .text.tmrcb:00000030 $d
+     /tmp/cc9tA3Oo.s:55     .text.evtStart:00000000 $t
+     /tmp/cc9tA3Oo.s:61     .text.evtStart:00000000 evtStart
+     /tmp/cc9tA3Oo.s:97     .text.evtStart:00000038 $d
+     /tmp/cc9tA3Oo.s:100    .text.evtStop:00000000 $t
+     /tmp/cc9tA3Oo.s:106    .text.evtStop:00000000 evtStop
+     /tmp/cc9tA3Oo.s:54     .text.tmrcb:00000034 $t
+     /tmp/cc9tA3Oo.s:99     .text.evtStart:0000003c $t
+
+UNDEFINED SYMBOLS
+dbg_check_lock_from_isr
+chEvtBroadcastFlagsI
+chVTSetI
+dbg_check_unlock_from_isr
+dbg_check_lock
+dbg_check_unlock
+chVTResetI

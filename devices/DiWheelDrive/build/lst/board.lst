@@ -1,0 +1,372 @@
+ARM GAS  /tmp/ccttZ6Ne.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"board.c"
+  15              		.section	.text.__early_init,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	__early_init
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	__early_init, %function
+  22              	__early_init:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26 0000 FFF7FEBF 		b	stm32_clock_init
+  27              		.size	__early_init, .-__early_init
+  28 0004 AFF30080 		.section	.text.boardInit,"ax",%progbits
+  28      AFF30080 
+  28      AFF30080 
+  29              		.align	2
+  30              		.p2align 4,,15
+  31              		.global	boardInit
+  32              		.thumb
+  33              		.thumb_func
+  34              		.type	boardInit, %function
+  35              	boardInit:
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38              		@ link register save eliminated.
+  39 0000 014B     		ldr	r3, .L3
+  40 0002 024A     		ldr	r2, .L3+4
+  41 0004 5A60     		str	r2, [r3, #4]
+  42 0006 7047     		bx	lr
+  43              	.L4:
+  44              		.align	2
+  45              	.L3:
+  46 0008 00000140 		.word	1073807360
+  47 000c 120D0004 		.word	67112210
+  48              		.size	boardInit, .-boardInit
+  49              		.section	.text.boardWriteIoPower,"ax",%progbits
+  50              		.align	2
+  51              		.p2align 4,,15
+  52              		.global	boardWriteIoPower
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	boardWriteIoPower, %function
+ARM GAS  /tmp/ccttZ6Ne.s 			page 2
+
+
+  56              	boardWriteIoPower:
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  60 0000 28B9     		cbnz	r0, .L8
+  61 0002 0648     		ldr	r0, .L9
+  62 0004 4FF48051 		mov	r1, #4096
+  63 0008 0222     		movs	r2, #2
+  64 000a FFF7FEBF 		b	_pal_lld_setgroupmode
+  65              	.L8:
+  66 000e 0348     		ldr	r0, .L9
+  67 0010 4FF48051 		mov	r1, #4096
+  68 0014 1022     		movs	r2, #16
+  69 0016 FFF7FEBF 		b	_pal_lld_setgroupmode
+  70              	.L10:
+  71 001a 00BF     		.align	2
+  72              	.L9:
+  73 001c 00080140 		.word	1073809408
+  74              		.size	boardWriteIoPower, .-boardWriteIoPower
+  75              		.section	.text.boardWriteLed,"ax",%progbits
+  76              		.align	2
+  77              		.p2align 4,,15
+  78              		.global	boardWriteLed
+  79              		.thumb
+  80              		.thumb_func
+  81              		.type	boardWriteLed, %function
+  82              	boardWriteLed:
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85              		@ link register save eliminated.
+  86 0000 0028     		cmp	r0, #0
+  87 0002 034B     		ldr	r3, .L14
+  88 0004 0CBF     		ite	eq
+  89 0006 0222     		moveq	r2, #2
+  90 0008 4FF40032 		movne	r2, #131072
+  91 000c 1A61     		str	r2, [r3, #16]
+  92 000e 7047     		bx	lr
+  93              	.L15:
+  94              		.align	2
+  95              	.L14:
+  96 0010 00080140 		.word	1073809408
+  97              		.size	boardWriteLed, .-boardWriteLed
+  98 0014 AFF30080 		.section	.text.boardRequestShutdown,"ax",%progbits
+  98      AFF30080 
+  98      AFF30080 
+  99              		.align	2
+ 100              		.p2align 4,,15
+ 101              		.global	boardRequestShutdown
+ 102              		.thumb
+ 103              		.thumb_func
+ 104              		.type	boardRequestShutdown, %function
+ 105              	boardRequestShutdown:
+ 106              		@ args = 0, pretend = 0, frame = 0
+ 107              		@ frame_needed = 0, uses_anonymous_args = 0
+ 108              		@ link register save eliminated.
+ 109 0000 024B     		ldr	r3, .L17
+ 110 0002 4FF48072 		mov	r2, #256
+ARM GAS  /tmp/ccttZ6Ne.s 			page 3
+
+
+ 111 0006 5A61     		str	r2, [r3, #20]
+ 112 0008 7047     		bx	lr
+ 113              	.L18:
+ 114 000a 00BF     		.align	2
+ 115              	.L17:
+ 116 000c 00100140 		.word	1073811456
+ 117              		.size	boardRequestShutdown, .-boardRequestShutdown
+ 118              		.section	.text.boardStandby,"ax",%progbits
+ 119              		.align	2
+ 120              		.p2align 4,,15
+ 121              		.global	boardStandby
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.type	boardStandby, %function
+ 125              	boardStandby:
+ 126              		@ args = 0, pretend = 0, frame = 0
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+ 128 0000 08B5     		push	{r3, lr}
+ 129 0002 0E4B     		ldr	r3, .L20
+ 130 0004 4FF48072 		mov	r2, #256
+ 131 0008 1A61     		str	r2, [r3, #16]
+ 132 000a 2023     		movs	r3, #32
+ 133              	@ 77 "../../boards/DiWheelDrive/board.c" 1
+ 134 000c 83F31188 		msr     BASEPRI, r3
+ 135              	@ 0 "" 2
+ 136              		.thumb
+ 137 0010 FFF7FEFF 		bl	dbg_check_lock
+ 138 0014 0A49     		ldr	r1, .L20+4
+ 139 0016 0B4B     		ldr	r3, .L20+8
+ 140 0018 0869     		ldr	r0, [r1, #16]
+ 141 001a 0B4A     		ldr	r2, .L20+12
+ 142 001c 40F00400 		orr	r0, r0, #4
+ 143 0020 0861     		str	r0, [r1, #16]
+ 144 0022 1968     		ldr	r1, [r3]
+ 145 0024 41F00E01 		orr	r1, r1, #14
+ 146 0028 1960     		str	r1, [r3]
+ 147 002a 9388     		ldrh	r3, [r2, #4]
+ 148 002c 23F00203 		bic	r3, r3, #2
+ 149 0030 1B04     		lsls	r3, r3, #16
+ 150 0032 1B0C     		lsrs	r3, r3, #16
+ 151 0034 9380     		strh	r3, [r2, #4]	@ movhi
+ 152              	@ 299 "../../../ChibiOS/os/ports/common/ARMCMx/CMSIS/include/core_cmInstr.h" 1
+ 153 0036 30BF     		wfi
+ 154              	@ 0 "" 2
+ 155              		.thumb
+ 156 0038 08BD     		pop	{r3, pc}
+ 157              	.L21:
+ 158 003a 00BF     		.align	2
+ 159              	.L20:
+ 160 003c 00100140 		.word	1073811456
+ 161 0040 00ED00E0 		.word	-536810240
+ 162 0044 00700040 		.word	1073770496
+ 163 0048 00280040 		.word	1073752064
+ 164              		.size	boardStandby, .-boardStandby
+ 165 004c AFF30080 		.section	.text.boardWakeup,"ax",%progbits
+ 166              		.align	2
+ 167              		.p2align 4,,15
+ARM GAS  /tmp/ccttZ6Ne.s 			page 4
+
+
+ 168              		.global	boardWakeup
+ 169              		.thumb
+ 170              		.thumb_func
+ 171              		.type	boardWakeup, %function
+ 172              	boardWakeup:
+ 173              		@ args = 0, pretend = 0, frame = 0
+ 174              		@ frame_needed = 0, uses_anonymous_args = 0
+ 175 0000 38B5     		push	{r3, r4, r5, lr}
+ 176 0002 044C     		ldr	r4, .L23
+ 177 0004 4FF48075 		mov	r5, #256
+ 178 0008 6561     		str	r5, [r4, #20]
+ 179 000a 0120     		movs	r0, #1
+ 180 000c FFF7FEFF 		bl	chThdSleep
+ 181 0010 2561     		str	r5, [r4, #16]
+ 182 0012 38BD     		pop	{r3, r4, r5, pc}
+ 183              	.L24:
+ 184              		.align	2
+ 185              	.L23:
+ 186 0014 00100140 		.word	1073811456
+ 187              		.size	boardWakeup, .-boardWakeup
+ 188 0018 AFF30080 		.section	.text.boardClearI2CBus,"ax",%progbits
+ 188      AFF30080 
+ 189              		.align	2
+ 190              		.p2align 4,,15
+ 191              		.global	boardClearI2CBus
+ 192              		.thumb
+ 193              		.thumb_func
+ 194              		.type	boardClearI2CBus, %function
+ 195              	boardClearI2CBus:
+ 196              		@ args = 0, pretend = 0, frame = 0
+ 197              		@ frame_needed = 0, uses_anonymous_args = 0
+ 198 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 199 0004 0125     		movs	r5, #1
+ 200 0006 05FA00F4 		lsl	r4, r5, r0
+ 201 000a 05FA01F8 		lsl	r8, r5, r1
+ 202 000e 324E     		ldr	r6, .L30
+ 203 0010 2146     		mov	r1, r4
+ 204 0012 3046     		mov	r0, r6
+ 205 0014 0722     		movs	r2, #7
+ 206 0016 FFF7FEFF 		bl	_pal_lld_setgroupmode
+ 207 001a 4146     		mov	r1, r8
+ 208 001c 0722     		movs	r2, #7
+ 209 001e 3046     		mov	r0, r6
+ 210 0020 FFF7FEFF 		bl	_pal_lld_setgroupmode
+ 211 0024 C6F81080 		str	r8, [r6, #16]
+ 212 0028 2846     		mov	r0, r5
+ 213 002a 7461     		str	r4, [r6, #20]
+ 214 002c FFF7FEFF 		bl	chThdSleep
+ 215 0030 2846     		mov	r0, r5
+ 216 0032 3461     		str	r4, [r6, #16]
+ 217 0034 FFF7FEFF 		bl	chThdSleep
+ 218 0038 2846     		mov	r0, r5
+ 219 003a C6F81480 		str	r8, [r6, #20]
+ 220 003e FFF7FEFF 		bl	chThdSleep
+ 221 0042 2846     		mov	r0, r5
+ 222 0044 7461     		str	r4, [r6, #20]
+ 223 0046 FFF7FEFF 		bl	chThdSleep
+ARM GAS  /tmp/ccttZ6Ne.s 			page 5
+
+
+ 224 004a C6F81080 		str	r8, [r6, #16]
+ 225 004e 2846     		mov	r0, r5
+ 226 0050 FFF7FEFF 		bl	chThdSleep
+ 227 0054 0927     		movs	r7, #9
+ 228              	.L27:
+ 229 0056 0120     		movs	r0, #1
+ 230 0058 3461     		str	r4, [r6, #16]
+ 231 005a FFF7FEFF 		bl	chThdSleep
+ 232 005e 7461     		str	r4, [r6, #20]
+ 233 0060 0120     		movs	r0, #1
+ 234 0062 FFF7FEFF 		bl	chThdSleep
+ 235 0066 7B1E     		subs	r3, r7, #1
+ 236 0068 13F0FF07 		ands	r7, r3, #255
+ 237 006c 1A4D     		ldr	r5, .L30
+ 238 006e F2D1     		bne	.L27
+ 239 0070 0120     		movs	r0, #1
+ 240 0072 2C61     		str	r4, [r5, #16]
+ 241 0074 FFF7FEFF 		bl	chThdSleep
+ 242 0078 0120     		movs	r0, #1
+ 243 007a C5F81480 		str	r8, [r5, #20]
+ 244 007e FFF7FEFF 		bl	chThdSleep
+ 245 0082 0120     		movs	r0, #1
+ 246 0084 6C61     		str	r4, [r5, #20]
+ 247 0086 FFF7FEFF 		bl	chThdSleep
+ 248 008a 0120     		movs	r0, #1
+ 249 008c 2C61     		str	r4, [r5, #16]
+ 250 008e FFF7FEFF 		bl	chThdSleep
+ 251 0092 0120     		movs	r0, #1
+ 252 0094 C5F81080 		str	r8, [r5, #16]
+ 253 0098 FFF7FEFF 		bl	chThdSleep
+ 254 009c 6C61     		str	r4, [r5, #20]
+ 255 009e 0120     		movs	r0, #1
+ 256 00a0 FFF7FEFF 		bl	chThdSleep
+ 257 00a4 0A26     		movs	r6, #10
+ 258              	.L29:
+ 259 00a6 0120     		movs	r0, #1
+ 260 00a8 6C61     		str	r4, [r5, #20]
+ 261 00aa FFF7FEFF 		bl	chThdSleep
+ 262 00ae 2C61     		str	r4, [r5, #16]
+ 263 00b0 0120     		movs	r0, #1
+ 264 00b2 FFF7FEFF 		bl	chThdSleep
+ 265 00b6 731E     		subs	r3, r6, #1
+ 266 00b8 13F0FF06 		ands	r6, r3, #255
+ 267 00bc F3D1     		bne	.L29
+ 268 00be 2146     		mov	r1, r4
+ 269 00c0 0548     		ldr	r0, .L30
+ 270 00c2 1122     		movs	r2, #17
+ 271 00c4 FFF7FEFF 		bl	_pal_lld_setgroupmode
+ 272 00c8 4146     		mov	r1, r8
+ 273 00ca 0348     		ldr	r0, .L30
+ 274 00cc 1122     		movs	r2, #17
+ 275 00ce BDE8F041 		pop	{r4, r5, r6, r7, r8, lr}
+ 276 00d2 FFF7FEBF 		b	_pal_lld_setgroupmode
+ 277              	.L31:
+ 278 00d6 00BF     		.align	2
+ 279              	.L30:
+ 280 00d8 000C0140 		.word	1073810432
+ARM GAS  /tmp/ccttZ6Ne.s 			page 6
+
+
+ 281              		.size	boardClearI2CBus, .-boardClearI2CBus
+ 282              		.global	pal_default_config
+ 283 00dc AFF30080 		.section	.rodata.pal_default_config,"a",%progbits
+ 284              		.align	2
+ 285              		.type	pal_default_config, %object
+ 286              		.size	pal_default_config, 84
+ 287              	pal_default_config:
+ 288 0000 FFF70000 		.word	63487
+ 289 0004 74BBB8B8 		.word	-1195852940
+ 290 0008 B8888BB8 		.word	-1198815048
+ 291 000c FBFF0000 		.word	65531
+ 292 0010 08B38844 		.word	1149809416
+ 293 0014 FFFF8487 		.word	-2021326849
+ 294 0018 DDFF0000 		.word	65501
+ 295 001c 70483844 		.word	1144539248
+ 296 0020 47443883 		.word	-2093464505
+ 297 0024 FFFF0000 		.word	65535
+ 298 0028 44878888 		.word	-2004318396
+ 299 002c 88888888 		.word	-2004318072
+ 300 0030 FFFF0000 		.word	65535
+ 301 0034 88888888 		.word	-2004318072
+ 302 0038 88888888 		.word	-2004318072
+ 303 003c FFFF0000 		.word	65535
+ 304 0040 88888888 		.word	-2004318072
+ 305 0044 88888888 		.word	-2004318072
+ 306 0048 FFFF0000 		.word	65535
+ 307 004c 88888888 		.word	-2004318072
+ 308 0050 88888888 		.word	-2004318072
+ 309              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccttZ6Ne.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 board.c
+     /tmp/ccttZ6Ne.s:16     .text.__early_init:00000000 $t
+     /tmp/ccttZ6Ne.s:22     .text.__early_init:00000000 __early_init
+     /tmp/ccttZ6Ne.s:29     .text.boardInit:00000000 $t
+     /tmp/ccttZ6Ne.s:35     .text.boardInit:00000000 boardInit
+     /tmp/ccttZ6Ne.s:46     .text.boardInit:00000008 $d
+     /tmp/ccttZ6Ne.s:50     .text.boardWriteIoPower:00000000 $t
+     /tmp/ccttZ6Ne.s:56     .text.boardWriteIoPower:00000000 boardWriteIoPower
+     /tmp/ccttZ6Ne.s:73     .text.boardWriteIoPower:0000001c $d
+     /tmp/ccttZ6Ne.s:76     .text.boardWriteLed:00000000 $t
+     /tmp/ccttZ6Ne.s:82     .text.boardWriteLed:00000000 boardWriteLed
+     /tmp/ccttZ6Ne.s:96     .text.boardWriteLed:00000010 $d
+     /tmp/ccttZ6Ne.s:99     .text.boardRequestShutdown:00000000 $t
+     /tmp/ccttZ6Ne.s:105    .text.boardRequestShutdown:00000000 boardRequestShutdown
+     /tmp/ccttZ6Ne.s:116    .text.boardRequestShutdown:0000000c $d
+     /tmp/ccttZ6Ne.s:119    .text.boardStandby:00000000 $t
+     /tmp/ccttZ6Ne.s:125    .text.boardStandby:00000000 boardStandby
+     /tmp/ccttZ6Ne.s:160    .text.boardStandby:0000003c $d
+     /tmp/ccttZ6Ne.s:166    .text.boardWakeup:00000000 $t
+     /tmp/ccttZ6Ne.s:172    .text.boardWakeup:00000000 boardWakeup
+     /tmp/ccttZ6Ne.s:186    .text.boardWakeup:00000014 $d
+     /tmp/ccttZ6Ne.s:189    .text.boardClearI2CBus:00000000 $t
+     /tmp/ccttZ6Ne.s:195    .text.boardClearI2CBus:00000000 boardClearI2CBus
+     /tmp/ccttZ6Ne.s:280    .text.boardClearI2CBus:000000d8 $d
+     /tmp/ccttZ6Ne.s:287    .rodata.pal_default_config:00000000 pal_default_config
+     /tmp/ccttZ6Ne.s:284    .rodata.pal_default_config:00000000 $d
+     /tmp/ccttZ6Ne.s:98     .text.boardWriteLed:00000014 $t
+     /tmp/ccttZ6Ne.s:165    .text.boardStandby:0000004c $t
+     /tmp/ccttZ6Ne.s:188    .text.boardWakeup:00000018 $t
+     /tmp/ccttZ6Ne.s:283    .text.boardClearI2CBus:000000dc $t
+
+UNDEFINED SYMBOLS
+stm32_clock_init
+_pal_lld_setgroupmode
+dbg_check_lock
+chThdSleep

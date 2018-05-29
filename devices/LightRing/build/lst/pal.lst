@@ -1,0 +1,169 @@
+ARM GAS  /tmp/ccrVfgGd.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"pal.c"
+  15              		.section	.text.palReadBus,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.global	palReadBus
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	palReadBus, %function
+  22              	palReadBus:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25 0000 10B5     		push	{r4, lr}
+  26 0002 0446     		mov	r4, r0
+  27 0004 10B1     		cbz	r0, .L2
+  28 0006 8368     		ldr	r3, [r0, #8]
+  29 0008 0F2B     		cmp	r3, #15
+  30 000a 03D9     		bls	.L3
+  31              	.L2:
+  32 000c 0548     		ldr	r0, .L8
+  33 000e FFF7FEFF 		bl	chDbgPanic
+  34 0012 A368     		ldr	r3, [r4, #8]
+  35              	.L3:
+  36 0014 2168     		ldr	r1, [r4]
+  37 0016 6068     		ldr	r0, [r4, #4]
+  38 0018 8968     		ldr	r1, [r1, #8]
+  39 001a 21FA03F3 		lsr	r3, r1, r3
+  40 001e 1840     		ands	r0, r0, r3
+  41 0020 10BD     		pop	{r4, pc}
+  42              	.L9:
+  43 0022 00BF     		.align	2
+  44              	.L8:
+  45 0024 00000000 		.word	.LC0
+  46              		.size	palReadBus, .-palReadBus
+  47 0028 AFF30080 		.section	.text.palWriteBus,"ax",%progbits
+  47      AFF30080 
+  48              		.align	2
+  49              		.p2align 4,,15
+  50              		.global	palWriteBus
+  51              		.thumb
+  52              		.thumb_func
+  53              		.type	palWriteBus, %function
+  54              	palWriteBus:
+  55              		@ args = 0, pretend = 0, frame = 0
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccrVfgGd.s 			page 2
+
+
+  57 0000 38B5     		push	{r3, r4, r5, lr}
+  58 0002 0446     		mov	r4, r0
+  59 0004 0D46     		mov	r5, r1
+  60 0006 10B1     		cbz	r0, .L11
+  61 0008 8368     		ldr	r3, [r0, #8]
+  62 000a 0F2B     		cmp	r3, #15
+  63 000c 03D9     		bls	.L12
+  64              	.L11:
+  65 000e 0948     		ldr	r0, .L16
+  66 0010 FFF7FEFF 		bl	chDbgPanic
+  67 0014 A368     		ldr	r3, [r4, #8]
+  68              	.L12:
+  69 0016 6268     		ldr	r2, [r4, #4]
+  70 0018 03F11001 		add	r1, r3, #16
+  71 001c 22EA0500 		bic	r0, r2, r5
+  72 0020 1540     		ands	r5, r5, r2
+  73 0022 05FA03F3 		lsl	r3, r5, r3
+  74 0026 00FA01F2 		lsl	r2, r0, r1
+  75 002a 2168     		ldr	r1, [r4]
+  76 002c 1343     		orrs	r3, r3, r2
+  77 002e 0B61     		str	r3, [r1, #16]
+  78 0030 38BD     		pop	{r3, r4, r5, pc}
+  79              	.L17:
+  80 0032 00BF     		.align	2
+  81              	.L16:
+  82 0034 10000000 		.word	.LC1
+  83              		.size	palWriteBus, .-palWriteBus
+  84 0038 AFF30080 		.section	.text.palSetBusMode,"ax",%progbits
+  84      AFF30080 
+  85              		.align	2
+  86              		.p2align 4,,15
+  87              		.global	palSetBusMode
+  88              		.thumb
+  89              		.thumb_func
+  90              		.type	palSetBusMode, %function
+  91              	palSetBusMode:
+  92              		@ args = 0, pretend = 0, frame = 0
+  93              		@ frame_needed = 0, uses_anonymous_args = 0
+  94 0000 38B5     		push	{r3, r4, r5, lr}
+  95 0002 0446     		mov	r4, r0
+  96 0004 0D46     		mov	r5, r1
+  97 0006 10B1     		cbz	r0, .L19
+  98 0008 8168     		ldr	r1, [r0, #8]
+  99 000a 0F29     		cmp	r1, #15
+ 100 000c 03D9     		bls	.L20
+ 101              	.L19:
+ 102 000e 0648     		ldr	r0, .L24
+ 103 0010 FFF7FEFF 		bl	chDbgPanic
+ 104 0014 A168     		ldr	r1, [r4, #8]
+ 105              	.L20:
+ 106 0016 6068     		ldr	r0, [r4, #4]
+ 107 0018 2A46     		mov	r2, r5
+ 108 001a 00FA01F1 		lsl	r1, r0, r1
+ 109 001e 2068     		ldr	r0, [r4]
+ 110 0020 BDE83840 		pop	{r3, r4, r5, lr}
+ 111 0024 FFF7FEBF 		b	_pal_lld_setgroupmode
+ 112              	.L25:
+ARM GAS  /tmp/ccrVfgGd.s 			page 3
+
+
+ 113              		.align	2
+ 114              	.L24:
+ 115 0028 20000000 		.word	.LC2
+ 116              		.size	palSetBusMode, .-palSetBusMode
+ 117 002c AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 118              		.align	2
+ 119              	.LC0:
+ 120 0000 2270616C 		.ascii	"\"palReadBus\"()\000"
+ 120      52656164 
+ 120      42757322 
+ 120      282900
+ 121 000f 00       		.space	1
+ 122              	.LC1:
+ 123 0010 2270616C 		.ascii	"\"palWriteBus\"()\000"
+ 123      57726974 
+ 123      65427573 
+ 123      22282900 
+ 124              	.LC2:
+ 125 0020 2270616C 		.ascii	"\"palSetBusMode\"()\000"
+ 125      53657442 
+ 125      75734D6F 
+ 125      64652228 
+ 125      2900
+ 126 0032 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccrVfgGd.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 pal.c
+     /tmp/ccrVfgGd.s:16     .text.palReadBus:00000000 $t
+     /tmp/ccrVfgGd.s:22     .text.palReadBus:00000000 palReadBus
+     /tmp/ccrVfgGd.s:45     .text.palReadBus:00000024 $d
+     /tmp/ccrVfgGd.s:48     .text.palWriteBus:00000000 $t
+     /tmp/ccrVfgGd.s:54     .text.palWriteBus:00000000 palWriteBus
+     /tmp/ccrVfgGd.s:82     .text.palWriteBus:00000034 $d
+     /tmp/ccrVfgGd.s:85     .text.palSetBusMode:00000000 $t
+     /tmp/ccrVfgGd.s:91     .text.palSetBusMode:00000000 palSetBusMode
+     /tmp/ccrVfgGd.s:115    .text.palSetBusMode:00000028 $d
+     /tmp/ccrVfgGd.s:118    .rodata.str1.4:00000000 $d
+     /tmp/ccrVfgGd.s:47     .text.palReadBus:00000028 $t
+     /tmp/ccrVfgGd.s:84     .text.palWriteBus:00000038 $t
+     /tmp/ccrVfgGd.s:117    .text.palSetBusMode:0000002c $t
+
+UNDEFINED SYMBOLS
+chDbgPanic
+_pal_lld_setgroupmode

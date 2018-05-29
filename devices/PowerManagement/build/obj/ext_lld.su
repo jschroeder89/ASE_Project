@@ -1,0 +1,5 @@
+ext_lld.c:66:6:ext_lld_init	0	static
+ext_lld.c:100:6:ext_lld_stop	8	static
+ext_lld.c:121:6:ext_lld_channel_enable	16	static
+ext_lld.c:197:6:ext_lld_channel_disable	0	static
+ext_lld.c:79:6:ext_lld_start	16	static

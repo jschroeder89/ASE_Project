@@ -1,0 +1,4 @@
+chdynamic.c:52:9:chThdAddRef	8	static
+chdynamic.c:74:6:chThdRelease	16	static
+chdynamic.c:130:9:chThdCreateFromHeap	32	static
+chdynamic.c:179:9:chThdCreateFromMemoryPool	32	static

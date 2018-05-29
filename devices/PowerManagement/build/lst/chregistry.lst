@@ -1,0 +1,168 @@
+ARM GAS  /tmp/ccXwlfOK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"chregistry.c"
+  17              		.section	.text.chRegFirstThread,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	chRegFirstThread
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	chRegFirstThread, %function
+  24              	chRegFirstThread:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27 0000 10B5     		push	{r4, lr}
+  28 0002 2023     		movs	r3, #32
+  29              	@ 120 "../../../ChibiOS/os/kernel/src/chregistry.c" 1
+  30 0004 83F31188 		msr     BASEPRI, r3
+  31              	@ 0 "" 2
+  32              		.thumb
+  33 0008 FFF7FEFF 		bl	dbg_check_lock
+  34 000c 064B     		ldr	r3, .L2
+  35 000e 1C69     		ldr	r4, [r3, #16]
+  36 0010 94F82230 		ldrb	r3, [r4, #34]	@ zero_extendqisi2
+  37 0014 0133     		adds	r3, r3, #1
+  38 0016 84F82230 		strb	r3, [r4, #34]
+  39 001a FFF7FEFF 		bl	dbg_check_unlock
+  40 001e 0023     		movs	r3, #0
+  41              	@ 125 "../../../ChibiOS/os/kernel/src/chregistry.c" 1
+  42 0020 83F31188 		msr     BASEPRI, r3
+  43              	@ 0 "" 2
+  44              		.thumb
+  45 0024 2046     		mov	r0, r4
+  46 0026 10BD     		pop	{r4, pc}
+  47              	.L3:
+  48              		.align	2
+  49              	.L2:
+  50 0028 00000000 		.word	rlist
+  51              		.size	chRegFirstThread, .-chRegFirstThread
+  52 002c AFF30080 		.section	.text.chRegNextThread,"ax",%progbits
+  53              		.align	2
+  54              		.p2align 4,,15
+  55              		.global	chRegNextThread
+  56              		.thumb
+  57              		.thumb_func
+ARM GAS  /tmp/ccXwlfOK.s 			page 2
+
+
+  58              		.type	chRegNextThread, %function
+  59              	chRegNextThread:
+  60              		@ args = 0, pretend = 0, frame = 0
+  61              		@ frame_needed = 0, uses_anonymous_args = 0
+  62 0000 38B5     		push	{r3, r4, r5, lr}
+  63 0002 0546     		mov	r5, r0
+  64 0004 2023     		movs	r3, #32
+  65              	@ 143 "../../../ChibiOS/os/kernel/src/chregistry.c" 1
+  66 0006 83F31188 		msr     BASEPRI, r3
+  67              	@ 0 "" 2
+  68              		.thumb
+  69 000a FFF7FEFF 		bl	dbg_check_lock
+  70 000e 2C69     		ldr	r4, [r5, #16]
+  71 0010 0D4B     		ldr	r3, .L10
+  72 0012 9C42     		cmp	r4, r3
+  73 0014 16D0     		beq	.L7
+  74 0016 94F82230 		ldrb	r3, [r4, #34]	@ zero_extendqisi2
+  75 001a FF2B     		cmp	r3, #255
+  76 001c 0CD0     		beq	.L9
+  77              	.L6:
+  78 001e 0133     		adds	r3, r3, #1
+  79 0020 84F82230 		strb	r3, [r4, #34]
+  80              	.L5:
+  81 0024 FFF7FEFF 		bl	dbg_check_unlock
+  82 0028 0023     		movs	r3, #0
+  83              	@ 154 "../../../ChibiOS/os/kernel/src/chregistry.c" 1
+  84 002a 83F31188 		msr     BASEPRI, r3
+  85              	@ 0 "" 2
+  86              		.thumb
+  87 002e 2846     		mov	r0, r5
+  88 0030 FFF7FEFF 		bl	chThdRelease
+  89 0034 2046     		mov	r0, r4
+  90 0036 38BD     		pop	{r3, r4, r5, pc}
+  91              	.L9:
+  92 0038 0448     		ldr	r0, .L10+4
+  93 003a FFF7FEFF 		bl	chDbgPanic
+  94 003e 94F82230 		ldrb	r3, [r4, #34]	@ zero_extendqisi2
+  95 0042 ECE7     		b	.L6
+  96              	.L7:
+  97 0044 0024     		movs	r4, #0
+  98 0046 EDE7     		b	.L5
+  99              	.L11:
+ 100              		.align	2
+ 101              	.L10:
+ 102 0048 00000000 		.word	rlist
+ 103 004c 00000000 		.word	.LC0
+ 104              		.size	chRegNextThread, .-chRegNextThread
+ 105              		.global	ch_debug
+ 106              		.section	.rodata.ch_debug,"a",%progbits
+ 107              		.align	2
+ 108              		.type	ch_debug, %object
+ 109              		.size	ch_debug, 22
+ 110              	ch_debug:
+ 111 0000 6D61696E 		.ascii	"main"
+ 112 0004 00       		.byte	0
+ 113 0005 16       		.byte	22
+ 114 0006 8811     		.short	4488
+ARM GAS  /tmp/ccXwlfOK.s 			page 3
+
+
+ 115 0008 04       		.byte	4
+ 116 0009 04       		.byte	4
+ 117 000a 4C       		.byte	76
+ 118 000b 08       		.byte	8
+ 119 000c 0C       		.byte	12
+ 120 000d 10       		.byte	16
+ 121 000e 14       		.byte	20
+ 122 000f 18       		.byte	24
+ 123 0010 1C       		.byte	28
+ 124 0011 20       		.byte	32
+ 125 0012 21       		.byte	33
+ 126 0013 22       		.byte	34
+ 127 0014 23       		.byte	35
+ 128 0015 24       		.byte	36
+ 129 0016 0000     		.section	.rodata.str1.4,"aMS",%progbits,1
+ 130              		.align	2
+ 131              	.LC0:
+ 132 0000 63685265 		.ascii	"chRegNextThread(), #1\000"
+ 132      674E6578 
+ 132      74546872 
+ 132      65616428 
+ 132      292C2023 
+ 133 0016 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccXwlfOK.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chregistry.c
+     /tmp/ccXwlfOK.s:18     .text.chRegFirstThread:00000000 $t
+     /tmp/ccXwlfOK.s:24     .text.chRegFirstThread:00000000 chRegFirstThread
+     /tmp/ccXwlfOK.s:50     .text.chRegFirstThread:00000028 $d
+     /tmp/ccXwlfOK.s:53     .text.chRegNextThread:00000000 $t
+     /tmp/ccXwlfOK.s:59     .text.chRegNextThread:00000000 chRegNextThread
+     /tmp/ccXwlfOK.s:102    .text.chRegNextThread:00000048 $d
+     /tmp/ccXwlfOK.s:110    .rodata.ch_debug:00000000 ch_debug
+     /tmp/ccXwlfOK.s:107    .rodata.ch_debug:00000000 $d
+     /tmp/ccXwlfOK.s:130    .rodata.str1.4:00000000 $d
+     /tmp/ccXwlfOK.s:52     .text.chRegFirstThread:0000002c $t
+
+UNDEFINED SYMBOLS
+dbg_check_lock
+dbg_check_unlock
+rlist
+chThdRelease
+chDbgPanic

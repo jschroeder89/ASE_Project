@@ -1,0 +1,8 @@
+I2CMultiplexer.cpp:23:1:virtual i2cflags_t amiro::I2CMultiplexer::getErrors()	8	static
+I2CMultiplexer.cpp:31:1:virtual msg_t amiro::I2CMultiplexer::masterTransmit(const amiro::I2CTxParams*, systime_t)	8	static
+I2CMultiplexer.cpp:39:1:virtual msg_t amiro::I2CMultiplexer::masterReceive(const amiro::I2CRxParams*, systime_t)	8	static
+I2CMultiplexer.cpp:47:1:virtual void amiro::I2CMultiplexer::acquireBus()	8	static
+I2CMultiplexer.cpp:60:1:virtual void amiro::I2CMultiplexer::releaseBus()	8	static
+I2CMultiplexer.cpp:5:1:amiro::I2CMultiplexer::I2CMultiplexer(amiro::I2CDriver*)	8	static
+I2CMultiplexer.cpp:17:1:amiro::I2CMultiplexer::~I2CMultiplexer()	0	static
+I2CMultiplexer.cpp:17:1:virtual amiro::I2CMultiplexer::~I2CMultiplexer()	8	static

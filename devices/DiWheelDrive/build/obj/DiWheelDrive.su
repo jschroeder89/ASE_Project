@@ -1,0 +1,11 @@
+DiWheelDrive.cpp:137:7:virtual msg_t amiro::DiWheelDrive::updateSensorVal()	72	static
+DiWheelDrive.cpp:164:6:virtual void amiro::DiWheelDrive::periodicBroadcast()	48	static
+DiWheelDrive.h:17:9:amiro::DiWheelDrive::~DiWheelDrive()	8	static
+DiWheelDrive.h:17:9:virtual amiro::DiWheelDrive::~DiWheelDrive()	8	static
+DiWheelDrive.cpp:259:17:virtual chibios_rt::ThreadReference amiro::DiWheelDrive::start(tprio_t)	24	static
+DiWheelDrive.cpp:22:7:virtual msg_t amiro::DiWheelDrive::receiveMessage(CANRxFrame*)	48	static
+DiWheelDrive.cpp:15:1:amiro::DiWheelDrive::DiWheelDrive(CANDriver*)	16	static
+DiWheelDrive.cpp:248:6:void amiro::DiWheelDrive::calibrateProximityFloorValues()	16	static
+DiWheelDrive.cpp:235:6:virtual void amiro::DiWheelDrive::calibrate()	0	static
+DiWheelDrive.cpp:271:1:msg_t amiro::DiWheelDrive::terminate()	16	static
+DiWheelDrive.cpp:280:1:cpp)	0	static

@@ -1,0 +1,5 @@
+serial_lld.c:209:13:notify1	0	static
+serial_lld.c:269:1:VectorD4	24	static
+serial_lld.c:383:6:sd_lld_init	8	static
+serial_lld.c:426:6:sd_lld_start	16	static
+serial_lld.c:487:6:sd_lld_stop	0	static

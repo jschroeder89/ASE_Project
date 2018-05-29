@@ -1,0 +1,904 @@
+ARM GAS  /tmp/ccNkEERI.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"Color.cpp"
+  17              		.section	.text._ZN5amiro5ColorC2Ev,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_ZN5amiro5ColorC2Ev
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_ZN5amiro5ColorC2Ev, %function
+  24              	_ZN5amiro5ColorC2Ev:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 0022     		movs	r2, #0
+  29 0002 0270     		strb	r2, [r0]
+  30 0004 4270     		strb	r2, [r0, #1]
+  31 0006 8270     		strb	r2, [r0, #2]
+  32 0008 7047     		bx	lr
+  33              		.size	_ZN5amiro5ColorC2Ev, .-_ZN5amiro5ColorC2Ev
+  34              		.global	_ZN5amiro5ColorC1Ev
+  35              		.thumb_set _ZN5amiro5ColorC1Ev,_ZN5amiro5ColorC2Ev
+  36 000a 00BFAFF3 		.section	.text._ZN5amiro5ColorC2ERKS0_,"ax",%progbits
+  36      0080
+  37              		.align	2
+  38              		.p2align 4,,15
+  39              		.global	_ZN5amiro5ColorC2ERKS0_
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	_ZN5amiro5ColorC2ERKS0_, %function
+  43              	_ZN5amiro5ColorC2ERKS0_:
+  44              		@ args = 0, pretend = 0, frame = 0
+  45              		@ frame_needed = 0, uses_anonymous_args = 0
+  46              		@ link register save eliminated.
+  47 0000 30B4     		push	{r4, r5}
+  48 0002 0D78     		ldrb	r5, [r1]	@ zero_extendqisi2
+  49 0004 4C78     		ldrb	r4, [r1, #1]	@ zero_extendqisi2
+  50 0006 8A78     		ldrb	r2, [r1, #2]	@ zero_extendqisi2
+  51 0008 8270     		strb	r2, [r0, #2]
+  52 000a 0570     		strb	r5, [r0]
+  53 000c 4470     		strb	r4, [r0, #1]
+  54 000e 30BC     		pop	{r4, r5}
+  55 0010 7047     		bx	lr
+  56              		.size	_ZN5amiro5ColorC2ERKS0_, .-_ZN5amiro5ColorC2ERKS0_
+ARM GAS  /tmp/ccNkEERI.s 			page 2
+
+
+  57              		.global	_ZN5amiro5ColorC1ERKS0_
+  58              		.thumb_set _ZN5amiro5ColorC1ERKS0_,_ZN5amiro5ColorC2ERKS0_
+  59 0012 00BFAFF3 		.section	.text._ZN5amiro5ColorC2Eiii,"ax",%progbits
+  59      0080AFF3 
+  59      0080AFF3 
+  59      0080
+  60              		.align	2
+  61              		.p2align 4,,15
+  62              		.global	_ZN5amiro5ColorC2Eiii
+  63              		.thumb
+  64              		.thumb_func
+  65              		.type	_ZN5amiro5ColorC2Eiii, %function
+  66              	_ZN5amiro5ColorC2Eiii:
+  67              		@ args = 0, pretend = 0, frame = 0
+  68              		@ frame_needed = 0, uses_anonymous_args = 0
+  69              		@ link register save eliminated.
+  70 0000 10B4     		push	{r4}
+  71 0002 0170     		strb	r1, [r0]
+  72 0004 4270     		strb	r2, [r0, #1]
+  73 0006 8370     		strb	r3, [r0, #2]
+  74 0008 5DF8044B 		ldr	r4, [sp], #4
+  75 000c 7047     		bx	lr
+  76              		.size	_ZN5amiro5ColorC2Eiii, .-_ZN5amiro5ColorC2Eiii
+  77              		.global	_ZN5amiro5ColorC1Eiii
+  78              		.thumb_set _ZN5amiro5ColorC1Eiii,_ZN5amiro5ColorC2Eiii
+  79 000e 00BF     		.section	.text._ZN5amiro5ColorC2ENS0_11GlobalColorE,"ax",%progbits
+  80              		.align	2
+  81              		.p2align 4,,15
+  82              		.global	_ZN5amiro5ColorC2ENS0_11GlobalColorE
+  83              		.thumb
+  84              		.thumb_func
+  85              		.type	_ZN5amiro5ColorC2ENS0_11GlobalColorE, %function
+  86              	_ZN5amiro5ColorC2ENS0_11GlobalColorE:
+  87              		@ args = 0, pretend = 0, frame = 0
+  88              		@ frame_needed = 0, uses_anonymous_args = 0
+  89              		@ link register save eliminated.
+  90 0000 30B4     		push	{r4, r5}
+  91 0002 064A     		ldr	r2, .L5
+  92 0004 01EB4101 		add	r1, r1, r1, lsl #1
+  93 0008 5418     		adds	r4, r2, r1
+  94 000a 555C     		ldrb	r5, [r2, r1]	@ zero_extendqisi2
+  95 000c 6178     		ldrb	r1, [r4, #1]	@ zero_extendqisi2
+  96 000e A278     		ldrb	r2, [r4, #2]	@ zero_extendqisi2
+  97 0010 0570     		strb	r5, [r0]
+  98 0012 4170     		strb	r1, [r0, #1]
+  99 0014 8270     		strb	r2, [r0, #2]
+ 100 0016 30BC     		pop	{r4, r5}
+ 101 0018 7047     		bx	lr
+ 102              	.L6:
+ 103 001a 00BF     		.align	2
+ 104              	.L5:
+ 105 001c 00000000 		.word	.LANCHOR0
+ 106              		.size	_ZN5amiro5ColorC2ENS0_11GlobalColorE, .-_ZN5amiro5ColorC2ENS0_11GlobalColorE
+ 107              		.global	_ZN5amiro5ColorC1ENS0_11GlobalColorE
+ 108              		.thumb_set _ZN5amiro5ColorC1ENS0_11GlobalColorE,_ZN5amiro5ColorC2ENS0_11GlobalColorE
+ 109              		.section	.text._ZN5amiro5Color15getRedGreenBlueEPiS1_S1_,"ax",%progbits
+ 110              		.align	2
+ARM GAS  /tmp/ccNkEERI.s 			page 3
+
+
+ 111              		.p2align 4,,15
+ 112              		.global	_ZN5amiro5Color15getRedGreenBlueEPiS1_S1_
+ 113              		.thumb
+ 114              		.thumb_func
+ 115              		.type	_ZN5amiro5Color15getRedGreenBlueEPiS1_S1_, %function
+ 116              	_ZN5amiro5Color15getRedGreenBlueEPiS1_S1_:
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119              		@ link register save eliminated.
+ 120 0000 10B4     		push	{r4}
+ 121 0002 0478     		ldrb	r4, [r0]	@ zero_extendqisi2
+ 122 0004 0C60     		str	r4, [r1]
+ 123 0006 4178     		ldrb	r1, [r0, #1]	@ zero_extendqisi2
+ 124 0008 1160     		str	r1, [r2]
+ 125 000a 8278     		ldrb	r2, [r0, #2]	@ zero_extendqisi2
+ 126 000c 1A60     		str	r2, [r3]
+ 127 000e 5DF8044B 		ldr	r4, [sp], #4
+ 128 0012 7047     		bx	lr
+ 129              		.size	_ZN5amiro5Color15getRedGreenBlueEPiS1_S1_, .-_ZN5amiro5Color15getRedGreenBlueEPiS1_S1_
+ 130 0014 AFF30080 		.section	.text._ZN5amiro5Color6getRedEv,"ax",%progbits
+ 130      AFF30080 
+ 130      AFF30080 
+ 131              		.align	2
+ 132              		.p2align 4,,15
+ 133              		.global	_ZN5amiro5Color6getRedEv
+ 134              		.thumb
+ 135              		.thumb_func
+ 136              		.type	_ZN5amiro5Color6getRedEv, %function
+ 137              	_ZN5amiro5Color6getRedEv:
+ 138              		@ args = 0, pretend = 0, frame = 0
+ 139              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140              		@ link register save eliminated.
+ 141 0000 0078     		ldrb	r0, [r0]	@ zero_extendqisi2
+ 142 0002 7047     		bx	lr
+ 143              		.size	_ZN5amiro5Color6getRedEv, .-_ZN5amiro5Color6getRedEv
+ 144 0004 AFF30080 		.section	.text._ZN5amiro5Color8getGreenEv,"ax",%progbits
+ 144      AFF30080 
+ 144      AFF30080 
+ 145              		.align	2
+ 146              		.p2align 4,,15
+ 147              		.global	_ZN5amiro5Color8getGreenEv
+ 148              		.thumb
+ 149              		.thumb_func
+ 150              		.type	_ZN5amiro5Color8getGreenEv, %function
+ 151              	_ZN5amiro5Color8getGreenEv:
+ 152              		@ args = 0, pretend = 0, frame = 0
+ 153              		@ frame_needed = 0, uses_anonymous_args = 0
+ 154              		@ link register save eliminated.
+ 155 0000 4078     		ldrb	r0, [r0, #1]	@ zero_extendqisi2
+ 156 0002 7047     		bx	lr
+ 157              		.size	_ZN5amiro5Color8getGreenEv, .-_ZN5amiro5Color8getGreenEv
+ 158 0004 AFF30080 		.section	.text._ZN5amiro5Color7getBlueEv,"ax",%progbits
+ 158      AFF30080 
+ 158      AFF30080 
+ 159              		.align	2
+ 160              		.p2align 4,,15
+ 161              		.global	_ZN5amiro5Color7getBlueEv
+ARM GAS  /tmp/ccNkEERI.s 			page 4
+
+
+ 162              		.thumb
+ 163              		.thumb_func
+ 164              		.type	_ZN5amiro5Color7getBlueEv, %function
+ 165              	_ZN5amiro5Color7getBlueEv:
+ 166              		@ args = 0, pretend = 0, frame = 0
+ 167              		@ frame_needed = 0, uses_anonymous_args = 0
+ 168              		@ link register save eliminated.
+ 169 0000 8078     		ldrb	r0, [r0, #2]	@ zero_extendqisi2
+ 170 0002 7047     		bx	lr
+ 171              		.size	_ZN5amiro5Color7getBlueEv, .-_ZN5amiro5Color7getBlueEv
+ 172 0004 AFF30080 		.section	.text._ZN5amiro5Color7lighterEi,"ax",%progbits
+ 172      AFF30080 
+ 172      AFF30080 
+ 173              		.align	2
+ 174              		.p2align 4,,15
+ 175              		.global	_ZN5amiro5Color7lighterEi
+ 176              		.thumb
+ 177              		.thumb_func
+ 178              		.type	_ZN5amiro5Color7lighterEi, %function
+ 179              	_ZN5amiro5Color7lighterEi:
+ 180              		@ args = 0, pretend = 0, frame = 0
+ 181              		@ frame_needed = 0, uses_anonymous_args = 0
+ 182 0000 002A     		cmp	r2, #0
+ 183 0002 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 184 0004 0446     		mov	r4, r0
+ 185 0006 0B46     		mov	r3, r1
+ 186 0008 25DD     		ble	.L16
+ 187 000a 632A     		cmp	r2, #99
+ 188 000c 2BDD     		ble	.L17
+ 189 000e 9D78     		ldrb	r5, [r3, #2]	@ zero_extendqisi2
+ 190 0010 0878     		ldrb	r0, [r1]	@ zero_extendqisi2
+ 191 0012 4978     		ldrb	r1, [r1, #1]	@ zero_extendqisi2
+ 192 0014 184B     		ldr	r3, .L18
+ 193 0016 02FB00F0 		mul	r0, r2, r0
+ 194 001a 02FB01F1 		mul	r1, r2, r1
+ 195 001e 02FB05F2 		mul	r2, r2, r5
+ 196 0022 83FB0056 		smull	r5, r6, r3, r0
+ 197 0026 83FB0175 		smull	r7, r5, r3, r1
+ 198 002a C017     		asrs	r0, r0, #31
+ 199 002c 83FB0273 		smull	r7, r3, r3, r2
+ 200 0030 C917     		asrs	r1, r1, #31
+ 201 0032 D217     		asrs	r2, r2, #31
+ 202 0034 C0EB6610 		rsb	r0, r0, r6, asr #5
+ 203 0038 C1EB6511 		rsb	r1, r1, r5, asr #5
+ 204 003c C2EB6312 		rsb	r2, r2, r3, asr #5
+ 205 0040 80F30800 		usat	r0, #8, r0
+ 206 0044 81F30801 		usat	r1, #8, r1
+ 207 0048 82F30802 		usat	r2, #8, r2
+ 208 004c 2070     		strb	r0, [r4]
+ 209 004e 6170     		strb	r1, [r4, #1]
+ 210 0050 A270     		strb	r2, [r4, #2]
+ 211 0052 2046     		mov	r0, r4
+ 212 0054 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 213              	.L16:
+ 214 0056 5A78     		ldrb	r2, [r3, #1]	@ zero_extendqisi2
+ 215 0058 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 216 005a 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ARM GAS  /tmp/ccNkEERI.s 			page 5
+
+
+ 217 005c 8370     		strb	r3, [r0, #2]
+ 218 005e 0170     		strb	r1, [r0]
+ 219 0060 4270     		strb	r2, [r0, #1]
+ 220 0062 2046     		mov	r0, r4
+ 221 0064 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 222              	.L17:
+ 223 0066 42F21073 		movw	r3, #10000
+ 224 006a 93FBF2F2 		sdiv	r2, r3, r2
+ 225 006e FFF7FEFF 		bl	_ZN5amiro5Color6darkerEi
+ 226 0072 2046     		mov	r0, r4
+ 227 0074 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 228              	.L19:
+ 229 0076 00BF     		.align	2
+ 230              	.L18:
+ 231 0078 1F85EB51 		.word	1374389535
+ 232              		.size	_ZN5amiro5Color7lighterEi, .-_ZN5amiro5Color7lighterEi
+ 233 007c AFF30080 		.section	.text._ZN5amiro5Color6darkerEi,"ax",%progbits
+ 234              		.align	2
+ 235              		.p2align 4,,15
+ 236              		.global	_ZN5amiro5Color6darkerEi
+ 237              		.thumb
+ 238              		.thumb_func
+ 239              		.type	_ZN5amiro5Color6darkerEi, %function
+ 240              	_ZN5amiro5Color6darkerEi:
+ 241              		@ args = 0, pretend = 0, frame = 0
+ 242              		@ frame_needed = 0, uses_anonymous_args = 0
+ 243 0000 002A     		cmp	r2, #0
+ 244 0002 38B5     		push	{r3, r4, r5, lr}
+ 245 0004 0446     		mov	r4, r0
+ 246 0006 0B46     		mov	r3, r1
+ 247 0008 1EDD     		ble	.L24
+ 248 000a 632A     		cmp	r2, #99
+ 249 000c 24DD     		ble	.L25
+ 250 000e 4878     		ldrb	r0, [r1, #1]	@ zero_extendqisi2
+ 251 0010 8D78     		ldrb	r5, [r1, #2]	@ zero_extendqisi2
+ 252 0012 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 253 0014 05EB8503 		add	r3, r5, r5, lsl #2
+ 254 0018 00EB8000 		add	r0, r0, r0, lsl #2
+ 255 001c 01EB8101 		add	r1, r1, r1, lsl #2
+ 256 0020 00EB8000 		add	r0, r0, r0, lsl #2
+ 257 0024 01EB8101 		add	r1, r1, r1, lsl #2
+ 258 0028 03EB8303 		add	r3, r3, r3, lsl #2
+ 259 002c 9B00     		lsls	r3, r3, #2
+ 260 002e 8000     		lsls	r0, r0, #2
+ 261 0030 8900     		lsls	r1, r1, #2
+ 262 0032 90FBF2F0 		sdiv	r0, r0, r2
+ 263 0036 91FBF2F1 		sdiv	r1, r1, r2
+ 264 003a 93FBF2F2 		sdiv	r2, r3, r2
+ 265 003e 6070     		strb	r0, [r4, #1]
+ 266 0040 2170     		strb	r1, [r4]
+ 267 0042 A270     		strb	r2, [r4, #2]
+ 268 0044 2046     		mov	r0, r4
+ 269 0046 38BD     		pop	{r3, r4, r5, pc}
+ 270              	.L24:
+ 271 0048 5A78     		ldrb	r2, [r3, #1]	@ zero_extendqisi2
+ 272 004a 0978     		ldrb	r1, [r1]	@ zero_extendqisi2
+ 273 004c 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ARM GAS  /tmp/ccNkEERI.s 			page 6
+
+
+ 274 004e 8370     		strb	r3, [r0, #2]
+ 275 0050 0170     		strb	r1, [r0]
+ 276 0052 4270     		strb	r2, [r0, #1]
+ 277 0054 2046     		mov	r0, r4
+ 278 0056 38BD     		pop	{r3, r4, r5, pc}
+ 279              	.L25:
+ 280 0058 42F21073 		movw	r3, #10000
+ 281 005c 93FBF2F2 		sdiv	r2, r3, r2
+ 282 0060 FFF7FEFF 		bl	_ZN5amiro5Color7lighterEi
+ 283 0064 2046     		mov	r0, r4
+ 284 0066 38BD     		pop	{r3, r4, r5, pc}
+ 285              		.size	_ZN5amiro5Color6darkerEi, .-_ZN5amiro5Color6darkerEi
+ 286 0068 AFF30080 		.section	.text._ZN5amiro5Color15setRedGreenBlueEiii,"ax",%progbits
+ 286      AFF30080 
+ 287              		.align	2
+ 288              		.p2align 4,,15
+ 289              		.global	_ZN5amiro5Color15setRedGreenBlueEiii
+ 290              		.thumb
+ 291              		.thumb_func
+ 292              		.type	_ZN5amiro5Color15setRedGreenBlueEiii, %function
+ 293              	_ZN5amiro5Color15setRedGreenBlueEiii:
+ 294              		@ args = 0, pretend = 0, frame = 0
+ 295              		@ frame_needed = 0, uses_anonymous_args = 0
+ 296              		@ link register save eliminated.
+ 297 0000 0170     		strb	r1, [r0]
+ 298 0002 4270     		strb	r2, [r0, #1]
+ 299 0004 8370     		strb	r3, [r0, #2]
+ 300 0006 7047     		bx	lr
+ 301              		.size	_ZN5amiro5Color15setRedGreenBlueEiii, .-_ZN5amiro5Color15setRedGreenBlueEiii
+ 302 0008 AFF30080 		.section	.text._ZN5amiro5ColoraSERKS0_,"ax",%progbits
+ 302      AFF30080 
+ 303              		.align	2
+ 304              		.p2align 4,,15
+ 305              		.global	_ZN5amiro5ColoraSERKS0_
+ 306              		.thumb
+ 307              		.thumb_func
+ 308              		.type	_ZN5amiro5ColoraSERKS0_, %function
+ 309              	_ZN5amiro5ColoraSERKS0_:
+ 310              		@ args = 0, pretend = 0, frame = 0
+ 311              		@ frame_needed = 0, uses_anonymous_args = 0
+ 312              		@ link register save eliminated.
+ 313 0000 8842     		cmp	r0, r1
+ 314 0002 10B4     		push	{r4}
+ 315 0004 05D0     		beq	.L28
+ 316 0006 0C78     		ldrb	r4, [r1]	@ zero_extendqisi2
+ 317 0008 4A78     		ldrb	r2, [r1, #1]	@ zero_extendqisi2
+ 318 000a 8B78     		ldrb	r3, [r1, #2]	@ zero_extendqisi2
+ 319 000c 8370     		strb	r3, [r0, #2]
+ 320 000e 0470     		strb	r4, [r0]
+ 321 0010 4270     		strb	r2, [r0, #1]
+ 322              	.L28:
+ 323 0012 5DF8044B 		ldr	r4, [sp], #4
+ 324 0016 7047     		bx	lr
+ 325              		.size	_ZN5amiro5ColoraSERKS0_, .-_ZN5amiro5ColoraSERKS0_
+ 326 0018 AFF30080 		.section	.text._ZN5amiro5ColoraSENS0_11GlobalColorE,"ax",%progbits
+ 326      AFF30080 
+ 327              		.align	2
+ARM GAS  /tmp/ccNkEERI.s 			page 7
+
+
+ 328              		.p2align 4,,15
+ 329              		.global	_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 330              		.thumb
+ 331              		.thumb_func
+ 332              		.type	_ZN5amiro5ColoraSENS0_11GlobalColorE, %function
+ 333              	_ZN5amiro5ColoraSENS0_11GlobalColorE:
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		@ link register save eliminated.
+ 337 0000 30B4     		push	{r4, r5}
+ 338 0002 064A     		ldr	r2, .L30
+ 339 0004 01EB4101 		add	r1, r1, r1, lsl #1
+ 340 0008 5418     		adds	r4, r2, r1
+ 341 000a 555C     		ldrb	r5, [r2, r1]	@ zero_extendqisi2
+ 342 000c 6178     		ldrb	r1, [r4, #1]	@ zero_extendqisi2
+ 343 000e A278     		ldrb	r2, [r4, #2]	@ zero_extendqisi2
+ 344 0010 0570     		strb	r5, [r0]
+ 345 0012 4170     		strb	r1, [r0, #1]
+ 346 0014 8270     		strb	r2, [r0, #2]
+ 347 0016 30BC     		pop	{r4, r5}
+ 348 0018 7047     		bx	lr
+ 349              	.L31:
+ 350 001a 00BF     		.align	2
+ 351              	.L30:
+ 352 001c 00000000 		.word	.LANCHOR0
+ 353              		.size	_ZN5amiro5ColoraSENS0_11GlobalColorE, .-_ZN5amiro5ColoraSENS0_11GlobalColorE
+ 354              		.section	.rodata._ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors,"a",%progbits
+ 355              		.align	2
+ 356              		.set	.LANCHOR0,. + 0
+ 357              		.type	_ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors, %object
+ 358              		.size	_ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors, 441
+ 359              	_ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors:
+ 360 0000 F0       		.byte	-16
+ 361 0001 F8       		.byte	-8
+ 362 0002 FF       		.byte	-1
+ 363 0003 FA       		.byte	-6
+ 364 0004 EB       		.byte	-21
+ 365 0005 D7       		.byte	-41
+ 366 0006 00       		.byte	0
+ 367 0007 FF       		.byte	-1
+ 368 0008 FF       		.byte	-1
+ 369 0009 7F       		.byte	127
+ 370 000a FF       		.byte	-1
+ 371 000b D4       		.byte	-44
+ 372 000c F0       		.byte	-16
+ 373 000d FF       		.byte	-1
+ 374 000e FF       		.byte	-1
+ 375 000f F5       		.byte	-11
+ 376 0010 F5       		.byte	-11
+ 377 0011 DC       		.byte	-36
+ 378 0012 FF       		.byte	-1
+ 379 0013 E4       		.byte	-28
+ 380 0014 C4       		.byte	-60
+ 381 0015 00       		.byte	0
+ 382 0016 00       		.byte	0
+ 383 0017 00       		.byte	0
+ 384 0018 FF       		.byte	-1
+ARM GAS  /tmp/ccNkEERI.s 			page 8
+
+
+ 385 0019 EB       		.byte	-21
+ 386 001a CD       		.byte	-51
+ 387 001b 00       		.byte	0
+ 388 001c 00       		.byte	0
+ 389 001d FF       		.byte	-1
+ 390 001e 8A       		.byte	-118
+ 391 001f 2B       		.byte	43
+ 392 0020 E2       		.byte	-30
+ 393 0021 A5       		.byte	-91
+ 394 0022 2A       		.byte	42
+ 395 0023 2A       		.byte	42
+ 396 0024 DE       		.byte	-34
+ 397 0025 B8       		.byte	-72
+ 398 0026 87       		.byte	-121
+ 399 0027 5F       		.byte	95
+ 400 0028 9E       		.byte	-98
+ 401 0029 A0       		.byte	-96
+ 402 002a 7F       		.byte	127
+ 403 002b FF       		.byte	-1
+ 404 002c 00       		.byte	0
+ 405 002d D2       		.byte	-46
+ 406 002e 69       		.byte	105
+ 407 002f 1E       		.byte	30
+ 408 0030 FF       		.byte	-1
+ 409 0031 7F       		.byte	127
+ 410 0032 50       		.byte	80
+ 411 0033 64       		.byte	100
+ 412 0034 95       		.byte	-107
+ 413 0035 ED       		.byte	-19
+ 414 0036 FF       		.byte	-1
+ 415 0037 F8       		.byte	-8
+ 416 0038 DC       		.byte	-36
+ 417 0039 DC       		.byte	-36
+ 418 003a 14       		.byte	20
+ 419 003b 3C       		.byte	60
+ 420 003c 00       		.byte	0
+ 421 003d FF       		.byte	-1
+ 422 003e FF       		.byte	-1
+ 423 003f 00       		.byte	0
+ 424 0040 00       		.byte	0
+ 425 0041 8B       		.byte	-117
+ 426 0042 00       		.byte	0
+ 427 0043 8B       		.byte	-117
+ 428 0044 8B       		.byte	-117
+ 429 0045 B8       		.byte	-72
+ 430 0046 86       		.byte	-122
+ 431 0047 0B       		.byte	11
+ 432 0048 A9       		.byte	-87
+ 433 0049 A9       		.byte	-87
+ 434 004a A9       		.byte	-87
+ 435 004b 00       		.byte	0
+ 436 004c 64       		.byte	100
+ 437 004d 00       		.byte	0
+ 438 004e A9       		.byte	-87
+ 439 004f A9       		.byte	-87
+ 440 0050 A9       		.byte	-87
+ 441 0051 BD       		.byte	-67
+ARM GAS  /tmp/ccNkEERI.s 			page 9
+
+
+ 442 0052 B7       		.byte	-73
+ 443 0053 6B       		.byte	107
+ 444 0054 8B       		.byte	-117
+ 445 0055 00       		.byte	0
+ 446 0056 8B       		.byte	-117
+ 447 0057 55       		.byte	85
+ 448 0058 6B       		.byte	107
+ 449 0059 2F       		.byte	47
+ 450 005a FF       		.byte	-1
+ 451 005b 8C       		.byte	-116
+ 452 005c 00       		.byte	0
+ 453 005d 99       		.byte	-103
+ 454 005e 32       		.byte	50
+ 455 005f CC       		.byte	-52
+ 456 0060 8B       		.byte	-117
+ 457 0061 00       		.byte	0
+ 458 0062 00       		.byte	0
+ 459 0063 E9       		.byte	-23
+ 460 0064 96       		.byte	-106
+ 461 0065 7A       		.byte	122
+ 462 0066 8F       		.byte	-113
+ 463 0067 BC       		.byte	-68
+ 464 0068 8F       		.byte	-113
+ 465 0069 48       		.byte	72
+ 466 006a 3D       		.byte	61
+ 467 006b 8B       		.byte	-117
+ 468 006c 2F       		.byte	47
+ 469 006d 4F       		.byte	79
+ 470 006e 4F       		.byte	79
+ 471 006f 2F       		.byte	47
+ 472 0070 4F       		.byte	79
+ 473 0071 4F       		.byte	79
+ 474 0072 00       		.byte	0
+ 475 0073 CE       		.byte	-50
+ 476 0074 D1       		.byte	-47
+ 477 0075 94       		.byte	-108
+ 478 0076 00       		.byte	0
+ 479 0077 D3       		.byte	-45
+ 480 0078 FF       		.byte	-1
+ 481 0079 14       		.byte	20
+ 482 007a 93       		.byte	-109
+ 483 007b 00       		.byte	0
+ 484 007c BF       		.byte	-65
+ 485 007d FF       		.byte	-1
+ 486 007e 69       		.byte	105
+ 487 007f 69       		.byte	105
+ 488 0080 69       		.byte	105
+ 489 0081 69       		.byte	105
+ 490 0082 69       		.byte	105
+ 491 0083 69       		.byte	105
+ 492 0084 1E       		.byte	30
+ 493 0085 90       		.byte	-112
+ 494 0086 FF       		.byte	-1
+ 495 0087 B2       		.byte	-78
+ 496 0088 22       		.byte	34
+ 497 0089 22       		.byte	34
+ 498 008a FF       		.byte	-1
+ARM GAS  /tmp/ccNkEERI.s 			page 10
+
+
+ 499 008b FA       		.byte	-6
+ 500 008c F0       		.byte	-16
+ 501 008d 22       		.byte	34
+ 502 008e 8B       		.byte	-117
+ 503 008f 22       		.byte	34
+ 504 0090 FF       		.byte	-1
+ 505 0091 00       		.byte	0
+ 506 0092 FF       		.byte	-1
+ 507 0093 DC       		.byte	-36
+ 508 0094 DC       		.byte	-36
+ 509 0095 DC       		.byte	-36
+ 510 0096 F8       		.byte	-8
+ 511 0097 F8       		.byte	-8
+ 512 0098 FF       		.byte	-1
+ 513 0099 FF       		.byte	-1
+ 514 009a D7       		.byte	-41
+ 515 009b 00       		.byte	0
+ 516 009c DA       		.byte	-38
+ 517 009d A5       		.byte	-91
+ 518 009e 20       		.byte	32
+ 519 009f 80       		.byte	-128
+ 520 00a0 80       		.byte	-128
+ 521 00a1 80       		.byte	-128
+ 522 00a2 80       		.byte	-128
+ 523 00a3 80       		.byte	-128
+ 524 00a4 80       		.byte	-128
+ 525 00a5 00       		.byte	0
+ 526 00a6 80       		.byte	-128
+ 527 00a7 00       		.byte	0
+ 528 00a8 AD       		.byte	-83
+ 529 00a9 FF       		.byte	-1
+ 530 00aa 2F       		.byte	47
+ 531 00ab F0       		.byte	-16
+ 532 00ac FF       		.byte	-1
+ 533 00ad F0       		.byte	-16
+ 534 00ae FF       		.byte	-1
+ 535 00af 69       		.byte	105
+ 536 00b0 B4       		.byte	-76
+ 537 00b1 CD       		.byte	-51
+ 538 00b2 5C       		.byte	92
+ 539 00b3 5C       		.byte	92
+ 540 00b4 4B       		.byte	75
+ 541 00b5 00       		.byte	0
+ 542 00b6 82       		.byte	-126
+ 543 00b7 FF       		.byte	-1
+ 544 00b8 FF       		.byte	-1
+ 545 00b9 F0       		.byte	-16
+ 546 00ba F0       		.byte	-16
+ 547 00bb E6       		.byte	-26
+ 548 00bc 8C       		.byte	-116
+ 549 00bd E6       		.byte	-26
+ 550 00be E6       		.byte	-26
+ 551 00bf FA       		.byte	-6
+ 552 00c0 FF       		.byte	-1
+ 553 00c1 F0       		.byte	-16
+ 554 00c2 F5       		.byte	-11
+ 555 00c3 7C       		.byte	124
+ARM GAS  /tmp/ccNkEERI.s 			page 11
+
+
+ 556 00c4 FC       		.byte	-4
+ 557 00c5 00       		.byte	0
+ 558 00c6 FF       		.byte	-1
+ 559 00c7 FA       		.byte	-6
+ 560 00c8 CD       		.byte	-51
+ 561 00c9 AD       		.byte	-83
+ 562 00ca D8       		.byte	-40
+ 563 00cb E6       		.byte	-26
+ 564 00cc F0       		.byte	-16
+ 565 00cd 80       		.byte	-128
+ 566 00ce 80       		.byte	-128
+ 567 00cf E0       		.byte	-32
+ 568 00d0 FF       		.byte	-1
+ 569 00d1 FF       		.byte	-1
+ 570 00d2 FA       		.byte	-6
+ 571 00d3 FA       		.byte	-6
+ 572 00d4 D2       		.byte	-46
+ 573 00d5 D3       		.byte	-45
+ 574 00d6 D3       		.byte	-45
+ 575 00d7 D3       		.byte	-45
+ 576 00d8 90       		.byte	-112
+ 577 00d9 EE       		.byte	-18
+ 578 00da 90       		.byte	-112
+ 579 00db D3       		.byte	-45
+ 580 00dc D3       		.byte	-45
+ 581 00dd D3       		.byte	-45
+ 582 00de FF       		.byte	-1
+ 583 00df B6       		.byte	-74
+ 584 00e0 C1       		.byte	-63
+ 585 00e1 FF       		.byte	-1
+ 586 00e2 A0       		.byte	-96
+ 587 00e3 7A       		.byte	122
+ 588 00e4 20       		.byte	32
+ 589 00e5 B2       		.byte	-78
+ 590 00e6 AA       		.byte	-86
+ 591 00e7 87       		.byte	-121
+ 592 00e8 CE       		.byte	-50
+ 593 00e9 FA       		.byte	-6
+ 594 00ea 77       		.byte	119
+ 595 00eb 88       		.byte	-120
+ 596 00ec 99       		.byte	-103
+ 597 00ed 77       		.byte	119
+ 598 00ee 88       		.byte	-120
+ 599 00ef 99       		.byte	-103
+ 600 00f0 B0       		.byte	-80
+ 601 00f1 C4       		.byte	-60
+ 602 00f2 DE       		.byte	-34
+ 603 00f3 FF       		.byte	-1
+ 604 00f4 FF       		.byte	-1
+ 605 00f5 E0       		.byte	-32
+ 606 00f6 00       		.byte	0
+ 607 00f7 FF       		.byte	-1
+ 608 00f8 00       		.byte	0
+ 609 00f9 32       		.byte	50
+ 610 00fa CD       		.byte	-51
+ 611 00fb 32       		.byte	50
+ 612 00fc FA       		.byte	-6
+ARM GAS  /tmp/ccNkEERI.s 			page 12
+
+
+ 613 00fd F0       		.byte	-16
+ 614 00fe E6       		.byte	-26
+ 615 00ff FF       		.byte	-1
+ 616 0100 00       		.byte	0
+ 617 0101 FF       		.byte	-1
+ 618 0102 80       		.byte	-128
+ 619 0103 00       		.byte	0
+ 620 0104 00       		.byte	0
+ 621 0105 66       		.byte	102
+ 622 0106 CD       		.byte	-51
+ 623 0107 AA       		.byte	-86
+ 624 0108 00       		.byte	0
+ 625 0109 00       		.byte	0
+ 626 010a CD       		.byte	-51
+ 627 010b BA       		.byte	-70
+ 628 010c 55       		.byte	85
+ 629 010d D3       		.byte	-45
+ 630 010e 93       		.byte	-109
+ 631 010f 70       		.byte	112
+ 632 0110 DB       		.byte	-37
+ 633 0111 3C       		.byte	60
+ 634 0112 B3       		.byte	-77
+ 635 0113 71       		.byte	113
+ 636 0114 7B       		.byte	123
+ 637 0115 68       		.byte	104
+ 638 0116 EE       		.byte	-18
+ 639 0117 00       		.byte	0
+ 640 0118 FA       		.byte	-6
+ 641 0119 9A       		.byte	-102
+ 642 011a 48       		.byte	72
+ 643 011b D1       		.byte	-47
+ 644 011c CC       		.byte	-52
+ 645 011d C7       		.byte	-57
+ 646 011e 15       		.byte	21
+ 647 011f 85       		.byte	-123
+ 648 0120 19       		.byte	25
+ 649 0121 19       		.byte	25
+ 650 0122 70       		.byte	112
+ 651 0123 F5       		.byte	-11
+ 652 0124 FF       		.byte	-1
+ 653 0125 FA       		.byte	-6
+ 654 0126 FF       		.byte	-1
+ 655 0127 E4       		.byte	-28
+ 656 0128 E1       		.byte	-31
+ 657 0129 FF       		.byte	-1
+ 658 012a E4       		.byte	-28
+ 659 012b B5       		.byte	-75
+ 660 012c FF       		.byte	-1
+ 661 012d DE       		.byte	-34
+ 662 012e AD       		.byte	-83
+ 663 012f 00       		.byte	0
+ 664 0130 00       		.byte	0
+ 665 0131 80       		.byte	-128
+ 666 0132 FD       		.byte	-3
+ 667 0133 F5       		.byte	-11
+ 668 0134 E6       		.byte	-26
+ 669 0135 80       		.byte	-128
+ARM GAS  /tmp/ccNkEERI.s 			page 13
+
+
+ 670 0136 80       		.byte	-128
+ 671 0137 00       		.byte	0
+ 672 0138 6B       		.byte	107
+ 673 0139 8E       		.byte	-114
+ 674 013a 23       		.byte	35
+ 675 013b FF       		.byte	-1
+ 676 013c A5       		.byte	-91
+ 677 013d 00       		.byte	0
+ 678 013e FF       		.byte	-1
+ 679 013f 45       		.byte	69
+ 680 0140 00       		.byte	0
+ 681 0141 DA       		.byte	-38
+ 682 0142 70       		.byte	112
+ 683 0143 D6       		.byte	-42
+ 684 0144 EE       		.byte	-18
+ 685 0145 E8       		.byte	-24
+ 686 0146 AA       		.byte	-86
+ 687 0147 98       		.byte	-104
+ 688 0148 FB       		.byte	-5
+ 689 0149 98       		.byte	-104
+ 690 014a AF       		.byte	-81
+ 691 014b EE       		.byte	-18
+ 692 014c EE       		.byte	-18
+ 693 014d DB       		.byte	-37
+ 694 014e 70       		.byte	112
+ 695 014f 93       		.byte	-109
+ 696 0150 FF       		.byte	-1
+ 697 0151 EF       		.byte	-17
+ 698 0152 D5       		.byte	-43
+ 699 0153 FF       		.byte	-1
+ 700 0154 DA       		.byte	-38
+ 701 0155 B9       		.byte	-71
+ 702 0156 CD       		.byte	-51
+ 703 0157 85       		.byte	-123
+ 704 0158 3F       		.byte	63
+ 705 0159 FF       		.byte	-1
+ 706 015a C0       		.byte	-64
+ 707 015b CB       		.byte	-53
+ 708 015c DD       		.byte	-35
+ 709 015d A0       		.byte	-96
+ 710 015e DD       		.byte	-35
+ 711 015f B0       		.byte	-80
+ 712 0160 E0       		.byte	-32
+ 713 0161 E6       		.byte	-26
+ 714 0162 80       		.byte	-128
+ 715 0163 00       		.byte	0
+ 716 0164 80       		.byte	-128
+ 717 0165 FF       		.byte	-1
+ 718 0166 00       		.byte	0
+ 719 0167 00       		.byte	0
+ 720 0168 BC       		.byte	-68
+ 721 0169 8F       		.byte	-113
+ 722 016a 8F       		.byte	-113
+ 723 016b 41       		.byte	65
+ 724 016c 69       		.byte	105
+ 725 016d E1       		.byte	-31
+ 726 016e 8B       		.byte	-117
+ARM GAS  /tmp/ccNkEERI.s 			page 14
+
+
+ 727 016f 45       		.byte	69
+ 728 0170 13       		.byte	19
+ 729 0171 FA       		.byte	-6
+ 730 0172 80       		.byte	-128
+ 731 0173 72       		.byte	114
+ 732 0174 F4       		.byte	-12
+ 733 0175 A4       		.byte	-92
+ 734 0176 60       		.byte	96
+ 735 0177 2E       		.byte	46
+ 736 0178 8B       		.byte	-117
+ 737 0179 57       		.byte	87
+ 738 017a FF       		.byte	-1
+ 739 017b F5       		.byte	-11
+ 740 017c EE       		.byte	-18
+ 741 017d A0       		.byte	-96
+ 742 017e 52       		.byte	82
+ 743 017f 2D       		.byte	45
+ 744 0180 C0       		.byte	-64
+ 745 0181 C0       		.byte	-64
+ 746 0182 C0       		.byte	-64
+ 747 0183 87       		.byte	-121
+ 748 0184 CE       		.byte	-50
+ 749 0185 EB       		.byte	-21
+ 750 0186 6A       		.byte	106
+ 751 0187 5A       		.byte	90
+ 752 0188 CD       		.byte	-51
+ 753 0189 70       		.byte	112
+ 754 018a 80       		.byte	-128
+ 755 018b 90       		.byte	-112
+ 756 018c 70       		.byte	112
+ 757 018d 80       		.byte	-128
+ 758 018e 90       		.byte	-112
+ 759 018f FF       		.byte	-1
+ 760 0190 FA       		.byte	-6
+ 761 0191 FA       		.byte	-6
+ 762 0192 00       		.byte	0
+ 763 0193 FF       		.byte	-1
+ 764 0194 7F       		.byte	127
+ 765 0195 46       		.byte	70
+ 766 0196 82       		.byte	-126
+ 767 0197 B4       		.byte	-76
+ 768 0198 D2       		.byte	-46
+ 769 0199 B4       		.byte	-76
+ 770 019a 8C       		.byte	-116
+ 771 019b 00       		.byte	0
+ 772 019c 80       		.byte	-128
+ 773 019d 80       		.byte	-128
+ 774 019e D8       		.byte	-40
+ 775 019f BF       		.byte	-65
+ 776 01a0 D8       		.byte	-40
+ 777 01a1 FF       		.byte	-1
+ 778 01a2 63       		.byte	99
+ 779 01a3 47       		.byte	71
+ 780 01a4 40       		.byte	64
+ 781 01a5 E0       		.byte	-32
+ 782 01a6 D0       		.byte	-48
+ 783 01a7 EE       		.byte	-18
+ARM GAS  /tmp/ccNkEERI.s 			page 15
+
+
+ 784 01a8 82       		.byte	-126
+ 785 01a9 EE       		.byte	-18
+ 786 01aa F5       		.byte	-11
+ 787 01ab DE       		.byte	-34
+ 788 01ac B3       		.byte	-77
+ 789 01ad FF       		.byte	-1
+ 790 01ae FF       		.byte	-1
+ 791 01af FF       		.byte	-1
+ 792 01b0 F5       		.byte	-11
+ 793 01b1 F5       		.byte	-11
+ 794 01b2 F5       		.byte	-11
+ 795 01b3 FF       		.byte	-1
+ 796 01b4 FF       		.byte	-1
+ 797 01b5 00       		.byte	0
+ 798 01b6 9A       		.byte	-102
+ 799 01b7 CD       		.byte	-51
+ 800 01b8 32       		.byte	50
+ 801 01b9 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccNkEERI.s 			page 16
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Color.cpp
+     /tmp/ccNkEERI.s:18     .text._ZN5amiro5ColorC2Ev:00000000 $t
+     /tmp/ccNkEERI.s:24     .text._ZN5amiro5ColorC2Ev:00000000 _ZN5amiro5ColorC2Ev
+     /tmp/ccNkEERI.s:24     .text._ZN5amiro5ColorC2Ev:00000000 _ZN5amiro5ColorC1Ev
+     /tmp/ccNkEERI.s:37     .text._ZN5amiro5ColorC2ERKS0_:00000000 $t
+     /tmp/ccNkEERI.s:43     .text._ZN5amiro5ColorC2ERKS0_:00000000 _ZN5amiro5ColorC2ERKS0_
+     /tmp/ccNkEERI.s:43     .text._ZN5amiro5ColorC2ERKS0_:00000000 _ZN5amiro5ColorC1ERKS0_
+     /tmp/ccNkEERI.s:60     .text._ZN5amiro5ColorC2Eiii:00000000 $t
+     /tmp/ccNkEERI.s:66     .text._ZN5amiro5ColorC2Eiii:00000000 _ZN5amiro5ColorC2Eiii
+     /tmp/ccNkEERI.s:66     .text._ZN5amiro5ColorC2Eiii:00000000 _ZN5amiro5ColorC1Eiii
+     /tmp/ccNkEERI.s:80     .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:00000000 $t
+     /tmp/ccNkEERI.s:86     .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:00000000 _ZN5amiro5ColorC2ENS0_11GlobalColorE
+     /tmp/ccNkEERI.s:105    .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:0000001c $d
+     /tmp/ccNkEERI.s:86     .text._ZN5amiro5ColorC2ENS0_11GlobalColorE:00000000 _ZN5amiro5ColorC1ENS0_11GlobalColorE
+     /tmp/ccNkEERI.s:110    .text._ZN5amiro5Color15getRedGreenBlueEPiS1_S1_:00000000 $t
+     /tmp/ccNkEERI.s:116    .text._ZN5amiro5Color15getRedGreenBlueEPiS1_S1_:00000000 _ZN5amiro5Color15getRedGreenBlueEPiS1_S1_
+     /tmp/ccNkEERI.s:131    .text._ZN5amiro5Color6getRedEv:00000000 $t
+     /tmp/ccNkEERI.s:137    .text._ZN5amiro5Color6getRedEv:00000000 _ZN5amiro5Color6getRedEv
+     /tmp/ccNkEERI.s:145    .text._ZN5amiro5Color8getGreenEv:00000000 $t
+     /tmp/ccNkEERI.s:151    .text._ZN5amiro5Color8getGreenEv:00000000 _ZN5amiro5Color8getGreenEv
+     /tmp/ccNkEERI.s:159    .text._ZN5amiro5Color7getBlueEv:00000000 $t
+     /tmp/ccNkEERI.s:165    .text._ZN5amiro5Color7getBlueEv:00000000 _ZN5amiro5Color7getBlueEv
+     /tmp/ccNkEERI.s:173    .text._ZN5amiro5Color7lighterEi:00000000 $t
+     /tmp/ccNkEERI.s:179    .text._ZN5amiro5Color7lighterEi:00000000 _ZN5amiro5Color7lighterEi
+     /tmp/ccNkEERI.s:240    .text._ZN5amiro5Color6darkerEi:00000000 _ZN5amiro5Color6darkerEi
+     /tmp/ccNkEERI.s:231    .text._ZN5amiro5Color7lighterEi:00000078 $d
+     /tmp/ccNkEERI.s:234    .text._ZN5amiro5Color6darkerEi:00000000 $t
+     /tmp/ccNkEERI.s:287    .text._ZN5amiro5Color15setRedGreenBlueEiii:00000000 $t
+     /tmp/ccNkEERI.s:293    .text._ZN5amiro5Color15setRedGreenBlueEiii:00000000 _ZN5amiro5Color15setRedGreenBlueEiii
+     /tmp/ccNkEERI.s:303    .text._ZN5amiro5ColoraSERKS0_:00000000 $t
+     /tmp/ccNkEERI.s:309    .text._ZN5amiro5ColoraSERKS0_:00000000 _ZN5amiro5ColoraSERKS0_
+     /tmp/ccNkEERI.s:327    .text._ZN5amiro5ColoraSENS0_11GlobalColorE:00000000 $t
+     /tmp/ccNkEERI.s:333    .text._ZN5amiro5ColoraSENS0_11GlobalColorE:00000000 _ZN5amiro5ColoraSENS0_11GlobalColorE
+     /tmp/ccNkEERI.s:352    .text._ZN5amiro5ColoraSENS0_11GlobalColorE:0000001c $d
+     /tmp/ccNkEERI.s:355    .rodata._ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors:00000000 $d
+     /tmp/ccNkEERI.s:359    .rodata._ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors:00000000 _ZZN5amiro5ColorC1ENS0_11GlobalColorEE13global_colors
+     /tmp/ccNkEERI.s:233    .text._ZN5amiro5Color7lighterEi:0000007c $t
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,196 @@
+ARM GAS  /tmp/ccf9cNEE.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"syscalls.c"
+  17              		.section	.text._read_r,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	_read_r
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	_read_r, %function
+  24              	_read_r:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 1623     		movs	r3, #22
+  29 0002 0360     		str	r3, [r0]
+  30 0004 4FF0FF30 		mov	r0, #-1
+  31 0008 7047     		bx	lr
+  32              		.size	_read_r, .-_read_r
+  33 000a 00BFAFF3 		.section	.text._lseek_r,"ax",%progbits
+  33      0080
+  34              		.align	2
+  35              		.p2align 4,,15
+  36              		.global	_lseek_r
+  37              		.thumb
+  38              		.thumb_func
+  39              		.type	_lseek_r, %function
+  40              	_lseek_r:
+  41              		@ args = 0, pretend = 0, frame = 0
+  42              		@ frame_needed = 0, uses_anonymous_args = 0
+  43              		@ link register save eliminated.
+  44 0000 0020     		movs	r0, #0
+  45 0002 7047     		bx	lr
+  46              		.size	_lseek_r, .-_lseek_r
+  47 0004 AFF30080 		.section	.text._write_r,"ax",%progbits
+  47      AFF30080 
+  47      AFF30080 
+  48              		.align	2
+  49              		.p2align 4,,15
+  50              		.global	_write_r
+  51              		.thumb
+  52              		.thumb_func
+  53              		.type	_write_r, %function
+  54              	_write_r:
+ARM GAS  /tmp/ccf9cNEE.s 			page 2
+
+
+  55              		@ args = 0, pretend = 0, frame = 0
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57              		@ link register save eliminated.
+  58 0000 1846     		mov	r0, r3
+  59 0002 7047     		bx	lr
+  60              		.size	_write_r, .-_write_r
+  61 0004 AFF30080 		.section	.text._close_r,"ax",%progbits
+  61      AFF30080 
+  61      AFF30080 
+  62              		.align	2
+  63              		.p2align 4,,15
+  64              		.global	_close_r
+  65              		.thumb
+  66              		.thumb_func
+  67              		.type	_close_r, %function
+  68              	_close_r:
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              		@ link register save eliminated.
+  72 0000 0020     		movs	r0, #0
+  73 0002 7047     		bx	lr
+  74              		.size	_close_r, .-_close_r
+  75 0004 AFF30080 		.section	.text._sbrk_r,"ax",%progbits
+  75      AFF30080 
+  75      AFF30080 
+  76              		.align	2
+  77              		.p2align 4,,15
+  78              		.global	_sbrk_r
+  79              		.thumb
+  80              		.thumb_func
+  81              		.type	_sbrk_r, %function
+  82              	_sbrk_r:
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85 0000 38B5     		push	{r3, r4, r5, lr}
+  86 0002 0C1E     		subs	r4, r1, #0
+  87 0004 0546     		mov	r5, r0
+  88 0006 09DD     		ble	.L10
+  89              	.L6:
+  90 0008 2046     		mov	r0, r4
+  91 000a FFF7FEFF 		bl	chCoreAlloc
+  92 000e 00B1     		cbz	r0, .L11
+  93 0010 38BD     		pop	{r3, r4, r5, pc}
+  94              	.L11:
+  95 0012 0C23     		movs	r3, #12
+  96 0014 2B60     		str	r3, [r5]
+  97 0016 4FF0FF30 		mov	r0, #-1
+  98 001a 38BD     		pop	{r3, r4, r5, pc}
+  99              	.L10:
+ 100 001c 0148     		ldr	r0, .L12
+ 101 001e FFF7FEFF 		bl	chDbgPanic
+ 102 0022 F1E7     		b	.L6
+ 103              	.L13:
+ 104              		.align	2
+ 105              	.L12:
+ 106 0024 00000000 		.word	.LC0
+ 107              		.size	_sbrk_r, .-_sbrk_r
+ARM GAS  /tmp/ccf9cNEE.s 			page 3
+
+
+ 108 0028 AFF30080 		.section	.text._fstat_r,"ax",%progbits
+ 108      AFF30080 
+ 109              		.align	2
+ 110              		.p2align 4,,15
+ 111              		.global	_fstat_r
+ 112              		.thumb
+ 113              		.thumb_func
+ 114              		.type	_fstat_r, %function
+ 115              	_fstat_r:
+ 116              		@ args = 0, pretend = 0, frame = 0
+ 117              		@ frame_needed = 0, uses_anonymous_args = 0
+ 118 0000 10B5     		push	{r4, lr}
+ 119 0002 1046     		mov	r0, r2
+ 120 0004 1446     		mov	r4, r2
+ 121 0006 0021     		movs	r1, #0
+ 122 0008 3C22     		movs	r2, #60
+ 123 000a FFF7FEFF 		bl	memset
+ 124 000e 4FF40053 		mov	r3, #8192
+ 125 0012 6360     		str	r3, [r4, #4]
+ 126 0014 0020     		movs	r0, #0
+ 127 0016 10BD     		pop	{r4, pc}
+ 128              		.size	_fstat_r, .-_fstat_r
+ 129 0018 AFF30080 		.section	.text._isatty_r,"ax",%progbits
+ 129      AFF30080 
+ 130              		.align	2
+ 131              		.p2align 4,,15
+ 132              		.global	_isatty_r
+ 133              		.thumb
+ 134              		.thumb_func
+ 135              		.type	_isatty_r, %function
+ 136              	_isatty_r:
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 139              		@ link register save eliminated.
+ 140 0000 0120     		movs	r0, #1
+ 141 0002 7047     		bx	lr
+ 142              		.size	_isatty_r, .-_isatty_r
+ 143 0004 AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
+ 143      AFF30080 
+ 143      AFF30080 
+ 144              		.align	2
+ 145              	.LC0:
+ 146 0000 225F7362 		.ascii	"\"_sbrk_r\"()\000"
+ 146      726B5F72 
+ 146      22282900 
+ 147              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ARM GAS  /tmp/ccf9cNEE.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 syscalls.c
+     /tmp/ccf9cNEE.s:18     .text._read_r:00000000 $t
+     /tmp/ccf9cNEE.s:24     .text._read_r:00000000 _read_r
+     /tmp/ccf9cNEE.s:34     .text._lseek_r:00000000 $t
+     /tmp/ccf9cNEE.s:40     .text._lseek_r:00000000 _lseek_r
+     /tmp/ccf9cNEE.s:48     .text._write_r:00000000 $t
+     /tmp/ccf9cNEE.s:54     .text._write_r:00000000 _write_r
+     /tmp/ccf9cNEE.s:62     .text._close_r:00000000 $t
+     /tmp/ccf9cNEE.s:68     .text._close_r:00000000 _close_r
+     /tmp/ccf9cNEE.s:76     .text._sbrk_r:00000000 $t
+     /tmp/ccf9cNEE.s:82     .text._sbrk_r:00000000 _sbrk_r
+     /tmp/ccf9cNEE.s:106    .text._sbrk_r:00000024 $d
+     /tmp/ccf9cNEE.s:109    .text._fstat_r:00000000 $t
+     /tmp/ccf9cNEE.s:115    .text._fstat_r:00000000 _fstat_r
+     /tmp/ccf9cNEE.s:130    .text._isatty_r:00000000 $t
+     /tmp/ccf9cNEE.s:136    .text._isatty_r:00000000 _isatty_r
+     /tmp/ccf9cNEE.s:144    .rodata.str1.4:00000000 $d
+     /tmp/ccf9cNEE.s:108    .text._sbrk_r:00000028 $t
+
+UNDEFINED SYMBOLS
+chCoreAlloc
+chDbgPanic
+memset

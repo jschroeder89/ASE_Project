@@ -1,0 +1,4 @@
+MotorIncrements.cpp:11:1:amiro::MotorIncrements::MotorIncrements(QEIDriver*, QEIDriver*)	12	static
+MotorIncrements.cpp:21:6:void amiro::MotorIncrements::start()	16	static
+MotorIncrements.cpp:29:5:int amiro::MotorIncrements::qeiGetPosition(int)	0	static
+MotorIncrements.cpp:33:5:int amiro::MotorIncrements::getQeiConfigRange()	0	static

@@ -1,0 +1,13 @@
+lis331dlh.cpp:22:1:amiro::LIS331DLH::~LIS331DLH()	0	static
+lis331dlh.cpp:22:1:virtual amiro::LIS331DLH::~LIS331DLH()	8	static
+lis331dlh.cpp:68:1:virtual msg_t amiro::LIS331DLH::main()	24	static
+ch.hpp:784:29:chibios_rt::ThreadReference chibios_rt::BaseStaticThread<N>::start(tprio_t) [with int N = 256; tprio_t = long unsigned int]	24	static
+chprintf.h:69:20:)	12	static
+lis331dlh.cpp:15:1:amiro::LIS331DLH::LIS331DLH(amiro::HWSPIDriver*)	16	static
+lis331dlh.cpp:28:1:chibios_rt::EvtSource* amiro::LIS331DLH::getEventSource()	0	static
+lis331dlh.cpp:34:1:int16_t amiro::LIS331DLH::getAcceleration(uint8_t)	0	static
+lis331dlh.cpp:42:1:int16_t amiro::LIS331DLH::getAccelerationForce(uint8_t)	0	static
+lis331dlh.cpp:116:1:msg_t amiro::LIS331DLH::configure(amiro::LIS331DLH::LIS331DLHConfig*)	32	static
+lis331dlh.cpp:179:1:uint8_t amiro::LIS331DLH::getCheck()	16	static
+lis331dlh.cpp:200:1:void amiro::LIS331DLH::printSelfTest(amiro::LIS331DLH::LIS331DLHConfig*)	88	static
+lis331dlh.cpp:344:1:cpp)	0	static

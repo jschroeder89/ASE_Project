@@ -1,0 +1,16 @@
+spi.c:68:6:spiInit	0	static
+spi.c:80:6:spiObjectInit	0	static
+spi.c:107:6:spiStart	16	static
+spi.c:129:6:spiStop	8	static
+spi.c:149:6:spiSelect	8	static
+spi.c:167:6:spiUnselect	8	static
+spi.c:190:6:spiStartIgnore	16	static
+spi.c:217:6:spiStartExchange	24	static
+spi.c:244:6:spiStartSend	16	static
+spi.c:270:6:spiStartReceive	16	static
+spi.c:296:6:spiIgnore	16	static
+spi.c:326:6:spiExchange	24	static
+spi.c:357:6:spiSend	16	static
+spi.c:385:6:spiReceive	16	static
+spi.c:412:6:spiAcquireBus	8	static
+spi.c:432:6:spiReleaseBus	8	static

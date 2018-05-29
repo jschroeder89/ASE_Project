@@ -1,0 +1,13 @@
+uart_lld.c:181:13:usart_stop	8	static
+uart_lld.c:317:13:serve_usart_irq	24	static
+uart_lld.c:282:13:uart_lld_serve_tx_end_irq	16	static
+uart_lld.c:242:13:uart_lld_serve_rx_end_irq	16	static
+uart_lld.c:375:1:VectorD8	8	static
+uart_lld.c:394:1:VectorDC	8	static
+uart_lld.c:470:6:uart_lld_init	24	static
+uart_lld.c:527:6:uart_lld_start	24	static
+uart_lld.c:693:6:uart_lld_stop	8	static
+uart_lld.c:761:6:uart_lld_start_send	0	static
+uart_lld.c:782:8:uart_lld_stop_send	0	static
+uart_lld.c:799:6:uart_lld_start_receive	12	static
+uart_lld.c:823:8:uart_lld_stop_receive	8	static

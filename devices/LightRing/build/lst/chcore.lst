@@ -1,0 +1,47 @@
+ARM GAS  /tmp/ccsIuQBK.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 2
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"chcore.c"
+  15              		.section	.text.port_halt,"ax",%progbits
+  16              		.align	2
+  17              		.p2align 4,,15
+  18              		.weak	port_halt
+  19              		.thumb
+  20              		.thumb_func
+  21              		.type	port_halt, %function
+  22              	port_halt:
+  23              		@ args = 0, pretend = 0, frame = 0
+  24              		@ frame_needed = 0, uses_anonymous_args = 0
+  25              		@ link register save eliminated.
+  26              	@ 48 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore.c" 1
+  27 0000 72B6     		cpsid   i
+  28              	@ 0 "" 2
+  29              		.thumb
+  30              	.L2:
+  31 0002 FEE7     		b	.L2
+  32              		.size	port_halt, .-port_halt
+  33 0004 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+  33      AFF30080 
+  33      AFF30080 
+ARM GAS  /tmp/ccsIuQBK.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chcore.c
+     /tmp/ccsIuQBK.s:16     .text.port_halt:00000000 $t
+     /tmp/ccsIuQBK.s:22     .text.port_halt:00000000 port_halt
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,221 @@
+ARM GAS  /tmp/cc5pu56W.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 3
+   4              		.eabi_attribute 28, 1
+   5              		.fpu fpv4-sp-d16
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 2
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.thumb
+  16              		.file	"hal_lld.c"
+  17              		.section	.text.hal_lld_init,"ax",%progbits
+  18              		.align	2
+  19              		.p2align 4,,15
+  20              		.global	hal_lld_init
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	hal_lld_init, %function
+  24              	hal_lld_init:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 214B     		ldr	r3, .L7
+  29 0002 2249     		ldr	r1, .L7+4
+  30 0004 1A69     		ldr	r2, [r3, #16]
+  31 0006 DFF894C0 		ldr	ip, .L7+20
+  32 000a 0022     		movs	r2, #0
+  33 000c 4FF0FF30 		mov	r0, #-1
+  34 0010 2DE9F001 		push	{r4, r5, r6, r7, r8}
+  35 0014 1861     		str	r0, [r3, #16]
+  36 0016 1A61     		str	r2, [r3, #16]
+  37 0018 5F69     		ldr	r7, [r3, #20]
+  38 001a 5861     		str	r0, [r3, #20]
+  39 001c 5A61     		str	r2, [r3, #20]
+  40 001e 1F6A     		ldr	r7, [r3, #32]
+  41 0020 1B4E     		ldr	r6, .L7+8
+  42 0022 1C4D     		ldr	r5, .L7+12
+  43 0024 1C4C     		ldr	r4, .L7+16
+  44 0026 67F08057 		orn	r7, r7, #268435456
+  45 002a 1F62     		str	r7, [r3, #32]
+  46 002c 1A62     		str	r2, [r3, #32]
+  47 002e 0727     		movs	r7, #7
+  48 0030 D3F82480 		ldr	r8, [r3, #36]
+  49 0034 5862     		str	r0, [r3, #36]
+  50 0036 5A62     		str	r2, [r3, #36]
+  51 0038 C1F804C0 		str	ip, [r1, #4]
+  52 003c 8A60     		str	r2, [r1, #8]
+  53 003e 0F60     		str	r7, [r1]
+  54 0040 F168     		ldr	r1, [r6, #12]
+  55 0042 41F08071 		orr	r1, r1, #16777216
+  56 0046 F160     		str	r1, [r6, #12]
+  57 0048 2968     		ldr	r1, [r5]
+ARM GAS  /tmp/cc5pu56W.s 			page 2
+
+
+  58 004a 41F00101 		orr	r1, r1, #1
+  59 004e 2960     		str	r1, [r5]
+  60 0050 196C     		ldr	r1, [r3, #64]
+  61 0052 41F08051 		orr	r1, r1, #268435456
+  62 0056 1964     		str	r1, [r3, #64]
+  63 0058 2168     		ldr	r1, [r4]
+  64 005a 41F48071 		orr	r1, r1, #256
+  65 005e 2160     		str	r1, [r4]
+  66 0060 196F     		ldr	r1, [r3, #112]
+  67 0062 01F44071 		and	r1, r1, #768
+  68 0066 B1F5007F 		cmp	r1, #512
+  69 006a 03D0     		beq	.L2
+  70 006c 4FF48031 		mov	r1, #65536
+  71 0070 1967     		str	r1, [r3, #112]
+  72 0072 1A67     		str	r2, [r3, #112]
+  73              	.L2:
+  74 0074 084B     		ldr	r3, .L7+16
+  75 0076 5A68     		ldr	r2, [r3, #4]
+  76 0078 22F40072 		bic	r2, r2, #512
+  77 007c 5A60     		str	r2, [r3, #4]
+  78 007e BDE8F001 		pop	{r4, r5, r6, r7, r8}
+  79 0082 FFF7FEBF 		b	dmaInit
+  80              	.L8:
+  81 0086 00BF     		.align	2
+  82              	.L7:
+  83 0088 00380240 		.word	1073887232
+  84 008c 10E000E0 		.word	-536813552
+  85 0090 F0ED00E0 		.word	-536810000
+  86 0094 001000E0 		.word	-536866816
+  87 0098 00700040 		.word	1073770496
+  88 009c 3F900200 		.word	167999
+  89              		.size	hal_lld_init, .-hal_lld_init
+  90              		.section	.text.stm32_clock_init,"ax",%progbits
+  91              		.align	2
+  92              		.p2align 4,,15
+  93              		.global	stm32_clock_init
+  94              		.thumb
+  95              		.thumb_func
+  96              		.type	stm32_clock_init, %function
+  97              	stm32_clock_init:
+  98              		@ args = 0, pretend = 0, frame = 0
+  99              		@ frame_needed = 0, uses_anonymous_args = 0
+ 100              		@ link register save eliminated.
+ 101 0000 2C49     		ldr	r1, .L24
+ 102 0002 2D4B     		ldr	r3, .L24+4
+ 103 0004 4FF08050 		mov	r0, #268435456
+ 104 0008 4FF44042 		mov	r2, #49152
+ 105 000c 0864     		str	r0, [r1, #64]
+ 106 000e 1A60     		str	r2, [r3]
+ 107 0010 0B68     		ldr	r3, [r1]
+ 108 0012 43F00103 		orr	r3, r3, #1
+ 109 0016 0B60     		str	r3, [r1]
+ 110              	.L11:
+ 111 0018 0B68     		ldr	r3, [r1]
+ 112 001a 264A     		ldr	r2, .L24
+ 113 001c 9807     		lsls	r0, r3, #30
+ 114 001e FBD5     		bpl	.L11
+ARM GAS  /tmp/cc5pu56W.s 			page 3
+
+
+ 115 0020 9368     		ldr	r3, [r2, #8]
+ 116 0022 23F00303 		bic	r3, r3, #3
+ 117 0026 9360     		str	r3, [r2, #8]
+ 118 0028 9368     		ldr	r3, [r2, #8]
+ 119 002a 9360     		str	r3, [r2, #8]
+ 120 002c 1146     		mov	r1, r2
+ 121              	.L13:
+ 122 002e 8B68     		ldr	r3, [r1, #8]
+ 123 0030 204A     		ldr	r2, .L24
+ 124 0032 13F00C03 		ands	r3, r3, #12
+ 125 0036 FAD1     		bne	.L13
+ 126 0038 1168     		ldr	r1, [r2]
+ 127 003a 01F0F901 		and	r1, r1, #249
+ 128 003e 1160     		str	r1, [r2]
+ 129 0040 9360     		str	r3, [r2, #8]
+ 130 0042 1368     		ldr	r3, [r2]
+ 131 0044 43F48033 		orr	r3, r3, #65536
+ 132 0048 1360     		str	r3, [r2]
+ 133              	.L15:
+ 134 004a 1368     		ldr	r3, [r2]
+ 135 004c 1949     		ldr	r1, .L24
+ 136 004e 9B03     		lsls	r3, r3, #14
+ 137 0050 FBD5     		bpl	.L15
+ 138 0052 4B6F     		ldr	r3, [r1, #116]
+ 139 0054 43F00103 		orr	r3, r3, #1
+ 140 0058 4B67     		str	r3, [r1, #116]
+ 141              	.L17:
+ 142 005a 4B6F     		ldr	r3, [r1, #116]
+ 143 005c 154A     		ldr	r2, .L24
+ 144 005e 9807     		lsls	r0, r3, #30
+ 145 0060 FBD5     		bpl	.L17
+ 146 0062 164B     		ldr	r3, .L24+8
+ 147 0064 5360     		str	r3, [r2, #4]
+ 148 0066 1368     		ldr	r3, [r2]
+ 149 0068 1349     		ldr	r1, .L24+4
+ 150 006a 43F08073 		orr	r3, r3, #16777216
+ 151 006e 1360     		str	r3, [r2]
+ 152              	.L19:
+ 153 0070 4B68     		ldr	r3, [r1, #4]
+ 154 0072 5A04     		lsls	r2, r3, #17
+ 155 0074 FCD5     		bpl	.L19
+ 156 0076 0F49     		ldr	r1, .L24
+ 157              	.L21:
+ 158 0078 0B68     		ldr	r3, [r1]
+ 159 007a 0E4A     		ldr	r2, .L24
+ 160 007c 9B01     		lsls	r3, r3, #6
+ 161 007e FBD5     		bpl	.L21
+ 162 0080 0F4B     		ldr	r3, .L24+12
+ 163 0082 1049     		ldr	r1, .L24+16
+ 164 0084 9160     		str	r1, [r2, #8]
+ 165 0086 40F20571 		movw	r1, #1797
+ 166 008a 1960     		str	r1, [r3]
+ 167 008c 9368     		ldr	r3, [r2, #8]
+ 168 008e 43F00203 		orr	r3, r3, #2
+ 169 0092 9360     		str	r3, [r2, #8]
+ 170 0094 1146     		mov	r1, r2
+ 171              	.L23:
+ARM GAS  /tmp/cc5pu56W.s 			page 4
+
+
+ 172 0096 8B68     		ldr	r3, [r1, #8]
+ 173 0098 064A     		ldr	r2, .L24
+ 174 009a 03F00C03 		and	r3, r3, #12
+ 175 009e 082B     		cmp	r3, #8
+ 176 00a0 F9D1     		bne	.L23
+ 177 00a2 536C     		ldr	r3, [r2, #68]
+ 178 00a4 43F48043 		orr	r3, r3, #16384
+ 179 00a8 5364     		str	r3, [r2, #68]
+ 180 00aa 536E     		ldr	r3, [r2, #100]
+ 181 00ac 43F48043 		orr	r3, r3, #16384
+ 182 00b0 5366     		str	r3, [r2, #100]
+ 183 00b2 7047     		bx	lr
+ 184              	.L25:
+ 185              		.align	2
+ 186              	.L24:
+ 187 00b4 00380240 		.word	1073887232
+ 188 00b8 00700040 		.word	1073770496
+ 189 00bc 08544007 		.word	121656328
+ 190 00c0 003C0240 		.word	1073888256
+ 191 00c4 00940838 		.word	940086272
+ 192              		.size	stm32_clock_init, .-stm32_clock_init
+ 193 00c8 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
+ 193      AFF30080 
+ARM GAS  /tmp/cc5pu56W.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 hal_lld.c
+     /tmp/cc5pu56W.s:18     .text.hal_lld_init:00000000 $t
+     /tmp/cc5pu56W.s:24     .text.hal_lld_init:00000000 hal_lld_init
+     /tmp/cc5pu56W.s:83     .text.hal_lld_init:00000088 $d
+     /tmp/cc5pu56W.s:91     .text.stm32_clock_init:00000000 $t
+     /tmp/cc5pu56W.s:97     .text.stm32_clock_init:00000000 stm32_clock_init
+     /tmp/cc5pu56W.s:187    .text.stm32_clock_init:000000b4 $d
+     /tmp/cc5pu56W.s:193    .text.stm32_clock_init:000000c8 $t
+
+UNDEFINED SYMBOLS
+dmaInit
