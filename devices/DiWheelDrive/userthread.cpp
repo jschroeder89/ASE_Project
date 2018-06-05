@@ -350,7 +350,7 @@ void wallFollowing(int (&rpmFuzzyCtrl)[2]){
 		// get all Proximity Sensor values
 		for(int i = 0; i < 8; i++){
 			prox[i] = global.robot.getProximityRingValue(i);
-			if(prox[i] < 300){
+			if(prox[i] < 100){
 				help++;
 			}
 		}
@@ -359,23 +359,30 @@ void wallFollowing(int (&rpmFuzzyCtrl)[2]){
             global.robot.setLightColor(4, Color(Color::BLACK));
 			break;
 		}
-		if(global.vcnl4020[1].getProximityScaledWoOffset() >= 16000 && global.vcnl4020[2].getProximityScaledWoOffset() >= 16000){
+		
+		// look for the direction to turn
+		if(prox[3] <= prox[4] && ((prox[3] > 600)||(prox[4] > 600))||(prox[5] > 600)){
+			direction = 1; //turn left
+			while(prox[6] < 400){
+				setRpmSpeed(rpmTurnLeft);
+				prox[6] = global.robot.getProximityRingValue(6);
+				//UserThread::sleep(MS2ST(300));
+			}
+		} else if((prox[3] > 600)||(prox[4] > 600)||(prox[2] > 600)) {
+			direction = -1;
+			while(prox[1] < 400){
+				setRpmSpeed(rpmTurnRight);
+				prox[1] = global.robot.getProximityRingValue(1);
+				//UserThread::sleep(MS2ST(300));
+			}
+		}
+		if(global.vcnl4020[0].getProximityScaledWoOffset() <= 7000 && global.vcnl4020[3].getProximityScaledWoOffset() <= 7000){
 			
 			
-			global.robot.setLightColor(3, Color(Color::BLACK));
-            global.robot.setLightColor(4, Color(Color::BLACK));
+			global.robot.setLightColor(3, Color(Color::RED));
+            global.robot.setLightColor(4, Color(Color::RED));
             break;
 			
-		}
-		// look for the direction to turn
-		if(prox[3] <= prox[4] && ((prox[3] > 600)||(prox[4] > 600))){
-			direction = 1; //turn left
-			setRpmSpeed(rpmTurnLeft);
-			BaseThread::sleep(MS2ST(500));
-		} else if((prox[3] > 600)||(prox[4] > 600)) {
-			direction = -1;
-			setRpmSpeed(rpmTurnRight);
-			BaseThread::sleep(MS2ST(500));
 		}
 		if(direction > 0){
 			if(prox[5] < 1200){
@@ -478,6 +485,7 @@ UserThread::main()
             for (int i = 0; i < 4; i++) {
                 vcnl4020AmbientLight[i] = global.vcnl4020[i].getAmbientLight();
                 vcnl4020Proximity[i] = global.vcnl4020[i].getProximityScaledWoOffset();
+                //chprintf((BaseSequentialStream*) &SD1, "0x%04X   ", vcnl4020Proximity[i]);
                 
             }
             for (int i = 0; i < 8; i++) {
@@ -485,11 +493,12 @@ UserThread::main()
 				//chprintf((BaseSequentialStream*) &SD1, "0x%04X   ", vcnl4020ObstacleProximity[i]);
 			}
 
-            chprintf((BaseSequentialStream*) &SD1, "0x%04X 0x%04X 0x%04X 0x%04X\n",
-                     vcnl4020Proximity[constants::DiWheelDrive::PROX_WHEEL_LEFT],
+            chprintf((BaseSequentialStream*) &SD1, "%04d %04d \n",
+                    // vcnl4020Proximity[constants::DiWheelDrive::PROX_WHEEL_LEFT],
                      vcnl4020Proximity[constants::DiWheelDrive::PROX_FRONT_LEFT],
-                     vcnl4020Proximity[constants::DiWheelDrive::PROX_FRONT_RIGHT],
-                     vcnl4020Proximity[constants::DiWheelDrive::PROX_WHEEL_RIGHT]);
+                     vcnl4020Proximity[constants::DiWheelDrive::PROX_FRONT_RIGHT]
+                    // vcnl4020Proximity[constants::DiWheelDrive::PROX_WHEEL_RIGHT])
+                    );
 			if (contact == false) {
 				lineFollowing(vcnl4020Proximity, rpmFuzzyCtrl);
 			} else {
@@ -508,7 +517,7 @@ UserThread::main()
 				int fuzzyhalf[2] = {rpmFuzzyCtrl[0]/2, rpmFuzzyCtrl[1]/2};
 				setRpmSpeed(fuzzyhalf);
 			} else {
-				//setRpmSpeed({0, 0});
+				setRpmSpeed({0, 0});
 				contact = true;
 			}
 			
