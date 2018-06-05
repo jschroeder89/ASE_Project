@@ -335,6 +335,14 @@ states getNextPolicy() {
 
 	return policy[policyCounter++];
 }
+
+bool noObstacleDetected(int (&prox)[8]) {
+	for(size_t i = 0; i < sizeof prox; i++){
+		
+	}
+	
+}
+
 //Follow the Wall
 void wallFollowing(int (&rpmFuzzyCtrl)[2]){
 	int obSpeed = 2;
