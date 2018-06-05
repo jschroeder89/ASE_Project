@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccIfTmcP.s 			page 1
+ARM GAS  /tmp/cc3Htzus.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccIfTmcP.s 			page 1
   55 000a EFF30983 		mrs     r3, PSP
   56              	@ 0 "" 2
   57              		.thumb
-ARM GAS  /tmp/ccIfTmcP.s 			page 2
+ARM GAS  /tmp/cc3Htzus.s 			page 2
 
 
   58 000e 6833     		adds	r3, r3, #104
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccIfTmcP.s 			page 1
  110              		.thumb
  111              		.thumb_func
  112              		.type	_port_irq_epilogue, %function
-ARM GAS  /tmp/ccIfTmcP.s 			page 3
+ARM GAS  /tmp/cc3Htzus.s 			page 3
 
 
  113              	_port_irq_epilogue:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccIfTmcP.s 			page 1
  167 005a 34BF     		ite	cc
  168 005c 0022     		movcc	r2, #0
  169 005e 0122     		movcs	r2, #1
-ARM GAS  /tmp/ccIfTmcP.s 			page 4
+ARM GAS  /tmp/cc3Htzus.s 			page 4
 
 
  170 0060 002A     		cmp	r2, #0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccIfTmcP.s 			page 1
  223              		@ args = 0, pretend = 0, frame = 0
  224              		@ frame_needed = 0, uses_anonymous_args = 0
  225              	@ 231 "../../../ChibiOS/os/ports/GCC/ARMCMx/chcore_v7m.c" 1
-ARM GAS  /tmp/ccIfTmcP.s 			page 5
+ARM GAS  /tmp/cc3Htzus.s 			page 5
 
 
  226 0000 2DE9F04F 		push    {r4, r5, r6, r7, r8, r9, r10, r11, lr}
@@ -286,30 +286,30 @@ ARM GAS  /tmp/ccIfTmcP.s 			page 1
  267 0016 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
  267      0080AFF3 
  267      0080
-ARM GAS  /tmp/ccIfTmcP.s 			page 6
+ARM GAS  /tmp/cc3Htzus.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chcore_v7m.c
-     /tmp/ccIfTmcP.s:18     .text._port_switch_from_isr:00000000 $t
-     /tmp/ccIfTmcP.s:24     .text._port_switch_from_isr:00000000 _port_switch_from_isr
-     /tmp/ccIfTmcP.s:32     .text._port_switch_from_isr:0000000c _port_exit_from_isr
-     /tmp/ccIfTmcP.s:40     .text.SVCallVector:00000000 $t
-     /tmp/ccIfTmcP.s:46     .text.SVCallVector:00000000 SVCallVector
-     /tmp/ccIfTmcP.s:72     .text.SVCallVector:0000001c $d
-     /tmp/ccIfTmcP.s:75     .text._port_init:00000000 $t
-     /tmp/ccIfTmcP.s:81     .text._port_init:00000000 _port_init
-     /tmp/ccIfTmcP.s:103    .text._port_init:0000002c $d
-     /tmp/ccIfTmcP.s:107    .text._port_irq_epilogue:00000000 $t
-     /tmp/ccIfTmcP.s:113    .text._port_irq_epilogue:00000000 _port_irq_epilogue
-     /tmp/ccIfTmcP.s:179    .text._port_irq_epilogue:0000006c $d
-     /tmp/ccIfTmcP.s:186    .text.SysTickVector:00000000 $t
-     /tmp/ccIfTmcP.s:192    .text.SysTickVector:00000000 SysTickVector
-     /tmp/ccIfTmcP.s:215    .text._port_switch:00000000 $t
-     /tmp/ccIfTmcP.s:221    .text._port_switch:00000000 _port_switch
-     /tmp/ccIfTmcP.s:244    .text._port_thread_start:00000000 $t
-     /tmp/ccIfTmcP.s:250    .text._port_thread_start:00000000 _port_thread_start
-     /tmp/ccIfTmcP.s:106    .text._port_init:00000034 $t
+     /tmp/cc3Htzus.s:18     .text._port_switch_from_isr:00000000 $t
+     /tmp/cc3Htzus.s:24     .text._port_switch_from_isr:00000000 _port_switch_from_isr
+     /tmp/cc3Htzus.s:32     .text._port_switch_from_isr:0000000c _port_exit_from_isr
+     /tmp/cc3Htzus.s:40     .text.SVCallVector:00000000 $t
+     /tmp/cc3Htzus.s:46     .text.SVCallVector:00000000 SVCallVector
+     /tmp/cc3Htzus.s:72     .text.SVCallVector:0000001c $d
+     /tmp/cc3Htzus.s:75     .text._port_init:00000000 $t
+     /tmp/cc3Htzus.s:81     .text._port_init:00000000 _port_init
+     /tmp/cc3Htzus.s:103    .text._port_init:0000002c $d
+     /tmp/cc3Htzus.s:107    .text._port_irq_epilogue:00000000 $t
+     /tmp/cc3Htzus.s:113    .text._port_irq_epilogue:00000000 _port_irq_epilogue
+     /tmp/cc3Htzus.s:179    .text._port_irq_epilogue:0000006c $d
+     /tmp/cc3Htzus.s:186    .text.SysTickVector:00000000 $t
+     /tmp/cc3Htzus.s:192    .text.SysTickVector:00000000 SysTickVector
+     /tmp/cc3Htzus.s:215    .text._port_switch:00000000 $t
+     /tmp/cc3Htzus.s:221    .text._port_switch:00000000 _port_switch
+     /tmp/cc3Htzus.s:244    .text._port_thread_start:00000000 $t
+     /tmp/cc3Htzus.s:250    .text._port_thread_start:00000000 _port_thread_start
+     /tmp/cc3Htzus.s:106    .text._port_init:00000034 $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock

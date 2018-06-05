@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccAexF7I.s 			page 1
+ARM GAS  /tmp/cckJysPJ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccAexF7I.s 			page 1
   52 0000 3030     		adds	r0, r0, #48
   53 0002 FFF7FEBF 		b	chOQWriteTimeout
   54              		.size	writet, .-writet
-ARM GAS  /tmp/ccAexF7I.s 			page 2
+ARM GAS  /tmp/cckJysPJ.s 			page 2
 
 
   55 0006 00BFAFF3 		.section	.text.write,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccAexF7I.s 			page 1
  103              		@ args = 0, pretend = 0, frame = 0
  104              		@ frame_needed = 0, uses_anonymous_args = 0
  105              		@ link register save eliminated.
-ARM GAS  /tmp/ccAexF7I.s 			page 3
+ARM GAS  /tmp/cckJysPJ.s 			page 3
 
 
  106 0000 3030     		adds	r0, r0, #48
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccAexF7I.s 			page 1
  155 0014 6060     		str	r0, [r4, #4]
  156 0016 04F15401 		add	r1, r4, #84
  157 001a 04F10C00 		add	r0, r4, #12
-ARM GAS  /tmp/ccAexF7I.s 			page 4
+ARM GAS  /tmp/cckJysPJ.s 			page 4
 
 
  158 001e 2672     		strb	r6, [r4, #8]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccAexF7I.s 			page 1
  212              	@ 0 "" 2
  213              		.thumb
  214 0036 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  /tmp/ccAexF7I.s 			page 5
+ARM GAS  /tmp/cckJysPJ.s 			page 5
 
 
  215              	.L17:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccAexF7I.s 			page 1
  268              	.L23:
  269 0048 0248     		ldr	r0, .L24+4
  270 004a FFF7FEFF 		bl	chDbgPanic
-ARM GAS  /tmp/ccAexF7I.s 			page 6
+ARM GAS  /tmp/cckJysPJ.s 			page 6
 
 
  271 004e DAE7     		b	.L21
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccAexF7I.s 			page 1
  324 004c 38000000 		.word	.LC4
  325              		.size	sdIncomingDataI, .-sdIncomingDataI
  326              		.section	.text.sdRequestDataI,"ax",%progbits
-ARM GAS  /tmp/ccAexF7I.s 			page 7
+ARM GAS  /tmp/cckJysPJ.s 			page 7
 
 
  327              		.align	2
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccAexF7I.s 			page 1
  372              	.LC3:
  373 0028 73645374 		.ascii	"sdStop(), #1\000"
  373      6F702829 
-ARM GAS  /tmp/ccAexF7I.s 			page 8
+ARM GAS  /tmp/cckJysPJ.s 			page 8
 
 
  373      2C202331 
@@ -451,50 +451,50 @@ ARM GAS  /tmp/ccAexF7I.s 			page 1
  391 0018 00000000 		.word	writet
  392 001c 00000000 		.word	readt
  393              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccAexF7I.s 			page 9
+ARM GAS  /tmp/cckJysPJ.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 serial.c
-     /tmp/ccAexF7I.s:16     .text.readt:00000000 $t
-     /tmp/ccAexF7I.s:21     .text.readt:00000000 readt
-     /tmp/ccAexF7I.s:29     .text.read:00000000 $t
-     /tmp/ccAexF7I.s:34     .text.read:00000000 read
-     /tmp/ccAexF7I.s:43     .text.writet:00000000 $t
-     /tmp/ccAexF7I.s:48     .text.writet:00000000 writet
-     /tmp/ccAexF7I.s:56     .text.write:00000000 $t
-     /tmp/ccAexF7I.s:61     .text.write:00000000 write
-     /tmp/ccAexF7I.s:70     .text.gett:00000000 $t
-     /tmp/ccAexF7I.s:75     .text.gett:00000000 gett
-     /tmp/ccAexF7I.s:83     .text.get:00000000 $t
-     /tmp/ccAexF7I.s:88     .text.get:00000000 get
-     /tmp/ccAexF7I.s:97     .text.putt:00000000 $t
-     /tmp/ccAexF7I.s:102    .text.putt:00000000 putt
-     /tmp/ccAexF7I.s:110    .text.put:00000000 $t
-     /tmp/ccAexF7I.s:115    .text.put:00000000 put
-     /tmp/ccAexF7I.s:124    .text.sdInit:00000000 $t
-     /tmp/ccAexF7I.s:130    .text.sdInit:00000000 sdInit
-     /tmp/ccAexF7I.s:137    .text.sdObjectInit:00000000 $t
-     /tmp/ccAexF7I.s:143    .text.sdObjectInit:00000000 sdObjectInit
-     /tmp/ccAexF7I.s:173    .text.sdObjectInit:0000003c $d
-     /tmp/ccAexF7I.s:176    .text.sdStart:00000000 $t
-     /tmp/ccAexF7I.s:182    .text.sdStart:00000000 sdStart
-     /tmp/ccAexF7I.s:222    .text.sdStart:00000040 $d
-     /tmp/ccAexF7I.s:226    .text.sdStop:00000000 $t
-     /tmp/ccAexF7I.s:232    .text.sdStop:00000000 sdStop
-     /tmp/ccAexF7I.s:275    .text.sdStop:00000050 $d
-     /tmp/ccAexF7I.s:279    .text.sdIncomingDataI:00000000 $t
-     /tmp/ccAexF7I.s:285    .text.sdIncomingDataI:00000000 sdIncomingDataI
-     /tmp/ccAexF7I.s:324    .text.sdIncomingDataI:0000004c $d
-     /tmp/ccAexF7I.s:327    .text.sdRequestDataI:00000000 $t
-     /tmp/ccAexF7I.s:333    .text.sdRequestDataI:00000000 sdRequestDataI
-     /tmp/ccAexF7I.s:360    .text.sdRequestDataI:00000030 $d
-     /tmp/ccAexF7I.s:363    .rodata.str1.4:00000000 $d
-     /tmp/ccAexF7I.s:380    .rodata.vmt:00000000 $d
-     /tmp/ccAexF7I.s:384    .rodata.vmt:00000000 vmt
-     /tmp/ccAexF7I.s:225    .text.sdStart:00000048 $t
-     /tmp/ccAexF7I.s:278    .text.sdStop:00000058 $t
-     /tmp/ccAexF7I.s:362    .text.sdRequestDataI:00000034 $t
+     /tmp/cckJysPJ.s:16     .text.readt:00000000 $t
+     /tmp/cckJysPJ.s:21     .text.readt:00000000 readt
+     /tmp/cckJysPJ.s:29     .text.read:00000000 $t
+     /tmp/cckJysPJ.s:34     .text.read:00000000 read
+     /tmp/cckJysPJ.s:43     .text.writet:00000000 $t
+     /tmp/cckJysPJ.s:48     .text.writet:00000000 writet
+     /tmp/cckJysPJ.s:56     .text.write:00000000 $t
+     /tmp/cckJysPJ.s:61     .text.write:00000000 write
+     /tmp/cckJysPJ.s:70     .text.gett:00000000 $t
+     /tmp/cckJysPJ.s:75     .text.gett:00000000 gett
+     /tmp/cckJysPJ.s:83     .text.get:00000000 $t
+     /tmp/cckJysPJ.s:88     .text.get:00000000 get
+     /tmp/cckJysPJ.s:97     .text.putt:00000000 $t
+     /tmp/cckJysPJ.s:102    .text.putt:00000000 putt
+     /tmp/cckJysPJ.s:110    .text.put:00000000 $t
+     /tmp/cckJysPJ.s:115    .text.put:00000000 put
+     /tmp/cckJysPJ.s:124    .text.sdInit:00000000 $t
+     /tmp/cckJysPJ.s:130    .text.sdInit:00000000 sdInit
+     /tmp/cckJysPJ.s:137    .text.sdObjectInit:00000000 $t
+     /tmp/cckJysPJ.s:143    .text.sdObjectInit:00000000 sdObjectInit
+     /tmp/cckJysPJ.s:173    .text.sdObjectInit:0000003c $d
+     /tmp/cckJysPJ.s:176    .text.sdStart:00000000 $t
+     /tmp/cckJysPJ.s:182    .text.sdStart:00000000 sdStart
+     /tmp/cckJysPJ.s:222    .text.sdStart:00000040 $d
+     /tmp/cckJysPJ.s:226    .text.sdStop:00000000 $t
+     /tmp/cckJysPJ.s:232    .text.sdStop:00000000 sdStop
+     /tmp/cckJysPJ.s:275    .text.sdStop:00000050 $d
+     /tmp/cckJysPJ.s:279    .text.sdIncomingDataI:00000000 $t
+     /tmp/cckJysPJ.s:285    .text.sdIncomingDataI:00000000 sdIncomingDataI
+     /tmp/cckJysPJ.s:324    .text.sdIncomingDataI:0000004c $d
+     /tmp/cckJysPJ.s:327    .text.sdRequestDataI:00000000 $t
+     /tmp/cckJysPJ.s:333    .text.sdRequestDataI:00000000 sdRequestDataI
+     /tmp/cckJysPJ.s:360    .text.sdRequestDataI:00000030 $d
+     /tmp/cckJysPJ.s:363    .rodata.str1.4:00000000 $d
+     /tmp/cckJysPJ.s:380    .rodata.vmt:00000000 $d
+     /tmp/cckJysPJ.s:384    .rodata.vmt:00000000 vmt
+     /tmp/cckJysPJ.s:225    .text.sdStart:00000048 $t
+     /tmp/cckJysPJ.s:278    .text.sdStop:00000058 $t
+     /tmp/cckJysPJ.s:362    .text.sdRequestDataI:00000034 $t
 
 UNDEFINED SYMBOLS
 chIQReadTimeout
@@ -511,7 +511,7 @@ dbg_check_unlock
 sd_lld_stop
 chOQResetI
 chIQResetI
-ARM GAS  /tmp/ccAexF7I.s 			page 10
+ARM GAS  /tmp/cckJysPJ.s 			page 10
 
 
 chSchRescheduleS

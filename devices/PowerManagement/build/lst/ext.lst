@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccYgnZW8.s 			page 1
+ARM GAS  /tmp/cc9O0YDr.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccYgnZW8.s 			page 1
   52              		.thumb_func
   53              		.type	extStart, %function
   54              	extStart:
-ARM GAS  /tmp/ccYgnZW8.s 			page 2
+ARM GAS  /tmp/cc9O0YDr.s 			page 2
 
 
   55              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccYgnZW8.s 			page 1
  109 0002 0446     		mov	r4, r0
  110 0004 B0B1     		cbz	r0, .L16
  111              	.L14:
-ARM GAS  /tmp/ccYgnZW8.s 			page 3
+ARM GAS  /tmp/cc9O0YDr.s 			page 3
 
 
  112 0006 2023     		movs	r3, #32
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccYgnZW8.s 			page 1
  164              	@ 142 "../../../ChibiOS/os/hal/src/ext.c" 1
  165 000e 83F31188 		msr     BASEPRI, r3
  166              	@ 0 "" 2
-ARM GAS  /tmp/ccYgnZW8.s 			page 4
+ARM GAS  /tmp/cc9O0YDr.s 			page 4
 
 
  167              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccYgnZW8.s 			page 1
  219 000c 2023     		movs	r3, #32
  220              	@ 165 "../../../ChibiOS/os/hal/src/ext.c" 1
  221 000e 83F31188 		msr     BASEPRI, r3
-ARM GAS  /tmp/ccYgnZW8.s 			page 5
+ARM GAS  /tmp/cc9O0YDr.s 			page 5
 
 
  222              	@ 0 "" 2
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccYgnZW8.s 			page 1
  274 000c 15D9     		bls	.L51
  275              	.L42:
  276 000e 0C48     		ldr	r0, .L52
-ARM GAS  /tmp/ccYgnZW8.s 			page 6
+ARM GAS  /tmp/cc9O0YDr.s 			page 6
 
 
  277 0010 FFF7FEFF 		bl	chDbgPanic
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccYgnZW8.s 			page 1
  317      6E656C45 
  317      6E61626C 
  317      65222829 
-ARM GAS  /tmp/ccYgnZW8.s 			page 7
+ARM GAS  /tmp/cc9O0YDr.s 			page 7
 
 
  318 0051 000000   		.space	3
@@ -396,36 +396,36 @@ ARM GAS  /tmp/ccYgnZW8.s 			page 1
  331      6C4D6F64 
  331      65492829 
  332 00cd 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccYgnZW8.s 			page 8
+ARM GAS  /tmp/cc9O0YDr.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ext.c
-     /tmp/ccYgnZW8.s:18     .text.extInit:00000000 $t
-     /tmp/ccYgnZW8.s:24     .text.extInit:00000000 extInit
-     /tmp/ccYgnZW8.s:31     .text.extObjectInit:00000000 $t
-     /tmp/ccYgnZW8.s:37     .text.extObjectInit:00000000 extObjectInit
-     /tmp/ccYgnZW8.s:48     .text.extStart:00000000 $t
-     /tmp/ccYgnZW8.s:54     .text.extStart:00000000 extStart
-     /tmp/ccYgnZW8.s:95     .text.extStart:00000044 $d
-     /tmp/ccYgnZW8.s:99     .text.extStop:00000000 $t
-     /tmp/ccYgnZW8.s:105    .text.extStop:00000000 extStop
-     /tmp/ccYgnZW8.s:143    .text.extStop:0000003c $d
-     /tmp/ccYgnZW8.s:147    .text.extChannelEnable:00000000 $t
-     /tmp/ccYgnZW8.s:153    .text.extChannelEnable:00000000 extChannelEnable
-     /tmp/ccYgnZW8.s:199    .text.extChannelEnable:0000004c $d
-     /tmp/ccYgnZW8.s:203    .text.extChannelDisable:00000000 $t
-     /tmp/ccYgnZW8.s:209    .text.extChannelDisable:00000000 extChannelDisable
-     /tmp/ccYgnZW8.s:255    .text.extChannelDisable:0000004c $d
-     /tmp/ccYgnZW8.s:259    .text.extSetChannelModeI:00000000 $t
-     /tmp/ccYgnZW8.s:265    .text.extSetChannelModeI:00000000 extSetChannelModeI
-     /tmp/ccYgnZW8.s:300    .text.extSetChannelModeI:00000040 $d
-     /tmp/ccYgnZW8.s:304    .rodata.str1.4:00000000 $d
-     /tmp/ccYgnZW8.s:98     .text.extStart:0000004c $t
-     /tmp/ccYgnZW8.s:146    .text.extStop:00000044 $t
-     /tmp/ccYgnZW8.s:202    .text.extChannelEnable:00000054 $t
-     /tmp/ccYgnZW8.s:258    .text.extChannelDisable:00000054 $t
-     /tmp/ccYgnZW8.s:303    .text.extSetChannelModeI:00000048 $t
+     /tmp/cc9O0YDr.s:18     .text.extInit:00000000 $t
+     /tmp/cc9O0YDr.s:24     .text.extInit:00000000 extInit
+     /tmp/cc9O0YDr.s:31     .text.extObjectInit:00000000 $t
+     /tmp/cc9O0YDr.s:37     .text.extObjectInit:00000000 extObjectInit
+     /tmp/cc9O0YDr.s:48     .text.extStart:00000000 $t
+     /tmp/cc9O0YDr.s:54     .text.extStart:00000000 extStart
+     /tmp/cc9O0YDr.s:95     .text.extStart:00000044 $d
+     /tmp/cc9O0YDr.s:99     .text.extStop:00000000 $t
+     /tmp/cc9O0YDr.s:105    .text.extStop:00000000 extStop
+     /tmp/cc9O0YDr.s:143    .text.extStop:0000003c $d
+     /tmp/cc9O0YDr.s:147    .text.extChannelEnable:00000000 $t
+     /tmp/cc9O0YDr.s:153    .text.extChannelEnable:00000000 extChannelEnable
+     /tmp/cc9O0YDr.s:199    .text.extChannelEnable:0000004c $d
+     /tmp/cc9O0YDr.s:203    .text.extChannelDisable:00000000 $t
+     /tmp/cc9O0YDr.s:209    .text.extChannelDisable:00000000 extChannelDisable
+     /tmp/cc9O0YDr.s:255    .text.extChannelDisable:0000004c $d
+     /tmp/cc9O0YDr.s:259    .text.extSetChannelModeI:00000000 $t
+     /tmp/cc9O0YDr.s:265    .text.extSetChannelModeI:00000000 extSetChannelModeI
+     /tmp/cc9O0YDr.s:300    .text.extSetChannelModeI:00000040 $d
+     /tmp/cc9O0YDr.s:304    .rodata.str1.4:00000000 $d
+     /tmp/cc9O0YDr.s:98     .text.extStart:0000004c $t
+     /tmp/cc9O0YDr.s:146    .text.extStop:00000044 $t
+     /tmp/cc9O0YDr.s:202    .text.extChannelEnable:00000054 $t
+     /tmp/cc9O0YDr.s:258    .text.extChannelDisable:00000054 $t
+     /tmp/cc9O0YDr.s:303    .text.extSetChannelModeI:00000048 $t
 
 UNDEFINED SYMBOLS
 ext_lld_init

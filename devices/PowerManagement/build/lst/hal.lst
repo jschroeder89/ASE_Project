@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccWGScWn.s 			page 1
+ARM GAS  /tmp/cczUMzYf.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccWGScWn.s 			page 1
   53              		@ args = 0, pretend = 0, frame = 0
   54              		@ frame_needed = 0, uses_anonymous_args = 0
   55              		@ link register save eliminated.
-ARM GAS  /tmp/ccWGScWn.s 			page 2
+ARM GAS  /tmp/cczUMzYf.s 			page 2
 
 
   56 0000 084B     		ldr	r3, .L13
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccWGScWn.s 			page 1
  109 001c 0023     		movls	r3, #0
  110 001e 0123     		movhi	r3, #1
  111 0020 002B     		cmp	r3, #0
-ARM GAS  /tmp/ccWGScWn.s 			page 3
+ARM GAS  /tmp/cczUMzYf.s 			page 3
 
 
  112 0022 F0D1     		bne	.L21
@@ -137,23 +137,23 @@ ARM GAS  /tmp/ccWGScWn.s 			page 1
  125              		.size	halPolledDelay, .-halPolledDelay
  126 0038 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
  126      AFF30080 
-ARM GAS  /tmp/ccWGScWn.s 			page 4
+ARM GAS  /tmp/cczUMzYf.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 hal.c
-     /tmp/ccWGScWn.s:18     .text.halInit:00000000 $t
-     /tmp/ccWGScWn.s:24     .text.halInit:00000000 halInit
-     /tmp/ccWGScWn.s:43     .text.halInit:00000030 $d
-     /tmp/ccWGScWn.s:46     .text.halIsCounterWithin:00000000 $t
-     /tmp/ccWGScWn.s:52     .text.halIsCounterWithin:00000000 halIsCounterWithin
-     /tmp/ccWGScWn.s:79     .text.halIsCounterWithin:00000024 $d
-     /tmp/ccWGScWn.s:82     .text.halPolledDelay:00000000 $t
-     /tmp/ccWGScWn.s:88     .text.halPolledDelay:00000000 halPolledDelay
-     /tmp/ccWGScWn.s:124    .text.halPolledDelay:00000034 $d
-     /tmp/ccWGScWn.s:45     .text.halInit:00000034 $t
-     /tmp/ccWGScWn.s:81     .text.halIsCounterWithin:00000028 $t
-     /tmp/ccWGScWn.s:126    .text.halPolledDelay:00000038 $t
+     /tmp/cczUMzYf.s:18     .text.halInit:00000000 $t
+     /tmp/cczUMzYf.s:24     .text.halInit:00000000 halInit
+     /tmp/cczUMzYf.s:43     .text.halInit:00000030 $d
+     /tmp/cczUMzYf.s:46     .text.halIsCounterWithin:00000000 $t
+     /tmp/cczUMzYf.s:52     .text.halIsCounterWithin:00000000 halIsCounterWithin
+     /tmp/cczUMzYf.s:79     .text.halIsCounterWithin:00000024 $d
+     /tmp/cczUMzYf.s:82     .text.halPolledDelay:00000000 $t
+     /tmp/cczUMzYf.s:88     .text.halPolledDelay:00000000 halPolledDelay
+     /tmp/cczUMzYf.s:124    .text.halPolledDelay:00000034 $d
+     /tmp/cczUMzYf.s:45     .text.halInit:00000034 $t
+     /tmp/cczUMzYf.s:81     .text.halIsCounterWithin:00000028 $t
+     /tmp/cczUMzYf.s:126    .text.halPolledDelay:00000038 $t
 
 UNDEFINED SYMBOLS
 hal_lld_init

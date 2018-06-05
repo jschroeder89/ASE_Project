@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cczgiybP.s 			page 1
+ARM GAS  /tmp/ccmcJiOm.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cczgiybP.s 			page 1
   53              		.thumb_func
   54              		.type	i2cStart, %function
   55              	i2cStart:
-ARM GAS  /tmp/cczgiybP.s 			page 2
+ARM GAS  /tmp/ccmcJiOm.s 			page 2
 
 
   56              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cczgiybP.s 			page 1
  110              		@ frame_needed = 0, uses_anonymous_args = 0
  111 0000 10B5     		push	{r4, lr}
  112 0002 0446     		mov	r4, r0
-ARM GAS  /tmp/cczgiybP.s 			page 3
+ARM GAS  /tmp/ccmcJiOm.s 			page 3
 
 
  113 0004 C0B1     		cbz	r0, .L22
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cczgiybP.s 			page 1
  166              	.L27:
  167 000a 0248     		ldr	r0, .L28
  168 000c FFF7FEFF 		bl	chDbgPanic
-ARM GAS  /tmp/cczgiybP.s 			page 4
+ARM GAS  /tmp/ccmcJiOm.s 			page 4
 
 
  169 0010 A068     		ldr	r0, [r4, #8]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cczgiybP.s 			page 1
  222 0046 2046     		mov	r0, r4
  223 0048 0096     		str	r6, [sp]
  224 004a FFF7FEFF 		bl	i2c_lld_master_transmit_timeout
-ARM GAS  /tmp/cczgiybP.s 			page 5
+ARM GAS  /tmp/ccmcJiOm.s 			page 5
 
 
  225 004e 431C     		adds	r3, r0, #1
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cczgiybP.s 			page 1
  279              	.L62:
  280 0012 1848     		ldr	r0, .L83
  281 0014 FFF7FEFF 		bl	chDbgPanic
-ARM GAS  /tmp/cczgiybP.s 			page 6
+ARM GAS  /tmp/ccmcJiOm.s 			page 6
 
 
  282              	.L63:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cczgiybP.s 			page 1
  336              		.size	i2cMasterReceiveTimeout, .-i2cMasterReceiveTimeout
  337 007c AFF30080 		.section	.text.i2cAcquireBus,"ax",%progbits
  338              		.align	2
-ARM GAS  /tmp/cczgiybP.s 			page 7
+ARM GAS  /tmp/ccmcJiOm.s 			page 7
 
 
  339              		.p2align 4,,15
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cczgiybP.s 			page 1
  391      53746172 
  391      74222829 
  391      00
-ARM GAS  /tmp/cczgiybP.s 			page 8
+ARM GAS  /tmp/ccmcJiOm.s 			page 8
 
 
  392 000d 000000   		.space	3
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cczgiybP.s 			page 1
  416      69726542 
  416      75732228 
  416      2900
-ARM GAS  /tmp/cczgiybP.s 			page 9
+ARM GAS  /tmp/ccmcJiOm.s 			page 9
 
 
  417 00d6 0000     		.space	2
@@ -489,42 +489,42 @@ ARM GAS  /tmp/cczgiybP.s 			page 1
  419      75732228 
  419      2900
  420 00ea 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cczgiybP.s 			page 10
+ARM GAS  /tmp/ccmcJiOm.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 i2c.c
-     /tmp/cczgiybP.s:18     .text.i2cInit:00000000 $t
-     /tmp/cczgiybP.s:24     .text.i2cInit:00000000 i2cInit
-     /tmp/cczgiybP.s:31     .text.i2cObjectInit:00000000 $t
-     /tmp/cczgiybP.s:37     .text.i2cObjectInit:00000000 i2cObjectInit
-     /tmp/cczgiybP.s:49     .text.i2cStart:00000000 $t
-     /tmp/cczgiybP.s:55     .text.i2cStart:00000000 i2cStart
-     /tmp/cczgiybP.s:98     .text.i2cStart:00000048 $d
-     /tmp/cczgiybP.s:102    .text.i2cStop:00000000 $t
-     /tmp/cczgiybP.s:108    .text.i2cStop:00000000 i2cStop
-     /tmp/cczgiybP.s:148    .text.i2cStop:00000040 $d
-     /tmp/cczgiybP.s:152    .text.i2cGetErrors:00000000 $t
-     /tmp/cczgiybP.s:158    .text.i2cGetErrors:00000000 i2cGetErrors
-     /tmp/cczgiybP.s:174    .text.i2cGetErrors:00000014 $d
-     /tmp/cczgiybP.s:177    .text.i2cMasterTransmitTimeout:00000000 $t
-     /tmp/cczgiybP.s:183    .text.i2cMasterTransmitTimeout:00000000 i2cMasterTransmitTimeout
-     /tmp/cczgiybP.s:258    .text.i2cMasterTransmitTimeout:00000084 $d
-     /tmp/cczgiybP.s:262    .text.i2cMasterReceiveTimeout:00000000 $t
-     /tmp/cczgiybP.s:268    .text.i2cMasterReceiveTimeout:00000000 i2cMasterReceiveTimeout
-     /tmp/cczgiybP.s:334    .text.i2cMasterReceiveTimeout:00000074 $d
-     /tmp/cczgiybP.s:338    .text.i2cAcquireBus:00000000 $t
-     /tmp/cczgiybP.s:344    .text.i2cAcquireBus:00000000 i2cAcquireBus
-     /tmp/cczgiybP.s:362    .text.i2cAcquireBus:00000024 $d
-     /tmp/cczgiybP.s:365    .text.i2cReleaseBus:00000000 $t
-     /tmp/cczgiybP.s:371    .text.i2cReleaseBus:00000000 i2cReleaseBus
-     /tmp/cczgiybP.s:386    .text.i2cReleaseBus:0000001c $d
-     /tmp/cczgiybP.s:389    .rodata.str1.4:00000000 $d
-     /tmp/cczgiybP.s:151    .text.i2cStop:00000048 $t
-     /tmp/cczgiybP.s:176    .text.i2cGetErrors:00000018 $t
-     /tmp/cczgiybP.s:261    .text.i2cMasterTransmitTimeout:0000008c $t
-     /tmp/cczgiybP.s:337    .text.i2cMasterReceiveTimeout:0000007c $t
-     /tmp/cczgiybP.s:364    .text.i2cAcquireBus:00000028 $t
+     /tmp/ccmcJiOm.s:18     .text.i2cInit:00000000 $t
+     /tmp/ccmcJiOm.s:24     .text.i2cInit:00000000 i2cInit
+     /tmp/ccmcJiOm.s:31     .text.i2cObjectInit:00000000 $t
+     /tmp/ccmcJiOm.s:37     .text.i2cObjectInit:00000000 i2cObjectInit
+     /tmp/ccmcJiOm.s:49     .text.i2cStart:00000000 $t
+     /tmp/ccmcJiOm.s:55     .text.i2cStart:00000000 i2cStart
+     /tmp/ccmcJiOm.s:98     .text.i2cStart:00000048 $d
+     /tmp/ccmcJiOm.s:102    .text.i2cStop:00000000 $t
+     /tmp/ccmcJiOm.s:108    .text.i2cStop:00000000 i2cStop
+     /tmp/ccmcJiOm.s:148    .text.i2cStop:00000040 $d
+     /tmp/ccmcJiOm.s:152    .text.i2cGetErrors:00000000 $t
+     /tmp/ccmcJiOm.s:158    .text.i2cGetErrors:00000000 i2cGetErrors
+     /tmp/ccmcJiOm.s:174    .text.i2cGetErrors:00000014 $d
+     /tmp/ccmcJiOm.s:177    .text.i2cMasterTransmitTimeout:00000000 $t
+     /tmp/ccmcJiOm.s:183    .text.i2cMasterTransmitTimeout:00000000 i2cMasterTransmitTimeout
+     /tmp/ccmcJiOm.s:258    .text.i2cMasterTransmitTimeout:00000084 $d
+     /tmp/ccmcJiOm.s:262    .text.i2cMasterReceiveTimeout:00000000 $t
+     /tmp/ccmcJiOm.s:268    .text.i2cMasterReceiveTimeout:00000000 i2cMasterReceiveTimeout
+     /tmp/ccmcJiOm.s:334    .text.i2cMasterReceiveTimeout:00000074 $d
+     /tmp/ccmcJiOm.s:338    .text.i2cAcquireBus:00000000 $t
+     /tmp/ccmcJiOm.s:344    .text.i2cAcquireBus:00000000 i2cAcquireBus
+     /tmp/ccmcJiOm.s:362    .text.i2cAcquireBus:00000024 $d
+     /tmp/ccmcJiOm.s:365    .text.i2cReleaseBus:00000000 $t
+     /tmp/ccmcJiOm.s:371    .text.i2cReleaseBus:00000000 i2cReleaseBus
+     /tmp/ccmcJiOm.s:386    .text.i2cReleaseBus:0000001c $d
+     /tmp/ccmcJiOm.s:389    .rodata.str1.4:00000000 $d
+     /tmp/ccmcJiOm.s:151    .text.i2cStop:00000048 $t
+     /tmp/ccmcJiOm.s:176    .text.i2cGetErrors:00000018 $t
+     /tmp/ccmcJiOm.s:261    .text.i2cMasterTransmitTimeout:0000008c $t
+     /tmp/ccmcJiOm.s:337    .text.i2cMasterReceiveTimeout:0000007c $t
+     /tmp/ccmcJiOm.s:364    .text.i2cAcquireBus:00000028 $t
 
 UNDEFINED SYMBOLS
 i2c_lld_init

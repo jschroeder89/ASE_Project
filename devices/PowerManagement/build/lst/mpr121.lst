@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccPvRmCo.s 			page 1
+ARM GAS  /tmp/ccue0wjH.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccPvRmCo.s 			page 1
   55              	.L6:
   56              		.align	2
   57              	.L5:
-ARM GAS  /tmp/ccPvRmCo.s 			page 2
+ARM GAS  /tmp/ccue0wjH.s 			page 2
 
 
   58 0010 08000000 		.word	.LANCHOR0+8
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccPvRmCo.s 			page 1
  110 0074 13F8021C 		ldrb	r1, [r3, #-2]	@ zero_extendqisi2
  111 0078 0233     		adds	r3, r3, #2
  112 007a 41EA0021 		orr	r1, r1, r0, lsl #8
-ARM GAS  /tmp/ccPvRmCo.s 			page 3
+ARM GAS  /tmp/ccue0wjH.s 			page 3
 
 
  113 007e 7345     		cmp	r3, lr
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccPvRmCo.s 			page 1
  166 000a 05F10800 		add	r0, r5, #8
  167 000e 4FF41671 		mov	r1, #600
  168 0012 054B     		ldr	r3, .L23
-ARM GAS  /tmp/ccPvRmCo.s 			page 4
+ARM GAS  /tmp/ccue0wjH.s 			page 4
 
 
  169 0014 FFF7FEFF 		bl	chThdCreateStatic
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccPvRmCo.s 			page 1
  223              		.global	_ZN5amiro6MPR121C1EPNS_9I2CDriverEh
  224              		.thumb_set _ZN5amiro6MPR121C1EPNS_9I2CDriverEh,_ZN5amiro6MPR121C2EPNS_9I2CDriverEh
  225 0048 AFF30080 		.section	.text._ZN5amiro6MPR12115getButtonStatusEv,"ax",%progbits
-ARM GAS  /tmp/ccPvRmCo.s 			page 5
+ARM GAS  /tmp/ccue0wjH.s 			page 5
 
 
  225      AFF30080 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccPvRmCo.s 			page 1
  276              		.thumb_func
  277              		.type	_ZN5amiro6MPR12116getElectrodeDataEh, %function
  278              	_ZN5amiro6MPR12116getElectrodeDataEh:
-ARM GAS  /tmp/ccPvRmCo.s 			page 6
+ARM GAS  /tmp/ccue0wjH.s 			page 6
 
 
  279              		@ args = 0, pretend = 0, frame = 0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccPvRmCo.s 			page 1
  332 005a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
  333              	.L37:
  334 005e 5E23     		movs	r3, #94
-ARM GAS  /tmp/ccPvRmCo.s 			page 7
+ARM GAS  /tmp/ccue0wjH.s 			page 7
 
 
  335 0060 D4F86002 		ldr	r0, [r4, #608]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccPvRmCo.s 			page 1
  389 0106 A2E7     		b	.L35
  390              		.size	_ZN5amiro6MPR1219configureEPKNS0_12MPR121ConfigE, .-_ZN5amiro6MPR1219configureEPKNS0_12MPR12
  391 0108 AFF30080 		.section	.text.startup._GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh,"ax",%progbits
-ARM GAS  /tmp/ccPvRmCo.s 			page 8
+ARM GAS  /tmp/ccue0wjH.s 			page 8
 
 
  391      AFF30080 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccPvRmCo.s 			page 1
  440      31323120 
  440      63746F72 
  440      206D6173 
-ARM GAS  /tmp/ccPvRmCo.s 			page 9
+ARM GAS  /tmp/ccue0wjH.s 			page 9
 
 
  440      7465725F 
@@ -496,54 +496,54 @@ ARM GAS  /tmp/ccPvRmCo.s 			page 1
  452 0014 00000000 		.word	_ZN5amiro6MPR121D1Ev
  453 0018 00000000 		.word	_ZN5amiro6MPR121D0Ev
  454 001c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccPvRmCo.s 			page 10
+ARM GAS  /tmp/ccue0wjH.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 mpr121.cpp
-     /tmp/ccPvRmCo.s:18     .text._ZN5amiro6MPR121D2Ev:00000000 $t
-     /tmp/ccPvRmCo.s:24     .text._ZN5amiro6MPR121D2Ev:00000000 _ZN5amiro6MPR121D2Ev
-     /tmp/ccPvRmCo.s:34     .text._ZN5amiro6MPR121D2Ev:00000008 $d
-     /tmp/ccPvRmCo.s:24     .text._ZN5amiro6MPR121D2Ev:00000000 _ZN5amiro6MPR121D1Ev
-     /tmp/ccPvRmCo.s:39     .text._ZN5amiro6MPR121D0Ev:00000000 $t
-     /tmp/ccPvRmCo.s:45     .text._ZN5amiro6MPR121D0Ev:00000000 _ZN5amiro6MPR121D0Ev
-     /tmp/ccPvRmCo.s:58     .text._ZN5amiro6MPR121D0Ev:00000010 $d
-     /tmp/ccPvRmCo.s:61     .text.startup._ZN5amiro6MPR1214mainEv:00000000 $t
-     /tmp/ccPvRmCo.s:67     .text.startup._ZN5amiro6MPR1214mainEv:00000000 _ZN5amiro6MPR1214mainEv
-     /tmp/ccPvRmCo.s:149    .text.startup._ZN5amiro6MPR1214mainEv:000000d4 $d
-     /tmp/ccPvRmCo.s:152    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
-     /tmp/ccPvRmCo.s:158    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
-     /tmp/ccPvRmCo.s:181    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
-     /tmp/ccPvRmCo.s:185    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 $t
-     /tmp/ccPvRmCo.s:191    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 _ZN5amiro6MPR121C2EPNS_9I2CDriverEh
-     /tmp/ccPvRmCo.s:220    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000040 $d
-     /tmp/ccPvRmCo.s:191    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 _ZN5amiro6MPR121C1EPNS_9I2CDriverEh
-     /tmp/ccPvRmCo.s:226    .text._ZN5amiro6MPR12115getButtonStatusEv:00000000 $t
-     /tmp/ccPvRmCo.s:232    .text._ZN5amiro6MPR12115getButtonStatusEv:00000000 _ZN5amiro6MPR12115getButtonStatusEv
-     /tmp/ccPvRmCo.s:240    .text._ZN5amiro6MPR12115getButtonStatusEh:00000000 $t
-     /tmp/ccPvRmCo.s:246    .text._ZN5amiro6MPR12115getButtonStatusEh:00000000 _ZN5amiro6MPR12115getButtonStatusEh
-     /tmp/ccPvRmCo.s:257    .text._ZN5amiro6MPR12115getBaselineDataEh:00000000 $t
-     /tmp/ccPvRmCo.s:263    .text._ZN5amiro6MPR12115getBaselineDataEh:00000000 _ZN5amiro6MPR12115getBaselineDataEh
-     /tmp/ccPvRmCo.s:272    .text._ZN5amiro6MPR12116getElectrodeDataEh:00000000 $t
-     /tmp/ccPvRmCo.s:278    .text._ZN5amiro6MPR12116getElectrodeDataEh:00000000 _ZN5amiro6MPR12116getElectrodeDataEh
-     /tmp/ccPvRmCo.s:287    .text._ZN5amiro6MPR1219configureEPKNS0_12MPR121ConfigE:00000000 $t
-     /tmp/ccPvRmCo.s:293    .text._ZN5amiro6MPR1219configureEPKNS0_12MPR121ConfigE:00000000 _ZN5amiro6MPR1219configureEPKNS0_12MPR121ConfigE
-     /tmp/ccPvRmCo.s:392    .text.startup._GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 $t
-     /tmp/ccPvRmCo.s:397    .text.startup._GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 _GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh
-     /tmp/ccPvRmCo.s:409    .text.startup._GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh:0000000c $d
-     /tmp/ccPvRmCo.s:413    .init_array:00000000 $d
-     /tmp/ccPvRmCo.s:420    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
-     /tmp/ccPvRmCo.s:417    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
-     /tmp/ccPvRmCo.s:446    .rodata._ZTVN5amiro6MPR121E:00000000 _ZTVN5amiro6MPR121E
-     /tmp/ccPvRmCo.s:428    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccPvRmCo.s:432    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccPvRmCo.s:435    .rodata.str1.4:00000000 $d
-     /tmp/ccPvRmCo.s:442    .rodata._ZTVN5amiro6MPR121E:00000000 $d
-     /tmp/ccPvRmCo.s:38     .text._ZN5amiro6MPR121D2Ev:0000000c $t
-     /tmp/ccPvRmCo.s:60     .text._ZN5amiro6MPR121D0Ev:00000014 $t
-     /tmp/ccPvRmCo.s:151    .text.startup._ZN5amiro6MPR1214mainEv:000000d8 $t
-     /tmp/ccPvRmCo.s:225    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000048 $t
-     /tmp/ccPvRmCo.s:412    .text.startup._GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000014 $t
+     /tmp/ccue0wjH.s:18     .text._ZN5amiro6MPR121D2Ev:00000000 $t
+     /tmp/ccue0wjH.s:24     .text._ZN5amiro6MPR121D2Ev:00000000 _ZN5amiro6MPR121D2Ev
+     /tmp/ccue0wjH.s:34     .text._ZN5amiro6MPR121D2Ev:00000008 $d
+     /tmp/ccue0wjH.s:24     .text._ZN5amiro6MPR121D2Ev:00000000 _ZN5amiro6MPR121D1Ev
+     /tmp/ccue0wjH.s:39     .text._ZN5amiro6MPR121D0Ev:00000000 $t
+     /tmp/ccue0wjH.s:45     .text._ZN5amiro6MPR121D0Ev:00000000 _ZN5amiro6MPR121D0Ev
+     /tmp/ccue0wjH.s:58     .text._ZN5amiro6MPR121D0Ev:00000010 $d
+     /tmp/ccue0wjH.s:61     .text.startup._ZN5amiro6MPR1214mainEv:00000000 $t
+     /tmp/ccue0wjH.s:67     .text.startup._ZN5amiro6MPR1214mainEv:00000000 _ZN5amiro6MPR1214mainEv
+     /tmp/ccue0wjH.s:149    .text.startup._ZN5amiro6MPR1214mainEv:000000d4 $d
+     /tmp/ccue0wjH.s:152    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/ccue0wjH.s:158    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/ccue0wjH.s:181    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/ccue0wjH.s:185    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 $t
+     /tmp/ccue0wjH.s:191    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 _ZN5amiro6MPR121C2EPNS_9I2CDriverEh
+     /tmp/ccue0wjH.s:220    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000040 $d
+     /tmp/ccue0wjH.s:191    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 _ZN5amiro6MPR121C1EPNS_9I2CDriverEh
+     /tmp/ccue0wjH.s:226    .text._ZN5amiro6MPR12115getButtonStatusEv:00000000 $t
+     /tmp/ccue0wjH.s:232    .text._ZN5amiro6MPR12115getButtonStatusEv:00000000 _ZN5amiro6MPR12115getButtonStatusEv
+     /tmp/ccue0wjH.s:240    .text._ZN5amiro6MPR12115getButtonStatusEh:00000000 $t
+     /tmp/ccue0wjH.s:246    .text._ZN5amiro6MPR12115getButtonStatusEh:00000000 _ZN5amiro6MPR12115getButtonStatusEh
+     /tmp/ccue0wjH.s:257    .text._ZN5amiro6MPR12115getBaselineDataEh:00000000 $t
+     /tmp/ccue0wjH.s:263    .text._ZN5amiro6MPR12115getBaselineDataEh:00000000 _ZN5amiro6MPR12115getBaselineDataEh
+     /tmp/ccue0wjH.s:272    .text._ZN5amiro6MPR12116getElectrodeDataEh:00000000 $t
+     /tmp/ccue0wjH.s:278    .text._ZN5amiro6MPR12116getElectrodeDataEh:00000000 _ZN5amiro6MPR12116getElectrodeDataEh
+     /tmp/ccue0wjH.s:287    .text._ZN5amiro6MPR1219configureEPKNS0_12MPR121ConfigE:00000000 $t
+     /tmp/ccue0wjH.s:293    .text._ZN5amiro6MPR1219configureEPKNS0_12MPR121ConfigE:00000000 _ZN5amiro6MPR1219configureEPKNS0_12MPR121ConfigE
+     /tmp/ccue0wjH.s:392    .text.startup._GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 $t
+     /tmp/ccue0wjH.s:397    .text.startup._GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000000 _GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh
+     /tmp/ccue0wjH.s:409    .text.startup._GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh:0000000c $d
+     /tmp/ccue0wjH.s:413    .init_array:00000000 $d
+     /tmp/ccue0wjH.s:420    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/ccue0wjH.s:417    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/ccue0wjH.s:446    .rodata._ZTVN5amiro6MPR121E:00000000 _ZTVN5amiro6MPR121E
+     /tmp/ccue0wjH.s:428    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccue0wjH.s:432    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccue0wjH.s:435    .rodata.str1.4:00000000 $d
+     /tmp/ccue0wjH.s:442    .rodata._ZTVN5amiro6MPR121E:00000000 $d
+     /tmp/ccue0wjH.s:38     .text._ZN5amiro6MPR121D2Ev:0000000c $t
+     /tmp/ccue0wjH.s:60     .text._ZN5amiro6MPR121D0Ev:00000014 $t
+     /tmp/ccue0wjH.s:151    .text.startup._ZN5amiro6MPR1214mainEv:000000d8 $t
+     /tmp/ccue0wjH.s:225    .text._ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000048 $t
+     /tmp/ccue0wjH.s:412    .text.startup._GLOBAL__sub_I__ZN5amiro6MPR121C2EPNS_9I2CDriverEh:00000014 $t
 
 UNDEFINED SYMBOLS
 _ZdlPv
@@ -556,7 +556,7 @@ _ZN10chibios_rt10_thd_startEPv
 _ZTVN10chibios_rt15ThreadReferenceE
 _ZN10chibios_rt10BaseThreadC2Ev
 _ZN10chibios_rt9EvtSourceC1Ev
-ARM GAS  /tmp/ccPvRmCo.s 			page 11
+ARM GAS  /tmp/ccue0wjH.s 			page 11
 
 
 chDbgPanic

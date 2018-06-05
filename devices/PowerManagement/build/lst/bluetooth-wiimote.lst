@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccEVUgcC.s 			page 1
+ARM GAS  /tmp/ccBL5vX1.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
   55              		.thumb_func
   56              		.type	_ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh, %function
   57              	_ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:
-ARM GAS  /tmp/ccEVUgcC.s 			page 2
+ARM GAS  /tmp/ccBL5vX1.s 			page 2
 
 
   58              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  111 000c 0CD5     		bpl	.L8
  112 000e 90F83012 		ldrb	r1, [r0, #560]	@ zero_extendqisi2
  113 0012 FF29     		cmp	r1, #255
-ARM GAS  /tmp/ccEVUgcC.s 			page 3
+ARM GAS  /tmp/ccBL5vX1.s 			page 3
 
 
  114 0014 08D0     		beq	.L8
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  168              	.L20:
  169 0052 D4F82C02 		ldr	r0, [r4, #556]
  170 0056 00F5F070 		add	r0, r0, #480
-ARM GAS  /tmp/ccEVUgcC.s 			page 4
+ARM GAS  /tmp/ccBL5vX1.s 			page 4
 
 
  171 005a FFF7FEFF 		bl	_ZN5amiro18BluetoothTransport35bluetoothTransportGetStorageMailboxEv
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  225 00fa 60F3C713 		bfi	r3, r0, #7, #1
  226 00fe 84F83832 		strb	r3, [r4, #568]
  227 0102 EB78     		ldrb	r3, [r5, #3]	@ zero_extendqisi2
-ARM GAS  /tmp/ccEVUgcC.s 			page 5
+ARM GAS  /tmp/ccBL5vX1.s 			page 5
 
 
  228 0104 C3F3C003 		ubfx	r3, r3, #3, #1
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  282 0198 00000000 		.word	.LANCHOR1
  283              		.size	_ZN5amiro16BluetoothWiimote14wiimoteReceiveEv, .-_ZN5amiro16BluetoothWiimote14wiimoteReceive
  284 019c AFF30080 		.section	.text.startup._ZN5amiro16BluetoothWiimote4mainEv,"ax",%progbits
-ARM GAS  /tmp/ccEVUgcC.s 			page 6
+ARM GAS  /tmp/ccBL5vX1.s 			page 6
 
 
  285              		.align	2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  339 0022 2368     		ldr	r3, [r4]
  340 0024 6846     		mov	r0, sp
  341 0026 9B68     		ldr	r3, [r3, #8]
-ARM GAS  /tmp/ccEVUgcC.s 			page 7
+ARM GAS  /tmp/ccBL5vX1.s 			page 7
 
 
  342 0028 2146     		mov	r1, r4
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  395              		.type	_ZN5amiro16BluetoothWiimote22bluetoothWiimoteListenEPKc, %function
  396              	_ZN5amiro16BluetoothWiimote22bluetoothWiimoteListenEPKc:
  397              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccEVUgcC.s 			page 8
+ARM GAS  /tmp/ccBL5vX1.s 			page 8
 
 
  398              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  447              		.p2align 4,,15
  448              		.global	_ZN5amiro16BluetoothWiimote10getButtonsEv
  449              		.thumb
-ARM GAS  /tmp/ccEVUgcC.s 			page 9
+ARM GAS  /tmp/ccBL5vX1.s 			page 9
 
 
  450              		.thumb_func
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  500 0010 8DF80630 		strb	r3, [sp, #6]
  501 0014 01A9     		add	r1, sp, #4
  502 0016 0322     		movs	r2, #3
-ARM GAS  /tmp/ccEVUgcC.s 			page 10
+ARM GAS  /tmp/ccBL5vX1.s 			page 10
 
 
  503 0018 FFF7FEFF 		bl	_ZN5amiro16BluetoothWiimote15wiimoteTransmitEPKhj
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  556 000c 01A9     		add	r1, sp, #4
  557 000e 1846     		mov	r0, r3
  558 0010 0422     		movs	r2, #4
-ARM GAS  /tmp/ccEVUgcC.s 			page 11
+ARM GAS  /tmp/ccBL5vX1.s 			page 11
 
 
  559 0012 FFF7FEFF 		bl	_ZN5amiro16BluetoothWiimote15wiimoteTransmitEPKhj
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  611 0003 31       		.byte	49
  612              	.LC0:
  613 0004 A2       		.byte	-94
-ARM GAS  /tmp/ccEVUgcC.s 			page 12
+ARM GAS  /tmp/ccBL5vX1.s 			page 12
 
 
  614 0005 15       		.byte	21
@@ -700,73 +700,73 @@ ARM GAS  /tmp/ccEVUgcC.s 			page 1
  645      6D6F7465 
  645      00
  646 0019 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccEVUgcC.s 			page 13
+ARM GAS  /tmp/ccBL5vX1.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 bluetooth-wiimote.cpp
-     /tmp/ccEVUgcC.s:18     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 $t
-     /tmp/ccEVUgcC.s:24     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
-     /tmp/ccEVUgcC.s:47     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000028 $d
-     /tmp/ccEVUgcC.s:51     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 $t
-     /tmp/ccEVUgcC.s:57     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 _ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh
-     /tmp/ccEVUgcC.s:90     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000050 $d
-     /tmp/ccEVUgcC.s:57     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 _ZN5amiro16BluetoothWiimoteC1EPNS_9BLUETOOTHEh
-     /tmp/ccEVUgcC.s:96     .text._ZN5amiro16BluetoothWiimote15wiimoteTransmitEPKhj:00000000 $t
-     /tmp/ccEVUgcC.s:102    .text._ZN5amiro16BluetoothWiimote15wiimoteTransmitEPKhj:00000000 _ZN5amiro16BluetoothWiimote15wiimoteTransmitEPKhj
-     /tmp/ccEVUgcC.s:127    .text._ZN5amiro16BluetoothWiimote14wiimoteReceiveEv:00000000 $t
-     /tmp/ccEVUgcC.s:133    .text._ZN5amiro16BluetoothWiimote14wiimoteReceiveEv:00000000 _ZN5amiro16BluetoothWiimote14wiimoteReceiveEv
-     /tmp/ccEVUgcC.s:280    .text._ZN5amiro16BluetoothWiimote14wiimoteReceiveEv:00000190 $d
-     /tmp/ccEVUgcC.s:285    .text.startup._ZN5amiro16BluetoothWiimote4mainEv:00000000 $t
-     /tmp/ccEVUgcC.s:291    .text.startup._ZN5amiro16BluetoothWiimote4mainEv:00000000 _ZN5amiro16BluetoothWiimote4mainEv
-     /tmp/ccEVUgcC.s:316    .text.startup._ZN5amiro16BluetoothWiimote4mainEv:00000028 $d
-     /tmp/ccEVUgcC.s:319    .text._ZN5amiro16BluetoothWiimote21bluetoothWiimoteStartEh:00000000 $t
-     /tmp/ccEVUgcC.s:325    .text._ZN5amiro16BluetoothWiimote21bluetoothWiimoteStartEh:00000000 _ZN5amiro16BluetoothWiimote21bluetoothWiimoteStartEh
-     /tmp/ccEVUgcC.s:353    .text._ZN5amiro16BluetoothWiimote20bluetoothWiimoteStopEv:00000000 $t
-     /tmp/ccEVUgcC.s:359    .text._ZN5amiro16BluetoothWiimote20bluetoothWiimoteStopEv:00000000 _ZN5amiro16BluetoothWiimote20bluetoothWiimoteStopEv
-     /tmp/ccEVUgcC.s:373    .text._ZN5amiro16BluetoothWiimote27bluetoothWiimoteIsConnectedEv:00000000 $t
-     /tmp/ccEVUgcC.s:379    .text._ZN5amiro16BluetoothWiimote27bluetoothWiimoteIsConnectedEv:00000000 _ZN5amiro16BluetoothWiimote27bluetoothWiimoteIsConnectedEv
-     /tmp/ccEVUgcC.s:390    .text._ZN5amiro16BluetoothWiimote22bluetoothWiimoteListenEPKc:00000000 $t
-     /tmp/ccEVUgcC.s:396    .text._ZN5amiro16BluetoothWiimote22bluetoothWiimoteListenEPKc:00000000 _ZN5amiro16BluetoothWiimote22bluetoothWiimoteListenEPKc
-     /tmp/ccEVUgcC.s:404    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteConnectEPKc:00000000 $t
-     /tmp/ccEVUgcC.s:410    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteConnectEPKc:00000000 _ZN5amiro16BluetoothWiimote23bluetoothWiimoteConnectEPKc
-     /tmp/ccEVUgcC.s:418    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDisconnectEPKc:00000000 $t
-     /tmp/ccEVUgcC.s:424    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDisconnectEPKc:00000000 _ZN5amiro16BluetoothWiimote26bluetoothWiimoteDisconnectEPKc
-     /tmp/ccEVUgcC.s:432    .text._ZN5amiro16BluetoothWiimote16getAccelerometerEv:00000000 $t
-     /tmp/ccEVUgcC.s:438    .text._ZN5amiro16BluetoothWiimote16getAccelerometerEv:00000000 _ZN5amiro16BluetoothWiimote16getAccelerometerEv
-     /tmp/ccEVUgcC.s:446    .text._ZN5amiro16BluetoothWiimote10getButtonsEv:00000000 $t
-     /tmp/ccEVUgcC.s:452    .text._ZN5amiro16BluetoothWiimote10getButtonsEv:00000000 _ZN5amiro16BluetoothWiimote10getButtonsEv
-     /tmp/ccEVUgcC.s:460    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteLedVibrateEhh:00000000 $t
-     /tmp/ccEVUgcC.s:466    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteLedVibrateEhh:00000000 _ZN5amiro16BluetoothWiimote26bluetoothWiimoteLedVibrateEhh
-     /tmp/ccEVUgcC.s:485    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv:00000000 $t
-     /tmp/ccEVUgcC.s:491    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv:00000000 _ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv
-     /tmp/ccEVUgcC.s:510    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv:00000024 $d
-     /tmp/ccEVUgcC.s:513    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteDataBtnEv:00000000 $t
-     /tmp/ccEVUgcC.s:519    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteDataBtnEv:00000000 _ZN5amiro16BluetoothWiimote23bluetoothWiimoteDataBtnEv
-     /tmp/ccEVUgcC.s:538    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteDataBtnEv:0000001c $d
-     /tmp/ccEVUgcC.s:541    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDataBtnAccEv:00000000 $t
-     /tmp/ccEVUgcC.s:547    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDataBtnAccEv:00000000 _ZN5amiro16BluetoothWiimote26bluetoothWiimoteDataBtnAccEv
-     /tmp/ccEVUgcC.s:566    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDataBtnAccEv:0000001c $d
-     /tmp/ccEVUgcC.s:569    .text.startup._GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 $t
-     /tmp/ccEVUgcC.s:574    .text.startup._GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 _GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh
-     /tmp/ccEVUgcC.s:586    .text.startup._GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:0000000c $d
-     /tmp/ccEVUgcC.s:590    .init_array:00000000 $d
-     /tmp/ccEVUgcC.s:597    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi128EEE
-     /tmp/ccEVUgcC.s:594    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 $d
-     /tmp/ccEVUgcC.s:627    .rodata._ZTVN5amiro16BluetoothWiimoteE:00000000 _ZTVN5amiro16BluetoothWiimoteE
-     /tmp/ccEVUgcC.s:605    .rodata:00000000 $d
-     /tmp/ccEVUgcC.s:623    .rodata._ZTVN5amiro16BluetoothWiimoteE:00000000 $d
-     /tmp/ccEVUgcC.s:634    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccEVUgcC.s:638    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccEVUgcC.s:641    .rodata.str1.4:00000000 $d
-     /tmp/ccEVUgcC.s:95     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000058 $t
-ARM GAS  /tmp/ccEVUgcC.s 			page 14
+     /tmp/ccBL5vX1.s:18     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 $t
+     /tmp/ccBL5vX1.s:24     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
+     /tmp/ccBL5vX1.s:47     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000028 $d
+     /tmp/ccBL5vX1.s:51     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 $t
+     /tmp/ccBL5vX1.s:57     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 _ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh
+     /tmp/ccBL5vX1.s:90     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000050 $d
+     /tmp/ccBL5vX1.s:57     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 _ZN5amiro16BluetoothWiimoteC1EPNS_9BLUETOOTHEh
+     /tmp/ccBL5vX1.s:96     .text._ZN5amiro16BluetoothWiimote15wiimoteTransmitEPKhj:00000000 $t
+     /tmp/ccBL5vX1.s:102    .text._ZN5amiro16BluetoothWiimote15wiimoteTransmitEPKhj:00000000 _ZN5amiro16BluetoothWiimote15wiimoteTransmitEPKhj
+     /tmp/ccBL5vX1.s:127    .text._ZN5amiro16BluetoothWiimote14wiimoteReceiveEv:00000000 $t
+     /tmp/ccBL5vX1.s:133    .text._ZN5amiro16BluetoothWiimote14wiimoteReceiveEv:00000000 _ZN5amiro16BluetoothWiimote14wiimoteReceiveEv
+     /tmp/ccBL5vX1.s:280    .text._ZN5amiro16BluetoothWiimote14wiimoteReceiveEv:00000190 $d
+     /tmp/ccBL5vX1.s:285    .text.startup._ZN5amiro16BluetoothWiimote4mainEv:00000000 $t
+     /tmp/ccBL5vX1.s:291    .text.startup._ZN5amiro16BluetoothWiimote4mainEv:00000000 _ZN5amiro16BluetoothWiimote4mainEv
+     /tmp/ccBL5vX1.s:316    .text.startup._ZN5amiro16BluetoothWiimote4mainEv:00000028 $d
+     /tmp/ccBL5vX1.s:319    .text._ZN5amiro16BluetoothWiimote21bluetoothWiimoteStartEh:00000000 $t
+     /tmp/ccBL5vX1.s:325    .text._ZN5amiro16BluetoothWiimote21bluetoothWiimoteStartEh:00000000 _ZN5amiro16BluetoothWiimote21bluetoothWiimoteStartEh
+     /tmp/ccBL5vX1.s:353    .text._ZN5amiro16BluetoothWiimote20bluetoothWiimoteStopEv:00000000 $t
+     /tmp/ccBL5vX1.s:359    .text._ZN5amiro16BluetoothWiimote20bluetoothWiimoteStopEv:00000000 _ZN5amiro16BluetoothWiimote20bluetoothWiimoteStopEv
+     /tmp/ccBL5vX1.s:373    .text._ZN5amiro16BluetoothWiimote27bluetoothWiimoteIsConnectedEv:00000000 $t
+     /tmp/ccBL5vX1.s:379    .text._ZN5amiro16BluetoothWiimote27bluetoothWiimoteIsConnectedEv:00000000 _ZN5amiro16BluetoothWiimote27bluetoothWiimoteIsConnectedEv
+     /tmp/ccBL5vX1.s:390    .text._ZN5amiro16BluetoothWiimote22bluetoothWiimoteListenEPKc:00000000 $t
+     /tmp/ccBL5vX1.s:396    .text._ZN5amiro16BluetoothWiimote22bluetoothWiimoteListenEPKc:00000000 _ZN5amiro16BluetoothWiimote22bluetoothWiimoteListenEPKc
+     /tmp/ccBL5vX1.s:404    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteConnectEPKc:00000000 $t
+     /tmp/ccBL5vX1.s:410    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteConnectEPKc:00000000 _ZN5amiro16BluetoothWiimote23bluetoothWiimoteConnectEPKc
+     /tmp/ccBL5vX1.s:418    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDisconnectEPKc:00000000 $t
+     /tmp/ccBL5vX1.s:424    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDisconnectEPKc:00000000 _ZN5amiro16BluetoothWiimote26bluetoothWiimoteDisconnectEPKc
+     /tmp/ccBL5vX1.s:432    .text._ZN5amiro16BluetoothWiimote16getAccelerometerEv:00000000 $t
+     /tmp/ccBL5vX1.s:438    .text._ZN5amiro16BluetoothWiimote16getAccelerometerEv:00000000 _ZN5amiro16BluetoothWiimote16getAccelerometerEv
+     /tmp/ccBL5vX1.s:446    .text._ZN5amiro16BluetoothWiimote10getButtonsEv:00000000 $t
+     /tmp/ccBL5vX1.s:452    .text._ZN5amiro16BluetoothWiimote10getButtonsEv:00000000 _ZN5amiro16BluetoothWiimote10getButtonsEv
+     /tmp/ccBL5vX1.s:460    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteLedVibrateEhh:00000000 $t
+     /tmp/ccBL5vX1.s:466    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteLedVibrateEhh:00000000 _ZN5amiro16BluetoothWiimote26bluetoothWiimoteLedVibrateEhh
+     /tmp/ccBL5vX1.s:485    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv:00000000 $t
+     /tmp/ccBL5vX1.s:491    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv:00000000 _ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv
+     /tmp/ccBL5vX1.s:510    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv:00000024 $d
+     /tmp/ccBL5vX1.s:513    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteDataBtnEv:00000000 $t
+     /tmp/ccBL5vX1.s:519    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteDataBtnEv:00000000 _ZN5amiro16BluetoothWiimote23bluetoothWiimoteDataBtnEv
+     /tmp/ccBL5vX1.s:538    .text._ZN5amiro16BluetoothWiimote23bluetoothWiimoteDataBtnEv:0000001c $d
+     /tmp/ccBL5vX1.s:541    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDataBtnAccEv:00000000 $t
+     /tmp/ccBL5vX1.s:547    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDataBtnAccEv:00000000 _ZN5amiro16BluetoothWiimote26bluetoothWiimoteDataBtnAccEv
+     /tmp/ccBL5vX1.s:566    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteDataBtnAccEv:0000001c $d
+     /tmp/ccBL5vX1.s:569    .text.startup._GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 $t
+     /tmp/ccBL5vX1.s:574    .text.startup._GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000000 _GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh
+     /tmp/ccBL5vX1.s:586    .text.startup._GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:0000000c $d
+     /tmp/ccBL5vX1.s:590    .init_array:00000000 $d
+     /tmp/ccBL5vX1.s:597    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi128EEE
+     /tmp/ccBL5vX1.s:594    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 $d
+     /tmp/ccBL5vX1.s:627    .rodata._ZTVN5amiro16BluetoothWiimoteE:00000000 _ZTVN5amiro16BluetoothWiimoteE
+     /tmp/ccBL5vX1.s:605    .rodata:00000000 $d
+     /tmp/ccBL5vX1.s:623    .rodata._ZTVN5amiro16BluetoothWiimoteE:00000000 $d
+     /tmp/ccBL5vX1.s:634    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccBL5vX1.s:638    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccBL5vX1.s:641    .rodata.str1.4:00000000 $d
+     /tmp/ccBL5vX1.s:95     .text._ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000058 $t
+ARM GAS  /tmp/ccBL5vX1.s 			page 14
 
 
-     /tmp/ccEVUgcC.s:284    .text._ZN5amiro16BluetoothWiimote14wiimoteReceiveEv:0000019c $t
-     /tmp/ccEVUgcC.s:318    .text.startup._ZN5amiro16BluetoothWiimote4mainEv:0000002c $t
-     /tmp/ccEVUgcC.s:512    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv:00000028 $t
-     /tmp/ccEVUgcC.s:589    .text.startup._GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000014 $t
+     /tmp/ccBL5vX1.s:284    .text._ZN5amiro16BluetoothWiimote14wiimoteReceiveEv:0000019c $t
+     /tmp/ccBL5vX1.s:318    .text.startup._ZN5amiro16BluetoothWiimote4mainEv:0000002c $t
+     /tmp/ccBL5vX1.s:512    .text._ZN5amiro16BluetoothWiimote26bluetoothWiimoteStatusInfoEv:00000028 $t
+     /tmp/ccBL5vX1.s:589    .text.startup._GLOBAL__sub_I__ZN5amiro16BluetoothWiimoteC2EPNS_9BLUETOOTHEh:00000014 $t
 
 UNDEFINED SYMBOLS
 chThdCreateStatic

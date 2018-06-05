@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccp06J5z.s 			page 1
+ARM GAS  /tmp/ccDYiIDb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccp06J5z.s 			page 1
   54              		@ frame_needed = 0, uses_anonymous_args = 0
   55 0000 10B5     		push	{r4, lr}
   56 0002 0446     		mov	r4, r0
-ARM GAS  /tmp/ccp06J5z.s 			page 2
+ARM GAS  /tmp/ccDYiIDb.s 			page 2
 
 
   57 0004 FFF7FEFF 		bl	chDbgCheckClassI
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccp06J5z.s 			page 1
  109              		.align	2
  110              		.p2align 4,,15
  111              		.global	chCoreStatus
-ARM GAS  /tmp/ccp06J5z.s 			page 3
+ARM GAS  /tmp/ccDYiIDb.s 			page 3
 
 
  112              		.thumb
@@ -157,28 +157,28 @@ ARM GAS  /tmp/ccp06J5z.s 			page 1
  143              	nextmem:
  144 0000 00000000 		.space	4
  145              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccp06J5z.s 			page 4
+ARM GAS  /tmp/ccDYiIDb.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmemcore.c
-     /tmp/ccp06J5z.s:18     .text._core_init:00000000 $t
-     /tmp/ccp06J5z.s:24     .text._core_init:00000000 _core_init
-     /tmp/ccp06J5z.s:40     .text._core_init:00000018 $d
-     /tmp/ccp06J5z.s:46     .text.chCoreAllocI:00000000 $t
-     /tmp/ccp06J5z.s:52     .text.chCoreAllocI:00000000 chCoreAllocI
-     /tmp/ccp06J5z.s:75     .text.chCoreAllocI:00000028 $d
-     /tmp/ccp06J5z.s:79     .text.chCoreAlloc:00000000 $t
-     /tmp/ccp06J5z.s:85     .text.chCoreAlloc:00000000 chCoreAlloc
-     /tmp/ccp06J5z.s:109    .text.chCoreStatus:00000000 $t
-     /tmp/ccp06J5z.s:115    .text.chCoreStatus:00000000 chCoreStatus
-     /tmp/ccp06J5z.s:128    .text.chCoreStatus:0000000c $d
-     /tmp/ccp06J5z.s:132    .bss.endmem:00000000 $d
-     /tmp/ccp06J5z.s:136    .bss.endmem:00000000 endmem
-     /tmp/ccp06J5z.s:139    .bss.nextmem:00000000 $d
-     /tmp/ccp06J5z.s:143    .bss.nextmem:00000000 nextmem
-     /tmp/ccp06J5z.s:45     .text._core_init:00000028 $t
-     /tmp/ccp06J5z.s:131    .text.chCoreStatus:00000014 $t
+     /tmp/ccDYiIDb.s:18     .text._core_init:00000000 $t
+     /tmp/ccDYiIDb.s:24     .text._core_init:00000000 _core_init
+     /tmp/ccDYiIDb.s:40     .text._core_init:00000018 $d
+     /tmp/ccDYiIDb.s:46     .text.chCoreAllocI:00000000 $t
+     /tmp/ccDYiIDb.s:52     .text.chCoreAllocI:00000000 chCoreAllocI
+     /tmp/ccDYiIDb.s:75     .text.chCoreAllocI:00000028 $d
+     /tmp/ccDYiIDb.s:79     .text.chCoreAlloc:00000000 $t
+     /tmp/ccDYiIDb.s:85     .text.chCoreAlloc:00000000 chCoreAlloc
+     /tmp/ccDYiIDb.s:109    .text.chCoreStatus:00000000 $t
+     /tmp/ccDYiIDb.s:115    .text.chCoreStatus:00000000 chCoreStatus
+     /tmp/ccDYiIDb.s:128    .text.chCoreStatus:0000000c $d
+     /tmp/ccDYiIDb.s:132    .bss.endmem:00000000 $d
+     /tmp/ccDYiIDb.s:136    .bss.endmem:00000000 endmem
+     /tmp/ccDYiIDb.s:139    .bss.nextmem:00000000 $d
+     /tmp/ccDYiIDb.s:143    .bss.nextmem:00000000 nextmem
+     /tmp/ccDYiIDb.s:45     .text._core_init:00000028 $t
+     /tmp/ccDYiIDb.s:131    .text.chCoreStatus:00000014 $t
 
 UNDEFINED SYMBOLS
 __heap_base__

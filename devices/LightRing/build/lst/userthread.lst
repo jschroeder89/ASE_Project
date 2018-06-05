@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccg4z1kW.s 			page 1
+ARM GAS  /tmp/ccUCQgjr.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccg4z1kW.s 			page 1
   55              	.L5:
   56 0010 08000000 		.word	.LANCHOR0+8
   57              		.size	_ZN5amiro10UserThreadD0Ev, .-_ZN5amiro10UserThreadD0Ev
-ARM GAS  /tmp/ccg4z1kW.s 			page 2
+ARM GAS  /tmp/ccUCQgjr.s 			page 2
 
 
   58 0014 AFF30080 		.section	.text.startup._ZN5amiro10UserThread4mainEv,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccg4z1kW.s 			page 1
  109              	.L12:
  110 0028 00000000 		.word	_ZN10chibios_rt10_thd_startEPv
  111 002c 08000000 		.word	_ZTVN10chibios_rt15ThreadReferenceE+8
-ARM GAS  /tmp/ccg4z1kW.s 			page 3
+ARM GAS  /tmp/ccUCQgjr.s 			page 3
 
 
  112              		.size	_ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm, .-_ZN10chibios_rt16BaseStaticThreadILi10
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccg4z1kW.s 			page 1
  162              		.section	.rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE,"aG",%progbits,_ZTVN10chibios_rt16B
  163              		.align	3
  164              		.type	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE, %object
-ARM GAS  /tmp/ccg4z1kW.s 			page 4
+ARM GAS  /tmp/ccUCQgjr.s 			page 4
 
 
  165              		.size	_ZTVN10chibios_rt16BaseStaticThreadILi1024EEE, 20
@@ -211,41 +211,41 @@ ARM GAS  /tmp/ccg4z1kW.s 			page 1
  191 0014 00000000 		.word	_ZN5amiro10UserThreadD1Ev
  192 0018 00000000 		.word	_ZN5amiro10UserThreadD0Ev
  193 001c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccg4z1kW.s 			page 5
+ARM GAS  /tmp/ccUCQgjr.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 userthread.cpp
-     /tmp/ccg4z1kW.s:16     .text._ZN5amiro10UserThreadD2Ev:00000000 $t
-     /tmp/ccg4z1kW.s:22     .text._ZN5amiro10UserThreadD2Ev:00000000 _ZN5amiro10UserThreadD2Ev
-     /tmp/ccg4z1kW.s:32     .text._ZN5amiro10UserThreadD2Ev:00000008 $d
-     /tmp/ccg4z1kW.s:22     .text._ZN5amiro10UserThreadD2Ev:00000000 _ZN5amiro10UserThreadD1Ev
-     /tmp/ccg4z1kW.s:37     .text._ZN5amiro10UserThreadD0Ev:00000000 $t
-     /tmp/ccg4z1kW.s:43     .text._ZN5amiro10UserThreadD0Ev:00000000 _ZN5amiro10UserThreadD0Ev
-     /tmp/ccg4z1kW.s:56     .text._ZN5amiro10UserThreadD0Ev:00000010 $d
-     /tmp/ccg4z1kW.s:59     .text.startup._ZN5amiro10UserThread4mainEv:00000000 $t
-     /tmp/ccg4z1kW.s:65     .text.startup._ZN5amiro10UserThread4mainEv:00000000 _ZN5amiro10UserThread4mainEv
-     /tmp/ccg4z1kW.s:81     .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000000 $t
-     /tmp/ccg4z1kW.s:87     .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
-     /tmp/ccg4z1kW.s:110    .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000028 $d
-     /tmp/ccg4z1kW.s:114    .text._ZN5amiro10UserThreadC2Ev:00000000 $t
-     /tmp/ccg4z1kW.s:120    .text._ZN5amiro10UserThreadC2Ev:00000000 _ZN5amiro10UserThreadC2Ev
-     /tmp/ccg4z1kW.s:133    .text._ZN5amiro10UserThreadC2Ev:00000010 $d
-     /tmp/ccg4z1kW.s:120    .text._ZN5amiro10UserThreadC2Ev:00000000 _ZN5amiro10UserThreadC1Ev
-     /tmp/ccg4z1kW.s:138    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:00000000 $t
-     /tmp/ccg4z1kW.s:143    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:00000000 _GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev
-     /tmp/ccg4z1kW.s:155    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:0000000c $d
-     /tmp/ccg4z1kW.s:159    .init_array:00000000 $d
-     /tmp/ccg4z1kW.s:166    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi1024EEE
-     /tmp/ccg4z1kW.s:163    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:00000000 $d
-     /tmp/ccg4z1kW.s:185    .rodata._ZTVN5amiro10UserThreadE:00000000 _ZTVN5amiro10UserThreadE
-     /tmp/ccg4z1kW.s:174    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccg4z1kW.s:178    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccg4z1kW.s:181    .rodata._ZTVN5amiro10UserThreadE:00000000 $d
-     /tmp/ccg4z1kW.s:36     .text._ZN5amiro10UserThreadD2Ev:0000000c $t
-     /tmp/ccg4z1kW.s:58     .text._ZN5amiro10UserThreadD0Ev:00000014 $t
-     /tmp/ccg4z1kW.s:137    .text._ZN5amiro10UserThreadC2Ev:00000014 $t
-     /tmp/ccg4z1kW.s:158    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:00000014 $t
+     /tmp/ccUCQgjr.s:16     .text._ZN5amiro10UserThreadD2Ev:00000000 $t
+     /tmp/ccUCQgjr.s:22     .text._ZN5amiro10UserThreadD2Ev:00000000 _ZN5amiro10UserThreadD2Ev
+     /tmp/ccUCQgjr.s:32     .text._ZN5amiro10UserThreadD2Ev:00000008 $d
+     /tmp/ccUCQgjr.s:22     .text._ZN5amiro10UserThreadD2Ev:00000000 _ZN5amiro10UserThreadD1Ev
+     /tmp/ccUCQgjr.s:37     .text._ZN5amiro10UserThreadD0Ev:00000000 $t
+     /tmp/ccUCQgjr.s:43     .text._ZN5amiro10UserThreadD0Ev:00000000 _ZN5amiro10UserThreadD0Ev
+     /tmp/ccUCQgjr.s:56     .text._ZN5amiro10UserThreadD0Ev:00000010 $d
+     /tmp/ccUCQgjr.s:59     .text.startup._ZN5amiro10UserThread4mainEv:00000000 $t
+     /tmp/ccUCQgjr.s:65     .text.startup._ZN5amiro10UserThread4mainEv:00000000 _ZN5amiro10UserThread4mainEv
+     /tmp/ccUCQgjr.s:81     .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000000 $t
+     /tmp/ccUCQgjr.s:87     .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm
+     /tmp/ccUCQgjr.s:110    .text._ZN10chibios_rt16BaseStaticThreadILi1024EE5startEm:00000028 $d
+     /tmp/ccUCQgjr.s:114    .text._ZN5amiro10UserThreadC2Ev:00000000 $t
+     /tmp/ccUCQgjr.s:120    .text._ZN5amiro10UserThreadC2Ev:00000000 _ZN5amiro10UserThreadC2Ev
+     /tmp/ccUCQgjr.s:133    .text._ZN5amiro10UserThreadC2Ev:00000010 $d
+     /tmp/ccUCQgjr.s:120    .text._ZN5amiro10UserThreadC2Ev:00000000 _ZN5amiro10UserThreadC1Ev
+     /tmp/ccUCQgjr.s:138    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:00000000 $t
+     /tmp/ccUCQgjr.s:143    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:00000000 _GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev
+     /tmp/ccUCQgjr.s:155    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:0000000c $d
+     /tmp/ccUCQgjr.s:159    .init_array:00000000 $d
+     /tmp/ccUCQgjr.s:166    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi1024EEE
+     /tmp/ccUCQgjr.s:163    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi1024EEE:00000000 $d
+     /tmp/ccUCQgjr.s:185    .rodata._ZTVN5amiro10UserThreadE:00000000 _ZTVN5amiro10UserThreadE
+     /tmp/ccUCQgjr.s:174    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccUCQgjr.s:178    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccUCQgjr.s:181    .rodata._ZTVN5amiro10UserThreadE:00000000 $d
+     /tmp/ccUCQgjr.s:36     .text._ZN5amiro10UserThreadD2Ev:0000000c $t
+     /tmp/ccUCQgjr.s:58     .text._ZN5amiro10UserThreadD0Ev:00000014 $t
+     /tmp/ccUCQgjr.s:137    .text._ZN5amiro10UserThreadC2Ev:00000014 $t
+     /tmp/ccUCQgjr.s:158    .text.startup._GLOBAL__sub_I__ZN5amiro10UserThreadC2Ev:00000014 $t
 
 UNDEFINED SYMBOLS
 _ZdlPv

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccjy2EA2.s 			page 1
+ARM GAS  /tmp/cctTQAxa.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
   55 0044 70BD     		pop	{r4, r5, r6, pc}
   56              	.L13:
   57 0046 4828     		cmp	r0, #72
-ARM GAS  /tmp/ccjy2EA2.s 			page 2
+ARM GAS  /tmp/cctTQAxa.s 			page 2
 
 
   58 0048 04D1     		bne	.L11
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  110      AFF30080 
  111              		.align	2
  112              		.p2align 4,,15
-ARM GAS  /tmp/ccjy2EA2.s 			page 3
+ARM GAS  /tmp/cctTQAxa.s 			page 3
 
 
  113              		.global	_ZN5amiro15PowerManagement15updateSensorValEv
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  167 0078 A288     		ldrh	r2, [r4, #4]
  168 007a 8388     		ldrh	r3, [r0, #4]
  169 007c 1A4C     		ldr	r4, .L30+12
-ARM GAS  /tmp/ccjy2EA2.s 			page 4
+ARM GAS  /tmp/cctTQAxa.s 			page 4
 
 
  170 007e 1344     		add	r3, r3, r2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  224              		.thumb_func
  225              		.type	_ZN5amiro15PowerManagement17periodicBroadcastEv, %function
  226              	_ZN5amiro15PowerManagement17periodicBroadcastEv:
-ARM GAS  /tmp/ccjy2EA2.s 			page 5
+ARM GAS  /tmp/cctTQAxa.s 			page 5
 
 
  227              		@ args = 0, pretend = 0, frame = 16
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  281 009a 0621     		movs	r1, #6
  282 009c 61F30303 		bfi	r3, r1, #0, #4
  283 00a0 96F85154 		ldrb	r5, [r6, #1105]	@ zero_extendqisi2
-ARM GAS  /tmp/ccjy2EA2.s 			page 6
+ARM GAS  /tmp/cctTQAxa.s 			page 6
 
 
  284 00a4 B6F85244 		ldrh	r4, [r6, #1106]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  337              	_ZThn544_N5amiro15PowerManagementD1Ev:
  338              		@ args = 0, pretend = 0, frame = 0
  339              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccjy2EA2.s 			page 7
+ARM GAS  /tmp/cctTQAxa.s 			page 7
 
 
  340 0000 A0F50870 		sub	r0, r0, #544
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  391              		.thumb_func
  392              		.type	_ZN5amiro15PowerManagement5startEm, %function
  393              	_ZN5amiro15PowerManagement5startEm:
-ARM GAS  /tmp/ccjy2EA2.s 			page 8
+ARM GAS  /tmp/cctTQAxa.s 			page 8
 
 
  394              		@ args = 0, pretend = 0, frame = 0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  447              		.p2align 4,,15
  448              		.global	_ZN5amiro15PowerManagementC2EP9CANDriver
  449              		.thumb
-ARM GAS  /tmp/ccjy2EA2.s 			page 9
+ARM GAS  /tmp/cctTQAxa.s 			page 9
 
 
  450              		.thumb_func
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  503 001a FFF7FEFF 		bl	_ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth
  504 001e 082D     		cmp	r5, #8
  505 0020 04F52274 		add	r4, r4, #648
-ARM GAS  /tmp/ccjy2EA2.s 			page 10
+ARM GAS  /tmp/cctTQAxa.s 			page 10
 
 
  506 0024 EFD1     		bne	.L53
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  556 000e 04F50874 		add	r4, r4, #544
  557 0012 0546     		mov	r5, r0
  558 0014 2046     		mov	r0, r4
-ARM GAS  /tmp/ccjy2EA2.s 			page 11
+ARM GAS  /tmp/cctTQAxa.s 			page 11
 
 
  559 0016 FFF7FEFF 		bl	_ZN10chibios_rt15ThreadReference16requestTerminateEv
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  609 0034 00000000 		.word	_ZN10chibios_rt15ThreadReference4stopEv
  610 0038 00000000 		.word	_ZN5amiro23ControllerAreaNetworkRx4mainEv
  611 003c 00000000 		.word	_ZThn544_N5amiro15PowerManagement5startEm
-ARM GAS  /tmp/ccjy2EA2.s 			page 12
+ARM GAS  /tmp/cctTQAxa.s 			page 12
 
 
  612 0040 00000000 		.word	_ZThn544_N5amiro15PowerManagementD1Ev
@@ -673,71 +673,71 @@ ARM GAS  /tmp/ccjy2EA2.s 			page 1
  621 0000 00000000 		.space	8
  621      00000000 
  622              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccjy2EA2.s 			page 13
+ARM GAS  /tmp/cctTQAxa.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 PowerManagement.cpp
-     /tmp/ccjy2EA2.s:18     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 $t
-     /tmp/ccjy2EA2.s:24     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 _ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame
-     /tmp/ccjy2EA2.s:93     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000090 $d
-     /tmp/ccjy2EA2.s:24     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 .LTHUNK0
-     /tmp/ccjy2EA2.s:98     .text._ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 $t
-     /tmp/ccjy2EA2.s:104    .text._ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 _ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame
-     /tmp/ccjy2EA2.s:111    .text._ZN5amiro15PowerManagement15updateSensorValEv:00000000 $t
-     /tmp/ccjy2EA2.s:117    .text._ZN5amiro15PowerManagement15updateSensorValEv:00000000 _ZN5amiro15PowerManagement15updateSensorValEv
-     /tmp/ccjy2EA2.s:214    .text._ZN5amiro15PowerManagement15updateSensorValEv:000000dc $d
-     /tmp/ccjy2EA2.s:220    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:00000000 $t
-     /tmp/ccjy2EA2.s:226    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:00000000 _ZN5amiro15PowerManagement17periodicBroadcastEv
-     /tmp/ccjy2EA2.s:297    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:000000c8 $d
-     /tmp/ccjy2EA2.s:300    .text._ZN5amiro15PowerManagementD2Ev:00000000 $t
-     /tmp/ccjy2EA2.s:306    .text._ZN5amiro15PowerManagementD2Ev:00000000 _ZN5amiro15PowerManagementD2Ev
-     /tmp/ccjy2EA2.s:325    .text._ZN5amiro15PowerManagementD2Ev:00000024 $d
-     /tmp/ccjy2EA2.s:306    .text._ZN5amiro15PowerManagementD2Ev:00000000 _ZN5amiro15PowerManagementD1Ev
-     /tmp/ccjy2EA2.s:306    .text._ZN5amiro15PowerManagementD2Ev:00000000 .LTHUNK2
-     /tmp/ccjy2EA2.s:331    .text._ZN5amiro15PowerManagementD1Ev:00000000 $t
-     /tmp/ccjy2EA2.s:337    .text._ZN5amiro15PowerManagementD1Ev:00000000 _ZThn544_N5amiro15PowerManagementD1Ev
-     /tmp/ccjy2EA2.s:344    .text._ZN5amiro15PowerManagementD0Ev:00000000 $t
-     /tmp/ccjy2EA2.s:350    .text._ZN5amiro15PowerManagementD0Ev:00000000 _ZN5amiro15PowerManagementD0Ev
-     /tmp/ccjy2EA2.s:371    .text._ZN5amiro15PowerManagementD0Ev:0000002c $d
-     /tmp/ccjy2EA2.s:374    .text._ZN5amiro15PowerManagementD0Ev:00000030 $t
-     /tmp/ccjy2EA2.s:380    .text._ZN5amiro15PowerManagementD0Ev:00000030 _ZThn544_N5amiro15PowerManagementD0Ev
-     /tmp/ccjy2EA2.s:387    .text._ZN5amiro15PowerManagement5startEm:00000000 $t
-     /tmp/ccjy2EA2.s:393    .text._ZN5amiro15PowerManagement5startEm:00000000 _ZN5amiro15PowerManagement5startEm
-     /tmp/ccjy2EA2.s:428    .text._ZN5amiro15PowerManagement5startEm:00000048 $d
-     /tmp/ccjy2EA2.s:393    .text._ZN5amiro15PowerManagement5startEm:00000000 .LTHUNK1
-     /tmp/ccjy2EA2.s:433    .text._ZThn544_N5amiro15PowerManagement5startEm:00000000 $t
-     /tmp/ccjy2EA2.s:439    .text._ZThn544_N5amiro15PowerManagement5startEm:00000000 _ZThn544_N5amiro15PowerManagement5startEm
-     /tmp/ccjy2EA2.s:446    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000000 $t
-     /tmp/ccjy2EA2.s:452    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000000 _ZN5amiro15PowerManagementC2EP9CANDriver
-     /tmp/ccjy2EA2.s:477    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000034 $d
-     /tmp/ccjy2EA2.s:452    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000000 _ZN5amiro15PowerManagementC1EP9CANDriver
-     /tmp/ccjy2EA2.s:482    .text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:00000000 $t
-     /tmp/ccjy2EA2.s:488    .text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:00000000 _ZN5amiro15PowerManagement28calibrateProximityRingValuesEv
-     /tmp/ccjy2EA2.s:511    .text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:00000028 $d
-     /tmp/ccjy2EA2.s:515    .text._ZN5amiro15PowerManagement9calibrateEv:00000000 $t
-     /tmp/ccjy2EA2.s:521    .text._ZN5amiro15PowerManagement9calibrateEv:00000000 _ZN5amiro15PowerManagement9calibrateEv
-     /tmp/ccjy2EA2.s:528    .text._ZN5amiro15PowerManagement14getPowerStatusEv:00000000 $t
-     /tmp/ccjy2EA2.s:534    .text._ZN5amiro15PowerManagement14getPowerStatusEv:00000000 _ZN5amiro15PowerManagement14getPowerStatusEv
-     /tmp/ccjy2EA2.s:542    .text._ZN5amiro15PowerManagement9terminateEv:00000000 $t
-     /tmp/ccjy2EA2.s:548    .text._ZN5amiro15PowerManagement9terminateEv:00000000 _ZN5amiro15PowerManagement9terminateEv
-     /tmp/ccjy2EA2.s:566    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:00000000 $t
-     /tmp/ccjy2EA2.s:571    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:00000000 _GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver
-     /tmp/ccjy2EA2.s:583    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:0000000c $d
-     /tmp/ccjy2EA2.s:587    .init_array:00000000 $d
-     /tmp/ccjy2EA2.s:595    .rodata._ZTVN5amiro15PowerManagementE:00000000 _ZTVN5amiro15PowerManagementE
-     /tmp/ccjy2EA2.s:591    .rodata._ZTVN5amiro15PowerManagementE:00000000 $d
-     /tmp/ccjy2EA2.s:616    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccjy2EA2.s:620    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccjy2EA2.s:97     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000098 $t
-     /tmp/ccjy2EA2.s:219    .text._ZN5amiro15PowerManagement15updateSensorValEv:000000ec $t
-     /tmp/ccjy2EA2.s:299    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:000000cc $t
-     /tmp/ccjy2EA2.s:330    .text._ZN5amiro15PowerManagementD2Ev:00000028 $t
-ARM GAS  /tmp/ccjy2EA2.s 			page 14
+     /tmp/cctTQAxa.s:18     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 $t
+     /tmp/cctTQAxa.s:24     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 _ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+     /tmp/cctTQAxa.s:93     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000090 $d
+     /tmp/cctTQAxa.s:24     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 .LTHUNK0
+     /tmp/cctTQAxa.s:98     .text._ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 $t
+     /tmp/cctTQAxa.s:104    .text._ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000000 _ZThn544_N5amiro15PowerManagement14receiveMessageEP10CANRxFrame
+     /tmp/cctTQAxa.s:111    .text._ZN5amiro15PowerManagement15updateSensorValEv:00000000 $t
+     /tmp/cctTQAxa.s:117    .text._ZN5amiro15PowerManagement15updateSensorValEv:00000000 _ZN5amiro15PowerManagement15updateSensorValEv
+     /tmp/cctTQAxa.s:214    .text._ZN5amiro15PowerManagement15updateSensorValEv:000000dc $d
+     /tmp/cctTQAxa.s:220    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:00000000 $t
+     /tmp/cctTQAxa.s:226    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:00000000 _ZN5amiro15PowerManagement17periodicBroadcastEv
+     /tmp/cctTQAxa.s:297    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:000000c8 $d
+     /tmp/cctTQAxa.s:300    .text._ZN5amiro15PowerManagementD2Ev:00000000 $t
+     /tmp/cctTQAxa.s:306    .text._ZN5amiro15PowerManagementD2Ev:00000000 _ZN5amiro15PowerManagementD2Ev
+     /tmp/cctTQAxa.s:325    .text._ZN5amiro15PowerManagementD2Ev:00000024 $d
+     /tmp/cctTQAxa.s:306    .text._ZN5amiro15PowerManagementD2Ev:00000000 _ZN5amiro15PowerManagementD1Ev
+     /tmp/cctTQAxa.s:306    .text._ZN5amiro15PowerManagementD2Ev:00000000 .LTHUNK2
+     /tmp/cctTQAxa.s:331    .text._ZN5amiro15PowerManagementD1Ev:00000000 $t
+     /tmp/cctTQAxa.s:337    .text._ZN5amiro15PowerManagementD1Ev:00000000 _ZThn544_N5amiro15PowerManagementD1Ev
+     /tmp/cctTQAxa.s:344    .text._ZN5amiro15PowerManagementD0Ev:00000000 $t
+     /tmp/cctTQAxa.s:350    .text._ZN5amiro15PowerManagementD0Ev:00000000 _ZN5amiro15PowerManagementD0Ev
+     /tmp/cctTQAxa.s:371    .text._ZN5amiro15PowerManagementD0Ev:0000002c $d
+     /tmp/cctTQAxa.s:374    .text._ZN5amiro15PowerManagementD0Ev:00000030 $t
+     /tmp/cctTQAxa.s:380    .text._ZN5amiro15PowerManagementD0Ev:00000030 _ZThn544_N5amiro15PowerManagementD0Ev
+     /tmp/cctTQAxa.s:387    .text._ZN5amiro15PowerManagement5startEm:00000000 $t
+     /tmp/cctTQAxa.s:393    .text._ZN5amiro15PowerManagement5startEm:00000000 _ZN5amiro15PowerManagement5startEm
+     /tmp/cctTQAxa.s:428    .text._ZN5amiro15PowerManagement5startEm:00000048 $d
+     /tmp/cctTQAxa.s:393    .text._ZN5amiro15PowerManagement5startEm:00000000 .LTHUNK1
+     /tmp/cctTQAxa.s:433    .text._ZThn544_N5amiro15PowerManagement5startEm:00000000 $t
+     /tmp/cctTQAxa.s:439    .text._ZThn544_N5amiro15PowerManagement5startEm:00000000 _ZThn544_N5amiro15PowerManagement5startEm
+     /tmp/cctTQAxa.s:446    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000000 $t
+     /tmp/cctTQAxa.s:452    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000000 _ZN5amiro15PowerManagementC2EP9CANDriver
+     /tmp/cctTQAxa.s:477    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000034 $d
+     /tmp/cctTQAxa.s:452    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000000 _ZN5amiro15PowerManagementC1EP9CANDriver
+     /tmp/cctTQAxa.s:482    .text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:00000000 $t
+     /tmp/cctTQAxa.s:488    .text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:00000000 _ZN5amiro15PowerManagement28calibrateProximityRingValuesEv
+     /tmp/cctTQAxa.s:511    .text._ZN5amiro15PowerManagement28calibrateProximityRingValuesEv:00000028 $d
+     /tmp/cctTQAxa.s:515    .text._ZN5amiro15PowerManagement9calibrateEv:00000000 $t
+     /tmp/cctTQAxa.s:521    .text._ZN5amiro15PowerManagement9calibrateEv:00000000 _ZN5amiro15PowerManagement9calibrateEv
+     /tmp/cctTQAxa.s:528    .text._ZN5amiro15PowerManagement14getPowerStatusEv:00000000 $t
+     /tmp/cctTQAxa.s:534    .text._ZN5amiro15PowerManagement14getPowerStatusEv:00000000 _ZN5amiro15PowerManagement14getPowerStatusEv
+     /tmp/cctTQAxa.s:542    .text._ZN5amiro15PowerManagement9terminateEv:00000000 $t
+     /tmp/cctTQAxa.s:548    .text._ZN5amiro15PowerManagement9terminateEv:00000000 _ZN5amiro15PowerManagement9terminateEv
+     /tmp/cctTQAxa.s:566    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:00000000 $t
+     /tmp/cctTQAxa.s:571    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:00000000 _GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver
+     /tmp/cctTQAxa.s:583    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:0000000c $d
+     /tmp/cctTQAxa.s:587    .init_array:00000000 $d
+     /tmp/cctTQAxa.s:595    .rodata._ZTVN5amiro15PowerManagementE:00000000 _ZTVN5amiro15PowerManagementE
+     /tmp/cctTQAxa.s:591    .rodata._ZTVN5amiro15PowerManagementE:00000000 $d
+     /tmp/cctTQAxa.s:616    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/cctTQAxa.s:620    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/cctTQAxa.s:97     .text._ZN5amiro15PowerManagement14receiveMessageEP10CANRxFrame:00000098 $t
+     /tmp/cctTQAxa.s:219    .text._ZN5amiro15PowerManagement15updateSensorValEv:000000ec $t
+     /tmp/cctTQAxa.s:299    .text._ZN5amiro15PowerManagement17periodicBroadcastEv:000000cc $t
+     /tmp/cctTQAxa.s:330    .text._ZN5amiro15PowerManagementD2Ev:00000028 $t
+ARM GAS  /tmp/cctTQAxa.s 			page 14
 
 
-     /tmp/ccjy2EA2.s:481    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000038 $t
-     /tmp/ccjy2EA2.s:586    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:00000014 $t
+     /tmp/cctTQAxa.s:481    .text._ZN5amiro15PowerManagementC2EP9CANDriver:00000038 $t
+     /tmp/cctTQAxa.s:586    .text.startup._GLOBAL__sub_I__ZN5amiro15PowerManagementC2EP9CANDriver:00000014 $t
                            .group:00000000 _ZN5amiro15PowerManagementD5Ev
 
 UNDEFINED SYMBOLS

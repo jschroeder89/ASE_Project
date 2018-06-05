@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccpT7Exn.s 			page 1
+ARM GAS  /tmp/ccrNeQOb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccpT7Exn.s 			page 1
   53              	i2cStart:
   54              		@ args = 0, pretend = 0, frame = 0
   55              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccpT7Exn.s 			page 2
+ARM GAS  /tmp/ccrNeQOb.s 			page 2
 
 
   56 0000 38B5     		push	{r3, r4, r5, lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccpT7Exn.s 			page 1
  110 0002 0446     		mov	r4, r0
  111 0004 C0B1     		cbz	r0, .L22
  112              	.L17:
-ARM GAS  /tmp/ccpT7Exn.s 			page 3
+ARM GAS  /tmp/ccrNeQOb.s 			page 3
 
 
  113 0006 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccpT7Exn.s 			page 1
  166 000c FFF7FEFF 		bl	chDbgPanic
  167 0010 A068     		ldr	r0, [r4, #8]
  168 0012 10BD     		pop	{r4, pc}
-ARM GAS  /tmp/ccpT7Exn.s 			page 4
+ARM GAS  /tmp/ccrNeQOb.s 			page 4
 
 
  169              	.L29:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccpT7Exn.s 			page 1
  222 004a FFF7FEFF 		bl	i2c_lld_master_transmit_timeout
  223 004e 431C     		adds	r3, r0, #1
  224 0050 0CBF     		ite	eq
-ARM GAS  /tmp/ccpT7Exn.s 			page 5
+ARM GAS  /tmp/ccrNeQOb.s 			page 5
 
 
  225 0052 0523     		moveq	r3, #5
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccpT7Exn.s 			page 1
  279 0014 FFF7FEFF 		bl	chDbgPanic
  280              	.L63:
  281 0018 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
-ARM GAS  /tmp/ccpT7Exn.s 			page 6
+ARM GAS  /tmp/ccrNeQOb.s 			page 6
 
 
  282 001a 022B     		cmp	r3, #2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccpT7Exn.s 			page 1
  336              		.align	2
  337              		.p2align 4,,15
  338              		.global	i2cAcquireBus
-ARM GAS  /tmp/ccpT7Exn.s 			page 7
+ARM GAS  /tmp/ccrNeQOb.s 			page 7
 
 
  339              		.thumb
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccpT7Exn.s 			page 1
  389      00
  390 000d 000000   		.space	3
  391              	.LC1:
-ARM GAS  /tmp/ccpT7Exn.s 			page 8
+ARM GAS  /tmp/ccrNeQOb.s 			page 8
 
 
  392 0010 69326353 		.ascii	"i2cStart(), #1\000"
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccpT7Exn.s 			page 1
  414      2900
  415 00d6 0000     		.space	2
  416              	.LC10:
-ARM GAS  /tmp/ccpT7Exn.s 			page 9
+ARM GAS  /tmp/ccrNeQOb.s 			page 9
 
 
  417 00d8 22693263 		.ascii	"\"i2cReleaseBus\"()\000"
@@ -487,42 +487,42 @@ ARM GAS  /tmp/ccpT7Exn.s 			page 1
  417      75732228 
  417      2900
  418 00ea 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccpT7Exn.s 			page 10
+ARM GAS  /tmp/ccrNeQOb.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 i2c.c
-     /tmp/ccpT7Exn.s:16     .text.i2cInit:00000000 $t
-     /tmp/ccpT7Exn.s:22     .text.i2cInit:00000000 i2cInit
-     /tmp/ccpT7Exn.s:29     .text.i2cObjectInit:00000000 $t
-     /tmp/ccpT7Exn.s:35     .text.i2cObjectInit:00000000 i2cObjectInit
-     /tmp/ccpT7Exn.s:47     .text.i2cStart:00000000 $t
-     /tmp/ccpT7Exn.s:53     .text.i2cStart:00000000 i2cStart
-     /tmp/ccpT7Exn.s:96     .text.i2cStart:00000048 $d
-     /tmp/ccpT7Exn.s:100    .text.i2cStop:00000000 $t
-     /tmp/ccpT7Exn.s:106    .text.i2cStop:00000000 i2cStop
-     /tmp/ccpT7Exn.s:146    .text.i2cStop:00000040 $d
-     /tmp/ccpT7Exn.s:150    .text.i2cGetErrors:00000000 $t
-     /tmp/ccpT7Exn.s:156    .text.i2cGetErrors:00000000 i2cGetErrors
-     /tmp/ccpT7Exn.s:172    .text.i2cGetErrors:00000014 $d
-     /tmp/ccpT7Exn.s:175    .text.i2cMasterTransmitTimeout:00000000 $t
-     /tmp/ccpT7Exn.s:181    .text.i2cMasterTransmitTimeout:00000000 i2cMasterTransmitTimeout
-     /tmp/ccpT7Exn.s:256    .text.i2cMasterTransmitTimeout:00000084 $d
-     /tmp/ccpT7Exn.s:260    .text.i2cMasterReceiveTimeout:00000000 $t
-     /tmp/ccpT7Exn.s:266    .text.i2cMasterReceiveTimeout:00000000 i2cMasterReceiveTimeout
-     /tmp/ccpT7Exn.s:332    .text.i2cMasterReceiveTimeout:00000074 $d
-     /tmp/ccpT7Exn.s:336    .text.i2cAcquireBus:00000000 $t
-     /tmp/ccpT7Exn.s:342    .text.i2cAcquireBus:00000000 i2cAcquireBus
-     /tmp/ccpT7Exn.s:360    .text.i2cAcquireBus:00000024 $d
-     /tmp/ccpT7Exn.s:363    .text.i2cReleaseBus:00000000 $t
-     /tmp/ccpT7Exn.s:369    .text.i2cReleaseBus:00000000 i2cReleaseBus
-     /tmp/ccpT7Exn.s:384    .text.i2cReleaseBus:0000001c $d
-     /tmp/ccpT7Exn.s:387    .rodata.str1.4:00000000 $d
-     /tmp/ccpT7Exn.s:149    .text.i2cStop:00000048 $t
-     /tmp/ccpT7Exn.s:174    .text.i2cGetErrors:00000018 $t
-     /tmp/ccpT7Exn.s:259    .text.i2cMasterTransmitTimeout:0000008c $t
-     /tmp/ccpT7Exn.s:335    .text.i2cMasterReceiveTimeout:0000007c $t
-     /tmp/ccpT7Exn.s:362    .text.i2cAcquireBus:00000028 $t
+     /tmp/ccrNeQOb.s:16     .text.i2cInit:00000000 $t
+     /tmp/ccrNeQOb.s:22     .text.i2cInit:00000000 i2cInit
+     /tmp/ccrNeQOb.s:29     .text.i2cObjectInit:00000000 $t
+     /tmp/ccrNeQOb.s:35     .text.i2cObjectInit:00000000 i2cObjectInit
+     /tmp/ccrNeQOb.s:47     .text.i2cStart:00000000 $t
+     /tmp/ccrNeQOb.s:53     .text.i2cStart:00000000 i2cStart
+     /tmp/ccrNeQOb.s:96     .text.i2cStart:00000048 $d
+     /tmp/ccrNeQOb.s:100    .text.i2cStop:00000000 $t
+     /tmp/ccrNeQOb.s:106    .text.i2cStop:00000000 i2cStop
+     /tmp/ccrNeQOb.s:146    .text.i2cStop:00000040 $d
+     /tmp/ccrNeQOb.s:150    .text.i2cGetErrors:00000000 $t
+     /tmp/ccrNeQOb.s:156    .text.i2cGetErrors:00000000 i2cGetErrors
+     /tmp/ccrNeQOb.s:172    .text.i2cGetErrors:00000014 $d
+     /tmp/ccrNeQOb.s:175    .text.i2cMasterTransmitTimeout:00000000 $t
+     /tmp/ccrNeQOb.s:181    .text.i2cMasterTransmitTimeout:00000000 i2cMasterTransmitTimeout
+     /tmp/ccrNeQOb.s:256    .text.i2cMasterTransmitTimeout:00000084 $d
+     /tmp/ccrNeQOb.s:260    .text.i2cMasterReceiveTimeout:00000000 $t
+     /tmp/ccrNeQOb.s:266    .text.i2cMasterReceiveTimeout:00000000 i2cMasterReceiveTimeout
+     /tmp/ccrNeQOb.s:332    .text.i2cMasterReceiveTimeout:00000074 $d
+     /tmp/ccrNeQOb.s:336    .text.i2cAcquireBus:00000000 $t
+     /tmp/ccrNeQOb.s:342    .text.i2cAcquireBus:00000000 i2cAcquireBus
+     /tmp/ccrNeQOb.s:360    .text.i2cAcquireBus:00000024 $d
+     /tmp/ccrNeQOb.s:363    .text.i2cReleaseBus:00000000 $t
+     /tmp/ccrNeQOb.s:369    .text.i2cReleaseBus:00000000 i2cReleaseBus
+     /tmp/ccrNeQOb.s:384    .text.i2cReleaseBus:0000001c $d
+     /tmp/ccrNeQOb.s:387    .rodata.str1.4:00000000 $d
+     /tmp/ccrNeQOb.s:149    .text.i2cStop:00000048 $t
+     /tmp/ccrNeQOb.s:174    .text.i2cGetErrors:00000018 $t
+     /tmp/ccrNeQOb.s:259    .text.i2cMasterTransmitTimeout:0000008c $t
+     /tmp/ccrNeQOb.s:335    .text.i2cMasterReceiveTimeout:0000007c $t
+     /tmp/ccrNeQOb.s:362    .text.i2cAcquireBus:00000028 $t
 
 UNDEFINED SYMBOLS
 i2c_lld_init

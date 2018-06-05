@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccaShZtU.s 			page 1
+ARM GAS  /tmp/ccsZZBYp.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccaShZtU.s 			page 1
   53              		.size	_ZN5amiro19BluetoothDescriptor28bluetoothDescriptorSetLinkIdEh, .-_ZN5amiro19BluetoothDescri
   54 0004 AFF30080 		.section	.text._ZN5amiro19BluetoothDescriptor35bluetoothDescriptorSetPayloadLengthEj,"ax",%progbit
   54      AFF30080 
-ARM GAS  /tmp/ccaShZtU.s 			page 2
+ARM GAS  /tmp/ccsZZBYp.s 			page 2
 
 
   54      AFF30080 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccaShZtU.s 			page 1
  102              		.type	_ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv, %function
  103              	_ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv:
  104              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccaShZtU.s 			page 3
+ARM GAS  /tmp/ccsZZBYp.s 			page 3
 
 
  105              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -161,28 +161,28 @@ ARM GAS  /tmp/ccaShZtU.s 			page 1
  138 0004 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
  138      AFF30080 
  138      AFF30080 
-ARM GAS  /tmp/ccaShZtU.s 			page 4
+ARM GAS  /tmp/ccsZZBYp.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 bluetooth-descriptor.cpp
-     /tmp/ccaShZtU.s:18     .text._ZN5amiro19BluetoothDescriptorC2Ev:00000000 $t
-     /tmp/ccaShZtU.s:24     .text._ZN5amiro19BluetoothDescriptorC2Ev:00000000 _ZN5amiro19BluetoothDescriptorC2Ev
-     /tmp/ccaShZtU.s:24     .text._ZN5amiro19BluetoothDescriptorC2Ev:00000000 _ZN5amiro19BluetoothDescriptorC1Ev
-     /tmp/ccaShZtU.s:41     .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorSetLinkIdEh:00000000 $t
-     /tmp/ccaShZtU.s:47     .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorSetLinkIdEh:00000000 _ZN5amiro19BluetoothDescriptor28bluetoothDescriptorSetLinkIdEh
-     /tmp/ccaShZtU.s:55     .text._ZN5amiro19BluetoothDescriptor35bluetoothDescriptorSetPayloadLengthEj:00000000 $t
-     /tmp/ccaShZtU.s:61     .text._ZN5amiro19BluetoothDescriptor35bluetoothDescriptorSetPayloadLengthEj:00000000 _ZN5amiro19BluetoothDescriptor35bluetoothDescriptorSetPayloadLengthEj
-     /tmp/ccaShZtU.s:69     .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetLinkIdEv:00000000 $t
-     /tmp/ccaShZtU.s:75     .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetLinkIdEv:00000000 _ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetLinkIdEv
-     /tmp/ccaShZtU.s:83     .text._ZN5amiro19BluetoothDescriptor34bluetoothDescriptorGetBufferLengthEv:00000000 $t
-     /tmp/ccaShZtU.s:89     .text._ZN5amiro19BluetoothDescriptor34bluetoothDescriptorGetBufferLengthEv:00000000 _ZN5amiro19BluetoothDescriptor34bluetoothDescriptorGetBufferLengthEv
-     /tmp/ccaShZtU.s:97     .text._ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv:00000000 $t
-     /tmp/ccaShZtU.s:103    .text._ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv:00000000 _ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv
-     /tmp/ccaShZtU.s:111    .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetBufferEv:00000000 $t
-     /tmp/ccaShZtU.s:117    .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetBufferEv:00000000 _ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetBufferEv
-     /tmp/ccaShZtU.s:125    .text._ZN5amiro19BluetoothDescriptor29bluetoothDescriptorGetPayloadEv:00000000 $t
-     /tmp/ccaShZtU.s:131    .text._ZN5amiro19BluetoothDescriptor29bluetoothDescriptorGetPayloadEv:00000000 _ZN5amiro19BluetoothDescriptor29bluetoothDescriptorGetPayloadEv
+     /tmp/ccsZZBYp.s:18     .text._ZN5amiro19BluetoothDescriptorC2Ev:00000000 $t
+     /tmp/ccsZZBYp.s:24     .text._ZN5amiro19BluetoothDescriptorC2Ev:00000000 _ZN5amiro19BluetoothDescriptorC2Ev
+     /tmp/ccsZZBYp.s:24     .text._ZN5amiro19BluetoothDescriptorC2Ev:00000000 _ZN5amiro19BluetoothDescriptorC1Ev
+     /tmp/ccsZZBYp.s:41     .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorSetLinkIdEh:00000000 $t
+     /tmp/ccsZZBYp.s:47     .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorSetLinkIdEh:00000000 _ZN5amiro19BluetoothDescriptor28bluetoothDescriptorSetLinkIdEh
+     /tmp/ccsZZBYp.s:55     .text._ZN5amiro19BluetoothDescriptor35bluetoothDescriptorSetPayloadLengthEj:00000000 $t
+     /tmp/ccsZZBYp.s:61     .text._ZN5amiro19BluetoothDescriptor35bluetoothDescriptorSetPayloadLengthEj:00000000 _ZN5amiro19BluetoothDescriptor35bluetoothDescriptorSetPayloadLengthEj
+     /tmp/ccsZZBYp.s:69     .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetLinkIdEv:00000000 $t
+     /tmp/ccsZZBYp.s:75     .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetLinkIdEv:00000000 _ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetLinkIdEv
+     /tmp/ccsZZBYp.s:83     .text._ZN5amiro19BluetoothDescriptor34bluetoothDescriptorGetBufferLengthEv:00000000 $t
+     /tmp/ccsZZBYp.s:89     .text._ZN5amiro19BluetoothDescriptor34bluetoothDescriptorGetBufferLengthEv:00000000 _ZN5amiro19BluetoothDescriptor34bluetoothDescriptorGetBufferLengthEv
+     /tmp/ccsZZBYp.s:97     .text._ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv:00000000 $t
+     /tmp/ccsZZBYp.s:103    .text._ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv:00000000 _ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv
+     /tmp/ccsZZBYp.s:111    .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetBufferEv:00000000 $t
+     /tmp/ccsZZBYp.s:117    .text._ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetBufferEv:00000000 _ZN5amiro19BluetoothDescriptor28bluetoothDescriptorGetBufferEv
+     /tmp/ccsZZBYp.s:125    .text._ZN5amiro19BluetoothDescriptor29bluetoothDescriptorGetPayloadEv:00000000 $t
+     /tmp/ccsZZBYp.s:131    .text._ZN5amiro19BluetoothDescriptor29bluetoothDescriptorGetPayloadEv:00000000 _ZN5amiro19BluetoothDescriptor29bluetoothDescriptorGetPayloadEv
 
 UNDEFINED SYMBOLS
 memset

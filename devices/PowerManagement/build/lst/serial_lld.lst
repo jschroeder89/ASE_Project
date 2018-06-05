@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccHeP7nR.s 			page 1
+ARM GAS  /tmp/ccleRhFr.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccHeP7nR.s 			page 1
   53 000e 2C88     		ldrh	r4, [r5]
   54 0010 A4B2     		uxth	r4, r4
   55 0012 E205     		lsls	r2, r4, #23
-ARM GAS  /tmp/ccHeP7nR.s 			page 2
+ARM GAS  /tmp/ccleRhFr.s 			page 2
 
 
   56 0014 BFB2     		uxth	r7, r7
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccHeP7nR.s 			page 1
  110 0086 0023     		movs	r3, #0
  111              	@ 181 "../../../ChibiOS/os/hal/platforms/STM32/USARTv1/serial_lld.c" 1
  112 0088 83F31188 		msr     BASEPRI, r3
-ARM GAS  /tmp/ccHeP7nR.s 			page 3
+ARM GAS  /tmp/ccleRhFr.s 			page 3
 
 
  113              	@ 0 "" 2
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccHeP7nR.s 			page 1
  167              		.thumb
  168 00fa 4FF6FF63 		movw	r3, #65279
  169 00fe 2B80     		strh	r3, [r5]	@ movhi
-ARM GAS  /tmp/ccHeP7nR.s 			page 4
+ARM GAS  /tmp/ccleRhFr.s 			page 4
 
 
  170 0100 8AE7     		b	.L5
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccHeP7nR.s 			page 1
  223              		@ args = 0, pretend = 0, frame = 0
  224              		@ frame_needed = 0, uses_anonymous_args = 0
  225 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccHeP7nR.s 			page 5
+ARM GAS  /tmp/ccleRhFr.s 			page 5
 
 
  226 0002 054C     		ldr	r4, .L64
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccHeP7nR.s 			page 1
  278 003a 41F04004 		orr	r4, r1, #64
  279 003e 42F02C02 		orr	r2, r2, #44
  280 0042 40F00100 		orr	r0, r0, #1
-ARM GAS  /tmp/ccHeP7nR.s 			page 6
+ARM GAS  /tmp/ccleRhFr.s 			page 6
 
 
  281 0046 92B2     		uxth	r2, r2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccHeP7nR.s 			page 1
  335              	.L76:
  336 0006 7047     		bx	lr
  337              	.L80:
-ARM GAS  /tmp/ccHeP7nR.s 			page 7
+ARM GAS  /tmp/ccleRhFr.s 			page 7
 
 
  338 0008 0849     		ldr	r1, .L81
@@ -407,35 +407,35 @@ ARM GAS  /tmp/ccHeP7nR.s 			page 1
  376      00000000 
  376      00000000 
  377              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccHeP7nR.s 			page 8
+ARM GAS  /tmp/ccleRhFr.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 serial_lld.c
-     /tmp/ccHeP7nR.s:18     .text.notify1:00000000 $t
-     /tmp/ccHeP7nR.s:23     .text.notify1:00000000 notify1
-     /tmp/ccHeP7nR.s:36     .text.notify1:00000010 $d
-     /tmp/ccHeP7nR.s:39     .text.VectorD4:00000000 $t
-     /tmp/ccHeP7nR.s:45     .text.VectorD4:00000000 VectorD4
-     /tmp/ccHeP7nR.s:211    .text.VectorD4:0000014c $d
-     /tmp/ccHeP7nR.s:216    .text.sd_lld_init:00000000 $t
-     /tmp/ccHeP7nR.s:222    .text.sd_lld_init:00000000 sd_lld_init
-     /tmp/ccHeP7nR.s:237    .text.sd_lld_init:00000018 $d
-     /tmp/ccHeP7nR.s:242    .text.sd_lld_start:00000000 $t
-     /tmp/ccHeP7nR.s:248    .text.sd_lld_start:00000000 sd_lld_start
-     /tmp/ccHeP7nR.s:314    .text.sd_lld_start:00000084 $d
-     /tmp/ccHeP7nR.s:322    .text.sd_lld_stop:00000000 $t
-     /tmp/ccHeP7nR.s:328    .text.sd_lld_stop:00000000 sd_lld_stop
-     /tmp/ccHeP7nR.s:355    .text.sd_lld_stop:0000002c $d
-     /tmp/ccHeP7nR.s:375    .bss.SD1:00000000 SD1
-     /tmp/ccHeP7nR.s:360    .rodata.default_config:00000000 $d
-     /tmp/ccHeP7nR.s:364    .rodata.default_config:00000000 default_config
-     /tmp/ccHeP7nR.s:371    .bss.SD1:00000000 $d
-     /tmp/ccHeP7nR.s:38     .text.notify1:00000014 $t
-     /tmp/ccHeP7nR.s:215    .text.VectorD4:00000158 $t
-     /tmp/ccHeP7nR.s:241    .text.sd_lld_init:00000024 $t
-     /tmp/ccHeP7nR.s:321    .text.sd_lld_start:0000009c $t
-     /tmp/ccHeP7nR.s:359    .text.sd_lld_stop:00000034 $t
+     /tmp/ccleRhFr.s:18     .text.notify1:00000000 $t
+     /tmp/ccleRhFr.s:23     .text.notify1:00000000 notify1
+     /tmp/ccleRhFr.s:36     .text.notify1:00000010 $d
+     /tmp/ccleRhFr.s:39     .text.VectorD4:00000000 $t
+     /tmp/ccleRhFr.s:45     .text.VectorD4:00000000 VectorD4
+     /tmp/ccleRhFr.s:211    .text.VectorD4:0000014c $d
+     /tmp/ccleRhFr.s:216    .text.sd_lld_init:00000000 $t
+     /tmp/ccleRhFr.s:222    .text.sd_lld_init:00000000 sd_lld_init
+     /tmp/ccleRhFr.s:237    .text.sd_lld_init:00000018 $d
+     /tmp/ccleRhFr.s:242    .text.sd_lld_start:00000000 $t
+     /tmp/ccleRhFr.s:248    .text.sd_lld_start:00000000 sd_lld_start
+     /tmp/ccleRhFr.s:314    .text.sd_lld_start:00000084 $d
+     /tmp/ccleRhFr.s:322    .text.sd_lld_stop:00000000 $t
+     /tmp/ccleRhFr.s:328    .text.sd_lld_stop:00000000 sd_lld_stop
+     /tmp/ccleRhFr.s:355    .text.sd_lld_stop:0000002c $d
+     /tmp/ccleRhFr.s:375    .bss.SD1:00000000 SD1
+     /tmp/ccleRhFr.s:360    .rodata.default_config:00000000 $d
+     /tmp/ccleRhFr.s:364    .rodata.default_config:00000000 default_config
+     /tmp/ccleRhFr.s:371    .bss.SD1:00000000 $d
+     /tmp/ccleRhFr.s:38     .text.notify1:00000014 $t
+     /tmp/ccleRhFr.s:215    .text.VectorD4:00000158 $t
+     /tmp/ccleRhFr.s:241    .text.sd_lld_init:00000024 $t
+     /tmp/ccleRhFr.s:321    .text.sd_lld_start:0000009c $t
+     /tmp/ccleRhFr.s:359    .text.sd_lld_stop:00000034 $t
 
 UNDEFINED SYMBOLS
 dbg_check_enter_isr

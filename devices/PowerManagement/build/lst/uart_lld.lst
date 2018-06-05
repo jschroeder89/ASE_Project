@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc6NFQ5b.s 			page 1
+ARM GAS  /tmp/cclySef4.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
   55 003a A040     		lsls	r0, r0, r4
   56 003c 0860     		str	r0, [r1]
   57 003e 30BC     		pop	{r4, r5}
-ARM GAS  /tmp/cc6NFQ5b.s 			page 2
+ARM GAS  /tmp/cclySef4.s 			page 2
 
 
   58 0040 9381     		strh	r3, [r2, #12]	@ movhi
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  111 005a 7368     		ldr	r3, [r6, #4]
  112 005c 27F04007 		bic	r7, r7, #64
  113 0060 5B68     		ldr	r3, [r3, #4]
-ARM GAS  /tmp/cc6NFQ5b.s 			page 3
+ARM GAS  /tmp/cclySef4.s 			page 3
 
 
  114 0062 BFB2     		uxth	r7, r7
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  166 0044 9847     		blx	r3
  167 0046 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
  168 0048 022B     		cmp	r3, #2
-ARM GAS  /tmp/cc6NFQ5b.s 			page 4
+ARM GAS  /tmp/cclySef4.s 			page 4
 
 
  169 004a 00D0     		beq	.L48
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  223 0044 A170     		strb	r1, [r4, #2]
  224 0046 3BB1     		cbz	r3, .L66
  225 0048 2046     		mov	r0, r4
-ARM GAS  /tmp/cc6NFQ5b.s 			page 5
+ARM GAS  /tmp/cclySef4.s 			page 5
 
 
  226 004a 9847     		blx	r3
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  280 001c AFF30080 		.section	.text.VectorDC,"ax",%progbits
  281              		.align	2
  282              		.p2align 4,,15
-ARM GAS  /tmp/cc6NFQ5b.s 			page 6
+ARM GAS  /tmp/cclySef4.s 			page 6
 
 
  283              		.global	VectorDC
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  337              	.L82:
  338 0038 00000000 		.word	.LANCHOR0
  339 003c 00000000 		.word	.LANCHOR1
-ARM GAS  /tmp/cc6NFQ5b.s 			page 7
+ARM GAS  /tmp/cclySef4.s 			page 7
 
 
  340 0040 3C000000 		.word	_stm32_dma_streams+60
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  394 005c 47F04007 		orr	r7, r7, #64
  395 0060 42F00C02 		orr	r2, r2, #12
  396 0064 46F0C106 		orr	r6, r6, #193
-ARM GAS  /tmp/cc6NFQ5b.s 			page 8
+ARM GAS  /tmp/cclySef4.s 			page 8
 
 
  397 0068 92B2     		uxth	r2, r2
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  451 00d6 E360     		str	r3, [r4, #12]
  452 00d8 E7E7     		b	.L93
  453              	.L113:
-ARM GAS  /tmp/cc6NFQ5b.s 			page 9
+ARM GAS  /tmp/cclySef4.s 			page 9
 
 
  454 00da 0069     		ldr	r0, [r0, #16]
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  508 014a CDE7     		b	.L91
  509              	.L118:
  510 014c 0D48     		ldr	r0, .L119+40
-ARM GAS  /tmp/cc6NFQ5b.s 			page 10
+ARM GAS  /tmp/cclySef4.s 			page 10
 
 
  511 014e FFF7FEFF 		bl	chDbgPanic
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  565 0030 1A6C     		ldr	r2, [r3, #64]
  566 0032 22F48022 		bic	r2, r2, #262144
  567 0036 1A64     		str	r2, [r3, #64]
-ARM GAS  /tmp/cc6NFQ5b.s 			page 11
+ARM GAS  /tmp/cclySef4.s 			page 11
 
 
  568 0038 E7E7     		b	.L121
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  621 0006 23F01F03 		bic	r3, r3, #31
  622 000a 1360     		str	r3, [r2]
  623              	.L133:
-ARM GAS  /tmp/cc6NFQ5b.s 			page 12
+ARM GAS  /tmp/cclySef4.s 			page 12
 
 
  624 000c 1368     		ldr	r3, [r2]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  676              		.thumb
  677              		.thumb_func
  678              		.type	uart_lld_stop_receive, %function
-ARM GAS  /tmp/cc6NFQ5b.s 			page 13
+ARM GAS  /tmp/cclySef4.s 			page 13
 
 
  679              	uart_lld_stop_receive:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  728              		.section	.bss.UARTD3,"aw",%nobits
  729              		.align	2
  730              		.set	.LANCHOR1,. + 0
-ARM GAS  /tmp/cc6NFQ5b.s 			page 14
+ARM GAS  /tmp/cclySef4.s 			page 14
 
 
  731              		.type	UARTD3, %object
@@ -819,52 +819,52 @@ ARM GAS  /tmp/cc6NFQ5b.s 			page 1
  747      72742829 
  747      2C202336 
  748 005d 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cc6NFQ5b.s 			page 15
+ARM GAS  /tmp/cclySef4.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 uart_lld.c
-     /tmp/cc6NFQ5b.s:18     .text.usart_stop:00000000 $t
-     /tmp/cc6NFQ5b.s:23     .text.usart_stop:00000000 usart_stop
-     /tmp/cc6NFQ5b.s:64     .text.serve_usart_irq:00000000 $t
-     /tmp/cc6NFQ5b.s:69     .text.serve_usart_irq:00000000 serve_usart_irq
-     /tmp/cc6NFQ5b.s:125    .text.uart_lld_serve_tx_end_irq:00000000 $t
-     /tmp/cc6NFQ5b.s:130    .text.uart_lld_serve_tx_end_irq:00000000 uart_lld_serve_tx_end_irq
-     /tmp/cc6NFQ5b.s:181    .text.uart_lld_serve_rx_end_irq:00000000 $t
-     /tmp/cc6NFQ5b.s:186    .text.uart_lld_serve_rx_end_irq:00000000 uart_lld_serve_rx_end_irq
-     /tmp/cc6NFQ5b.s:259    .text.VectorD8:00000000 $t
-     /tmp/cc6NFQ5b.s:265    .text.VectorD8:00000000 VectorD8
-     /tmp/cc6NFQ5b.s:278    .text.VectorD8:00000018 $d
-     /tmp/cc6NFQ5b.s:281    .text.VectorDC:00000000 $t
-     /tmp/cc6NFQ5b.s:287    .text.VectorDC:00000000 VectorDC
-     /tmp/cc6NFQ5b.s:300    .text.VectorDC:00000018 $d
-     /tmp/cc6NFQ5b.s:303    .text.uart_lld_init:00000000 $t
-     /tmp/cc6NFQ5b.s:309    .text.uart_lld_init:00000000 uart_lld_init
-     /tmp/cc6NFQ5b.s:338    .text.uart_lld_init:00000038 $d
-     /tmp/cc6NFQ5b.s:345    .text.uart_lld_start:00000000 $t
-     /tmp/cc6NFQ5b.s:351    .text.uart_lld_start:00000000 uart_lld_start
-     /tmp/cc6NFQ5b.s:520    .text.uart_lld_start:0000015c $d
-     /tmp/cc6NFQ5b.s:534    .text.uart_lld_stop:00000000 $t
-     /tmp/cc6NFQ5b.s:540    .text.uart_lld_stop:00000000 uart_lld_stop
-     /tmp/cc6NFQ5b.s:580    .text.uart_lld_stop:0000004c $d
-     /tmp/cc6NFQ5b.s:585    .text.uart_lld_start_send:00000000 $t
-     /tmp/cc6NFQ5b.s:591    .text.uart_lld_start_send:00000000 uart_lld_start_send
-     /tmp/cc6NFQ5b.s:608    .text.uart_lld_stop_send:00000000 $t
-     /tmp/cc6NFQ5b.s:614    .text.uart_lld_stop_send:00000000 uart_lld_stop_send
-     /tmp/cc6NFQ5b.s:636    .text.uart_lld_start_receive:00000000 $t
-     /tmp/cc6NFQ5b.s:642    .text.uart_lld_start_receive:00000000 uart_lld_start_receive
-     /tmp/cc6NFQ5b.s:673    .text.uart_lld_stop_receive:00000000 $t
-     /tmp/cc6NFQ5b.s:679    .text.uart_lld_stop_receive:00000000 uart_lld_stop_receive
-     /tmp/cc6NFQ5b.s:733    .bss.UARTD3:00000000 UARTD3
-     /tmp/cc6NFQ5b.s:726    .bss.UARTD2:00000000 UARTD2
-     /tmp/cc6NFQ5b.s:722    .bss.UARTD2:00000000 $d
-     /tmp/cc6NFQ5b.s:729    .bss.UARTD3:00000000 $d
-     /tmp/cc6NFQ5b.s:736    .rodata.str1.4:00000000 $d
-     /tmp/cc6NFQ5b.s:280    .text.VectorD8:0000001c $t
-     /tmp/cc6NFQ5b.s:302    .text.VectorDC:0000001c $t
-     /tmp/cc6NFQ5b.s:344    .text.uart_lld_init:0000004c $t
-     /tmp/cc6NFQ5b.s:533    .text.uart_lld_start:0000018c $t
-     /tmp/cc6NFQ5b.s:584    .text.uart_lld_stop:00000058 $t
+     /tmp/cclySef4.s:18     .text.usart_stop:00000000 $t
+     /tmp/cclySef4.s:23     .text.usart_stop:00000000 usart_stop
+     /tmp/cclySef4.s:64     .text.serve_usart_irq:00000000 $t
+     /tmp/cclySef4.s:69     .text.serve_usart_irq:00000000 serve_usart_irq
+     /tmp/cclySef4.s:125    .text.uart_lld_serve_tx_end_irq:00000000 $t
+     /tmp/cclySef4.s:130    .text.uart_lld_serve_tx_end_irq:00000000 uart_lld_serve_tx_end_irq
+     /tmp/cclySef4.s:181    .text.uart_lld_serve_rx_end_irq:00000000 $t
+     /tmp/cclySef4.s:186    .text.uart_lld_serve_rx_end_irq:00000000 uart_lld_serve_rx_end_irq
+     /tmp/cclySef4.s:259    .text.VectorD8:00000000 $t
+     /tmp/cclySef4.s:265    .text.VectorD8:00000000 VectorD8
+     /tmp/cclySef4.s:278    .text.VectorD8:00000018 $d
+     /tmp/cclySef4.s:281    .text.VectorDC:00000000 $t
+     /tmp/cclySef4.s:287    .text.VectorDC:00000000 VectorDC
+     /tmp/cclySef4.s:300    .text.VectorDC:00000018 $d
+     /tmp/cclySef4.s:303    .text.uart_lld_init:00000000 $t
+     /tmp/cclySef4.s:309    .text.uart_lld_init:00000000 uart_lld_init
+     /tmp/cclySef4.s:338    .text.uart_lld_init:00000038 $d
+     /tmp/cclySef4.s:345    .text.uart_lld_start:00000000 $t
+     /tmp/cclySef4.s:351    .text.uart_lld_start:00000000 uart_lld_start
+     /tmp/cclySef4.s:520    .text.uart_lld_start:0000015c $d
+     /tmp/cclySef4.s:534    .text.uart_lld_stop:00000000 $t
+     /tmp/cclySef4.s:540    .text.uart_lld_stop:00000000 uart_lld_stop
+     /tmp/cclySef4.s:580    .text.uart_lld_stop:0000004c $d
+     /tmp/cclySef4.s:585    .text.uart_lld_start_send:00000000 $t
+     /tmp/cclySef4.s:591    .text.uart_lld_start_send:00000000 uart_lld_start_send
+     /tmp/cclySef4.s:608    .text.uart_lld_stop_send:00000000 $t
+     /tmp/cclySef4.s:614    .text.uart_lld_stop_send:00000000 uart_lld_stop_send
+     /tmp/cclySef4.s:636    .text.uart_lld_start_receive:00000000 $t
+     /tmp/cclySef4.s:642    .text.uart_lld_start_receive:00000000 uart_lld_start_receive
+     /tmp/cclySef4.s:673    .text.uart_lld_stop_receive:00000000 $t
+     /tmp/cclySef4.s:679    .text.uart_lld_stop_receive:00000000 uart_lld_stop_receive
+     /tmp/cclySef4.s:733    .bss.UARTD3:00000000 UARTD3
+     /tmp/cclySef4.s:726    .bss.UARTD2:00000000 UARTD2
+     /tmp/cclySef4.s:722    .bss.UARTD2:00000000 $d
+     /tmp/cclySef4.s:729    .bss.UARTD3:00000000 $d
+     /tmp/cclySef4.s:736    .rodata.str1.4:00000000 $d
+     /tmp/cclySef4.s:280    .text.VectorD8:0000001c $t
+     /tmp/cclySef4.s:302    .text.VectorDC:0000001c $t
+     /tmp/cclySef4.s:344    .text.uart_lld_init:0000004c $t
+     /tmp/cclySef4.s:533    .text.uart_lld_start:0000018c $t
+     /tmp/cclySef4.s:584    .text.uart_lld_stop:00000058 $t
 
 UNDEFINED SYMBOLS
 haltErrorCode
@@ -879,6 +879,6 @@ nvicEnableVector
 chDbgPanic
 dmaStreamRelease
 nvicDisableVector
-ARM GAS  /tmp/cc6NFQ5b.s 			page 16
+ARM GAS  /tmp/cclySef4.s 			page 16
 
 

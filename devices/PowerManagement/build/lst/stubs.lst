@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccYeUZU8.s 			page 1
+ARM GAS  /tmp/cc5f8KYM.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccYeUZU8.s 			page 1
   50              		.thumb
   51              		.thumb_func
   52              		.type	_kill, %function
-ARM GAS  /tmp/ccYeUZU8.s 			page 2
+ARM GAS  /tmp/cc5f8KYM.s 			page 2
 
 
   53              	_kill:
@@ -83,20 +83,20 @@ ARM GAS  /tmp/ccYeUZU8.s 			page 1
   72              	__dso_handle:
   73 0000 00000000 		.space	4
   74              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccYeUZU8.s 			page 3
+ARM GAS  /tmp/cc5f8KYM.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stubs.c
-     /tmp/ccYeUZU8.s:18     .text._getpid:00000000 $t
-     /tmp/ccYeUZU8.s:24     .text._getpid:00000000 _getpid
-     /tmp/ccYeUZU8.s:32     .text._exit:00000000 $t
-     /tmp/ccYeUZU8.s:38     .text._exit:00000000 _exit
-     /tmp/ccYeUZU8.s:47     .text._kill:00000000 $t
-     /tmp/ccYeUZU8.s:53     .text._kill:00000000 _kill
-     /tmp/ccYeUZU8.s:65     .text._kill:0000000c $d
-     /tmp/ccYeUZU8.s:72     .bss.__dso_handle:00000000 __dso_handle
-     /tmp/ccYeUZU8.s:69     .bss.__dso_handle:00000000 $d
+     /tmp/cc5f8KYM.s:18     .text._getpid:00000000 $t
+     /tmp/cc5f8KYM.s:24     .text._getpid:00000000 _getpid
+     /tmp/cc5f8KYM.s:32     .text._exit:00000000 $t
+     /tmp/cc5f8KYM.s:38     .text._exit:00000000 _exit
+     /tmp/cc5f8KYM.s:47     .text._kill:00000000 $t
+     /tmp/cc5f8KYM.s:53     .text._kill:00000000 _kill
+     /tmp/cc5f8KYM.s:65     .text._kill:0000000c $d
+     /tmp/cc5f8KYM.s:72     .bss.__dso_handle:00000000 __dso_handle
+     /tmp/cc5f8KYM.s:69     .bss.__dso_handle:00000000 $d
 
 UNDEFINED SYMBOLS
 errno

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccxdpbj8.s 			page 1
+ARM GAS  /tmp/ccWYLLp0.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccxdpbj8.s 			page 1
   54 000a FFF7FEFF 		bl	chDbgCheckClassI
   55 000e CDB1     		cbz	r5, .L5
   56 0010 C6B1     		cbz	r6, .L5
-ARM GAS  /tmp/ccxdpbj8.s 			page 2
+ARM GAS  /tmp/ccWYLLp0.s 			page 2
 
 
   57 0012 BCB1     		cbz	r4, .L5
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccxdpbj8.s 			page 1
  109 0008 84B1     		cbz	r4, .L23
  110              	.L20:
  111 000a E368     		ldr	r3, [r4, #12]
-ARM GAS  /tmp/ccxdpbj8.s 			page 3
+ARM GAS  /tmp/ccWYLLp0.s 			page 3
 
 
  112 000c 93B1     		cbz	r3, .L24
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccxdpbj8.s 			page 1
  159 0010 22636856 		.ascii	"\"chVTResetI\"()\000"
  159      54526573 
  159      65744922 
-ARM GAS  /tmp/ccxdpbj8.s 			page 4
+ARM GAS  /tmp/ccWYLLp0.s 			page 4
 
 
  159      282900
@@ -190,26 +190,26 @@ ARM GAS  /tmp/ccxdpbj8.s 			page 1
  162      2C202331 
  162      00
  163 0031 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccxdpbj8.s 			page 5
+ARM GAS  /tmp/ccWYLLp0.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chvt.c
-     /tmp/ccxdpbj8.s:16     .text._vt_init:00000000 $t
-     /tmp/ccxdpbj8.s:22     .text._vt_init:00000000 _vt_init
-     /tmp/ccxdpbj8.s:37     .text._vt_init:00000014 $d
-     /tmp/ccxdpbj8.s:40     .text.chVTSetI:00000000 $t
-     /tmp/ccxdpbj8.s:46     .text.chVTSetI:00000000 chVTSetI
-     /tmp/ccxdpbj8.s:93     .text.chVTSetI:0000004c $d
-     /tmp/ccxdpbj8.s:97     .text.chVTResetI:00000000 $t
-     /tmp/ccxdpbj8.s:103    .text.chVTResetI:00000000 chVTResetI
-     /tmp/ccxdpbj8.s:141    .text.chVTResetI:0000003c $d
-     /tmp/ccxdpbj8.s:151    .bss.vtlist:00000000 vtlist
-     /tmp/ccxdpbj8.s:147    .bss.vtlist:00000000 $d
-     /tmp/ccxdpbj8.s:154    .rodata.str1.4:00000000 $d
-     /tmp/ccxdpbj8.s:39     .text._vt_init:00000018 $t
-     /tmp/ccxdpbj8.s:96     .text.chVTSetI:00000054 $t
-     /tmp/ccxdpbj8.s:146    .text.chVTResetI:00000048 $t
+     /tmp/ccWYLLp0.s:16     .text._vt_init:00000000 $t
+     /tmp/ccWYLLp0.s:22     .text._vt_init:00000000 _vt_init
+     /tmp/ccWYLLp0.s:37     .text._vt_init:00000014 $d
+     /tmp/ccWYLLp0.s:40     .text.chVTSetI:00000000 $t
+     /tmp/ccWYLLp0.s:46     .text.chVTSetI:00000000 chVTSetI
+     /tmp/ccWYLLp0.s:93     .text.chVTSetI:0000004c $d
+     /tmp/ccWYLLp0.s:97     .text.chVTResetI:00000000 $t
+     /tmp/ccWYLLp0.s:103    .text.chVTResetI:00000000 chVTResetI
+     /tmp/ccWYLLp0.s:141    .text.chVTResetI:0000003c $d
+     /tmp/ccWYLLp0.s:151    .bss.vtlist:00000000 vtlist
+     /tmp/ccWYLLp0.s:147    .bss.vtlist:00000000 $d
+     /tmp/ccWYLLp0.s:154    .rodata.str1.4:00000000 $d
+     /tmp/ccWYLLp0.s:39     .text._vt_init:00000018 $t
+     /tmp/ccWYLLp0.s:96     .text.chVTSetI:00000054 $t
+     /tmp/ccWYLLp0.s:146    .text.chVTResetI:00000048 $t
 
 UNDEFINED SYMBOLS
 chDbgCheckClassI

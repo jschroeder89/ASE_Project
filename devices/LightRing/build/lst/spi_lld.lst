@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccfuI6p5.s 			page 1
+ARM GAS  /tmp/ccpqky3C.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
   53 0014 26F00F06 		bic	r6, r6, #15
   54 0018 0660     		str	r6, [r0]
   55 001a 107A     		ldrb	r0, [r2, #8]	@ zero_extendqisi2
-ARM GAS  /tmp/ccfuI6p5.s 			page 2
+ARM GAS  /tmp/ccpqky3C.s 			page 2
 
 
   56 001c 1A68     		ldr	r2, [r3]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  110              		.global	spi_lld_init
  111              		.thumb
  112              		.thumb_func
-ARM GAS  /tmp/ccfuI6p5.s 			page 3
+ARM GAS  /tmp/ccpqky3C.s 			page 3
 
 
  113              		.type	spi_lld_init, %function
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  166 0000 38B5     		push	{r3, r4, r5, lr}
  167 0002 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
  168 0004 0446     		mov	r4, r0
-ARM GAS  /tmp/ccfuI6p5.s 			page 4
+ARM GAS  /tmp/ccpqky3C.s 			page 4
 
 
  169 0006 012B     		cmp	r3, #1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  223 0078 1A4A     		ldr	r2, .L51+12
  224 007a 174B     		ldr	r3, .L51
  225 007c FFF7FEFF 		bl	dmaStreamAllocate
-ARM GAS  /tmp/ccfuI6p5.s 			page 5
+ARM GAS  /tmp/ccpqky3C.s 			page 5
 
 
  226 0080 C8B9     		cbnz	r0, .L48
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  280 00f8 28000000 		.word	.LC2
  281              		.size	spi_lld_start, .-spi_lld_start
  282 00fc AFF30080 		.section	.text.spi_lld_stop,"ax",%progbits
-ARM GAS  /tmp/ccfuI6p5.s 			page 6
+ARM GAS  /tmp/ccpqky3C.s 			page 6
 
 
  283              		.align	2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  337              		.thumb_func
  338              		.type	spi_lld_select, %function
  339              	spi_lld_select:
-ARM GAS  /tmp/ccfuI6p5.s 			page 7
+ARM GAS  /tmp/ccpqky3C.s 			page 7
 
 
  340              		@ args = 0, pretend = 0, frame = 0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  394 001a 5960     		str	r1, [r3, #4]
  395 001c 1860     		str	r0, [r3]
  396 001e 1168     		ldr	r1, [r2]
-ARM GAS  /tmp/ccfuI6p5.s 			page 8
+ARM GAS  /tmp/ccpqky3C.s 			page 8
 
 
  397 0020 70BC     		pop	{r4, r5, r6}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  449              		.thumb
  450              		.thumb_func
  451              		.type	spi_lld_send, %function
-ARM GAS  /tmp/ccfuI6p5.s 			page 9
+ARM GAS  /tmp/ccpqky3C.s 			page 9
 
 
  452              	spi_lld_send:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  505 0016 6160     		str	r1, [r4, #4]
  506 0018 2660     		str	r6, [r4]
  507 001a DD60     		str	r5, [r3, #12]
-ARM GAS  /tmp/ccfuI6p5.s 			page 10
+ARM GAS  /tmp/ccpqky3C.s 			page 10
 
 
  508 001c 5960     		str	r1, [r3, #4]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  559      00000000 
  559      00000000 
  559      00000000 
-ARM GAS  /tmp/ccfuI6p5.s 			page 11
+ARM GAS  /tmp/ccpqky3C.s 			page 11
 
 
  560              		.section	.bss.SPID2,"aw",%nobits
@@ -646,55 +646,55 @@ ARM GAS  /tmp/ccfuI6p5.s 			page 1
  582              	dummyrx:
  583 0000 0000     		.space	2
  584              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccfuI6p5.s 			page 12
+ARM GAS  /tmp/ccpqky3C.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 spi_lld.c
-     /tmp/ccfuI6p5.s:16     .text.spi_lld_serve_tx_interrupt:00000000 $t
-     /tmp/ccfuI6p5.s:21     .text.spi_lld_serve_tx_interrupt:00000000 spi_lld_serve_tx_interrupt
-     /tmp/ccfuI6p5.s:34     .text.spi_lld_serve_rx_interrupt:00000000 $t
-     /tmp/ccfuI6p5.s:39     .text.spi_lld_serve_rx_interrupt:00000000 spi_lld_serve_rx_interrupt
-     /tmp/ccfuI6p5.s:108    .text.spi_lld_init:00000000 $t
-     /tmp/ccfuI6p5.s:114    .text.spi_lld_init:00000000 spi_lld_init
-     /tmp/ccfuI6p5.s:149    .text.spi_lld_init:00000050 $d
-     /tmp/ccfuI6p5.s:157    .text.spi_lld_start:00000000 $t
-     /tmp/ccfuI6p5.s:163    .text.spi_lld_start:00000000 spi_lld_start
-     /tmp/ccfuI6p5.s:272    .text.spi_lld_start:000000d8 $d
-     /tmp/ccfuI6p5.s:283    .text.spi_lld_stop:00000000 $t
-     /tmp/ccfuI6p5.s:289    .text.spi_lld_stop:00000000 spi_lld_stop
-     /tmp/ccfuI6p5.s:328    .text.spi_lld_stop:00000044 $d
-     /tmp/ccfuI6p5.s:333    .text.spi_lld_select:00000000 $t
-     /tmp/ccfuI6p5.s:339    .text.spi_lld_select:00000000 spi_lld_select
-     /tmp/ccfuI6p5.s:352    .text.spi_lld_unselect:00000000 $t
-     /tmp/ccfuI6p5.s:358    .text.spi_lld_unselect:00000000 spi_lld_unselect
-     /tmp/ccfuI6p5.s:371    .text.spi_lld_ignore:00000000 $t
-     /tmp/ccfuI6p5.s:377    .text.spi_lld_ignore:00000000 spi_lld_ignore
-     /tmp/ccfuI6p5.s:407    .text.spi_lld_ignore:00000034 $d
-     /tmp/ccfuI6p5.s:411    .text.spi_lld_exchange:00000000 $t
-     /tmp/ccfuI6p5.s:417    .text.spi_lld_exchange:00000000 spi_lld_exchange
-     /tmp/ccfuI6p5.s:446    .text.spi_lld_send:00000000 $t
-     /tmp/ccfuI6p5.s:452    .text.spi_lld_send:00000000 spi_lld_send
-     /tmp/ccfuI6p5.s:482    .text.spi_lld_send:00000034 $d
-     /tmp/ccfuI6p5.s:485    .text.spi_lld_receive:00000000 $t
-     /tmp/ccfuI6p5.s:491    .text.spi_lld_receive:00000000 spi_lld_receive
-     /tmp/ccfuI6p5.s:521    .text.spi_lld_receive:00000034 $d
-     /tmp/ccfuI6p5.s:524    .text.spi_lld_polled_exchange:00000000 $t
-     /tmp/ccfuI6p5.s:530    .text.spi_lld_polled_exchange:00000000 spi_lld_polled_exchange
-     /tmp/ccfuI6p5.s:565    .bss.SPID2:00000000 SPID2
-     /tmp/ccfuI6p5.s:558    .bss.SPID1:00000000 SPID1
-     /tmp/ccfuI6p5.s:547    .bss.dummytx:00000000 $d
-     /tmp/ccfuI6p5.s:551    .bss.dummytx:00000000 dummytx
-     /tmp/ccfuI6p5.s:554    .bss.SPID1:00000000 $d
-     /tmp/ccfuI6p5.s:561    .bss.SPID2:00000000 $d
-     /tmp/ccfuI6p5.s:568    .rodata.str1.4:00000000 $d
-     /tmp/ccfuI6p5.s:578    .bss.dummyrx:00000000 $d
-     /tmp/ccfuI6p5.s:582    .bss.dummyrx:00000000 dummyrx
-     /tmp/ccfuI6p5.s:156    .text.spi_lld_init:00000068 $t
-     /tmp/ccfuI6p5.s:282    .text.spi_lld_start:000000fc $t
-     /tmp/ccfuI6p5.s:410    .text.spi_lld_ignore:0000003c $t
-     /tmp/ccfuI6p5.s:484    .text.spi_lld_send:00000038 $t
-     /tmp/ccfuI6p5.s:523    .text.spi_lld_receive:00000038 $t
+     /tmp/ccpqky3C.s:16     .text.spi_lld_serve_tx_interrupt:00000000 $t
+     /tmp/ccpqky3C.s:21     .text.spi_lld_serve_tx_interrupt:00000000 spi_lld_serve_tx_interrupt
+     /tmp/ccpqky3C.s:34     .text.spi_lld_serve_rx_interrupt:00000000 $t
+     /tmp/ccpqky3C.s:39     .text.spi_lld_serve_rx_interrupt:00000000 spi_lld_serve_rx_interrupt
+     /tmp/ccpqky3C.s:108    .text.spi_lld_init:00000000 $t
+     /tmp/ccpqky3C.s:114    .text.spi_lld_init:00000000 spi_lld_init
+     /tmp/ccpqky3C.s:149    .text.spi_lld_init:00000050 $d
+     /tmp/ccpqky3C.s:157    .text.spi_lld_start:00000000 $t
+     /tmp/ccpqky3C.s:163    .text.spi_lld_start:00000000 spi_lld_start
+     /tmp/ccpqky3C.s:272    .text.spi_lld_start:000000d8 $d
+     /tmp/ccpqky3C.s:283    .text.spi_lld_stop:00000000 $t
+     /tmp/ccpqky3C.s:289    .text.spi_lld_stop:00000000 spi_lld_stop
+     /tmp/ccpqky3C.s:328    .text.spi_lld_stop:00000044 $d
+     /tmp/ccpqky3C.s:333    .text.spi_lld_select:00000000 $t
+     /tmp/ccpqky3C.s:339    .text.spi_lld_select:00000000 spi_lld_select
+     /tmp/ccpqky3C.s:352    .text.spi_lld_unselect:00000000 $t
+     /tmp/ccpqky3C.s:358    .text.spi_lld_unselect:00000000 spi_lld_unselect
+     /tmp/ccpqky3C.s:371    .text.spi_lld_ignore:00000000 $t
+     /tmp/ccpqky3C.s:377    .text.spi_lld_ignore:00000000 spi_lld_ignore
+     /tmp/ccpqky3C.s:407    .text.spi_lld_ignore:00000034 $d
+     /tmp/ccpqky3C.s:411    .text.spi_lld_exchange:00000000 $t
+     /tmp/ccpqky3C.s:417    .text.spi_lld_exchange:00000000 spi_lld_exchange
+     /tmp/ccpqky3C.s:446    .text.spi_lld_send:00000000 $t
+     /tmp/ccpqky3C.s:452    .text.spi_lld_send:00000000 spi_lld_send
+     /tmp/ccpqky3C.s:482    .text.spi_lld_send:00000034 $d
+     /tmp/ccpqky3C.s:485    .text.spi_lld_receive:00000000 $t
+     /tmp/ccpqky3C.s:491    .text.spi_lld_receive:00000000 spi_lld_receive
+     /tmp/ccpqky3C.s:521    .text.spi_lld_receive:00000034 $d
+     /tmp/ccpqky3C.s:524    .text.spi_lld_polled_exchange:00000000 $t
+     /tmp/ccpqky3C.s:530    .text.spi_lld_polled_exchange:00000000 spi_lld_polled_exchange
+     /tmp/ccpqky3C.s:565    .bss.SPID2:00000000 SPID2
+     /tmp/ccpqky3C.s:558    .bss.SPID1:00000000 SPID1
+     /tmp/ccpqky3C.s:547    .bss.dummytx:00000000 $d
+     /tmp/ccpqky3C.s:551    .bss.dummytx:00000000 dummytx
+     /tmp/ccpqky3C.s:554    .bss.SPID1:00000000 $d
+     /tmp/ccpqky3C.s:561    .bss.SPID2:00000000 $d
+     /tmp/ccpqky3C.s:568    .rodata.str1.4:00000000 $d
+     /tmp/ccpqky3C.s:578    .bss.dummyrx:00000000 $d
+     /tmp/ccpqky3C.s:582    .bss.dummyrx:00000000 dummyrx
+     /tmp/ccpqky3C.s:156    .text.spi_lld_init:00000068 $t
+     /tmp/ccpqky3C.s:282    .text.spi_lld_start:000000fc $t
+     /tmp/ccpqky3C.s:410    .text.spi_lld_ignore:0000003c $t
+     /tmp/ccpqky3C.s:484    .text.spi_lld_send:00000038 $t
+     /tmp/ccpqky3C.s:523    .text.spi_lld_receive:00000038 $t
 
 UNDEFINED SYMBOLS
 haltErrorCode
@@ -706,7 +706,7 @@ spiObjectInit
 _stm32_dma_streams
 dmaStreamAllocate
 chDbgPanic
-ARM GAS  /tmp/ccfuI6p5.s 			page 13
+ARM GAS  /tmp/ccpqky3C.s 			page 13
 
 
 dmaStreamRelease

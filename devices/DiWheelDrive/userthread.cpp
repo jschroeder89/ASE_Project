@@ -342,6 +342,9 @@ void wallFollowing(int (&rpmFuzzyCtrl)[2]){
 	int direction = 0;
 	int drive[2] = {0,0};
 	
+	global.robot.setLightColor(3, Color(Color::BLUE));
+    global.robot.setLightColor(4, Color(Color::BLUE));
+	
 	while(obstacle){
 		int help = 0;
 		// get all Proximity Sensor values
@@ -352,15 +355,27 @@ void wallFollowing(int (&rpmFuzzyCtrl)[2]){
 			}
 		}
 		if(help == 8){
+			global.robot.setLightColor(3, Color(Color::BLACK));
+            global.robot.setLightColor(4, Color(Color::BLACK));
 			break;
+		}
+		if(global.vcnl4020[1].getProximityScaledWoOffset() >= 16000 && global.vcnl4020[2].getProximityScaledWoOffset() >= 16000){
+			
+			
+			global.robot.setLightColor(3, Color(Color::BLACK));
+            global.robot.setLightColor(4, Color(Color::BLACK));
+            break;
+			
 		}
 		// look for the direction to turn
 		if(prox[3] <= prox[4] && ((prox[3] > 600)||(prox[4] > 600))){
 			direction = 1; //turn left
 			setRpmSpeed(rpmTurnLeft);
+			BaseThread::sleep(MS2ST(500));
 		} else if((prox[3] > 600)||(prox[4] > 600)) {
 			direction = -1;
 			setRpmSpeed(rpmTurnRight);
+			BaseThread::sleep(MS2ST(500));
 		}
 		if(direction > 0){
 			if(prox[5] < 1200){
@@ -479,7 +494,7 @@ UserThread::main()
 				lineFollowing(vcnl4020Proximity, rpmFuzzyCtrl);
 			} else {
 				wallFollowing(rpmFuzzyCtrl);
-				setRpmSpeed(rpmFuzzyCtrl);
+				//setRpmSpeed(rpmFuzzyCtrl);
 			}
             
             int help = global.robot.getProximityRingValue(1); // WICHTIG!!!!! Die Lösung aller Probleme (und des Welthungers).

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc1lI7di.s 			page 1
+ARM GAS  /tmp/cctzwvrP.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc1lI7di.s 			page 1
   55              		@ frame_needed = 0, uses_anonymous_args = 0
   56 0000 10B5     		push	{r4, lr}
   57 0002 0446     		mov	r4, r0
-ARM GAS  /tmp/cc1lI7di.s 			page 2
+ARM GAS  /tmp/cctzwvrP.s 			page 2
 
 
   58 0004 FFF7FEFF 		bl	chDbgCheckClassI
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc1lI7di.s 			page 1
  112 0024 AFF30080 		.section	.text.chPoolFreeI,"ax",%progbits
  112      AFF30080 
  112      AFF30080 
-ARM GAS  /tmp/cc1lI7di.s 			page 3
+ARM GAS  /tmp/cctzwvrP.s 			page 3
 
 
  113              		.align	2
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc1lI7di.s 			page 1
  166 0018 FFF7FEFF 		bl	dbg_check_unlock
  167 001c 0023     		movs	r3, #0
  168              	@ 175 "../../../ChibiOS/os/kernel/src/chmempools.c" 1
-ARM GAS  /tmp/cc1lI7di.s 			page 4
+ARM GAS  /tmp/cctzwvrP.s 			page 4
 
 
  169 001e 83F31188 		msr     BASEPRI, r3
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc1lI7di.s 			page 1
  217 000f 00       		.space	1
  218              	.LC1:
  219 0010 22636850 		.ascii	"\"chPoolAllocI\"()\000"
-ARM GAS  /tmp/cc1lI7di.s 			page 5
+ARM GAS  /tmp/cctzwvrP.s 			page 5
 
 
  219      6F6F6C41 
@@ -258,31 +258,31 @@ ARM GAS  /tmp/cc1lI7di.s 			page 1
  224      72726179 
  224      22282900 
  225              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cc1lI7di.s 			page 6
+ARM GAS  /tmp/cctzwvrP.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmempools.c
-     /tmp/cc1lI7di.s:18     .text.chPoolInit:00000000 $t
-     /tmp/cc1lI7di.s:24     .text.chPoolInit:00000000 chPoolInit
-     /tmp/cc1lI7di.s:44     .text.chPoolInit:0000001c $d
-     /tmp/cc1lI7di.s:47     .text.chPoolAllocI:00000000 $t
-     /tmp/cc1lI7di.s:53     .text.chPoolAllocI:00000000 chPoolAllocI
-     /tmp/cc1lI7di.s:80     .text.chPoolAllocI:00000028 $d
-     /tmp/cc1lI7di.s:83     .text.chPoolAlloc:00000000 $t
-     /tmp/cc1lI7di.s:89     .text.chPoolAlloc:00000000 chPoolAlloc
-     /tmp/cc1lI7di.s:113    .text.chPoolFreeI:00000000 $t
-     /tmp/cc1lI7di.s:119    .text.chPoolFreeI:00000000 chPoolFreeI
-     /tmp/cc1lI7di.s:142    .text.chPoolFreeI:00000024 $d
-     /tmp/cc1lI7di.s:145    .text.chPoolFree:00000000 $t
-     /tmp/cc1lI7di.s:151    .text.chPoolFree:00000000 chPoolFree
-     /tmp/cc1lI7di.s:175    .text.chPoolLoadArray:00000000 $t
-     /tmp/cc1lI7di.s:181    .text.chPoolLoadArray:00000000 chPoolLoadArray
-     /tmp/cc1lI7di.s:211    .text.chPoolLoadArray:00000034 $d
-     /tmp/cc1lI7di.s:214    .rodata.str1.4:00000000 $d
-     /tmp/cc1lI7di.s:82     .text.chPoolAllocI:0000002c $t
-     /tmp/cc1lI7di.s:144    .text.chPoolFreeI:00000028 $t
-     /tmp/cc1lI7di.s:213    .text.chPoolLoadArray:00000038 $t
+     /tmp/cctzwvrP.s:18     .text.chPoolInit:00000000 $t
+     /tmp/cctzwvrP.s:24     .text.chPoolInit:00000000 chPoolInit
+     /tmp/cctzwvrP.s:44     .text.chPoolInit:0000001c $d
+     /tmp/cctzwvrP.s:47     .text.chPoolAllocI:00000000 $t
+     /tmp/cctzwvrP.s:53     .text.chPoolAllocI:00000000 chPoolAllocI
+     /tmp/cctzwvrP.s:80     .text.chPoolAllocI:00000028 $d
+     /tmp/cctzwvrP.s:83     .text.chPoolAlloc:00000000 $t
+     /tmp/cctzwvrP.s:89     .text.chPoolAlloc:00000000 chPoolAlloc
+     /tmp/cctzwvrP.s:113    .text.chPoolFreeI:00000000 $t
+     /tmp/cctzwvrP.s:119    .text.chPoolFreeI:00000000 chPoolFreeI
+     /tmp/cctzwvrP.s:142    .text.chPoolFreeI:00000024 $d
+     /tmp/cctzwvrP.s:145    .text.chPoolFree:00000000 $t
+     /tmp/cctzwvrP.s:151    .text.chPoolFree:00000000 chPoolFree
+     /tmp/cctzwvrP.s:175    .text.chPoolLoadArray:00000000 $t
+     /tmp/cctzwvrP.s:181    .text.chPoolLoadArray:00000000 chPoolLoadArray
+     /tmp/cctzwvrP.s:211    .text.chPoolLoadArray:00000034 $d
+     /tmp/cctzwvrP.s:214    .rodata.str1.4:00000000 $d
+     /tmp/cctzwvrP.s:82     .text.chPoolAllocI:0000002c $t
+     /tmp/cctzwvrP.s:144    .text.chPoolFreeI:00000028 $t
+     /tmp/cctzwvrP.s:213    .text.chPoolLoadArray:00000038 $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

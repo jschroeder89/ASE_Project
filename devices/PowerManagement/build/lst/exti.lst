@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cckjdWa8.s 			page 1
+ARM GAS  /tmp/ccb0iU2J.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cckjdWa8.s 			page 1
   55 0000 024B     		ldr	r3, .L6
   56 0002 4FF0FF32 		mov	r2, #-1
   57 0006 1A60     		str	r2, [r3]
-ARM GAS  /tmp/cckjdWa8.s 			page 2
+ARM GAS  /tmp/ccb0iU2J.s 			page 2
 
 
   58 0008 7047     		bx	lr
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cckjdWa8.s 			page 1
  112 00a0 00000000 		.word	0
  113 00a4 00000000 		.word	0
  114 00a8 00000000 		.word	0
-ARM GAS  /tmp/cckjdWa8.s 			page 3
+ARM GAS  /tmp/ccb0iU2J.s 			page 3
 
 
  115 00ac 00000000 		.word	0
@@ -139,22 +139,22 @@ ARM GAS  /tmp/cckjdWa8.s 			page 1
  130              	shutdown_now:
  131 0000 00000000 		.space	4
  132              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cckjdWa8.s 			page 4
+ARM GAS  /tmp/ccb0iU2J.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 exti.cpp
-     /tmp/cckjdWa8.s:18     .text._Z13power_down_cbP9EXTDriverm:00000000 $t
-     /tmp/cckjdWa8.s:24     .text._Z13power_down_cbP9EXTDriverm:00000000 _Z13power_down_cbP9EXTDriverm
-     /tmp/cckjdWa8.s:41     .text._Z13power_down_cbP9EXTDriverm:00000018 $d
-     /tmp/cckjdWa8.s:45     .text._Z9pathdc_cbP9EXTDriverm:00000000 $t
-     /tmp/cckjdWa8.s:51     .text._Z9pathdc_cbP9EXTDriverm:00000000 _Z9pathdc_cbP9EXTDriverm
-     /tmp/cckjdWa8.s:62     .text._Z9pathdc_cbP9EXTDriverm:0000000c $d
-     /tmp/cckjdWa8.s:71     .data.extcfg:00000000 extcfg
-     /tmp/cckjdWa8.s:123    .bss.pathdc_change:00000000 pathdc_change
-     /tmp/cckjdWa8.s:130    .bss.shutdown_now:00000000 shutdown_now
-     /tmp/cckjdWa8.s:68     .data.extcfg:00000000 $d
-     /tmp/cckjdWa8.s:119    .bss.pathdc_change:00000000 $d
-     /tmp/cckjdWa8.s:126    .bss.shutdown_now:00000000 $d
+     /tmp/ccb0iU2J.s:18     .text._Z13power_down_cbP9EXTDriverm:00000000 $t
+     /tmp/ccb0iU2J.s:24     .text._Z13power_down_cbP9EXTDriverm:00000000 _Z13power_down_cbP9EXTDriverm
+     /tmp/ccb0iU2J.s:41     .text._Z13power_down_cbP9EXTDriverm:00000018 $d
+     /tmp/ccb0iU2J.s:45     .text._Z9pathdc_cbP9EXTDriverm:00000000 $t
+     /tmp/ccb0iU2J.s:51     .text._Z9pathdc_cbP9EXTDriverm:00000000 _Z9pathdc_cbP9EXTDriverm
+     /tmp/ccb0iU2J.s:62     .text._Z9pathdc_cbP9EXTDriverm:0000000c $d
+     /tmp/ccb0iU2J.s:71     .data.extcfg:00000000 extcfg
+     /tmp/ccb0iU2J.s:123    .bss.pathdc_change:00000000 pathdc_change
+     /tmp/ccb0iU2J.s:130    .bss.shutdown_now:00000000 shutdown_now
+     /tmp/ccb0iU2J.s:68     .data.extcfg:00000000 $d
+     /tmp/ccb0iU2J.s:119    .bss.pathdc_change:00000000 $d
+     /tmp/ccb0iU2J.s:126    .bss.shutdown_now:00000000 $d
 
 NO UNDEFINED SYMBOLS

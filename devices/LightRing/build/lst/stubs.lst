@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc6A838j.s 			page 1
+ARM GAS  /tmp/ccK7XrQs.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc6A838j.s 			page 1
   50              		.type	_kill, %function
   51              	_kill:
   52              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc6A838j.s 			page 2
+ARM GAS  /tmp/ccK7XrQs.s 			page 2
 
 
   53              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -81,20 +81,20 @@ ARM GAS  /tmp/cc6A838j.s 			page 1
   70              	__dso_handle:
   71 0000 00000000 		.space	4
   72              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cc6A838j.s 			page 3
+ARM GAS  /tmp/ccK7XrQs.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stubs.c
-     /tmp/cc6A838j.s:16     .text._getpid:00000000 $t
-     /tmp/cc6A838j.s:22     .text._getpid:00000000 _getpid
-     /tmp/cc6A838j.s:30     .text._exit:00000000 $t
-     /tmp/cc6A838j.s:36     .text._exit:00000000 _exit
-     /tmp/cc6A838j.s:45     .text._kill:00000000 $t
-     /tmp/cc6A838j.s:51     .text._kill:00000000 _kill
-     /tmp/cc6A838j.s:63     .text._kill:0000000c $d
-     /tmp/cc6A838j.s:70     .bss.__dso_handle:00000000 __dso_handle
-     /tmp/cc6A838j.s:67     .bss.__dso_handle:00000000 $d
+     /tmp/ccK7XrQs.s:16     .text._getpid:00000000 $t
+     /tmp/ccK7XrQs.s:22     .text._getpid:00000000 _getpid
+     /tmp/ccK7XrQs.s:30     .text._exit:00000000 $t
+     /tmp/ccK7XrQs.s:36     .text._exit:00000000 _exit
+     /tmp/ccK7XrQs.s:45     .text._kill:00000000 $t
+     /tmp/ccK7XrQs.s:51     .text._kill:00000000 _kill
+     /tmp/ccK7XrQs.s:63     .text._kill:0000000c $d
+     /tmp/ccK7XrQs.s:70     .bss.__dso_handle:00000000 __dso_handle
+     /tmp/ccK7XrQs.s:67     .bss.__dso_handle:00000000 $d
 
 UNDEFINED SYMBOLS
 errno

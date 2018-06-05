@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDtKIuq.s 			page 1
+ARM GAS  /tmp/ccUSULLf.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccDtKIuq.s 			page 1
   53 000e 00BF     		.align	2
   54              	.L5:
   55 0010 00440040 		.word	1073759232
-ARM GAS  /tmp/ccDtKIuq.s 			page 2
+ARM GAS  /tmp/ccUSULLf.s 			page 2
 
 
   56              		.size	notify2, .-notify2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccDtKIuq.s 			page 1
  108 005a 41F04001 		orrmi	r1, r1, #64
  109 005e 6307     		lsls	r3, r4, #29
  110 0060 48BF     		it	mi
-ARM GAS  /tmp/ccDtKIuq.s 			page 3
+ARM GAS  /tmp/ccUSULLf.s 			page 3
 
 
  111 0062 41F48071 		orrmi	r1, r1, #256
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccDtKIuq.s 			page 1
  165              	.L58:
  166 00d4 2023     		movs	r3, #32
  167              	@ 161 "../../../ChibiOS/os/hal/platforms/STM32/USARTv1/serial_lld.c" 1
-ARM GAS  /tmp/ccDtKIuq.s 			page 4
+ARM GAS  /tmp/ccUSULLf.s 			page 4
 
 
  168 00d6 83F31188 		msr     BASEPRI, r3
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccDtKIuq.s 			page 1
  222 0144 AFF30080 		.section	.text.VectorD4,"ax",%progbits
  222      AFF30080 
  222      AFF30080 
-ARM GAS  /tmp/ccDtKIuq.s 			page 5
+ARM GAS  /tmp/ccUSULLf.s 			page 5
 
 
  223              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccDtKIuq.s 			page 1
  277 0002 094D     		ldr	r5, .L71
  278 0004 0021     		movs	r1, #0
  279 0006 2846     		mov	r0, r5
-ARM GAS  /tmp/ccDtKIuq.s 			page 6
+ARM GAS  /tmp/ccUSULLf.s 			page 6
 
 
  280 0008 084A     		ldr	r2, .L71+4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccDtKIuq.s 			page 1
  334 0034 40F00100 		orr	r0, r0, #1
  335 0038 92B2     		uxth	r2, r2
  336 003a A4B2     		uxth	r4, r4
-ARM GAS  /tmp/ccDtKIuq.s 			page 7
+ARM GAS  /tmp/ccUSULLf.s 			page 7
 
 
  337 003c 80B2     		uxth	r0, r0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccDtKIuq.s 			page 1
  390 0000 037A     		ldrb	r3, [r0, #8]	@ zero_extendqisi2
  391 0002 022B     		cmp	r3, #2
  392 0004 00D0     		beq	.L89
-ARM GAS  /tmp/ccDtKIuq.s 			page 8
+ARM GAS  /tmp/ccUSULLf.s 			page 8
 
 
  393              	.L84:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccDtKIuq.s 			page 1
  446      00000000 
  446      00000000 
  446      00000000 
-ARM GAS  /tmp/ccDtKIuq.s 			page 9
+ARM GAS  /tmp/ccUSULLf.s 			page 9
 
 
  446      00000000 
@@ -494,46 +494,46 @@ ARM GAS  /tmp/ccDtKIuq.s 			page 1
  453      00000000 
  453      00000000 
  454              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccDtKIuq.s 			page 10
+ARM GAS  /tmp/ccUSULLf.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 serial_lld.c
-     /tmp/ccDtKIuq.s:16     .text.notify1:00000000 $t
-     /tmp/ccDtKIuq.s:21     .text.notify1:00000000 notify1
-     /tmp/ccDtKIuq.s:34     .text.notify1:00000010 $d
-     /tmp/ccDtKIuq.s:37     .text.notify2:00000000 $t
-     /tmp/ccDtKIuq.s:42     .text.notify2:00000000 notify2
-     /tmp/ccDtKIuq.s:55     .text.notify2:00000010 $d
-     /tmp/ccDtKIuq.s:58     .text.serve_interrupt:00000000 $t
-     /tmp/ccDtKIuq.s:63     .text.serve_interrupt:00000000 serve_interrupt
-     /tmp/ccDtKIuq.s:223    .text.VectorD4:00000000 $t
-     /tmp/ccDtKIuq.s:229    .text.VectorD4:00000000 VectorD4
-     /tmp/ccDtKIuq.s:242    .text.VectorD4:00000018 $d
-     /tmp/ccDtKIuq.s:245    .text.VectorD8:00000000 $t
-     /tmp/ccDtKIuq.s:251    .text.VectorD8:00000000 VectorD8
-     /tmp/ccDtKIuq.s:264    .text.VectorD8:00000018 $d
-     /tmp/ccDtKIuq.s:267    .text.sd_lld_init:00000000 $t
-     /tmp/ccDtKIuq.s:273    .text.sd_lld_init:00000000 sd_lld_init
-     /tmp/ccDtKIuq.s:295    .text.sd_lld_init:00000028 $d
-     /tmp/ccDtKIuq.s:303    .text.sd_lld_start:00000000 $t
-     /tmp/ccDtKIuq.s:309    .text.sd_lld_start:00000000 sd_lld_start
-     /tmp/ccDtKIuq.s:373    .text.sd_lld_start:00000084 $d
-     /tmp/ccDtKIuq.s:380    .text.sd_lld_stop:00000000 $t
-     /tmp/ccDtKIuq.s:386    .text.sd_lld_stop:00000000 sd_lld_stop
-     /tmp/ccDtKIuq.s:423    .text.sd_lld_stop:00000040 $d
-     /tmp/ccDtKIuq.s:452    .bss.SD2:00000000 SD2
-     /tmp/ccDtKIuq.s:445    .bss.SD1:00000000 SD1
-     /tmp/ccDtKIuq.s:430    .rodata.default_config:00000000 $d
-     /tmp/ccDtKIuq.s:434    .rodata.default_config:00000000 default_config
-     /tmp/ccDtKIuq.s:441    .bss.SD1:00000000 $d
-     /tmp/ccDtKIuq.s:448    .bss.SD2:00000000 $d
-     /tmp/ccDtKIuq.s:36     .text.notify1:00000014 $t
-     /tmp/ccDtKIuq.s:57     .text.notify2:00000014 $t
-     /tmp/ccDtKIuq.s:244    .text.VectorD4:0000001c $t
-     /tmp/ccDtKIuq.s:266    .text.VectorD8:0000001c $t
-     /tmp/ccDtKIuq.s:379    .text.sd_lld_start:00000098 $t
-     /tmp/ccDtKIuq.s:429    .text.sd_lld_stop:0000004c $t
+     /tmp/ccUSULLf.s:16     .text.notify1:00000000 $t
+     /tmp/ccUSULLf.s:21     .text.notify1:00000000 notify1
+     /tmp/ccUSULLf.s:34     .text.notify1:00000010 $d
+     /tmp/ccUSULLf.s:37     .text.notify2:00000000 $t
+     /tmp/ccUSULLf.s:42     .text.notify2:00000000 notify2
+     /tmp/ccUSULLf.s:55     .text.notify2:00000010 $d
+     /tmp/ccUSULLf.s:58     .text.serve_interrupt:00000000 $t
+     /tmp/ccUSULLf.s:63     .text.serve_interrupt:00000000 serve_interrupt
+     /tmp/ccUSULLf.s:223    .text.VectorD4:00000000 $t
+     /tmp/ccUSULLf.s:229    .text.VectorD4:00000000 VectorD4
+     /tmp/ccUSULLf.s:242    .text.VectorD4:00000018 $d
+     /tmp/ccUSULLf.s:245    .text.VectorD8:00000000 $t
+     /tmp/ccUSULLf.s:251    .text.VectorD8:00000000 VectorD8
+     /tmp/ccUSULLf.s:264    .text.VectorD8:00000018 $d
+     /tmp/ccUSULLf.s:267    .text.sd_lld_init:00000000 $t
+     /tmp/ccUSULLf.s:273    .text.sd_lld_init:00000000 sd_lld_init
+     /tmp/ccUSULLf.s:295    .text.sd_lld_init:00000028 $d
+     /tmp/ccUSULLf.s:303    .text.sd_lld_start:00000000 $t
+     /tmp/ccUSULLf.s:309    .text.sd_lld_start:00000000 sd_lld_start
+     /tmp/ccUSULLf.s:373    .text.sd_lld_start:00000084 $d
+     /tmp/ccUSULLf.s:380    .text.sd_lld_stop:00000000 $t
+     /tmp/ccUSULLf.s:386    .text.sd_lld_stop:00000000 sd_lld_stop
+     /tmp/ccUSULLf.s:423    .text.sd_lld_stop:00000040 $d
+     /tmp/ccUSULLf.s:452    .bss.SD2:00000000 SD2
+     /tmp/ccUSULLf.s:445    .bss.SD1:00000000 SD1
+     /tmp/ccUSULLf.s:430    .rodata.default_config:00000000 $d
+     /tmp/ccUSULLf.s:434    .rodata.default_config:00000000 default_config
+     /tmp/ccUSULLf.s:441    .bss.SD1:00000000 $d
+     /tmp/ccUSULLf.s:448    .bss.SD2:00000000 $d
+     /tmp/ccUSULLf.s:36     .text.notify1:00000014 $t
+     /tmp/ccUSULLf.s:57     .text.notify2:00000014 $t
+     /tmp/ccUSULLf.s:244    .text.VectorD4:0000001c $t
+     /tmp/ccUSULLf.s:266    .text.VectorD8:0000001c $t
+     /tmp/ccUSULLf.s:379    .text.sd_lld_start:00000098 $t
+     /tmp/ccUSULLf.s:429    .text.sd_lld_stop:0000004c $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock_from_isr

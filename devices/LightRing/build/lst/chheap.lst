@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccRZjEta.s 			page 1
+ARM GAS  /tmp/ccpIUtbu.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccRZjEta.s 			page 1
   55 000a 01D1     		bne	.L5
   56 000c 7307     		lsls	r3, r6, #29
   57 000e 02D0     		beq	.L6
-ARM GAS  /tmp/ccRZjEta.s 			page 2
+ARM GAS  /tmp/ccpIUtbu.s 			page 2
 
 
   58              	.L5:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccRZjEta.s 			page 1
  110 0038 9847     		blx	r3
  111 003a E8B1     		cbz	r0, .L22
  112 003c 0660     		str	r6, [r0]
-ARM GAS  /tmp/ccRZjEta.s 			page 3
+ARM GAS  /tmp/ccpIUtbu.s 			page 3
 
 
  113 003e 4560     		str	r5, [r0, #4]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccRZjEta.s 			page 1
  167 0014 FFF7FEFF 		bl	chMtxLock
  168 0018 0836     		adds	r6, r6, #8
  169 001a 3446     		mov	r4, r6
-ARM GAS  /tmp/ccRZjEta.s 			page 4
+ARM GAS  /tmp/ccpIUtbu.s 			page 4
 
 
  170              	.L39:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccRZjEta.s 			page 1
  224 0088 0A44     		add	r2, r2, r1
  225 008a 0832     		adds	r2, r2, #8
  226 008c 47F8042C 		str	r2, [r7, #-4]
-ARM GAS  /tmp/ccRZjEta.s 			page 5
+ARM GAS  /tmp/ccpIUtbu.s 			page 5
 
 
  227 0090 47F8083C 		str	r3, [r7, #-8]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccRZjEta.s 			page 1
  280              	.L53:
  281 0028 05B1     		cbz	r5, .L55
  282 002a 2A60     		str	r2, [r5]
-ARM GAS  /tmp/ccRZjEta.s 			page 6
+ARM GAS  /tmp/ccpIUtbu.s 			page 6
 
 
  283              	.L55:
@@ -346,32 +346,32 @@ ARM GAS  /tmp/ccRZjEta.s 			page 1
  312      00000000 
  312      00000000 
  313              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccRZjEta.s 			page 7
+ARM GAS  /tmp/ccpIUtbu.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chheap.c
-     /tmp/ccRZjEta.s:16     .text._heap_init:00000000 $t
-     /tmp/ccRZjEta.s:22     .text._heap_init:00000000 _heap_init
-     /tmp/ccRZjEta.s:37     .text._heap_init:00000014 $d
-     /tmp/ccRZjEta.s:41     .text.chHeapInit:00000000 $t
-     /tmp/ccRZjEta.s:47     .text.chHeapInit:00000000 chHeapInit
-     /tmp/ccRZjEta.s:74     .text.chHeapInit:00000030 $d
-     /tmp/ccRZjEta.s:77     .text.chHeapAlloc:00000000 $t
-     /tmp/ccRZjEta.s:83     .text.chHeapAlloc:00000000 chHeapAlloc
-     /tmp/ccRZjEta.s:147    .text.chHeapAlloc:0000007c $d
-     /tmp/ccRZjEta.s:150    .text.chHeapFree:00000000 $t
-     /tmp/ccRZjEta.s:156    .text.chHeapFree:00000000 chHeapFree
-     /tmp/ccRZjEta.s:248    .text.chHeapFree:000000c0 $d
-     /tmp/ccRZjEta.s:252    .text.chHeapStatus:00000000 $t
-     /tmp/ccRZjEta.s:258    .text.chHeapStatus:00000000 chHeapStatus
-     /tmp/ccRZjEta.s:294    .text.chHeapStatus:0000003c $d
-     /tmp/ccRZjEta.s:297    .rodata.str1.4:00000000 $d
-     /tmp/ccRZjEta.s:307    .bss.default_heap:00000000 $d
-     /tmp/ccRZjEta.s:311    .bss.default_heap:00000000 default_heap
-     /tmp/ccRZjEta.s:40     .text._heap_init:0000001c $t
-     /tmp/ccRZjEta.s:76     .text.chHeapInit:00000034 $t
-     /tmp/ccRZjEta.s:251    .text.chHeapFree:000000c8 $t
+     /tmp/ccpIUtbu.s:16     .text._heap_init:00000000 $t
+     /tmp/ccpIUtbu.s:22     .text._heap_init:00000000 _heap_init
+     /tmp/ccpIUtbu.s:37     .text._heap_init:00000014 $d
+     /tmp/ccpIUtbu.s:41     .text.chHeapInit:00000000 $t
+     /tmp/ccpIUtbu.s:47     .text.chHeapInit:00000000 chHeapInit
+     /tmp/ccpIUtbu.s:74     .text.chHeapInit:00000030 $d
+     /tmp/ccpIUtbu.s:77     .text.chHeapAlloc:00000000 $t
+     /tmp/ccpIUtbu.s:83     .text.chHeapAlloc:00000000 chHeapAlloc
+     /tmp/ccpIUtbu.s:147    .text.chHeapAlloc:0000007c $d
+     /tmp/ccpIUtbu.s:150    .text.chHeapFree:00000000 $t
+     /tmp/ccpIUtbu.s:156    .text.chHeapFree:00000000 chHeapFree
+     /tmp/ccpIUtbu.s:248    .text.chHeapFree:000000c0 $d
+     /tmp/ccpIUtbu.s:252    .text.chHeapStatus:00000000 $t
+     /tmp/ccpIUtbu.s:258    .text.chHeapStatus:00000000 chHeapStatus
+     /tmp/ccpIUtbu.s:294    .text.chHeapStatus:0000003c $d
+     /tmp/ccpIUtbu.s:297    .rodata.str1.4:00000000 $d
+     /tmp/ccpIUtbu.s:307    .bss.default_heap:00000000 $d
+     /tmp/ccpIUtbu.s:311    .bss.default_heap:00000000 default_heap
+     /tmp/ccpIUtbu.s:40     .text._heap_init:0000001c $t
+     /tmp/ccpIUtbu.s:76     .text.chHeapInit:00000034 $t
+     /tmp/ccpIUtbu.s:251    .text.chHeapFree:000000c8 $t
 
 UNDEFINED SYMBOLS
 chMtxInit

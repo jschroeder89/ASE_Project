@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cckyYTmp.s 			page 1
+ARM GAS  /tmp/ccl6EjZf.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
   55              	_ZN5amiro12SerialCanMuxD2Ev:
   56              		@ args = 0, pretend = 0, frame = 0
   57              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cckyYTmp.s 			page 2
+ARM GAS  /tmp/ccl6EjZf.s 			page 2
 
 
   58              		@ link register save eliminated.
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  110 0016 5DF804EB 		ldr	lr, [sp], #4
  111 001a 03B0     		add	sp, sp, #12
  112 001c 7047     		bx	lr
-ARM GAS  /tmp/cckyYTmp.s 			page 3
+ARM GAS  /tmp/ccl6EjZf.s 			page 3
 
 
  113              		.size	_ZL8chprintfP20BaseSequentialStreamPKcz, .-_ZL8chprintfP20BaseSequentialStreamPKcz
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  165              		.thumb_func
  166              		.type	_ZN5amiro12SerialCanMux13restartSystemEv, %function
  167              	_ZN5amiro12SerialCanMux13restartSystemEv:
-ARM GAS  /tmp/cckyYTmp.s 			page 4
+ARM GAS  /tmp/ccl6EjZf.s 			page 4
 
 
  168              		@ Volatile: function does not return.
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  220 0046 6420     		movs	r0, #100
  221 0048 FFF7FEFF 		bl	chThdSleep
  222 004c 631E     		subs	r3, r4, #1
-ARM GAS  /tmp/cckyYTmp.s 			page 5
+ARM GAS  /tmp/ccl6EjZf.s 			page 5
 
 
  223 004e 13F0FF04 		ands	r4, r3, #255
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  276              	.L38:
  277 002a A742     		cmp	r7, r4
  278 002c 21D9     		bls	.L34
-ARM GAS  /tmp/cckyYTmp.s 			page 6
+ARM GAS  /tmp/ccl6EjZf.s 			page 6
 
 
  279 002e 2146     		mov	r1, r4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  332 001e FFF7FEFF 		bl	_ZN5amiro12SerialCanMux10sendViaCanEmPhj
  333 0022 0446     		mov	r4, r0
  334 0024 0120     		movs	r0, #1
-ARM GAS  /tmp/cckyYTmp.s 			page 7
+ARM GAS  /tmp/ccl6EjZf.s 			page 7
 
 
  335 0026 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread5sleepEm
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  387 0046 2946     		mov	r1, r5
  388 0048 3246     		mov	r2, r6
  389 004a FFF7FEFF 		bl	memcpy
-ARM GAS  /tmp/cckyYTmp.s 			page 8
+ARM GAS  /tmp/ccl6EjZf.s 			page 8
 
 
  390 004e 3046     		mov	r0, r6
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  440              		.thumb_func
  441              		.type	_ZN5amiro12SerialCanMux3getEv, %function
  442              	_ZN5amiro12SerialCanMux3getEv:
-ARM GAS  /tmp/cckyYTmp.s 			page 9
+ARM GAS  /tmp/ccl6EjZf.s 			page 9
 
 
  443              		@ args = 0, pretend = 0, frame = 8
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  495 000e FFF7FEFF 		bl	dbg_check_lock
  496 0012 3EB1     		cbz	r6, .L57
  497 0014 2644     		add	r6, r6, r4
-ARM GAS  /tmp/cckyYTmp.s 			page 10
+ARM GAS  /tmp/ccl6EjZf.s 			page 10
 
 
  498              	.L58:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  552 0044 2376     		strb	r3, [r4, #24]
  553 0046 2069     		ldr	r0, [r4, #16]
  554 0048 0123     		movs	r3, #1
-ARM GAS  /tmp/cckyYTmp.s 			page 11
+ARM GAS  /tmp/ccl6EjZf.s 			page 11
 
 
  555 004a 0321     		movs	r1, #3
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  609              	.L73:
  610 00c4 68000000 		.word	.LC5
  611 00c8 4C000000 		.word	.LC4
-ARM GAS  /tmp/cckyYTmp.s 			page 12
+ARM GAS  /tmp/ccl6EjZf.s 			page 12
 
 
  612 00cc 34000000 		.word	.LC3
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  664              	_GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:
  665              		@ args = 0, pretend = 0, frame = 0
  666              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cckyYTmp.s 			page 13
+ARM GAS  /tmp/ccl6EjZf.s 			page 13
 
 
  667              		@ link register save eliminated.
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  718 000c 00000000 		.word	_ZN5amiro12SerialCanMux4readEPhj
  719 0010 00000000 		.word	_ZN5amiro12SerialCanMux3putEh
  720 0014 00000000 		.word	_ZN5amiro12SerialCanMux3getEv
-ARM GAS  /tmp/cckyYTmp.s 			page 14
+ARM GAS  /tmp/ccl6EjZf.s 			page 14
 
 
  721 0018 00000000 		.word	_ZN5amiro12SerialCanMuxD1Ev
@@ -838,75 +838,75 @@ ARM GAS  /tmp/cckyYTmp.s 			page 1
  745      686F776E 
  745      20696E20 
  745      626F6172 
-ARM GAS  /tmp/cckyYTmp.s 			page 15
+ARM GAS  /tmp/ccl6EjZf.s 			page 15
 
 
  746 00df 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cckyYTmp.s 			page 16
+ARM GAS  /tmp/ccl6EjZf.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 serial_can_mux.cpp
-     /tmp/cckyYTmp.s:16     .text.NVIC_SystemReset:00000000 $t
-     /tmp/cckyYTmp.s:21     .text.NVIC_SystemReset:00000000 NVIC_SystemReset
-     /tmp/cckyYTmp.s:45     .text.NVIC_SystemReset:00000018 $d
-     /tmp/cckyYTmp.s:49     .text._ZN5amiro12SerialCanMuxD2Ev:00000000 $t
-     /tmp/cckyYTmp.s:55     .text._ZN5amiro12SerialCanMuxD2Ev:00000000 _ZN5amiro12SerialCanMuxD2Ev
-     /tmp/cckyYTmp.s:65     .text._ZN5amiro12SerialCanMuxD2Ev:00000008 $d
-     /tmp/cckyYTmp.s:55     .text._ZN5amiro12SerialCanMuxD2Ev:00000000 _ZN5amiro12SerialCanMuxD1Ev
-     /tmp/cckyYTmp.s:70     .text._ZN5amiro12SerialCanMuxD0Ev:00000000 $t
-     /tmp/cckyYTmp.s:76     .text._ZN5amiro12SerialCanMuxD0Ev:00000000 _ZN5amiro12SerialCanMuxD0Ev
-     /tmp/cckyYTmp.s:89     .text._ZN5amiro12SerialCanMuxD0Ev:00000010 $d
-     /tmp/cckyYTmp.s:92     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 $t
-     /tmp/cckyYTmp.s:97     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz
-     /tmp/cckyYTmp.s:115    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 $t
-     /tmp/cckyYTmp.s:121    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 _ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
-     /tmp/cckyYTmp.s:155    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:0000004c $d
-     /tmp/cckyYTmp.s:121    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 _ZN5amiro12SerialCanMuxC1EP12SerialDriverP9CANDriverh
-     /tmp/cckyYTmp.s:161    .text._ZN5amiro12SerialCanMux13restartSystemEv:00000000 $t
-     /tmp/cckyYTmp.s:167    .text._ZN5amiro12SerialCanMux13restartSystemEv:00000000 _ZN5amiro12SerialCanMux13restartSystemEv
-     /tmp/cckyYTmp.s:175    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000000 $t
-     /tmp/cckyYTmp.s:181    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000000 _ZN5amiro12SerialCanMux19checkByteForBLResetEPhj
-     /tmp/cckyYTmp.s:248    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000080 $d
-     /tmp/cckyYTmp.s:252    .text._ZN5amiro12SerialCanMux10sendViaCanEmPhj:00000000 $t
-     /tmp/cckyYTmp.s:258    .text._ZN5amiro12SerialCanMux10sendViaCanEmPhj:00000000 _ZN5amiro12SerialCanMux10sendViaCanEmPhj
-     /tmp/cckyYTmp.s:311    .text._ZN5amiro12SerialCanMux5writeEPKhj:00000000 $t
-     /tmp/cckyYTmp.s:317    .text._ZN5amiro12SerialCanMux5writeEPKhj:00000000 _ZN5amiro12SerialCanMux5writeEPKhj
-     /tmp/cckyYTmp.s:349    .text._ZN5amiro12SerialCanMux4readEPhj:00000000 $t
-     /tmp/cckyYTmp.s:355    .text._ZN5amiro12SerialCanMux4readEPhj:00000000 _ZN5amiro12SerialCanMux4readEPhj
-     /tmp/cckyYTmp.s:394    .text._ZN5amiro12SerialCanMux3putEh:00000000 $t
-     /tmp/cckyYTmp.s:400    .text._ZN5amiro12SerialCanMux3putEh:00000000 _ZN5amiro12SerialCanMux3putEh
-     /tmp/cckyYTmp.s:436    .text._ZN5amiro12SerialCanMux3getEv:00000000 $t
-     /tmp/cckyYTmp.s:442    .text._ZN5amiro12SerialCanMux3getEv:00000000 _ZN5amiro12SerialCanMux3getEv
-     /tmp/cckyYTmp.s:477    .text._ZN5amiro12SerialCanMux14convCan2SerialEPhj:00000000 $t
-     /tmp/cckyYTmp.s:483    .text._ZN5amiro12SerialCanMux14convCan2SerialEPhj:00000000 _ZN5amiro12SerialCanMux14convCan2SerialEPhj
-     /tmp/cckyYTmp.s:514    .text._ZN5amiro12SerialCanMux13sendSwitchCmdEh:00000000 $t
-     /tmp/cckyYTmp.s:520    .text._ZN5amiro12SerialCanMux13sendSwitchCmdEh:00000000 _ZN5amiro12SerialCanMux13sendSwitchCmdEh
-     /tmp/cckyYTmp.s:610    .text._ZN5amiro12SerialCanMux13sendSwitchCmdEh:000000c4 $d
-     /tmp/cckyYTmp.s:615    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000000 $t
-     /tmp/cckyYTmp.s:621    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000000 _ZN5amiro12SerialCanMux12rcvSwitchCmdEh
-     /tmp/cckyYTmp.s:654    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000038 $d
-     /tmp/cckyYTmp.s:659    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 $t
-     /tmp/cckyYTmp.s:664    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 _GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
-     /tmp/cckyYTmp.s:676    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:0000000c $d
-     /tmp/cckyYTmp.s:680    .init_array:00000000 $d
-     /tmp/cckyYTmp.s:687    .rodata._ZTVN10chibios_rt29BaseSequentialStreamInterfaceE:00000000 _ZTVN10chibios_rt29BaseSequentialStreamInterfaceE
-     /tmp/cckyYTmp.s:684    .rodata._ZTVN10chibios_rt29BaseSequentialStreamInterfaceE:00000000 $d
-     /tmp/cckyYTmp.s:714    .rodata._ZTVN5amiro12SerialCanMuxE:00000000 _ZTVN5amiro12SerialCanMuxE
-     /tmp/cckyYTmp.s:696    .rodata:00000000 $d
-     /tmp/cckyYTmp.s:703    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/cckyYTmp.s:707    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/cckyYTmp.s:710    .rodata._ZTVN5amiro12SerialCanMuxE:00000000 $d
-     /tmp/cckyYTmp.s:724    .rodata.str1.4:00000000 $d
-     /tmp/cckyYTmp.s:69     .text._ZN5amiro12SerialCanMuxD2Ev:0000000c $t
-     /tmp/cckyYTmp.s:91     .text._ZN5amiro12SerialCanMuxD0Ev:00000014 $t
-     /tmp/cckyYTmp.s:160    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000054 $t
-     /tmp/cckyYTmp.s:251    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000088 $t
-ARM GAS  /tmp/cckyYTmp.s 			page 17
+     /tmp/ccl6EjZf.s:16     .text.NVIC_SystemReset:00000000 $t
+     /tmp/ccl6EjZf.s:21     .text.NVIC_SystemReset:00000000 NVIC_SystemReset
+     /tmp/ccl6EjZf.s:45     .text.NVIC_SystemReset:00000018 $d
+     /tmp/ccl6EjZf.s:49     .text._ZN5amiro12SerialCanMuxD2Ev:00000000 $t
+     /tmp/ccl6EjZf.s:55     .text._ZN5amiro12SerialCanMuxD2Ev:00000000 _ZN5amiro12SerialCanMuxD2Ev
+     /tmp/ccl6EjZf.s:65     .text._ZN5amiro12SerialCanMuxD2Ev:00000008 $d
+     /tmp/ccl6EjZf.s:55     .text._ZN5amiro12SerialCanMuxD2Ev:00000000 _ZN5amiro12SerialCanMuxD1Ev
+     /tmp/ccl6EjZf.s:70     .text._ZN5amiro12SerialCanMuxD0Ev:00000000 $t
+     /tmp/ccl6EjZf.s:76     .text._ZN5amiro12SerialCanMuxD0Ev:00000000 _ZN5amiro12SerialCanMuxD0Ev
+     /tmp/ccl6EjZf.s:89     .text._ZN5amiro12SerialCanMuxD0Ev:00000010 $d
+     /tmp/ccl6EjZf.s:92     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 $t
+     /tmp/ccl6EjZf.s:97     .text._ZL8chprintfP20BaseSequentialStreamPKcz:00000000 _ZL8chprintfP20BaseSequentialStreamPKcz
+     /tmp/ccl6EjZf.s:115    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 $t
+     /tmp/ccl6EjZf.s:121    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 _ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
+     /tmp/ccl6EjZf.s:155    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:0000004c $d
+     /tmp/ccl6EjZf.s:121    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 _ZN5amiro12SerialCanMuxC1EP12SerialDriverP9CANDriverh
+     /tmp/ccl6EjZf.s:161    .text._ZN5amiro12SerialCanMux13restartSystemEv:00000000 $t
+     /tmp/ccl6EjZf.s:167    .text._ZN5amiro12SerialCanMux13restartSystemEv:00000000 _ZN5amiro12SerialCanMux13restartSystemEv
+     /tmp/ccl6EjZf.s:175    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000000 $t
+     /tmp/ccl6EjZf.s:181    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000000 _ZN5amiro12SerialCanMux19checkByteForBLResetEPhj
+     /tmp/ccl6EjZf.s:248    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000080 $d
+     /tmp/ccl6EjZf.s:252    .text._ZN5amiro12SerialCanMux10sendViaCanEmPhj:00000000 $t
+     /tmp/ccl6EjZf.s:258    .text._ZN5amiro12SerialCanMux10sendViaCanEmPhj:00000000 _ZN5amiro12SerialCanMux10sendViaCanEmPhj
+     /tmp/ccl6EjZf.s:311    .text._ZN5amiro12SerialCanMux5writeEPKhj:00000000 $t
+     /tmp/ccl6EjZf.s:317    .text._ZN5amiro12SerialCanMux5writeEPKhj:00000000 _ZN5amiro12SerialCanMux5writeEPKhj
+     /tmp/ccl6EjZf.s:349    .text._ZN5amiro12SerialCanMux4readEPhj:00000000 $t
+     /tmp/ccl6EjZf.s:355    .text._ZN5amiro12SerialCanMux4readEPhj:00000000 _ZN5amiro12SerialCanMux4readEPhj
+     /tmp/ccl6EjZf.s:394    .text._ZN5amiro12SerialCanMux3putEh:00000000 $t
+     /tmp/ccl6EjZf.s:400    .text._ZN5amiro12SerialCanMux3putEh:00000000 _ZN5amiro12SerialCanMux3putEh
+     /tmp/ccl6EjZf.s:436    .text._ZN5amiro12SerialCanMux3getEv:00000000 $t
+     /tmp/ccl6EjZf.s:442    .text._ZN5amiro12SerialCanMux3getEv:00000000 _ZN5amiro12SerialCanMux3getEv
+     /tmp/ccl6EjZf.s:477    .text._ZN5amiro12SerialCanMux14convCan2SerialEPhj:00000000 $t
+     /tmp/ccl6EjZf.s:483    .text._ZN5amiro12SerialCanMux14convCan2SerialEPhj:00000000 _ZN5amiro12SerialCanMux14convCan2SerialEPhj
+     /tmp/ccl6EjZf.s:514    .text._ZN5amiro12SerialCanMux13sendSwitchCmdEh:00000000 $t
+     /tmp/ccl6EjZf.s:520    .text._ZN5amiro12SerialCanMux13sendSwitchCmdEh:00000000 _ZN5amiro12SerialCanMux13sendSwitchCmdEh
+     /tmp/ccl6EjZf.s:610    .text._ZN5amiro12SerialCanMux13sendSwitchCmdEh:000000c4 $d
+     /tmp/ccl6EjZf.s:615    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000000 $t
+     /tmp/ccl6EjZf.s:621    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000000 _ZN5amiro12SerialCanMux12rcvSwitchCmdEh
+     /tmp/ccl6EjZf.s:654    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000038 $d
+     /tmp/ccl6EjZf.s:659    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 $t
+     /tmp/ccl6EjZf.s:664    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000000 _GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh
+     /tmp/ccl6EjZf.s:676    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:0000000c $d
+     /tmp/ccl6EjZf.s:680    .init_array:00000000 $d
+     /tmp/ccl6EjZf.s:687    .rodata._ZTVN10chibios_rt29BaseSequentialStreamInterfaceE:00000000 _ZTVN10chibios_rt29BaseSequentialStreamInterfaceE
+     /tmp/ccl6EjZf.s:684    .rodata._ZTVN10chibios_rt29BaseSequentialStreamInterfaceE:00000000 $d
+     /tmp/ccl6EjZf.s:714    .rodata._ZTVN5amiro12SerialCanMuxE:00000000 _ZTVN5amiro12SerialCanMuxE
+     /tmp/ccl6EjZf.s:696    .rodata:00000000 $d
+     /tmp/ccl6EjZf.s:703    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccl6EjZf.s:707    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccl6EjZf.s:710    .rodata._ZTVN5amiro12SerialCanMuxE:00000000 $d
+     /tmp/ccl6EjZf.s:724    .rodata.str1.4:00000000 $d
+     /tmp/ccl6EjZf.s:69     .text._ZN5amiro12SerialCanMuxD2Ev:0000000c $t
+     /tmp/ccl6EjZf.s:91     .text._ZN5amiro12SerialCanMuxD0Ev:00000014 $t
+     /tmp/ccl6EjZf.s:160    .text._ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000054 $t
+     /tmp/ccl6EjZf.s:251    .text._ZN5amiro12SerialCanMux19checkByteForBLResetEPhj:00000088 $t
+ARM GAS  /tmp/ccl6EjZf.s 			page 17
 
 
-     /tmp/cckyYTmp.s:658    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000044 $t
-     /tmp/cckyYTmp.s:679    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000014 $t
+     /tmp/ccl6EjZf.s:658    .text._ZN5amiro12SerialCanMux12rcvSwitchCmdEh:00000044 $t
+     /tmp/ccl6EjZf.s:679    .text.startup._GLOBAL__sub_I__ZN5amiro12SerialCanMuxC2EP12SerialDriverP9CANDriverh:00000014 $t
 
 UNDEFINED SYMBOLS
 _ZdlPv

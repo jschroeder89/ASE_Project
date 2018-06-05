@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cchutg5J.s 			page 1
+ARM GAS  /tmp/cci3vsOR.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cchutg5J.s 			page 1
   54              		.thumb_func
   55              		.type	palWriteBus, %function
   56              	palWriteBus:
-ARM GAS  /tmp/cchutg5J.s 			page 2
+ARM GAS  /tmp/cci3vsOR.s 			page 2
 
 
   57              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cchutg5J.s 			page 1
  110 0020 BDE87040 		pop	{r4, r5, r6, lr}
  111 0024 FFF7FEBF 		b	_pal_lld_setgroupmode
  112              	.L25:
-ARM GAS  /tmp/cchutg5J.s 			page 3
+ARM GAS  /tmp/cci3vsOR.s 			page 3
 
 
  113              		.align	2
@@ -145,24 +145,24 @@ ARM GAS  /tmp/cchutg5J.s 			page 1
  125      64652228 
  125      2900
  126 0032 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cchutg5J.s 			page 4
+ARM GAS  /tmp/cci3vsOR.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 pal.c
-     /tmp/cchutg5J.s:18     .text.palReadBus:00000000 $t
-     /tmp/cchutg5J.s:24     .text.palReadBus:00000000 palReadBus
-     /tmp/cchutg5J.s:47     .text.palReadBus:00000024 $d
-     /tmp/cchutg5J.s:50     .text.palWriteBus:00000000 $t
-     /tmp/cchutg5J.s:56     .text.palWriteBus:00000000 palWriteBus
-     /tmp/cchutg5J.s:83     .text.palWriteBus:00000034 $d
-     /tmp/cchutg5J.s:86     .text.palSetBusMode:00000000 $t
-     /tmp/cchutg5J.s:92     .text.palSetBusMode:00000000 palSetBusMode
-     /tmp/cchutg5J.s:115    .text.palSetBusMode:00000028 $d
-     /tmp/cchutg5J.s:118    .rodata.str1.4:00000000 $d
-     /tmp/cchutg5J.s:49     .text.palReadBus:00000028 $t
-     /tmp/cchutg5J.s:85     .text.palWriteBus:00000038 $t
-     /tmp/cchutg5J.s:117    .text.palSetBusMode:0000002c $t
+     /tmp/cci3vsOR.s:18     .text.palReadBus:00000000 $t
+     /tmp/cci3vsOR.s:24     .text.palReadBus:00000000 palReadBus
+     /tmp/cci3vsOR.s:47     .text.palReadBus:00000024 $d
+     /tmp/cci3vsOR.s:50     .text.palWriteBus:00000000 $t
+     /tmp/cci3vsOR.s:56     .text.palWriteBus:00000000 palWriteBus
+     /tmp/cci3vsOR.s:83     .text.palWriteBus:00000034 $d
+     /tmp/cci3vsOR.s:86     .text.palSetBusMode:00000000 $t
+     /tmp/cci3vsOR.s:92     .text.palSetBusMode:00000000 palSetBusMode
+     /tmp/cci3vsOR.s:115    .text.palSetBusMode:00000028 $d
+     /tmp/cci3vsOR.s:118    .rodata.str1.4:00000000 $d
+     /tmp/cci3vsOR.s:49     .text.palReadBus:00000028 $t
+     /tmp/cci3vsOR.s:85     .text.palWriteBus:00000038 $t
+     /tmp/cci3vsOR.s:117    .text.palSetBusMode:0000002c $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

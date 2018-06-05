@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccsJ52E7.s 			page 1
+ARM GAS  /tmp/cc0MIiEV.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccsJ52E7.s 			page 1
   55 0038 42F00802 		orr	r2, r2, #8
   56 003c 0A70     		strb	r2, [r1]
   57 003e 70BC     		pop	{r4, r5, r6}
-ARM GAS  /tmp/ccsJ52E7.s 			page 2
+ARM GAS  /tmp/cc0MIiEV.s 			page 2
 
 
   58 0040 7047     		bx	lr
@@ -117,21 +117,21 @@ ARM GAS  /tmp/ccsJ52E7.s 			page 1
  110              	wakeup_source:
  111 0000 00       		.space	1
  112              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccsJ52E7.s 			page 3
+ARM GAS  /tmp/cc0MIiEV.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 wakeup.c
-     /tmp/ccsJ52E7.s:18     .text.standby_wakeup_source:00000000 $t
-     /tmp/ccsJ52E7.s:24     .text.standby_wakeup_source:00000000 standby_wakeup_source
-     /tmp/ccsJ52E7.s:69     .text.standby_wakeup_source:00000050 $d
-     /tmp/ccsJ52E7.s:75     .text.stop_wakeup_source:00000000 $t
-     /tmp/ccsJ52E7.s:81     .text.stop_wakeup_source:00000000 stop_wakeup_source
-     /tmp/ccsJ52E7.s:95     .text.stop_wakeup_source:00000010 $d
-     /tmp/ccsJ52E7.s:110    .bss.wakeup_source:00000000 wakeup_source
-     /tmp/ccsJ52E7.s:104    .bss.wakeup_mode:00000000 wakeup_mode
-     /tmp/ccsJ52E7.s:105    .bss.wakeup_mode:00000000 $d
-     /tmp/ccsJ52E7.s:111    .bss.wakeup_source:00000000 $d
-     /tmp/ccsJ52E7.s:100    .text.stop_wakeup_source:00000018 $t
+     /tmp/cc0MIiEV.s:18     .text.standby_wakeup_source:00000000 $t
+     /tmp/cc0MIiEV.s:24     .text.standby_wakeup_source:00000000 standby_wakeup_source
+     /tmp/cc0MIiEV.s:69     .text.standby_wakeup_source:00000050 $d
+     /tmp/cc0MIiEV.s:75     .text.stop_wakeup_source:00000000 $t
+     /tmp/cc0MIiEV.s:81     .text.stop_wakeup_source:00000000 stop_wakeup_source
+     /tmp/cc0MIiEV.s:95     .text.stop_wakeup_source:00000010 $d
+     /tmp/cc0MIiEV.s:110    .bss.wakeup_source:00000000 wakeup_source
+     /tmp/cc0MIiEV.s:104    .bss.wakeup_mode:00000000 wakeup_mode
+     /tmp/cc0MIiEV.s:105    .bss.wakeup_mode:00000000 $d
+     /tmp/cc0MIiEV.s:111    .bss.wakeup_source:00000000 $d
+     /tmp/cc0MIiEV.s:100    .text.stop_wakeup_source:00000018 $t
 
 NO UNDEFINED SYMBOLS

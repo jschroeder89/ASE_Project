@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccE48lfG.s 			page 1
+ARM GAS  /tmp/ccgJgCXV.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
   55 0032 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
   56              	.L2:
   57 0034 0248     		ldr	r0, .L8+4
-ARM GAS  /tmp/ccE48lfG.s 			page 2
+ARM GAS  /tmp/ccgJgCXV.s 			page 2
 
 
   58 0036 FFF7FEFF 		bl	chDbgPanic
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  112              	@ 0 "" 2
  113              		.thumb
  114 003e 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  /tmp/ccE48lfG.s 			page 3
+ARM GAS  /tmp/ccgJgCXV.s 			page 3
 
 
  115              	.L11:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  169              		@ args = 0, pretend = 0, frame = 0
  170              		@ frame_needed = 0, uses_anonymous_args = 0
  171 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccE48lfG.s 			page 4
+ARM GAS  /tmp/ccgJgCXV.s 			page 4
 
 
  172 0002 2023     		movs	r3, #32
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  226              		.size	chEvtGetAndClearFlags, .-chEvtGetAndClearFlags
  227 0022 00BFAFF3 		.section	.text.chEvtSignalI,"ax",%progbits
  227      0080AFF3 
-ARM GAS  /tmp/ccE48lfG.s 			page 5
+ARM GAS  /tmp/ccgJgCXV.s 			page 5
 
 
  227      0080AFF3 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  280              		.p2align 4,,15
  281              		.global	chEvtBroadcastFlagsI
  282              		.thumb
-ARM GAS  /tmp/ccE48lfG.s 			page 6
+ARM GAS  /tmp/ccgJgCXV.s 			page 6
 
 
  283              		.thumb_func
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  335              	@ 0 "" 2
  336              		.thumb
  337 000e FFF7FEFF 		bl	dbg_check_lock
-ARM GAS  /tmp/ccE48lfG.s 			page 7
+ARM GAS  /tmp/ccgJgCXV.s 			page 7
 
 
  338 0012 2046     		mov	r0, r4
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  390              		.align	2
  391              		.p2align 4,,15
  392              		.global	chEvtGetAndClearFlagsI
-ARM GAS  /tmp/ccE48lfG.s 			page 8
+ARM GAS  /tmp/ccgJgCXV.s 			page 8
 
 
  393              		.thumb
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  446 0040 EFE7     		b	.L59
  447              	.L69:
  448 0042 0348     		ldr	r0, .L71+4
-ARM GAS  /tmp/ccE48lfG.s 			page 9
+ARM GAS  /tmp/ccgJgCXV.s 			page 9
 
 
  449 0044 FFF7FEFF 		bl	chDbgPanic
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  501 0040 00000000 		.word	rlist
  502              		.size	chEvtWaitOne, .-chEvtWaitOne
  503 0044 AFF30080 		.section	.text.chEvtWaitAny,"ax",%progbits
-ARM GAS  /tmp/ccE48lfG.s 			page 10
+ARM GAS  /tmp/ccgJgCXV.s 			page 10
 
 
  503      AFF30080 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  556              		@ frame_needed = 0, uses_anonymous_args = 0
  557 0000 38B5     		push	{r3, r4, r5, lr}
  558 0002 0E4B     		ldr	r3, .L83
-ARM GAS  /tmp/ccE48lfG.s 			page 11
+ARM GAS  /tmp/ccgJgCXV.s 			page 11
 
 
  559 0004 0446     		mov	r4, r0
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  613 0016 14EA0206 		ands	r6, r4, r2
  614 001a 0AD1     		bne	.L86
  615 001c AFB1     		cbz	r7, .L90
-ARM GAS  /tmp/ccE48lfG.s 			page 12
+ARM GAS  /tmp/ccgJgCXV.s 			page 12
 
 
  616 001e AC62     		str	r4, [r5, #40]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  670 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
  671 0002 184B     		ldr	r3, .L101
  672 0004 0446     		mov	r4, r0
-ARM GAS  /tmp/ccE48lfG.s 			page 13
+ARM GAS  /tmp/ccgJgCXV.s 			page 13
 
 
  673 0006 9D69     		ldr	r5, [r3, #24]
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  727 0068 AFF30080 		.section	.text.chEvtWaitAllTimeout,"ax",%progbits
  727      AFF30080 
  728              		.align	2
-ARM GAS  /tmp/ccE48lfG.s 			page 14
+ARM GAS  /tmp/ccgJgCXV.s 			page 14
 
 
  729              		.p2align 4,,15
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  783              	@ 542 "../../../ChibiOS/os/kernel/src/chevents.c" 1
  784 0058 83F31188 		msr     BASEPRI, r3
  785              	@ 0 "" 2
-ARM GAS  /tmp/ccE48lfG.s 			page 15
+ARM GAS  /tmp/ccgJgCXV.s 			page 15
 
 
  786              		.thumb
@@ -898,77 +898,77 @@ ARM GAS  /tmp/ccE48lfG.s 			page 1
  812      6828292C 
  812      20233100 
  813              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccE48lfG.s 			page 16
+ARM GAS  /tmp/ccgJgCXV.s 			page 16
 
 
-ARM GAS  /tmp/ccE48lfG.s 			page 17
+ARM GAS  /tmp/ccgJgCXV.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chevents.c
-     /tmp/ccE48lfG.s:18     .text.chEvtRegisterMask:00000000 $t
-     /tmp/ccE48lfG.s:24     .text.chEvtRegisterMask:00000000 chEvtRegisterMask
-     /tmp/ccE48lfG.s:63     .text.chEvtRegisterMask:0000003c $d
-     /tmp/ccE48lfG.s:67     .text.chEvtUnregister:00000000 $t
-     /tmp/ccE48lfG.s:73     .text.chEvtUnregister:00000000 chEvtUnregister
-     /tmp/ccE48lfG.s:122    .text.chEvtUnregister:00000048 $d
-     /tmp/ccE48lfG.s:125    .text.chEvtGetAndClearEvents:00000000 $t
-     /tmp/ccE48lfG.s:131    .text.chEvtGetAndClearEvents:00000000 chEvtGetAndClearEvents
-     /tmp/ccE48lfG.s:159    .text.chEvtGetAndClearEvents:0000002c $d
-     /tmp/ccE48lfG.s:162    .text.chEvtAddEvents:00000000 $t
-     /tmp/ccE48lfG.s:168    .text.chEvtAddEvents:00000000 chEvtAddEvents
-     /tmp/ccE48lfG.s:195    .text.chEvtAddEvents:00000028 $d
-     /tmp/ccE48lfG.s:198    .text.chEvtGetAndClearFlags:00000000 $t
-     /tmp/ccE48lfG.s:204    .text.chEvtGetAndClearFlags:00000000 chEvtGetAndClearFlags
-     /tmp/ccE48lfG.s:228    .text.chEvtSignalI:00000000 $t
-     /tmp/ccE48lfG.s:234    .text.chEvtSignalI:00000000 chEvtSignalI
-     /tmp/ccE48lfG.s:276    .text.chEvtSignalI:00000048 $d
-     /tmp/ccE48lfG.s:279    .text.chEvtBroadcastFlagsI:00000000 $t
-     /tmp/ccE48lfG.s:285    .text.chEvtBroadcastFlagsI:00000000 chEvtBroadcastFlagsI
-     /tmp/ccE48lfG.s:315    .text.chEvtBroadcastFlagsI:00000030 $d
-     /tmp/ccE48lfG.s:318    .text.chEvtSignal:00000000 $t
-     /tmp/ccE48lfG.s:324    .text.chEvtSignal:00000000 chEvtSignal
-     /tmp/ccE48lfG.s:356    .text.chEvtSignal:00000034 $d
-     /tmp/ccE48lfG.s:359    .text.chEvtBroadcastFlags:00000000 $t
-     /tmp/ccE48lfG.s:365    .text.chEvtBroadcastFlags:00000000 chEvtBroadcastFlags
-     /tmp/ccE48lfG.s:390    .text.chEvtGetAndClearFlagsI:00000000 $t
-     /tmp/ccE48lfG.s:396    .text.chEvtGetAndClearFlagsI:00000000 chEvtGetAndClearFlagsI
-     /tmp/ccE48lfG.s:407    .text.chEvtDispatch:00000000 $t
-     /tmp/ccE48lfG.s:413    .text.chEvtDispatch:00000000 chEvtDispatch
-     /tmp/ccE48lfG.s:454    .text.chEvtDispatch:0000004c $d
-     /tmp/ccE48lfG.s:458    .text.chEvtWaitOne:00000000 $t
-     /tmp/ccE48lfG.s:464    .text.chEvtWaitOne:00000000 chEvtWaitOne
-     /tmp/ccE48lfG.s:501    .text.chEvtWaitOne:00000040 $d
-     /tmp/ccE48lfG.s:504    .text.chEvtWaitAny:00000000 $t
-     /tmp/ccE48lfG.s:510    .text.chEvtWaitAny:00000000 chEvtWaitAny
-     /tmp/ccE48lfG.s:545    .text.chEvtWaitAny:0000003c $d
-     /tmp/ccE48lfG.s:548    .text.chEvtWaitAll:00000000 $t
-     /tmp/ccE48lfG.s:554    .text.chEvtWaitAll:00000000 chEvtWaitAll
-     /tmp/ccE48lfG.s:589    .text.chEvtWaitAll:0000003c $d
-     /tmp/ccE48lfG.s:592    .text.chEvtWaitOneTimeout:00000000 $t
-     /tmp/ccE48lfG.s:598    .text.chEvtWaitOneTimeout:00000000 chEvtWaitOneTimeout
-     /tmp/ccE48lfG.s:658    .text.chEvtWaitOneTimeout:00000068 $d
-     /tmp/ccE48lfG.s:661    .text.chEvtWaitAnyTimeout:00000000 $t
-     /tmp/ccE48lfG.s:667    .text.chEvtWaitAnyTimeout:00000000 chEvtWaitAnyTimeout
-     /tmp/ccE48lfG.s:725    .text.chEvtWaitAnyTimeout:00000064 $d
-     /tmp/ccE48lfG.s:728    .text.chEvtWaitAllTimeout:00000000 $t
-     /tmp/ccE48lfG.s:734    .text.chEvtWaitAllTimeout:00000000 chEvtWaitAllTimeout
-     /tmp/ccE48lfG.s:792    .text.chEvtWaitAllTimeout:00000060 $d
-     /tmp/ccE48lfG.s:795    .rodata.str1.4:00000000 $d
-     /tmp/ccE48lfG.s:813    .text.chEvtRegisterMask:00000044 $t
-     /tmp/ccE48lfG.s:124    .text.chEvtUnregister:0000004c $t
-     /tmp/ccE48lfG.s:197    .text.chEvtAddEvents:0000002c $t
-     /tmp/ccE48lfG.s:278    .text.chEvtSignalI:0000004c $t
-     /tmp/ccE48lfG.s:317    .text.chEvtBroadcastFlagsI:00000034 $t
-     /tmp/ccE48lfG.s:358    .text.chEvtSignal:00000038 $t
-ARM GAS  /tmp/ccE48lfG.s 			page 18
+     /tmp/ccgJgCXV.s:18     .text.chEvtRegisterMask:00000000 $t
+     /tmp/ccgJgCXV.s:24     .text.chEvtRegisterMask:00000000 chEvtRegisterMask
+     /tmp/ccgJgCXV.s:63     .text.chEvtRegisterMask:0000003c $d
+     /tmp/ccgJgCXV.s:67     .text.chEvtUnregister:00000000 $t
+     /tmp/ccgJgCXV.s:73     .text.chEvtUnregister:00000000 chEvtUnregister
+     /tmp/ccgJgCXV.s:122    .text.chEvtUnregister:00000048 $d
+     /tmp/ccgJgCXV.s:125    .text.chEvtGetAndClearEvents:00000000 $t
+     /tmp/ccgJgCXV.s:131    .text.chEvtGetAndClearEvents:00000000 chEvtGetAndClearEvents
+     /tmp/ccgJgCXV.s:159    .text.chEvtGetAndClearEvents:0000002c $d
+     /tmp/ccgJgCXV.s:162    .text.chEvtAddEvents:00000000 $t
+     /tmp/ccgJgCXV.s:168    .text.chEvtAddEvents:00000000 chEvtAddEvents
+     /tmp/ccgJgCXV.s:195    .text.chEvtAddEvents:00000028 $d
+     /tmp/ccgJgCXV.s:198    .text.chEvtGetAndClearFlags:00000000 $t
+     /tmp/ccgJgCXV.s:204    .text.chEvtGetAndClearFlags:00000000 chEvtGetAndClearFlags
+     /tmp/ccgJgCXV.s:228    .text.chEvtSignalI:00000000 $t
+     /tmp/ccgJgCXV.s:234    .text.chEvtSignalI:00000000 chEvtSignalI
+     /tmp/ccgJgCXV.s:276    .text.chEvtSignalI:00000048 $d
+     /tmp/ccgJgCXV.s:279    .text.chEvtBroadcastFlagsI:00000000 $t
+     /tmp/ccgJgCXV.s:285    .text.chEvtBroadcastFlagsI:00000000 chEvtBroadcastFlagsI
+     /tmp/ccgJgCXV.s:315    .text.chEvtBroadcastFlagsI:00000030 $d
+     /tmp/ccgJgCXV.s:318    .text.chEvtSignal:00000000 $t
+     /tmp/ccgJgCXV.s:324    .text.chEvtSignal:00000000 chEvtSignal
+     /tmp/ccgJgCXV.s:356    .text.chEvtSignal:00000034 $d
+     /tmp/ccgJgCXV.s:359    .text.chEvtBroadcastFlags:00000000 $t
+     /tmp/ccgJgCXV.s:365    .text.chEvtBroadcastFlags:00000000 chEvtBroadcastFlags
+     /tmp/ccgJgCXV.s:390    .text.chEvtGetAndClearFlagsI:00000000 $t
+     /tmp/ccgJgCXV.s:396    .text.chEvtGetAndClearFlagsI:00000000 chEvtGetAndClearFlagsI
+     /tmp/ccgJgCXV.s:407    .text.chEvtDispatch:00000000 $t
+     /tmp/ccgJgCXV.s:413    .text.chEvtDispatch:00000000 chEvtDispatch
+     /tmp/ccgJgCXV.s:454    .text.chEvtDispatch:0000004c $d
+     /tmp/ccgJgCXV.s:458    .text.chEvtWaitOne:00000000 $t
+     /tmp/ccgJgCXV.s:464    .text.chEvtWaitOne:00000000 chEvtWaitOne
+     /tmp/ccgJgCXV.s:501    .text.chEvtWaitOne:00000040 $d
+     /tmp/ccgJgCXV.s:504    .text.chEvtWaitAny:00000000 $t
+     /tmp/ccgJgCXV.s:510    .text.chEvtWaitAny:00000000 chEvtWaitAny
+     /tmp/ccgJgCXV.s:545    .text.chEvtWaitAny:0000003c $d
+     /tmp/ccgJgCXV.s:548    .text.chEvtWaitAll:00000000 $t
+     /tmp/ccgJgCXV.s:554    .text.chEvtWaitAll:00000000 chEvtWaitAll
+     /tmp/ccgJgCXV.s:589    .text.chEvtWaitAll:0000003c $d
+     /tmp/ccgJgCXV.s:592    .text.chEvtWaitOneTimeout:00000000 $t
+     /tmp/ccgJgCXV.s:598    .text.chEvtWaitOneTimeout:00000000 chEvtWaitOneTimeout
+     /tmp/ccgJgCXV.s:658    .text.chEvtWaitOneTimeout:00000068 $d
+     /tmp/ccgJgCXV.s:661    .text.chEvtWaitAnyTimeout:00000000 $t
+     /tmp/ccgJgCXV.s:667    .text.chEvtWaitAnyTimeout:00000000 chEvtWaitAnyTimeout
+     /tmp/ccgJgCXV.s:725    .text.chEvtWaitAnyTimeout:00000064 $d
+     /tmp/ccgJgCXV.s:728    .text.chEvtWaitAllTimeout:00000000 $t
+     /tmp/ccgJgCXV.s:734    .text.chEvtWaitAllTimeout:00000000 chEvtWaitAllTimeout
+     /tmp/ccgJgCXV.s:792    .text.chEvtWaitAllTimeout:00000060 $d
+     /tmp/ccgJgCXV.s:795    .rodata.str1.4:00000000 $d
+     /tmp/ccgJgCXV.s:813    .text.chEvtRegisterMask:00000044 $t
+     /tmp/ccgJgCXV.s:124    .text.chEvtUnregister:0000004c $t
+     /tmp/ccgJgCXV.s:197    .text.chEvtAddEvents:0000002c $t
+     /tmp/ccgJgCXV.s:278    .text.chEvtSignalI:0000004c $t
+     /tmp/ccgJgCXV.s:317    .text.chEvtBroadcastFlagsI:00000034 $t
+     /tmp/ccgJgCXV.s:358    .text.chEvtSignal:00000038 $t
+ARM GAS  /tmp/ccgJgCXV.s 			page 18
 
 
-     /tmp/ccE48lfG.s:457    .text.chEvtDispatch:00000054 $t
-     /tmp/ccE48lfG.s:503    .text.chEvtWaitOne:00000044 $t
-     /tmp/ccE48lfG.s:660    .text.chEvtWaitOneTimeout:0000006c $t
-     /tmp/ccE48lfG.s:727    .text.chEvtWaitAnyTimeout:00000068 $t
-     /tmp/ccE48lfG.s:794    .text.chEvtWaitAllTimeout:00000064 $t
+     /tmp/ccgJgCXV.s:457    .text.chEvtDispatch:00000054 $t
+     /tmp/ccgJgCXV.s:503    .text.chEvtWaitOne:00000044 $t
+     /tmp/ccgJgCXV.s:660    .text.chEvtWaitOneTimeout:0000006c $t
+     /tmp/ccgJgCXV.s:727    .text.chEvtWaitAnyTimeout:00000068 $t
+     /tmp/ccgJgCXV.s:794    .text.chEvtWaitAllTimeout:00000064 $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock

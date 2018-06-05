@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cctf0Hsb.s 			page 1
+ARM GAS  /tmp/cczTc3wh.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cctf0Hsb.s 			page 1
   53              		@ link register save eliminated.
   54 0000 0369     		ldr	r3, [r0, #16]
   55 0002 C268     		ldr	r2, [r0, #12]
-ARM GAS  /tmp/cctf0Hsb.s 			page 2
+ARM GAS  /tmp/cczTc3wh.s 			page 2
 
 
   56 0004 9A42     		cmp	r2, r3
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cctf0Hsb.s 			page 1
  108 0006 0446     		mov	r4, r0
  109 0008 ED1A     		subs	r5, r5, r3
  110 000a 4068     		ldr	r0, [r0, #4]
-ARM GAS  /tmp/cctf0Hsb.s 			page 3
+ARM GAS  /tmp/cczTc3wh.s 			page 3
 
 
  111 000c AA42     		cmp	r2, r5
@@ -173,25 +173,25 @@ ARM GAS  /tmp/cctf0Hsb.s 			page 1
  157 0008 00000000 		.word	put
  158 000c 00000000 		.word	get
  159              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cctf0Hsb.s 			page 4
+ARM GAS  /tmp/cczTc3wh.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 memstreams.c
-     /tmp/cctf0Hsb.s:16     .text.put:00000000 $t
-     /tmp/cctf0Hsb.s:21     .text.put:00000000 put
-     /tmp/cctf0Hsb.s:45     .text.get:00000000 $t
-     /tmp/cctf0Hsb.s:50     .text.get:00000000 get
-     /tmp/cctf0Hsb.s:69     .text.reads:00000000 $t
-     /tmp/cctf0Hsb.s:74     .text.reads:00000000 reads
-     /tmp/cctf0Hsb.s:97     .text.writes:00000000 $t
-     /tmp/cctf0Hsb.s:102    .text.writes:00000000 writes
-     /tmp/cctf0Hsb.s:124    .text.msObjectInit:00000000 $t
-     /tmp/cctf0Hsb.s:130    .text.msObjectInit:00000000 msObjectInit
-     /tmp/cctf0Hsb.s:147    .text.msObjectInit:00000014 $d
-     /tmp/cctf0Hsb.s:150    .rodata.vmt:00000000 $d
-     /tmp/cctf0Hsb.s:154    .rodata.vmt:00000000 vmt
-     /tmp/cctf0Hsb.s:149    .text.msObjectInit:00000018 $t
+     /tmp/cczTc3wh.s:16     .text.put:00000000 $t
+     /tmp/cczTc3wh.s:21     .text.put:00000000 put
+     /tmp/cczTc3wh.s:45     .text.get:00000000 $t
+     /tmp/cczTc3wh.s:50     .text.get:00000000 get
+     /tmp/cczTc3wh.s:69     .text.reads:00000000 $t
+     /tmp/cczTc3wh.s:74     .text.reads:00000000 reads
+     /tmp/cczTc3wh.s:97     .text.writes:00000000 $t
+     /tmp/cczTc3wh.s:102    .text.writes:00000000 writes
+     /tmp/cczTc3wh.s:124    .text.msObjectInit:00000000 $t
+     /tmp/cczTc3wh.s:130    .text.msObjectInit:00000000 msObjectInit
+     /tmp/cczTc3wh.s:147    .text.msObjectInit:00000014 $d
+     /tmp/cczTc3wh.s:150    .rodata.vmt:00000000 $d
+     /tmp/cczTc3wh.s:154    .rodata.vmt:00000000 vmt
+     /tmp/cczTc3wh.s:149    .text.msObjectInit:00000018 $t
 
 UNDEFINED SYMBOLS
 memcpy

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccWUSK9D.s 			page 1
+ARM GAS  /tmp/ccIFAJzg.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
   53              		.thumb
   54              		.thumb_func
   55              		.type	uartStart, %function
-ARM GAS  /tmp/ccWUSK9D.s 			page 2
+ARM GAS  /tmp/ccIFAJzg.s 			page 2
 
 
   56              	uartStart:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  110 0000 38B5     		push	{r3, r4, r5, lr}
  111 0002 0446     		mov	r4, r0
  112 0004 C8B1     		cbz	r0, .L16
-ARM GAS  /tmp/ccWUSK9D.s 			page 3
+ARM GAS  /tmp/ccIFAJzg.s 			page 3
 
 
  113              	.L14:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  167              	.L20:
  168 000c 1248     		ldr	r0, .L35
  169 000e FFF7FEFF 		bl	chDbgPanic
-ARM GAS  /tmp/ccWUSK9D.s 			page 4
+ARM GAS  /tmp/ccIFAJzg.s 			page 4
 
 
  170              	.L21:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  222              	uartStartSendI:
  223              		@ args = 0, pretend = 0, frame = 0
  224              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccWUSK9D.s 			page 5
+ARM GAS  /tmp/ccIFAJzg.s 			page 5
 
 
  225 0000 70B5     		push	{r4, r5, r6, lr}
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  277              		@ frame_needed = 0, uses_anonymous_args = 0
  278 0000 38B5     		push	{r3, r4, r5, lr}
  279 0002 0446     		mov	r4, r0
-ARM GAS  /tmp/ccWUSK9D.s 			page 6
+ARM GAS  /tmp/ccIFAJzg.s 			page 6
 
 
  280 0004 E0B1     		cbz	r0, .L63
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  334 0000 10B5     		push	{r4, lr}
  335 0002 0446     		mov	r4, r0
  336 0004 FFF7FEFF 		bl	chDbgCheckClassI
-ARM GAS  /tmp/ccWUSK9D.s 			page 7
+ARM GAS  /tmp/ccIFAJzg.s 			page 7
 
 
  337 0008 84B1     		cbz	r4, .L75
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  391 0018 FFF7FEFF 		bl	dbg_check_lock
  392 001c 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
  393 001e 022B     		cmp	r3, #2
-ARM GAS  /tmp/ccWUSK9D.s 			page 8
+ARM GAS  /tmp/ccIFAJzg.s 			page 8
 
 
  394 0020 02D0     		beq	.L82
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  446 000e 9DB9     		cbnz	r5, .L111
  447              	.L98:
  448 0010 0D48     		ldr	r0, .L113
-ARM GAS  /tmp/ccWUSK9D.s 			page 9
+ARM GAS  /tmp/ccIFAJzg.s 			page 9
 
 
  449 0012 FFF7FEFF 		bl	chDbgPanic
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  501              		.thumb
  502 000c FFF7FEFF 		bl	dbg_check_lock
  503 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
-ARM GAS  /tmp/ccWUSK9D.s 			page 10
+ARM GAS  /tmp/ccIFAJzg.s 			page 10
 
 
  504 0012 022B     		cmp	r3, #2
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  558 0012 FFF7FEFF 		bl	chDbgPanic
  559              	.L129:
  560 0016 A378     		ldrb	r3, [r4, #2]	@ zero_extendqisi2
-ARM GAS  /tmp/ccWUSK9D.s 			page 11
+ARM GAS  /tmp/ccIFAJzg.s 			page 11
 
 
  561 0018 012B     		cmp	r3, #1
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  598      53746172 
  598      7453656E 
  598      6428292C 
-ARM GAS  /tmp/ccWUSK9D.s 			page 12
+ARM GAS  /tmp/ccIFAJzg.s 			page 12
 
 
  598      20233100 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  620      20233100 
  621              	.LC14:
  622 0110 22756172 		.ascii	"\"uartStartReceive\"()\000"
-ARM GAS  /tmp/ccWUSK9D.s 			page 13
+ARM GAS  /tmp/ccIFAJzg.s 			page 13
 
 
  622      74537461 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  643      70526563 
  643      65697665 
  643      49222829 
-ARM GAS  /tmp/ccWUSK9D.s 			page 14
+ARM GAS  /tmp/ccIFAJzg.s 			page 14
 
 
  644 01e1 000000   		.space	3
@@ -789,54 +789,54 @@ ARM GAS  /tmp/ccWUSK9D.s 			page 1
  646      69766549 
  646      28292C20 
  647 01fb 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccWUSK9D.s 			page 15
+ARM GAS  /tmp/ccIFAJzg.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 uart.c
-     /tmp/ccWUSK9D.s:18     .text.uartInit:00000000 $t
-     /tmp/ccWUSK9D.s:24     .text.uartInit:00000000 uartInit
-     /tmp/ccWUSK9D.s:31     .text.uartObjectInit:00000000 $t
-     /tmp/ccWUSK9D.s:37     .text.uartObjectInit:00000000 uartObjectInit
-     /tmp/ccWUSK9D.s:50     .text.uartStart:00000000 $t
-     /tmp/ccWUSK9D.s:56     .text.uartStart:00000000 uartStart
-     /tmp/ccWUSK9D.s:97     .text.uartStart:00000044 $d
-     /tmp/ccWUSK9D.s:101    .text.uartStop:00000000 $t
-     /tmp/ccWUSK9D.s:107    .text.uartStop:00000000 uartStop
-     /tmp/ccWUSK9D.s:148    .text.uartStop:00000044 $d
-     /tmp/ccWUSK9D.s:152    .text.uartStartSend:00000000 $t
-     /tmp/ccWUSK9D.s:158    .text.uartStartSend:00000000 uartStartSend
-     /tmp/ccWUSK9D.s:211    .text.uartStartSend:00000058 $d
-     /tmp/ccWUSK9D.s:216    .text.uartStartSendI:00000000 $t
-     /tmp/ccWUSK9D.s:222    .text.uartStartSendI:00000000 uartStartSendI
-     /tmp/ccWUSK9D.s:264    .text.uartStartSendI:00000048 $d
-     /tmp/ccWUSK9D.s:269    .text.uartStopSend:00000000 $t
-     /tmp/ccWUSK9D.s:275    .text.uartStopSend:00000000 uartStopSend
-     /tmp/ccWUSK9D.s:321    .text.uartStopSend:00000048 $d
-     /tmp/ccWUSK9D.s:325    .text.uartStopSendI:00000000 $t
-     /tmp/ccWUSK9D.s:331    .text.uartStopSendI:00000000 uartStopSendI
-     /tmp/ccWUSK9D.s:363    .text.uartStopSendI:00000034 $d
-     /tmp/ccWUSK9D.s:367    .text.uartStartReceive:00000000 $t
-     /tmp/ccWUSK9D.s:373    .text.uartStartReceive:00000000 uartStartReceive
-     /tmp/ccWUSK9D.s:426    .text.uartStartReceive:00000058 $d
-     /tmp/ccWUSK9D.s:431    .text.uartStartReceiveI:00000000 $t
-     /tmp/ccWUSK9D.s:437    .text.uartStartReceiveI:00000000 uartStartReceiveI
-     /tmp/ccWUSK9D.s:479    .text.uartStartReceiveI:00000048 $d
-     /tmp/ccWUSK9D.s:484    .text.uartStopReceive:00000000 $t
-     /tmp/ccWUSK9D.s:490    .text.uartStopReceive:00000000 uartStopReceive
-     /tmp/ccWUSK9D.s:536    .text.uartStopReceive:00000048 $d
-     /tmp/ccWUSK9D.s:540    .text.uartStopReceiveI:00000000 $t
-     /tmp/ccWUSK9D.s:546    .text.uartStopReceiveI:00000000 uartStopReceiveI
-     /tmp/ccWUSK9D.s:578    .text.uartStopReceiveI:00000034 $d
-     /tmp/ccWUSK9D.s:582    .rodata.str1.4:00000000 $d
-     /tmp/ccWUSK9D.s:100    .text.uartStart:0000004c $t
-     /tmp/ccWUSK9D.s:151    .text.uartStop:0000004c $t
-     /tmp/ccWUSK9D.s:215    .text.uartStartSend:00000064 $t
-     /tmp/ccWUSK9D.s:268    .text.uartStartSendI:00000054 $t
-     /tmp/ccWUSK9D.s:366    .text.uartStopSendI:0000003c $t
-     /tmp/ccWUSK9D.s:430    .text.uartStartReceive:00000064 $t
-     /tmp/ccWUSK9D.s:483    .text.uartStartReceiveI:00000054 $t
-     /tmp/ccWUSK9D.s:581    .text.uartStopReceiveI:0000003c $t
+     /tmp/ccIFAJzg.s:18     .text.uartInit:00000000 $t
+     /tmp/ccIFAJzg.s:24     .text.uartInit:00000000 uartInit
+     /tmp/ccIFAJzg.s:31     .text.uartObjectInit:00000000 $t
+     /tmp/ccIFAJzg.s:37     .text.uartObjectInit:00000000 uartObjectInit
+     /tmp/ccIFAJzg.s:50     .text.uartStart:00000000 $t
+     /tmp/ccIFAJzg.s:56     .text.uartStart:00000000 uartStart
+     /tmp/ccIFAJzg.s:97     .text.uartStart:00000044 $d
+     /tmp/ccIFAJzg.s:101    .text.uartStop:00000000 $t
+     /tmp/ccIFAJzg.s:107    .text.uartStop:00000000 uartStop
+     /tmp/ccIFAJzg.s:148    .text.uartStop:00000044 $d
+     /tmp/ccIFAJzg.s:152    .text.uartStartSend:00000000 $t
+     /tmp/ccIFAJzg.s:158    .text.uartStartSend:00000000 uartStartSend
+     /tmp/ccIFAJzg.s:211    .text.uartStartSend:00000058 $d
+     /tmp/ccIFAJzg.s:216    .text.uartStartSendI:00000000 $t
+     /tmp/ccIFAJzg.s:222    .text.uartStartSendI:00000000 uartStartSendI
+     /tmp/ccIFAJzg.s:264    .text.uartStartSendI:00000048 $d
+     /tmp/ccIFAJzg.s:269    .text.uartStopSend:00000000 $t
+     /tmp/ccIFAJzg.s:275    .text.uartStopSend:00000000 uartStopSend
+     /tmp/ccIFAJzg.s:321    .text.uartStopSend:00000048 $d
+     /tmp/ccIFAJzg.s:325    .text.uartStopSendI:00000000 $t
+     /tmp/ccIFAJzg.s:331    .text.uartStopSendI:00000000 uartStopSendI
+     /tmp/ccIFAJzg.s:363    .text.uartStopSendI:00000034 $d
+     /tmp/ccIFAJzg.s:367    .text.uartStartReceive:00000000 $t
+     /tmp/ccIFAJzg.s:373    .text.uartStartReceive:00000000 uartStartReceive
+     /tmp/ccIFAJzg.s:426    .text.uartStartReceive:00000058 $d
+     /tmp/ccIFAJzg.s:431    .text.uartStartReceiveI:00000000 $t
+     /tmp/ccIFAJzg.s:437    .text.uartStartReceiveI:00000000 uartStartReceiveI
+     /tmp/ccIFAJzg.s:479    .text.uartStartReceiveI:00000048 $d
+     /tmp/ccIFAJzg.s:484    .text.uartStopReceive:00000000 $t
+     /tmp/ccIFAJzg.s:490    .text.uartStopReceive:00000000 uartStopReceive
+     /tmp/ccIFAJzg.s:536    .text.uartStopReceive:00000048 $d
+     /tmp/ccIFAJzg.s:540    .text.uartStopReceiveI:00000000 $t
+     /tmp/ccIFAJzg.s:546    .text.uartStopReceiveI:00000000 uartStopReceiveI
+     /tmp/ccIFAJzg.s:578    .text.uartStopReceiveI:00000034 $d
+     /tmp/ccIFAJzg.s:582    .rodata.str1.4:00000000 $d
+     /tmp/ccIFAJzg.s:100    .text.uartStart:0000004c $t
+     /tmp/ccIFAJzg.s:151    .text.uartStop:0000004c $t
+     /tmp/ccIFAJzg.s:215    .text.uartStartSend:00000064 $t
+     /tmp/ccIFAJzg.s:268    .text.uartStartSendI:00000054 $t
+     /tmp/ccIFAJzg.s:366    .text.uartStopSendI:0000003c $t
+     /tmp/ccIFAJzg.s:430    .text.uartStartReceive:00000064 $t
+     /tmp/ccIFAJzg.s:483    .text.uartStartReceiveI:00000054 $t
+     /tmp/ccIFAJzg.s:581    .text.uartStopReceiveI:0000003c $t
 
 UNDEFINED SYMBOLS
 uart_lld_init
@@ -849,7 +849,7 @@ uart_lld_start_send
 chDbgCheckClassI
 uart_lld_stop_send
 uart_lld_start_receive
-ARM GAS  /tmp/ccWUSK9D.s 			page 16
+ARM GAS  /tmp/ccIFAJzg.s 			page 16
 
 
 uart_lld_stop_receive

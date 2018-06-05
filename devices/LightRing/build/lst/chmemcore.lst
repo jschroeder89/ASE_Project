@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccZBu2nW.s 			page 1
+ARM GAS  /tmp/cclQEA4d.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccZBu2nW.s 			page 1
   54 0002 0446     		mov	r4, r0
   55 0004 FFF7FEFF 		bl	chDbgCheckClassI
   56 0008 074A     		ldr	r2, .L7
-ARM GAS  /tmp/ccZBu2nW.s 			page 2
+ARM GAS  /tmp/cclQEA4d.s 			page 2
 
 
   57 000a 0849     		ldr	r1, .L7+4
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccZBu2nW.s 			page 1
  109              		.global	chCoreStatus
  110              		.thumb
  111              		.thumb_func
-ARM GAS  /tmp/ccZBu2nW.s 			page 3
+ARM GAS  /tmp/cclQEA4d.s 			page 3
 
 
  112              		.type	chCoreStatus, %function
@@ -155,28 +155,28 @@ ARM GAS  /tmp/ccZBu2nW.s 			page 1
  141              	nextmem:
  142 0000 00000000 		.space	4
  143              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccZBu2nW.s 			page 4
+ARM GAS  /tmp/cclQEA4d.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmemcore.c
-     /tmp/ccZBu2nW.s:16     .text._core_init:00000000 $t
-     /tmp/ccZBu2nW.s:22     .text._core_init:00000000 _core_init
-     /tmp/ccZBu2nW.s:38     .text._core_init:00000018 $d
-     /tmp/ccZBu2nW.s:44     .text.chCoreAllocI:00000000 $t
-     /tmp/ccZBu2nW.s:50     .text.chCoreAllocI:00000000 chCoreAllocI
-     /tmp/ccZBu2nW.s:73     .text.chCoreAllocI:00000028 $d
-     /tmp/ccZBu2nW.s:77     .text.chCoreAlloc:00000000 $t
-     /tmp/ccZBu2nW.s:83     .text.chCoreAlloc:00000000 chCoreAlloc
-     /tmp/ccZBu2nW.s:107    .text.chCoreStatus:00000000 $t
-     /tmp/ccZBu2nW.s:113    .text.chCoreStatus:00000000 chCoreStatus
-     /tmp/ccZBu2nW.s:126    .text.chCoreStatus:0000000c $d
-     /tmp/ccZBu2nW.s:130    .bss.endmem:00000000 $d
-     /tmp/ccZBu2nW.s:134    .bss.endmem:00000000 endmem
-     /tmp/ccZBu2nW.s:137    .bss.nextmem:00000000 $d
-     /tmp/ccZBu2nW.s:141    .bss.nextmem:00000000 nextmem
-     /tmp/ccZBu2nW.s:43     .text._core_init:00000028 $t
-     /tmp/ccZBu2nW.s:129    .text.chCoreStatus:00000014 $t
+     /tmp/cclQEA4d.s:16     .text._core_init:00000000 $t
+     /tmp/cclQEA4d.s:22     .text._core_init:00000000 _core_init
+     /tmp/cclQEA4d.s:38     .text._core_init:00000018 $d
+     /tmp/cclQEA4d.s:44     .text.chCoreAllocI:00000000 $t
+     /tmp/cclQEA4d.s:50     .text.chCoreAllocI:00000000 chCoreAllocI
+     /tmp/cclQEA4d.s:73     .text.chCoreAllocI:00000028 $d
+     /tmp/cclQEA4d.s:77     .text.chCoreAlloc:00000000 $t
+     /tmp/cclQEA4d.s:83     .text.chCoreAlloc:00000000 chCoreAlloc
+     /tmp/cclQEA4d.s:107    .text.chCoreStatus:00000000 $t
+     /tmp/cclQEA4d.s:113    .text.chCoreStatus:00000000 chCoreStatus
+     /tmp/cclQEA4d.s:126    .text.chCoreStatus:0000000c $d
+     /tmp/cclQEA4d.s:130    .bss.endmem:00000000 $d
+     /tmp/cclQEA4d.s:134    .bss.endmem:00000000 endmem
+     /tmp/cclQEA4d.s:137    .bss.nextmem:00000000 $d
+     /tmp/cclQEA4d.s:141    .bss.nextmem:00000000 nextmem
+     /tmp/cclQEA4d.s:43     .text._core_init:00000028 $t
+     /tmp/cclQEA4d.s:129    .text.chCoreStatus:00000014 $t
 
 UNDEFINED SYMBOLS
 __heap_base__

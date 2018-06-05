@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccGnO3PK.s 			page 1
+ARM GAS  /tmp/cc3YYFXc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccGnO3PK.s 			page 1
   55              	.L5:
   56 0010 08000000 		.word	.LANCHOR0+8
   57              		.size	_ZN5amiro9A2500R24AD0Ev, .-_ZN5amiro9A2500R24AD0Ev
-ARM GAS  /tmp/ccGnO3PK.s 			page 2
+ARM GAS  /tmp/cc3YYFXc.s 			page 2
 
 
   58 0014 AFF30080 		.section	.text.startup._ZN5amiro9A2500R24A4mainEv,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccGnO3PK.s 			page 1
  109 0020 84E80C00 		stmia	r4, {r2, r3}
  110 0024 03B0     		add	sp, sp, #12
  111              		@ sp needed
-ARM GAS  /tmp/ccGnO3PK.s 			page 3
+ARM GAS  /tmp/cc3YYFXc.s 			page 3
 
 
  112 0026 30BD     		pop	{r4, r5, pc}
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccGnO3PK.s 			page 1
  162              		.align	2
  163              		.p2align 4,,15
  164              		.global	_ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE
-ARM GAS  /tmp/ccGnO3PK.s 			page 4
+ARM GAS  /tmp/cc3YYFXc.s 			page 4
 
 
  165              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccGnO3PK.s 			page 1
  216              		.set	.LANCHOR0,. + 0
  217              		.type	_ZTVN5amiro9A2500R24AE, %object
  218              		.size	_ZTVN5amiro9A2500R24AE, 28
-ARM GAS  /tmp/ccGnO3PK.s 			page 5
+ARM GAS  /tmp/cc3YYFXc.s 			page 5
 
 
  219              	_ZTVN5amiro9A2500R24AE:
@@ -250,40 +250,40 @@ ARM GAS  /tmp/ccGnO3PK.s 			page 1
  225 0014 00000000 		.word	_ZN5amiro9A2500R24AD1Ev
  226 0018 00000000 		.word	_ZN5amiro9A2500R24AD0Ev
  227 001c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccGnO3PK.s 			page 6
+ARM GAS  /tmp/cc3YYFXc.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 a2500r24a.cpp
-     /tmp/ccGnO3PK.s:16     .text._ZN5amiro9A2500R24AD2Ev:00000000 $t
-     /tmp/ccGnO3PK.s:22     .text._ZN5amiro9A2500R24AD2Ev:00000000 _ZN5amiro9A2500R24AD2Ev
-     /tmp/ccGnO3PK.s:32     .text._ZN5amiro9A2500R24AD2Ev:00000008 $d
-     /tmp/ccGnO3PK.s:22     .text._ZN5amiro9A2500R24AD2Ev:00000000 _ZN5amiro9A2500R24AD1Ev
-     /tmp/ccGnO3PK.s:37     .text._ZN5amiro9A2500R24AD0Ev:00000000 $t
-     /tmp/ccGnO3PK.s:43     .text._ZN5amiro9A2500R24AD0Ev:00000000 _ZN5amiro9A2500R24AD0Ev
-     /tmp/ccGnO3PK.s:56     .text._ZN5amiro9A2500R24AD0Ev:00000010 $d
-     /tmp/ccGnO3PK.s:59     .text.startup._ZN5amiro9A2500R24A4mainEv:00000000 $t
-     /tmp/ccGnO3PK.s:65     .text.startup._ZN5amiro9A2500R24A4mainEv:00000000 _ZN5amiro9A2500R24A4mainEv
-     /tmp/ccGnO3PK.s:87     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
-     /tmp/ccGnO3PK.s:93     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
-     /tmp/ccGnO3PK.s:116    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
-     /tmp/ccGnO3PK.s:120    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000000 $t
-     /tmp/ccGnO3PK.s:126    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE
-     /tmp/ccGnO3PK.s:143    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000020 $d
-     /tmp/ccGnO3PK.s:126    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro9A2500R24AC1EPNS_11HWSPIDriverE
-     /tmp/ccGnO3PK.s:148    .text._ZN5amiro9A2500R24A14getEventSourceEv:00000000 $t
-     /tmp/ccGnO3PK.s:154    .text._ZN5amiro9A2500R24A14getEventSourceEv:00000000 _ZN5amiro9A2500R24A14getEventSourceEv
-     /tmp/ccGnO3PK.s:162    .text._ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE:00000000 $t
-     /tmp/ccGnO3PK.s:168    .text._ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE:00000000 _ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE
-     /tmp/ccGnO3PK.s:176    .text._ZN5amiro9A2500R24A8getCheckEv:00000000 $t
-     /tmp/ccGnO3PK.s:182    .text._ZN5amiro9A2500R24A8getCheckEv:00000000 _ZN5amiro9A2500R24A8getCheckEv
-     /tmp/ccGnO3PK.s:207    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
-     /tmp/ccGnO3PK.s:204    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
-     /tmp/ccGnO3PK.s:219    .rodata._ZTVN5amiro9A2500R24AE:00000000 _ZTVN5amiro9A2500R24AE
-     /tmp/ccGnO3PK.s:215    .rodata._ZTVN5amiro9A2500R24AE:00000000 $d
-     /tmp/ccGnO3PK.s:36     .text._ZN5amiro9A2500R24AD2Ev:0000000c $t
-     /tmp/ccGnO3PK.s:58     .text._ZN5amiro9A2500R24AD0Ev:00000014 $t
-     /tmp/ccGnO3PK.s:147    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000024 $t
+     /tmp/cc3YYFXc.s:16     .text._ZN5amiro9A2500R24AD2Ev:00000000 $t
+     /tmp/cc3YYFXc.s:22     .text._ZN5amiro9A2500R24AD2Ev:00000000 _ZN5amiro9A2500R24AD2Ev
+     /tmp/cc3YYFXc.s:32     .text._ZN5amiro9A2500R24AD2Ev:00000008 $d
+     /tmp/cc3YYFXc.s:22     .text._ZN5amiro9A2500R24AD2Ev:00000000 _ZN5amiro9A2500R24AD1Ev
+     /tmp/cc3YYFXc.s:37     .text._ZN5amiro9A2500R24AD0Ev:00000000 $t
+     /tmp/cc3YYFXc.s:43     .text._ZN5amiro9A2500R24AD0Ev:00000000 _ZN5amiro9A2500R24AD0Ev
+     /tmp/cc3YYFXc.s:56     .text._ZN5amiro9A2500R24AD0Ev:00000010 $d
+     /tmp/cc3YYFXc.s:59     .text.startup._ZN5amiro9A2500R24A4mainEv:00000000 $t
+     /tmp/cc3YYFXc.s:65     .text.startup._ZN5amiro9A2500R24A4mainEv:00000000 _ZN5amiro9A2500R24A4mainEv
+     /tmp/cc3YYFXc.s:87     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 $t
+     /tmp/cc3YYFXc.s:93     .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi256EE5startEm
+     /tmp/cc3YYFXc.s:116    .text._ZN10chibios_rt16BaseStaticThreadILi256EE5startEm:00000028 $d
+     /tmp/cc3YYFXc.s:120    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000000 $t
+     /tmp/cc3YYFXc.s:126    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE
+     /tmp/cc3YYFXc.s:143    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000020 $d
+     /tmp/cc3YYFXc.s:126    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000000 _ZN5amiro9A2500R24AC1EPNS_11HWSPIDriverE
+     /tmp/cc3YYFXc.s:148    .text._ZN5amiro9A2500R24A14getEventSourceEv:00000000 $t
+     /tmp/cc3YYFXc.s:154    .text._ZN5amiro9A2500R24A14getEventSourceEv:00000000 _ZN5amiro9A2500R24A14getEventSourceEv
+     /tmp/cc3YYFXc.s:162    .text._ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE:00000000 $t
+     /tmp/cc3YYFXc.s:168    .text._ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE:00000000 _ZN5amiro9A2500R24A9configureEPNS0_15A2500R24AConfigE
+     /tmp/cc3YYFXc.s:176    .text._ZN5amiro9A2500R24A8getCheckEv:00000000 $t
+     /tmp/cc3YYFXc.s:182    .text._ZN5amiro9A2500R24A8getCheckEv:00000000 _ZN5amiro9A2500R24A8getCheckEv
+     /tmp/cc3YYFXc.s:207    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi256EEE
+     /tmp/cc3YYFXc.s:204    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi256EEE:00000000 $d
+     /tmp/cc3YYFXc.s:219    .rodata._ZTVN5amiro9A2500R24AE:00000000 _ZTVN5amiro9A2500R24AE
+     /tmp/cc3YYFXc.s:215    .rodata._ZTVN5amiro9A2500R24AE:00000000 $d
+     /tmp/cc3YYFXc.s:36     .text._ZN5amiro9A2500R24AD2Ev:0000000c $t
+     /tmp/cc3YYFXc.s:58     .text._ZN5amiro9A2500R24AD0Ev:00000014 $t
+     /tmp/cc3YYFXc.s:147    .text._ZN5amiro9A2500R24AC2EPNS_11HWSPIDriverE:00000024 $t
 
 UNDEFINED SYMBOLS
 _ZdlPv

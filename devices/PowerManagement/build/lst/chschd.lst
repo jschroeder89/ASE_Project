@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccD1z2Qa.s 			page 1
+ARM GAS  /tmp/ccKRj0EB.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccD1z2Qa.s 			page 1
   53 0004 FFF7FEFF 		bl	chDbgCheckClassI
   54 0008 94F82030 		ldrb	r3, [r4, #32]	@ zero_extendqisi2
   55 000c 8BB1     		cbz	r3, .L5
-ARM GAS  /tmp/ccD1z2Qa.s 			page 2
+ARM GAS  /tmp/ccKRj0EB.s 			page 2
 
 
   56 000e 0E2B     		cmp	r3, #14
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccD1z2Qa.s 			page 1
  108 001b 10       		.byte	(.L16-.L18)/2
  109 001c 10       		.byte	(.L16-.L18)/2
  110 001d 07       		.byte	(.L19-.L18)/2
-ARM GAS  /tmp/ccD1z2Qa.s 			page 3
+ARM GAS  /tmp/ccKRj0EB.s 			page 3
 
 
  111 001e 10       		.byte	(.L16-.L18)/2
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccD1z2Qa.s 			page 1
  162 000e 1A68     		ldr	r2, [r3]
  163 0010 85F82060 		strb	r6, [r5, #32]
  164 0014 1420     		movs	r0, #20
-ARM GAS  /tmp/ccD1z2Qa.s 			page 4
+ARM GAS  /tmp/ccKRj0EB.s 			page 4
 
 
  165 0016 0121     		movs	r1, #1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccD1z2Qa.s 			page 1
  219              	.L30:
  220 002e AB69     		ldr	r3, [r5, #24]
  221 0030 986A     		ldr	r0, [r3, #40]
-ARM GAS  /tmp/ccD1z2Qa.s 			page 5
+ARM GAS  /tmp/ccKRj0EB.s 			page 5
 
 
  222 0032 06B0     		add	sp, sp, #24
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccD1z2Qa.s 			page 1
  276 0040 2046     		mov	r0, r4
  277 0042 BDE87040 		pop	{r4, r5, r6, lr}
  278 0046 FFF7FEBF 		b	chSchReadyI
-ARM GAS  /tmp/ccD1z2Qa.s 			page 6
+ARM GAS  /tmp/ccKRj0EB.s 			page 6
 
 
  279              	.L40:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccD1z2Qa.s 			page 1
  331              	.L45:
  332 0044 00000000 		.word	.LANCHOR0
  333 0048 14000000 		.word	.LC1
-ARM GAS  /tmp/ccD1z2Qa.s 			page 7
+ARM GAS  /tmp/ccKRj0EB.s 			page 7
 
 
  334              		.size	chSchDoRescheduleBehind, .-chSchDoRescheduleBehind
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccD1z2Qa.s 			page 1
  388 005c 14000000 		.word	.LC1
  389              		.size	chSchDoRescheduleAhead, .-chSchDoRescheduleAhead
  390              		.section	.text.chSchRescheduleS,"ax",%progbits
-ARM GAS  /tmp/ccD1z2Qa.s 			page 8
+ARM GAS  /tmp/ccKRj0EB.s 			page 8
 
 
  391              		.align	2
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccD1z2Qa.s 			page 1
  442      AFF30080 
  443              		.align	2
  444              	.LC0:
-ARM GAS  /tmp/ccD1z2Qa.s 			page 9
+ARM GAS  /tmp/ccKRj0EB.s 			page 9
 
 
  445 0000 63685363 		.ascii	"chSchReadyI(), #1\000"
@@ -504,51 +504,51 @@ ARM GAS  /tmp/ccD1z2Qa.s 			page 1
  455      00000000 
  455      00000000 
  456              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccD1z2Qa.s 			page 10
+ARM GAS  /tmp/ccKRj0EB.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chschd.c
-     /tmp/ccD1z2Qa.s:18     .text._scheduler_init:00000000 $t
-     /tmp/ccD1z2Qa.s:24     .text._scheduler_init:00000000 _scheduler_init
-     /tmp/ccD1z2Qa.s:39     .text._scheduler_init:00000010 $d
-     /tmp/ccD1z2Qa.s:42     .text.chSchReadyI:00000000 $t
-     /tmp/ccD1z2Qa.s:48     .text.chSchReadyI:00000000 chSchReadyI
-     /tmp/ccD1z2Qa.s:82     .text.chSchReadyI:0000003c $d
-     /tmp/ccD1z2Qa.s:86     .text.wakeup:00000000 $t
-     /tmp/ccD1z2Qa.s:91     .text.wakeup:00000000 wakeup
-     /tmp/ccD1z2Qa.s:107    .text.wakeup:0000001a $d
-     /tmp/ccD1z2Qa.s:121    .text.wakeup:00000028 $t
-     /tmp/ccD1z2Qa.s:147    .text.chSchGoSleepS:00000000 $t
-     /tmp/ccD1z2Qa.s:153    .text.chSchGoSleepS:00000000 chSchGoSleepS
-     /tmp/ccD1z2Qa.s:187    .text.chSchGoSleepS:00000048 $d
-     /tmp/ccD1z2Qa.s:191    .text.chSchGoSleepTimeoutS:00000000 $t
-     /tmp/ccD1z2Qa.s:197    .text.chSchGoSleepTimeoutS:00000000 chSchGoSleepTimeoutS
-     /tmp/ccD1z2Qa.s:237    .text.chSchGoSleepTimeoutS:00000048 $d
-     /tmp/ccD1z2Qa.s:241    .text.chSchWakeupS:00000000 $t
-     /tmp/ccD1z2Qa.s:247    .text.chSchWakeupS:00000000 chSchWakeupS
-     /tmp/ccD1z2Qa.s:289    .text.chSchWakeupS:0000005c $d
-     /tmp/ccD1z2Qa.s:293    .text.chSchDoRescheduleBehind:00000000 $t
-     /tmp/ccD1z2Qa.s:299    .text.chSchDoRescheduleBehind:00000000 chSchDoRescheduleBehind
-     /tmp/ccD1z2Qa.s:332    .text.chSchDoRescheduleBehind:00000044 $d
-     /tmp/ccD1z2Qa.s:336    .text.chSchDoRescheduleAhead:00000000 $t
-     /tmp/ccD1z2Qa.s:342    .text.chSchDoRescheduleAhead:00000000 chSchDoRescheduleAhead
-     /tmp/ccD1z2Qa.s:387    .text.chSchDoRescheduleAhead:00000058 $d
-     /tmp/ccD1z2Qa.s:391    .text.chSchRescheduleS:00000000 $t
-     /tmp/ccD1z2Qa.s:397    .text.chSchRescheduleS:00000000 chSchRescheduleS
-     /tmp/ccD1z2Qa.s:416    .text.chSchRescheduleS:00000020 $d
-     /tmp/ccD1z2Qa.s:419    .text.chSchDoReschedule:00000000 $t
-     /tmp/ccD1z2Qa.s:425    .text.chSchDoReschedule:00000000 chSchDoReschedule
-     /tmp/ccD1z2Qa.s:439    .text.chSchDoReschedule:00000014 $d
-     /tmp/ccD1z2Qa.s:454    .bss.rlist:00000000 rlist
-     /tmp/ccD1z2Qa.s:443    .rodata.str1.4:00000000 $d
-     /tmp/ccD1z2Qa.s:450    .bss.rlist:00000000 $d
-     /tmp/ccD1z2Qa.s:41     .text._scheduler_init:00000014 $t
-     /tmp/ccD1z2Qa.s:85     .text.chSchReadyI:00000044 $t
-     /tmp/ccD1z2Qa.s:292    .text.chSchWakeupS:00000064 $t
-     /tmp/ccD1z2Qa.s:335    .text.chSchDoRescheduleBehind:0000004c $t
-     /tmp/ccD1z2Qa.s:418    .text.chSchRescheduleS:00000024 $t
-     /tmp/ccD1z2Qa.s:442    .text.chSchDoReschedule:00000018 $t
+     /tmp/ccKRj0EB.s:18     .text._scheduler_init:00000000 $t
+     /tmp/ccKRj0EB.s:24     .text._scheduler_init:00000000 _scheduler_init
+     /tmp/ccKRj0EB.s:39     .text._scheduler_init:00000010 $d
+     /tmp/ccKRj0EB.s:42     .text.chSchReadyI:00000000 $t
+     /tmp/ccKRj0EB.s:48     .text.chSchReadyI:00000000 chSchReadyI
+     /tmp/ccKRj0EB.s:82     .text.chSchReadyI:0000003c $d
+     /tmp/ccKRj0EB.s:86     .text.wakeup:00000000 $t
+     /tmp/ccKRj0EB.s:91     .text.wakeup:00000000 wakeup
+     /tmp/ccKRj0EB.s:107    .text.wakeup:0000001a $d
+     /tmp/ccKRj0EB.s:121    .text.wakeup:00000028 $t
+     /tmp/ccKRj0EB.s:147    .text.chSchGoSleepS:00000000 $t
+     /tmp/ccKRj0EB.s:153    .text.chSchGoSleepS:00000000 chSchGoSleepS
+     /tmp/ccKRj0EB.s:187    .text.chSchGoSleepS:00000048 $d
+     /tmp/ccKRj0EB.s:191    .text.chSchGoSleepTimeoutS:00000000 $t
+     /tmp/ccKRj0EB.s:197    .text.chSchGoSleepTimeoutS:00000000 chSchGoSleepTimeoutS
+     /tmp/ccKRj0EB.s:237    .text.chSchGoSleepTimeoutS:00000048 $d
+     /tmp/ccKRj0EB.s:241    .text.chSchWakeupS:00000000 $t
+     /tmp/ccKRj0EB.s:247    .text.chSchWakeupS:00000000 chSchWakeupS
+     /tmp/ccKRj0EB.s:289    .text.chSchWakeupS:0000005c $d
+     /tmp/ccKRj0EB.s:293    .text.chSchDoRescheduleBehind:00000000 $t
+     /tmp/ccKRj0EB.s:299    .text.chSchDoRescheduleBehind:00000000 chSchDoRescheduleBehind
+     /tmp/ccKRj0EB.s:332    .text.chSchDoRescheduleBehind:00000044 $d
+     /tmp/ccKRj0EB.s:336    .text.chSchDoRescheduleAhead:00000000 $t
+     /tmp/ccKRj0EB.s:342    .text.chSchDoRescheduleAhead:00000000 chSchDoRescheduleAhead
+     /tmp/ccKRj0EB.s:387    .text.chSchDoRescheduleAhead:00000058 $d
+     /tmp/ccKRj0EB.s:391    .text.chSchRescheduleS:00000000 $t
+     /tmp/ccKRj0EB.s:397    .text.chSchRescheduleS:00000000 chSchRescheduleS
+     /tmp/ccKRj0EB.s:416    .text.chSchRescheduleS:00000020 $d
+     /tmp/ccKRj0EB.s:419    .text.chSchDoReschedule:00000000 $t
+     /tmp/ccKRj0EB.s:425    .text.chSchDoReschedule:00000000 chSchDoReschedule
+     /tmp/ccKRj0EB.s:439    .text.chSchDoReschedule:00000014 $d
+     /tmp/ccKRj0EB.s:454    .bss.rlist:00000000 rlist
+     /tmp/ccKRj0EB.s:443    .rodata.str1.4:00000000 $d
+     /tmp/ccKRj0EB.s:450    .bss.rlist:00000000 $d
+     /tmp/ccKRj0EB.s:41     .text._scheduler_init:00000014 $t
+     /tmp/ccKRj0EB.s:85     .text.chSchReadyI:00000044 $t
+     /tmp/ccKRj0EB.s:292    .text.chSchWakeupS:00000064 $t
+     /tmp/ccKRj0EB.s:335    .text.chSchDoRescheduleBehind:0000004c $t
+     /tmp/ccKRj0EB.s:418    .text.chSchRescheduleS:00000024 $t
+     /tmp/ccKRj0EB.s:442    .text.chSchDoReschedule:00000018 $t
 
 UNDEFINED SYMBOLS
 chDbgCheckClassI

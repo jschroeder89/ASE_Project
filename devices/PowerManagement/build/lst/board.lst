@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccm4cbfD.s 			page 1
+ARM GAS  /tmp/ccGUM8Cq.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
   50              	boardWriteIoPower:
   51              		@ args = 0, pretend = 0, frame = 0
   52              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccm4cbfD.s 			page 2
+ARM GAS  /tmp/ccGUM8Cq.s 			page 2
 
 
   53 0000 38B5     		push	{r3, r4, r5, lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  107              		.thumb_func
  108              		.type	boardWriteLed, %function
  109              	boardWriteLed:
-ARM GAS  /tmp/ccm4cbfD.s 			page 3
+ARM GAS  /tmp/ccGUM8Cq.s 			page 3
 
 
  110              		@ args = 0, pretend = 0, frame = 0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  163 0006 0022     		movne	r2, #0
  164 0008 4FF48042 		moveq	r2, #16384
  165 000c 034B     		ldr	r3, .L24
-ARM GAS  /tmp/ccm4cbfD.s 			page 4
+ARM GAS  /tmp/ccGUM8Cq.s 			page 4
 
 
  166 000e 42EA8070 		orr	r0, r2, r0, lsl #30
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  220              		.thumb_func
  221              		.type	boardBluetoothSetState, %function
  222              	boardBluetoothSetState:
-ARM GAS  /tmp/ccm4cbfD.s 			page 5
+ARM GAS  /tmp/ccGUM8Cq.s 			page 5
 
 
  223              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  277 000e 0B4B     		ldr	r3, .L50+4
  278 0010 0869     		ldr	r0, [r1, #16]
  279 0012 0B4A     		ldr	r2, .L50+8
-ARM GAS  /tmp/ccm4cbfD.s 			page 6
+ARM GAS  /tmp/ccGUM8Cq.s 			page 6
 
 
  280 0014 40F00400 		orr	r0, r0, #4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  332 002a 42F00C02 		orr	r2, r2, #12
  333 002e 1A60     		str	r2, [r3]
  334 0030 1CB1     		cbz	r4, .L53
-ARM GAS  /tmp/ccm4cbfD.s 			page 7
+ARM GAS  /tmp/ccGUM8Cq.s 			page 7
 
 
  335 0032 1A68     		ldr	r2, [r3]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  388      AFF30080 
  389              		.align	2
  390              		.p2align 4,,15
-ARM GAS  /tmp/ccm4cbfD.s 			page 8
+ARM GAS  /tmp/ccGUM8Cq.s 			page 8
 
 
  391              		.global	boardClearI2CBus
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  445 0086 A5F81AA0 		strh	r10, [r5, #26]	@ movhi
  446 008a FFF7FEFF 		bl	chThdSleep
  447 008e 0120     		movs	r0, #1
-ARM GAS  /tmp/ccm4cbfD.s 			page 9
+ARM GAS  /tmp/ccGUM8Cq.s 			page 9
 
 
  448 0090 6C83     		strh	r4, [r5, #26]	@ movhi
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  502 0016 FFF7FEFF 		bl	_pal_lld_setgroupmode
  503 001a 1FFA88F4 		uxth	r4, r8
  504 001e 1FFA87FA 		uxth	r10, r7
-ARM GAS  /tmp/ccm4cbfD.s 			page 10
+ARM GAS  /tmp/ccGUM8Cq.s 			page 10
 
 
  505 0022 3946     		mov	r1, r7
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  559 00ba 2C83     		strh	r4, [r5, #24]	@ movhi
  560 00bc FFF7FEFF 		bl	chThdSleep
  561 00c0 0120     		movs	r0, #1
-ARM GAS  /tmp/ccm4cbfD.s 			page 11
+ARM GAS  /tmp/ccGUM8Cq.s 			page 11
 
 
  562 00c2 A5F818A0 		strh	r10, [r5, #24]	@ movhi
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  616 0048 FFEE0000 		.word	61183
  617 004c 00000000 		.word	0
  618 0050 00770000 		.word	30464
-ARM GAS  /tmp/ccm4cbfD.s 			page 12
+ARM GAS  /tmp/ccGUM8Cq.s 			page 12
 
 
  619 0054 10000000 		.word	16
@@ -704,67 +704,67 @@ ARM GAS  /tmp/ccm4cbfD.s 			page 1
  659 00f4 00000000 		.word	0
  660 00f8 00000000 		.word	0
  661              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccm4cbfD.s 			page 13
+ARM GAS  /tmp/ccGUM8Cq.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 board.c
-     /tmp/ccm4cbfD.s:18     .text.__early_init:00000000 $t
-     /tmp/ccm4cbfD.s:24     .text.__early_init:00000000 __early_init
-     /tmp/ccm4cbfD.s:31     .text.boardInit:00000000 $t
-     /tmp/ccm4cbfD.s:37     .text.boardInit:00000000 boardInit
-     /tmp/ccm4cbfD.s:44     .text.boardWriteIoPower:00000000 $t
-     /tmp/ccm4cbfD.s:50     .text.boardWriteIoPower:00000000 boardWriteIoPower
-     /tmp/ccm4cbfD.s:99     .text.boardWriteIoPower:00000078 $d
-     /tmp/ccm4cbfD.s:103    .text.boardWriteLed:00000000 $t
-     /tmp/ccm4cbfD.s:109    .text.boardWriteLed:00000000 boardWriteLed
-     /tmp/ccm4cbfD.s:123    .text.boardWriteLed:00000014 $d
-     /tmp/ccm4cbfD.s:126    .text.boardWriteSystemPower:00000000 $t
-     /tmp/ccm4cbfD.s:132    .text.boardWriteSystemPower:00000000 boardWriteSystemPower
-     /tmp/ccm4cbfD.s:148    .text.boardWriteSystemPower:0000001c $d
-     /tmp/ccm4cbfD.s:151    .text.boardWriteWarmRestart:00000000 $t
-     /tmp/ccm4cbfD.s:157    .text.boardWriteWarmRestart:00000000 boardWriteWarmRestart
-     /tmp/ccm4cbfD.s:173    .text.boardWriteWarmRestart:0000001c $d
-     /tmp/ccm4cbfD.s:176    .text.boardChargerSetState:00000000 $t
-     /tmp/ccm4cbfD.s:182    .text.boardChargerSetState:00000000 boardChargerSetState
-     /tmp/ccm4cbfD.s:212    .text.boardChargerSetState:00000034 $d
-     /tmp/ccm4cbfD.s:216    .text.boardBluetoothSetState:00000000 $t
-     /tmp/ccm4cbfD.s:222    .text.boardBluetoothSetState:00000000 boardBluetoothSetState
-     /tmp/ccm4cbfD.s:237    .text.boardBluetoothSetState:00000018 $d
-     /tmp/ccm4cbfD.s:240    .text.boardRequestShutdown:00000000 $t
-     /tmp/ccm4cbfD.s:246    .text.boardRequestShutdown:00000000 boardRequestShutdown
-     /tmp/ccm4cbfD.s:257    .text.boardRequestShutdown:0000000c $d
-     /tmp/ccm4cbfD.s:260    .text.boardStandby:00000000 $t
-     /tmp/ccm4cbfD.s:266    .text.boardStandby:00000000 boardStandby
-     /tmp/ccm4cbfD.s:299    .text.boardStandby:00000038 $d
-     /tmp/ccm4cbfD.s:304    .text.boardStop:00000000 $t
-     /tmp/ccm4cbfD.s:310    .text.boardStop:00000000 boardStop
-     /tmp/ccm4cbfD.s:360    .text.boardStop:0000005c $d
-     /tmp/ccm4cbfD.s:366    .text.boardWakeup:00000000 $t
-     /tmp/ccm4cbfD.s:372    .text.boardWakeup:00000000 boardWakeup
-     /tmp/ccm4cbfD.s:386    .text.boardWakeup:00000014 $d
-     /tmp/ccm4cbfD.s:389    .text.boardClearI2CBus:00000000 $t
-     /tmp/ccm4cbfD.s:395    .text.boardClearI2CBus:00000000 boardClearI2CBus
-     /tmp/ccm4cbfD.s:482    .text.boardClearI2CBus:000000e8 $d
-     /tmp/ccm4cbfD.s:485    .text.boardResetBQ27500I2C:00000000 $t
-     /tmp/ccm4cbfD.s:491    .text.boardResetBQ27500I2C:00000000 boardResetBQ27500I2C
-     /tmp/ccm4cbfD.s:590    .text.boardResetBQ27500I2C:00000108 $d
-     /tmp/ccm4cbfD.s:597    .rodata.pal_default_config:00000000 pal_default_config
-     /tmp/ccm4cbfD.s:594    .rodata.pal_default_config:00000000 $d
-     /tmp/ccm4cbfD.s:125    .text.boardWriteLed:00000018 $t
-     /tmp/ccm4cbfD.s:215    .text.boardChargerSetState:0000003c $t
-     /tmp/ccm4cbfD.s:661    .text.boardBluetoothSetState:0000001c $t
-     /tmp/ccm4cbfD.s:303    .text.boardStandby:00000044 $t
-     /tmp/ccm4cbfD.s:365    .text.boardStop:0000006c $t
-     /tmp/ccm4cbfD.s:388    .text.boardWakeup:00000018 $t
-     /tmp/ccm4cbfD.s:661    .text.boardClearI2CBus:000000ec $t
-     /tmp/ccm4cbfD.s:593    .text.boardResetBQ27500I2C:0000010c $t
+     /tmp/ccGUM8Cq.s:18     .text.__early_init:00000000 $t
+     /tmp/ccGUM8Cq.s:24     .text.__early_init:00000000 __early_init
+     /tmp/ccGUM8Cq.s:31     .text.boardInit:00000000 $t
+     /tmp/ccGUM8Cq.s:37     .text.boardInit:00000000 boardInit
+     /tmp/ccGUM8Cq.s:44     .text.boardWriteIoPower:00000000 $t
+     /tmp/ccGUM8Cq.s:50     .text.boardWriteIoPower:00000000 boardWriteIoPower
+     /tmp/ccGUM8Cq.s:99     .text.boardWriteIoPower:00000078 $d
+     /tmp/ccGUM8Cq.s:103    .text.boardWriteLed:00000000 $t
+     /tmp/ccGUM8Cq.s:109    .text.boardWriteLed:00000000 boardWriteLed
+     /tmp/ccGUM8Cq.s:123    .text.boardWriteLed:00000014 $d
+     /tmp/ccGUM8Cq.s:126    .text.boardWriteSystemPower:00000000 $t
+     /tmp/ccGUM8Cq.s:132    .text.boardWriteSystemPower:00000000 boardWriteSystemPower
+     /tmp/ccGUM8Cq.s:148    .text.boardWriteSystemPower:0000001c $d
+     /tmp/ccGUM8Cq.s:151    .text.boardWriteWarmRestart:00000000 $t
+     /tmp/ccGUM8Cq.s:157    .text.boardWriteWarmRestart:00000000 boardWriteWarmRestart
+     /tmp/ccGUM8Cq.s:173    .text.boardWriteWarmRestart:0000001c $d
+     /tmp/ccGUM8Cq.s:176    .text.boardChargerSetState:00000000 $t
+     /tmp/ccGUM8Cq.s:182    .text.boardChargerSetState:00000000 boardChargerSetState
+     /tmp/ccGUM8Cq.s:212    .text.boardChargerSetState:00000034 $d
+     /tmp/ccGUM8Cq.s:216    .text.boardBluetoothSetState:00000000 $t
+     /tmp/ccGUM8Cq.s:222    .text.boardBluetoothSetState:00000000 boardBluetoothSetState
+     /tmp/ccGUM8Cq.s:237    .text.boardBluetoothSetState:00000018 $d
+     /tmp/ccGUM8Cq.s:240    .text.boardRequestShutdown:00000000 $t
+     /tmp/ccGUM8Cq.s:246    .text.boardRequestShutdown:00000000 boardRequestShutdown
+     /tmp/ccGUM8Cq.s:257    .text.boardRequestShutdown:0000000c $d
+     /tmp/ccGUM8Cq.s:260    .text.boardStandby:00000000 $t
+     /tmp/ccGUM8Cq.s:266    .text.boardStandby:00000000 boardStandby
+     /tmp/ccGUM8Cq.s:299    .text.boardStandby:00000038 $d
+     /tmp/ccGUM8Cq.s:304    .text.boardStop:00000000 $t
+     /tmp/ccGUM8Cq.s:310    .text.boardStop:00000000 boardStop
+     /tmp/ccGUM8Cq.s:360    .text.boardStop:0000005c $d
+     /tmp/ccGUM8Cq.s:366    .text.boardWakeup:00000000 $t
+     /tmp/ccGUM8Cq.s:372    .text.boardWakeup:00000000 boardWakeup
+     /tmp/ccGUM8Cq.s:386    .text.boardWakeup:00000014 $d
+     /tmp/ccGUM8Cq.s:389    .text.boardClearI2CBus:00000000 $t
+     /tmp/ccGUM8Cq.s:395    .text.boardClearI2CBus:00000000 boardClearI2CBus
+     /tmp/ccGUM8Cq.s:482    .text.boardClearI2CBus:000000e8 $d
+     /tmp/ccGUM8Cq.s:485    .text.boardResetBQ27500I2C:00000000 $t
+     /tmp/ccGUM8Cq.s:491    .text.boardResetBQ27500I2C:00000000 boardResetBQ27500I2C
+     /tmp/ccGUM8Cq.s:590    .text.boardResetBQ27500I2C:00000108 $d
+     /tmp/ccGUM8Cq.s:597    .rodata.pal_default_config:00000000 pal_default_config
+     /tmp/ccGUM8Cq.s:594    .rodata.pal_default_config:00000000 $d
+     /tmp/ccGUM8Cq.s:125    .text.boardWriteLed:00000018 $t
+     /tmp/ccGUM8Cq.s:215    .text.boardChargerSetState:0000003c $t
+     /tmp/ccGUM8Cq.s:661    .text.boardBluetoothSetState:0000001c $t
+     /tmp/ccGUM8Cq.s:303    .text.boardStandby:00000044 $t
+     /tmp/ccGUM8Cq.s:365    .text.boardStop:0000006c $t
+     /tmp/ccGUM8Cq.s:388    .text.boardWakeup:00000018 $t
+     /tmp/ccGUM8Cq.s:661    .text.boardClearI2CBus:000000ec $t
+     /tmp/ccGUM8Cq.s:593    .text.boardResetBQ27500I2C:0000010c $t
 
 UNDEFINED SYMBOLS
 stm32_clock_init
 _pal_lld_setgroupmode
 chThdSleep
-ARM GAS  /tmp/ccm4cbfD.s 			page 14
+ARM GAS  /tmp/ccGUM8Cq.s 			page 14
 
 
 dbg_check_lock

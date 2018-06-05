@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccM41vxo.s 			page 1
+ARM GAS  /tmp/ccoF1ndA.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccM41vxo.s 			page 1
   55 0002 0446     		mov	r4, r0
   56 0004 98B1     		cbz	r0, .L10
   57              	.L8:
-ARM GAS  /tmp/ccM41vxo.s 			page 2
+ARM GAS  /tmp/ccoF1ndA.s 			page 2
 
 
   58 0006 2023     		movs	r3, #32
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccM41vxo.s 			page 1
  112 001c 8362     		str	r3, [r0, #40]
  113              	.L13:
  114 001e 10BD     		pop	{r4, pc}
-ARM GAS  /tmp/ccM41vxo.s 			page 3
+ARM GAS  /tmp/ccoF1ndA.s 			page 3
 
 
  115              	.L16:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccM41vxo.s 			page 1
  167              		.thumb
  168              		.thumb_func
  169              		.type	chCondBroadcast, %function
-ARM GAS  /tmp/ccM41vxo.s 			page 4
+ARM GAS  /tmp/ccoF1ndA.s 			page 4
 
 
  170              	chCondBroadcast:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccM41vxo.s 			page 1
  222              	.L33:
  223 0026 1B68     		ldr	r3, [r3]
  224 0028 9D42     		cmp	r5, r3
-ARM GAS  /tmp/ccM41vxo.s 			page 5
+ARM GAS  /tmp/ccoF1ndA.s 			page 5
 
 
  225 002a F8D1     		bne	.L37
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccM41vxo.s 			page 1
  277              	@ 163 "../../../ChibiOS/os/kernel/src/chcond.c" 1
  278 001c 83F31188 		msr     BASEPRI, r3
  279              	@ 0 "" 2
-ARM GAS  /tmp/ccM41vxo.s 			page 6
+ARM GAS  /tmp/ccoF1ndA.s 			page 6
 
 
  280              		.thumb
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccM41vxo.s 			page 1
  332 004c 0446     		mov	r4, r0
  333 004e 02D0     		beq	.L47
  334 0050 3846     		mov	r0, r7
-ARM GAS  /tmp/ccM41vxo.s 			page 7
+ARM GAS  /tmp/ccoF1ndA.s 			page 7
 
 
  335 0052 FFF7FEFF 		bl	chMtxLockS
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccM41vxo.s 			page 1
  387              		.align	2
  388              	.LC0:
  389 0000 22636843 		.ascii	"\"chCondInit\"()\000"
-ARM GAS  /tmp/ccM41vxo.s 			page 8
+ARM GAS  /tmp/ccoF1ndA.s 			page 8
 
 
  389      6F6E6449 
@@ -472,42 +472,42 @@ ARM GAS  /tmp/ccM41vxo.s 			page 1
  409      6D656F75 
  409      74532829 
  410 00a5 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccM41vxo.s 			page 9
+ARM GAS  /tmp/ccoF1ndA.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chcond.c
-     /tmp/ccM41vxo.s:18     .text.chCondInit:00000000 $t
-     /tmp/ccM41vxo.s:24     .text.chCondInit:00000000 chCondInit
-     /tmp/ccM41vxo.s:42     .text.chCondInit:00000018 $d
-     /tmp/ccM41vxo.s:45     .text.chCondSignal:00000000 $t
-     /tmp/ccM41vxo.s:51     .text.chCondSignal:00000000 chCondSignal
-     /tmp/ccM41vxo.s:87     .text.chCondSignal:00000038 $d
-     /tmp/ccM41vxo.s:90     .text.chCondSignalI:00000000 $t
-     /tmp/ccM41vxo.s:96     .text.chCondSignalI:00000000 chCondSignalI
-     /tmp/ccM41vxo.s:122    .text.chCondSignalI:00000028 $d
-     /tmp/ccM41vxo.s:125    .text.chCondBroadcastI:00000000 $t
-     /tmp/ccM41vxo.s:131    .text.chCondBroadcastI:00000000 chCondBroadcastI
-     /tmp/ccM41vxo.s:161    .text.chCondBroadcastI:00000030 $d
-     /tmp/ccM41vxo.s:164    .text.chCondBroadcast:00000000 $t
-     /tmp/ccM41vxo.s:170    .text.chCondBroadcast:00000000 chCondBroadcast
-     /tmp/ccM41vxo.s:193    .text.chCondWaitS:00000000 $t
-     /tmp/ccM41vxo.s:199    .text.chCondWaitS:00000000 chCondWaitS
-     /tmp/ccM41vxo.s:250    .text.chCondWaitS:00000058 $d
-     /tmp/ccM41vxo.s:255    .text.chCondWait:00000000 $t
-     /tmp/ccM41vxo.s:261    .text.chCondWait:00000000 chCondWait
-     /tmp/ccM41vxo.s:285    .text.chCondWaitTimeoutS:00000000 $t
-     /tmp/ccM41vxo.s:291    .text.chCondWaitTimeoutS:00000000 chCondWaitTimeoutS
-     /tmp/ccM41vxo.s:350    .text.chCondWaitTimeoutS:0000006c $d
-     /tmp/ccM41vxo.s:355    .text.chCondWaitTimeout:00000000 $t
-     /tmp/ccM41vxo.s:361    .text.chCondWaitTimeout:00000000 chCondWaitTimeout
-     /tmp/ccM41vxo.s:387    .rodata.str1.4:00000000 $d
-     /tmp/ccM41vxo.s:44     .text.chCondInit:0000001c $t
-     /tmp/ccM41vxo.s:89     .text.chCondSignal:0000003c $t
-     /tmp/ccM41vxo.s:124    .text.chCondSignalI:0000002c $t
-     /tmp/ccM41vxo.s:163    .text.chCondBroadcastI:00000034 $t
-     /tmp/ccM41vxo.s:254    .text.chCondWaitS:00000064 $t
-     /tmp/ccM41vxo.s:354    .text.chCondWaitTimeoutS:00000078 $t
+     /tmp/ccoF1ndA.s:18     .text.chCondInit:00000000 $t
+     /tmp/ccoF1ndA.s:24     .text.chCondInit:00000000 chCondInit
+     /tmp/ccoF1ndA.s:42     .text.chCondInit:00000018 $d
+     /tmp/ccoF1ndA.s:45     .text.chCondSignal:00000000 $t
+     /tmp/ccoF1ndA.s:51     .text.chCondSignal:00000000 chCondSignal
+     /tmp/ccoF1ndA.s:87     .text.chCondSignal:00000038 $d
+     /tmp/ccoF1ndA.s:90     .text.chCondSignalI:00000000 $t
+     /tmp/ccoF1ndA.s:96     .text.chCondSignalI:00000000 chCondSignalI
+     /tmp/ccoF1ndA.s:122    .text.chCondSignalI:00000028 $d
+     /tmp/ccoF1ndA.s:125    .text.chCondBroadcastI:00000000 $t
+     /tmp/ccoF1ndA.s:131    .text.chCondBroadcastI:00000000 chCondBroadcastI
+     /tmp/ccoF1ndA.s:161    .text.chCondBroadcastI:00000030 $d
+     /tmp/ccoF1ndA.s:164    .text.chCondBroadcast:00000000 $t
+     /tmp/ccoF1ndA.s:170    .text.chCondBroadcast:00000000 chCondBroadcast
+     /tmp/ccoF1ndA.s:193    .text.chCondWaitS:00000000 $t
+     /tmp/ccoF1ndA.s:199    .text.chCondWaitS:00000000 chCondWaitS
+     /tmp/ccoF1ndA.s:250    .text.chCondWaitS:00000058 $d
+     /tmp/ccoF1ndA.s:255    .text.chCondWait:00000000 $t
+     /tmp/ccoF1ndA.s:261    .text.chCondWait:00000000 chCondWait
+     /tmp/ccoF1ndA.s:285    .text.chCondWaitTimeoutS:00000000 $t
+     /tmp/ccoF1ndA.s:291    .text.chCondWaitTimeoutS:00000000 chCondWaitTimeoutS
+     /tmp/ccoF1ndA.s:350    .text.chCondWaitTimeoutS:0000006c $d
+     /tmp/ccoF1ndA.s:355    .text.chCondWaitTimeout:00000000 $t
+     /tmp/ccoF1ndA.s:361    .text.chCondWaitTimeout:00000000 chCondWaitTimeout
+     /tmp/ccoF1ndA.s:387    .rodata.str1.4:00000000 $d
+     /tmp/ccoF1ndA.s:44     .text.chCondInit:0000001c $t
+     /tmp/ccoF1ndA.s:89     .text.chCondSignal:0000003c $t
+     /tmp/ccoF1ndA.s:124    .text.chCondSignalI:0000002c $t
+     /tmp/ccoF1ndA.s:163    .text.chCondBroadcastI:00000034 $t
+     /tmp/ccoF1ndA.s:254    .text.chCondWaitS:00000064 $t
+     /tmp/ccoF1ndA.s:354    .text.chCondWaitTimeoutS:00000078 $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

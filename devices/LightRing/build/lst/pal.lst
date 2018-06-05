@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccrVfgGd.s 			page 1
+ARM GAS  /tmp/ccFvobNb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccrVfgGd.s 			page 1
   54              	palWriteBus:
   55              		@ args = 0, pretend = 0, frame = 0
   56              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccrVfgGd.s 			page 2
+ARM GAS  /tmp/ccFvobNb.s 			page 2
 
 
   57 0000 38B5     		push	{r3, r4, r5, lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccrVfgGd.s 			page 1
  110 0020 BDE83840 		pop	{r3, r4, r5, lr}
  111 0024 FFF7FEBF 		b	_pal_lld_setgroupmode
  112              	.L25:
-ARM GAS  /tmp/ccrVfgGd.s 			page 3
+ARM GAS  /tmp/ccFvobNb.s 			page 3
 
 
  113              		.align	2
@@ -145,24 +145,24 @@ ARM GAS  /tmp/ccrVfgGd.s 			page 1
  125      64652228 
  125      2900
  126 0032 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccrVfgGd.s 			page 4
+ARM GAS  /tmp/ccFvobNb.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 pal.c
-     /tmp/ccrVfgGd.s:16     .text.palReadBus:00000000 $t
-     /tmp/ccrVfgGd.s:22     .text.palReadBus:00000000 palReadBus
-     /tmp/ccrVfgGd.s:45     .text.palReadBus:00000024 $d
-     /tmp/ccrVfgGd.s:48     .text.palWriteBus:00000000 $t
-     /tmp/ccrVfgGd.s:54     .text.palWriteBus:00000000 palWriteBus
-     /tmp/ccrVfgGd.s:82     .text.palWriteBus:00000034 $d
-     /tmp/ccrVfgGd.s:85     .text.palSetBusMode:00000000 $t
-     /tmp/ccrVfgGd.s:91     .text.palSetBusMode:00000000 palSetBusMode
-     /tmp/ccrVfgGd.s:115    .text.palSetBusMode:00000028 $d
-     /tmp/ccrVfgGd.s:118    .rodata.str1.4:00000000 $d
-     /tmp/ccrVfgGd.s:47     .text.palReadBus:00000028 $t
-     /tmp/ccrVfgGd.s:84     .text.palWriteBus:00000038 $t
-     /tmp/ccrVfgGd.s:117    .text.palSetBusMode:0000002c $t
+     /tmp/ccFvobNb.s:16     .text.palReadBus:00000000 $t
+     /tmp/ccFvobNb.s:22     .text.palReadBus:00000000 palReadBus
+     /tmp/ccFvobNb.s:45     .text.palReadBus:00000024 $d
+     /tmp/ccFvobNb.s:48     .text.palWriteBus:00000000 $t
+     /tmp/ccFvobNb.s:54     .text.palWriteBus:00000000 palWriteBus
+     /tmp/ccFvobNb.s:82     .text.palWriteBus:00000034 $d
+     /tmp/ccFvobNb.s:85     .text.palSetBusMode:00000000 $t
+     /tmp/ccFvobNb.s:91     .text.palSetBusMode:00000000 palSetBusMode
+     /tmp/ccFvobNb.s:115    .text.palSetBusMode:00000028 $d
+     /tmp/ccFvobNb.s:118    .rodata.str1.4:00000000 $d
+     /tmp/ccFvobNb.s:47     .text.palReadBus:00000028 $t
+     /tmp/ccFvobNb.s:84     .text.palWriteBus:00000038 $t
+     /tmp/ccFvobNb.s:117    .text.palSetBusMode:0000002c $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

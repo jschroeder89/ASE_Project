@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cckX0dsM.s 			page 1
+ARM GAS  /tmp/ccbfmGqQ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cckX0dsM.s 			page 1
   55 0038 00000000 		.word	.LC0
   56              		.size	chThdAddRef, .-chThdAddRef
   57 003c AFF30080 		.section	.text.chThdRelease,"ax",%progbits
-ARM GAS  /tmp/cckX0dsM.s 			page 2
+ARM GAS  /tmp/ccbfmGqQ.s 			page 2
 
 
   58              		.align	2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cckX0dsM.s 			page 1
  112 005a 5361     		str	r3, [r2, #20]
  113 005c BDE83840 		pop	{r3, r4, r5, lr}
  114 0060 FFF7FEBF 		b	chHeapFree
-ARM GAS  /tmp/cckX0dsM.s 			page 3
+ARM GAS  /tmp/ccbfmGqQ.s 			page 3
 
 
  115              	.L11:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cckX0dsM.s 			page 1
  169 0040 83F31188 		msr     BASEPRI, r3
  170              	@ 0 "" 2
  171              		.thumb
-ARM GAS  /tmp/cckX0dsM.s 			page 4
+ARM GAS  /tmp/ccbfmGqQ.s 			page 4
 
 
  172 0044 2046     		mov	r0, r4
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cckX0dsM.s 			page 1
  225              	.L21:
  226 004e 02B0     		add	sp, sp, #8
  227              		@ sp needed
-ARM GAS  /tmp/cckX0dsM.s 			page 5
+ARM GAS  /tmp/ccbfmGqQ.s 			page 5
 
 
  228 0050 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
@@ -274,24 +274,24 @@ ARM GAS  /tmp/cckX0dsM.s 			page 1
  247      46726F6D 
  247      4D656D6F 
  248 0046 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cckX0dsM.s 			page 6
+ARM GAS  /tmp/ccbfmGqQ.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chdynamic.c
-     /tmp/cckX0dsM.s:16     .text.chThdAddRef:00000000 $t
-     /tmp/cckX0dsM.s:22     .text.chThdAddRef:00000000 chThdAddRef
-     /tmp/cckX0dsM.s:55     .text.chThdAddRef:00000038 $d
-     /tmp/cckX0dsM.s:58     .text.chThdRelease:00000000 $t
-     /tmp/cckX0dsM.s:64     .text.chThdRelease:00000000 chThdRelease
-     /tmp/cckX0dsM.s:128    .text.chThdRelease:0000007c $d
-     /tmp/cckX0dsM.s:131    .text.chThdCreateFromHeap:00000000 $t
-     /tmp/cckX0dsM.s:137    .text.chThdCreateFromHeap:00000000 chThdCreateFromHeap
-     /tmp/cckX0dsM.s:179    .text.chThdCreateFromMemoryPool:00000000 $t
-     /tmp/cckX0dsM.s:185    .text.chThdCreateFromMemoryPool:00000000 chThdCreateFromMemoryPool
-     /tmp/cckX0dsM.s:236    .text.chThdCreateFromMemoryPool:0000005c $d
-     /tmp/cckX0dsM.s:239    .rodata.str1.4:00000000 $d
-     /tmp/cckX0dsM.s:57     .text.chThdAddRef:0000003c $t
+     /tmp/ccbfmGqQ.s:16     .text.chThdAddRef:00000000 $t
+     /tmp/ccbfmGqQ.s:22     .text.chThdAddRef:00000000 chThdAddRef
+     /tmp/ccbfmGqQ.s:55     .text.chThdAddRef:00000038 $d
+     /tmp/ccbfmGqQ.s:58     .text.chThdRelease:00000000 $t
+     /tmp/ccbfmGqQ.s:64     .text.chThdRelease:00000000 chThdRelease
+     /tmp/ccbfmGqQ.s:128    .text.chThdRelease:0000007c $d
+     /tmp/ccbfmGqQ.s:131    .text.chThdCreateFromHeap:00000000 $t
+     /tmp/ccbfmGqQ.s:137    .text.chThdCreateFromHeap:00000000 chThdCreateFromHeap
+     /tmp/ccbfmGqQ.s:179    .text.chThdCreateFromMemoryPool:00000000 $t
+     /tmp/ccbfmGqQ.s:185    .text.chThdCreateFromMemoryPool:00000000 chThdCreateFromMemoryPool
+     /tmp/ccbfmGqQ.s:236    .text.chThdCreateFromMemoryPool:0000005c $d
+     /tmp/ccbfmGqQ.s:239    .rodata.str1.4:00000000 $d
+     /tmp/ccbfmGqQ.s:57     .text.chThdAddRef:0000003c $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock

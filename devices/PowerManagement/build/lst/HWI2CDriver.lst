@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc7EmJK6.s 			page 1
+ARM GAS  /tmp/cceYOVT5.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc7EmJK6.s 			page 1
   55 0008 08000000 		.word	_ZTVN5amiro9I2CDriverE+8
   56              		.size	_ZN5amiro11HWI2CDriverD2Ev, .-_ZN5amiro11HWI2CDriverD2Ev
   57              		.weak	_ZN5amiro11HWI2CDriverD1Ev
-ARM GAS  /tmp/cc7EmJK6.s 			page 2
+ARM GAS  /tmp/cceYOVT5.s 			page 2
 
 
   58              		.thumb_set _ZN5amiro11HWI2CDriverD1Ev,_ZN5amiro11HWI2CDriverD2Ev
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc7EmJK6.s 			page 1
  108              		.thumb_func
  109              		.type	_ZN5amiro11HWI2CDriver5startEPK9I2CConfig, %function
  110              	_ZN5amiro11HWI2CDriver5startEPK9I2CConfig:
-ARM GAS  /tmp/cc7EmJK6.s 			page 3
+ARM GAS  /tmp/cceYOVT5.s 			page 3
 
 
  111              		@ args = 0, pretend = 0, frame = 0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc7EmJK6.s 			page 1
  159 0008 0C69     		ldr	r4, [r1, #16]
  160 000a 8B68     		ldr	r3, [r1, #8]
  161 000c 4068     		ldr	r0, [r0, #4]
-ARM GAS  /tmp/cc7EmJK6.s 			page 4
+ARM GAS  /tmp/cceYOVT5.s 			page 4
 
 
  162 000e 85B0     		sub	sp, sp, #20
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc7EmJK6.s 			page 1
  211      0080AFF3 
  211      0080
  212              		.align	2
-ARM GAS  /tmp/cc7EmJK6.s 			page 5
+ARM GAS  /tmp/cceYOVT5.s 			page 5
 
 
  213              		.p2align 4,,15
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc7EmJK6.s 			page 1
  265 002c 00000000 		.section	.rodata._ZTVN5amiro11HWI2CDriverE,"a",%progbits
  266              		.align	3
  267              		.set	.LANCHOR0,. + 0
-ARM GAS  /tmp/cc7EmJK6.s 			page 6
+ARM GAS  /tmp/cceYOVT5.s 			page 6
 
 
  268              		.type	_ZTVN5amiro11HWI2CDriverE, %object
@@ -316,52 +316,52 @@ ARM GAS  /tmp/cc7EmJK6.s 			page 1
  280 0024 00000000 		.word	_ZN5amiro11HWI2CDriver10acquireBusEv
  281 0028 00000000 		.word	_ZN5amiro11HWI2CDriver10releaseBusEv
  282 002c 00000000 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cc7EmJK6.s 			page 7
+ARM GAS  /tmp/cceYOVT5.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 HWI2CDriver.cpp
-     /tmp/cc7EmJK6.s:18     .text._ZN5amiro9I2CDriverD2Ev:00000000 $t
-     /tmp/cc7EmJK6.s:24     .text._ZN5amiro9I2CDriverD2Ev:00000000 _ZN5amiro9I2CDriverD2Ev
-     /tmp/cc7EmJK6.s:34     .text._ZN5amiro9I2CDriverD2Ev:00000008 $d
-     /tmp/cc7EmJK6.s:252    .rodata._ZTVN5amiro9I2CDriverE:00000000 _ZTVN5amiro9I2CDriverE
-     /tmp/cc7EmJK6.s:24     .text._ZN5amiro9I2CDriverD2Ev:00000000 _ZN5amiro9I2CDriverD1Ev
-     /tmp/cc7EmJK6.s:39     .text._ZN5amiro11HWI2CDriverD2Ev:00000000 $t
-     /tmp/cc7EmJK6.s:45     .text._ZN5amiro11HWI2CDriverD2Ev:00000000 _ZN5amiro11HWI2CDriverD2Ev
-     /tmp/cc7EmJK6.s:55     .text._ZN5amiro11HWI2CDriverD2Ev:00000008 $d
-     /tmp/cc7EmJK6.s:45     .text._ZN5amiro11HWI2CDriverD2Ev:00000000 _ZN5amiro11HWI2CDriverD1Ev
-     /tmp/cc7EmJK6.s:60     .text._ZN5amiro9I2CDriverD0Ev:00000000 $t
-     /tmp/cc7EmJK6.s:66     .text._ZN5amiro9I2CDriverD0Ev:00000000 _ZN5amiro9I2CDriverD0Ev
-     /tmp/cc7EmJK6.s:79     .text._ZN5amiro9I2CDriverD0Ev:00000010 $d
-     /tmp/cc7EmJK6.s:82     .text._ZN5amiro11HWI2CDriverD0Ev:00000000 $t
-     /tmp/cc7EmJK6.s:88     .text._ZN5amiro11HWI2CDriverD0Ev:00000000 _ZN5amiro11HWI2CDriverD0Ev
-     /tmp/cc7EmJK6.s:101    .text._ZN5amiro11HWI2CDriverD0Ev:00000010 $d
-     /tmp/cc7EmJK6.s:104    .text._ZN5amiro11HWI2CDriver5startEPK9I2CConfig:00000000 $t
-     /tmp/cc7EmJK6.s:110    .text._ZN5amiro11HWI2CDriver5startEPK9I2CConfig:00000000 _ZN5amiro11HWI2CDriver5startEPK9I2CConfig
-     /tmp/cc7EmJK6.s:118    .text._ZN5amiro11HWI2CDriver4stopEv:00000000 $t
-     /tmp/cc7EmJK6.s:124    .text._ZN5amiro11HWI2CDriver4stopEv:00000000 _ZN5amiro11HWI2CDriver4stopEv
-     /tmp/cc7EmJK6.s:132    .text._ZN5amiro11HWI2CDriver9getErrorsEv:00000000 $t
-     /tmp/cc7EmJK6.s:138    .text._ZN5amiro11HWI2CDriver9getErrorsEv:00000000 _ZN5amiro11HWI2CDriver9getErrorsEv
-     /tmp/cc7EmJK6.s:146    .text._ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm:00000000 $t
-     /tmp/cc7EmJK6.s:152    .text._ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm:00000000 _ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm
-     /tmp/cc7EmJK6.s:174    .text._ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm:00000000 $t
-     /tmp/cc7EmJK6.s:180    .text._ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm:00000000 _ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm
-     /tmp/cc7EmJK6.s:198    .text._ZN5amiro11HWI2CDriver10acquireBusEv:00000000 $t
-     /tmp/cc7EmJK6.s:204    .text._ZN5amiro11HWI2CDriver10acquireBusEv:00000000 _ZN5amiro11HWI2CDriver10acquireBusEv
-     /tmp/cc7EmJK6.s:212    .text._ZN5amiro11HWI2CDriver10releaseBusEv:00000000 $t
-     /tmp/cc7EmJK6.s:218    .text._ZN5amiro11HWI2CDriver10releaseBusEv:00000000 _ZN5amiro11HWI2CDriver10releaseBusEv
-     /tmp/cc7EmJK6.s:226    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000000 $t
-     /tmp/cc7EmJK6.s:232    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000000 _ZN5amiro11HWI2CDriverC2EP9I2CDriver
-     /tmp/cc7EmJK6.s:243    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000008 $d
-     /tmp/cc7EmJK6.s:232    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000000 _ZN5amiro11HWI2CDriverC1EP9I2CDriver
-     /tmp/cc7EmJK6.s:249    .rodata._ZTVN5amiro9I2CDriverE:00000000 $d
-     /tmp/cc7EmJK6.s:270    .rodata._ZTVN5amiro11HWI2CDriverE:00000000 _ZTVN5amiro11HWI2CDriverE
-     /tmp/cc7EmJK6.s:266    .rodata._ZTVN5amiro11HWI2CDriverE:00000000 $d
-     /tmp/cc7EmJK6.s:38     .text._ZN5amiro9I2CDriverD2Ev:0000000c $t
-     /tmp/cc7EmJK6.s:59     .text._ZN5amiro11HWI2CDriverD2Ev:0000000c $t
-     /tmp/cc7EmJK6.s:81     .text._ZN5amiro9I2CDriverD0Ev:00000014 $t
-     /tmp/cc7EmJK6.s:103    .text._ZN5amiro11HWI2CDriverD0Ev:00000014 $t
-     /tmp/cc7EmJK6.s:248    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:0000000c $t
+     /tmp/cceYOVT5.s:18     .text._ZN5amiro9I2CDriverD2Ev:00000000 $t
+     /tmp/cceYOVT5.s:24     .text._ZN5amiro9I2CDriverD2Ev:00000000 _ZN5amiro9I2CDriverD2Ev
+     /tmp/cceYOVT5.s:34     .text._ZN5amiro9I2CDriverD2Ev:00000008 $d
+     /tmp/cceYOVT5.s:252    .rodata._ZTVN5amiro9I2CDriverE:00000000 _ZTVN5amiro9I2CDriverE
+     /tmp/cceYOVT5.s:24     .text._ZN5amiro9I2CDriverD2Ev:00000000 _ZN5amiro9I2CDriverD1Ev
+     /tmp/cceYOVT5.s:39     .text._ZN5amiro11HWI2CDriverD2Ev:00000000 $t
+     /tmp/cceYOVT5.s:45     .text._ZN5amiro11HWI2CDriverD2Ev:00000000 _ZN5amiro11HWI2CDriverD2Ev
+     /tmp/cceYOVT5.s:55     .text._ZN5amiro11HWI2CDriverD2Ev:00000008 $d
+     /tmp/cceYOVT5.s:45     .text._ZN5amiro11HWI2CDriverD2Ev:00000000 _ZN5amiro11HWI2CDriverD1Ev
+     /tmp/cceYOVT5.s:60     .text._ZN5amiro9I2CDriverD0Ev:00000000 $t
+     /tmp/cceYOVT5.s:66     .text._ZN5amiro9I2CDriverD0Ev:00000000 _ZN5amiro9I2CDriverD0Ev
+     /tmp/cceYOVT5.s:79     .text._ZN5amiro9I2CDriverD0Ev:00000010 $d
+     /tmp/cceYOVT5.s:82     .text._ZN5amiro11HWI2CDriverD0Ev:00000000 $t
+     /tmp/cceYOVT5.s:88     .text._ZN5amiro11HWI2CDriverD0Ev:00000000 _ZN5amiro11HWI2CDriverD0Ev
+     /tmp/cceYOVT5.s:101    .text._ZN5amiro11HWI2CDriverD0Ev:00000010 $d
+     /tmp/cceYOVT5.s:104    .text._ZN5amiro11HWI2CDriver5startEPK9I2CConfig:00000000 $t
+     /tmp/cceYOVT5.s:110    .text._ZN5amiro11HWI2CDriver5startEPK9I2CConfig:00000000 _ZN5amiro11HWI2CDriver5startEPK9I2CConfig
+     /tmp/cceYOVT5.s:118    .text._ZN5amiro11HWI2CDriver4stopEv:00000000 $t
+     /tmp/cceYOVT5.s:124    .text._ZN5amiro11HWI2CDriver4stopEv:00000000 _ZN5amiro11HWI2CDriver4stopEv
+     /tmp/cceYOVT5.s:132    .text._ZN5amiro11HWI2CDriver9getErrorsEv:00000000 $t
+     /tmp/cceYOVT5.s:138    .text._ZN5amiro11HWI2CDriver9getErrorsEv:00000000 _ZN5amiro11HWI2CDriver9getErrorsEv
+     /tmp/cceYOVT5.s:146    .text._ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm:00000000 $t
+     /tmp/cceYOVT5.s:152    .text._ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm:00000000 _ZN5amiro11HWI2CDriver14masterTransmitEPKNS_11I2CTxParamsEm
+     /tmp/cceYOVT5.s:174    .text._ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm:00000000 $t
+     /tmp/cceYOVT5.s:180    .text._ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm:00000000 _ZN5amiro11HWI2CDriver13masterReceiveEPKNS_11I2CRxParamsEm
+     /tmp/cceYOVT5.s:198    .text._ZN5amiro11HWI2CDriver10acquireBusEv:00000000 $t
+     /tmp/cceYOVT5.s:204    .text._ZN5amiro11HWI2CDriver10acquireBusEv:00000000 _ZN5amiro11HWI2CDriver10acquireBusEv
+     /tmp/cceYOVT5.s:212    .text._ZN5amiro11HWI2CDriver10releaseBusEv:00000000 $t
+     /tmp/cceYOVT5.s:218    .text._ZN5amiro11HWI2CDriver10releaseBusEv:00000000 _ZN5amiro11HWI2CDriver10releaseBusEv
+     /tmp/cceYOVT5.s:226    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000000 $t
+     /tmp/cceYOVT5.s:232    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000000 _ZN5amiro11HWI2CDriverC2EP9I2CDriver
+     /tmp/cceYOVT5.s:243    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000008 $d
+     /tmp/cceYOVT5.s:232    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:00000000 _ZN5amiro11HWI2CDriverC1EP9I2CDriver
+     /tmp/cceYOVT5.s:249    .rodata._ZTVN5amiro9I2CDriverE:00000000 $d
+     /tmp/cceYOVT5.s:270    .rodata._ZTVN5amiro11HWI2CDriverE:00000000 _ZTVN5amiro11HWI2CDriverE
+     /tmp/cceYOVT5.s:266    .rodata._ZTVN5amiro11HWI2CDriverE:00000000 $d
+     /tmp/cceYOVT5.s:38     .text._ZN5amiro9I2CDriverD2Ev:0000000c $t
+     /tmp/cceYOVT5.s:59     .text._ZN5amiro11HWI2CDriverD2Ev:0000000c $t
+     /tmp/cceYOVT5.s:81     .text._ZN5amiro9I2CDriverD0Ev:00000014 $t
+     /tmp/cceYOVT5.s:103    .text._ZN5amiro11HWI2CDriverD0Ev:00000014 $t
+     /tmp/cceYOVT5.s:248    .text._ZN5amiro11HWI2CDriverC2EP9I2CDriver:0000000c $t
                            .group:00000000 _ZN5amiro9I2CDriverD5Ev
                            .group:00000000 _ZN5amiro11HWI2CDriverD5Ev
 

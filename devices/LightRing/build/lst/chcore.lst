@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccsIuQBK.s 			page 1
+ARM GAS  /tmp/ccJ4q0Ls.s 			page 1
 
 
    1              		.syntax unified
@@ -36,12 +36,12 @@ ARM GAS  /tmp/ccsIuQBK.s 			page 1
   33 0004 AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
   33      AFF30080 
   33      AFF30080 
-ARM GAS  /tmp/ccsIuQBK.s 			page 2
+ARM GAS  /tmp/ccJ4q0Ls.s 			page 2
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chcore.c
-     /tmp/ccsIuQBK.s:16     .text.port_halt:00000000 $t
-     /tmp/ccsIuQBK.s:22     .text.port_halt:00000000 port_halt
+     /tmp/ccJ4q0Ls.s:16     .text.port_halt:00000000 $t
+     /tmp/ccJ4q0Ls.s:22     .text.port_halt:00000000 port_halt
 
 NO UNDEFINED SYMBOLS

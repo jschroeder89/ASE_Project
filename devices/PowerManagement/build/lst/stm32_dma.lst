@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccZEeZLr.s 			page 1
+ARM GAS  /tmp/cctVijmc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
   55              	Vector70:
   56              		@ args = 0, pretend = 0, frame = 0
   57              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccZEeZLr.s 			page 2
+ARM GAS  /tmp/cctVijmc.s 			page 2
 
 
   58 0000 10B5     		push	{r4, lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  110              	.L21:
  111 002c 00600240 		.word	1073897472
  112 0030 00000000 		.word	.LANCHOR0
-ARM GAS  /tmp/ccZEeZLr.s 			page 3
+ARM GAS  /tmp/cctVijmc.s 			page 3
 
 
  113              		.size	Vector74, .-Vector74
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  163 000e 01F03D01 		and	r1, r1, #61
  164 0012 D960     		str	r1, [r3, #12]
  165 0014 0AB1     		cbz	r2, .L31
-ARM GAS  /tmp/ccZEeZLr.s 			page 4
+ARM GAS  /tmp/cctVijmc.s 			page 4
 
 
  166 0016 406A     		ldr	r0, [r0, #36]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  218              	Vector84:
  219              		@ args = 0, pretend = 0, frame = 0
  220              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccZEeZLr.s 			page 5
+ARM GAS  /tmp/cctVijmc.s 			page 5
 
 
  221 0000 10B5     		push	{r4, lr}
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  273              	.L56:
  274 002c 00600240 		.word	1073897472
  275 0030 00000000 		.word	.LANCHOR0
-ARM GAS  /tmp/ccZEeZLr.s 			page 6
+ARM GAS  /tmp/cctVijmc.s 			page 6
 
 
  276              		.size	VectorFC, .-VectorFC
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  328 0018 0AB1     		cbz	r2, .L66
  329 001a C06C     		ldr	r0, [r0, #76]
  330 001c 9047     		blx	r2
-ARM GAS  /tmp/ccZEeZLr.s 			page 7
+ARM GAS  /tmp/cctVijmc.s 			page 7
 
 
  331              	.L66:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  381              	Vector12C:
  382              		@ args = 0, pretend = 0, frame = 0
  383              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccZEeZLr.s 			page 8
+ARM GAS  /tmp/cctVijmc.s 			page 8
 
 
  384 0000 10B5     		push	{r4, lr}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  436 002c 00000000 		.word	.LANCHOR0
  437              		.size	Vector130, .-Vector130
  438              		.section	.text.Vector150,"ax",%progbits
-ARM GAS  /tmp/ccZEeZLr.s 			page 9
+ARM GAS  /tmp/cctVijmc.s 			page 9
 
 
  439              		.align	2
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  491 0018 0AB1     		cbz	r2, .L101
  492 001a 406F     		ldr	r0, [r0, #116]
  493 001c 9047     		blx	r2
-ARM GAS  /tmp/ccZEeZLr.s 			page 10
+ARM GAS  /tmp/cctVijmc.s 			page 10
 
 
  494              	.L101:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  544              	dmaInit:
  545              		@ args = 0, pretend = 0, frame = 0
  546              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccZEeZLr.s 			page 11
+ARM GAS  /tmp/cctVijmc.s 			page 11
 
 
  547              		@ link register save eliminated.
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  600 0010 3868     		ldr	r0, [r7]
  601 0012 0125     		movs	r5, #1
  602 0014 05FA04FC 		lsl	ip, r5, r4
-ARM GAS  /tmp/ccZEeZLr.s 			page 12
+ARM GAS  /tmp/cctVijmc.s 			page 12
 
 
  603 0018 1CEA000F 		tst	ip, r0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  657 0090 1046     		mov	r0, r2
  658 0092 04B0     		add	sp, sp, #16
  659              		@ sp needed
-ARM GAS  /tmp/ccZEeZLr.s 			page 13
+ARM GAS  /tmp/cctVijmc.s 			page 13
 
 
  660 0094 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  714 003a 1163     		str	r1, [r2, #48]
  715              	.L142:
  716 003c 13F47F4F 		tst	r3, #65280
-ARM GAS  /tmp/ccZEeZLr.s 			page 14
+ARM GAS  /tmp/cctVijmc.s 			page 14
 
 
  717 0040 04D1     		bne	.L139
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  757      00000000 
  757      00000000 
  757      00000000 
-ARM GAS  /tmp/ccZEeZLr.s 			page 15
+ARM GAS  /tmp/cctVijmc.s 			page 15
 
 
  758              		.section	.rodata._stm32_dma_streams,"a",%progbits
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  812 0060 10640240 		.word	1073898512
  813 0064 08640240 		.word	1073898504
  814 0068 00       		.byte	0
-ARM GAS  /tmp/ccZEeZLr.s 			page 16
+ARM GAS  /tmp/cctVijmc.s 			page 16
 
 
  815 0069 08       		.byte	8
@@ -954,92 +954,92 @@ ARM GAS  /tmp/ccZEeZLr.s 			page 1
  865              	dma_streams_mask:
  866 0000 00000000 		.space	4
  867              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccZEeZLr.s 			page 17
+ARM GAS  /tmp/cctVijmc.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32_dma.c
-     /tmp/ccZEeZLr.s:18     .text.Vector6C:00000000 $t
-     /tmp/ccZEeZLr.s:24     .text.Vector6C:00000000 Vector6C
-     /tmp/ccZEeZLr.s:45     .text.Vector6C:00000028 $d
-     /tmp/ccZEeZLr.s:49     .text.Vector70:00000000 $t
-     /tmp/ccZEeZLr.s:55     .text.Vector70:00000000 Vector70
-     /tmp/ccZEeZLr.s:78     .text.Vector70:0000002c $d
-     /tmp/ccZEeZLr.s:82     .text.Vector74:00000000 $t
-     /tmp/ccZEeZLr.s:88     .text.Vector74:00000000 Vector74
-     /tmp/ccZEeZLr.s:111    .text.Vector74:0000002c $d
-     /tmp/ccZEeZLr.s:115    .text.Vector78:00000000 $t
-     /tmp/ccZEeZLr.s:121    .text.Vector78:00000000 Vector78
-     /tmp/ccZEeZLr.s:144    .text.Vector78:0000002c $d
-     /tmp/ccZEeZLr.s:148    .text.Vector7C:00000000 $t
-     /tmp/ccZEeZLr.s:154    .text.Vector7C:00000000 Vector7C
-     /tmp/ccZEeZLr.s:175    .text.Vector7C:00000028 $d
-     /tmp/ccZEeZLr.s:179    .text.Vector80:00000000 $t
-     /tmp/ccZEeZLr.s:185    .text.Vector80:00000000 Vector80
-     /tmp/ccZEeZLr.s:208    .text.Vector80:0000002c $d
-     /tmp/ccZEeZLr.s:212    .text.Vector84:00000000 $t
-     /tmp/ccZEeZLr.s:218    .text.Vector84:00000000 Vector84
-     /tmp/ccZEeZLr.s:241    .text.Vector84:0000002c $d
-     /tmp/ccZEeZLr.s:245    .text.VectorFC:00000000 $t
-     /tmp/ccZEeZLr.s:251    .text.VectorFC:00000000 VectorFC
-     /tmp/ccZEeZLr.s:274    .text.VectorFC:0000002c $d
-     /tmp/ccZEeZLr.s:278    .text.Vector120:00000000 $t
-     /tmp/ccZEeZLr.s:284    .text.Vector120:00000000 Vector120
-     /tmp/ccZEeZLr.s:305    .text.Vector120:00000028 $d
-     /tmp/ccZEeZLr.s:309    .text.Vector124:00000000 $t
-     /tmp/ccZEeZLr.s:315    .text.Vector124:00000000 Vector124
-     /tmp/ccZEeZLr.s:338    .text.Vector124:0000002c $d
-     /tmp/ccZEeZLr.s:342    .text.Vector128:00000000 $t
-     /tmp/ccZEeZLr.s:348    .text.Vector128:00000000 Vector128
-     /tmp/ccZEeZLr.s:371    .text.Vector128:0000002c $d
-     /tmp/ccZEeZLr.s:375    .text.Vector12C:00000000 $t
-     /tmp/ccZEeZLr.s:381    .text.Vector12C:00000000 Vector12C
-     /tmp/ccZEeZLr.s:404    .text.Vector12C:0000002c $d
-     /tmp/ccZEeZLr.s:408    .text.Vector130:00000000 $t
-     /tmp/ccZEeZLr.s:414    .text.Vector130:00000000 Vector130
-     /tmp/ccZEeZLr.s:435    .text.Vector130:00000028 $d
-     /tmp/ccZEeZLr.s:439    .text.Vector150:00000000 $t
-     /tmp/ccZEeZLr.s:445    .text.Vector150:00000000 Vector150
-     /tmp/ccZEeZLr.s:468    .text.Vector150:0000002c $d
-     /tmp/ccZEeZLr.s:472    .text.Vector154:00000000 $t
-     /tmp/ccZEeZLr.s:478    .text.Vector154:00000000 Vector154
-     /tmp/ccZEeZLr.s:501    .text.Vector154:0000002c $d
-     /tmp/ccZEeZLr.s:505    .text.Vector158:00000000 $t
-     /tmp/ccZEeZLr.s:511    .text.Vector158:00000000 Vector158
-     /tmp/ccZEeZLr.s:534    .text.Vector158:0000002c $d
-     /tmp/ccZEeZLr.s:538    .text.dmaInit:00000000 $t
-     /tmp/ccZEeZLr.s:544    .text.dmaInit:00000000 dmaInit
-     /tmp/ccZEeZLr.s:576    .text.dmaInit:00000034 $d
-     /tmp/ccZEeZLr.s:583    .text.dmaStreamAllocate:00000000 $t
-     /tmp/ccZEeZLr.s:589    .text.dmaStreamAllocate:00000000 dmaStreamAllocate
-     /tmp/ccZEeZLr.s:674    .text.dmaStreamAllocate:000000ac $d
-     /tmp/ccZEeZLr.s:680    .text.dmaStreamRelease:00000000 $t
-ARM GAS  /tmp/ccZEeZLr.s 			page 18
+     /tmp/cctVijmc.s:18     .text.Vector6C:00000000 $t
+     /tmp/cctVijmc.s:24     .text.Vector6C:00000000 Vector6C
+     /tmp/cctVijmc.s:45     .text.Vector6C:00000028 $d
+     /tmp/cctVijmc.s:49     .text.Vector70:00000000 $t
+     /tmp/cctVijmc.s:55     .text.Vector70:00000000 Vector70
+     /tmp/cctVijmc.s:78     .text.Vector70:0000002c $d
+     /tmp/cctVijmc.s:82     .text.Vector74:00000000 $t
+     /tmp/cctVijmc.s:88     .text.Vector74:00000000 Vector74
+     /tmp/cctVijmc.s:111    .text.Vector74:0000002c $d
+     /tmp/cctVijmc.s:115    .text.Vector78:00000000 $t
+     /tmp/cctVijmc.s:121    .text.Vector78:00000000 Vector78
+     /tmp/cctVijmc.s:144    .text.Vector78:0000002c $d
+     /tmp/cctVijmc.s:148    .text.Vector7C:00000000 $t
+     /tmp/cctVijmc.s:154    .text.Vector7C:00000000 Vector7C
+     /tmp/cctVijmc.s:175    .text.Vector7C:00000028 $d
+     /tmp/cctVijmc.s:179    .text.Vector80:00000000 $t
+     /tmp/cctVijmc.s:185    .text.Vector80:00000000 Vector80
+     /tmp/cctVijmc.s:208    .text.Vector80:0000002c $d
+     /tmp/cctVijmc.s:212    .text.Vector84:00000000 $t
+     /tmp/cctVijmc.s:218    .text.Vector84:00000000 Vector84
+     /tmp/cctVijmc.s:241    .text.Vector84:0000002c $d
+     /tmp/cctVijmc.s:245    .text.VectorFC:00000000 $t
+     /tmp/cctVijmc.s:251    .text.VectorFC:00000000 VectorFC
+     /tmp/cctVijmc.s:274    .text.VectorFC:0000002c $d
+     /tmp/cctVijmc.s:278    .text.Vector120:00000000 $t
+     /tmp/cctVijmc.s:284    .text.Vector120:00000000 Vector120
+     /tmp/cctVijmc.s:305    .text.Vector120:00000028 $d
+     /tmp/cctVijmc.s:309    .text.Vector124:00000000 $t
+     /tmp/cctVijmc.s:315    .text.Vector124:00000000 Vector124
+     /tmp/cctVijmc.s:338    .text.Vector124:0000002c $d
+     /tmp/cctVijmc.s:342    .text.Vector128:00000000 $t
+     /tmp/cctVijmc.s:348    .text.Vector128:00000000 Vector128
+     /tmp/cctVijmc.s:371    .text.Vector128:0000002c $d
+     /tmp/cctVijmc.s:375    .text.Vector12C:00000000 $t
+     /tmp/cctVijmc.s:381    .text.Vector12C:00000000 Vector12C
+     /tmp/cctVijmc.s:404    .text.Vector12C:0000002c $d
+     /tmp/cctVijmc.s:408    .text.Vector130:00000000 $t
+     /tmp/cctVijmc.s:414    .text.Vector130:00000000 Vector130
+     /tmp/cctVijmc.s:435    .text.Vector130:00000028 $d
+     /tmp/cctVijmc.s:439    .text.Vector150:00000000 $t
+     /tmp/cctVijmc.s:445    .text.Vector150:00000000 Vector150
+     /tmp/cctVijmc.s:468    .text.Vector150:0000002c $d
+     /tmp/cctVijmc.s:472    .text.Vector154:00000000 $t
+     /tmp/cctVijmc.s:478    .text.Vector154:00000000 Vector154
+     /tmp/cctVijmc.s:501    .text.Vector154:0000002c $d
+     /tmp/cctVijmc.s:505    .text.Vector158:00000000 $t
+     /tmp/cctVijmc.s:511    .text.Vector158:00000000 Vector158
+     /tmp/cctVijmc.s:534    .text.Vector158:0000002c $d
+     /tmp/cctVijmc.s:538    .text.dmaInit:00000000 $t
+     /tmp/cctVijmc.s:544    .text.dmaInit:00000000 dmaInit
+     /tmp/cctVijmc.s:576    .text.dmaInit:00000034 $d
+     /tmp/cctVijmc.s:583    .text.dmaStreamAllocate:00000000 $t
+     /tmp/cctVijmc.s:589    .text.dmaStreamAllocate:00000000 dmaStreamAllocate
+     /tmp/cctVijmc.s:674    .text.dmaStreamAllocate:000000ac $d
+     /tmp/cctVijmc.s:680    .text.dmaStreamRelease:00000000 $t
+ARM GAS  /tmp/cctVijmc.s 			page 18
 
 
-     /tmp/ccZEeZLr.s:686    .text.dmaStreamRelease:00000000 dmaStreamRelease
-     /tmp/ccZEeZLr.s:735    .text.dmaStreamRelease:00000060 $d
-     /tmp/ccZEeZLr.s:763    .rodata._stm32_dma_streams:00000000 _stm32_dma_streams
-     /tmp/ccZEeZLr.s:742    .rodata.str1.4:00000000 $d
-     /tmp/ccZEeZLr.s:752    .bss.dma_isr_redir:00000000 $d
-     /tmp/ccZEeZLr.s:756    .bss.dma_isr_redir:00000000 dma_isr_redir
-     /tmp/ccZEeZLr.s:759    .rodata._stm32_dma_streams:00000000 $d
-     /tmp/ccZEeZLr.s:861    .bss.dma_streams_mask:00000000 $d
-     /tmp/ccZEeZLr.s:865    .bss.dma_streams_mask:00000000 dma_streams_mask
-     /tmp/ccZEeZLr.s:81     .text.Vector70:00000034 $t
-     /tmp/ccZEeZLr.s:114    .text.Vector74:00000034 $t
-     /tmp/ccZEeZLr.s:147    .text.Vector78:00000034 $t
-     /tmp/ccZEeZLr.s:211    .text.Vector80:00000034 $t
-     /tmp/ccZEeZLr.s:244    .text.Vector84:00000034 $t
-     /tmp/ccZEeZLr.s:277    .text.VectorFC:00000034 $t
-     /tmp/ccZEeZLr.s:341    .text.Vector124:00000034 $t
-     /tmp/ccZEeZLr.s:374    .text.Vector128:00000034 $t
-     /tmp/ccZEeZLr.s:407    .text.Vector12C:00000034 $t
-     /tmp/ccZEeZLr.s:471    .text.Vector150:00000034 $t
-     /tmp/ccZEeZLr.s:504    .text.Vector154:00000034 $t
-     /tmp/ccZEeZLr.s:537    .text.Vector158:00000034 $t
-     /tmp/ccZEeZLr.s:582    .text.dmaInit:00000048 $t
-     /tmp/ccZEeZLr.s:679    .text.dmaStreamAllocate:000000bc $t
+     /tmp/cctVijmc.s:686    .text.dmaStreamRelease:00000000 dmaStreamRelease
+     /tmp/cctVijmc.s:735    .text.dmaStreamRelease:00000060 $d
+     /tmp/cctVijmc.s:763    .rodata._stm32_dma_streams:00000000 _stm32_dma_streams
+     /tmp/cctVijmc.s:742    .rodata.str1.4:00000000 $d
+     /tmp/cctVijmc.s:752    .bss.dma_isr_redir:00000000 $d
+     /tmp/cctVijmc.s:756    .bss.dma_isr_redir:00000000 dma_isr_redir
+     /tmp/cctVijmc.s:759    .rodata._stm32_dma_streams:00000000 $d
+     /tmp/cctVijmc.s:861    .bss.dma_streams_mask:00000000 $d
+     /tmp/cctVijmc.s:865    .bss.dma_streams_mask:00000000 dma_streams_mask
+     /tmp/cctVijmc.s:81     .text.Vector70:00000034 $t
+     /tmp/cctVijmc.s:114    .text.Vector74:00000034 $t
+     /tmp/cctVijmc.s:147    .text.Vector78:00000034 $t
+     /tmp/cctVijmc.s:211    .text.Vector80:00000034 $t
+     /tmp/cctVijmc.s:244    .text.Vector84:00000034 $t
+     /tmp/cctVijmc.s:277    .text.VectorFC:00000034 $t
+     /tmp/cctVijmc.s:341    .text.Vector124:00000034 $t
+     /tmp/cctVijmc.s:374    .text.Vector128:00000034 $t
+     /tmp/cctVijmc.s:407    .text.Vector12C:00000034 $t
+     /tmp/cctVijmc.s:471    .text.Vector150:00000034 $t
+     /tmp/cctVijmc.s:504    .text.Vector154:00000034 $t
+     /tmp/cctVijmc.s:537    .text.Vector158:00000034 $t
+     /tmp/cctVijmc.s:582    .text.dmaInit:00000048 $t
+     /tmp/cctVijmc.s:679    .text.dmaStreamAllocate:000000bc $t
 
 UNDEFINED SYMBOLS
 dbg_check_enter_isr

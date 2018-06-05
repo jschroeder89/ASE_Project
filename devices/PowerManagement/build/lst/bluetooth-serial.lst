@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccdCfcsI.s 			page 1
+ARM GAS  /tmp/ccfxQ9eV.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccdCfcsI.s 			page 1
   55              		.thumb_func
   56              		.type	_ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh, %function
   57              	_ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:
-ARM GAS  /tmp/ccdCfcsI.s 			page 2
+ARM GAS  /tmp/ccfxQ9eV.s 			page 2
 
 
   58              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccdCfcsI.s 			page 1
  112 001c 26D0     		beq	.L10
  113 001e 97F83132 		ldrb	r3, [r7, #561]	@ zero_extendqisi2
  114 0022 1BBB     		cbnz	r3, .L10
-ARM GAS  /tmp/ccdCfcsI.s 			page 3
+ARM GAS  /tmp/ccfxQ9eV.s 			page 3
 
 
  115 0024 0198     		ldr	r0, [sp, #4]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccdCfcsI.s 			page 1
  168 0006 FFF7FEFF 		bl	_ZN10chibios_rt10BaseThread7setNameEPKc
  169 000a 03E0     		b	.L25
  170              	.L26:
-ARM GAS  /tmp/ccdCfcsI.s 			page 4
+ARM GAS  /tmp/ccfxQ9eV.s 			page 4
 
 
  171 000c 2046     		mov	r0, r4
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccdCfcsI.s 			page 1
  225              		.thumb_func
  226              		.type	_ZN5amiro15BluetoothSerial20bluetoothSerialStartEh, %function
  227              	_ZN5amiro15BluetoothSerial20bluetoothSerialStartEh:
-ARM GAS  /tmp/ccdCfcsI.s 			page 5
+ARM GAS  /tmp/ccfxQ9eV.s 			page 5
 
 
  228              		@ args = 0, pretend = 0, frame = 8
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccdCfcsI.s 			page 1
  281              	_ZN5amiro15BluetoothSerial26bluetoothSerialIsConnectedEv:
  282              		@ args = 0, pretend = 0, frame = 0
  283              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccdCfcsI.s 			page 6
+ARM GAS  /tmp/ccfxQ9eV.s 			page 6
 
 
  284              		@ link register save eliminated.
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccdCfcsI.s 			page 1
  335              		.p2align 4,,15
  336              		.thumb
  337              		.thumb_func
-ARM GAS  /tmp/ccdCfcsI.s 			page 7
+ARM GAS  /tmp/ccfxQ9eV.s 			page 7
 
 
  338              		.type	_GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh, %function
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccdCfcsI.s 			page 1
  389              	.LC0:
  390 0000 53455249 		.ascii	"SERIAL\000"
  390      414C00
-ARM GAS  /tmp/ccdCfcsI.s 			page 8
+ARM GAS  /tmp/ccfxQ9eV.s 			page 8
 
 
  391 0007 00       		.space	1
@@ -428,53 +428,53 @@ ARM GAS  /tmp/ccdCfcsI.s 			page 1
  393      68536572 
  393      69616C00 
  394              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccdCfcsI.s 			page 9
+ARM GAS  /tmp/ccfxQ9eV.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 bluetooth-serial.cpp
-     /tmp/ccdCfcsI.s:18     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 $t
-     /tmp/ccdCfcsI.s:24     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
-     /tmp/ccdCfcsI.s:47     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000028 $d
-     /tmp/ccdCfcsI.s:51     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 $t
-     /tmp/ccdCfcsI.s:57     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 _ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh
-     /tmp/ccdCfcsI.s:87     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000044 $d
-     /tmp/ccdCfcsI.s:57     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 _ZN5amiro15BluetoothSerialC1EPNS_9BLUETOOTHEh
-     /tmp/ccdCfcsI.s:93     .text._ZN5amiro15BluetoothSerial13serialReceiveEv:00000000 $t
-     /tmp/ccdCfcsI.s:99     .text._ZN5amiro15BluetoothSerial13serialReceiveEv:00000000 _ZN5amiro15BluetoothSerial13serialReceiveEv
-     /tmp/ccdCfcsI.s:153    .text._ZN5amiro15BluetoothSerial13serialReceiveEv:00000074 $d
-     /tmp/ccdCfcsI.s:156    .text.startup._ZN5amiro15BluetoothSerial4mainEv:00000000 $t
-     /tmp/ccdCfcsI.s:162    .text.startup._ZN5amiro15BluetoothSerial4mainEv:00000000 _ZN5amiro15BluetoothSerial4mainEv
-     /tmp/ccdCfcsI.s:187    .text.startup._ZN5amiro15BluetoothSerial4mainEv:00000028 $d
-     /tmp/ccdCfcsI.s:190    .text._ZN5amiro15BluetoothSerial14serialTransmitEPKhj:00000000 $t
-     /tmp/ccdCfcsI.s:196    .text._ZN5amiro15BluetoothSerial14serialTransmitEPKhj:00000000 _ZN5amiro15BluetoothSerial14serialTransmitEPKhj
-     /tmp/ccdCfcsI.s:221    .text._ZN5amiro15BluetoothSerial20bluetoothSerialStartEh:00000000 $t
-     /tmp/ccdCfcsI.s:227    .text._ZN5amiro15BluetoothSerial20bluetoothSerialStartEh:00000000 _ZN5amiro15BluetoothSerial20bluetoothSerialStartEh
-     /tmp/ccdCfcsI.s:255    .text._ZN5amiro15BluetoothSerial19bluetoothSerialStopEv:00000000 $t
-     /tmp/ccdCfcsI.s:261    .text._ZN5amiro15BluetoothSerial19bluetoothSerialStopEv:00000000 _ZN5amiro15BluetoothSerial19bluetoothSerialStopEv
-     /tmp/ccdCfcsI.s:275    .text._ZN5amiro15BluetoothSerial26bluetoothSerialIsConnectedEv:00000000 $t
-     /tmp/ccdCfcsI.s:281    .text._ZN5amiro15BluetoothSerial26bluetoothSerialIsConnectedEv:00000000 _ZN5amiro15BluetoothSerial26bluetoothSerialIsConnectedEv
-     /tmp/ccdCfcsI.s:292    .text._ZN5amiro15BluetoothSerial21bluetoothSerialListenEPKc:00000000 $t
-     /tmp/ccdCfcsI.s:298    .text._ZN5amiro15BluetoothSerial21bluetoothSerialListenEPKc:00000000 _ZN5amiro15BluetoothSerial21bluetoothSerialListenEPKc
-     /tmp/ccdCfcsI.s:306    .text._ZN5amiro15BluetoothSerial22bluetoothSerialConnectEPKc:00000000 $t
-     /tmp/ccdCfcsI.s:312    .text._ZN5amiro15BluetoothSerial22bluetoothSerialConnectEPKc:00000000 _ZN5amiro15BluetoothSerial22bluetoothSerialConnectEPKc
-     /tmp/ccdCfcsI.s:320    .text._ZN5amiro15BluetoothSerial25bluetoothSerialDisconnectEPKc:00000000 $t
-     /tmp/ccdCfcsI.s:326    .text._ZN5amiro15BluetoothSerial25bluetoothSerialDisconnectEPKc:00000000 _ZN5amiro15BluetoothSerial25bluetoothSerialDisconnectEPKc
-     /tmp/ccdCfcsI.s:334    .text.startup._GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 $t
-     /tmp/ccdCfcsI.s:339    .text.startup._GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 _GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh
-     /tmp/ccdCfcsI.s:351    .text.startup._GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:0000000c $d
-     /tmp/ccdCfcsI.s:355    .init_array:00000000 $d
-     /tmp/ccdCfcsI.s:362    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi128EEE
-     /tmp/ccdCfcsI.s:359    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 $d
-     /tmp/ccdCfcsI.s:381    .rodata._ZTVN5amiro15BluetoothSerialE:00000000 _ZTVN5amiro15BluetoothSerialE
-     /tmp/ccdCfcsI.s:370    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
-     /tmp/ccdCfcsI.s:374    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
-     /tmp/ccdCfcsI.s:377    .rodata._ZTVN5amiro15BluetoothSerialE:00000000 $d
-     /tmp/ccdCfcsI.s:388    .rodata.str1.4:00000000 $d
-     /tmp/ccdCfcsI.s:92     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:0000004c $t
-     /tmp/ccdCfcsI.s:155    .text._ZN5amiro15BluetoothSerial13serialReceiveEv:00000078 $t
-     /tmp/ccdCfcsI.s:189    .text.startup._ZN5amiro15BluetoothSerial4mainEv:0000002c $t
-     /tmp/ccdCfcsI.s:354    .text.startup._GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000014 $t
+     /tmp/ccfxQ9eV.s:18     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 $t
+     /tmp/ccfxQ9eV.s:24     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi128EE5startEm
+     /tmp/ccfxQ9eV.s:47     .text._ZN10chibios_rt16BaseStaticThreadILi128EE5startEm:00000028 $d
+     /tmp/ccfxQ9eV.s:51     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 $t
+     /tmp/ccfxQ9eV.s:57     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 _ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh
+     /tmp/ccfxQ9eV.s:87     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000044 $d
+     /tmp/ccfxQ9eV.s:57     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 _ZN5amiro15BluetoothSerialC1EPNS_9BLUETOOTHEh
+     /tmp/ccfxQ9eV.s:93     .text._ZN5amiro15BluetoothSerial13serialReceiveEv:00000000 $t
+     /tmp/ccfxQ9eV.s:99     .text._ZN5amiro15BluetoothSerial13serialReceiveEv:00000000 _ZN5amiro15BluetoothSerial13serialReceiveEv
+     /tmp/ccfxQ9eV.s:153    .text._ZN5amiro15BluetoothSerial13serialReceiveEv:00000074 $d
+     /tmp/ccfxQ9eV.s:156    .text.startup._ZN5amiro15BluetoothSerial4mainEv:00000000 $t
+     /tmp/ccfxQ9eV.s:162    .text.startup._ZN5amiro15BluetoothSerial4mainEv:00000000 _ZN5amiro15BluetoothSerial4mainEv
+     /tmp/ccfxQ9eV.s:187    .text.startup._ZN5amiro15BluetoothSerial4mainEv:00000028 $d
+     /tmp/ccfxQ9eV.s:190    .text._ZN5amiro15BluetoothSerial14serialTransmitEPKhj:00000000 $t
+     /tmp/ccfxQ9eV.s:196    .text._ZN5amiro15BluetoothSerial14serialTransmitEPKhj:00000000 _ZN5amiro15BluetoothSerial14serialTransmitEPKhj
+     /tmp/ccfxQ9eV.s:221    .text._ZN5amiro15BluetoothSerial20bluetoothSerialStartEh:00000000 $t
+     /tmp/ccfxQ9eV.s:227    .text._ZN5amiro15BluetoothSerial20bluetoothSerialStartEh:00000000 _ZN5amiro15BluetoothSerial20bluetoothSerialStartEh
+     /tmp/ccfxQ9eV.s:255    .text._ZN5amiro15BluetoothSerial19bluetoothSerialStopEv:00000000 $t
+     /tmp/ccfxQ9eV.s:261    .text._ZN5amiro15BluetoothSerial19bluetoothSerialStopEv:00000000 _ZN5amiro15BluetoothSerial19bluetoothSerialStopEv
+     /tmp/ccfxQ9eV.s:275    .text._ZN5amiro15BluetoothSerial26bluetoothSerialIsConnectedEv:00000000 $t
+     /tmp/ccfxQ9eV.s:281    .text._ZN5amiro15BluetoothSerial26bluetoothSerialIsConnectedEv:00000000 _ZN5amiro15BluetoothSerial26bluetoothSerialIsConnectedEv
+     /tmp/ccfxQ9eV.s:292    .text._ZN5amiro15BluetoothSerial21bluetoothSerialListenEPKc:00000000 $t
+     /tmp/ccfxQ9eV.s:298    .text._ZN5amiro15BluetoothSerial21bluetoothSerialListenEPKc:00000000 _ZN5amiro15BluetoothSerial21bluetoothSerialListenEPKc
+     /tmp/ccfxQ9eV.s:306    .text._ZN5amiro15BluetoothSerial22bluetoothSerialConnectEPKc:00000000 $t
+     /tmp/ccfxQ9eV.s:312    .text._ZN5amiro15BluetoothSerial22bluetoothSerialConnectEPKc:00000000 _ZN5amiro15BluetoothSerial22bluetoothSerialConnectEPKc
+     /tmp/ccfxQ9eV.s:320    .text._ZN5amiro15BluetoothSerial25bluetoothSerialDisconnectEPKc:00000000 $t
+     /tmp/ccfxQ9eV.s:326    .text._ZN5amiro15BluetoothSerial25bluetoothSerialDisconnectEPKc:00000000 _ZN5amiro15BluetoothSerial25bluetoothSerialDisconnectEPKc
+     /tmp/ccfxQ9eV.s:334    .text.startup._GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 $t
+     /tmp/ccfxQ9eV.s:339    .text.startup._GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000000 _GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh
+     /tmp/ccfxQ9eV.s:351    .text.startup._GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:0000000c $d
+     /tmp/ccfxQ9eV.s:355    .init_array:00000000 $d
+     /tmp/ccfxQ9eV.s:362    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi128EEE
+     /tmp/ccfxQ9eV.s:359    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi128EEE:00000000 $d
+     /tmp/ccfxQ9eV.s:381    .rodata._ZTVN5amiro15BluetoothSerialE:00000000 _ZTVN5amiro15BluetoothSerialE
+     /tmp/ccfxQ9eV.s:370    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 $d
+     /tmp/ccfxQ9eV.s:374    .bss._ZN5amiro9constants12DiWheelDriveL10wheelErrorE:00000000 _ZN5amiro9constants12DiWheelDriveL10wheelErrorE
+     /tmp/ccfxQ9eV.s:377    .rodata._ZTVN5amiro15BluetoothSerialE:00000000 $d
+     /tmp/ccfxQ9eV.s:388    .rodata.str1.4:00000000 $d
+     /tmp/ccfxQ9eV.s:92     .text._ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:0000004c $t
+     /tmp/ccfxQ9eV.s:155    .text._ZN5amiro15BluetoothSerial13serialReceiveEv:00000078 $t
+     /tmp/ccfxQ9eV.s:189    .text.startup._ZN5amiro15BluetoothSerial4mainEv:0000002c $t
+     /tmp/ccfxQ9eV.s:354    .text.startup._GLOBAL__sub_I__ZN5amiro15BluetoothSerialC2EPNS_9BLUETOOTHEh:00000014 $t
 
 UNDEFINED SYMBOLS
 chThdCreateStatic
@@ -488,7 +488,7 @@ _ZN5amiro19BluetoothDescriptor29bluetoothDescriptorGetPayloadEv
 _ZN5amiro19BluetoothDescriptor35bluetoothDescriptorGetPayloadLengthEv
 _ZN5amiro18BluetoothTransport35bluetoothTransportGetStorageMailboxEv
 _ZN10chibios_rt7Mailbox4postElm
-ARM GAS  /tmp/ccdCfcsI.s 			page 10
+ARM GAS  /tmp/ccfxQ9eV.s 			page 10
 
 
 global

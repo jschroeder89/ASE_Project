@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccSDFk3s.s 			page 1
+ARM GAS  /tmp/ccrKJFwj.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccSDFk3s.s 			page 1
   55 0036 00BF     		.align	2
   56              	.L5:
   57 0038 00000000 		.word	.LC0
-ARM GAS  /tmp/ccSDFk3s.s 			page 2
+ARM GAS  /tmp/ccrKJFwj.s 			page 2
 
 
   58              		.size	chThdAddRef, .-chThdAddRef
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccSDFk3s.s 			page 1
  112 0056 2269     		ldr	r2, [r4, #16]
  113 0058 2046     		mov	r0, r4
  114 005a 5361     		str	r3, [r2, #20]
-ARM GAS  /tmp/ccSDFk3s.s 			page 3
+ARM GAS  /tmp/ccrKJFwj.s 			page 3
 
 
  115 005c BDE83840 		pop	{r3, r4, r5, lr}
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccSDFk3s.s 			page 1
  169 003e 0023     		movs	r3, #0
  170              	@ 152 "../../../ChibiOS/os/kernel/src/chdynamic.c" 1
  171 0040 83F31188 		msr     BASEPRI, r3
-ARM GAS  /tmp/ccSDFk3s.s 			page 4
+ARM GAS  /tmp/ccrKJFwj.s 			page 4
 
 
  172              	@ 0 "" 2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccSDFk3s.s 			page 1
  225              		.thumb
  226 004e 2846     		mov	r0, r5
  227              	.L21:
-ARM GAS  /tmp/ccSDFk3s.s 			page 5
+ARM GAS  /tmp/ccrKJFwj.s 			page 5
 
 
  228 0050 02B0     		add	sp, sp, #8
@@ -278,25 +278,25 @@ ARM GAS  /tmp/ccSDFk3s.s 			page 1
  249      46726F6D 
  249      4D656D6F 
  250 0046 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccSDFk3s.s 			page 6
+ARM GAS  /tmp/ccrKJFwj.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chdynamic.c
-     /tmp/ccSDFk3s.s:18     .text.chThdAddRef:00000000 $t
-     /tmp/ccSDFk3s.s:24     .text.chThdAddRef:00000000 chThdAddRef
-     /tmp/ccSDFk3s.s:57     .text.chThdAddRef:00000038 $d
-     /tmp/ccSDFk3s.s:60     .text.chThdRelease:00000000 $t
-     /tmp/ccSDFk3s.s:66     .text.chThdRelease:00000000 chThdRelease
-     /tmp/ccSDFk3s.s:130    .text.chThdRelease:0000007c $d
-     /tmp/ccSDFk3s.s:133    .text.chThdCreateFromHeap:00000000 $t
-     /tmp/ccSDFk3s.s:139    .text.chThdCreateFromHeap:00000000 chThdCreateFromHeap
-     /tmp/ccSDFk3s.s:181    .text.chThdCreateFromMemoryPool:00000000 $t
-     /tmp/ccSDFk3s.s:187    .text.chThdCreateFromMemoryPool:00000000 chThdCreateFromMemoryPool
-     /tmp/ccSDFk3s.s:238    .text.chThdCreateFromMemoryPool:00000060 $d
-     /tmp/ccSDFk3s.s:241    .rodata.str1.4:00000000 $d
-     /tmp/ccSDFk3s.s:59     .text.chThdAddRef:0000003c $t
-     /tmp/ccSDFk3s.s:240    .text.chThdCreateFromMemoryPool:00000064 $t
+     /tmp/ccrKJFwj.s:18     .text.chThdAddRef:00000000 $t
+     /tmp/ccrKJFwj.s:24     .text.chThdAddRef:00000000 chThdAddRef
+     /tmp/ccrKJFwj.s:57     .text.chThdAddRef:00000038 $d
+     /tmp/ccrKJFwj.s:60     .text.chThdRelease:00000000 $t
+     /tmp/ccrKJFwj.s:66     .text.chThdRelease:00000000 chThdRelease
+     /tmp/ccrKJFwj.s:130    .text.chThdRelease:0000007c $d
+     /tmp/ccrKJFwj.s:133    .text.chThdCreateFromHeap:00000000 $t
+     /tmp/ccrKJFwj.s:139    .text.chThdCreateFromHeap:00000000 chThdCreateFromHeap
+     /tmp/ccrKJFwj.s:181    .text.chThdCreateFromMemoryPool:00000000 $t
+     /tmp/ccrKJFwj.s:187    .text.chThdCreateFromMemoryPool:00000000 chThdCreateFromMemoryPool
+     /tmp/ccrKJFwj.s:238    .text.chThdCreateFromMemoryPool:00000060 $d
+     /tmp/ccrKJFwj.s:241    .rodata.str1.4:00000000 $d
+     /tmp/ccrKJFwj.s:59     .text.chThdAddRef:0000003c $t
+     /tmp/ccrKJFwj.s:240    .text.chThdCreateFromMemoryPool:00000064 $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock

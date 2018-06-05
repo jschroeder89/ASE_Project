@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccf9cNEE.s 			page 1
+ARM GAS  /tmp/ccVn7f1E.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccf9cNEE.s 			page 1
   52              		.thumb_func
   53              		.type	_write_r, %function
   54              	_write_r:
-ARM GAS  /tmp/ccf9cNEE.s 			page 2
+ARM GAS  /tmp/ccVn7f1E.s 			page 2
 
 
   55              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccf9cNEE.s 			page 1
  105              	.L12:
  106 0024 00000000 		.word	.LC0
  107              		.size	_sbrk_r, .-_sbrk_r
-ARM GAS  /tmp/ccf9cNEE.s 			page 3
+ARM GAS  /tmp/ccVn7f1E.s 			page 3
 
 
  108 0028 AFF30080 		.section	.text._fstat_r,"ax",%progbits
@@ -167,28 +167,28 @@ ARM GAS  /tmp/ccf9cNEE.s 			page 1
  146      726B5F72 
  146      22282900 
  147              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccf9cNEE.s 			page 4
+ARM GAS  /tmp/ccVn7f1E.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 syscalls.c
-     /tmp/ccf9cNEE.s:18     .text._read_r:00000000 $t
-     /tmp/ccf9cNEE.s:24     .text._read_r:00000000 _read_r
-     /tmp/ccf9cNEE.s:34     .text._lseek_r:00000000 $t
-     /tmp/ccf9cNEE.s:40     .text._lseek_r:00000000 _lseek_r
-     /tmp/ccf9cNEE.s:48     .text._write_r:00000000 $t
-     /tmp/ccf9cNEE.s:54     .text._write_r:00000000 _write_r
-     /tmp/ccf9cNEE.s:62     .text._close_r:00000000 $t
-     /tmp/ccf9cNEE.s:68     .text._close_r:00000000 _close_r
-     /tmp/ccf9cNEE.s:76     .text._sbrk_r:00000000 $t
-     /tmp/ccf9cNEE.s:82     .text._sbrk_r:00000000 _sbrk_r
-     /tmp/ccf9cNEE.s:106    .text._sbrk_r:00000024 $d
-     /tmp/ccf9cNEE.s:109    .text._fstat_r:00000000 $t
-     /tmp/ccf9cNEE.s:115    .text._fstat_r:00000000 _fstat_r
-     /tmp/ccf9cNEE.s:130    .text._isatty_r:00000000 $t
-     /tmp/ccf9cNEE.s:136    .text._isatty_r:00000000 _isatty_r
-     /tmp/ccf9cNEE.s:144    .rodata.str1.4:00000000 $d
-     /tmp/ccf9cNEE.s:108    .text._sbrk_r:00000028 $t
+     /tmp/ccVn7f1E.s:18     .text._read_r:00000000 $t
+     /tmp/ccVn7f1E.s:24     .text._read_r:00000000 _read_r
+     /tmp/ccVn7f1E.s:34     .text._lseek_r:00000000 $t
+     /tmp/ccVn7f1E.s:40     .text._lseek_r:00000000 _lseek_r
+     /tmp/ccVn7f1E.s:48     .text._write_r:00000000 $t
+     /tmp/ccVn7f1E.s:54     .text._write_r:00000000 _write_r
+     /tmp/ccVn7f1E.s:62     .text._close_r:00000000 $t
+     /tmp/ccVn7f1E.s:68     .text._close_r:00000000 _close_r
+     /tmp/ccVn7f1E.s:76     .text._sbrk_r:00000000 $t
+     /tmp/ccVn7f1E.s:82     .text._sbrk_r:00000000 _sbrk_r
+     /tmp/ccVn7f1E.s:106    .text._sbrk_r:00000024 $d
+     /tmp/ccVn7f1E.s:109    .text._fstat_r:00000000 $t
+     /tmp/ccVn7f1E.s:115    .text._fstat_r:00000000 _fstat_r
+     /tmp/ccVn7f1E.s:130    .text._isatty_r:00000000 $t
+     /tmp/ccVn7f1E.s:136    .text._isatty_r:00000000 _isatty_r
+     /tmp/ccVn7f1E.s:144    .rodata.str1.4:00000000 $d
+     /tmp/ccVn7f1E.s:108    .text._sbrk_r:00000028 $t
 
 UNDEFINED SYMBOLS
 chCoreAlloc

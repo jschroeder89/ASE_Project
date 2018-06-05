@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc2L8Ze6.s 			page 1
+ARM GAS  /tmp/ccGGqUWb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc2L8Ze6.s 			page 1
   55 0032 5B68     		ldr	r3, [r3, #4]
   56 0034 0222     		movs	r2, #2
   57 0036 9847     		blx	r3
-ARM GAS  /tmp/cc2L8Ze6.s 			page 2
+ARM GAS  /tmp/ccGGqUWb.s 			page 2
 
 
   58 0038 0228     		cmp	r0, #2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc2L8Ze6.s 			page 1
  109 003e 0222     		movs	r2, #2
  110 0040 9847     		blx	r3
  111 0042 0228     		cmp	r0, #2
-ARM GAS  /tmp/cc2L8Ze6.s 			page 3
+ARM GAS  /tmp/ccGGqUWb.s 			page 3
 
 
  112 0044 0CBF     		ite	eq
@@ -127,14 +127,14 @@ ARM GAS  /tmp/cc2L8Ze6.s 			page 1
  115 004a E1E7     		b	.L14
  116              		.size	_ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth, .-_ZN5amiro12fileSystemI
  117 004c AFF30080 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cc2L8Ze6.s 			page 4
+ARM GAS  /tmp/ccGGqUWb.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 FSIOPowerManagement.cpp
-     /tmp/cc2L8Ze6.s:18     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth:00000000 $t
-     /tmp/cc2L8Ze6.s:24     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth:00000000 _ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth
-     /tmp/cc2L8Ze6.s:65     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth:00000000 $t
-     /tmp/cc2L8Ze6.s:71     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth:00000000 _ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth
+     /tmp/ccGGqUWb.s:18     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth:00000000 $t
+     /tmp/ccGGqUWb.s:24     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth:00000000 _ZN5amiro12fileSystemIo19FSIOPowerManagement17getVcnl4020OffsetEPth
+     /tmp/ccGGqUWb.s:65     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth:00000000 $t
+     /tmp/ccGGqUWb.s:71     .text._ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth:00000000 _ZN5amiro12fileSystemIo19FSIOPowerManagement17setVcnl4020OffsetEth
 
 NO UNDEFINED SYMBOLS

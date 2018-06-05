@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccpkAt7O.s 			page 1
+ARM GAS  /tmp/cczwOner.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccpkAt7O.s 			page 1
   55 0006 0C46     		mov	r4, r1
   56 0008 0546     		mov	r5, r0
   57 000a 01D1     		bne	.L5
-ARM GAS  /tmp/ccpkAt7O.s 			page 2
+ARM GAS  /tmp/cczwOner.s 			page 2
 
 
   58 000c 7307     		lsls	r3, r6, #29
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccpkAt7O.s 			page 1
  110 0032 0BB3     		cbz	r3, .L22
  111 0034 05F10800 		add	r0, r5, #8
  112 0038 9847     		blx	r3
-ARM GAS  /tmp/ccpkAt7O.s 			page 3
+ARM GAS  /tmp/cczwOner.s 			page 3
 
 
  113 003a E8B1     		cbz	r0, .L22
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccpkAt7O.s 			page 1
  167 000c 06F11000 		add	r0, r6, #16
  168 0010 FFF7FEFF 		bl	chMtxLock
  169 0014 0836     		adds	r6, r6, #8
-ARM GAS  /tmp/ccpkAt7O.s 			page 4
+ARM GAS  /tmp/cczwOner.s 			page 4
 
 
  170 0016 3446     		mov	r4, r6
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccpkAt7O.s 			page 1
  224 0084 4968     		ldr	r1, [r1, #4]
  225 0086 EB58     		ldr	r3, [r5, r3]
  226 0088 47F8083C 		str	r3, [r7, #-8]
-ARM GAS  /tmp/ccpkAt7O.s 			page 5
+ARM GAS  /tmp/cczwOner.s 			page 5
 
 
  227 008c 5318     		adds	r3, r2, r1
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccpkAt7O.s 			page 1
  280 0022 0244     		add	r2, r2, r0
  281 0024 002B     		cmp	r3, #0
  282 0026 F9D1     		bne	.L54
-ARM GAS  /tmp/ccpkAt7O.s 			page 6
+ARM GAS  /tmp/cczwOner.s 			page 6
 
 
  283              	.L53:
@@ -349,32 +349,32 @@ ARM GAS  /tmp/ccpkAt7O.s 			page 1
  315      00000000 
  315      00000000 
  316              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccpkAt7O.s 			page 7
+ARM GAS  /tmp/cczwOner.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chheap.c
-     /tmp/ccpkAt7O.s:18     .text._heap_init:00000000 $t
-     /tmp/ccpkAt7O.s:24     .text._heap_init:00000000 _heap_init
-     /tmp/ccpkAt7O.s:39     .text._heap_init:00000014 $d
-     /tmp/ccpkAt7O.s:43     .text.chHeapInit:00000000 $t
-     /tmp/ccpkAt7O.s:49     .text.chHeapInit:00000000 chHeapInit
-     /tmp/ccpkAt7O.s:76     .text.chHeapInit:00000030 $d
-     /tmp/ccpkAt7O.s:79     .text.chHeapAlloc:00000000 $t
-     /tmp/ccpkAt7O.s:85     .text.chHeapAlloc:00000000 chHeapAlloc
-     /tmp/ccpkAt7O.s:149    .text.chHeapAlloc:0000007c $d
-     /tmp/ccpkAt7O.s:152    .text.chHeapFree:00000000 $t
-     /tmp/ccpkAt7O.s:158    .text.chHeapFree:00000000 chHeapFree
-     /tmp/ccpkAt7O.s:251    .text.chHeapFree:000000c0 $d
-     /tmp/ccpkAt7O.s:255    .text.chHeapStatus:00000000 $t
-     /tmp/ccpkAt7O.s:261    .text.chHeapStatus:00000000 chHeapStatus
-     /tmp/ccpkAt7O.s:297    .text.chHeapStatus:0000003c $d
-     /tmp/ccpkAt7O.s:300    .rodata.str1.4:00000000 $d
-     /tmp/ccpkAt7O.s:310    .bss.default_heap:00000000 $d
-     /tmp/ccpkAt7O.s:314    .bss.default_heap:00000000 default_heap
-     /tmp/ccpkAt7O.s:42     .text._heap_init:0000001c $t
-     /tmp/ccpkAt7O.s:78     .text.chHeapInit:00000034 $t
-     /tmp/ccpkAt7O.s:254    .text.chHeapFree:000000c8 $t
+     /tmp/cczwOner.s:18     .text._heap_init:00000000 $t
+     /tmp/cczwOner.s:24     .text._heap_init:00000000 _heap_init
+     /tmp/cczwOner.s:39     .text._heap_init:00000014 $d
+     /tmp/cczwOner.s:43     .text.chHeapInit:00000000 $t
+     /tmp/cczwOner.s:49     .text.chHeapInit:00000000 chHeapInit
+     /tmp/cczwOner.s:76     .text.chHeapInit:00000030 $d
+     /tmp/cczwOner.s:79     .text.chHeapAlloc:00000000 $t
+     /tmp/cczwOner.s:85     .text.chHeapAlloc:00000000 chHeapAlloc
+     /tmp/cczwOner.s:149    .text.chHeapAlloc:0000007c $d
+     /tmp/cczwOner.s:152    .text.chHeapFree:00000000 $t
+     /tmp/cczwOner.s:158    .text.chHeapFree:00000000 chHeapFree
+     /tmp/cczwOner.s:251    .text.chHeapFree:000000c0 $d
+     /tmp/cczwOner.s:255    .text.chHeapStatus:00000000 $t
+     /tmp/cczwOner.s:261    .text.chHeapStatus:00000000 chHeapStatus
+     /tmp/cczwOner.s:297    .text.chHeapStatus:0000003c $d
+     /tmp/cczwOner.s:300    .rodata.str1.4:00000000 $d
+     /tmp/cczwOner.s:310    .bss.default_heap:00000000 $d
+     /tmp/cczwOner.s:314    .bss.default_heap:00000000 default_heap
+     /tmp/cczwOner.s:42     .text._heap_init:0000001c $t
+     /tmp/cczwOner.s:78     .text.chHeapInit:00000034 $t
+     /tmp/cczwOner.s:254    .text.chHeapFree:000000c8 $t
 
 UNDEFINED SYMBOLS
 chMtxInit

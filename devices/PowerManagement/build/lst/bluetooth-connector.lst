@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccL59eKR.s 			page 1
+ARM GAS  /tmp/ccRbOUgs.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccL59eKR.s 			page 1
   55              	_ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:
   56              		@ args = 0, pretend = 0, frame = 0
   57              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccL59eKR.s 			page 2
+ARM GAS  /tmp/ccRbOUgs.s 			page 2
 
 
   58 0000 10B5     		push	{r4, lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccL59eKR.s 			page 1
  111 0010 20B3     		cbz	r0, .L19
  112 0012 D5F84C38 		ldr	r3, [r5, #2124]
  113 0016 1BB3     		cbz	r3, .L17
-ARM GAS  /tmp/ccL59eKR.s 			page 3
+ARM GAS  /tmp/ccRbOUgs.s 			page 3
 
 
  114 0018 2249     		ldr	r1, .L21+4
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccL59eKR.s 			page 1
  168 0098 85F86428 		strb	r2, [r5, #2148]
  169 009c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  170              	.L22:
-ARM GAS  /tmp/ccL59eKR.s 			page 4
+ARM GAS  /tmp/ccRbOUgs.s 			page 4
 
 
  171 009e 00BF     		.align	2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccL59eKR.s 			page 1
  225 005c D9F80830 		ldr	r3, [r9, #8]
  226 0060 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  227 0062 532B     		cmp	r3, #83
-ARM GAS  /tmp/ccL59eKR.s 			page 5
+ARM GAS  /tmp/ccRbOUgs.s 			page 5
 
 
  228 0064 1AD0     		beq	.L26
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccL59eKR.s 			page 1
  280 000c 83B0     		sub	sp, sp, #12
  281 000e 1768     		ldr	r7, [r2]
  282 0010 0090     		str	r0, [sp]
-ARM GAS  /tmp/ccL59eKR.s 			page 6
+ARM GAS  /tmp/ccRbOUgs.s 			page 6
 
 
  283 0012 0B0C     		lsrs	r3, r1, #16
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccL59eKR.s 			page 1
  332      2000
  333 001a 0000     		.space	2
  334              	.LC4:
-ARM GAS  /tmp/ccL59eKR.s 			page 7
+ARM GAS  /tmp/ccRbOUgs.s 			page 7
 
 
  335 001c 20313130 		.ascii	" 1101 RFCOMM\000"
@@ -376,34 +376,34 @@ ARM GAS  /tmp/ccL59eKR.s 			page 1
  341 003c 434C4F53 		.ascii	"CLOSE \000"
  341      452000
  342 0043 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccL59eKR.s 			page 8
+ARM GAS  /tmp/ccRbOUgs.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 bluetooth-connector.cpp
-     /tmp/ccL59eKR.s:18     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:00000000 $t
-     /tmp/ccL59eKR.s:24     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:00000000 _ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh
-     /tmp/ccL59eKR.s:46     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:00000028 $d
-     /tmp/ccL59eKR.s:49     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000000 $t
-     /tmp/ccL59eKR.s:55     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000000 _ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv
-     /tmp/ccL59eKR.s:74     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000024 $d
-     /tmp/ccL59eKR.s:77     .text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:00000000 $t
-     /tmp/ccL59eKR.s:83     .text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:00000000 _ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc
-     /tmp/ccL59eKR.s:83     .text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:00000000 _ZN5amiro18BluetoothConnectorC1EPNS_9BLUETOOTHEPvPKc
-     /tmp/ccL59eKR.s:95     .text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:00000000 $t
-     /tmp/ccL59eKR.s:101    .text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:00000000 _ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc
-     /tmp/ccL59eKR.s:173    .text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:000000a0 $d
-     /tmp/ccL59eKR.s:179    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:00000000 $t
-     /tmp/ccL59eKR.s:185    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:00000000 _ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc
-     /tmp/ccL59eKR.s:261    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:000000a8 $d
-     /tmp/ccL59eKR.s:266    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000000 $t
-     /tmp/ccL59eKR.s:272    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000000 _ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc
-     /tmp/ccL59eKR.s:319    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000060 $d
-     /tmp/ccL59eKR.s:322    .rodata.str1.4:00000000 $d
-     /tmp/ccL59eKR.s:48     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:0000002c $t
-     /tmp/ccL59eKR.s:76     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000028 $t
-     /tmp/ccL59eKR.s:265    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:000000b4 $t
-     /tmp/ccL59eKR.s:321    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000064 $t
+     /tmp/ccRbOUgs.s:18     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:00000000 $t
+     /tmp/ccRbOUgs.s:24     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:00000000 _ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh
+     /tmp/ccRbOUgs.s:46     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:00000028 $d
+     /tmp/ccRbOUgs.s:49     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000000 $t
+     /tmp/ccRbOUgs.s:55     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000000 _ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv
+     /tmp/ccRbOUgs.s:74     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000024 $d
+     /tmp/ccRbOUgs.s:77     .text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:00000000 $t
+     /tmp/ccRbOUgs.s:83     .text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:00000000 _ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc
+     /tmp/ccRbOUgs.s:83     .text._ZN5amiro18BluetoothConnectorC2EPNS_9BLUETOOTHEPvPKc:00000000 _ZN5amiro18BluetoothConnectorC1EPNS_9BLUETOOTHEPvPKc
+     /tmp/ccRbOUgs.s:95     .text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:00000000 $t
+     /tmp/ccRbOUgs.s:101    .text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:00000000 _ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc
+     /tmp/ccRbOUgs.s:173    .text._ZN5amiro18BluetoothConnector24bluetoothConnectorListenEPKc:000000a0 $d
+     /tmp/ccRbOUgs.s:179    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:00000000 $t
+     /tmp/ccRbOUgs.s:185    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:00000000 _ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc
+     /tmp/ccRbOUgs.s:261    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:000000a8 $d
+     /tmp/ccRbOUgs.s:266    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000000 $t
+     /tmp/ccRbOUgs.s:272    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000000 _ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc
+     /tmp/ccRbOUgs.s:319    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000060 $d
+     /tmp/ccRbOUgs.s:322    .rodata.str1.4:00000000 $d
+     /tmp/ccRbOUgs.s:48     .text._ZN5amiro18BluetoothConnector26bluetoothConnectorActivateEh:0000002c $t
+     /tmp/ccRbOUgs.s:76     .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDeactivateEv:00000028 $t
+     /tmp/ccRbOUgs.s:265    .text._ZN5amiro18BluetoothConnector25bluetoothConnectorConnectEPKc:000000b4 $t
+     /tmp/ccRbOUgs.s:321    .text._ZN5amiro18BluetoothConnector28bluetoothConnectorDisconnectEPKc:00000064 $t
 
 UNDEFINED SYMBOLS
 strstr

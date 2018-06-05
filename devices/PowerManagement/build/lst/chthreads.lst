@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccccroTf.s 			page 1
+ARM GAS  /tmp/ccMARBjY.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
   55 004c C0F82CC0 		str	ip, [r0, #44]
   56 0050 BDE8F007 		pop	{r4, r5, r6, r7, r8, r9, r10}
   57 0054 7047     		bx	lr
-ARM GAS  /tmp/ccccroTf.s 			page 2
+ARM GAS  /tmp/ccMARBjY.s 			page 2
 
 
   58              	.L3:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  112 0062 6562     		str	r5, [r4, #36]
  113 0064 A561     		str	r5, [r4, #24]
  114 0066 84F823A0 		strb	r10, [r4, #35]
-ARM GAS  /tmp/ccccroTf.s 			page 3
+ARM GAS  /tmp/ccMARBjY.s 			page 3
 
 
  115 006a 84F82290 		strb	r9, [r4, #34]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  167 0020 3946     		mov	r1, r7
  168 0022 4046     		mov	r0, r8
  169 0024 FFF7FEFF 		bl	chThdCreateI
-ARM GAS  /tmp/ccccroTf.s 			page 4
+ARM GAS  /tmp/ccMARBjY.s 			page 4
 
 
  170 0028 0021     		movs	r1, #0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  221 0030 83F31188 		msr     BASEPRI, r3
  222              	@ 0 "" 2
  223              		.thumb
-ARM GAS  /tmp/ccccroTf.s 			page 5
+ARM GAS  /tmp/ccMARBjY.s 			page 5
 
 
  224 0034 2846     		mov	r0, r5
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  276      AFF30080 
  277              		.align	2
  278              		.p2align 4,,15
-ARM GAS  /tmp/ccccroTf.s 			page 6
+ARM GAS  /tmp/ccMARBjY.s 			page 6
 
 
  279              		.global	chThdTerminate
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  331 0022 0023     		movs	r3, #0
  332              	@ 298 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
  333 0024 83F31188 		msr     BASEPRI, r3
-ARM GAS  /tmp/ccccroTf.s 			page 7
+ARM GAS  /tmp/ccMARBjY.s 			page 7
 
 
  334              	@ 0 "" 2
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  388              		@ frame_needed = 0, uses_anonymous_args = 0
  389 0000 08B5     		push	{r3, lr}
  390 0002 2023     		movs	r3, #32
-ARM GAS  /tmp/ccccroTf.s 			page 8
+ARM GAS  /tmp/ccMARBjY.s 			page 8
 
 
  391              	@ 326 "../../../ChibiOS/os/kernel/src/chthreads.c" 1
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  445 0026 04D1     		bne	.L48
  446 0028 6369     		ldr	r3, [r4, #20]
  447 002a 2269     		ldr	r2, [r4, #16]
-ARM GAS  /tmp/ccccroTf.s 			page 9
+ARM GAS  /tmp/ccMARBjY.s 			page 9
 
 
  448 002c 1A61     		str	r2, [r3, #16]
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  501 0008 83F31188 		msr     BASEPRI, r3
  502              	@ 0 "" 2
  503              		.thumb
-ARM GAS  /tmp/ccccroTf.s 			page 10
+ARM GAS  /tmp/ccMARBjY.s 			page 10
 
 
  504 000c 154D     		ldr	r5, .L65
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  556              	.LC0:
  557 0000 22636854 		.ascii	"\"chThdCreateI\"()\000"
  557      68644372 
-ARM GAS  /tmp/ccccroTf.s 			page 11
+ARM GAS  /tmp/ccMARBjY.s 			page 11
 
 
  557      65617465 
@@ -649,52 +649,52 @@ ARM GAS  /tmp/ccccroTf.s 			page 1
  577      7428292C 
  577      20233200 
  578              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccccroTf.s 			page 12
+ARM GAS  /tmp/ccMARBjY.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chthreads.c
-     /tmp/ccccroTf.s:18     .text._thread_init:00000000 $t
-     /tmp/ccccroTf.s:24     .text._thread_init:00000000 _thread_init
-     /tmp/ccccroTf.s:61     .text._thread_init:00000058 $d
-     /tmp/ccccroTf.s:64     .text.chThdCreateI:00000000 $t
-     /tmp/ccccroTf.s:70     .text.chThdCreateI:00000000 chThdCreateI
-     /tmp/ccccroTf.s:137    .text.chThdCreateI:00000098 $d
-     /tmp/ccccroTf.s:142    .text.chThdCreateStatic:00000000 $t
-     /tmp/ccccroTf.s:148    .text.chThdCreateStatic:00000000 chThdCreateStatic
-     /tmp/ccccroTf.s:185    .text.chThdSetPriority:00000000 $t
-     /tmp/ccccroTf.s:191    .text.chThdSetPriority:00000000 chThdSetPriority
-     /tmp/ccccroTf.s:233    .text.chThdSetPriority:00000040 $d
-     /tmp/ccccroTf.s:237    .text.chThdResume:00000000 $t
-     /tmp/ccccroTf.s:243    .text.chThdResume:00000000 chThdResume
-     /tmp/ccccroTf.s:274    .text.chThdResume:00000034 $d
-     /tmp/ccccroTf.s:277    .text.chThdTerminate:00000000 $t
-     /tmp/ccccroTf.s:283    .text.chThdTerminate:00000000 chThdTerminate
-     /tmp/ccccroTf.s:306    .text.chThdSleep:00000000 $t
-     /tmp/ccccroTf.s:312    .text.chThdSleep:00000000 chThdSleep
-     /tmp/ccccroTf.s:340    .text.chThdSleep:0000002c $d
-     /tmp/ccccroTf.s:343    .text.chThdSleepUntil:00000000 $t
-     /tmp/ccccroTf.s:349    .text.chThdSleepUntil:00000000 chThdSleepUntil
-     /tmp/ccccroTf.s:377    .text.chThdSleepUntil:00000028 $d
-     /tmp/ccccroTf.s:380    .text.chThdYield:00000000 $t
-     /tmp/ccccroTf.s:386    .text.chThdYield:00000000 chThdYield
-     /tmp/ccccroTf.s:415    .text.chThdYield:0000002c $d
-     /tmp/ccccroTf.s:418    .text.chThdExitS:00000000 $t
-     /tmp/ccccroTf.s:424    .text.chThdExitS:00000000 chThdExitS
-     /tmp/ccccroTf.s:460    .text.chThdExitS:00000044 $d
-     /tmp/ccccroTf.s:464    .text.chThdExit:00000000 $t
-     /tmp/ccccroTf.s:470    .text.chThdExit:00000000 chThdExit
-     /tmp/ccccroTf.s:486    .text.chThdWait:00000000 $t
-     /tmp/ccccroTf.s:492    .text.chThdWait:00000000 chThdWait
-     /tmp/ccccroTf.s:549    .text.chThdWait:00000064 $d
-     /tmp/ccccroTf.s:555    .rodata.str1.4:00000000 $d
-     /tmp/ccccroTf.s:578    .text._thread_init:0000005c $t
-     /tmp/ccccroTf.s:141    .text.chThdCreateI:000000a4 $t
-     /tmp/ccccroTf.s:236    .text.chThdSetPriority:00000048 $t
-     /tmp/ccccroTf.s:276    .text.chThdResume:00000038 $t
-     /tmp/ccccroTf.s:379    .text.chThdSleepUntil:0000002c $t
-     /tmp/ccccroTf.s:578    .text.chThdExitS:0000004c $t
-     /tmp/ccccroTf.s:554    .text.chThdWait:00000074 $t
+     /tmp/ccMARBjY.s:18     .text._thread_init:00000000 $t
+     /tmp/ccMARBjY.s:24     .text._thread_init:00000000 _thread_init
+     /tmp/ccMARBjY.s:61     .text._thread_init:00000058 $d
+     /tmp/ccMARBjY.s:64     .text.chThdCreateI:00000000 $t
+     /tmp/ccMARBjY.s:70     .text.chThdCreateI:00000000 chThdCreateI
+     /tmp/ccMARBjY.s:137    .text.chThdCreateI:00000098 $d
+     /tmp/ccMARBjY.s:142    .text.chThdCreateStatic:00000000 $t
+     /tmp/ccMARBjY.s:148    .text.chThdCreateStatic:00000000 chThdCreateStatic
+     /tmp/ccMARBjY.s:185    .text.chThdSetPriority:00000000 $t
+     /tmp/ccMARBjY.s:191    .text.chThdSetPriority:00000000 chThdSetPriority
+     /tmp/ccMARBjY.s:233    .text.chThdSetPriority:00000040 $d
+     /tmp/ccMARBjY.s:237    .text.chThdResume:00000000 $t
+     /tmp/ccMARBjY.s:243    .text.chThdResume:00000000 chThdResume
+     /tmp/ccMARBjY.s:274    .text.chThdResume:00000034 $d
+     /tmp/ccMARBjY.s:277    .text.chThdTerminate:00000000 $t
+     /tmp/ccMARBjY.s:283    .text.chThdTerminate:00000000 chThdTerminate
+     /tmp/ccMARBjY.s:306    .text.chThdSleep:00000000 $t
+     /tmp/ccMARBjY.s:312    .text.chThdSleep:00000000 chThdSleep
+     /tmp/ccMARBjY.s:340    .text.chThdSleep:0000002c $d
+     /tmp/ccMARBjY.s:343    .text.chThdSleepUntil:00000000 $t
+     /tmp/ccMARBjY.s:349    .text.chThdSleepUntil:00000000 chThdSleepUntil
+     /tmp/ccMARBjY.s:377    .text.chThdSleepUntil:00000028 $d
+     /tmp/ccMARBjY.s:380    .text.chThdYield:00000000 $t
+     /tmp/ccMARBjY.s:386    .text.chThdYield:00000000 chThdYield
+     /tmp/ccMARBjY.s:415    .text.chThdYield:0000002c $d
+     /tmp/ccMARBjY.s:418    .text.chThdExitS:00000000 $t
+     /tmp/ccMARBjY.s:424    .text.chThdExitS:00000000 chThdExitS
+     /tmp/ccMARBjY.s:460    .text.chThdExitS:00000044 $d
+     /tmp/ccMARBjY.s:464    .text.chThdExit:00000000 $t
+     /tmp/ccMARBjY.s:470    .text.chThdExit:00000000 chThdExit
+     /tmp/ccMARBjY.s:486    .text.chThdWait:00000000 $t
+     /tmp/ccMARBjY.s:492    .text.chThdWait:00000000 chThdWait
+     /tmp/ccMARBjY.s:549    .text.chThdWait:00000064 $d
+     /tmp/ccMARBjY.s:555    .rodata.str1.4:00000000 $d
+     /tmp/ccMARBjY.s:578    .text._thread_init:0000005c $t
+     /tmp/ccMARBjY.s:141    .text.chThdCreateI:000000a4 $t
+     /tmp/ccMARBjY.s:236    .text.chThdSetPriority:00000048 $t
+     /tmp/ccMARBjY.s:276    .text.chThdResume:00000038 $t
+     /tmp/ccMARBjY.s:379    .text.chThdSleepUntil:0000002c $t
+     /tmp/ccMARBjY.s:578    .text.chThdExitS:0000004c $t
+     /tmp/ccMARBjY.s:554    .text.chThdWait:00000074 $t
 
 UNDEFINED SYMBOLS
 rlist
@@ -709,7 +709,7 @@ chSchGoSleepTimeoutS
 vtlist
 chSchDoRescheduleBehind
 chSchReadyI
-ARM GAS  /tmp/ccccroTf.s 			page 13
+ARM GAS  /tmp/ccMARBjY.s 			page 13
 
 
 chSchGoSleepS

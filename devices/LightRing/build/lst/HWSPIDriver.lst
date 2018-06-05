@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccHtJ5nz.s 			page 1
+ARM GAS  /tmp/ccDmEv70.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccHtJ5nz.s 			page 1
   55              	.L5:
   56 0010 08000000 		.word	.LANCHOR0+8
   57              		.size	_ZN5amiro11HWSPIDriverD0Ev, .-_ZN5amiro11HWSPIDriverD0Ev
-ARM GAS  /tmp/ccHtJ5nz.s 			page 2
+ARM GAS  /tmp/ccDmEv70.s 			page 2
 
 
   58 0014 AFF30080 		.section	.text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccHtJ5nz.s 			page 1
  108 0024 6068     		ldr	r0, [r4, #4]
  109 0026 FFF7FEFF 		bl	spiExchange
  110 002a 6068     		ldr	r0, [r4, #4]
-ARM GAS  /tmp/ccHtJ5nz.s 			page 3
+ARM GAS  /tmp/ccDmEv70.s 			page 3
 
 
  111 002c FFF7FEFF 		bl	spiUnselect
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccHtJ5nz.s 			page 1
  162 000a FFF7FEFF 		bl	spiAcquireBus
  163 000e A168     		ldr	r1, [r4, #8]
  164 0010 6068     		ldr	r0, [r4, #4]
-ARM GAS  /tmp/ccHtJ5nz.s 			page 4
+ARM GAS  /tmp/ccDmEv70.s 			page 4
 
 
  165 0012 FFF7FEFF 		bl	spiStart
@@ -208,33 +208,33 @@ ARM GAS  /tmp/ccHtJ5nz.s 			page 1
  187 0008 00000000 		.word	_ZN5amiro11HWSPIDriverD1Ev
  188 000c 00000000 		.word	_ZN5amiro11HWSPIDriverD0Ev
  189              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccHtJ5nz.s 			page 5
+ARM GAS  /tmp/ccDmEv70.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 HWSPIDriver.cpp
-     /tmp/ccHtJ5nz.s:16     .text._ZN5amiro11HWSPIDriverD2Ev:00000000 $t
-     /tmp/ccHtJ5nz.s:22     .text._ZN5amiro11HWSPIDriverD2Ev:00000000 _ZN5amiro11HWSPIDriverD2Ev
-     /tmp/ccHtJ5nz.s:32     .text._ZN5amiro11HWSPIDriverD2Ev:00000008 $d
-     /tmp/ccHtJ5nz.s:22     .text._ZN5amiro11HWSPIDriverD2Ev:00000000 _ZN5amiro11HWSPIDriverD1Ev
-     /tmp/ccHtJ5nz.s:37     .text._ZN5amiro11HWSPIDriverD0Ev:00000000 $t
-     /tmp/ccHtJ5nz.s:43     .text._ZN5amiro11HWSPIDriverD0Ev:00000000 _ZN5amiro11HWSPIDriverD0Ev
-     /tmp/ccHtJ5nz.s:56     .text._ZN5amiro11HWSPIDriverD0Ev:00000010 $d
-     /tmp/ccHtJ5nz.s:59     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000000 $t
-     /tmp/ccHtJ5nz.s:65     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000000 _ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig
-     /tmp/ccHtJ5nz.s:79     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000010 $d
-     /tmp/ccHtJ5nz.s:65     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000000 _ZN5amiro11HWSPIDriverC1EP9SPIDriverPK9SPIConfig
-     /tmp/ccHtJ5nz.s:84     .text._ZN5amiro11HWSPIDriver8exchangeEPhPKhj:00000000 $t
-     /tmp/ccHtJ5nz.s:90     .text._ZN5amiro11HWSPIDriver8exchangeEPhPKhj:00000000 _ZN5amiro11HWSPIDriver8exchangeEPhPKhj
-     /tmp/ccHtJ5nz.s:117    .text._ZN5amiro11HWSPIDriver4readEPhj:00000000 $t
-     /tmp/ccHtJ5nz.s:123    .text._ZN5amiro11HWSPIDriver4readEPhj:00000000 _ZN5amiro11HWSPIDriver4readEPhj
-     /tmp/ccHtJ5nz.s:148    .text._ZN5amiro11HWSPIDriver5writeEPKhj:00000000 $t
-     /tmp/ccHtJ5nz.s:154    .text._ZN5amiro11HWSPIDriver5writeEPKhj:00000000 _ZN5amiro11HWSPIDriver5writeEPKhj
-     /tmp/ccHtJ5nz.s:184    .rodata._ZTVN5amiro11HWSPIDriverE:00000000 _ZTVN5amiro11HWSPIDriverE
-     /tmp/ccHtJ5nz.s:180    .rodata._ZTVN5amiro11HWSPIDriverE:00000000 $d
-     /tmp/ccHtJ5nz.s:36     .text._ZN5amiro11HWSPIDriverD2Ev:0000000c $t
-     /tmp/ccHtJ5nz.s:58     .text._ZN5amiro11HWSPIDriverD0Ev:00000014 $t
-     /tmp/ccHtJ5nz.s:83     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000014 $t
+     /tmp/ccDmEv70.s:16     .text._ZN5amiro11HWSPIDriverD2Ev:00000000 $t
+     /tmp/ccDmEv70.s:22     .text._ZN5amiro11HWSPIDriverD2Ev:00000000 _ZN5amiro11HWSPIDriverD2Ev
+     /tmp/ccDmEv70.s:32     .text._ZN5amiro11HWSPIDriverD2Ev:00000008 $d
+     /tmp/ccDmEv70.s:22     .text._ZN5amiro11HWSPIDriverD2Ev:00000000 _ZN5amiro11HWSPIDriverD1Ev
+     /tmp/ccDmEv70.s:37     .text._ZN5amiro11HWSPIDriverD0Ev:00000000 $t
+     /tmp/ccDmEv70.s:43     .text._ZN5amiro11HWSPIDriverD0Ev:00000000 _ZN5amiro11HWSPIDriverD0Ev
+     /tmp/ccDmEv70.s:56     .text._ZN5amiro11HWSPIDriverD0Ev:00000010 $d
+     /tmp/ccDmEv70.s:59     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000000 $t
+     /tmp/ccDmEv70.s:65     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000000 _ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig
+     /tmp/ccDmEv70.s:79     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000010 $d
+     /tmp/ccDmEv70.s:65     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000000 _ZN5amiro11HWSPIDriverC1EP9SPIDriverPK9SPIConfig
+     /tmp/ccDmEv70.s:84     .text._ZN5amiro11HWSPIDriver8exchangeEPhPKhj:00000000 $t
+     /tmp/ccDmEv70.s:90     .text._ZN5amiro11HWSPIDriver8exchangeEPhPKhj:00000000 _ZN5amiro11HWSPIDriver8exchangeEPhPKhj
+     /tmp/ccDmEv70.s:117    .text._ZN5amiro11HWSPIDriver4readEPhj:00000000 $t
+     /tmp/ccDmEv70.s:123    .text._ZN5amiro11HWSPIDriver4readEPhj:00000000 _ZN5amiro11HWSPIDriver4readEPhj
+     /tmp/ccDmEv70.s:148    .text._ZN5amiro11HWSPIDriver5writeEPKhj:00000000 $t
+     /tmp/ccDmEv70.s:154    .text._ZN5amiro11HWSPIDriver5writeEPKhj:00000000 _ZN5amiro11HWSPIDriver5writeEPKhj
+     /tmp/ccDmEv70.s:184    .rodata._ZTVN5amiro11HWSPIDriverE:00000000 _ZTVN5amiro11HWSPIDriverE
+     /tmp/ccDmEv70.s:180    .rodata._ZTVN5amiro11HWSPIDriverE:00000000 $d
+     /tmp/ccDmEv70.s:36     .text._ZN5amiro11HWSPIDriverD2Ev:0000000c $t
+     /tmp/ccDmEv70.s:58     .text._ZN5amiro11HWSPIDriverD0Ev:00000014 $t
+     /tmp/ccDmEv70.s:83     .text._ZN5amiro11HWSPIDriverC2EP9SPIDriverPK9SPIConfig:00000014 $t
 
 UNDEFINED SYMBOLS
 _ZdlPv

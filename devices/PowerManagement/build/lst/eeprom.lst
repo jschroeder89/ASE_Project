@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc9EyXMM.s 			page 1
+ARM GAS  /tmp/ccKj9R0T.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc9EyXMM.s 			page 1
   55              		.type	_ZN5amiro6EEPROMD2Ev, %function
   56              	_ZN5amiro6EEPROMD2Ev:
   57              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc9EyXMM.s 			page 2
+ARM GAS  /tmp/ccKj9R0T.s 			page 2
 
 
   58              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc9EyXMM.s 			page 1
  105 0004 AFF30080 		.section	.text._ZN5amiro6EEPROM7getsizeEPv,"ax",%progbits
  105      AFF30080 
  105      AFF30080 
-ARM GAS  /tmp/cc9EyXMM.s 			page 3
+ARM GAS  /tmp/ccKj9R0T.s 			page 3
 
 
  106              		.align	2
@@ -170,29 +170,29 @@ ARM GAS  /tmp/cc9EyXMM.s 			page 1
  148 0006 00BFAFF3 		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
  148      0080AFF3 
  148      0080
-ARM GAS  /tmp/cc9EyXMM.s 			page 4
+ARM GAS  /tmp/ccKj9R0T.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 eeprom.cpp
-     /tmp/cc9EyXMM.s:18     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 $t
-     /tmp/cc9EyXMM.s:24     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
-     /tmp/cc9EyXMM.s:24     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
-     /tmp/cc9EyXMM.s:50     .text._ZN5amiro6EEPROMD2Ev:00000000 $t
-     /tmp/cc9EyXMM.s:56     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD2Ev
-     /tmp/cc9EyXMM.s:56     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD1Ev
-     /tmp/cc9EyXMM.s:65     .text._ZN5amiro6EEPROM7acquireEv:00000000 $t
-     /tmp/cc9EyXMM.s:71     .text._ZN5amiro6EEPROM7acquireEv:00000000 _ZN5amiro6EEPROM7acquireEv
-     /tmp/cc9EyXMM.s:79     .text._ZN5amiro6EEPROM7releaseEv:00000000 $t
-     /tmp/cc9EyXMM.s:85     .text._ZN5amiro6EEPROM7releaseEv:00000000 _ZN5amiro6EEPROM7releaseEv
-     /tmp/cc9EyXMM.s:92     .text._ZN5amiro6EEPROM8geterrorEPv:00000000 $t
-     /tmp/cc9EyXMM.s:98     .text._ZN5amiro6EEPROM8geterrorEPv:00000000 _ZN5amiro6EEPROM8geterrorEPv
-     /tmp/cc9EyXMM.s:106    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 $t
-     /tmp/cc9EyXMM.s:112    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 _ZN5amiro6EEPROM7getsizeEPv
-     /tmp/cc9EyXMM.s:120    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 $t
-     /tmp/cc9EyXMM.s:126    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 _ZN5amiro6EEPROM11getpositionEPv
-     /tmp/cc9EyXMM.s:134    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 $t
-     /tmp/cc9EyXMM.s:140    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 _ZN5amiro6EEPROM5lseekEPvm
+     /tmp/ccKj9R0T.s:18     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 $t
+     /tmp/ccKj9R0T.s:24     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+     /tmp/ccKj9R0T.s:24     .text._ZN5amiro6EEPROMC2EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE:00000000 _ZN5amiro6EEPROMC1EPK17BaseFileStreamVMTjhthPNS_9I2CDriverE
+     /tmp/ccKj9R0T.s:50     .text._ZN5amiro6EEPROMD2Ev:00000000 $t
+     /tmp/ccKj9R0T.s:56     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD2Ev
+     /tmp/ccKj9R0T.s:56     .text._ZN5amiro6EEPROMD2Ev:00000000 _ZN5amiro6EEPROMD1Ev
+     /tmp/ccKj9R0T.s:65     .text._ZN5amiro6EEPROM7acquireEv:00000000 $t
+     /tmp/ccKj9R0T.s:71     .text._ZN5amiro6EEPROM7acquireEv:00000000 _ZN5amiro6EEPROM7acquireEv
+     /tmp/ccKj9R0T.s:79     .text._ZN5amiro6EEPROM7releaseEv:00000000 $t
+     /tmp/ccKj9R0T.s:85     .text._ZN5amiro6EEPROM7releaseEv:00000000 _ZN5amiro6EEPROM7releaseEv
+     /tmp/ccKj9R0T.s:92     .text._ZN5amiro6EEPROM8geterrorEPv:00000000 $t
+     /tmp/ccKj9R0T.s:98     .text._ZN5amiro6EEPROM8geterrorEPv:00000000 _ZN5amiro6EEPROM8geterrorEPv
+     /tmp/ccKj9R0T.s:106    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 $t
+     /tmp/ccKj9R0T.s:112    .text._ZN5amiro6EEPROM7getsizeEPv:00000000 _ZN5amiro6EEPROM7getsizeEPv
+     /tmp/ccKj9R0T.s:120    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 $t
+     /tmp/ccKj9R0T.s:126    .text._ZN5amiro6EEPROM11getpositionEPv:00000000 _ZN5amiro6EEPROM11getpositionEPv
+     /tmp/ccKj9R0T.s:134    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 $t
+     /tmp/ccKj9R0T.s:140    .text._ZN5amiro6EEPROM5lseekEPvm:00000000 _ZN5amiro6EEPROM5lseekEPvm
 
 UNDEFINED SYMBOLS
 chMtxInit

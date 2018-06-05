@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccCdGW5d.s 			page 1
+ARM GAS  /tmp/cc8Ra4J9.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
   53              		.thumb
   54              		.thumb_func
   55              		.type	adc_lld_start, %function
-ARM GAS  /tmp/ccCdGW5d.s 			page 2
+ARM GAS  /tmp/cc8Ra4J9.s 			page 2
 
 
   56              	adc_lld_start:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  110 0068 00380240 		.word	1073887232
  111 006c 00000000 		.word	.LC0
  112              		.size	adc_lld_start, .-adc_lld_start
-ARM GAS  /tmp/ccCdGW5d.s 			page 3
+ARM GAS  /tmp/cc8Ra4J9.s 			page 3
 
 
  113              		.section	.text.adc_lld_stop,"ax",%progbits
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  165 0006 2DE9F00F 		push	{r4, r5, r6, r7, r8, r9, r10, fp}
  166 000a C468     		ldr	r4, [r0, #12]
  167 000c 29B1     		cbz	r1, .L26
-ARM GAS  /tmp/ccCdGW5d.s 			page 4
+ARM GAS  /tmp/cc8Ra4J9.s 			page 4
 
 
  168 000e 012C     		cmp	r4, #1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  222 00ac 7047     		bx	lr
  223              		.size	adc_lld_start_conversion, .-adc_lld_start_conversion
  224 00ae 00BF     		.section	.text.adc_lld_stop_conversion,"ax",%progbits
-ARM GAS  /tmp/ccCdGW5d.s 			page 5
+ARM GAS  /tmp/cc8Ra4J9.s 			page 5
 
 
  225              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  276 0012 314C     		ldr	r4, .L67+4
  277 0014 E36A     		ldr	r3, [r4, #44]
  278 0016 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccCdGW5d.s 			page 6
+ARM GAS  /tmp/cc8Ra4J9.s 			page 6
 
 
  279 0018 5B68     		ldr	r3, [r3, #4]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  333 0082 002B     		cmp	r3, #0
  334 0084 CBD0     		beq	.L35
  335 0086 2046     		mov	r0, r4
-ARM GAS  /tmp/ccCdGW5d.s 			page 7
+ARM GAS  /tmp/cc8Ra4J9.s 			page 7
 
 
  336 0088 FFF7FEFF 		bl	adc_lld_stop_conversion
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  390 0000 11F00C0F 		tst	r1, #12
  391 0004 38B5     		push	{r3, r4, r5, lr}
  392 0006 0446     		mov	r4, r0
-ARM GAS  /tmp/ccCdGW5d.s 			page 8
+ARM GAS  /tmp/cc8Ra4J9.s 			page 8
 
 
  393 0008 1DD1     		bne	.L100
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  447 006e FFF7FEFF 		bl	dbg_check_lock_from_isr
  448 0072 6369     		ldr	r3, [r4, #20]
  449 0074 3BB1     		cbz	r3, .L81
-ARM GAS  /tmp/ccCdGW5d.s 			page 9
+ARM GAS  /tmp/cc8Ra4J9.s 			page 9
 
 
  450 0076 0021     		movs	r1, #0
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  504 00da 0222     		movs	r2, #2
  505 00dc 2361     		str	r3, [r4, #16]
  506 00de 2270     		strb	r2, [r4]
-ARM GAS  /tmp/ccCdGW5d.s 			page 10
+ARM GAS  /tmp/cc8Ra4J9.s 			page 10
 
 
  507 00e0 E8E7     		b	.L80
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  558              	adcSTM32EnableVBATE:
  559              		@ args = 0, pretend = 0, frame = 0
  560              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccCdGW5d.s 			page 11
+ARM GAS  /tmp/cc8Ra4J9.s 			page 11
 
 
  561              		@ link register save eliminated.
@@ -654,47 +654,47 @@ ARM GAS  /tmp/ccCdGW5d.s 			page 1
  604      7428292C 
  604      20233100 
  605              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccCdGW5d.s 			page 12
+ARM GAS  /tmp/cc8Ra4J9.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 adc_lld.c
-     /tmp/ccCdGW5d.s:18     .text.adc_lld_init:00000000 $t
-     /tmp/ccCdGW5d.s:24     .text.adc_lld_init:00000000 adc_lld_init
-     /tmp/ccCdGW5d.s:44     .text.adc_lld_init:00000024 $d
-     /tmp/ccCdGW5d.s:50     .text.adc_lld_start:00000000 $t
-     /tmp/ccCdGW5d.s:56     .text.adc_lld_start:00000000 adc_lld_start
-     /tmp/ccCdGW5d.s:106    .text.adc_lld_start:00000058 $d
-     /tmp/ccCdGW5d.s:387    .text.adc_lld_serve_rx_interrupt:00000000 adc_lld_serve_rx_interrupt
-     /tmp/ccCdGW5d.s:114    .text.adc_lld_stop:00000000 $t
-     /tmp/ccCdGW5d.s:120    .text.adc_lld_stop:00000000 adc_lld_stop
-     /tmp/ccCdGW5d.s:148    .text.adc_lld_stop:0000002c $d
-     /tmp/ccCdGW5d.s:152    .text.adc_lld_start_conversion:00000000 $t
-     /tmp/ccCdGW5d.s:158    .text.adc_lld_start_conversion:00000000 adc_lld_start_conversion
-     /tmp/ccCdGW5d.s:225    .text.adc_lld_stop_conversion:00000000 $t
-     /tmp/ccCdGW5d.s:231    .text.adc_lld_stop_conversion:00000000 adc_lld_stop_conversion
-     /tmp/ccCdGW5d.s:259    .text.Vector88:00000000 $t
-     /tmp/ccCdGW5d.s:265    .text.Vector88:00000000 Vector88
-     /tmp/ccCdGW5d.s:378    .text.Vector88:000000d4 $d
-     /tmp/ccCdGW5d.s:382    .text.adc_lld_serve_rx_interrupt:00000000 $t
-     /tmp/ccCdGW5d.s:510    .text.adcSTM32EnableTSVREFE:00000000 $t
-     /tmp/ccCdGW5d.s:516    .text.adcSTM32EnableTSVREFE:00000000 adcSTM32EnableTSVREFE
-     /tmp/ccCdGW5d.s:528    .text.adcSTM32EnableTSVREFE:0000000c $d
-     /tmp/ccCdGW5d.s:531    .text.adcSTM32DisableTSVREFE:00000000 $t
-     /tmp/ccCdGW5d.s:537    .text.adcSTM32DisableTSVREFE:00000000 adcSTM32DisableTSVREFE
-     /tmp/ccCdGW5d.s:549    .text.adcSTM32DisableTSVREFE:0000000c $d
-     /tmp/ccCdGW5d.s:552    .text.adcSTM32EnableVBATE:00000000 $t
-     /tmp/ccCdGW5d.s:558    .text.adcSTM32EnableVBATE:00000000 adcSTM32EnableVBATE
-     /tmp/ccCdGW5d.s:570    .text.adcSTM32EnableVBATE:0000000c $d
-     /tmp/ccCdGW5d.s:573    .text.adcSTM32DisableVBATE:00000000 $t
-     /tmp/ccCdGW5d.s:579    .text.adcSTM32DisableVBATE:00000000 adcSTM32DisableVBATE
-     /tmp/ccCdGW5d.s:591    .text.adcSTM32DisableVBATE:0000000c $d
-     /tmp/ccCdGW5d.s:599    .bss.ADCD1:00000000 ADCD1
-     /tmp/ccCdGW5d.s:595    .bss.ADCD1:00000000 $d
-     /tmp/ccCdGW5d.s:602    .rodata.str1.4:00000000 $d
-     /tmp/ccCdGW5d.s:49     .text.adc_lld_init:00000034 $t
-     /tmp/ccCdGW5d.s:151    .text.adc_lld_stop:00000034 $t
-     /tmp/ccCdGW5d.s:381    .text.Vector88:000000dc $t
+     /tmp/cc8Ra4J9.s:18     .text.adc_lld_init:00000000 $t
+     /tmp/cc8Ra4J9.s:24     .text.adc_lld_init:00000000 adc_lld_init
+     /tmp/cc8Ra4J9.s:44     .text.adc_lld_init:00000024 $d
+     /tmp/cc8Ra4J9.s:50     .text.adc_lld_start:00000000 $t
+     /tmp/cc8Ra4J9.s:56     .text.adc_lld_start:00000000 adc_lld_start
+     /tmp/cc8Ra4J9.s:106    .text.adc_lld_start:00000058 $d
+     /tmp/cc8Ra4J9.s:387    .text.adc_lld_serve_rx_interrupt:00000000 adc_lld_serve_rx_interrupt
+     /tmp/cc8Ra4J9.s:114    .text.adc_lld_stop:00000000 $t
+     /tmp/cc8Ra4J9.s:120    .text.adc_lld_stop:00000000 adc_lld_stop
+     /tmp/cc8Ra4J9.s:148    .text.adc_lld_stop:0000002c $d
+     /tmp/cc8Ra4J9.s:152    .text.adc_lld_start_conversion:00000000 $t
+     /tmp/cc8Ra4J9.s:158    .text.adc_lld_start_conversion:00000000 adc_lld_start_conversion
+     /tmp/cc8Ra4J9.s:225    .text.adc_lld_stop_conversion:00000000 $t
+     /tmp/cc8Ra4J9.s:231    .text.adc_lld_stop_conversion:00000000 adc_lld_stop_conversion
+     /tmp/cc8Ra4J9.s:259    .text.Vector88:00000000 $t
+     /tmp/cc8Ra4J9.s:265    .text.Vector88:00000000 Vector88
+     /tmp/cc8Ra4J9.s:378    .text.Vector88:000000d4 $d
+     /tmp/cc8Ra4J9.s:382    .text.adc_lld_serve_rx_interrupt:00000000 $t
+     /tmp/cc8Ra4J9.s:510    .text.adcSTM32EnableTSVREFE:00000000 $t
+     /tmp/cc8Ra4J9.s:516    .text.adcSTM32EnableTSVREFE:00000000 adcSTM32EnableTSVREFE
+     /tmp/cc8Ra4J9.s:528    .text.adcSTM32EnableTSVREFE:0000000c $d
+     /tmp/cc8Ra4J9.s:531    .text.adcSTM32DisableTSVREFE:00000000 $t
+     /tmp/cc8Ra4J9.s:537    .text.adcSTM32DisableTSVREFE:00000000 adcSTM32DisableTSVREFE
+     /tmp/cc8Ra4J9.s:549    .text.adcSTM32DisableTSVREFE:0000000c $d
+     /tmp/cc8Ra4J9.s:552    .text.adcSTM32EnableVBATE:00000000 $t
+     /tmp/cc8Ra4J9.s:558    .text.adcSTM32EnableVBATE:00000000 adcSTM32EnableVBATE
+     /tmp/cc8Ra4J9.s:570    .text.adcSTM32EnableVBATE:0000000c $d
+     /tmp/cc8Ra4J9.s:573    .text.adcSTM32DisableVBATE:00000000 $t
+     /tmp/cc8Ra4J9.s:579    .text.adcSTM32DisableVBATE:00000000 adcSTM32DisableVBATE
+     /tmp/cc8Ra4J9.s:591    .text.adcSTM32DisableVBATE:0000000c $d
+     /tmp/cc8Ra4J9.s:599    .bss.ADCD1:00000000 ADCD1
+     /tmp/cc8Ra4J9.s:595    .bss.ADCD1:00000000 $d
+     /tmp/cc8Ra4J9.s:602    .rodata.str1.4:00000000 $d
+     /tmp/cc8Ra4J9.s:49     .text.adc_lld_init:00000034 $t
+     /tmp/cc8Ra4J9.s:151    .text.adc_lld_stop:00000034 $t
+     /tmp/cc8Ra4J9.s:381    .text.Vector88:000000dc $t
 
 UNDEFINED SYMBOLS
 adcObjectInit

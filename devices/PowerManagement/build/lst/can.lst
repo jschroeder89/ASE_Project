@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccAXAJau.s 			page 1
+ARM GAS  /tmp/ccC5cBC4.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
   53 0022 04F12400 		add	r0, r4, #36
   54 0026 04F12801 		add	r1, r4, #40
   55 002a 04F12C02 		add	r2, r4, #44
-ARM GAS  /tmp/ccAXAJau.s 			page 2
+ARM GAS  /tmp/ccC5cBC4.s 			page 2
 
 
   56 002e 04F13003 		add	r3, r4, #48
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
  110 0040 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
  111 0042 F0E7     		b	.L9
  112              	.L13:
-ARM GAS  /tmp/ccAXAJau.s 			page 3
+ARM GAS  /tmp/ccC5cBC4.s 			page 3
 
 
  113 0044 2046     		mov	r0, r4
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
  167 002e 0021     		movs	r1, #0
  168 0030 FFF7FEFF 		bl	chSemResetI
  169 0034 04F10800 		add	r0, r4, #8
-ARM GAS  /tmp/ccAXAJau.s 			page 4
+ARM GAS  /tmp/ccC5cBC4.s 			page 4
 
 
  170 0038 0021     		movs	r1, #0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
  224              	.L29:
  225 0030 04F10807 		add	r7, r4, #8
  226 0034 00E0     		b	.L31
-ARM GAS  /tmp/ccAXAJau.s 			page 5
+ARM GAS  /tmp/ccC5cBC4.s 			page 5
 
 
  227              	.L47:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
  279              		.align	2
  280              		.p2align 4,,15
  281              		.global	canReceive
-ARM GAS  /tmp/ccAXAJau.s 			page 6
+ARM GAS  /tmp/ccC5cBC4.s 			page 6
 
 
  282              		.thumb
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
  336              	@ 228 "../../../ChibiOS/os/hal/src/can.c" 1
  337 0060 83F31188 		msr     BASEPRI, r3
  338              	@ 0 "" 2
-ARM GAS  /tmp/ccAXAJau.s 			page 7
+ARM GAS  /tmp/ccC5cBC4.s 			page 7
 
 
  339              		.thumb
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
  393 0020 032B     		cmp	r3, #3
  394 0022 05D0     		beq	.L79
  395 0024 FFF7FEFF 		bl	dbg_check_unlock
-ARM GAS  /tmp/ccAXAJau.s 			page 8
+ARM GAS  /tmp/ccC5cBC4.s 			page 8
 
 
  396 0028 0023     		movs	r3, #0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
  448 0010 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
  449 0012 DA1E     		subs	r2, r3, #3
  450 0014 012A     		cmp	r2, #1
-ARM GAS  /tmp/ccAXAJau.s 			page 9
+ARM GAS  /tmp/ccC5cBC4.s 			page 9
 
 
  451 0016 03D9     		bls	.L84
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
  497      233100
  498 001f 00       		.space	1
  499              	.LC2:
-ARM GAS  /tmp/ccAXAJau.s 			page 10
+ARM GAS  /tmp/ccC5cBC4.s 			page 10
 
 
  500 0020 2263616E 		.ascii	"\"canStop\"()\000"
@@ -598,42 +598,42 @@ ARM GAS  /tmp/ccAXAJau.s 			page 1
  525      616B6575 
  525      7028292C 
  525      20233100 
-ARM GAS  /tmp/ccAXAJau.s 			page 11
+ARM GAS  /tmp/ccC5cBC4.s 			page 11
 
 
  526              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccAXAJau.s 			page 12
+ARM GAS  /tmp/ccC5cBC4.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 can.c
-     /tmp/ccAXAJau.s:18     .text.canInit:00000000 $t
-     /tmp/ccAXAJau.s:24     .text.canInit:00000000 canInit
-     /tmp/ccAXAJau.s:31     .text.canObjectInit:00000000 $t
-     /tmp/ccAXAJau.s:37     .text.canObjectInit:00000000 canObjectInit
-     /tmp/ccAXAJau.s:65     .text.canStart:00000000 $t
-     /tmp/ccAXAJau.s:71     .text.canStart:00000000 canStart
-     /tmp/ccAXAJau.s:132    .text.canStart:00000064 $d
-     /tmp/ccAXAJau.s:136    .text.canStop:00000000 $t
-     /tmp/ccAXAJau.s:142    .text.canStop:00000000 canStop
-     /tmp/ccAXAJau.s:187    .text.canStop:00000058 $d
-     /tmp/ccAXAJau.s:191    .text.canTransmit:00000000 $t
-     /tmp/ccAXAJau.s:197    .text.canTransmit:00000000 canTransmit
-     /tmp/ccAXAJau.s:275    .text.canTransmit:0000008c $d
-     /tmp/ccAXAJau.s:279    .text.canReceive:00000000 $t
-     /tmp/ccAXAJau.s:285    .text.canReceive:00000000 canReceive
-     /tmp/ccAXAJau.s:362    .text.canReceive:00000088 $d
-     /tmp/ccAXAJau.s:366    .text.canSleep:00000000 $t
-     /tmp/ccAXAJau.s:372    .text.canSleep:00000000 canSleep
-     /tmp/ccAXAJau.s:425    .text.canSleep:0000005c $d
-     /tmp/ccAXAJau.s:429    .text.canWakeup:00000000 $t
-     /tmp/ccAXAJau.s:435    .text.canWakeup:00000000 canWakeup
-     /tmp/ccAXAJau.s:488    .text.canWakeup:0000005c $d
-     /tmp/ccAXAJau.s:492    .rodata.str1.4:00000000 $d
-     /tmp/ccAXAJau.s:135    .text.canStart:0000006c $t
-     /tmp/ccAXAJau.s:278    .text.canTransmit:00000094 $t
-     /tmp/ccAXAJau.s:428    .text.canSleep:00000064 $t
-     /tmp/ccAXAJau.s:491    .text.canWakeup:00000064 $t
+     /tmp/ccC5cBC4.s:18     .text.canInit:00000000 $t
+     /tmp/ccC5cBC4.s:24     .text.canInit:00000000 canInit
+     /tmp/ccC5cBC4.s:31     .text.canObjectInit:00000000 $t
+     /tmp/ccC5cBC4.s:37     .text.canObjectInit:00000000 canObjectInit
+     /tmp/ccC5cBC4.s:65     .text.canStart:00000000 $t
+     /tmp/ccC5cBC4.s:71     .text.canStart:00000000 canStart
+     /tmp/ccC5cBC4.s:132    .text.canStart:00000064 $d
+     /tmp/ccC5cBC4.s:136    .text.canStop:00000000 $t
+     /tmp/ccC5cBC4.s:142    .text.canStop:00000000 canStop
+     /tmp/ccC5cBC4.s:187    .text.canStop:00000058 $d
+     /tmp/ccC5cBC4.s:191    .text.canTransmit:00000000 $t
+     /tmp/ccC5cBC4.s:197    .text.canTransmit:00000000 canTransmit
+     /tmp/ccC5cBC4.s:275    .text.canTransmit:0000008c $d
+     /tmp/ccC5cBC4.s:279    .text.canReceive:00000000 $t
+     /tmp/ccC5cBC4.s:285    .text.canReceive:00000000 canReceive
+     /tmp/ccC5cBC4.s:362    .text.canReceive:00000088 $d
+     /tmp/ccC5cBC4.s:366    .text.canSleep:00000000 $t
+     /tmp/ccC5cBC4.s:372    .text.canSleep:00000000 canSleep
+     /tmp/ccC5cBC4.s:425    .text.canSleep:0000005c $d
+     /tmp/ccC5cBC4.s:429    .text.canWakeup:00000000 $t
+     /tmp/ccC5cBC4.s:435    .text.canWakeup:00000000 canWakeup
+     /tmp/ccC5cBC4.s:488    .text.canWakeup:0000005c $d
+     /tmp/ccC5cBC4.s:492    .rodata.str1.4:00000000 $d
+     /tmp/ccC5cBC4.s:135    .text.canStart:0000006c $t
+     /tmp/ccC5cBC4.s:278    .text.canTransmit:00000094 $t
+     /tmp/ccC5cBC4.s:428    .text.canSleep:00000064 $t
+     /tmp/ccC5cBC4.s:491    .text.canWakeup:00000064 $t
 
 UNDEFINED SYMBOLS
 can_lld_init

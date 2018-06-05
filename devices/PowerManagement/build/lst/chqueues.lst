@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccfHyYhl.s 			page 1
+ARM GAS  /tmp/ccsXvRFV.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
   55              		.type	chIQInit, %function
   56              	chIQInit:
   57              		@ args = 4, pretend = 0, frame = 0
-ARM GAS  /tmp/ccfHyYhl.s 			page 2
+ARM GAS  /tmp/ccsXvRFV.s 			page 2
 
 
   58              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  112              		.p2align 4,,15
  113              		.global	chIQPutI
  114              		.thumb
-ARM GAS  /tmp/ccfHyYhl.s 			page 3
+ARM GAS  /tmp/ccsXvRFV.s 			page 3
 
 
  115              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  167              		.align	2
  168              		.p2align 4,,15
  169              		.global	chIQGetTimeout
-ARM GAS  /tmp/ccfHyYhl.s 			page 4
+ARM GAS  /tmp/ccsXvRFV.s 			page 4
 
 
  170              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  224 005a 83F31188 		msr     BASEPRI, r3
  225              	@ 0 "" 2
  226              		.thumb
-ARM GAS  /tmp/ccfHyYhl.s 			page 5
+ARM GAS  /tmp/ccsXvRFV.s 			page 5
 
 
  227 005e 3846     		mov	r0, r7
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  278 004e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  279 0050 07F8013C 		strb	r3, [r7, #-1]
  280 0054 2369     		ldr	r3, [r4, #16]
-ARM GAS  /tmp/ccfHyYhl.s 			page 6
+ARM GAS  /tmp/ccsXvRFV.s 			page 6
 
 
  281 0056 A269     		ldr	r2, [r4, #24]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  335 0004 0462     		str	r4, [r0, #32]
  336 0006 8D18     		adds	r5, r1, r2
  337 0008 0561     		str	r5, [r0, #16]
-ARM GAS  /tmp/ccfHyYhl.s 			page 7
+ARM GAS  /tmp/ccsXvRFV.s 			page 7
 
 
  338 000a 4060     		str	r0, [r0, #4]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  389              		.type	chOQPutTimeout, %function
  390              	chOQPutTimeout:
  391              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccfHyYhl.s 			page 8
+ARM GAS  /tmp/ccsXvRFV.s 			page 8
 
 
  392              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  446 0064 3846     		mov	r0, r7
  447 0066 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
  448              		.size	chOQPutTimeout, .-chOQPutTimeout
-ARM GAS  /tmp/ccfHyYhl.s 			page 9
+ARM GAS  /tmp/ccsXvRFV.s 			page 9
 
 
  449 006a 00BFAFF3 		.section	.text.chOQGetI,"ax",%progbits
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  501              		.p2align 4,,15
  502              		.global	chOQWriteTimeout
  503              		.thumb
-ARM GAS  /tmp/ccfHyYhl.s 			page 10
+ARM GAS  /tmp/ccsXvRFV.s 			page 10
 
 
  504              		.thumb_func
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  558 0062 83F31188 		msr     BASEPRI, r3
  559              	@ 0 "" 2
  560              		.thumb
-ARM GAS  /tmp/ccfHyYhl.s 			page 11
+ARM GAS  /tmp/ccsXvRFV.s 			page 11
 
 
  561 0066 FFF7FEFF 		bl	dbg_check_lock
@@ -644,39 +644,39 @@ ARM GAS  /tmp/ccfHyYhl.s 			page 1
  593      6D656F75 
  593      74222829 
  594 0029 000000   		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccfHyYhl.s 			page 12
+ARM GAS  /tmp/ccsXvRFV.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chqueues.c
-     /tmp/ccfHyYhl.s:18     .text.qwait:00000000 $t
-     /tmp/ccfHyYhl.s:23     .text.qwait:00000000 qwait
-     /tmp/ccfHyYhl.s:47     .text.qwait:0000002c $d
-     /tmp/ccfHyYhl.s:50     .text.chIQInit:00000000 $t
-     /tmp/ccfHyYhl.s:56     .text.chIQInit:00000000 chIQInit
-     /tmp/ccfHyYhl.s:77     .text.chIQResetI:00000000 $t
-     /tmp/ccfHyYhl.s:83     .text.chIQResetI:00000000 chIQResetI
-     /tmp/ccfHyYhl.s:111    .text.chIQPutI:00000000 $t
-     /tmp/ccfHyYhl.s:117    .text.chIQPutI:00000000 chIQPutI
-     /tmp/ccfHyYhl.s:167    .text.chIQGetTimeout:00000000 $t
-     /tmp/ccfHyYhl.s:173    .text.chIQGetTimeout:00000000 chIQGetTimeout
-     /tmp/ccfHyYhl.s:231    .text.chIQReadTimeout:00000000 $t
-     /tmp/ccfHyYhl.s:237    .text.chIQReadTimeout:00000000 chIQReadTimeout
-     /tmp/ccfHyYhl.s:320    .text.chIQReadTimeout:00000098 $d
-     /tmp/ccfHyYhl.s:323    .text.chOQInit:00000000 $t
-     /tmp/ccfHyYhl.s:329    .text.chOQInit:00000000 chOQInit
-     /tmp/ccfHyYhl.s:349    .text.chOQResetI:00000000 $t
-     /tmp/ccfHyYhl.s:355    .text.chOQResetI:00000000 chOQResetI
-     /tmp/ccfHyYhl.s:384    .text.chOQPutTimeout:00000000 $t
-     /tmp/ccfHyYhl.s:390    .text.chOQPutTimeout:00000000 chOQPutTimeout
-     /tmp/ccfHyYhl.s:450    .text.chOQGetI:00000000 $t
-     /tmp/ccfHyYhl.s:456    .text.chOQGetI:00000000 chOQGetI
-     /tmp/ccfHyYhl.s:500    .text.chOQWriteTimeout:00000000 $t
-     /tmp/ccfHyYhl.s:506    .text.chOQWriteTimeout:00000000 chOQWriteTimeout
-     /tmp/ccfHyYhl.s:586    .text.chOQWriteTimeout:00000094 $d
-     /tmp/ccfHyYhl.s:589    .rodata.str1.4:00000000 $d
-     /tmp/ccfHyYhl.s:322    .text.chIQReadTimeout:0000009c $t
-     /tmp/ccfHyYhl.s:588    .text.chOQWriteTimeout:00000098 $t
+     /tmp/ccsXvRFV.s:18     .text.qwait:00000000 $t
+     /tmp/ccsXvRFV.s:23     .text.qwait:00000000 qwait
+     /tmp/ccsXvRFV.s:47     .text.qwait:0000002c $d
+     /tmp/ccsXvRFV.s:50     .text.chIQInit:00000000 $t
+     /tmp/ccsXvRFV.s:56     .text.chIQInit:00000000 chIQInit
+     /tmp/ccsXvRFV.s:77     .text.chIQResetI:00000000 $t
+     /tmp/ccsXvRFV.s:83     .text.chIQResetI:00000000 chIQResetI
+     /tmp/ccsXvRFV.s:111    .text.chIQPutI:00000000 $t
+     /tmp/ccsXvRFV.s:117    .text.chIQPutI:00000000 chIQPutI
+     /tmp/ccsXvRFV.s:167    .text.chIQGetTimeout:00000000 $t
+     /tmp/ccsXvRFV.s:173    .text.chIQGetTimeout:00000000 chIQGetTimeout
+     /tmp/ccsXvRFV.s:231    .text.chIQReadTimeout:00000000 $t
+     /tmp/ccsXvRFV.s:237    .text.chIQReadTimeout:00000000 chIQReadTimeout
+     /tmp/ccsXvRFV.s:320    .text.chIQReadTimeout:00000098 $d
+     /tmp/ccsXvRFV.s:323    .text.chOQInit:00000000 $t
+     /tmp/ccsXvRFV.s:329    .text.chOQInit:00000000 chOQInit
+     /tmp/ccsXvRFV.s:349    .text.chOQResetI:00000000 $t
+     /tmp/ccsXvRFV.s:355    .text.chOQResetI:00000000 chOQResetI
+     /tmp/ccsXvRFV.s:384    .text.chOQPutTimeout:00000000 $t
+     /tmp/ccsXvRFV.s:390    .text.chOQPutTimeout:00000000 chOQPutTimeout
+     /tmp/ccsXvRFV.s:450    .text.chOQGetI:00000000 $t
+     /tmp/ccsXvRFV.s:456    .text.chOQGetI:00000000 chOQGetI
+     /tmp/ccsXvRFV.s:500    .text.chOQWriteTimeout:00000000 $t
+     /tmp/ccsXvRFV.s:506    .text.chOQWriteTimeout:00000000 chOQWriteTimeout
+     /tmp/ccsXvRFV.s:586    .text.chOQWriteTimeout:00000094 $d
+     /tmp/ccsXvRFV.s:589    .rodata.str1.4:00000000 $d
+     /tmp/ccsXvRFV.s:322    .text.chIQReadTimeout:0000009c $t
+     /tmp/ccsXvRFV.s:588    .text.chOQWriteTimeout:00000098 $t
 
 UNDEFINED SYMBOLS
 chSchGoSleepTimeoutS

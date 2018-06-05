@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc8FkpAd.s 			page 1
+ARM GAS  /tmp/ccqkbI4y.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
   55 003c 00000000 		.word	.LC0
   56              		.size	chMBInit, .-chMBInit
   57              		.section	.text.chMBReset,"ax",%progbits
-ARM GAS  /tmp/cc8FkpAd.s 			page 2
+ARM GAS  /tmp/ccqkbI4y.s 			page 2
 
 
   58              		.align	2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
  112              	chMBPostS:
  113              		@ args = 0, pretend = 0, frame = 0
  114              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc8FkpAd.s 			page 3
+ARM GAS  /tmp/ccqkbI4y.s 			page 3
 
 
  115 0000 70B5     		push	{r4, r5, r6, lr}
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
  169              	@ 0 "" 2
  170              		.thumb
  171 000e FFF7FEFF 		bl	dbg_check_lock
-ARM GAS  /tmp/cc8FkpAd.s 			page 4
+ARM GAS  /tmp/ccqkbI4y.s 			page 4
 
 
  172 0012 2246     		mov	r2, r4
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
  226 003e 4FF0FF30 		mov	r0, #-1
  227 0042 38BD     		pop	{r3, r4, r5, pc}
  228              	.L33:
-ARM GAS  /tmp/cc8FkpAd.s 			page 5
+ARM GAS  /tmp/ccqkbI4y.s 			page 5
 
 
  229              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
  282              		.size	chMBPostAheadS, .-chMBPostAheadS
  283              		.section	.text.chMBPostAhead,"ax",%progbits
  284              		.align	2
-ARM GAS  /tmp/cc8FkpAd.s 			page 6
+ARM GAS  /tmp/ccqkbI4y.s 			page 6
 
 
  285              		.p2align 4,,15
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
  339 0018 013A     		subs	r2, r2, #1
  340 001a 8B42     		cmp	r3, r1
  341 001c 6262     		str	r2, [r4, #36]
-ARM GAS  /tmp/cc8FkpAd.s 			page 7
+ARM GAS  /tmp/ccqkbI4y.s 			page 7
 
 
  342 001e E360     		str	r3, [r4, #12]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
  395 002c 2368     		ldrcs	r3, [r4]
  396 002e 3160     		str	r1, [r6]
  397 0030 04F11C00 		add	r0, r4, #28
-ARM GAS  /tmp/cc8FkpAd.s 			page 8
+ARM GAS  /tmp/ccqkbI4y.s 			page 8
 
 
  398 0034 28BF     		it	cs
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
  452              		.thumb
  453              		.thumb_func
  454              		.type	chMBFetchI, %function
-ARM GAS  /tmp/cc8FkpAd.s 			page 9
+ARM GAS  /tmp/ccqkbI4y.s 			page 9
 
 
  455              	chMBFetchI:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
  503      2900
  504 001e 0000     		.space	2
  505              	.LC2:
-ARM GAS  /tmp/cc8FkpAd.s 			page 10
+ARM GAS  /tmp/ccqkbI4y.s 			page 10
 
 
  506 0020 2263684D 		.ascii	"\"chMBPostS\"()\000"
@@ -578,47 +578,47 @@ ARM GAS  /tmp/cc8FkpAd.s 			page 1
  521      63684922 
  521      282900
  522 0087 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cc8FkpAd.s 			page 11
+ARM GAS  /tmp/ccqkbI4y.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmboxes.c
-     /tmp/cc8FkpAd.s:18     .text.chMBInit:00000000 $t
-     /tmp/cc8FkpAd.s:24     .text.chMBInit:00000000 chMBInit
-     /tmp/cc8FkpAd.s:55     .text.chMBInit:0000003c $d
-     /tmp/cc8FkpAd.s:58     .text.chMBReset:00000000 $t
-     /tmp/cc8FkpAd.s:64     .text.chMBReset:00000000 chMBReset
-     /tmp/cc8FkpAd.s:103    .text.chMBReset:00000048 $d
-     /tmp/cc8FkpAd.s:106    .text.chMBPostS:00000000 $t
-     /tmp/cc8FkpAd.s:112    .text.chMBPostS:00000000 chMBPostS
-     /tmp/cc8FkpAd.s:150    .text.chMBPostS:00000048 $d
-     /tmp/cc8FkpAd.s:153    .text.chMBPost:00000000 $t
-     /tmp/cc8FkpAd.s:159    .text.chMBPost:00000000 chMBPost
-     /tmp/cc8FkpAd.s:187    .text.chMBPostI:00000000 $t
-     /tmp/cc8FkpAd.s:193    .text.chMBPostI:00000000 chMBPostI
-     /tmp/cc8FkpAd.s:231    .text.chMBPostI:00000044 $d
-     /tmp/cc8FkpAd.s:234    .text.chMBPostAheadS:00000000 $t
-     /tmp/cc8FkpAd.s:240    .text.chMBPostAheadS:00000000 chMBPostAheadS
-     /tmp/cc8FkpAd.s:281    .text.chMBPostAheadS:0000004c $d
-     /tmp/cc8FkpAd.s:284    .text.chMBPostAhead:00000000 $t
-     /tmp/cc8FkpAd.s:290    .text.chMBPostAhead:00000000 chMBPostAhead
-     /tmp/cc8FkpAd.s:318    .text.chMBPostAheadI:00000000 $t
-     /tmp/cc8FkpAd.s:324    .text.chMBPostAheadI:00000000 chMBPostAheadI
-     /tmp/cc8FkpAd.s:363    .text.chMBPostAheadI:00000044 $d
-     /tmp/cc8FkpAd.s:366    .text.chMBFetchS:00000000 $t
-     /tmp/cc8FkpAd.s:372    .text.chMBFetchS:00000000 chMBFetchS
-     /tmp/cc8FkpAd.s:412    .text.chMBFetchS:0000004c $d
-     /tmp/cc8FkpAd.s:415    .text.chMBFetch:00000000 $t
-     /tmp/cc8FkpAd.s:421    .text.chMBFetch:00000000 chMBFetch
-     /tmp/cc8FkpAd.s:449    .text.chMBFetchI:00000000 $t
-     /tmp/cc8FkpAd.s:455    .text.chMBFetchI:00000000 chMBFetchI
-     /tmp/cc8FkpAd.s:495    .text.chMBFetchI:00000048 $d
-     /tmp/cc8FkpAd.s:498    .rodata.str1.4:00000000 $d
-     /tmp/cc8FkpAd.s:105    .text.chMBReset:0000004c $t
-     /tmp/cc8FkpAd.s:152    .text.chMBPostS:0000004c $t
-     /tmp/cc8FkpAd.s:233    .text.chMBPostI:00000048 $t
-     /tmp/cc8FkpAd.s:365    .text.chMBPostAheadI:00000048 $t
-     /tmp/cc8FkpAd.s:497    .text.chMBFetchI:0000004c $t
+     /tmp/ccqkbI4y.s:18     .text.chMBInit:00000000 $t
+     /tmp/ccqkbI4y.s:24     .text.chMBInit:00000000 chMBInit
+     /tmp/ccqkbI4y.s:55     .text.chMBInit:0000003c $d
+     /tmp/ccqkbI4y.s:58     .text.chMBReset:00000000 $t
+     /tmp/ccqkbI4y.s:64     .text.chMBReset:00000000 chMBReset
+     /tmp/ccqkbI4y.s:103    .text.chMBReset:00000048 $d
+     /tmp/ccqkbI4y.s:106    .text.chMBPostS:00000000 $t
+     /tmp/ccqkbI4y.s:112    .text.chMBPostS:00000000 chMBPostS
+     /tmp/ccqkbI4y.s:150    .text.chMBPostS:00000048 $d
+     /tmp/ccqkbI4y.s:153    .text.chMBPost:00000000 $t
+     /tmp/ccqkbI4y.s:159    .text.chMBPost:00000000 chMBPost
+     /tmp/ccqkbI4y.s:187    .text.chMBPostI:00000000 $t
+     /tmp/ccqkbI4y.s:193    .text.chMBPostI:00000000 chMBPostI
+     /tmp/ccqkbI4y.s:231    .text.chMBPostI:00000044 $d
+     /tmp/ccqkbI4y.s:234    .text.chMBPostAheadS:00000000 $t
+     /tmp/ccqkbI4y.s:240    .text.chMBPostAheadS:00000000 chMBPostAheadS
+     /tmp/ccqkbI4y.s:281    .text.chMBPostAheadS:0000004c $d
+     /tmp/ccqkbI4y.s:284    .text.chMBPostAhead:00000000 $t
+     /tmp/ccqkbI4y.s:290    .text.chMBPostAhead:00000000 chMBPostAhead
+     /tmp/ccqkbI4y.s:318    .text.chMBPostAheadI:00000000 $t
+     /tmp/ccqkbI4y.s:324    .text.chMBPostAheadI:00000000 chMBPostAheadI
+     /tmp/ccqkbI4y.s:363    .text.chMBPostAheadI:00000044 $d
+     /tmp/ccqkbI4y.s:366    .text.chMBFetchS:00000000 $t
+     /tmp/ccqkbI4y.s:372    .text.chMBFetchS:00000000 chMBFetchS
+     /tmp/ccqkbI4y.s:412    .text.chMBFetchS:0000004c $d
+     /tmp/ccqkbI4y.s:415    .text.chMBFetch:00000000 $t
+     /tmp/ccqkbI4y.s:421    .text.chMBFetch:00000000 chMBFetch
+     /tmp/ccqkbI4y.s:449    .text.chMBFetchI:00000000 $t
+     /tmp/ccqkbI4y.s:455    .text.chMBFetchI:00000000 chMBFetchI
+     /tmp/ccqkbI4y.s:495    .text.chMBFetchI:00000048 $d
+     /tmp/ccqkbI4y.s:498    .rodata.str1.4:00000000 $d
+     /tmp/ccqkbI4y.s:105    .text.chMBReset:0000004c $t
+     /tmp/ccqkbI4y.s:152    .text.chMBPostS:0000004c $t
+     /tmp/ccqkbI4y.s:233    .text.chMBPostI:00000048 $t
+     /tmp/ccqkbI4y.s:365    .text.chMBPostAheadI:00000048 $t
+     /tmp/ccqkbI4y.s:497    .text.chMBFetchI:0000004c $t
 
 UNDEFINED SYMBOLS
 chSemInit

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccBUFuds.s 			page 1
+ARM GAS  /tmp/ccFXbk6C.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
   55 0004 0546     		mov	r5, r0
   56 0006 9C69     		ldr	r4, [r3, #24]
   57 0008 FFF7FEFF 		bl	chDbgCheckClassS
-ARM GAS  /tmp/ccBUFuds.s 			page 2
+ARM GAS  /tmp/ccFXbk6C.s 			page 2
 
 
   58 000c 002D     		cmp	r5, #0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  112 0074 80F82010 		strb	r1, [r0, #32]
  113 0078 1A60     		str	r2, [r3]
  114 007a 0268     		ldr	r2, [r0]
-ARM GAS  /tmp/ccBUFuds.s 			page 3
+ARM GAS  /tmp/ccFXbk6C.s 			page 3
 
 
  115 007c 5360     		str	r3, [r2, #4]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  169 00d6 4260     		str	r2, [r0, #4]
  170 00d8 5860     		str	r0, [r3, #4]
  171 00da 1060     		str	r0, [r2]
-ARM GAS  /tmp/ccBUFuds.s 			page 4
+ARM GAS  /tmp/ccFXbk6C.s 			page 4
 
 
  172 00dc B068     		ldr	r0, [r6, #8]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  226              		@ args = 0, pretend = 0, frame = 0
  227              		@ frame_needed = 0, uses_anonymous_args = 0
  228 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccBUFuds.s 			page 5
+ARM GAS  /tmp/ccFXbk6C.s 			page 5
 
 
  229 0002 0446     		mov	r4, r0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  281              	@ 0 "" 2
  282              		.thumb
  283 0020 2046     		mov	r0, r4
-ARM GAS  /tmp/ccBUFuds.s 			page 6
+ARM GAS  /tmp/ccFXbk6C.s 			page 6
 
 
  284 0022 10BD     		pop	{r4, pc}
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  336 0046 326C     		ldr	r2, [r6, #64]
  337 0048 3368     		ldr	r3, [r6]
  338 004a 3046     		mov	r0, r6
-ARM GAS  /tmp/ccBUFuds.s 			page 7
+ARM GAS  /tmp/ccFXbk6C.s 			page 7
 
 
  339 004c A960     		str	r1, [r5, #8]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  392 0014 03D0     		beq	.L63
  393 0016 1648     		ldr	r0, .L76+4
  394 0018 FFF7FEFF 		bl	chDbgPanic
-ARM GAS  /tmp/ccBUFuds.s 			page 8
+ARM GAS  /tmp/ccFXbk6C.s 			page 8
 
 
  395 001c 2C6C     		ldr	r4, [r5, #64]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  448              		.p2align 4,,15
  449              		.global	chMtxUnlockAll
  450              		.thumb
-ARM GAS  /tmp/ccBUFuds.s 			page 9
+ARM GAS  /tmp/ccFXbk6C.s 			page 9
 
 
  451              		.thumb_func
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  505              	.L89:
  506 0058 00000000 		.word	rlist
  507              		.size	chMtxUnlockAll, .-chMtxUnlockAll
-ARM GAS  /tmp/ccBUFuds.s 			page 10
+ARM GAS  /tmp/ccFXbk6C.s 			page 10
 
 
  508 005c AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  532      233100
  533 0097 00       		.space	1
  534              	.LC8:
-ARM GAS  /tmp/ccBUFuds.s 			page 11
+ARM GAS  /tmp/ccFXbk6C.s 			page 11
 
 
  535 0098 63684D74 		.ascii	"chMtxUnlockS(), #2\000"
@@ -607,39 +607,39 @@ ARM GAS  /tmp/ccBUFuds.s 			page 1
  535      28292C20 
  535      233200
  536 00ab 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccBUFuds.s 			page 12
+ARM GAS  /tmp/ccFXbk6C.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmtx.c
-     /tmp/ccBUFuds.s:16     .text.chMtxInit:00000000 $t
-     /tmp/ccBUFuds.s:22     .text.chMtxInit:00000000 chMtxInit
-     /tmp/ccBUFuds.s:41     .text.chMtxInit:00000018 $d
-     /tmp/ccBUFuds.s:44     .text.chMtxLockS:00000000 $t
-     /tmp/ccBUFuds.s:50     .text.chMtxLockS:00000000 chMtxLockS
-     /tmp/ccBUFuds.s:185    .text.chMtxLockS:000000f0 $d
-     /tmp/ccBUFuds.s:191    .text.chMtxLock:00000000 $t
-     /tmp/ccBUFuds.s:197    .text.chMtxLock:00000000 chMtxLock
-     /tmp/ccBUFuds.s:219    .text.chMtxTryLockS:00000000 $t
-     /tmp/ccBUFuds.s:225    .text.chMtxTryLockS:00000000 chMtxTryLockS
-     /tmp/ccBUFuds.s:253    .text.chMtxTryLockS:0000002c $d
-     /tmp/ccBUFuds.s:257    .text.chMtxTryLock:00000000 $t
-     /tmp/ccBUFuds.s:263    .text.chMtxTryLock:00000000 chMtxTryLock
-     /tmp/ccBUFuds.s:287    .text.chMtxUnlock:00000000 $t
-     /tmp/ccBUFuds.s:293    .text.chMtxUnlock:00000000 chMtxUnlock
-     /tmp/ccBUFuds.s:368    .text.chMtxUnlock:0000007c $d
-     /tmp/ccBUFuds.s:373    .text.chMtxUnlockS:00000000 $t
-     /tmp/ccBUFuds.s:379    .text.chMtxUnlockS:00000000 chMtxUnlockS
-     /tmp/ccBUFuds.s:442    .text.chMtxUnlockS:0000006c $d
-     /tmp/ccBUFuds.s:447    .text.chMtxUnlockAll:00000000 $t
-     /tmp/ccBUFuds.s:453    .text.chMtxUnlockAll:00000000 chMtxUnlockAll
-     /tmp/ccBUFuds.s:506    .text.chMtxUnlockAll:00000058 $d
-     /tmp/ccBUFuds.s:509    .rodata.str1.4:00000000 $d
-     /tmp/ccBUFuds.s:43     .text.chMtxInit:0000001c $t
-     /tmp/ccBUFuds.s:256    .text.chMtxTryLockS:00000034 $t
-     /tmp/ccBUFuds.s:372    .text.chMtxUnlock:00000088 $t
-     /tmp/ccBUFuds.s:446    .text.chMtxUnlockS:00000078 $t
-     /tmp/ccBUFuds.s:508    .text.chMtxUnlockAll:0000005c $t
+     /tmp/ccFXbk6C.s:16     .text.chMtxInit:00000000 $t
+     /tmp/ccFXbk6C.s:22     .text.chMtxInit:00000000 chMtxInit
+     /tmp/ccFXbk6C.s:41     .text.chMtxInit:00000018 $d
+     /tmp/ccFXbk6C.s:44     .text.chMtxLockS:00000000 $t
+     /tmp/ccFXbk6C.s:50     .text.chMtxLockS:00000000 chMtxLockS
+     /tmp/ccFXbk6C.s:185    .text.chMtxLockS:000000f0 $d
+     /tmp/ccFXbk6C.s:191    .text.chMtxLock:00000000 $t
+     /tmp/ccFXbk6C.s:197    .text.chMtxLock:00000000 chMtxLock
+     /tmp/ccFXbk6C.s:219    .text.chMtxTryLockS:00000000 $t
+     /tmp/ccFXbk6C.s:225    .text.chMtxTryLockS:00000000 chMtxTryLockS
+     /tmp/ccFXbk6C.s:253    .text.chMtxTryLockS:0000002c $d
+     /tmp/ccFXbk6C.s:257    .text.chMtxTryLock:00000000 $t
+     /tmp/ccFXbk6C.s:263    .text.chMtxTryLock:00000000 chMtxTryLock
+     /tmp/ccFXbk6C.s:287    .text.chMtxUnlock:00000000 $t
+     /tmp/ccFXbk6C.s:293    .text.chMtxUnlock:00000000 chMtxUnlock
+     /tmp/ccFXbk6C.s:368    .text.chMtxUnlock:0000007c $d
+     /tmp/ccFXbk6C.s:373    .text.chMtxUnlockS:00000000 $t
+     /tmp/ccFXbk6C.s:379    .text.chMtxUnlockS:00000000 chMtxUnlockS
+     /tmp/ccFXbk6C.s:442    .text.chMtxUnlockS:0000006c $d
+     /tmp/ccFXbk6C.s:447    .text.chMtxUnlockAll:00000000 $t
+     /tmp/ccFXbk6C.s:453    .text.chMtxUnlockAll:00000000 chMtxUnlockAll
+     /tmp/ccFXbk6C.s:506    .text.chMtxUnlockAll:00000058 $d
+     /tmp/ccFXbk6C.s:509    .rodata.str1.4:00000000 $d
+     /tmp/ccFXbk6C.s:43     .text.chMtxInit:0000001c $t
+     /tmp/ccFXbk6C.s:256    .text.chMtxTryLockS:00000034 $t
+     /tmp/ccFXbk6C.s:372    .text.chMtxUnlock:00000088 $t
+     /tmp/ccFXbk6C.s:446    .text.chMtxUnlockS:00000078 $t
+     /tmp/ccFXbk6C.s:508    .text.chMtxUnlockAll:0000005c $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

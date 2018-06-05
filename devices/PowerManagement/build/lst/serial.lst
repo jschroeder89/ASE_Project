@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccKhzG6h.s 			page 1
+ARM GAS  /tmp/ccPNYpuz.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccKhzG6h.s 			page 1
   52              		@ frame_needed = 0, uses_anonymous_args = 0
   53              		@ link register save eliminated.
   54 0000 3030     		adds	r0, r0, #48
-ARM GAS  /tmp/ccKhzG6h.s 			page 2
+ARM GAS  /tmp/ccPNYpuz.s 			page 2
 
 
   55 0002 FFF7FEBF 		b	chOQWriteTimeout
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccKhzG6h.s 			page 1
  103              		.type	putt, %function
  104              	putt:
  105              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccKhzG6h.s 			page 3
+ARM GAS  /tmp/ccPNYpuz.s 			page 3
 
 
  106              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccKhzG6h.s 			page 1
  155 0010 0B46     		mov	r3, r1
  156 0012 1546     		mov	r5, r2
  157 0014 6060     		str	r0, [r4, #4]
-ARM GAS  /tmp/ccKhzG6h.s 			page 4
+ARM GAS  /tmp/ccPNYpuz.s 			page 4
 
 
  158 0016 04F15401 		add	r1, r4, #84
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccKhzG6h.s 			page 1
  212              	@ 169 "../../../ChibiOS/os/hal/src/serial.c" 1
  213 0032 83F31188 		msr     BASEPRI, r3
  214              	@ 0 "" 2
-ARM GAS  /tmp/ccKhzG6h.s 			page 5
+ARM GAS  /tmp/ccPNYpuz.s 			page 5
 
 
  215              		.thumb
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccKhzG6h.s 			page 1
  268              		.thumb
  269 0046 10BD     		pop	{r4, pc}
  270              	.L23:
-ARM GAS  /tmp/ccKhzG6h.s 			page 6
+ARM GAS  /tmp/ccPNYpuz.s 			page 6
 
 
  271 0048 0248     		ldr	r0, .L24+4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccKhzG6h.s 			page 1
  324 004a 00BF     		.align	2
  325              	.L33:
  326 004c 38000000 		.word	.LC4
-ARM GAS  /tmp/ccKhzG6h.s 			page 7
+ARM GAS  /tmp/ccPNYpuz.s 			page 7
 
 
  327              		.size	sdIncomingDataI, .-sdIncomingDataI
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccKhzG6h.s 			page 1
  372      282900
  373 0027 00       		.space	1
  374              	.LC3:
-ARM GAS  /tmp/ccKhzG6h.s 			page 8
+ARM GAS  /tmp/ccPNYpuz.s 			page 8
 
 
  375 0028 73645374 		.ascii	"sdStop(), #1\000"
@@ -453,50 +453,50 @@ ARM GAS  /tmp/ccKhzG6h.s 			page 1
  393 0018 00000000 		.word	writet
  394 001c 00000000 		.word	readt
  395              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccKhzG6h.s 			page 9
+ARM GAS  /tmp/ccPNYpuz.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 serial.c
-     /tmp/ccKhzG6h.s:18     .text.readt:00000000 $t
-     /tmp/ccKhzG6h.s:23     .text.readt:00000000 readt
-     /tmp/ccKhzG6h.s:31     .text.read:00000000 $t
-     /tmp/ccKhzG6h.s:36     .text.read:00000000 read
-     /tmp/ccKhzG6h.s:45     .text.writet:00000000 $t
-     /tmp/ccKhzG6h.s:50     .text.writet:00000000 writet
-     /tmp/ccKhzG6h.s:58     .text.write:00000000 $t
-     /tmp/ccKhzG6h.s:63     .text.write:00000000 write
-     /tmp/ccKhzG6h.s:72     .text.gett:00000000 $t
-     /tmp/ccKhzG6h.s:77     .text.gett:00000000 gett
-     /tmp/ccKhzG6h.s:85     .text.get:00000000 $t
-     /tmp/ccKhzG6h.s:90     .text.get:00000000 get
-     /tmp/ccKhzG6h.s:99     .text.putt:00000000 $t
-     /tmp/ccKhzG6h.s:104    .text.putt:00000000 putt
-     /tmp/ccKhzG6h.s:112    .text.put:00000000 $t
-     /tmp/ccKhzG6h.s:117    .text.put:00000000 put
-     /tmp/ccKhzG6h.s:126    .text.sdInit:00000000 $t
-     /tmp/ccKhzG6h.s:132    .text.sdInit:00000000 sdInit
-     /tmp/ccKhzG6h.s:139    .text.sdObjectInit:00000000 $t
-     /tmp/ccKhzG6h.s:145    .text.sdObjectInit:00000000 sdObjectInit
-     /tmp/ccKhzG6h.s:175    .text.sdObjectInit:0000003c $d
-     /tmp/ccKhzG6h.s:178    .text.sdStart:00000000 $t
-     /tmp/ccKhzG6h.s:184    .text.sdStart:00000000 sdStart
-     /tmp/ccKhzG6h.s:224    .text.sdStart:00000040 $d
-     /tmp/ccKhzG6h.s:228    .text.sdStop:00000000 $t
-     /tmp/ccKhzG6h.s:234    .text.sdStop:00000000 sdStop
-     /tmp/ccKhzG6h.s:277    .text.sdStop:00000050 $d
-     /tmp/ccKhzG6h.s:281    .text.sdIncomingDataI:00000000 $t
-     /tmp/ccKhzG6h.s:287    .text.sdIncomingDataI:00000000 sdIncomingDataI
-     /tmp/ccKhzG6h.s:326    .text.sdIncomingDataI:0000004c $d
-     /tmp/ccKhzG6h.s:329    .text.sdRequestDataI:00000000 $t
-     /tmp/ccKhzG6h.s:335    .text.sdRequestDataI:00000000 sdRequestDataI
-     /tmp/ccKhzG6h.s:362    .text.sdRequestDataI:00000030 $d
-     /tmp/ccKhzG6h.s:365    .rodata.str1.4:00000000 $d
-     /tmp/ccKhzG6h.s:382    .rodata.vmt:00000000 $d
-     /tmp/ccKhzG6h.s:386    .rodata.vmt:00000000 vmt
-     /tmp/ccKhzG6h.s:227    .text.sdStart:00000048 $t
-     /tmp/ccKhzG6h.s:280    .text.sdStop:00000058 $t
-     /tmp/ccKhzG6h.s:364    .text.sdRequestDataI:00000034 $t
+     /tmp/ccPNYpuz.s:18     .text.readt:00000000 $t
+     /tmp/ccPNYpuz.s:23     .text.readt:00000000 readt
+     /tmp/ccPNYpuz.s:31     .text.read:00000000 $t
+     /tmp/ccPNYpuz.s:36     .text.read:00000000 read
+     /tmp/ccPNYpuz.s:45     .text.writet:00000000 $t
+     /tmp/ccPNYpuz.s:50     .text.writet:00000000 writet
+     /tmp/ccPNYpuz.s:58     .text.write:00000000 $t
+     /tmp/ccPNYpuz.s:63     .text.write:00000000 write
+     /tmp/ccPNYpuz.s:72     .text.gett:00000000 $t
+     /tmp/ccPNYpuz.s:77     .text.gett:00000000 gett
+     /tmp/ccPNYpuz.s:85     .text.get:00000000 $t
+     /tmp/ccPNYpuz.s:90     .text.get:00000000 get
+     /tmp/ccPNYpuz.s:99     .text.putt:00000000 $t
+     /tmp/ccPNYpuz.s:104    .text.putt:00000000 putt
+     /tmp/ccPNYpuz.s:112    .text.put:00000000 $t
+     /tmp/ccPNYpuz.s:117    .text.put:00000000 put
+     /tmp/ccPNYpuz.s:126    .text.sdInit:00000000 $t
+     /tmp/ccPNYpuz.s:132    .text.sdInit:00000000 sdInit
+     /tmp/ccPNYpuz.s:139    .text.sdObjectInit:00000000 $t
+     /tmp/ccPNYpuz.s:145    .text.sdObjectInit:00000000 sdObjectInit
+     /tmp/ccPNYpuz.s:175    .text.sdObjectInit:0000003c $d
+     /tmp/ccPNYpuz.s:178    .text.sdStart:00000000 $t
+     /tmp/ccPNYpuz.s:184    .text.sdStart:00000000 sdStart
+     /tmp/ccPNYpuz.s:224    .text.sdStart:00000040 $d
+     /tmp/ccPNYpuz.s:228    .text.sdStop:00000000 $t
+     /tmp/ccPNYpuz.s:234    .text.sdStop:00000000 sdStop
+     /tmp/ccPNYpuz.s:277    .text.sdStop:00000050 $d
+     /tmp/ccPNYpuz.s:281    .text.sdIncomingDataI:00000000 $t
+     /tmp/ccPNYpuz.s:287    .text.sdIncomingDataI:00000000 sdIncomingDataI
+     /tmp/ccPNYpuz.s:326    .text.sdIncomingDataI:0000004c $d
+     /tmp/ccPNYpuz.s:329    .text.sdRequestDataI:00000000 $t
+     /tmp/ccPNYpuz.s:335    .text.sdRequestDataI:00000000 sdRequestDataI
+     /tmp/ccPNYpuz.s:362    .text.sdRequestDataI:00000030 $d
+     /tmp/ccPNYpuz.s:365    .rodata.str1.4:00000000 $d
+     /tmp/ccPNYpuz.s:382    .rodata.vmt:00000000 $d
+     /tmp/ccPNYpuz.s:386    .rodata.vmt:00000000 vmt
+     /tmp/ccPNYpuz.s:227    .text.sdStart:00000048 $t
+     /tmp/ccPNYpuz.s:280    .text.sdStop:00000058 $t
+     /tmp/ccPNYpuz.s:364    .text.sdRequestDataI:00000034 $t
 
 UNDEFINED SYMBOLS
 chIQReadTimeout
@@ -513,7 +513,7 @@ dbg_check_unlock
 sd_lld_stop
 chOQResetI
 chIQResetI
-ARM GAS  /tmp/ccKhzG6h.s 			page 10
+ARM GAS  /tmp/ccPNYpuz.s 			page 10
 
 
 chSchRescheduleS

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccbybdCg.s 			page 1
+ARM GAS  /tmp/cc1N9skb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccbybdCg.s 			page 1
   53 001c 03F00708 		and	r8, r3, #7
   54 0020 08EA0208 		and	r8, r8, r2
   55 0024 0022     		movs	r2, #0
-ARM GAS  /tmp/ccbybdCg.s 			page 2
+ARM GAS  /tmp/cc1N9skb.s 			page 2
 
 
   56 0026 4260     		str	r2, [r0, #4]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccbybdCg.s 			page 1
  110 009e DBF81400 		ldr	r0, [fp, #20]
  111 00a2 0368     		ldr	r3, [r0]
  112 00a4 DB69     		ldr	r3, [r3, #28]
-ARM GAS  /tmp/ccbybdCg.s 			page 3
+ARM GAS  /tmp/cc1N9skb.s 			page 3
 
 
  113 00a6 9847     		blx	r3
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccbybdCg.s 			page 1
  167              	.L12:
  168 0122 0398     		ldr	r0, [sp, #12]
  169 0124 09B0     		add	sp, sp, #36
-ARM GAS  /tmp/ccbybdCg.s 			page 4
+ARM GAS  /tmp/cc1N9skb.s 			page 4
 
 
  170              		@ sp needed
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccbybdCg.s 			page 1
  222              		.size	_ZN5amiro4AT24D2Ev, .-_ZN5amiro4AT24D2Ev
  223              		.global	_ZN5amiro4AT24D1Ev
  224              		.thumb_set _ZN5amiro4AT24D1Ev,_ZN5amiro4AT24D2Ev
-ARM GAS  /tmp/ccbybdCg.s 			page 5
+ARM GAS  /tmp/cc1N9skb.s 			page 5
 
 
  225 000c AFF30080 		.section	.text._ZN5amiro4AT248poll_ackEPv,"ax",%progbits
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccbybdCg.s 			page 1
  279 005e 0120     		movs	r0, #1
  280 0060 002F     		cmp	r7, #0
  281 0062 DDD1     		bne	.L46
-ARM GAS  /tmp/ccbybdCg.s 			page 6
+ARM GAS  /tmp/cc1N9skb.s 			page 6
 
 
  282              	.L39:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccbybdCg.s 			page 1
  336 0046 01AA     		add	r2, sp, #4
  337 0048 E261     		str	r2, [r4, #28]
  338 004a A562     		str	r5, [r4, #40]
-ARM GAS  /tmp/ccbybdCg.s 			page 7
+ARM GAS  /tmp/cc1N9skb.s 			page 7
 
 
  339 004c 5B69     		ldr	r3, [r3, #20]
@@ -418,32 +418,32 @@ ARM GAS  /tmp/ccbybdCg.s 			page 1
  392 001c 00000000 		.word	_ZN5amiro6EEPROM11getpositionEPv
  393 0020 00000000 		.word	_ZN5amiro6EEPROM5lseekEPvm
  394              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccbybdCg.s 			page 8
+ARM GAS  /tmp/cc1N9skb.s 			page 8
 
 
-ARM GAS  /tmp/ccbybdCg.s 			page 9
+ARM GAS  /tmp/cc1N9skb.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 at24.cpp
-     /tmp/ccbybdCg.s:18     .text._ZN5amiro4AT245closeEPv:00000000 $t
-     /tmp/ccbybdCg.s:24     .text._ZN5amiro4AT245closeEPv:00000000 _ZN5amiro4AT245closeEPv
-     /tmp/ccbybdCg.s:32     .text._ZN5amiro4AT245writeEPvPKhj:00000000 $t
-     /tmp/ccbybdCg.s:38     .text._ZN5amiro4AT245writeEPvPKhj:00000000 _ZN5amiro4AT245writeEPvPKhj
-     /tmp/ccbybdCg.s:174    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000000 $t
-     /tmp/ccbybdCg.s:180    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000000 _ZN5amiro4AT24C2EjhtPNS_9I2CDriverE
-     /tmp/ccbybdCg.s:203    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000024 $d
-     /tmp/ccbybdCg.s:180    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000000 _ZN5amiro4AT24C1EjhtPNS_9I2CDriverE
-     /tmp/ccbybdCg.s:208    .text._ZN5amiro4AT24D2Ev:00000000 $t
-     /tmp/ccbybdCg.s:214    .text._ZN5amiro4AT24D2Ev:00000000 _ZN5amiro4AT24D2Ev
-     /tmp/ccbybdCg.s:214    .text._ZN5amiro4AT24D2Ev:00000000 _ZN5amiro4AT24D1Ev
-     /tmp/ccbybdCg.s:226    .text._ZN5amiro4AT248poll_ackEPv:00000000 $t
-     /tmp/ccbybdCg.s:232    .text._ZN5amiro4AT248poll_ackEPv:00000000 _ZN5amiro4AT248poll_ackEPv
-     /tmp/ccbybdCg.s:296    .text._ZN5amiro4AT244readEPvPhj:00000000 $t
-     /tmp/ccbybdCg.s:302    .text._ZN5amiro4AT244readEPvPhj:00000000 _ZN5amiro4AT244readEPvPhj
-     /tmp/ccbybdCg.s:380    .rodata._ZN5amiroL36eeprom_at24_base_file_stream_methodsE:00000000 $d
-     /tmp/ccbybdCg.s:384    .rodata._ZN5amiroL36eeprom_at24_base_file_stream_methodsE:00000000 _ZN5amiroL36eeprom_at24_base_file_stream_methodsE
-     /tmp/ccbybdCg.s:207    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000028 $t
+     /tmp/cc1N9skb.s:18     .text._ZN5amiro4AT245closeEPv:00000000 $t
+     /tmp/cc1N9skb.s:24     .text._ZN5amiro4AT245closeEPv:00000000 _ZN5amiro4AT245closeEPv
+     /tmp/cc1N9skb.s:32     .text._ZN5amiro4AT245writeEPvPKhj:00000000 $t
+     /tmp/cc1N9skb.s:38     .text._ZN5amiro4AT245writeEPvPKhj:00000000 _ZN5amiro4AT245writeEPvPKhj
+     /tmp/cc1N9skb.s:174    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000000 $t
+     /tmp/cc1N9skb.s:180    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000000 _ZN5amiro4AT24C2EjhtPNS_9I2CDriverE
+     /tmp/cc1N9skb.s:203    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000024 $d
+     /tmp/cc1N9skb.s:180    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000000 _ZN5amiro4AT24C1EjhtPNS_9I2CDriverE
+     /tmp/cc1N9skb.s:208    .text._ZN5amiro4AT24D2Ev:00000000 $t
+     /tmp/cc1N9skb.s:214    .text._ZN5amiro4AT24D2Ev:00000000 _ZN5amiro4AT24D2Ev
+     /tmp/cc1N9skb.s:214    .text._ZN5amiro4AT24D2Ev:00000000 _ZN5amiro4AT24D1Ev
+     /tmp/cc1N9skb.s:226    .text._ZN5amiro4AT248poll_ackEPv:00000000 $t
+     /tmp/cc1N9skb.s:232    .text._ZN5amiro4AT248poll_ackEPv:00000000 _ZN5amiro4AT248poll_ackEPv
+     /tmp/cc1N9skb.s:296    .text._ZN5amiro4AT244readEPvPhj:00000000 $t
+     /tmp/cc1N9skb.s:302    .text._ZN5amiro4AT244readEPvPhj:00000000 _ZN5amiro4AT244readEPvPhj
+     /tmp/cc1N9skb.s:380    .rodata._ZN5amiroL36eeprom_at24_base_file_stream_methodsE:00000000 $d
+     /tmp/cc1N9skb.s:384    .rodata._ZN5amiroL36eeprom_at24_base_file_stream_methodsE:00000000 _ZN5amiroL36eeprom_at24_base_file_stream_methodsE
+     /tmp/cc1N9skb.s:207    .text._ZN5amiro4AT24C2EjhtPNS_9I2CDriverE:00000028 $t
 
 UNDEFINED SYMBOLS
 chThdSleep

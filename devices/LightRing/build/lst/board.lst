@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccAdGIGy.s 			page 1
+ARM GAS  /tmp/ccR4rFsi.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccAdGIGy.s 			page 1
   53              		.thumb
   54              		.thumb_func
   55              		.type	boardRequestShutdown, %function
-ARM GAS  /tmp/ccAdGIGy.s 			page 2
+ARM GAS  /tmp/ccR4rFsi.s 			page 2
 
 
   56              	boardRequestShutdown:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccAdGIGy.s 			page 1
  110              	.L9:
  111 003c 00100140 		.word	1073811456
  112 0040 00ED00E0 		.word	-536810240
-ARM GAS  /tmp/ccAdGIGy.s 			page 3
+ARM GAS  /tmp/ccR4rFsi.s 			page 3
 
 
  113 0044 00700040 		.word	1073770496
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccAdGIGy.s 			page 1
  167 0070 0120     		movs	r0, #1
  168 0072 2C61     		str	r4, [r5, #16]
  169 0074 FFF7FEFF 		bl	chThdSleep
-ARM GAS  /tmp/ccAdGIGy.s 			page 4
+ARM GAS  /tmp/ccR4rFsi.s 			page 4
 
 
  170 0078 0120     		movs	r0, #1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccAdGIGy.s 			page 1
  224 0020 88448887 		.word	-2021112696
  225 0024 FBFF0000 		.word	65531
  226 0028 44878888 		.word	-2004318396
-ARM GAS  /tmp/ccAdGIGy.s 			page 5
+ARM GAS  /tmp/ccR4rFsi.s 			page 5
 
 
  227 002c 88888888 		.word	-2004318072
@@ -252,29 +252,29 @@ ARM GAS  /tmp/ccAdGIGy.s 			page 1
  235 004c 88888888 		.word	-2004318072
  236 0050 88888888 		.word	-2004318072
  237              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccAdGIGy.s 			page 6
+ARM GAS  /tmp/ccR4rFsi.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 board.c
-     /tmp/ccAdGIGy.s:16     .text.__early_init:00000000 $t
-     /tmp/ccAdGIGy.s:22     .text.__early_init:00000000 __early_init
-     /tmp/ccAdGIGy.s:29     .text.boardInit:00000000 $t
-     /tmp/ccAdGIGy.s:35     .text.boardInit:00000000 boardInit
-     /tmp/ccAdGIGy.s:46     .text.boardInit:00000008 $d
-     /tmp/ccAdGIGy.s:50     .text.boardRequestShutdown:00000000 $t
-     /tmp/ccAdGIGy.s:56     .text.boardRequestShutdown:00000000 boardRequestShutdown
-     /tmp/ccAdGIGy.s:67     .text.boardRequestShutdown:0000000c $d
-     /tmp/ccAdGIGy.s:70     .text.boardStandby:00000000 $t
-     /tmp/ccAdGIGy.s:76     .text.boardStandby:00000000 boardStandby
-     /tmp/ccAdGIGy.s:111    .text.boardStandby:0000003c $d
-     /tmp/ccAdGIGy.s:117    .text.boardClearI2CBus:00000000 $t
-     /tmp/ccAdGIGy.s:123    .text.boardClearI2CBus:00000000 boardClearI2CBus
-     /tmp/ccAdGIGy.s:208    .text.boardClearI2CBus:000000d8 $d
-     /tmp/ccAdGIGy.s:215    .rodata.pal_default_config:00000000 pal_default_config
-     /tmp/ccAdGIGy.s:212    .rodata.pal_default_config:00000000 $d
-     /tmp/ccAdGIGy.s:116    .text.boardStandby:0000004c $t
-     /tmp/ccAdGIGy.s:211    .text.boardClearI2CBus:000000dc $t
+     /tmp/ccR4rFsi.s:16     .text.__early_init:00000000 $t
+     /tmp/ccR4rFsi.s:22     .text.__early_init:00000000 __early_init
+     /tmp/ccR4rFsi.s:29     .text.boardInit:00000000 $t
+     /tmp/ccR4rFsi.s:35     .text.boardInit:00000000 boardInit
+     /tmp/ccR4rFsi.s:46     .text.boardInit:00000008 $d
+     /tmp/ccR4rFsi.s:50     .text.boardRequestShutdown:00000000 $t
+     /tmp/ccR4rFsi.s:56     .text.boardRequestShutdown:00000000 boardRequestShutdown
+     /tmp/ccR4rFsi.s:67     .text.boardRequestShutdown:0000000c $d
+     /tmp/ccR4rFsi.s:70     .text.boardStandby:00000000 $t
+     /tmp/ccR4rFsi.s:76     .text.boardStandby:00000000 boardStandby
+     /tmp/ccR4rFsi.s:111    .text.boardStandby:0000003c $d
+     /tmp/ccR4rFsi.s:117    .text.boardClearI2CBus:00000000 $t
+     /tmp/ccR4rFsi.s:123    .text.boardClearI2CBus:00000000 boardClearI2CBus
+     /tmp/ccR4rFsi.s:208    .text.boardClearI2CBus:000000d8 $d
+     /tmp/ccR4rFsi.s:215    .rodata.pal_default_config:00000000 pal_default_config
+     /tmp/ccR4rFsi.s:212    .rodata.pal_default_config:00000000 $d
+     /tmp/ccR4rFsi.s:116    .text.boardStandby:0000004c $t
+     /tmp/ccR4rFsi.s:211    .text.boardClearI2CBus:000000dc $t
 
 UNDEFINED SYMBOLS
 stm32_clock_init

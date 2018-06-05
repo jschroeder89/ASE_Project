@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccXwlfOK.s 			page 1
+ARM GAS  /tmp/ccrYvRRA.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccXwlfOK.s 			page 1
   55              		.global	chRegNextThread
   56              		.thumb
   57              		.thumb_func
-ARM GAS  /tmp/ccXwlfOK.s 			page 2
+ARM GAS  /tmp/ccrYvRRA.s 			page 2
 
 
   58              		.type	chRegNextThread, %function
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccXwlfOK.s 			page 1
  112 0004 00       		.byte	0
  113 0005 16       		.byte	22
  114 0006 8811     		.short	4488
-ARM GAS  /tmp/ccXwlfOK.s 			page 3
+ARM GAS  /tmp/ccrYvRRA.s 			page 3
 
 
  115 0008 04       		.byte	4
@@ -144,21 +144,21 @@ ARM GAS  /tmp/ccXwlfOK.s 			page 1
  132      65616428 
  132      292C2023 
  133 0016 0000     		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccXwlfOK.s 			page 4
+ARM GAS  /tmp/ccrYvRRA.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chregistry.c
-     /tmp/ccXwlfOK.s:18     .text.chRegFirstThread:00000000 $t
-     /tmp/ccXwlfOK.s:24     .text.chRegFirstThread:00000000 chRegFirstThread
-     /tmp/ccXwlfOK.s:50     .text.chRegFirstThread:00000028 $d
-     /tmp/ccXwlfOK.s:53     .text.chRegNextThread:00000000 $t
-     /tmp/ccXwlfOK.s:59     .text.chRegNextThread:00000000 chRegNextThread
-     /tmp/ccXwlfOK.s:102    .text.chRegNextThread:00000048 $d
-     /tmp/ccXwlfOK.s:110    .rodata.ch_debug:00000000 ch_debug
-     /tmp/ccXwlfOK.s:107    .rodata.ch_debug:00000000 $d
-     /tmp/ccXwlfOK.s:130    .rodata.str1.4:00000000 $d
-     /tmp/ccXwlfOK.s:52     .text.chRegFirstThread:0000002c $t
+     /tmp/ccrYvRRA.s:18     .text.chRegFirstThread:00000000 $t
+     /tmp/ccrYvRRA.s:24     .text.chRegFirstThread:00000000 chRegFirstThread
+     /tmp/ccrYvRRA.s:50     .text.chRegFirstThread:00000028 $d
+     /tmp/ccrYvRRA.s:53     .text.chRegNextThread:00000000 $t
+     /tmp/ccrYvRRA.s:59     .text.chRegNextThread:00000000 chRegNextThread
+     /tmp/ccrYvRRA.s:102    .text.chRegNextThread:00000048 $d
+     /tmp/ccrYvRRA.s:110    .rodata.ch_debug:00000000 ch_debug
+     /tmp/ccrYvRRA.s:107    .rodata.ch_debug:00000000 $d
+     /tmp/ccrYvRRA.s:130    .rodata.str1.4:00000000 $d
+     /tmp/ccrYvRRA.s:52     .text.chRegFirstThread:0000002c $t
 
 UNDEFINED SYMBOLS
 dbg_check_lock

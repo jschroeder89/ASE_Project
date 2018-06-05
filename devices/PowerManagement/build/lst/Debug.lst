@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc2KkvCg.s 			page 1
+ARM GAS  /tmp/ccDZHGY0.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc2KkvCg.s 			page 1
   55 0046 148A     		ldrh	r4, [r2, #16]
   56 0048 A4B2     		uxth	r4, r4
   57 004a 40F2D921 		movw	r1, #729
-ARM GAS  /tmp/cc2KkvCg.s 			page 2
+ARM GAS  /tmp/ccDZHGY0.s 			page 2
 
 
   58 004e 0225     		movs	r5, #2
@@ -118,21 +118,21 @@ ARM GAS  /tmp/cc2KkvCg.s 			page 1
  109      74656D20 
  109      68616C74 
  109      21204572 
-ARM GAS  /tmp/cc2KkvCg.s 			page 3
+ARM GAS  /tmp/ccDZHGY0.s 			page 3
 
 
  109      726F7220 
  110 001b 00       		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cc2KkvCg.s 			page 4
+ARM GAS  /tmp/ccDZHGY0.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Debug.c
-     /tmp/cc2KkvCg.s:18     .text.haltErrorCode:00000000 $t
-     /tmp/cc2KkvCg.s:24     .text.haltErrorCode:00000000 haltErrorCode
-     /tmp/cc2KkvCg.s:101    .text.haltErrorCode:00000094 $d
-     /tmp/cc2KkvCg.s:107    .rodata.str1.4:00000000 $d
-     /tmp/cc2KkvCg.s:106    .text.haltErrorCode:000000a4 $t
+     /tmp/ccDZHGY0.s:18     .text.haltErrorCode:00000000 $t
+     /tmp/ccDZHGY0.s:24     .text.haltErrorCode:00000000 haltErrorCode
+     /tmp/ccDZHGY0.s:101    .text.haltErrorCode:00000094 $d
+     /tmp/ccDZHGY0.s:107    .rodata.str1.4:00000000 $d
+     /tmp/ccDZHGY0.s:106    .text.haltErrorCode:000000a4 $t
 
 UNDEFINED SYMBOLS
 nvicEnableVector

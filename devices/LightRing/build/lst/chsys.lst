@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccb6DTjk.s 			page 1
+ARM GAS  /tmp/cccKjCub.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccb6DTjk.s 			page 1
   53 000c FFF7FEFF 		bl	_vt_init
   54 0010 FFF7FEFF 		bl	_core_init
   55 0014 FFF7FEFF 		bl	_heap_init
-ARM GAS  /tmp/ccb6DTjk.s 			page 2
+ARM GAS  /tmp/cccKjCub.s 			page 2
 
 
   56 0018 FFF7FEFF 		bl	_trace_init
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccb6DTjk.s 			page 1
  108 0002 FFF7FEFF 		bl	chDbgCheckClassI
  109 0006 174B     		ldr	r3, .L17
  110 0008 9A69     		ldr	r2, [r3, #24]
-ARM GAS  /tmp/ccb6DTjk.s 			page 3
+ARM GAS  /tmp/cccKjCub.s 			page 3
 
 
  111 000a 92F82330 		ldrb	r3, [r2, #35]	@ zero_extendqisi2
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccb6DTjk.s 			page 1
  165 006c AFF30080 		.section	.rodata.str1.4,"aMS",%progbits,1
  166              		.align	2
  167              	.LC0:
-ARM GAS  /tmp/ccb6DTjk.s 			page 4
+ARM GAS  /tmp/cccKjCub.s 			page 4
 
 
  168 0000 69646C65 		.ascii	"idle\000"
@@ -206,28 +206,28 @@ ARM GAS  /tmp/ccb6DTjk.s 			page 1
  182      00000000 
  182      00000000 
  183              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccb6DTjk.s 			page 5
+ARM GAS  /tmp/cccKjCub.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chsys.c
-     /tmp/ccb6DTjk.s:16     .text._idle_thread:00000000 $t
-     /tmp/ccb6DTjk.s:22     .text._idle_thread:00000000 _idle_thread
-     /tmp/ccb6DTjk.s:36     .text._idle_thread:0000000c $d
-     /tmp/ccb6DTjk.s:40     .text.chSysInit:00000000 $t
-     /tmp/ccb6DTjk.s:46     .text.chSysInit:00000000 chSysInit
-     /tmp/ccb6DTjk.s:90     .text.chSysInit:0000005c $d
-     /tmp/ccb6DTjk.s:98     .text.chSysTimerHandlerI:00000000 $t
-     /tmp/ccb6DTjk.s:104    .text.chSysTimerHandlerI:00000000 chSysTimerHandlerI
-     /tmp/ccb6DTjk.s:161    .text.chSysTimerHandlerI:00000064 $d
-     /tmp/ccb6DTjk.s:181    .bss._idle_thread_wa:00000000 _idle_thread_wa
-     /tmp/ccb6DTjk.s:166    .rodata.str1.4:00000000 $d
-     /tmp/ccb6DTjk.s:170    .bss.mainthread.4840:00000000 $d
-     /tmp/ccb6DTjk.s:174    .bss.mainthread.4840:00000000 mainthread.4840
-     /tmp/ccb6DTjk.s:177    .bss._idle_thread_wa:00000000 $d
-     /tmp/ccb6DTjk.s:39     .text._idle_thread:00000014 $t
-     /tmp/ccb6DTjk.s:97     .text.chSysInit:00000074 $t
-     /tmp/ccb6DTjk.s:165    .text.chSysTimerHandlerI:0000006c $t
+     /tmp/cccKjCub.s:16     .text._idle_thread:00000000 $t
+     /tmp/cccKjCub.s:22     .text._idle_thread:00000000 _idle_thread
+     /tmp/cccKjCub.s:36     .text._idle_thread:0000000c $d
+     /tmp/cccKjCub.s:40     .text.chSysInit:00000000 $t
+     /tmp/cccKjCub.s:46     .text.chSysInit:00000000 chSysInit
+     /tmp/cccKjCub.s:90     .text.chSysInit:0000005c $d
+     /tmp/cccKjCub.s:98     .text.chSysTimerHandlerI:00000000 $t
+     /tmp/cccKjCub.s:104    .text.chSysTimerHandlerI:00000000 chSysTimerHandlerI
+     /tmp/cccKjCub.s:161    .text.chSysTimerHandlerI:00000064 $d
+     /tmp/cccKjCub.s:181    .bss._idle_thread_wa:00000000 _idle_thread_wa
+     /tmp/cccKjCub.s:166    .rodata.str1.4:00000000 $d
+     /tmp/cccKjCub.s:170    .bss.mainthread.4840:00000000 $d
+     /tmp/cccKjCub.s:174    .bss.mainthread.4840:00000000 mainthread.4840
+     /tmp/cccKjCub.s:177    .bss._idle_thread_wa:00000000 $d
+     /tmp/cccKjCub.s:39     .text._idle_thread:00000014 $t
+     /tmp/cccKjCub.s:97     .text.chSysInit:00000074 $t
+     /tmp/cccKjCub.s:165    .text.chSysTimerHandlerI:0000006c $t
 
 UNDEFINED SYMBOLS
 rlist

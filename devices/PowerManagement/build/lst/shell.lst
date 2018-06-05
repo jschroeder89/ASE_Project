@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cci3m7Qf.s 			page 1
+ARM GAS  /tmp/ccooV7nS.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
   55 000c 044B     		ldr	r3, .L5+8
   56 000e 0549     		ldr	r1, .L5+12
   57 0010 DA68     		ldr	r2, [r3, #12]
-ARM GAS  /tmp/cci3m7Qf.s 			page 2
+ARM GAS  /tmp/ccooV7nS.s 			page 2
 
 
   58 0012 FFF7FEBF 		b	chprintf
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  111 0052 2046     		mov	r0, r4
  112 0054 1449     		ldr	r1, .L9+56
  113 0056 154A     		ldr	r2, .L9+60
-ARM GAS  /tmp/cci3m7Qf.s 			page 3
+ARM GAS  /tmp/ccooV7nS.s 			page 3
 
 
  114 0058 FFF7FEFF 		bl	chprintf
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  168 0014 2046     		mov	r0, r4
  169 0016 0949     		ldr	r1, .L22
  170 0018 FFF7FEFF 		bl	strpbrk
-ARM GAS  /tmp/cci3m7Qf.s 			page 4
+ARM GAS  /tmp/ccooV7nS.s 			page 4
 
 
  171 001c 60B1     		cbz	r0, .L21
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  225 0000 10B5     		push	{r4, lr}
  226 0002 2023     		movs	r3, #32
  227 0004 0446     		mov	r4, r0
-ARM GAS  /tmp/cci3m7Qf.s 			page 5
+ARM GAS  /tmp/ccooV7nS.s 			page 5
 
 
  228              	@ 222 "../../../ChibiOS/os/various/shell.c" 1
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  279 0002 83B0     		sub	sp, sp, #12
  280 0004 0090     		str	r0, [sp]
  281 0006 0846     		mov	r0, r1
-ARM GAS  /tmp/cci3m7Qf.s 			page 6
+ARM GAS  /tmp/ccooV7nS.s 			page 6
 
 
  282 0008 1146     		mov	r1, r2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  336 0042 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
  337 0046 2B70     		strb	r3, [r5]
  338 0048 0135     		adds	r5, r5, #1
-ARM GAS  /tmp/cci3m7Qf.s 			page 7
+ARM GAS  /tmp/ccooV7nS.s 			page 7
 
 
  339 004a E0E7     		b	.L37
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  393              	shell_thread:
  394              		@ args = 0, pretend = 0, frame = 88
  395              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cci3m7Qf.s 			page 8
+ARM GAS  /tmp/ccooV7nS.s 			page 8
 
 
  396 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  450 007e 3D4A     		ldr	r2, .L110+16
  451 0080 FFF7FEFF 		bl	chprintf
  452 0084 CAE7     		b	.L55
-ARM GAS  /tmp/cci3m7Qf.s 			page 9
+ARM GAS  /tmp/ccooV7nS.s 			page 9
 
 
  453              	.L108:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  507 00f0 2A68     		ldr	r2, [r5]
  508 00f2 2C46     		mov	r4, r5
  509 00f4 3AB1     		cbz	r2, .L71
-ARM GAS  /tmp/cci3m7Qf.s 			page 10
+ARM GAS  /tmp/ccooV7nS.s 			page 10
 
 
  510              	.L72:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  564 0168 BC010000 		.word	.LC25
  565 016c C4010000 		.word	.LC26
  566 0170 DC010000 		.word	.LC27
-ARM GAS  /tmp/cci3m7Qf.s 			page 11
+ARM GAS  /tmp/ccooV7nS.s 			page 11
 
 
  567 0174 08020000 		.word	.LC30
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  611 0040 436F6D70 		.ascii	"Compiler:     %s\015\012\000"
  611      696C6572 
  611      3A202020 
-ARM GAS  /tmp/cci3m7Qf.s 			page 12
+ARM GAS  /tmp/ccooV7nS.s 			page 12
 
 
  611      20202573 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  636 0108 506C6174 		.ascii	"Platform:     %s\015\012\000"
  636      666F726D 
  636      3A202020 
-ARM GAS  /tmp/cci3m7Qf.s 			page 13
+ARM GAS  /tmp/ccooV7nS.s 			page 13
 
 
  636      20202573 
@@ -753,14 +753,14 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  648      25732573 
  649 0193 00       		.space	1
  650              	.LC19:
- 651 0194 41707220 		.ascii	"Apr 17 2018\000"
- 651      31372032 
+ 651 0194 4A756E20 		.ascii	"Jun  5 2018\000"
+ 651      20352032 
  651      30313800 
  652              	.LC20:
  653 01a0 202D2000 		.ascii	" - \000"
  654              	.LC21:
- 655 01a4 31363A34 		.ascii	"16:42:03\000"
- 655      323A3033 
+ 655 01a4 31353A32 		.ascii	"15:29:33\000"
+ 655      393A3333 
  655      00
  656 01ad 000000   		.space	3
  657              	.LC22:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  668 01c2 0000     		.space	2
  669              	.LC26:
  670 01c4 0D0A4368 		.ascii	"\015\012ChibiOS/RT Shell\015\012\000"
-ARM GAS  /tmp/cci3m7Qf.s 			page 14
+ARM GAS  /tmp/ccooV7nS.s 			page 14
 
 
  670      6962694F 
@@ -833,50 +833,50 @@ ARM GAS  /tmp/cci3m7Qf.s 			page 1
  702              	shell_terminated:
  703 0000 00000000 		.space	4
  704              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/cci3m7Qf.s 			page 15
+ARM GAS  /tmp/ccooV7nS.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 shell.c
-     /tmp/cci3m7Qf.s:18     .text.chprintf:00000000 $t
-     /tmp/cci3m7Qf.s:23     .text.chprintf:00000000 chprintf
-     /tmp/cci3m7Qf.s:40     .text.cmd_systime:00000000 $t
-     /tmp/cci3m7Qf.s:45     .text.cmd_systime:00000000 cmd_systime
-     /tmp/cci3m7Qf.s:62     .text.cmd_systime:00000018 $d
-     /tmp/cci3m7Qf.s:68     .text.cmd_info:00000000 $t
-     /tmp/cci3m7Qf.s:73     .text.cmd_info:00000000 cmd_info
-     /tmp/cci3m7Qf.s:128    .text.cmd_info:00000070 $d
-     /tmp/cci3m7Qf.s:150    .text._strtok.constprop.2:00000000 $t
-     /tmp/cci3m7Qf.s:155    .text._strtok.constprop.2:00000000 _strtok.constprop.2
-     /tmp/cci3m7Qf.s:194    .text._strtok.constprop.2:0000003c $d
-     /tmp/cci3m7Qf.s:197    .text.shellInit:00000000 $t
-     /tmp/cci3m7Qf.s:203    .text.shellInit:00000000 shellInit
-     /tmp/cci3m7Qf.s:213    .text.shellInit:00000008 $d
-     /tmp/cci3m7Qf.s:216    .text.shellExit:00000000 $t
-     /tmp/cci3m7Qf.s:222    .text.shellExit:00000000 shellExit
-     /tmp/cci3m7Qf.s:242    .text.shellExit:00000020 $d
-     /tmp/cci3m7Qf.s:245    .text.shellCreate:00000000 $t
-     /tmp/cci3m7Qf.s:251    .text.shellCreate:00000000 shellCreate
-     /tmp/cci3m7Qf.s:266    .text.shellCreate:00000014 $d
-     /tmp/cci3m7Qf.s:393    .text.shell_thread:00000000 shell_thread
-     /tmp/cci3m7Qf.s:269    .text.shellCreateStatic:00000000 $t
-     /tmp/cci3m7Qf.s:275    .text.shellCreateStatic:00000000 shellCreateStatic
-     /tmp/cci3m7Qf.s:292    .text.shellCreateStatic:00000018 $d
-     /tmp/cci3m7Qf.s:295    .text.shellGetLine:00000000 $t
-     /tmp/cci3m7Qf.s:301    .text.shellGetLine:00000000 shellGetLine
-     /tmp/cci3m7Qf.s:384    .text.shellGetLine:00000098 $d
-     /tmp/cci3m7Qf.s:388    .text.shell_thread:00000000 $t
-     /tmp/cci3m7Qf.s:563    .text.shell_thread:00000164 $d
-     /tmp/cci3m7Qf.s:702    .bss.shell_terminated:00000000 shell_terminated
-     /tmp/cci3m7Qf.s:581    .data.local_commands:00000000 $d
-     /tmp/cci3m7Qf.s:585    .data.local_commands:00000000 local_commands
-     /tmp/cci3m7Qf.s:593    .rodata.str1.4:00000000 $d
-     /tmp/cci3m7Qf.s:698    .bss.shell_terminated:00000000 $d
-     /tmp/cci3m7Qf.s:67     .text.cmd_systime:00000028 $t
-     /tmp/cci3m7Qf.s:215    .text.shellInit:0000000c $t
-     /tmp/cci3m7Qf.s:244    .text.shellExit:00000024 $t
-     /tmp/cci3m7Qf.s:268    .text.shellCreate:00000018 $t
-     /tmp/cci3m7Qf.s:294    .text.shellCreateStatic:0000001c $t
+     /tmp/ccooV7nS.s:18     .text.chprintf:00000000 $t
+     /tmp/ccooV7nS.s:23     .text.chprintf:00000000 chprintf
+     /tmp/ccooV7nS.s:40     .text.cmd_systime:00000000 $t
+     /tmp/ccooV7nS.s:45     .text.cmd_systime:00000000 cmd_systime
+     /tmp/ccooV7nS.s:62     .text.cmd_systime:00000018 $d
+     /tmp/ccooV7nS.s:68     .text.cmd_info:00000000 $t
+     /tmp/ccooV7nS.s:73     .text.cmd_info:00000000 cmd_info
+     /tmp/ccooV7nS.s:128    .text.cmd_info:00000070 $d
+     /tmp/ccooV7nS.s:150    .text._strtok.constprop.2:00000000 $t
+     /tmp/ccooV7nS.s:155    .text._strtok.constprop.2:00000000 _strtok.constprop.2
+     /tmp/ccooV7nS.s:194    .text._strtok.constprop.2:0000003c $d
+     /tmp/ccooV7nS.s:197    .text.shellInit:00000000 $t
+     /tmp/ccooV7nS.s:203    .text.shellInit:00000000 shellInit
+     /tmp/ccooV7nS.s:213    .text.shellInit:00000008 $d
+     /tmp/ccooV7nS.s:216    .text.shellExit:00000000 $t
+     /tmp/ccooV7nS.s:222    .text.shellExit:00000000 shellExit
+     /tmp/ccooV7nS.s:242    .text.shellExit:00000020 $d
+     /tmp/ccooV7nS.s:245    .text.shellCreate:00000000 $t
+     /tmp/ccooV7nS.s:251    .text.shellCreate:00000000 shellCreate
+     /tmp/ccooV7nS.s:266    .text.shellCreate:00000014 $d
+     /tmp/ccooV7nS.s:393    .text.shell_thread:00000000 shell_thread
+     /tmp/ccooV7nS.s:269    .text.shellCreateStatic:00000000 $t
+     /tmp/ccooV7nS.s:275    .text.shellCreateStatic:00000000 shellCreateStatic
+     /tmp/ccooV7nS.s:292    .text.shellCreateStatic:00000018 $d
+     /tmp/ccooV7nS.s:295    .text.shellGetLine:00000000 $t
+     /tmp/ccooV7nS.s:301    .text.shellGetLine:00000000 shellGetLine
+     /tmp/ccooV7nS.s:384    .text.shellGetLine:00000098 $d
+     /tmp/ccooV7nS.s:388    .text.shell_thread:00000000 $t
+     /tmp/ccooV7nS.s:563    .text.shell_thread:00000164 $d
+     /tmp/ccooV7nS.s:702    .bss.shell_terminated:00000000 shell_terminated
+     /tmp/ccooV7nS.s:581    .data.local_commands:00000000 $d
+     /tmp/ccooV7nS.s:585    .data.local_commands:00000000 local_commands
+     /tmp/ccooV7nS.s:593    .rodata.str1.4:00000000 $d
+     /tmp/ccooV7nS.s:698    .bss.shell_terminated:00000000 $d
+     /tmp/ccooV7nS.s:67     .text.cmd_systime:00000028 $t
+     /tmp/ccooV7nS.s:215    .text.shellInit:0000000c $t
+     /tmp/ccooV7nS.s:244    .text.shellExit:00000024 $t
+     /tmp/ccooV7nS.s:268    .text.shellCreate:00000018 $t
+     /tmp/ccooV7nS.s:294    .text.shellCreateStatic:0000001c $t
 
 UNDEFINED SYMBOLS
 chvprintf

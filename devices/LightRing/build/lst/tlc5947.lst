@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccavZk36.s 			page 1
+ARM GAS  /tmp/cc8g5nKR.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccavZk36.s 			page 1
   55              	.L5:
   56 0010 08000000 		.word	.LANCHOR0+8
   57              		.size	_ZN5amiro7TLC5947D0Ev, .-_ZN5amiro7TLC5947D0Ev
-ARM GAS  /tmp/ccavZk36.s 			page 2
+ARM GAS  /tmp/cc8g5nKR.s 			page 2
 
 
   58 0014 AFF30080 		.section	.text.startup._ZN5amiro7TLC59474mainEv,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccavZk36.s 			page 1
  110 007a 87FB0324 		smull	r2, r4, r7, r3
  111 007e DB17     		asrs	r3, r3, #31
  112 0080 C3EB6414 		rsb	r4, r3, r4, asr #5
-ARM GAS  /tmp/ccavZk36.s 			page 3
+ARM GAS  /tmp/cc8g5nKR.s 			page 3
 
 
  113 0084 02A9     		add	r1, sp, #8
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccavZk36.s 			page 1
  167 011a 9C70     		strb	r4, [r3, #2]
  168 011c 5970     		strb	r1, [r3, #1]
  169 011e 1D70     		strb	r5, [r3]
-ARM GAS  /tmp/ccavZk36.s 			page 4
+ARM GAS  /tmp/cc8g5nKR.s 			page 4
 
 
  170 0120 03F10303 		add	r3, r3, #3
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccavZk36.s 			page 1
  224 001e 2046     		mov	r0, r4
  225 0020 84E80C00 		stmia	r4, {r2, r3}
  226 0024 03B0     		add	sp, sp, #12
-ARM GAS  /tmp/ccavZk36.s 			page 5
+ARM GAS  /tmp/cc8g5nKR.s 			page 5
 
 
  227              		@ sp needed
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccavZk36.s 			page 1
  281              	.L28:
  282 005a 00BF     		.align	2
  283              	.L27:
-ARM GAS  /tmp/ccavZk36.s 			page 6
+ARM GAS  /tmp/cc8g5nKR.s 			page 6
 
 
  284 005c 08000000 		.word	.LANCHOR0+8
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccavZk36.s 			page 1
  333              		@ args = 0, pretend = 0, frame = 0
  334              		@ frame_needed = 0, uses_anonymous_args = 0
  335              		@ link register save eliminated.
-ARM GAS  /tmp/ccavZk36.s 			page 7
+ARM GAS  /tmp/cc8g5nKR.s 			page 7
 
 
  336 0000 0029     		cmp	r1, #0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccavZk36.s 			page 1
  388              		@ args = 0, pretend = 0, frame = 0
  389              		@ frame_needed = 0, uses_anonymous_args = 0
  390 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/ccavZk36.s 			page 8
+ARM GAS  /tmp/cc8g5nKR.s 			page 8
 
 
  391 0002 0846     		mov	r0, r1
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccavZk36.s 			page 1
  441              		@ frame_needed = 0, uses_anonymous_args = 0
  442 0000 10B5     		push	{r4, lr}
  443 0002 0846     		mov	r0, r1
-ARM GAS  /tmp/ccavZk36.s 			page 9
+ARM GAS  /tmp/cc8g5nKR.s 			page 9
 
 
  444 0004 1446     		mov	r4, r2
@@ -528,57 +528,57 @@ ARM GAS  /tmp/ccavZk36.s 			page 1
  487 0000 546C6335 		.ascii	"Tlc5947\000"
  487      39343700 
  488              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-br
-ARM GAS  /tmp/ccavZk36.s 			page 10
+ARM GAS  /tmp/cc8g5nKR.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tlc5947.cpp
-     /tmp/ccavZk36.s:16     .text._ZN5amiro7TLC5947D2Ev:00000000 $t
-     /tmp/ccavZk36.s:22     .text._ZN5amiro7TLC5947D2Ev:00000000 _ZN5amiro7TLC5947D2Ev
-     /tmp/ccavZk36.s:32     .text._ZN5amiro7TLC5947D2Ev:00000008 $d
-     /tmp/ccavZk36.s:22     .text._ZN5amiro7TLC5947D2Ev:00000000 _ZN5amiro7TLC5947D1Ev
-     /tmp/ccavZk36.s:37     .text._ZN5amiro7TLC5947D0Ev:00000000 $t
-     /tmp/ccavZk36.s:43     .text._ZN5amiro7TLC5947D0Ev:00000000 _ZN5amiro7TLC5947D0Ev
-     /tmp/ccavZk36.s:56     .text._ZN5amiro7TLC5947D0Ev:00000010 $d
-     /tmp/ccavZk36.s:59     .text.startup._ZN5amiro7TLC59474mainEv:00000000 $t
-     /tmp/ccavZk36.s:65     .text.startup._ZN5amiro7TLC59474mainEv:00000000 _ZN5amiro7TLC59474mainEv
-     /tmp/ccavZk36.s:199    .text.startup._ZN5amiro7TLC59474mainEv:00000168 $d
-     /tmp/ccavZk36.s:203    .text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:00000000 $t
-     /tmp/ccavZk36.s:209    .text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi192EE5startEm
-     /tmp/ccavZk36.s:232    .text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:00000028 $d
-     /tmp/ccavZk36.s:236    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:00000000 $t
-     /tmp/ccavZk36.s:242    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:00000000 _ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi
-     /tmp/ccavZk36.s:284    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:0000005c $d
-     /tmp/ccavZk36.s:242    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:00000000 _ZN5amiro7TLC5947C1EPNS_11HWSPIDriverEP12GPIO_TypeDefi
-     /tmp/ccavZk36.s:289    .text._ZN5amiro7TLC59477disableEv:00000000 $t
-     /tmp/ccavZk36.s:295    .text._ZN5amiro7TLC59477disableEv:00000000 _ZN5amiro7TLC59477disableEv
-     /tmp/ccavZk36.s:307    .text._ZN5amiro7TLC59476enableEv:00000000 $t
-     /tmp/ccavZk36.s:313    .text._ZN5amiro7TLC59476enableEv:00000000 _ZN5amiro7TLC59476enableEv
-     /tmp/ccavZk36.s:326    .text._ZN5amiro7TLC594713setBrightnessEi:00000000 $t
-     /tmp/ccavZk36.s:332    .text._ZN5amiro7TLC594713setBrightnessEi:00000000 _ZN5amiro7TLC594713setBrightnessEi
-     /tmp/ccavZk36.s:350    .text._ZN5amiro7TLC59478setColorEiNS_5ColorE:00000000 $t
-     /tmp/ccavZk36.s:356    .text._ZN5amiro7TLC59478setColorEiNS_5ColorE:00000000 _ZN5amiro7TLC59478setColorEiNS_5ColorE
-     /tmp/ccavZk36.s:367    .text._ZN5amiro7TLC59476updateEv:00000000 $t
-     /tmp/ccavZk36.s:373    .text._ZN5amiro7TLC59476updateEv:00000000 _ZN5amiro7TLC59476updateEv
-     /tmp/ccavZk36.s:381    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000000 $t
-     /tmp/ccavZk36.s:387    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000000 _ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi
-     /tmp/ccavZk36.s:404    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000020 $d
-     /tmp/ccavZk36.s:407    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000000 $t
-     /tmp/ccavZk36.s:413    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000000 _ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi
-     /tmp/ccavZk36.s:430    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000020 $d
-     /tmp/ccavZk36.s:433    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000000 $t
-     /tmp/ccavZk36.s:439    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000000 _ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi
-     /tmp/ccavZk36.s:457    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000024 $d
-     /tmp/ccavZk36.s:464    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi192EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi192EEE
-     /tmp/ccavZk36.s:461    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi192EEE:00000000 $d
-     /tmp/ccavZk36.s:476    .rodata._ZTVN5amiro7TLC5947E:00000000 _ZTVN5amiro7TLC5947E
-     /tmp/ccavZk36.s:472    .rodata._ZTVN5amiro7TLC5947E:00000000 $d
-     /tmp/ccavZk36.s:485    .rodata.str1.4:00000000 $d
-     /tmp/ccavZk36.s:36     .text._ZN5amiro7TLC5947D2Ev:0000000c $t
-     /tmp/ccavZk36.s:58     .text._ZN5amiro7TLC5947D0Ev:00000014 $t
-     /tmp/ccavZk36.s:406    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000024 $t
-     /tmp/ccavZk36.s:432    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000024 $t
-     /tmp/ccavZk36.s:460    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000028 $t
+     /tmp/cc8g5nKR.s:16     .text._ZN5amiro7TLC5947D2Ev:00000000 $t
+     /tmp/cc8g5nKR.s:22     .text._ZN5amiro7TLC5947D2Ev:00000000 _ZN5amiro7TLC5947D2Ev
+     /tmp/cc8g5nKR.s:32     .text._ZN5amiro7TLC5947D2Ev:00000008 $d
+     /tmp/cc8g5nKR.s:22     .text._ZN5amiro7TLC5947D2Ev:00000000 _ZN5amiro7TLC5947D1Ev
+     /tmp/cc8g5nKR.s:37     .text._ZN5amiro7TLC5947D0Ev:00000000 $t
+     /tmp/cc8g5nKR.s:43     .text._ZN5amiro7TLC5947D0Ev:00000000 _ZN5amiro7TLC5947D0Ev
+     /tmp/cc8g5nKR.s:56     .text._ZN5amiro7TLC5947D0Ev:00000010 $d
+     /tmp/cc8g5nKR.s:59     .text.startup._ZN5amiro7TLC59474mainEv:00000000 $t
+     /tmp/cc8g5nKR.s:65     .text.startup._ZN5amiro7TLC59474mainEv:00000000 _ZN5amiro7TLC59474mainEv
+     /tmp/cc8g5nKR.s:199    .text.startup._ZN5amiro7TLC59474mainEv:00000168 $d
+     /tmp/cc8g5nKR.s:203    .text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:00000000 $t
+     /tmp/cc8g5nKR.s:209    .text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:00000000 _ZN10chibios_rt16BaseStaticThreadILi192EE5startEm
+     /tmp/cc8g5nKR.s:232    .text._ZN10chibios_rt16BaseStaticThreadILi192EE5startEm:00000028 $d
+     /tmp/cc8g5nKR.s:236    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:00000000 $t
+     /tmp/cc8g5nKR.s:242    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:00000000 _ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi
+     /tmp/cc8g5nKR.s:284    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:0000005c $d
+     /tmp/cc8g5nKR.s:242    .text._ZN5amiro7TLC5947C2EPNS_11HWSPIDriverEP12GPIO_TypeDefi:00000000 _ZN5amiro7TLC5947C1EPNS_11HWSPIDriverEP12GPIO_TypeDefi
+     /tmp/cc8g5nKR.s:289    .text._ZN5amiro7TLC59477disableEv:00000000 $t
+     /tmp/cc8g5nKR.s:295    .text._ZN5amiro7TLC59477disableEv:00000000 _ZN5amiro7TLC59477disableEv
+     /tmp/cc8g5nKR.s:307    .text._ZN5amiro7TLC59476enableEv:00000000 $t
+     /tmp/cc8g5nKR.s:313    .text._ZN5amiro7TLC59476enableEv:00000000 _ZN5amiro7TLC59476enableEv
+     /tmp/cc8g5nKR.s:326    .text._ZN5amiro7TLC594713setBrightnessEi:00000000 $t
+     /tmp/cc8g5nKR.s:332    .text._ZN5amiro7TLC594713setBrightnessEi:00000000 _ZN5amiro7TLC594713setBrightnessEi
+     /tmp/cc8g5nKR.s:350    .text._ZN5amiro7TLC59478setColorEiNS_5ColorE:00000000 $t
+     /tmp/cc8g5nKR.s:356    .text._ZN5amiro7TLC59478setColorEiNS_5ColorE:00000000 _ZN5amiro7TLC59478setColorEiNS_5ColorE
+     /tmp/cc8g5nKR.s:367    .text._ZN5amiro7TLC59476updateEv:00000000 $t
+     /tmp/cc8g5nKR.s:373    .text._ZN5amiro7TLC59476updateEv:00000000 _ZN5amiro7TLC59476updateEv
+     /tmp/cc8g5nKR.s:381    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000000 $t
+     /tmp/cc8g5nKR.s:387    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000000 _ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi
+     /tmp/cc8g5nKR.s:404    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000020 $d
+     /tmp/cc8g5nKR.s:407    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000000 $t
+     /tmp/cc8g5nKR.s:413    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000000 _ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi
+     /tmp/cc8g5nKR.s:430    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000020 $d
+     /tmp/cc8g5nKR.s:433    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000000 $t
+     /tmp/cc8g5nKR.s:439    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000000 _ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi
+     /tmp/cc8g5nKR.s:457    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000024 $d
+     /tmp/cc8g5nKR.s:464    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi192EEE:00000000 _ZTVN10chibios_rt16BaseStaticThreadILi192EEE
+     /tmp/cc8g5nKR.s:461    .rodata._ZTVN10chibios_rt16BaseStaticThreadILi192EEE:00000000 $d
+     /tmp/cc8g5nKR.s:476    .rodata._ZTVN5amiro7TLC5947E:00000000 _ZTVN5amiro7TLC5947E
+     /tmp/cc8g5nKR.s:472    .rodata._ZTVN5amiro7TLC5947E:00000000 $d
+     /tmp/cc8g5nKR.s:485    .rodata.str1.4:00000000 $d
+     /tmp/cc8g5nKR.s:36     .text._ZN5amiro7TLC5947D2Ev:0000000c $t
+     /tmp/cc8g5nKR.s:58     .text._ZN5amiro7TLC5947D0Ev:00000014 $t
+     /tmp/cc8g5nKR.s:406    .text._ZNK5amiro7TLC594721caluclateRedGrayscaleENS_5ColorEi:00000024 $t
+     /tmp/cc8g5nKR.s:432    .text._ZNK5amiro7TLC594723caluclateGreenGrayscaleENS_5ColorEi:00000024 $t
+     /tmp/cc8g5nKR.s:460    .text._ZNK5amiro7TLC594722caluclateBlueGrayscaleENS_5ColorEi:00000028 $t
 
 UNDEFINED SYMBOLS
 _ZdlPv
@@ -588,7 +588,7 @@ _ZN5amiro5ColorC1ERKS0_
 _ZN5amiro5Color7getBlueEv
 _ZN5amiro5Color8getGreenEv
 _ZN5amiro5Color6getRedEv
-ARM GAS  /tmp/ccavZk36.s 			page 11
+ARM GAS  /tmp/cc8g5nKR.s 			page 11
 
 
 _ZN5amiro11HWSPIDriver5writeEPKhj
