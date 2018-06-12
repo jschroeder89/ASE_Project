@@ -350,8 +350,10 @@ void wallFollowing(int (&rpmFuzzyCtrl)[2]){
 	int direction = 0;
 	int drive[2] = {0,0};
 	
-	global.robot.setLightColor(3, Color(Color::BLUE));
-    global.robot.setLightColor(4, Color(Color::BLUE));
+	global.robot.setLightColor(3, Color(Color::GOLD));
+    global.robot.setLightColor(4, Color(Color::GOLD));
+    global.robot.setLightColor(2, Color(Color::CRIMSON));
+    global.robot.setLightColor(5, Color(Color::CRIMSON));
 	
 	while(obstacle){
 		int help = 0;
@@ -387,8 +389,15 @@ void wallFollowing(int (&rpmFuzzyCtrl)[2]){
 		if(global.vcnl4020[0].getProximityScaledWoOffset() <= 7000 && global.vcnl4020[3].getProximityScaledWoOffset() <= 7000){
 			
 			
-			global.robot.setLightColor(3, Color(Color::RED));
-            global.robot.setLightColor(4, Color(Color::RED));
+			global.robot.setLightColor(3, Color(Color::DODGERBLUE));
+            global.robot.setLightColor(4, Color(Color::DODGERBLUE));
+            global.robot.setLightColor(2, Color(Color::CHOCOLATE));
+            global.robot.setLightColor(5, Color(Color::CHOCOLATE));
+            if(direction > 0){
+				setRpmSpeed(rpmTurnLeft);
+			} else {
+				setRpmSpeed(rpmTurnRight);
+			}
             break;
 			
 		}
